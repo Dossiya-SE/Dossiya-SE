@@ -1,75 +1,117 @@
-# Hi, I'm Dossiya Dakou 
+# Dossiya Dakou
 
-I am a dual graduate student building at the intersection of **financial engineering**, **sustainable systems engineering**, and **data-driven decision-making**.
+I am a graduate researcher and mathematical engineering practitioner working across **financial engineering**, **sustainable systems engineering**, and **computational decision science**.
+
+My work centers on the modeling of complex systems where uncertainty, resource constraints, and dynamic behavior matter. I develop structured analytical workflows for problems in quantitative finance, environmental systems, energy transitions, waste systems, and data-driven engineering.
 
 I am currently pursuing:
 
 - **MSc in Financial Engineering** — WorldQuant University  
 - **Master of Science in Engineering in Sustainable Engineering** — Arizona State University  
-- Background: **Renewable Energy and Energy Systems**
 
-My work focuses on turning complex systems into structured models: financial markets, environmental impacts, energy systems, waste systems, and data-driven engineering workflows.
+My academic background includes:
+
+- **Bachelor of Physics in Renewable Energy and Energy Systems**
+- **Diploma in Electrical Engineering**
 
 ---
 
-## My Two Portfolio Tracks
+## Research and Engineering Orientation
 
-### 1. Financial Engineering Portfolio
+My technical interests sit at the intersection of mathematical modeling, statistical inference, computational simulation, and systems analysis.
 
-This portfolio focuses on quantitative finance, risk modeling, time-series analysis, model selection, and computational finance.
+I am especially interested in questions such as:
 
-**Core themes:**
+- How can financial and environmental systems be modeled under uncertainty?
+- How can data-driven methods improve engineering and policy decisions?
+- How can life-cycle thinking expose hidden costs, externalities, and burden shifting?
+- How can quantitative models translate complex system behavior into actionable insight?
 
-- Financial time-series modeling  
-- Unit-root and stationarity testing  
-- Risk and uncertainty modeling  
+Across projects, I focus on reproducibility, mathematical clarity, transparent assumptions, and decision-oriented interpretation.
+
+---
+
+## Portfolio Architecture
+
+My GitHub is organized around two primary research and engineering portfolios.
+
+---
+
+## I. Financial Engineering Portfolio
+
+This portfolio develops quantitative methods for financial systems, with emphasis on stochastic behavior, time-series structure, model selection, risk, and computational finance.
+
+### Core Areas
+
+- Financial time-series analysis  
+- Stationarity, unit-root testing, and persistence  
+- Statistical model selection and validation  
+- Risk modeling and uncertainty quantification  
 - Monte Carlo simulation  
-- Model selection using AIC, BIC, adjusted R², and cross-validation  
-- Python-based financial analytics  
+- Numerical and computational finance  
+- Data-driven financial research workflows  
 
-**Featured repository:**  
-[Financial Engineering Models](https://github.com/Dossiya-SE/dossiyadakou-mac-project)
+### Representative Work
+
+| Repository | Research / Engineering Focus |
+|---|---|
+| [Financial Engineering Models](https://github.com/Dossiya-SE/dossiyadakou-mac-project) | Quantitative finance problems, modeling workflows, reports, figures, and analytical interpretation |
+| [Data Science and Machine Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) | Statistical learning, supervised modeling, diagnostics, and applied analytics |
 
 ---
 
-### 2. Sustainable Engineering Portfolio
+## II. Sustainable Engineering Portfolio
 
-This portfolio focuses on life cycle assessment, environmental systems modeling, energy systems, waste analysis, and sustainability decision support.
+This portfolio applies systems engineering, life cycle assessment, and environmental analytics to energy, waste, resource, and sustainability problems.
 
-**Core themes:**
+### Core Areas
 
 - Life Cycle Assessment  
-- Functional units and reference flows  
-- System boundaries and inventory modeling  
-- Climate, waste, energy, and resource systems  
-- Environmental impact interpretation  
-- Sustainable engineering analytics  
+- Functional units, reference flows, and system boundaries  
+- Environmental inventory modeling  
+- Energy and resource systems analysis  
+- Waste and circular economy modeling  
+- Climate and emissions assessment  
+- Sustainability decision support  
+- Interpretation of tradeoffs, uncertainty, and burden shifting  
 
-**Featured repositories:**
+### Representative Work
 
-- [Python for Rapid Engineering Solutions](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution)
-- [Sustainable Engineering / ASU Work](https://github.com/Dossiya-SE/testasu)
+| Repository | Research / Engineering Focus |
+|---|---|
+| [Python for Rapid Engineering Solutions](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution) | Numerical methods, engineering computation, simulation, and Python-based modeling |
+| [Sustainable Engineering / ASU Work](https://github.com/Dossiya-SE/testasu) | Sustainable engineering workflows, systems analysis, and applied software experimentation |
 
 ---
 
-## Technical Skills
+## Mathematical and Computational Toolkit
 
-### Programming and Data
+### Mathematical Modeling
+
+- Dynamical systems  
+- Numerical methods  
+- Optimization logic  
+- Statistical modeling  
+- Uncertainty analysis  
+- Model diagnostics  
+
+### Computing and Data
 
 - Python  
 - TypeScript  
-- Data analysis  
 - Scientific computing  
-- Visualization  
-- Numerical methods  
+- Data analysis  
+- Data visualization  
+- Reproducible project organization  
 
 ### Financial Engineering
 
-- Time-series analysis  
-- Statistical modeling  
-- Model diagnostics  
-- Risk analysis  
-- Quantitative research workflows  
+- Time-series modeling  
+- Stationarity analysis  
+- Risk modeling  
+- Model selection  
+- Quantitative research methods  
+- Computational finance  
 
 ### Sustainable Engineering
 
@@ -82,69 +124,57 @@ This portfolio focuses on life cycle assessment, environmental systems modeling,
 
 ---
 
-## Selected Projects
+## Engineering Method
 
-### Financial Engineering
+My work follows a structured modeling sequence:
 
-| Project | Focus |
-|---|---|
-| Financial Engineering Models | Quantitative finance, modeling, reports, figures, and analysis |
-| Data Science and Machine Learning | Machine learning, statistical modeling, and applied analytics |
+1. Define the decision problem  
+2. Specify the system boundary  
+3. Establish assumptions and constraints  
+4. Develop the mathematical or computational model  
+5. Validate outputs through diagnostics or sensitivity checks  
+6. Interpret results in relation to uncertainty, tradeoffs, and system behavior  
+7. Communicate findings for technical and decision-making audiences  
 
-### Sustainable Engineering
-
-| Project | Focus |
-|---|---|
-| Python for Rapid Engineering Solutions | Engineering computation, numerical methods, and Python workflows |
-| ASU Sustainable Engineering Work | Sustainability systems, engineering applications, and full-stack experimentation |
-
-### Applied Software
-
-| Project | Focus |
-|---|---|
-| Chatbot | Python-based conversational application |
-| TestASU | TypeScript / web application experimentation |
+This approach allows me to work across domains while keeping the same core standard: rigorous modeling, transparent reasoning, and useful interpretation.
 
 ---
 
-## How I Think About Engineering Problems
+## Current Research Direction
 
-My approach is systems-based:
+I am developing two complementary professional tracks.
 
-1. Define the problem clearly  
-2. Identify the system boundary  
-3. Build the model or workflow  
-4. Validate the assumptions  
-5. Interpret the results  
-6. Communicate the tradeoffs  
+### Quantitative Finance and Risk Modeling
 
-Whether the system is a financial market, an energy system, a waste pathway, or a product life cycle, I focus on building models that are explainable, reproducible, and decision-oriented.
-
----
-
-## Current Direction
-
-I am building two professional portfolios:
-
-### Quantitative Finance Track
-
-A portfolio for roles in:
+Focused on:
 
 - Financial engineering  
 - Quantitative analysis  
-- Risk modeling  
+- Risk and uncertainty modeling  
+- Time-series and econometric methods  
 - Data-driven financial research  
 - Climate finance and ESG analytics  
 
-### Sustainable Systems Track
+### Sustainable Systems and Environmental Modeling
 
-A portfolio for roles in:
+Focused on:
 
 - Sustainable engineering  
 - Life cycle assessment  
 - Energy and waste systems  
 - Environmental analytics  
-- Climate-tech and systems modeling  
+- Climate-tech modeling  
+- Systems-based sustainability assessment  
+
+---
+
+## Broader Research Identity
+
+My long-term interest is in mathematical and computational tools that improve decisions in systems exposed to uncertainty, constraints, and externalities.
+
+Financial markets, energy transitions, waste systems, and environmental impacts may appear separate, but they share common modeling challenges: feedback, risk, incomplete information, dynamic behavior, and tradeoffs across time and scale.
+
+My portfolio is built around that shared structure.
 
 ---
 
@@ -152,9 +182,3 @@ A portfolio for roles in:
 
 - GitHub: [Dossiya-SE](https://github.com/Dossiya-SE)
 - LinkedIn: [Dossiya Dakou](https://www.linkedin.com/in/dossiya-dakou-/)
-
----
-
-## Portfolio Philosophy
-
-I am not building isolated assignments. I am building a structured body of work that shows how quantitative models, engineering systems, and sustainability analysis can support better decisions.
