@@ -1,10 +1,12 @@
-<img src="banner.svg" alt="Dossiya Dakou — energy systems · physics · sustainable finance" width="100%">
+<h1 align="center">Dossiya Dakou</h1>
+
+<p align="center"><b>Mathematical &amp; physical modeling</b> — from the physics of an energy system to the capital that builds it.</p>
 
 <div align="center">
 
-[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-0F1424?style=for-the-badge&logo=githubpages&logoColor=84AAF6)](https://dossiya-se.github.io) &nbsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dossiya-dakou-/) &nbsp; [![Email](https://img.shields.io/badge/Email-E9A94E?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ddakou@asu.edu)
+![Energy Systems](https://img.shields.io/badge/Energy_Systems-5B8DEF?style=for-the-badge) ![Physics](https://img.shields.io/badge/Physics-5B8DEF?style=for-the-badge) ![Sustainable Finance](https://img.shields.io/badge/Sustainable_Finance-E9A94E?style=for-the-badge)
 
-<br>
+[![Portfolio](https://img.shields.io/badge/Live_Portfolio-0F1424?style=for-the-badge&logo=githubpages&logoColor=84AAF6)](https://dossiya-se.github.io) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dossiya-dakou-/) [![Email](https://img.shields.io/badge/Email-E9A94E?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ddakou@asu.edu)
 
 `MSc Financial Engineering` &nbsp;·&nbsp; `MS Sustainable Engineering` &nbsp;·&nbsp; `BSc Physics — Renewable Energy` &nbsp;·&nbsp; `Dip. Electrical Engineering`
 
@@ -36,7 +38,7 @@ A validated 33-item instrument across seven constructs, analyzed with ANOVA, mul
 ## 🧰 Toolkit
 
 **Mathematics &amp; scientific computing**
-&nbsp;
+
 ![Python](https://img.shields.io/badge/Python-5B8DEF?style=flat-square&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-5B8DEF?style=flat-square&logo=numpy&logoColor=white)
 ![SciPy](https://img.shields.io/badge/SciPy-5B8DEF?style=flat-square&logo=scipy&logoColor=white)
@@ -47,13 +49,13 @@ A validated 33-item instrument across seven constructs, analyzed with ANOVA, mul
 ![Git](https://img.shields.io/badge/Git-5B8DEF?style=flat-square&logo=git&logoColor=white)
 
 **Sustainability &amp; life-cycle assessment**
-&nbsp;
+
 ![OpenLCA](https://img.shields.io/badge/OpenLCA-E9A94E?style=flat-square)
 ![ecoinvent](https://img.shields.io/badge/ecoinvent-E9A94E?style=flat-square)
 ![ISO 14040](https://img.shields.io/badge/ISO_14040%2F44-E9A94E?style=flat-square)
 
 **Statistics &amp; data**
-&nbsp;
+
 ![SPSS](https://img.shields.io/badge/SPSS-64748B?style=flat-square)
 ![Minitab](https://img.shields.io/badge/Minitab-64748B?style=flat-square)
 ![statsmodels](https://img.shields.io/badge/statsmodels-64748B?style=flat-square)
