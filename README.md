@@ -39,5 +39,4 @@ https://orcid.org/0009-0004-1071-9948
 - Dignity is the objective
 - Urgency is a formal design constraint
 - Scientific evidence precedes major decisions
-- Code must be compact, testable and reproducible
 - Local capability and data sovereignty are engineering requirements
