@@ -1,100 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
 <title id="title">Mathematical research operating system</title>
-<desc id="desc">A visual synthesis of coupled infrastructure dynamics, inverse problems, uncertainty, viability geometry, control, optimization and evidence validation.</desc>
-<defs>
-  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#07111f"/><stop offset="0.55" stop-color="#0b2038"/><stop offset="1" stop-color="#07111f"/></linearGradient>
-  <linearGradient id="cyan" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="green" x1="0" x2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#a3e635"/></linearGradient>
-  <linearGradient id="amber" x1="0" x2="1"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 z" fill="#7dd3fc"/></marker>
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1d4d70" stroke-opacity="0.28" stroke-width="1"/></pattern>
-</defs>
-<rect width="1600" height="900" rx="34" fill="url(#bg)"/>
-<rect x="24" y="24" width="1552" height="852" rx="28" fill="url(#grid)" stroke="#1f4f70"/>
-<text x="70" y="82" fill="#e6f6ff" font-family="Inter,Segoe UI,Arial" font-size="34" font-weight="800">MATHEMATICAL RESEARCH OPERATING SYSTEM</text>
-<text x="70" y="116" fill="#9cc7df" font-family="Inter,Segoe UI,Arial" font-size="17">physics → evidence → inference → geometry → control → design → validation</text>
-<g font-family="Inter,Segoe UI,Arial">
-  <rect x="70" y="155" width="320" height="245" rx="24" fill="#0d2740" stroke="#2c78a5"/>
-  <text x="96" y="190" fill="#7dd3fc" font-size="20" font-weight="700">1 · Coupled dynamics</text>
-  <text x="96" y="224" fill="#e5f6ff" font-size="18">ẋᵢ = fᵢ(xᵢ,θᵢ) + Σⱼ gᵢⱼ(xᵢ,xⱼ,Gᵢⱼ)</text>
-  <text x="96" y="250" fill="#e5f6ff" font-size="18">      + Bᵢuᵢ + ξᵢ</text>
-  <g transform="translate(100 285)">
-    <line x1="55" y1="45" x2="145" y2="18" stroke="#60a5fa" stroke-width="4"/>
-    <line x1="145" y1="18" x2="220" y2="72" stroke="#2dd4bf" stroke-width="4"/>
-    <line x1="55" y1="45" x2="220" y2="72" stroke="#fbbf24" stroke-width="3" stroke-dasharray="8 7"/>
-    <line x1="55" y1="45" x2="138" y2="94" stroke="#c084fc" stroke-width="4"/>
-    <line x1="138" y1="94" x2="220" y2="72" stroke="#fb7185" stroke-width="4"/>
-    <circle cx="55" cy="45" r="25" fill="#0c4a6e" stroke="#7dd3fc" stroke-width="3"/><text x="55" y="52" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">P</text>
-    <circle cx="145" cy="18" r="25" fill="#064e3b" stroke="#5eead4" stroke-width="3"/><text x="145" y="25" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">W</text>
-    <circle cx="220" cy="72" r="25" fill="#78350f" stroke="#fbbf24" stroke-width="3"/><text x="220" y="79" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">T</text>
-    <circle cx="138" cy="94" r="25" fill="#3b0764" stroke="#c084fc" stroke-width="3"/><text x="138" y="101" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">SW</text>
-  </g>
-
-  <rect x="430" y="155" width="320" height="245" rx="24" fill="#0d2740" stroke="#2c78a5"/>
-  <text x="456" y="190" fill="#7dd3fc" font-size="20" font-weight="700">2 · Inverse problem</text>
-  <text x="456" y="224" fill="#e5f6ff" font-size="17">yₖ = h(xₖ,θ) + εₖ</text>
-  <text x="456" y="250" fill="#e5f6ff" font-size="17">p(θ|y) ∝ L(y|θ) p₀(θ)</text>
-  <path d="M470 340 C505 270,550 380,585 300 S665 265,712 330" fill="none" stroke="url(#cyan)" stroke-width="4"/>
-  <path d="M470 350 C515 315,555 330,590 305 S655 305,712 290" fill="none" stroke="#34d399" stroke-width="3" stroke-dasharray="8 6"/>
-  <g fill="#fde68a"><circle cx="495" cy="322" r="5"/><circle cx="535" cy="350" r="5"/><circle cx="580" cy="315" r="5"/><circle cx="625" cy="298" r="5"/><circle cx="678" cy="312" r="5"/></g>
-  <text x="470" y="378" fill="#9cc7df" font-size="13">observations • model • posterior geometry</text>
-
-  <rect x="790" y="155" width="320" height="245" rx="24" fill="#0d2740" stroke="#2c78a5"/>
-  <text x="816" y="190" fill="#7dd3fc" font-size="20" font-weight="700">3 · Uncertainty</text>
-  <text x="816" y="224" fill="#e5f6ff" font-size="17">θ ~ p(θ),  X = Φ(θ,η,u)</text>
-  <text x="816" y="250" fill="#e5f6ff" font-size="17">P_f = P[g(X) ≤ 0]</text>
-  <path d="M820 343 C850 282,885 268,930 282 C972 294,1017 342,1080 336" fill="none" stroke="#60a5fa" stroke-width="3"/>
-  <path d="M820 354 C850 298,889 290,930 304 C971 318,1016 365,1080 353" fill="none" stroke="#60a5fa" stroke-opacity="0.32" stroke-width="18"/>
-  <line x1="980" y1="274" x2="980" y2="365" stroke="#fb7185" stroke-width="3" stroke-dasharray="6 5"/>
-  <text x="991" y="291" fill="#fda4af" font-size="13">limit state</text>
-  <text x="820" y="378" fill="#9cc7df" font-size="13">ensemble envelope • tail probability • sensitivity</text>
-
-  <rect x="1150" y="155" width="380" height="245" rx="24" fill="#0d2740" stroke="#2c78a5"/>
-  <text x="1176" y="190" fill="#7dd3fc" font-size="20" font-weight="700">4 · Viability geometry</text>
-  <text x="1176" y="224" fill="#e5f6ff" font-size="17">V = {x₀ ∈ K : ∃u(·), x(t) ∈ K ∀t}</text>
-  <ellipse cx="1327" cy="318" rx="130" ry="63" fill="#10b981" fill-opacity="0.12" stroke="#34d399" stroke-width="3"/>
-  <ellipse cx="1327" cy="318" rx="82" ry="38" fill="#38bdf8" fill-opacity="0.13" stroke="#7dd3fc" stroke-width="2" stroke-dasharray="8 7"/>
-  <path d="M1198 353 C1240 338,1253 301,1290 307 C1332 314,1346 282,1395 292 C1434 300,1450 328,1480 314" fill="none" stroke="#fbbf24" stroke-width="4" marker-end="url(#arrow)"/>
-  <text x="1192" y="382" fill="#9cc7df" font-size="13">K admissible • V viable • recovery trajectory</text>
-
-  <rect x="70" y="445" width="460" height="330" rx="24" fill="#0c2238" stroke="#2c78a5"/>
-  <text x="96" y="482" fill="#7dd3fc" font-size="20" font-weight="700">5 · Control &amp; recovery</text>
-  <text x="96" y="516" fill="#e5f6ff" font-size="17">u* = arg min J(x,u)</text>
-  <text x="96" y="542" fill="#e5f6ff" font-size="17">s.t. dynamics, budget, service, equity, safety</text>
-  <line x1="115" y1="715" x2="485" y2="715" stroke="#52758c"/>
-  <line x1="115" y1="715" x2="115" y2="575" stroke="#52758c"/>
-  <path d="M115 660 C175 660,196 650,230 625 C270 594,317 586,360 603 C395 616,422 606,480 582" fill="none" stroke="#fb7185" stroke-width="4"/>
-  <path d="M115 660 C170 646,205 618,238 606 C279 591,317 580,359 579 C405 578,443 564,480 553" fill="none" stroke="url(#green)" stroke-width="4"/>
-  <text x="124" y="592" fill="#34d399" font-size="13">controlled recovery</text>
-  <text x="326" y="650" fill="#fda4af" font-size="13">uncontrolled</text>
-  <text x="430" y="742" fill="#9cc7df" font-size="13">time</text>
-  <text x="88" y="589" fill="#9cc7df" font-size="13" transform="rotate(-90 88 589)">critical service</text>
-
-  <rect x="570" y="445" width="460" height="330" rx="24" fill="#0c2238" stroke="#2c78a5"/>
-  <text x="596" y="482" fill="#7dd3fc" font-size="20" font-weight="700">6 · Multi-objective design</text>
-  <text x="596" y="516" fill="#e5f6ff" font-size="17">min  [ cost(d), risk(d), carbon(d) ]</text>
-  <text x="596" y="542" fill="#e5f6ff" font-size="17">max [ resilience(d), equity(d) ]</text>
-  <line x1="620" y1="708" x2="990" y2="708" stroke="#52758c"/>
-  <line x1="620" y1="708" x2="620" y2="575" stroke="#52758c"/>
-  <path d="M660 676 C705 633,752 608,804 597 C861 584,911 588,966 606" fill="none" stroke="url(#amber)" stroke-width="5"/>
-  <g fill="#fbbf24"><circle cx="678" cy="659" r="6"/><circle cx="735" cy="618" r="6"/><circle cx="804" cy="597" r="6"/><circle cx="875" cy="589" r="6"/><circle cx="944" cy="600" r="6"/></g>
-  <text x="790" y="639" fill="#fde68a" font-size="14">Pareto-efficient frontier</text>
-  <text x="930" y="738" fill="#9cc7df" font-size="13">cost / burden</text>
-  <text x="592" y="594" fill="#9cc7df" font-size="13" transform="rotate(-90 592 594)">resilience / equity</text>
-
-  <rect x="1070" y="445" width="460" height="330" rx="24" fill="#0c2238" stroke="#2c78a5"/>
-  <text x="1096" y="482" fill="#7dd3fc" font-size="20" font-weight="700">7 · Evidence &amp; validation</text>
-  <g font-size="14" font-weight="700">
-    <rect x="1102" y="536" width="112" height="52" rx="14" fill="#0c4a6e" stroke="#38bdf8"/><text x="1158" y="567" text-anchor="middle" fill="#e6f6ff">Observed</text>
-    <rect x="1231" y="536" width="112" height="52" rx="14" fill="#064e3b" stroke="#34d399"/><text x="1287" y="567" text-anchor="middle" fill="#eafff7">Derived</text>
-    <rect x="1360" y="536" width="136" height="52" rx="14" fill="#78350f" stroke="#f59e0b"/><text x="1428" y="567" text-anchor="middle" fill="#fff7df">Model output</text>
-    <rect x="1102" y="620" width="112" height="52" rx="14" fill="#3b0764" stroke="#c084fc"/><text x="1158" y="651" text-anchor="middle" fill="#f5ebff">Verify</text>
-    <rect x="1231" y="620" width="112" height="52" rx="14" fill="#4c0519" stroke="#fb7185"/><text x="1287" y="651" text-anchor="middle" fill="#ffe7ef">Validate</text>
-    <rect x="1360" y="620" width="136" height="52" rx="14" fill="#1e293b" stroke="#94a3b8"/><text x="1428" y="651" text-anchor="middle" fill="#f1f5f9">Bound claim</text>
-  </g>
-  <path d="M1214 562 H1231 M1343 562 H1360 M1158 588 V620 M1287 588 V620 M1428 588 V620" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1102" y="724" fill="#9cc7df" font-size="14">claim strength ≤ evidence strength</text>
-</g>
-<text x="70" y="835" fill="#b9d7e7" font-family="Inter,Segoe UI,Arial" font-size="15">Visual ontology: solid = implemented/declared · dashed = uncertainty/planned boundary · geometry = admissibility/viability · trajectories = dynamics/control</text>
-</svg>
+<desc id="desc">Adaptive light and dark systems diagram connecting coupled dynamics, inverse problems, uncertainty, viability, control, multi-objective design and evidence validation.</desc>
+<style>
+:root{--bg:#fff;--panel:#f8fafc;--fg:#0f172a;--muted:#475569;--border:#94a3b8;--state:#1d4ed8;--interface:#7e22ce;--unc:#b45309;--viable:#047857;--recovery:#0f766e;--decision:#a16207;--hazard:#b91c1c;--observed:#0369a1}
+@media(prefers-color-scheme:dark){:root{--bg:#07111f;--panel:#0e1d31;--fg:#eaf1f8;--muted:#9eb0c3;--border:#355a7b;--state:#60a5fa;--interface:#c084fc;--unc:#fbbf24;--viable:#34d399;--recovery:#5eead4;--decision:#facc15;--hazard:#fb7185;--observed:#38bdf8}}
+.bg{fill:var(--bg)}.panel{fill:var(--panel);stroke:var(--border);stroke-width:1.5}.fg{fill:var(--fg)}.muted{fill:var(--muted)}.state{stroke:var(--state);fill:none}.iface{stroke:var(--interface);fill:none}.unc{stroke:var(--unc);fill:none}.viable{stroke:var(--viable);fill:none}.recovery{stroke:var(--recovery);fill:none}.decision{stroke:var(--decision);fill:none}.hazard{stroke:var(--hazard);fill:none}.obs{fill:var(--observed)}text{font-family:Inter,Segoe UI,Arial,sans-serif}.math{font-family:Georgia,'Times New Roman',serif}</style>
+<rect class="bg" width="1600" height="820" rx="28"/>
+<text x="70" y="65" class="fg" font-size="38" font-weight="800">MATHEMATICAL RESEARCH OPERATING SYSTEM</text><text x="70" y="98" class="muted" font-size="17">physics → evidence → inference → geometry → control → design → validation</text>
+<g transform="translate(55 135)"><rect class="panel" width="355" height="255" rx="18"/><text x="24" y="38" class="fg" font-size="20" font-weight="700">1 · Coupled dynamics</text><text x="24" y="78" class="fg math" font-size="20">ẋᵢ=fᵢ(xᵢ,θᵢ)+Σⱼgᵢⱼ(xᵢ,xⱼ,Gᵢⱼ)+Bᵢuᵢ+ξᵢ</text><circle cx="70" cy="170" r="25" fill="var(--state)"/><circle cx="175" cy="135" r="25" fill="var(--viable)"/><circle cx="280" cy="170" r="25" fill="var(--decision)"/><circle cx="175" cy="220" r="25" fill="var(--interface)"/><path d="M95 166L150 143M199 143L255 166M92 178L151 211M199 211L258 178" class="iface" stroke-width="3"/><g class="fg" font-weight="700"><text x="70" y="176" text-anchor="middle">P</text><text x="175" y="141" text-anchor="middle">W</text><text x="280" y="176" text-anchor="middle">T</text><text x="175" y="226" text-anchor="middle">SW</text></g></g>
+<g transform="translate(430 135)"><rect class="panel" width="355" height="255" rx="18"/><text x="24" y="38" class="fg" font-size="20" font-weight="700">2 · Inverse problem</text><text x="24" y="78" class="fg math" font-size="20">yₖ=h(xₖ,θ)+εₖ</text><text x="24" y="106" class="fg math" font-size="20">π(θ|y) ∝ L(y|θ)π₀(θ)</text><path d="M35 210C95 165 130 215 175 165S275 145 325 190" class="state" stroke-width="4"/><path d="M35 220C95 185 135 185 180 180S260 165 325 170" class="unc" stroke-width="3" stroke-dasharray="7 5"/><g class="obs"><circle cx="65" cy="197" r="5"/><circle cx="110" cy="186" r="5"/><circle cx="165" cy="177" r="5"/><circle cx="220" cy="160" r="5"/><circle cx="275" cy="164" r="5"/></g></g>
+<g transform="translate(805 135)"><rect class="panel" width="355" height="255" rx="18"/><text x="24" y="38" class="fg" font-size="20" font-weight="700">3 · Uncertainty</text><text x="24" y="78" class="fg math" font-size="20">θ∼p(θ), X=Φ(θ,η,u)</text><text x="24" y="106" class="fg math" font-size="20">P_f=ℙ[g(X)≤0]</text><path d="M35 195C95 115 160 110 235 170S310 195 330 175" class="state" stroke-width="4"/><path d="M35 205C95 125 160 120 235 180S310 205 330 185" class="unc" stroke-width="22" opacity=".22"/><path d="M255 120V225" class="hazard" stroke-width="2" stroke-dasharray="7 5"/><text x="265" y="137" class="muted" font-size="12">limit state</text></g>
+<g transform="translate(1180 135)"><rect class="panel" width="365" height="255" rx="18"/><text x="24" y="38" class="fg" font-size="20" font-weight="700">4 · Viability geometry</text><text x="24" y="78" class="fg math" font-size="18">V={x₀∈K:∃u(·),x(t)∈K ∀t}</text><ellipse cx="187" cy="166" rx="140" ry="72" class="viable" stroke-width="3"/><ellipse cx="210" cy="166" rx="85" ry="45" class="state" stroke-width="2" stroke-dasharray="7 5"/><path d="M55 212C105 180 125 196 150 170S235 132 322 165" class="recovery" stroke-width="4"/><text x="240" y="228" class="muted" font-size="12">recovery trajectory</text></g>
+<g transform="translate(55 420)"><rect class="panel" width="480" height="295" rx="18"/><text x="24" y="38" class="fg" font-size="20" font-weight="700">5 · Control &amp; recovery</text><text x="24" y="78" class="fg math" font-size="20">u*=arg min J(x,u)</text><text x="24" y="106" class="muted" font-size="13">subject to dynamics, budget, service, equity, safety</text><path d="M45 235C120 235 170 175 245 150S360 165 435 115" class="recovery" stroke-width="5"/><path d="M45 235C120 245 175 210 245 175S350 220 435 175" class="hazard" stroke-width="4"/><text x="290" y="135" fill="var(--recovery)" font-size="12">controlled</text><text x="300" y="210" fill="var(--hazard)" font-size="12">uncontrolled</text></g>
+<g transform="translate(555 420)"><rect class="panel" width="480" height="295" rx="18"/><text x="24" y="38" class="fg" font-size="20" font-weight="700">6 · Multi-objective design</text><text x="24" y="78" class="fg math" font-size="19">min [cost(d),risk(d),carbon(d)]</text><text x="24" y="106" class="fg math" font-size="19">max [resilience(d),equity(d)]</text><path d="M60 245C120 180 185 145 250 140S365 150 420 185" class="decision" stroke-width="5"/><g fill="var(--decision)"><circle cx="96" cy="206" r="6"/><circle cx="170" cy="160" r="6"/><circle cx="250" cy="140" r="6"/><circle cx="335" cy="149" r="6"/></g><text x="250" y="205" class="muted" font-size="13">Pareto-efficient frontier</text></g>
+<g transform="translate(1055 420)"><rect class="panel" width="490" height="295" rx="18"/><text x="24" y="38" class="fg" font-size="20" font-weight="700">7 · Evidence &amp; validation</text><g font-size="14" font-weight="700"><rect x="35" y="90" width="110" height="48" rx="10" fill="var(--observed)"/><text x="90" y="120" text-anchor="middle" fill="#fff">Observed</text><rect x="188" y="90" width="110" height="48" rx="10" fill="var(--viable)"/><text x="243" y="120" text-anchor="middle" fill="#fff">Derived</text><rect x="341" y="90" width="110" height="48" rx="10" fill="var(--decision)"/><text x="396" y="120" text-anchor="middle" fill="#fff">Model output</text><rect x="35" y="185" width="110" height="48" rx="10" fill="var(--interface)"/><text x="90" y="215" text-anchor="middle" fill="#fff">Verify</text><rect x="188" y="185" width="110" height="48" rx="10" fill="var(--hazard)"/><text x="243" y="215" text-anchor="middle" fill="#fff">Validate</text><rect x="341" y="185" width="110" height="48" rx="10" fill="var(--muted)"/><text x="396" y="215" text-anchor="middle" fill="var(--bg)">Bound claim</text></g><text x="35" y="267" class="muted" font-size="14">claim strength ≤ evidence strength</text></g>
+<text x="55" y="785" class="muted" font-size="13">visual ontology: solid = declared/implemented · dashed = uncertainty/boundary · geometry = admissibility/viability · trajectories = dynamics/control</text></svg>
