@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Differential geometry foundations and research-transfer boundary</title>
+<desc id="desc">Adaptive differential-geometry plate showing parametric surface, tangent frame, metric, Christoffel symbols, geodesics, curvature, Frenet-Serret frame and Gauss-Bonnet, with an explicit boundary separating source mathematics from infrastructure research hypotheses.</desc>
+<style>
+:root{--bg:#fff;--panel:#f8fafc;--fg:#0f172a;--muted:#475569;--border:#94a3b8;--source:#4338ca;--state:#1d4ed8;--viable:#047857;--recovery:#0f766e;--unc:#b45309;--hyp:#be185d;--grid:#cbd5e1}
+@media(prefers-color-scheme:dark){:root{--bg:#07111f;--panel:#0e1d31;--fg:#eaf1f8;--muted:#9eb0c3;--border:#355a7b;--source:#a5b4fc;--state:#60a5fa;--viable:#34d399;--recovery:#5eead4;--unc:#fbbf24;--hyp:#f472b6;--grid:#28445f}}
+.bg{fill:var(--bg)}.panel{fill:var(--panel);stroke:var(--border)}.fg{fill:var(--fg)}.muted{fill:var(--muted)}.surface{fill:var(--state);fill-opacity:.12;stroke:var(--state)}.grid{stroke:var(--grid);fill:none}.geod{stroke:var(--hyp);fill:none}.tangent{stroke:var(--viable);fill:none}.normal{stroke:var(--unc);fill:none}.source{stroke:var(--source);fill:none}.hyp{stroke:var(--hyp);fill:none;stroke-dasharray:8 6}text{font-family:Inter,Segoe UI,Arial,sans-serif}.math{font-family:Georgia,'Times New Roman',serif}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>
+<rect class="bg" width="1600" height="900" rx="28"/>
+<text x="70" y="65" class="fg" font-size="38" font-weight="800">DIFFERENTIAL GEOMETRY — NATIVE MATHEMATICS</text><text x="70" y="98" class="muted" font-size="17">parameterization → tangent basis → metric → connection → curvature → geodesics → topology</text>
+<rect x="55" y="130" width="720" height="470" rx="20" class="panel"/>
+<text x="82" y="168" class="fg" font-size="21" font-weight="700">[S] Parametric surface and local frame</text>
+<path d="M95 430C180 260 300 280 375 380S545 510 710 340L710 520C545 615 390 565 285 500S145 490 95 560Z" class="surface" stroke-width="3"/>
+<g class="grid" opacity=".8"><path d="M135 410C230 340 330 348 430 420S600 490 690 370"/><path d="M120 470C210 400 315 410 420 470S585 540 685 430"/><path d="M160 355C190 420 200 500 210 550M260 320C285 400 295 490 300 560M370 350C395 410 420 500 435 575M500 410C520 465 555 525 585 548"/></g>
+<circle cx="410" cy="440" r="7" fill="var(--fg)"/>
+<path d="M410 440L505 420" class="tangent" stroke-width="4" marker-end="url(#a)"/><path d="M410 440L365 365" class="tangent" stroke-width="4" marker-end="url(#a)"/><path d="M410 440L435 325" class="normal" stroke-width="4" marker-end="url(#a)"/>
+<text x="512" y="418" fill="var(--viable)" font-size="16">e₁=∂ᵤr</text><text x="305" y="360" fill="var(--viable)" font-size="16">e₂=∂ᵥr</text><text x="442" y="322" fill="var(--unc)" font-size="16">n</text>
+<path d="M110 520C210 465 320 500 420 448S590 400 700 455" class="geod" stroke-width="5"/>
+<text x="565" y="395" fill="var(--hyp)" font-size="15">γ(s) geodesic</text>
+<text x="82" y="205" class="fg math" font-size="20">r:U⊂ℝ²→ℝ³,  r=r(u,v)</text><text x="82" y="236" class="fg math" font-size="20">gαβ=∂αr·∂βr</text><text x="82" y="267" class="fg math" font-size="20">n=(e₁×e₂)/‖e₁×e₂‖</text>
+
+<rect x="805" y="130" width="740" height="470" rx="20" class="panel"/>
+<text x="832" y="168" class="fg" font-size="21" font-weight="700">Intrinsic and extrinsic geometry</text>
+<text x="832" y="214" class="fg math" font-size="20">Γᵅβγ=½gᵅδ(∂βgγδ+∂γgβδ−∂δgβγ)</text>
+<text x="832" y="258" class="fg math" font-size="20">d²uᵅ/ds² + Γᵅβγ (duᵝ/ds)(duᵞ/ds) = 0</text>
+<text x="832" y="302" class="fg math" font-size="20">K=(eg−f²)/(EG−F²)</text><text x="1120" y="302" class="fg math" font-size="20">H=(eG−2fF+gE)/(2(EG−F²))</text>
+<text x="832" y="346" class="fg math" font-size="20">T′=κN</text><text x="980" y="346" class="fg math" font-size="20">N′=τB−κT</text><text x="1185" y="346" class="fg math" font-size="20">B′=−τN</text>
+<text x="832" y="390" class="fg math" font-size="20">∬ₘ K dA = 2πχ(M)</text>
+<g transform="translate(850 435)"><path d="M0 70C60 10 105 110 170 50S285 20 340 78" class="state" stroke-width="4"/><circle cx="160" cy="58" r="6" fill="var(--fg)"/><path d="M160 58L230 42" class="tangent" stroke-width="4" marker-end="url(#a)"/><path d="M160 58L140 0" class="normal" stroke-width="4" marker-end="url(#a)"/><path d="M160 58L205 105" class="source" stroke-width="4" marker-end="url(#a)"/><text x="235" y="42" fill="var(--viable)" font-size="14">T</text><text x="132" y="0" fill="var(--unc)" font-size="14">N</text><text x="210" y="120" fill="var(--source)" font-size="14">B</text></g>
+<g transform="translate(1220 430)"><ellipse cx="115" cy="70" rx="100" ry="45" class="source" stroke-width="3"/><ellipse cx="115" cy="70" rx="48" ry="20" class="source" stroke-width="2"/><text x="35" y="145" class="muted" font-size="13">topology ↔ integrated curvature</text></g>
+
+<rect x="55" y="635" width="1490" height="205" rx="20" class="panel"/>
+<text x="82" y="675" class="fg" font-size="21" font-weight="700">Research-transfer boundary</text>
+<text x="82" y="720" class="fg" font-size="17">Source differential geometry</text><path d="M300 715H520" class="source" stroke-width="4" marker-end="url(#a)"/><text x="545" y="720" class="fg" font-size="17">formally defined state-space geometry</text><path d="M860 715H1060" class="hyp" stroke-width="4" marker-end="url(#a)"/><text x="1085" y="720" class="fg" font-size="17">engineering interpretation / validation</text>
+<text x="82" y="765" class="muted" font-size="15">A viability boundary, recovery path, or interface-uncertainty set is not automatically a manifold. Metric, differentiability, distance, curvature meaning, estimator, and validation must be declared.</text>
+<text x="82" y="805" class="muted" font-size="14">P3 target for rigorous mathematical art: generated geometry + invariant checks. P4 for source reproductions. P5 only for empirically validated represented claims.</text>
+</svg>
