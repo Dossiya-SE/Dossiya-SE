@@ -1,30 +1,135 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=200&color=0:0e4166,50:1f6feb,100:238636&text=Dossiya%20Dakou&fontColor=ffffff&fontSize=46&fontAlignY=36&desc=Sustainable%20Engineering%20%C2%B7%20Energy%20Systems%20%C2%B7%20Mathematical%20Modeling%20%C2%B7%20Infrastructure%20Resilience&descSize=16&descAlignY=58&animation=fadeIn"
-    alt="Dossiya Dakou — sustainable engineering, energy systems, mathematical modeling and infrastructure resilience"
+    src="https://capsule-render.vercel.app/api?type=waving&height=210&color=0:07111f,45:0e4166,75:1f6feb,100:238636&text=Dossiya%20Dakou&fontColor=ffffff&fontSize=48&fontAlignY=34&desc=Mathematical%20Physics%20%C2%B7%20Sustainable%20Infrastructure%20%C2%B7%20Energy%20Systems%20%C2%B7%20Resilience%20Science&descSize=16&descAlignY=57&animation=fadeIn"
+    alt="Dossiya Dakou — mathematical physics, sustainable infrastructure, energy systems and resilience science"
   />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Dossiya-SE">
-    <img src="https://img.shields.io/badge/GitHub-Dossiya--SE-181717?style=for-the-badge&logo=github" alt="GitHub" />
-  </a>
-  <a href="https://www.linkedin.com/in/dossiya-dakou-/">
-    <img src="https://img.shields.io/badge/LinkedIn-Dossiya%20Dakou-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <a href="https://dossiya-se.github.io/">
+    <img src="https://img.shields.io/badge/Research%20Portfolio-Live%20Mathematical%20Laboratory-4ec9b0?style=for-the-badge" alt="Research portfolio" />
   </a>
   <a href="https://orcid.org/0009-0004-1071-9948">
     <img src="https://img.shields.io/badge/ORCID-0009--0004--1071--9948-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" />
+  </a>
+  <a href="https://www.linkedin.com/in/dossiya-dakou-/">
+    <img src="https://img.shields.io/badge/LinkedIn-Dossiya%20Dakou-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <a href="mailto:ddakou@asu.edu">
     <img src="https://img.shields.io/badge/Email-ddakou%40asu.edu-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
 
-## Professional introduction
+## Research identity
 
-I am a sustainable-energy engineer and graduate researcher working across renewable energy, power systems, infrastructure resilience, mathematical modeling, optimization, financial engineering, statistics, machine learning and scientific computing.
+I am a sustainable-energy engineer and graduate researcher working at the intersection of **mathematical physics, sustainable infrastructure, infrastructure resilience, energy systems, inverse problems, uncertainty quantification, optimization and scientific computing**.
 
-My work connects the physics and reliability of infrastructure with the mathematical, financial and institutional decisions required to build it. I focus especially on African energy sovereignty, critical-service continuity, productive-use planning and rapid deployment under uncertainty.
+My central research direction asks how coupled infrastructure systems can remain **physically feasible, operationally recoverable and socially equitable** under climate and system stress.
+
+A recurring mathematical architecture in my work is
+
+\[
+\text{physics}
+\rightarrow
+\text{interfaces}
+\rightarrow
+\text{dynamics}
+\rightarrow
+\text{observation}
+\rightarrow
+\text{identification}
+\rightarrow
+\text{prediction}
+\rightarrow
+\text{failure/service loss}
+\rightarrow
+\text{recovery}
+\rightarrow
+\text{viability}
+\rightarrow
+\text{control/adaptation}.
+\]
+
+## Live mathematical research portfolio
+
+### [dossiya-se.github.io](https://dossiya-se.github.io/)
+
+The public portfolio is an auditable mathematical-computational research interface containing:
+
+- an interactive **mathematics atlas** connecting pure, applied and computational mathematics;
+- a browser-based **Power–Water–Transport–Solid-Waste (P–W–T–SW)** resilience demonstrator;
+- nonlinear coupled-state simulation using **classical RK4**;
+- projected viability and critical-service diagnostics;
+- a seeded **inverse-problem** experiment;
+- **Monte Carlo uncertainty propagation**;
+- WebGL mathematical geometry and D3 scientific visualization;
+- explicit epistemic labels separating established mathematics, demonstrators, proposed research objects and frontier methods;
+- machine-readable research metadata and automated production verification.
+
+The numerical browser model is intentionally presented as a **research demonstrator**, not as a calibrated or field-validated digital twin.
+
+## Current research programmes
+
+### Mathematical Physics of Sustainable Infrastructure Resilience
+
+**Graduate thesis research direction · private research repository**
+
+Current architecture: coupled **power–water–transport–solid-waste** infrastructure with dynamic interfaces under climate stress.
+
+Core mathematical directions include:
+
+- conservation laws and dynamical systems;
+- interdependent and multilayer networks;
+- dynamic-interface modeling;
+- inverse problems and identifiability;
+- Bayesian and deterministic estimation;
+- uncertainty quantification and reliability;
+- cascading failure and critical-service loss;
+- reachability and viability theory;
+- optimal control, robust control and adaptation;
+- service-to-population and equity constraints.
+
+A central research chain is
+
+\[
+\mathcal D_{obs}
+\rightarrow
+(\widehat G_{ij},\widehat\theta_{ij})
+\rightarrow
+\Sigma_\theta
+\rightarrow
+\mathcal V_{\mathrm{sus,eq}},
+\]
+
+where uncertainty in inferred infrastructure interfaces propagates into uncertainty in the sustainable-equitable viability region.
+
+### Infrastructure Interface Resilience
+
+**Research corpus · private repository**
+
+Research on cross-owner dependencies, interface identification, common-cause stressors, topology uncertainty, recovery evidence and quantitative infrastructure-resilience methods.
+
+### Africa Energy Dignity
+
+**Founder and Lead Systems Engineer · public open-source initiative**
+
+Africa Energy Dignity connects:
+
+- African geospatial evidence;
+- canonical data governance;
+- mathematical energy-system modeling;
+- infrastructure resilience;
+- productive-use planning;
+- energy sovereignty; and
+- rapid-deployment engineering.
+
+**Public repository:** [Dossiya-SE/africa-energy-dignity](https://github.com/Dossiya-SE/africa-energy-dignity)
+
+### Responsible Gold Access Network
+
+**Systems innovation · private development repository**
+
+Research and prototyping around responsible artisanal-gold market access, traceability, transparent measurement, finance, secure custody and resilient off-grid physical infrastructure.
 
 ## Education and current studies
 
@@ -40,95 +145,81 @@ My work connects the physics and reliability of infrastructure with the mathemat
 
 Ongoing programs are presented as current studies and are not claimed as completed degrees.
 
-## Flagship initiative
-
-### Africa Energy Dignity
-
-**Founder and Lead Systems Engineer**
-
-Africa Energy Dignity is an Africa-centered open-source scientific and engineering initiative connecting:
-
-- African geospatial evidence;
-- canonical data governance;
-- mathematical energy-system modeling;
-- infrastructure resilience;
-- productive-use planning;
-- energy sovereignty; and
-- rapid deployment engineering.
-
-The initiative is designed to convert verified African energy evidence into reproducible planning models, deployment pathways and measurable public-purpose outcomes.
-
-- **Repository:** https://github.com/Dossiya-SE/africa-energy-dignity
-- **ORCID:** https://orcid.org/0009-0004-1071-9948
-- **Current status:** Architecture baseline `0.1` approved; Burkina Faso geospatial benchmarking is the next scientific phase.
-
-Production data ingestion, energyRt implementation, native Pyomo implementation, optimization results and dashboard development are not presented as completed.
-
-## Verified research and engineering projects
+## Selected verified engineering and research work
 
 ### Coupled Energy–Transport Networks
 
-**Graduate research project**
-
-Research on coupled electric-vehicle charging, road-network equilibrium and distribution-grid constraints. The work connects Wardrop equilibrium and the Beckmann formulation with radial power-flow representations to study efficiency, infrastructure interaction and equity under coupled demand.
+Graduate research connecting electric-vehicle charging, Wardrop equilibrium, Beckmann formulations, road-network interaction and distribution-grid constraints.
 
 ### AI Utilization and First-Year Engineering Performance
 
-Empirical research on AI use and engineering-student outcomes using validated survey constructs and statistical analysis. The work uses correlation, analysis of variance, regression and profile-based methods while preserving the distinction between association and causation.
+Empirical research on AI use and engineering-student outcomes using validated survey constructs, correlation, ANOVA, regression and profile-based statistical analysis while preserving the distinction between association and causation.
 
 ### School-Anchored Solar Mini-Grid
 
-Engineering and bankability analysis for a school-centered solar-energy system. The project connects photovoltaic sizing, performance standards, life-cycle economics, debt-service capacity, uncertainty analysis and carbon-accounting boundaries.
+Engineering and bankability analysis connecting photovoltaic sizing, performance standards, life-cycle economics, debt-service capacity, uncertainty analysis and carbon-accounting boundaries.
 
-### Mathematical Physics of Sustainable Infrastructure Resilience
-
-**Proposed thesis research / graduate research direction**
-
-A physics-informed framework for critical-service continuity across interdependent power, transport and water systems using conservation laws, network dynamics, thresholds, uncertainty, optimization, control and resilience metrics.
-
-## Repository portfolio
+## Public repository portfolio
 
 | Repository | Focus |
 |---|---|
-| [Africa Energy Dignity](https://github.com/Dossiya-SE/africa-energy-dignity) | Open-source energy-sovereignty modeling, evidence governance and rapid-deployment engineering |
+| [Research Portfolio Source](https://github.com/Dossiya-SE/dossiya-se.github.io) | Auditable mathematical-computational research website, interactive simulations and production verification |
+| [Africa Energy Dignity](https://github.com/Dossiya-SE/africa-energy-dignity) | Open-source African energy-sovereignty modeling, evidence governance and rapid-deployment engineering |
 | [Financial Engineering Models](https://github.com/Dossiya-SE/dossiyadakou-mac-project) | Quantitative finance, stochastic modeling, time-series analysis and computational risk |
 | [Data Science & Machine Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) | Statistical learning, supervised modeling, diagnostics and applied analytics |
 | [Python for Rapid Engineering Solutions](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution) | Numerical methods, simulation and engineering computation |
 | [Sustainable Engineering / ASU Work](https://github.com/Dossiya-SE/testasu) | Sustainable-engineering workflows and systems analysis |
 
-## Technical expertise
+Private research repositories are described publicly where useful, but are not exposed as if they were publicly accessible.
 
-**Mathematics and optimization** — convex optimization, network equilibrium, Monte Carlo methods, uncertainty quantification, stochastic modeling, numerical methods and multi-objective decision analysis.
+## Mathematical and engineering domains
 
-**Renewable energy and power systems** — photovoltaic systems, energy balance, radial distribution networks, power-flow approximations, storage, reliability, critical-service continuity and energy-system planning.
+**Mathematical physics and analysis** — ODEs, PDEs, conservation laws, nonlinear dynamics, hybrid systems, functional and numerical analysis.
 
-**Infrastructure resilience** — interdependent infrastructure, cascading failure, interface reliability, system dynamics, recovery, maintainability and climate-resilient service continuity.
+**Inverse problems and estimation** — identifiability, parameter estimation, Bayesian inversion, filtering, data assimilation and model discrepancy.
 
-**Sustainable finance** — levelized cost of energy, weighted average cost of capital, debt-service coverage, project bankability, sustainable investment, carbon-market accounting and life-cycle assessment.
+**Optimization and control** — convex/nonconvex optimization, optimal control, model-predictive control, robust control, reachability and viability.
 
-**Financial engineering** — stochastic processes, Monte Carlo pricing, volatility models, jump-diffusion models, term structures, credit-state transitions and quantitative risk analysis.
+**Probability and uncertainty** — stochastic processes, Monte Carlo methods, uncertainty quantification, reliability, extremes and rare-event reasoning.
 
-**Statistics and machine learning** — descriptive and inferential statistics, correlation, ANOVA, regression, reliability analysis, classification, clustering, latent-profile methods and model diagnostics.
+**Infrastructure resilience** — interdependent infrastructure, dynamic interfaces, cascading failure, recovery, maintainability, climate stress and critical-service continuity.
 
-**African energy sovereignty** — local capability, data sovereignty, productive-use planning, strategic dependency, evidence-based infrastructure decisions and rapid deployment engineering.
+**Renewable energy and power systems** — photovoltaic systems, energy balance, radial distribution networks, storage, reliability, planning and productive-use energy systems.
 
-## Scientific-computing tools
+**Sustainable and financial engineering** — life-cycle economics, WACC, debt-service capacity, stochastic models, time-series analysis, quantitative risk and project bankability.
 
-- **Programming:** Python, SQL, R fundamentals
-- **Numerical and scientific computing:** NumPy, SciPy, pandas, CVXPY, Matplotlib
-- **Statistics and machine learning:** statsmodels, scikit-learn, SPSS, Minitab
-- **Engineering and modeling:** Pyomo concepts, HSPICE, OpenLCA, energy-system and digital-twin workflows
-- **Research and reproducibility:** Git, GitHub, LaTeX, Jupyter, Zotero
+## Scientific-computing architecture
+
+| Role | Languages / notation | Main use |
+|---|---|---|
+| Primary scientific workflow | Python · SQL · LaTeX | Numerics, data, optimization, reproducible research, mathematical exposition |
+| Numerical / high-performance targets | Julia · C · C++ · Fortran · Rust | Solvers, Monte Carlo, numerical kernels and HPC pathways |
+| Statistical / symbolic targets | R · MATLAB/Octave · Wolfram Language | Statistics, inference, control and symbolic prototyping |
+| Interactive scientific web | JavaScript · TypeScript · WebGL | D3 visualization, browser simulation and mathematical geometry |
+| Automation | Bash · GitHub Actions | Reproducibility, CI, provenance and production verification |
+
+Primary day-to-day scientific tooling includes **Python, NumPy, SciPy, pandas, CVXPY, Matplotlib, scikit-learn, statsmodels, Jupyter, Git, GitHub, LaTeX and Zotero**.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy" alt="NumPy" />
   <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy" />
   <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" />
   <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
   <img src="https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
+
+## Scientific-integrity rule
+
+The public research surfaces distinguish among:
+
+- **established mathematics**;
+- **research demonstrators**;
+- **proposed thesis-level research objects**;
+- **frontier computational methods**.
+
+No result is described as empirical, calibrated, validated or a digital twin unless the corresponding evidence, provenance, calibration method and validation chain exist.
 
 ## GitHub snapshot
 
@@ -139,12 +230,12 @@ A physics-informed framework for critical-service continuity across interdepende
 
 ## Professional links and contact
 
+- **Research portfolio:** https://dossiya-se.github.io/
 - **GitHub:** https://github.com/Dossiya-SE
 - **ORCID:** https://orcid.org/0009-0004-1071-9948
 - **LinkedIn:** https://www.linkedin.com/in/dossiya-dakou-/
-- **Professional portfolio:** https://dossiya-se.github.io
 - **Email:** ddakou@asu.edu
 
 ---
 
-<p align="center"><strong>From verified evidence to resilient infrastructure, productive capability and African energy sovereignty.</strong></p>
+<p align="center"><strong>From verified evidence and mathematical structure to resilient infrastructure, energy sovereignty and deployable engineering decisions.</strong></p>
