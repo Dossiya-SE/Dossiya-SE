@@ -1,0 +1,24 @@
+{
+  "schema_version": "DOSSYA_SE_VISUAL_MIGRATION_V4",
+  "scope": "all 14 repositories owned by Dossiya-SE as inventoried for this migration",
+  "theme_invariant": "equations, data values, geometry, topology, evidence state and scientific conclusions must not change between light and dark renders",
+  "canonical_strategy": "adaptive SVG for semantic mathematical visuals; system-theme CSS for website; no raster inversion",
+  "repositories": [
+    {"repo":"Dossiya-SE/Dossiya-SE","primary_assets":["assets/math-art/profile-mathematics-universe-v3.svg","assets/math-art/research-operating-system.svg","assets/math-art/differential-geometry-viability-v3.svg","assets/math-art/formula-evidence-lattice-v3.svg","assets/math-art/computational-stack.svg","assets/math-art/evidence-maturity-map.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/dossiya-se.github.io","primary_assets":["assets/profile-mathematics-universe-v3.svg","assets/math-v3.css"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/Dossiya-SE-Dossiya-SE","primary_assets":["assets/mathematics-ecosystem-v4.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/MSE-thesis","primary_assets":["assets/math-art/master_architecture.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/infrastructure-interface-resilience-review","primary_assets":["docs/assets/interface-resilience-math.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/africa-energy-dignity","primary_assets":["docs/assets/aed-mathematical-system.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/responsible-gold-access-network-rgan","primary_assets":["docs/assets/rgan-system-math.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab","primary_assets":["assets/math-art/quant-model-validation.svg"],"status":"adaptive_v4_branch","merge_boundary":"do not conflate with unrelated draft submission PR"},
+    {"repo":"Dossiya-SE/dossiyadakou-mac-project","primary_assets":["assets/math-art/econometric-risk-atlas.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/Python-for-rapid-engineering-solution","primary_assets":["assets/eda-mathematical-map.svg"],"status":"adaptive_v4_branch","legacy_raster_policy":"existing PNG diagnostics remain fixed evidence artifacts; do not invert because generating analysis source is not currently public"},
+    {"repo":"Dossiya-SE/Data-Science-an-Machine-Learning","primary_assets":["assets/ml-evidence-pipeline.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/testasu","primary_assets":["public/readme/solar-stem-system.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/Kudo-IA","primary_assets":["public/readme/kudos-decision-system.svg"],"status":"adaptive_v4_branch"},
+    {"repo":"Dossiya-SE/chatbot","primary_assets":["assets/chatbot-probability-architecture.svg"],"status":"adaptive_v4_branch"}
+  ],
+  "promotion_levels": {"P0":"conceptual","P1":"formula-consistent","P2":"numerically/symbolically generated","P3":"invariant-checked","P4":"source-reproduced","P5":"empirically validated for represented claim"},
+  "forbidden": ["scientific raster inversion","theme-dependent numerical values","theme-dependent evidence categories","decorative manifolds presented as established mathematics","AI-generated equation text treated as canonical"]
+}
