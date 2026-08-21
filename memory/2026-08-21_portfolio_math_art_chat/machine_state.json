@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "archive_date": "2026-08-21",
+  "timezone": "Asia/Singapore",
+  "scope": "GitHub profile/portfolio, mathematical research website, standards-aware mathematics atlas, evidence-first README architecture, mathematical-art visual system, repository-wide verification and memory continuity.",
+  "central_profile": {
+    "repository": "Dossiya-SE/Dossiya-SE",
+    "verified_main_before_archive": "91f8f733c103b2b35375b42917d96407c90fe331",
+    "verified_tree_before_archive": "6a9d40edb7e6d9915e11c688bc8fa38bd53c71e4",
+    "visual_pr": 6,
+    "status": "merged"
+  },
+  "repositories": [
+    {
+      "repository": "Dossiya-SE/Dossiya-SE",
+      "visibility": "public",
+      "relevant_visual_pr": 6,
+      "visual_merge_commit": "91f8f733c103b2b35375b42917d96407c90fe331",
+      "verification": "no repository CI; diff audited"
+    },
+    {
+      "repository": "Dossiya-SE/dossiya-se.github.io",
+      "visibility": "public",
+      "relevant_visual_pr": 4,
+      "visual_merge_commit": "1592f91e9117d645c98bec5feae862d10d7c065e",
+      "verification": "Production portfolio audit + Verify mathematical portfolio: PASS"
+    },
+    {
+      "repository": "Dossiya-SE/MSE-thesis",
+      "visibility": "private",
+      "relevant_visual_pr": 2,
+      "visual_merge_commit": "a99e55f97a1948e874b1f6e1d9525bed6756d882",
+      "verification": "Scientific Architecture QA + Python package: PASS"
+    },
+    {
+      "repository": "Dossiya-SE/africa-energy-dignity",
+      "visibility": "public",
+      "relevant_visual_pr": 25,
+      "visual_merge_commit": "741b29a6599c6ab0bb95b92a780ba6c92e661e23",
+      "verification": "AED application: PASS"
+    },
+    {
+      "repository": "Dossiya-SE/infrastructure-interface-resilience-review",
+      "visibility": "private",
+      "relevant_visual_pr": 36,
+      "visual_merge_commit": "cc7cd28548c3bf844a4147dee53dbfb10807dcbd",
+      "verification": "Scientific integrity checks: PASS"
+    },
+    {
+      "repository": "Dossiya-SE/responsible-gold-access-network-rgan",
+      "visibility": "private",
+      "relevant_visual_pr": 7,
+      "visual_merge_commit": "a24c22acf64adaeebdcfcef0cff57e0c97b0a6ff",
+      "verification": "no PR-triggered CI observed"
+    },
+    {
+      "repository": "Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab",
+      "visibility": "private",
+      "relevant_visual_pr": 23,
+      "visual_merge_commit": "c95b75dd38e4b39689e4f9ec7b98e2fe3a2777f2",
+      "verification": "quality: PASS"
+    },
+    {
+      "repository": "Dossiya-SE/dossiyadakou-mac-project",
+      "visibility": "public",
+      "relevant_visual_pr": 2,
+      "visual_merge_commit": "b7f4671dad6bdc4f19bd18d00329c4b67577fde4",
+      "verification": "no PR-triggered CI observed"
+    },
+    {
+      "repository": "Dossiya-SE/Python-for-rapid-engineering-solution",
+      "visibility": "public",
+      "relevant_visual_pr": 2,
+      "visual_merge_commit": "c7f5ddb8abd4ff7cb3ae286ac695d166b414c085",
+      "verification": "Evidence integrity: PASS"
+    },
+    {
+      "repository": "Dossiya-SE/testasu",
+      "visibility": "public",
+      "relevant_visual_pr": 2,
+      "visual_merge_commit": "320b0592706e5e2aa35567b98187045d21abc3b7",
+      "verification": "no PR-triggered CI observed"
+    },
+    {
+      "repository": "Dossiya-SE/Data-Science-an-Machine-Learning",
+      "visibility": "public",
+      "relevant_visual_pr": 3,
+      "visual_merge_commit": "5316aad1dc11d0e6a57c9ab7e59b0a0776c08780",
+      "verification": "no PR-triggered CI observed"
+    },
+    {
+      "repository": "Dossiya-SE/chatbot",
+      "visibility": "public",
+      "relevant_visual_pr": 2,
+      "visual_merge_commit": "4c2ef17310e54c2ae63addc75fbc467ca619444f",
+      "verification": "no PR-triggered CI observed"
+    },
+    {
+      "repository": "Dossiya-SE/Kudo-IA",
+      "visibility": "private",
+      "relevant_visual_pr": 2,
+      "visual_merge_commit": "7e4af7c1772dfb88e6d66b146e6f2ca44473a523",
+      "verification": "no PR-triggered CI observed"
+    }
+  ],
+  "integrity_rules": [
+    "current repository main supersedes this dated capsule",
+    "verification is not empirical validation",
+    "simulation is not observation",
+    "prototype metrics are not validated outcomes",
+    "standards references do not imply certification",
+    "programming-language listing does not imply equal mastery",
+    "theorem-level atlas relations require explicit theorem/proof evidence",
+    "do not claim an exact 1000-source scrape from this chat"
+  ],
+  "math_atlas_reference_stack": [
+    "ISO/IEC/IEEE 15288:2023",
+    "ISO 80000-2:2019",
+    "ISO 25964",
+    "MSC2020 / MSC2020-SKOS",
+    "W3C SKOS",
+    "RDF/RDFS/OWL 2",
+    "OpenMath",
+    "MathML",
+    "OMDoc/MMT",
+    "MaRDI MathModDB",
+    "W3C PROV-O",
+    "formal proof ecosystems: Lean, Isabelle/AFP, Rocq/Coq/MathComp, Mizar"
+  ],
+  "known_corrections": [
+    "website repo and profile repo are distinct",
+    "GitHub profile raw LaTeX rendering was replaced by Unicode/plain text and SVG",
+    "viable time changed from sample fraction to threshold-crossing time-measure approximation",
+    "RK4 final step shortened to terminate exactly at requested horizon",
+    "seeded inverse experiment wording corrected",
+    "public links to private repositories removed from public evidence surfaces",
+    "WebGL compile/link and D3 fallbacks added",
+    "production audit corrected to index.html -> app.js -> model.js module chain",
+    "misaligned Django/PyPI workflows in Python EDA repository replaced by Evidence integrity checks",
+    "ISO reference corrected from 1528 to ISO/IEC/IEEE 15288",
+    "mathematics atlas moved conceptually toward typed/provenance-bearing relations",
+    "exact 1000-source scraping was not completed and must not be claimed"
+  ],
+  "future_chat_load_order": [
+    "READ_FIRST_NEXT_CHAT.md",
+    "VERIFIED_STATE.md",
+    "DECISIONS_AND_CORRECTIONS.md",
+    "MATHEMATICAL_ARCHITECTURE.md",
+    "STANDARDS_AND_KNOWLEDGE_GRAPH.md",
+    "VISUAL_MATHEMATICS_GRAMMAR.md",
+    "REPRODUCIBILITY_PROTOCOL.md",
+    "REPOSITORY_AND_PR_MANIFEST.csv",
+    "AUTHENTIC_USER_REQUESTS.md",
+    "NEXT_STEPS.md"
+  ]
+}
