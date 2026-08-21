@@ -1,0 +1,57 @@
+{
+  "schema_version": "DOSSYA_SE_ADAPTIVE_VISUAL_THEME_V4",
+  "principle": "theme changes presentation only; equations, geometry, values, topology, evidence status and conclusions are invariant",
+  "light": {
+    "background": "#FFFFFF",
+    "panel": "#F8FAFC",
+    "panel_alt": "#F1F5F9",
+    "foreground": "#0F172A",
+    "muted": "#475569",
+    "grid": "#CBD5E1",
+    "border": "#94A3B8",
+    "source": "#4338CA",
+    "observed": "#0369A1",
+    "state": "#1D4ED8",
+    "interface": "#7E22CE",
+    "hazard": "#B91C1C",
+    "uncertainty": "#B45309",
+    "viability": "#047857",
+    "recovery": "#0F766E",
+    "decision": "#A16207",
+    "computed": "#475569",
+    "hypothesis": "#BE185D"
+  },
+  "dark": {
+    "background": "#07111F",
+    "panel": "#0E1D31",
+    "panel_alt": "#12243A",
+    "foreground": "#EAF1F8",
+    "muted": "#9EB0C3",
+    "grid": "#28445F",
+    "border": "#355A7B",
+    "source": "#A5B4FC",
+    "observed": "#38BDF8",
+    "state": "#60A5FA",
+    "interface": "#C084FC",
+    "hazard": "#FB7185",
+    "uncertainty": "#FBBF24",
+    "viability": "#34D399",
+    "recovery": "#5EEAD4",
+    "decision": "#FACC15",
+    "computed": "#CBD5E1",
+    "hypothesis": "#F472B6"
+  },
+  "line_semantics": {
+    "solid": "implemented, declared, observed or source-grounded relationship as labeled",
+    "dashed": "uncertainty, boundary, unverified transfer or scenario as labeled",
+    "dotted": "sensitivity, alternate hypothesis or auxiliary field as labeled"
+  },
+  "required_svg_elements": ["title", "desc", "viewBox", "prefers-color-scheme"],
+  "forbidden_shortcuts": [
+    "scientific raster inversion",
+    "unlabeled decorative manifold",
+    "unlabeled color field",
+    "theme-dependent numerical value",
+    "theme-dependent evidence category"
+  ]
+}
