@@ -1,74 +1,199 @@
-# Mathematical Art System
+# Mathematical Art and Professional Formula System — V3
 
-This directory defines the visual mathematics used by the GitHub profile.
+This directory is the **profile-level visual mathematics control layer** for `Dossiya-SE`.
 
-The objective is not decoration. Each visual element corresponds to a mathematical object used in infrastructure-resilience research.
+The objective is not decoration and not capability inflation. Every equation, curve, surface, vector field, color field, network, uncertainty region, and topology graphic must correspond to a declared mathematical or scientific object.
+
+## Governing files
+
+- [`MATHEMATICAL_PRESENTATION_STANDARD.md`](MATHEMATICAL_PRESENTATION_STANDARD.md) — typography, notation, semantics, evidence states, accessibility, and cross-repository display rules.
+- [`PROFILE_FORMULA_ATLAS.md`](PROFILE_FORMULA_ATLAS.md) — human-readable mathematical atlas across the profile.
+- [`formula_registry.json`](formula_registry.json) — machine-readable formula identity/provenance registry.
+
+## New V3 profile visuals
+
+<p align="center">
+  <img src="../assets/math-art/profile-mathematics-universe-v3.svg" width="100%" alt="Profile-wide mathematics universe connecting foundations, dynamics, networks, inference, viability and decision mathematics" />
+</p>
+
+[`profile-mathematics-universe-v3.svg`](../assets/math-art/profile-mathematics-universe-v3.svg) maps the mathematical families actually used or explicitly specified across the portfolio. It is not presented as a map of all mathematics.
+
+<p align="center">
+  <img src="../assets/math-art/differential-geometry-viability-v3.svg" width="100%" alt="Differential geometry source mathematics separated from infrastructure viability research transfer" />
+</p>
+
+[`differential-geometry-viability-v3.svg`](../assets/math-art/differential-geometry-viability-v3.svg) separates three layers that must never be conflated:
+
+```text
+source differential geometry
+≠ geometric metaphor
+≠ formally defined research-state geometry
+```
+
+<p align="center">
+  <img src="../assets/math-art/formula-evidence-lattice-v3.svg" width="100%" alt="Formula evidence lattice from provenance through verification and validation to bounded decisions" />
+</p>
+
+[`formula-evidence-lattice-v3.svg`](../assets/math-art/formula-evidence-lattice-v3.svg) encodes the provenance and scientific-status contract for displayed mathematics.
+
+---
 
 ## Visual grammar
 
-| Visual element | Mathematical meaning |
+| Visual element | Mathematical/scientific meaning |
 |---|---|
-| Coupled nodes | Infrastructure subsystems and interdependencies |
-| Dynamic edge `G(t)` | Time-varying interface or coupling strength |
-| State trajectory | Evolution of the coupled system under disturbance and control |
-| Dashed outer region | Safe-sustainable-equitable viability boundary |
-| Nested ellipses | Uncertainty or nested admissible state regions |
-| Recovery trajectory | Controlled return toward acceptable service states |
-| Grid | State-space / phase-space reference structure |
+| coupled nodes | subsystems, state blocks, variables, or graph vertices |
+| dynamic edge `G(t)` | declared time-varying interface/coupling relation |
+| state trajectory | evolution under a stated dynamic model |
+| dashed outer region | constraint, admissibility, or uncertainty boundary |
+| nested sets | explicitly declared admissible/credible/scenario regions |
+| recovery trajectory | controlled/declared return path |
+| coordinate mesh | chart, discretization, or state-space reference |
+| contour | level set of a declared scalar field |
+| tangent/normal/binormal | mathematically defined moving frame |
+| color field | scalar/vector quantity with an explicit legend |
 
-## Canonical equations
+A visual arrow means a **mapping, dependency, flow, or model relation** unless causal evidence is separately established.
 
-### Coupled dynamics
+---
 
-$$
-\dot{x}_i=f_i(x_i,\theta_i)+\sum_j g_{ij}(x_i,x_j,G_{ij},\theta_{ij})+B_i u_i+\xi_i.
-$$
+## Canonical profile equations
 
-### Observation and inverse problem
+### Coupled dynamics — [M]
 
-$$
+```math
+\dot{x}_i
+=
+f_i(x_i,\theta_i)
++
+\sum_{j\ne i}g_{ij}(x_i,x_j,G_{ij},\theta_{ij})
++
+B_i u_i
++
+\xi_i.
+```
+
+### Observation and inverse problem — [M]
+
+```math
 y_k=h(x_k,\theta)+\varepsilon_k,
 \qquad
 \pi(\theta\mid y)\propto L(y\mid\theta)\pi_0(\theta).
-$$
+```
 
-### Reliability and failure
+### Reliability — [M]
 
-$$
-P_f=P\left[g(X,H)\le 0\right].
-$$
+```math
+P_f
+=
+\mathbb P\!\left[g(X,H)\le0\right].
+```
 
-### Service resilience
+### Service resilience — [M]
 
-$$
-\mathcal R_T=\frac{1}{T}\int_0^T\frac{S(t)}{S_0}\,dt.
-$$
+```math
+\mathcal R_T
+=
+\frac{1}{T}
+\int_0^T
+\frac{S(t)}{S_0}\,dt.
+```
 
-### Viability
+### Viability — [M]
 
-$$
-\mathcal V=\{x_0:\exists u(\cdot),\;x(t)\in\mathcal K,\;\forall t\in[0,T]\}.
-$$
+```math
+\mathcal V
+=
+\left\{
+x_0:\exists u(\cdot),\;x(t)\in\mathcal K,\;\forall t\in[0,T]
+\right\}.
+```
+
+### Differential geometry — [S]
+
+```math
+g_{\alpha\beta}=\partial_\alpha\mathbf r\cdot\partial_\beta\mathbf r,
+\qquad
+K=\frac{eg-f^2}{EG-F^2}.
+```
+
+```math
+\frac{d^2u^\alpha}{ds^2}
++
+\Gamma^\alpha_{\beta\gamma}
+\frac{du^\beta}{ds}
+\frac{du^\gamma}{ds}=0.
+```
+
+The differential-geometry source layer is anchored to the Sochi foundation registered in `Dossiya-SE/Dossiya-SE-Dossiya-SE`.
+
+---
+
+## Evidence-state tags
+
+```text
+[S] source-grounded
+[D] derived
+[M] model
+[C] computed
+[V] verified
+[E] empirical
+[H] hypothesis
+[T] target
+```
+
+A displayed formula retains its status when reused across repositories.
+
+---
 
 ## Design rules
 
-1. Equations must have a scientific interpretation.
-2. Geometry must map to an explicit systems concept.
-3. Decorative curves must be generated from or interpretable as trajectories, manifolds, envelopes or fields.
-4. Labels should use the same symbols as the research models.
-5. Visuals should remain legible in GitHub dark and light themes.
-6. SVG is preferred for profile assets because it is scalable and text-readable.
-7. Static art should remain deterministic and version-controlled.
+1. **Equation before ornament:** the visual object must have a mathematical role.
+2. **Semantics before color:** color encodes a declared quantity or category.
+3. **Source before attribution:** theorem/source mathematics is never presented as original research.
+4. **Assumptions before optimization:** objective and constraints must be explicit.
+5. **Uncertainty before confidence:** bands/tubes require a stated construction.
+6. **Geometry before metaphor:** metric/curvature language requires a formal geometric object.
+7. **Verification before promotion:** invariant or cross-method checks should exist when feasible.
+8. **Validation before decision:** software correctness is not empirical validity.
+9. **Accessibility by default:** all SVGs include `<title>`, `<desc>`, scalable `viewBox`, and non-color-only meaning.
+10. **Vector-first delivery:** SVG/PDF/TeX are preferred for publication-grade mathematical diagrams; raster is reserved for data images/rendered scenes.
 
-## Current asset
+---
 
-- `../assets/mathematical-resilience.svg` — coupled P-W-T-SW infrastructure, dynamic interface, control trajectory and viability geometry.
+## Rendering hierarchy
 
-## Future mathematical-art modules
+```text
+P0 conceptual
+→ P1 formula-consistent
+→ P2 numerically generated
+→ P3 invariant-checked
+→ P4 source-reproduced
+→ P5 empirically validated
+```
 
-- Lorenz-style uncertainty attractor for cascading dynamics.
-- Spectral graph / Laplacian visualization of interface criticality.
-- Viability-kernel contour map.
-- Pareto front for resilience-equity-cost tradeoffs.
-- Bayesian posterior geometry for interface identification.
-- Reachability tube for recovery control.
+Visual sophistication does not change evidence level.
+
+---
+
+## Profile mathematics pipeline
+
+```math
+\boxed{
+\text{Source/Evidence}
+\rightarrow
+\text{Definitions + Assumptions}
+\rightarrow
+\text{Model}
+\rightarrow
+\text{Computation}
+\rightarrow
+\text{Verification}
+\rightarrow
+\text{Validation}
+\rightarrow
+\text{Bounded Decision}
+}
+```
+
+This pipeline is the common visual and mathematical language of the profile.

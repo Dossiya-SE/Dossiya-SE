@@ -1,0 +1,336 @@
+{
+  "schema_version": "3.0.0",
+  "purpose": "Machine-readable registry for formulas displayed or referenced across the Dossiya-SE GitHub profile. Presence in this registry does not imply empirical validation or original authorship.",
+  "evidence_states": {
+    "S": "source-grounded mathematics",
+    "D": "derived under declared assumptions",
+    "M": "model or mathematical abstraction",
+    "C": "computed result or computational definition",
+    "V": "verified identity/invariant/test",
+    "E": "empirically supported quantity/model relation",
+    "H": "research hypothesis",
+    "T": "design/engineering target"
+  },
+  "formulas": [
+    {
+      "id": "DG-METRIC-001",
+      "domain": "differential_geometry",
+      "name": "surface metric tensor",
+      "latex": "g_{\\alpha\\beta}=\\partial_\\alpha\\mathbf r\\cdot\\partial_\\beta\\mathbf r",
+      "state": "S",
+      "source": "SOCHI-DG-2017-UPLOADED",
+      "role": "intrinsic geometry foundation",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-Dossiya-SE"
+    },
+    {
+      "id": "DG-CONNECTION-002",
+      "domain": "differential_geometry",
+      "name": "Levi-Civita Christoffel symbols",
+      "latex": "\\Gamma^\\alpha_{\\beta\\gamma}=\\tfrac12g^{\\alpha\\delta}(\\partial_\\beta g_{\\gamma\\delta}+\\partial_\\gamma g_{\\beta\\delta}-\\partial_\\delta g_{\\beta\\gamma})",
+      "state": "S",
+      "source": "SOCHI-DG-2017-UPLOADED; Eq. 63 in general-index form",
+      "role": "metric connection / geodesic dynamics",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-Dossiya-SE"
+    },
+    {
+      "id": "DG-GEODESIC-003",
+      "domain": "differential_geometry",
+      "name": "surface geodesic equation",
+      "latex": "\\frac{d^2u^\\alpha}{ds^2}+\\Gamma^\\alpha_{\\beta\\gamma}\\frac{du^\\beta}{ds}\\frac{du^\\gamma}{ds}=0",
+      "state": "S",
+      "source": "SOCHI-DG-2017-UPLOADED; Eq. 418",
+      "role": "intrinsic path geometry",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-Dossiya-SE"
+    },
+    {
+      "id": "DG-GAUSS-004",
+      "domain": "differential_geometry",
+      "name": "Gaussian curvature from fundamental forms",
+      "latex": "K=\\frac{eg-f^2}{EG-F^2}",
+      "state": "S",
+      "source": "SOCHI-DG-2017-UPLOADED",
+      "role": "surface curvature",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-Dossiya-SE"
+    },
+    {
+      "id": "DG-FRENET-005",
+      "domain": "differential_geometry",
+      "name": "Frenet-Serret frame",
+      "latex": "\\mathbf T'=\\kappa\\mathbf N,\\quad\\mathbf N'=\\tau\\mathbf B-\\kappa\\mathbf T,\\quad\\mathbf B'=-\\tau\\mathbf N",
+      "state": "S",
+      "source": "SOCHI-DG-2017-UPLOADED; Eqs. 136-138",
+      "role": "moving-frame geometry of space curves",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-Dossiya-SE"
+    },
+    {
+      "id": "DG-GB-006",
+      "domain": "differential_geometry_topology",
+      "name": "global Gauss-Bonnet relation",
+      "latex": "\\iint_S K\\,d\\sigma=2\\pi\\chi",
+      "state": "S",
+      "source": "SOCHI-DG-2017-UPLOADED",
+      "role": "curvature-topology benchmark",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-Dossiya-SE"
+    },
+    {
+      "id": "DYN-COUPLED-001",
+      "domain": "nonlinear_dynamics",
+      "name": "coupled subsystem dynamics",
+      "latex": "\\dot x_i=f_i(x_i,\\theta_i)+\\sum_{j\\ne i}g_{ij}(x_i,x_j,G_{ij},\\theta_{ij})+B_i u_i+\\xi_i",
+      "state": "M",
+      "source": "profile research architecture",
+      "role": "generic coupled-infrastructure model class",
+      "primary_repository": "Dossiya-SE/MSE-thesis"
+    },
+    {
+      "id": "DYN-HYBRID-002",
+      "domain": "hybrid_systems",
+      "name": "hybrid multiscale interface model",
+      "latex": "\\dot X=F(X,Z,m,u,\\eta;\\theta),\\quad\\varepsilon\\dot Z=G(X,Z,m,\\eta;\\theta),\\quad m^+=\\Phi(X,Z,m,\\eta)",
+      "state": "M",
+      "source": "MSE-thesis research architecture",
+      "role": "continuous state + interface + discrete mode separation",
+      "primary_repository": "Dossiya-SE/MSE-thesis"
+    },
+    {
+      "id": "VIA-KERNEL-001",
+      "domain": "viability_theory",
+      "name": "viability kernel",
+      "latex": "\\mathcal V_R=\\{x_0\\in K_R:\\exists u(\\cdot)\\in\\mathcal U,\\;X(t;x_0,u,\\eta,\\theta)\\in K_R\\;\\forall t\\ge0\\}",
+      "state": "M",
+      "source": "MSE-thesis canonical formulation",
+      "role": "admissible long-run state geometry",
+      "primary_repository": "Dossiya-SE/MSE-thesis"
+    },
+    {
+      "id": "VIA-CAPTURE-002",
+      "domain": "reachability_viability",
+      "name": "capture/recovery set",
+      "latex": "\\mathcal C_R=\\{x_0:\\exists u(\\cdot),\\exists T<\\infty,\\;X(T;x_0,u)\\in\\mathcal V_R\\}",
+      "state": "M",
+      "source": "MSE-thesis canonical formulation",
+      "role": "recoverability distinct from viability",
+      "primary_repository": "Dossiya-SE/MSE-thesis"
+    },
+    {
+      "id": "VIA-RECOVERYTIME-003",
+      "domain": "optimal_reachability",
+      "name": "minimum admissible recovery time",
+      "latex": "\\tau_R(x_0)=\\inf\\{T:\\exists u(\\cdot),\\;X(T;x_0,u)\\in\\mathcal V_R\\}",
+      "state": "M",
+      "source": "MSE-thesis canonical formulation",
+      "role": "recovery-time geometry",
+      "primary_repository": "Dossiya-SE/MSE-thesis"
+    },
+    {
+      "id": "INV-BAYES-001",
+      "domain": "inverse_problems_bayesian_inference",
+      "name": "posterior inference",
+      "latex": "\\pi(\\theta\\mid y)\\propto L(y\\mid\\theta)\\pi_0(\\theta)",
+      "state": "M",
+      "source": "profile mathematical research operating system",
+      "role": "uncertain-parameter inference",
+      "primary_repository": "Dossiya-SE/dossiya-se.github.io"
+    },
+    {
+      "id": "UQ-COV-001",
+      "domain": "multivariate_statistics",
+      "name": "covariance matrix",
+      "latex": "\\Sigma=\\mathbb E[(X-\\mu)(X-\\mu)^T]",
+      "state": "S",
+      "source": "standard multivariate-statistics identity used by repository",
+      "role": "multivariate dependence/scale structure",
+      "primary_repository": "Dossiya-SE/Python-for-rapid-engineering-solution"
+    },
+    {
+      "id": "UQ-CORR-002",
+      "domain": "multivariate_statistics",
+      "name": "correlation coefficient",
+      "latex": "\\rho_{ij}=\\frac{\\Sigma_{ij}}{\\sigma_i\\sigma_j}",
+      "state": "S",
+      "source": "standard multivariate-statistics identity used by repository",
+      "role": "scale-normalized association diagnostic",
+      "primary_repository": "Dossiya-SE/Python-for-rapid-engineering-solution"
+    },
+    {
+      "id": "REL-FAIL-001",
+      "domain": "reliability",
+      "name": "failure probability",
+      "latex": "P_f=\\mathbb P[g(X,H)\\le0]",
+      "state": "M",
+      "source": "profile reliability abstraction",
+      "role": "limit-state failure probability",
+      "primary_repository": "Dossiya-SE/Dossiya-SE"
+    },
+    {
+      "id": "NET-LAPLACIAN-001",
+      "domain": "graph_theory_spectral_methods",
+      "name": "graph Laplacian",
+      "latex": "L=D-A",
+      "state": "S",
+      "source": "standard graph-theoretic definition",
+      "role": "spectral interface/network analysis where explicitly computed",
+      "primary_repository": "Dossiya-SE/Dossiya-SE"
+    },
+    {
+      "id": "IIR-RESPONSE-001",
+      "domain": "interface_resilience",
+      "name": "response-time decomposition",
+      "latex": "T_{response,i}=T_{detect,i}+T_{communicate,i}+T_{authorise,i}+T_{mobilise,i}+T_{actuate,i}",
+      "state": "M",
+      "source": "interface-resilience project specification",
+      "role": "response latency decomposition",
+      "primary_repository": "Dossiya-SE/infrastructure-interface-resilience-review"
+    },
+    {
+      "id": "IIR-CASCADE-002",
+      "domain": "interface_resilience",
+      "name": "timely-control condition",
+      "latex": "T_{response,i}<T_{cascade,i}",
+      "state": "M",
+      "source": "interface-resilience project specification",
+      "role": "response viability condition",
+      "primary_repository": "Dossiya-SE/infrastructure-interface-resilience-review"
+    },
+    {
+      "id": "ENERGY-BAL-001",
+      "domain": "energy_systems",
+      "name": "nodal/system energy balance",
+      "latex": "P_{gen}+P_{import}+P_{dis}=P_{load}+P_{loss}+P_{ch}+P_{export}",
+      "state": "M",
+      "source": "Africa Energy Dignity mathematical framework",
+      "role": "energy conservation/accounting constraint",
+      "primary_repository": "Dossiya-SE/africa-energy-dignity"
+    },
+    {
+      "id": "ENERGY-SOC-002",
+      "domain": "energy_storage",
+      "name": "discrete storage state-of-charge balance",
+      "latex": "SOC_{t+1}=SOC_t+\\eta_cE_{ch}-E_{dis}/\\eta_d",
+      "state": "M",
+      "source": "Solar + STEM prototype mathematical design target",
+      "role": "storage accounting abstraction",
+      "primary_repository": "Dossiya-SE/testasu"
+    },
+    {
+      "id": "OPT-MULTI-001",
+      "domain": "multiobjective_optimization",
+      "name": "multiobjective engineering design",
+      "latex": "\\min_d[C(d),E(d),T(d),Risk(d)],\\quad\\max_d[Service(d),Resilience(d),Sovereignty(d)]",
+      "state": "M",
+      "source": "Africa Energy Dignity design framework",
+      "role": "constrained multiobjective planning",
+      "primary_repository": "Dossiya-SE/africa-energy-dignity"
+    },
+    {
+      "id": "FIN-HESTON-001",
+      "domain": "stochastic_finance",
+      "name": "stochastic-volatility price process",
+      "latex": "dS_t=\\mu S_tdt+\\sqrt{v_t}S_tdW_t^S+\\text{jump term}",
+      "state": "M",
+      "source": "quantitative-finance lab model family",
+      "role": "stochastic volatility / jump-diffusion modeling",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab"
+    },
+    {
+      "id": "FIN-VAR-002",
+      "domain": "stochastic_finance",
+      "name": "square-root variance process",
+      "latex": "dv_t=\\kappa(\\theta-v_t)dt+\\sigma\\sqrt{v_t}dW_t^v",
+      "state": "M",
+      "source": "quantitative-finance lab model family",
+      "role": "Heston-style variance dynamics",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab"
+    },
+    {
+      "id": "FIN-CIR-003",
+      "domain": "interest_rate_models",
+      "name": "CIR-style short-rate process",
+      "latex": "dr_t=\\kappa(\\theta-r_t)dt+\\sigma\\sqrt{r_t}dW_t",
+      "state": "M",
+      "source": "quantitative-finance lab model family",
+      "role": "positive mean-reverting short-rate modeling",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab"
+    },
+    {
+      "id": "FIN-CAL-004",
+      "domain": "calibration_optimization",
+      "name": "weighted calibration objective",
+      "latex": "\\hat\\theta=\\arg\\min_\\theta\\sum_iw_i[V_{model}(K_i,T_i;\\theta)-V_{market,i}]^2",
+      "state": "M",
+      "source": "quantitative-finance lab calibration contract",
+      "role": "parameter calibration",
+      "primary_repository": "Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab"
+    },
+    {
+      "id": "ECON-OVB-001",
+      "domain": "econometrics",
+      "name": "omitted-variable-bias probability limit",
+      "latex": "\\operatorname{plim}\\hat\\beta_{omit}=\\beta+\\gamma\\frac{\\operatorname{Cov}(X,Z)}{\\operatorname{Var}(X)}",
+      "state": "D",
+      "source": "econometrics problem module",
+      "role": "identification-error demonstration",
+      "primary_repository": "Dossiya-SE/dossiyadakou-mac-project"
+    },
+    {
+      "id": "ML-RISK-001",
+      "domain": "machine_learning",
+      "name": "regularized empirical risk",
+      "latex": "\\theta^*=\\arg\\min_\\theta\\sum_i\\ell(f_\\theta(x_i),y_i)+\\lambda\\Omega(\\theta)",
+      "state": "M",
+      "source": "Data Science and Machine Learning repository quality contract",
+      "role": "future model-training standard",
+      "primary_repository": "Dossiya-SE/Data-Science-an-Machine-Learning"
+    },
+    {
+      "id": "ML-TEST-002",
+      "domain": "machine_learning_evaluation",
+      "name": "held-out empirical test risk",
+      "latex": "\\widehat R_{test}=n_{test}^{-1}\\sum_i\\ell(f_\\theta(x_i),y_i)",
+      "state": "M",
+      "source": "Data Science and Machine Learning repository quality contract",
+      "role": "out-of-sample evaluation",
+      "primary_repository": "Dossiya-SE/Data-Science-an-Machine-Learning"
+    },
+    {
+      "id": "MEAS-VAL-001",
+      "domain": "metrology_uncertainty",
+      "name": "measurement-to-valuation model",
+      "latex": "\\hat m=m+\\varepsilon_m,\\quad\\hat q=q+\\varepsilon_q,\\quad\\hat V=\\hat m\\hat qP_{market}-fees",
+      "state": "M",
+      "source": "RGAN design framework",
+      "role": "transparent valuation under measurement uncertainty",
+      "primary_repository": "Dossiya-SE/responsible-gold-access-network-rgan"
+    },
+    {
+      "id": "RISK-CUSTODY-002",
+      "domain": "risk_analysis",
+      "name": "custody loss-risk abstraction",
+      "latex": "Risk=\\mathbb P(loss\\mid state)\\times Consequence(value)",
+      "state": "M",
+      "source": "RGAN design framework",
+      "role": "security/custody risk abstraction",
+      "primary_repository": "Dossiya-SE/responsible-gold-access-network-rgan"
+    },
+    {
+      "id": "DEC-SCORE-001",
+      "domain": "decision_support",
+      "name": "transparent weighted score",
+      "latex": "s(x)=\\sum_jw_j\\phi_j(x),\\quad w_j\\ge0,\\quad\\sum_jw_j=1",
+      "state": "T",
+      "source": "Kudo-IA design target",
+      "role": "future interpretable decision-support scoring",
+      "primary_repository": "Dossiya-SE/Kudo-IA"
+    },
+    {
+      "id": "LM-AR-001",
+      "domain": "probabilistic_sequence_models",
+      "name": "autoregressive factorization",
+      "latex": "p(y_{1:T}\\mid x)=\\prod_{t=1}^Tp(y_t\\mid x,y_{1:t-1})",
+      "state": "S",
+      "source": "generic probability factorization used for conceptual explanation only",
+      "role": "external language-model API conceptual boundary",
+      "primary_repository": "Dossiya-SE/chatbot"
+    }
+  ]
+}
