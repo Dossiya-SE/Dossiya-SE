@@ -1,159 +1,90 @@
 <p align="center">
-  <img src="assets/mathematical-resilience.svg" width="100%" alt="Dossiya Dakou — mathematical physics, sustainable infrastructure and scientific computing" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:07111f,45:0e4166,75:1f6feb,100:238636&text=Dossiya%20Dakou&fontColor=ffffff&fontSize=46&fontAlignY=34&desc=Mathematical%20Physics%20%C2%B7%20Sustainable%20Infrastructure%20%C2%B7%20Scientific%20Computing&descSize=16&descAlignY=58&animation=fadeIn" alt="Dossiya Dakou" />
 </p>
-
-<h1 align="center">Dossiya Dakou</h1>
-<p align="center"><strong>Sustainable Engineering · Mathematical Physics · Infrastructure Resilience · Energy Systems · Scientific Computing</strong></p>
 
 <p align="center">
-  <a href="https://github.com/Dossiya-SE"><img src="https://img.shields.io/badge/GitHub-Dossiya--SE-181717?style=flat-square&logo=github" alt="GitHub" /></a>
-  <a href="https://www.linkedin.com/in/dossiya-dakou-/"><img src="https://img.shields.io/badge/LinkedIn-Dossiya%20Dakou-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://orcid.org/0009-0004-1071-9948"><img src="https://img.shields.io/badge/ORCID-0009--0004--1071--9948-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID" /></a>
-  <a href="mailto:ddakou@asu.edu"><img src="https://img.shields.io/badge/Email-ddakou%40asu.edu-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://dossiya-se.github.io/"><img src="https://img.shields.io/badge/Research%20Portfolio-Live%20Mathematical%20Laboratory-4ec9b0?style=for-the-badge" alt="Research portfolio" /></a>
+  <a href="https://orcid.org/0009-0004-1071-9948"><img src="https://img.shields.io/badge/ORCID-0009--0004--1071--9948-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" /></a>
+  <a href="https://www.linkedin.com/in/dossiya-dakou-/"><img src="https://img.shields.io/badge/LinkedIn-Dossiya%20Dakou-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
-## Research identity
+<p align="center">
+  <a href="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/verify.yml"><img src="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/verify.yml/badge.svg" alt="Mathematical portfolio verification" /></a>
+  <a href="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/production-audit.yml"><img src="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/production-audit.yml/badge.svg" alt="Production portfolio audit" /></a>
+  <a href="https://github.com/Dossiya-SE/africa-energy-dignity/actions/workflows/python-app.yml"><img src="https://github.com/Dossiya-SE/africa-energy-dignity/actions/workflows/python-app.yml/badge.svg" alt="Africa Energy Dignity verification" /></a>
+</p>
 
-I work at the intersection of **sustainable infrastructure, mathematical physics, energy systems, resilience engineering, uncertainty, optimization, financial engineering and scientific computing**. My central research question is how coupled infrastructure can remain physically feasible, socially equitable and operationally recoverable under climate and system stress.
+## Mathematical research operating system
 
-My work emphasizes **mechanistic models before black-box prediction**, **interfaces before isolated assets**, and **service continuity before component-level performance**.
+<p align="center">
+  <img src="assets/math-art/research-operating-system.svg" width="100%" alt="Coupled dynamics, inverse problems, uncertainty, viability, control, optimization and validation" />
+</p>
 
-### Core mathematical object
+The portfolio is organized around one discipline: **a claim is only as strong as the mathematics, evidence, code, verification and validation chain behind it.**
 
-For a coupled infrastructure state \(x(t)\), dynamic interfaces \(G(t)\), controls \(u(t)\), hazards \(\eta(t)\), and uncertain parameters \(\theta\):
+## Evidence maturity — visually, not rhetorically
 
-$$
-\dot{x}_i=f_i(x_i,\theta_i)+\sum_j g_{ij}(x_i,x_j,G_{ij},\theta_{ij})+B_i u_i+\xi_i,
-$$
+<p align="center">
+  <img src="assets/math-art/evidence-maturity-map.svg" width="100%" alt="Portfolio evidence maturity map" />
+</p>
 
-with safe-sustainable viability defined conceptually by
+**Circle = evidence-bearing research implementation. Square = prototype/scaffold.** Position is descriptive, not a certification or ranking.
 
-$$
-\mathcal{V}_{\mathrm{sus,eq}}=\left\{x_0:\exists u(\cdot)\;\text{s.t.}\;x(t)\in\mathcal{K}_{\mathrm{safe}}\cap\mathcal{K}_{\mathrm{sustainable}}\cap\mathcal{K}_{\mathrm{equitable}},\;\forall t\in[0,T]\right\}.
-$$
+## Computational mathematics stack
 
-The engineering objective is not only to predict failure, but to identify **which interfaces, controls and recovery actions keep critical services inside this viable region**.
+<p align="center">
+  <img src="assets/math-art/computational-stack.svg" width="100%" alt="Mathematics to numerical methods to code to verification to validation" />
+</p>
 
-## Mathematical systems architecture
+The [**Polyglot Resilience Atlas**](polyglot-resilience/README.md) maps one bounded infrastructure-service kernel across multiple programming paradigms as an interoperability and scientific-computing reference. It is **not** evidence of expert proficiency in every listed language and is not a frozen thesis equation.
 
-| Chain | Scientific question | Representative mathematics |
+### Evidence-bearing public work
+
+| Repository | Inspectable evidence | Boundary |
 |---|---|---|
-| **I. Physics → Structure → Interfaces → Dynamics** | What laws govern the coupled system and how do dependencies propagate? | Conservation laws, PDEs/ODEs, graph theory, multilayer networks, nonlinear dynamics |
-| **II. Observe → Identify → Estimate → Predict** | What can be inferred from incomplete, noisy observations? | Inverse problems, Bayesian inference, filtering, data assimilation, system identification |
-| **III. Hazard → Failure → Service Loss → Consequences** | How does stress become loss of critical service? | Reliability, fragility, stochastic processes, percolation, threshold models |
-| **IV. Recovery → Resilience → Viability** | Can the system recover while respecting safe and sustainable bounds? | Recovery dynamics, viability theory, reachability, resilience functionals |
-| **V. Decision → Control → Optimization** | Which actions preserve service at minimum social and physical cost? | Optimal control, convex/nonconvex optimization, MPC, stochastic/robust optimization |
-| **VI. Equity → Population → Critical-Service Continuity** | Who receives service, when, and under what constraints? | Spatial allocation, welfare functions, equity constraints, multi-objective optimization |
+| [**Mathematical Research Portfolio**](https://github.com/Dossiya-SE/dossiya-se.github.io) | RK4 dynamics, inverse experiment, seeded Monte Carlo UQ, D3/WebGL, CI | uncalibrated research demonstrator |
+| [**Africa Energy Dignity**](https://github.com/Dossiya-SE/africa-energy-dignity) | schemas, PostGIS migrations, API/web validation, governance, CI | pre-alpha; no production optimizer claim |
+| [**Financial Engineering Models**](https://github.com/Dossiya-SE/dossiyadakou-mac-project) | econometric derivations, simulations, diagnostics, model-risk analysis | coursework/research computation |
+| [**Python for Rapid Engineering Solutions**](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution) | dataset, report, EDA figures, evidence-integrity CI | artifact-verifiable; source analysis incomplete |
+| [**Solar + STEM prototype**](https://github.com/Dossiya-SE/testasu) | Next.js/React/TypeScript implementation | UI/product prototype; impact counters not treated as verified outcomes |
 
-## Current research and engineering portfolio
+### Prototype / learning work
 
-| Project | Role of mathematics and computation |
-|---|---|
-| **Mathematical Physics of Sustainable Infrastructure Resilience** | Coupled power–water–transport–solid-waste dynamics, dynamic interfaces, inverse problems, viability, uncertainty and control |
-| **Infrastructure Interface Resilience Review** | Interface taxonomy, evidence synthesis, coding, quantitative screening and recovery-oriented gap analysis |
-| **Africa Energy Dignity** | African energy evidence governance, geospatial analysis, energy-system optimization and rapid-deployment engineering |
-| **Responsible Gold Access Network (RGAN)** | Secure physical/digital architecture, traceability, metrology, finance, energy autonomy and system-of-systems design |
-| **Quantitative Finance Laboratory** | Monte Carlo methods, stochastic processes, risk, time series and numerical finance |
+[Data Science & Machine Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) · [Chatbot](https://github.com/Dossiya-SE/chatbot) · **Kudos IA — private product prototype**
 
-## Computational language atlas
+These are explicitly separated from mature research evidence so that repository visibility does not become capability inflation.
 
-I do **not** present a long badge wall as proof of mastery. Languages are organized by their scientific role and by actual development intent.
+## Research programmes
 
-### Primary scientific workflow
+**Mathematical Physics of Sustainable Infrastructure Resilience** — coupled Power–Water–Transport–Solid-Waste systems, dynamic interfaces, inverse problems, uncertainty, viability/reachability, control and sustainable-equitable admissibility.
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL" />
-  <img src="https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" />
-</p>
+**Infrastructure Interface Resilience** — topology uncertainty, cross-owner dependency, response latency, cascading failure, recovery and intervention ranking.
 
-### Numerical, statistical and optimization languages
+**Africa Energy Dignity** — evidence-governed energy-system planning, geospatial infrastructure, rapid deployment engineering and energy sovereignty.
 
-<p>
-  <img src="https://img.shields.io/badge/Julia-9558B2?style=flat-square&logo=julia&logoColor=white" alt="Julia" />
-  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
-  <img src="https://img.shields.io/badge/MATLAB%20%2F%20Octave-0076A8?style=flat-square" alt="MATLAB / Octave" />
-  <img src="https://img.shields.io/badge/Wolfram-DD1100?style=flat-square&logo=wolfram&logoColor=white" alt="Wolfram Language" />
-  <img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
-</p>
+**Responsible Gold Access Network** — transparent measurement, traceability, secure custody, finance and responsible-market access as an evidence-informed systems design hypothesis.
 
-### High-performance and systems implementations
+## Scientific integrity legend
 
-<p>
-  <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-</p>
+`Observed / official evidence` → `derived quantity` → `model output` → `verification` → `validation` → `bounded conclusion`
 
-### Scientific interfaces, visualization and deployment
+- Simulation is never relabeled as observation.
+- Association is never relabeled as causation without identification.
+- Passing software tests does not equal field validation.
+- A standards reference does not imply certification.
+- A programming language is not presented as mastered merely because it appears in a badge or example.
 
-<p>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift" />
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
-  <img src="https://img.shields.io/badge/Scala-DC322F?style=flat-square&logo=scala&logoColor=white" alt="Scala" />
-  <img src="https://img.shields.io/badge/Haskell-5D4F85?style=flat-square&logo=haskell&logoColor=white" alt="Haskell" />
-</p>
+## Standards-aware structure
 
-The [polyglot resilience atlas](polyglot-resilience/README.md) defines how the same infrastructure-resilience kernel maps across major computational paradigms. This is an interoperability roadmap, **not a claim of expert proficiency in every language**.
+**ISO/IEC/IEEE 15288:2023** — systems life-cycle process reference.  
+**MSC2020** — mathematical disciplinary taxonomy reference.  
+**W3C SKOS** — future formal knowledge-organization relations.  
+**W3C PROV-O** — future machine-readable provenance relations.
 
-## Scientific-computing stack
+## Education
 
-**Numerics:** NumPy · SciPy · pandas · SymPy · Matplotlib  
-**Optimization:** CVXPY · Pyomo · mathematical programming workflows  
-**Statistics / ML:** statsmodels · scikit-learn · SPSS · Minitab  
-**Research:** Jupyter · Git · GitHub · Zotero · LaTeX  
-**Engineering:** energy-system modeling · digital twins · HSPICE · OpenLCA · reproducible simulation pipelines
+**MSE Sustainable Engineering — Arizona State University, ongoing**  
+**MS Financial Engineering — WorldQuant University, ongoing**  
+**Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**
 
-## Reproducibility contract
-
-Every serious computational project should expose, where applicable:
-
-1. **governing equations and assumptions**;
-2. **data provenance and units**;
-3. **parameter definitions and uncertainty**;
-4. **deterministic baseline tests**;
-5. **Monte Carlo / sensitivity analysis**;
-6. **machine-readable outputs**;
-7. **figures generated from code**;
-8. **environment or dependency specification**;
-9. **validation against literature, measurements or benchmark cases**; and
-10. **clear separation between observed evidence, inferred quantities and proposed models**.
-
-## Selected repositories
-
-| Repository | Focus |
-|---|---|
-| [MSE-thesis](https://github.com/Dossiya-SE/MSE-thesis) | Mathematical physics of sustainable infrastructure resilience |
-| [responsible-gold-access-network-rgan](https://github.com/Dossiya-SE/responsible-gold-access-network-rgan) | Responsible gold access, physical/digital systems and secure formalization infrastructure |
-| [africa-energy-dignity](https://github.com/Dossiya-SE/africa-energy-dignity) | African energy sovereignty, evidence, optimization and deployment engineering |
-| [Python-for-rapid-engineering-solution](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution) | Numerical methods, simulation and rapid engineering computation |
-| [Data-Science-an-Machine-Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) | Statistical learning and applied analytics |
-| [dossiyadakou-mac-project](https://github.com/Dossiya-SE/dossiyadakou-mac-project) | Quantitative finance and stochastic modeling |
-
-## Education and current study
-
-- **Master of Science in Engineering — Sustainable Engineering**, Arizona State University — ongoing
-- **Master of Science — Financial Engineering**, WorldQuant University — ongoing
-- **Licence Professionnelle — Énergies Renouvelables et Systèmes Énergétiques**, Université d’Abomey-Calavi
-
-## GitHub snapshot
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Dossiya-SE&show_icons=true&hide_border=true&count_private=true&title_color=0f766e&icon_color=2563eb" alt="GitHub statistics" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dossiya-SE&layout=compact&hide_border=true&title_color=0f766e" alt="Top languages" />
-</p>
-
-## Mathematical art
-
-The visual language of this profile is generated from the same ideas used in the research: **state spaces, coupled graphs, invariant regions, trajectories, uncertainty envelopes and recovery geometry**. See [mathematical-art/README.md](mathematical-art/README.md).
-
----
-
-<p align="center"><strong>Physics → Evidence → Mathematics → Computation → Decision → Resilient Service</strong></p>
+<p align="center"><strong>Physics → Evidence → Mathematics → Computation → Verification → Decision → Resilient Service</strong></p>
