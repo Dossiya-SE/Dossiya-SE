@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:07111f,45:0e4166,75:1f6feb,100:238636&text=Dossiya%20Dakou&fontColor=ffffff&fontSize=46&fontAlignY=34&desc=Mathematical%20Physics%20%C2%B7%20Sustainable%20Infrastructure%20%C2%B7%20Scientific%20Computing&descSize=16&descAlignY=58&animation=fadeIn" alt="Dossiya Dakou" />
+  <img src="assets/math-art/profile-header-v4.svg" width="100%" alt="Dossiya Dakou mathematical research profile — adaptive light and dark header" />
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@ The visual is a curated architecture of mathematics actually used, implemented, 
 
 The professional display contract is frozen in:
 
-**[Mathematical Presentation Standard V3](mathematical-art/MATHEMATICAL_PRESENTATION_STANDARD.md)** · **[Profile Formula Atlas](mathematical-art/PROFILE_FORMULA_ATLAS.md)** · **[Machine-readable Formula Registry](mathematical-art/formula_registry.json)**
+**[Mathematical Presentation Standard V3](mathematical-art/MATHEMATICAL_PRESENTATION_STANDARD.md)** · **[Adaptive Visual System V4](mathematical-art/ADAPTIVE_VISUAL_SYSTEM_V4.md)** · **[V4 Migration Closure](mathematical-art/ADAPTIVE_VISUAL_MIGRATION_CLOSURE_V4.md)** · **[Profile Formula Atlas](mathematical-art/PROFILE_FORMULA_ATLAS.md)** · **[Machine-readable Formula Registry](mathematical-art/formula_registry.json)**
 
 ---
 
