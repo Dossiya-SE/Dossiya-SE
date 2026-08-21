@@ -15,121 +15,182 @@
   <a href="https://www.linkedin.com/in/dossiya-dakou-/">
     <img src="https://img.shields.io/badge/LinkedIn-Dossiya%20Dakou-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="mailto:ddakou@asu.edu">
-    <img src="https://img.shields.io/badge/Email-ddakou%40asu.edu-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/verify.yml">
+    <img src="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/verify.yml/badge.svg" alt="Mathematical portfolio verification" />
+  </a>
+  <a href="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/production-audit.yml">
+    <img src="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/production-audit.yml/badge.svg" alt="Production portfolio audit" />
+  </a>
+  <a href="https://github.com/Dossiya-SE/africa-energy-dignity/actions/workflows/python-app.yml">
+    <img src="https://github.com/Dossiya-SE/africa-energy-dignity/actions/workflows/python-app.yml/badge.svg" alt="Africa Energy Dignity verification" />
   </a>
 </p>
 
 ## Research identity
 
-I am a sustainable-energy engineer and graduate researcher working at the intersection of **mathematical physics, sustainable infrastructure, infrastructure resilience, energy systems, inverse problems, uncertainty quantification, optimization and scientific computing**.
+I work at the intersection of **sustainable engineering, mathematical physics, infrastructure resilience, energy systems, inverse problems, uncertainty quantification, optimization, scientific computing and financial engineering**.
 
-My central research direction asks how coupled infrastructure systems can remain **physically feasible, operationally recoverable and socially equitable** under climate and system stress.
+The profile is intentionally evidence-first. A capability is treated as strongest when it is supported by inspectable source code, mathematical specification, data/provenance controls, automated tests, reproducible outputs, or a clearly documented research protocol. Proposed research directions are not presented as completed results.
 
-A recurring mathematical architecture in my work is
+A recurring research architecture is:
 
-\[
-\text{physics}
-\rightarrow
-\text{interfaces}
-\rightarrow
-\text{dynamics}
-\rightarrow
-\text{observation}
-\rightarrow
-\text{identification}
-\rightarrow
-\text{prediction}
-\rightarrow
-\text{failure/service loss}
-\rightarrow
-\text{recovery}
-\rightarrow
-\text{viability}
-\rightarrow
-\text{control/adaptation}.
-\]
+**Physics → Structure → Interfaces → Dynamics → Observation → Identification → Prediction → Failure / Service Loss → Recovery → Viability → Control / Adaptation → Design**
 
-## Live mathematical research portfolio
+For the infrastructure-resilience thesis direction, the central inference-to-viability chain is written in GitHub-safe notation as:
 
-### [dossiya-se.github.io](https://dossiya-se.github.io/)
+**D_obs → (G_hat, theta_hat, Sigma_theta) → dynamic model → admissible set → viability / recoverability → control / design**
 
-The public portfolio is an auditable mathematical-computational research interface containing:
+The full mathematical notation and derivations live in the thesis repository and research website rather than in this profile README.
 
-- an interactive **mathematics atlas** connecting pure, applied and computational mathematics;
-- a browser-based **Power–Water–Transport–Solid-Waste (P–W–T–SW)** resilience demonstrator;
-- nonlinear coupled-state simulation using **classical RK4**;
-- projected viability and critical-service diagnostics;
-- a seeded **inverse-problem** experiment;
-- **Monte Carlo uncertainty propagation**;
-- WebGL mathematical geometry and D3 scientific visualization;
-- explicit epistemic labels separating established mathematics, demonstrators, proposed research objects and frontier methods;
-- machine-readable research metadata and automated production verification.
+## Evidence map
 
-The numerical browser model is intentionally presented as a **research demonstrator**, not as a calibrated or field-validated digital twin.
+The table below distinguishes what is publicly inspectable from what remains research-in-progress.
+
+| Work | Public evidence | What the repository demonstrates | Scientific / engineering boundary |
+|---|---|---|---|
+| **Mathematical Research Portfolio** | [source](https://github.com/Dossiya-SE/dossiya-se.github.io) · [live site](https://dossiya-se.github.io/) · CI | Browser RK4 model, inverse experiment, seeded Monte Carlo UQ, D3/WebGL visualization, automated source and production audits | The P–W–T–SW model is an **uncalibrated demonstrator**, not a field-validated digital twin |
+| **Africa Energy Dignity** | [repository](https://github.com/Dossiya-SE/africa-energy-dignity) · tests · schemas · governance · CI | Evidence registry, canonical schemas, PostgreSQL/PostGIS migrations, API/web validation, open-science controls | Pre-alpha; optimization and deployment claims are not presented as completed |
+| **Financial Engineering Models** | [repository](https://github.com/Dossiya-SE/dossiyadakou-mac-project) · problem-level READMEs · code/output archives | Omitted-variable bias, outlier sensitivity, model selection, stationarity/unit-root analysis and structural-break analysis | Coursework/research computation; not investment advice or production trading infrastructure |
+| **Python for Rapid Engineering Solutions** | [repository](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution) · dataset · report · figures | EDA, correlation/covariance structure and visual diagnostics | Current public source is incomplete; figures/report are evidence, placeholder code is explicitly labeled as such |
+| **Solar + STEM web prototype** | [repository](https://github.com/Dossiya-SE/testasu) · Next.js/TypeScript source | Interactive product/impact-communication prototype with responsive UI and test/build tooling | Displayed impact counters are prototype content unless independently evidenced; they are not treated as verified outcomes |
+| **Data Science & Machine Learning** | [repository](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) | Public learning-repository scaffold | Repository is not used as evidence of completed ML research until code/data/results are committed |
+| **Chatbot template** | [repository](https://github.com/Dossiya-SE/chatbot) | Streamlit/OpenAI integration learning artifact | Template-derived project; not claimed as an original foundation-model or production AI system |
+
+Private research repositories underpin the thesis, infrastructure-interface review and RGAN work. Their existence does not substitute for public evidence; therefore this profile describes their status but does not imply that outside visitors can inspect private contents.
 
 ## Current research programmes
 
-### Mathematical Physics of Sustainable Infrastructure Resilience
+### 1. Mathematical Physics of Sustainable Infrastructure Resilience
 
-**Graduate thesis research direction · private research repository**
+**Graduate thesis research direction · private repository**
 
-Current architecture: coupled **power–water–transport–solid-waste** infrastructure with dynamic interfaces under climate stress.
+System of interest: coupled **Power–Water–Transport–Solid-Waste (P–W–T–SW)** infrastructure with dynamic interfaces under climate stress.
 
-Core mathematical directions include:
+Core mathematical objects include:
 
-- conservation laws and dynamical systems;
-- interdependent and multilayer networks;
-- dynamic-interface modeling;
+- conservation and dynamical-system models;
+- multilayer/interdependent networks;
+- dynamic interface states and timescale separation;
 - inverse problems and identifiability;
-- Bayesian and deterministic estimation;
-- uncertainty quantification and reliability;
+- Bayesian/deterministic estimation;
+- uncertainty propagation;
 - cascading failure and critical-service loss;
-- reachability and viability theory;
-- optimal control, robust control and adaptation;
-- service-to-population and equity constraints.
+- admissible, viable and recoverable state sets;
+- robust/optimal control and design;
+- sustainability and equity constraints.
 
-A central research chain is
+The thesis repository explicitly separates **synthetic QA implementations** from future calibrated models.
 
-\[
-\mathcal D_{obs}
-\rightarrow
-(\widehat G_{ij},\widehat\theta_{ij})
-\rightarrow
-\Sigma_\theta
-\rightarrow
-\mathcal V_{\mathrm{sus,eq}},
-\]
+### 2. Infrastructure Interface Resilience
 
-where uncertainty in inferred infrastructure interfaces propagates into uncertainty in the sustainable-equitable viability region.
+**Research corpus and method development · private repository**
 
-### Infrastructure Interface Resilience
+Focus: cross-owner dependencies, topology uncertainty, common-cause stressors, response latency, recovery evidence and intervention ranking. The research workflow separates corpus evidence, industrial/official evidence and project-generated evidence; human screening remains the validity gate.
 
-**Research corpus · private repository**
-
-Research on cross-owner dependencies, interface identification, common-cause stressors, topology uncertainty, recovery evidence and quantitative infrastructure-resilience methods.
-
-### Africa Energy Dignity
+### 3. Africa Energy Dignity
 
 **Founder and Lead Systems Engineer · public open-source initiative**
 
-Africa Energy Dignity connects:
+[Africa Energy Dignity](https://github.com/Dossiya-SE/africa-energy-dignity) connects verified geospatial and institutional evidence to energy-system modeling, infrastructure resilience, productive-use planning, rapid deployment engineering and energy sovereignty.
 
-- African geospatial evidence;
-- canonical data governance;
-- mathematical energy-system modeling;
-- infrastructure resilience;
-- productive-use planning;
-- energy sovereignty; and
-- rapid-deployment engineering.
+The repository contains governance, citation, schema, migration, API, testing and data-provenance infrastructure. It explicitly marks production optimization, energyRt/Pyomo modeling and deployment results as future work until implemented.
 
-**Public repository:** [Dossiya-SE/africa-energy-dignity](https://github.com/Dossiya-SE/africa-energy-dignity)
-
-### Responsible Gold Access Network
+### 4. Responsible Gold Access Network (RGAN)
 
 **Systems innovation · private development repository**
 
-Research and prototyping around responsible artisanal-gold market access, traceability, transparent measurement, finance, secure custody and resilient off-grid physical infrastructure.
+RGAN studies a distributed access architecture for artisanal and small-scale gold mining that combines transparent measurement/valuation, payment, traceability, secure custody, finance pathways and formal-market integration. Current results are treated as **evidence-informed design hypotheses** pending direct field/prototype validation.
+
+## Rigor framework used across the portfolio
+
+This is an internal quality framework, not a claim of certification.
+
+### Evidence classes
+
+- **Observed** — directly measured or recorded data.
+- **Published / official** — peer-reviewed literature, regulators, standards, government or auditable institutional sources.
+- **Derived** — quantities computed from declared inputs and methods.
+- **Model output** — simulation/inference/optimization result under stated assumptions.
+- **Assumption / design target** — unvalidated input used for exploration or engineering design.
+- **Planned** — proposed work that has not yet been executed.
+
+### Verification chain
+
+**Source → provenance → assumptions → method → implementation → tests → sensitivity / uncertainty → validation → claim**
+
+A repository is considered stronger when that chain is inspectable rather than merely described.
+
+### Standards-aware architecture
+
+The portfolio uses standards as references where they fit the problem, without claiming certification or compliance that has not been audited:
+
+- **ISO/IEC/IEEE 15288:2023** — systems life-cycle process reference for systems-engineering structure;
+- **MSC2020** — disciplinary taxonomy reference for the mathematical atlas;
+- **W3C SKOS** — knowledge-organization relation model for future formalization of atlas taxonomy;
+- **W3C PROV-O** — provenance model reference for machine-readable evidence lineage.
+
+For the mathematics atlas specifically, taxonomy/ontology relations are kept distinct from theorem-level implication. An unlabeled visual edge is not treated as proof of mathematical dependence.
+
+## Public repository portfolio
+
+### Evidence-bearing repositories
+
+| Repository | Primary evidence |
+|---|---|
+| [dossiya-se.github.io](https://github.com/Dossiya-SE/dossiya-se.github.io) | Tested numerical engine, research-rigor document, production HTTP audit, live scientific interface |
+| [Africa Energy Dignity](https://github.com/Dossiya-SE/africa-energy-dignity) | Data contracts, migrations, API/web stack, schemas, CI, provenance and governance controls |
+| [Financial Engineering Models](https://github.com/Dossiya-SE/dossiyadakou-mac-project) | Problem-level derivations, simulations, outputs and econometric/time-series diagnostics |
+| [Python for Rapid Engineering Solutions](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution) | Course report, dataset and diagnostic visual outputs with explicit source-completeness limitation |
+| [Solar + STEM Prototype](https://github.com/Dossiya-SE/testasu) | Next.js/TypeScript product prototype and frontend engineering artifacts |
+
+### Learning / archive repositories
+
+| Repository | Status |
+|---|---|
+| [Data Science & Machine Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) | Learning scaffold; not yet evidence-bearing |
+| [Chatbot](https://github.com/Dossiya-SE/chatbot) | Template-derived integration exercise |
+
+## Mathematical and engineering domains
+
+**Mathematical physics and analysis** — ODE/PDE systems, conservation laws, nonlinear dynamics, hybrid systems and numerical analysis.
+
+**Inverse problems and estimation** — identifiability, parameter estimation, Bayesian inversion, filtering/data assimilation and model discrepancy.
+
+**Optimization and control** — convex/nonconvex optimization, optimal/robust control, reachability, viability and design under constraints.
+
+**Probability and uncertainty** — stochastic processes, Monte Carlo methods, uncertainty quantification, reliability, extremes and rare-event reasoning.
+
+**Infrastructure resilience** — interdependent infrastructure, dynamic interfaces, cascading failure, recovery, climate stress and critical-service continuity.
+
+**Renewable energy and power systems** — photovoltaic systems, energy balance, distribution networks, storage, reliability and planning.
+
+**Financial engineering** — regression identification, time-series diagnostics, stochastic modeling, quantitative risk and model sensitivity.
+
+## Scientific-computing architecture
+
+The table distinguishes **primary workflow** from languages/frameworks used for interoperability, learning or future high-performance implementations. It is not a claim of equal mastery of every listed technology.
+
+| Role | Languages / technologies | Evidence / use |
+|---|---|---|
+| Primary scientific workflow | Python · SQL · LaTeX | Numerical modeling, data work, optimization, statistical analysis and research documentation |
+| Statistical/econometric work | Python · R examples · statsmodels · scikit-learn | Financial-engineering and data-analysis repositories |
+| Scientific web | JavaScript · TypeScript · D3 · WebGL · Next.js | Research portfolio and web prototypes |
+| Data / backend engineering | PostgreSQL/PostGIS · Alembic · APIs · JSON Schema | Africa Energy Dignity executable foundation |
+| Automation / QA | Bash · GitHub Actions · pytest · Node test runners | Reproducibility and regression checks |
+| Numerical/HPC exploration | Julia · C/C++ · Fortran · Rust | Research roadmap / interoperability targets unless a repository contains an executable implementation |
+
+## Scientific-integrity rules
+
+1. **No status inflation.** Proposed work is labeled proposed; prototypes are labeled prototypes.
+2. **No evidence laundering.** Simulation output is not presented as field observation.
+3. **No causality inflation.** Association is not described as causal without an identification argument.
+4. **No validation inflation.** Software tests verify implementation properties; they do not automatically validate a scientific model.
+5. **No standards inflation.** Standards may inform architecture without implying certification.
+6. **No language inflation.** A language listed as a target or example is not presented as expert-level proficiency unless supported by substantial implementation evidence.
+7. **Reproducibility before showcase.** Important numerical claims should expose data provenance, assumptions, method, code and validation path.
 
 ## Education and current studies
 
@@ -140,95 +201,11 @@ Research and prototyping around responsible artisanal-gold market access, tracea
 
 ### Completed education
 
-- **Licence Professionnelle — Énergies Renouvelables et Systèmes Énergétiques**  
-  Université d’Abomey-Calavi
+- **Licence Professionnelle — Énergies Renouvelables et Systèmes Énergétiques**, Université d’Abomey-Calavi
 
-Ongoing programs are presented as current studies and are not claimed as completed degrees.
+Ongoing programs are not presented as completed degrees.
 
-## Selected verified engineering and research work
-
-### Coupled Energy–Transport Networks
-
-Graduate research connecting electric-vehicle charging, Wardrop equilibrium, Beckmann formulations, road-network interaction and distribution-grid constraints.
-
-### AI Utilization and First-Year Engineering Performance
-
-Empirical research on AI use and engineering-student outcomes using validated survey constructs, correlation, ANOVA, regression and profile-based statistical analysis while preserving the distinction between association and causation.
-
-### School-Anchored Solar Mini-Grid
-
-Engineering and bankability analysis connecting photovoltaic sizing, performance standards, life-cycle economics, debt-service capacity, uncertainty analysis and carbon-accounting boundaries.
-
-## Public repository portfolio
-
-| Repository | Focus |
-|---|---|
-| [Research Portfolio Source](https://github.com/Dossiya-SE/dossiya-se.github.io) | Auditable mathematical-computational research website, interactive simulations and production verification |
-| [Africa Energy Dignity](https://github.com/Dossiya-SE/africa-energy-dignity) | Open-source African energy-sovereignty modeling, evidence governance and rapid-deployment engineering |
-| [Financial Engineering Models](https://github.com/Dossiya-SE/dossiyadakou-mac-project) | Quantitative finance, stochastic modeling, time-series analysis and computational risk |
-| [Data Science & Machine Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) | Statistical learning, supervised modeling, diagnostics and applied analytics |
-| [Python for Rapid Engineering Solutions](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution) | Numerical methods, simulation and engineering computation |
-| [Sustainable Engineering / ASU Work](https://github.com/Dossiya-SE/testasu) | Sustainable-engineering workflows and systems analysis |
-
-Private research repositories are described publicly where useful, but are not exposed as if they were publicly accessible.
-
-## Mathematical and engineering domains
-
-**Mathematical physics and analysis** — ODEs, PDEs, conservation laws, nonlinear dynamics, hybrid systems, functional and numerical analysis.
-
-**Inverse problems and estimation** — identifiability, parameter estimation, Bayesian inversion, filtering, data assimilation and model discrepancy.
-
-**Optimization and control** — convex/nonconvex optimization, optimal control, model-predictive control, robust control, reachability and viability.
-
-**Probability and uncertainty** — stochastic processes, Monte Carlo methods, uncertainty quantification, reliability, extremes and rare-event reasoning.
-
-**Infrastructure resilience** — interdependent infrastructure, dynamic interfaces, cascading failure, recovery, maintainability, climate stress and critical-service continuity.
-
-**Renewable energy and power systems** — photovoltaic systems, energy balance, radial distribution networks, storage, reliability, planning and productive-use energy systems.
-
-**Sustainable and financial engineering** — life-cycle economics, WACC, debt-service capacity, stochastic models, time-series analysis, quantitative risk and project bankability.
-
-## Scientific-computing architecture
-
-| Role | Languages / notation | Main use |
-|---|---|---|
-| Primary scientific workflow | Python · SQL · LaTeX | Numerics, data, optimization, reproducible research, mathematical exposition |
-| Numerical / high-performance targets | Julia · C · C++ · Fortran · Rust | Solvers, Monte Carlo, numerical kernels and HPC pathways |
-| Statistical / symbolic targets | R · MATLAB/Octave · Wolfram Language | Statistics, inference, control and symbolic prototyping |
-| Interactive scientific web | JavaScript · TypeScript · WebGL | D3 visualization, browser simulation and mathematical geometry |
-| Automation | Bash · GitHub Actions | Reproducibility, CI, provenance and production verification |
-
-Primary day-to-day scientific tooling includes **Python, NumPy, SciPy, pandas, CVXPY, Matplotlib, scikit-learn, statsmodels, Jupyter, Git, GitHub, LaTeX and Zotero**.
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy" alt="NumPy" />
-  <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy" />
-  <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-</p>
-
-## Scientific-integrity rule
-
-The public research surfaces distinguish among:
-
-- **established mathematics**;
-- **research demonstrators**;
-- **proposed thesis-level research objects**;
-- **frontier computational methods**.
-
-No result is described as empirical, calibrated, validated or a digital twin unless the corresponding evidence, provenance, calibration method and validation chain exist.
-
-## GitHub snapshot
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Dossiya-SE&show_icons=true&hide_border=true&count_private=true&title_color=1f6feb&icon_color=238636" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dossiya-SE&layout=compact&hide_border=true&title_color=1f6feb" alt="Top languages" />
-</p>
-
-## Professional links and contact
+## Professional links
 
 - **Research portfolio:** https://dossiya-se.github.io/
 - **GitHub:** https://github.com/Dossiya-SE
@@ -238,4 +215,4 @@ No result is described as empirical, calibrated, validated or a digital twin unl
 
 ---
 
-<p align="center"><strong>From verified evidence and mathematical structure to resilient infrastructure, energy sovereignty and deployable engineering decisions.</strong></p>
+<p align="center"><strong>Evidence → mathematics → computation → verification → decision → resilient service.</strong></p>
