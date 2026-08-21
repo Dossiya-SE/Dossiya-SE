@@ -1,24 +1,26 @@
 {
-  "schema_version": "DOSSYA_SE_VISUAL_MIGRATION_V4",
+  "schema_version": "DOSSYA_SE_VISUAL_MIGRATION_V4_FINAL",
+  "closed_at": "2026-08-22",
   "scope": "all 14 repositories owned by Dossiya-SE as inventoried for this migration",
   "theme_invariant": "equations, data values, geometry, topology, evidence state and scientific conclusions must not change between light and dark renders",
-  "canonical_strategy": "adaptive SVG for semantic mathematical visuals; system-theme CSS for website; no raster inversion",
+  "canonical_strategy": "adaptive native SVG for semantic mathematical visuals; system-theme CSS for website; no scientific raster inversion",
   "repositories": [
-    {"repo":"Dossiya-SE/Dossiya-SE","primary_assets":["assets/math-art/profile-mathematics-universe-v3.svg","assets/math-art/research-operating-system.svg","assets/math-art/differential-geometry-viability-v3.svg","assets/math-art/formula-evidence-lattice-v3.svg","assets/math-art/computational-stack.svg","assets/math-art/evidence-maturity-map.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/dossiya-se.github.io","primary_assets":["assets/profile-mathematics-universe-v3.svg","assets/math-v3.css"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/Dossiya-SE-Dossiya-SE","primary_assets":["assets/mathematics-ecosystem-v4.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/MSE-thesis","primary_assets":["assets/math-art/master_architecture.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/infrastructure-interface-resilience-review","primary_assets":["docs/assets/interface-resilience-math.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/africa-energy-dignity","primary_assets":["docs/assets/aed-mathematical-system.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/responsible-gold-access-network-rgan","primary_assets":["docs/assets/rgan-system-math.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab","primary_assets":["assets/math-art/quant-model-validation.svg"],"status":"adaptive_v4_branch","merge_boundary":"do not conflate with unrelated draft submission PR"},
-    {"repo":"Dossiya-SE/dossiyadakou-mac-project","primary_assets":["assets/math-art/econometric-risk-atlas.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/Python-for-rapid-engineering-solution","primary_assets":["assets/eda-mathematical-map.svg"],"status":"adaptive_v4_branch","legacy_raster_policy":"existing PNG diagnostics remain fixed evidence artifacts; do not invert because generating analysis source is not currently public"},
-    {"repo":"Dossiya-SE/Data-Science-an-Machine-Learning","primary_assets":["assets/ml-evidence-pipeline.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/testasu","primary_assets":["public/readme/solar-stem-system.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/Kudo-IA","primary_assets":["public/readme/kudos-decision-system.svg"],"status":"adaptive_v4_branch"},
-    {"repo":"Dossiya-SE/chatbot","primary_assets":["assets/chatbot-probability-architecture.svg"],"status":"adaptive_v4_branch"}
+    {"repo":"Dossiya-SE/Dossiya-SE","primary_assets":["assets/math-art/profile-header-v4.svg","assets/math-art/profile-mathematics-universe-v3.svg","assets/math-art/research-operating-system.svg","assets/math-art/differential-geometry-viability-v3.svg","assets/math-art/formula-evidence-lattice-v3.svg","assets/math-art/computational-stack.svg","assets/math-art/evidence-maturity-map.svg"],"status":"merged_v4","merge_sha":"17aac81457691b1d546acc00a3d38ce129f8c03d","validation":"adaptive-visual-audit PASS + mathematical-presentation-audit PASS"},
+    {"repo":"Dossiya-SE/dossiya-se.github.io","primary_assets":["assets/profile-mathematics-universe-v3.svg","assets/math-v3.css"],"status":"merged_v4","merge_sha":"0ebcbb69586dc2b1d910ca1ff9d3751811ac996e","validation":"Verify mathematical portfolio PASS + Production portfolio audit PASS"},
+    {"repo":"Dossiya-SE/Dossiya-SE-Dossiya-SE","primary_assets":["assets/mathematics-ecosystem-v4.svg"],"status":"merged_v4","merge_sha":"46e54ae91214908adfb19912b5e2ae6cb722521e","validation":"mathematical-verification PASS"},
+    {"repo":"Dossiya-SE/MSE-thesis","primary_assets":["assets/math-art/master_architecture.svg","assets/math-art/dynamic_interface_operator.svg","assets/math-art/viability_recovery_geometry.svg"],"status":"merged_v4_complete","merge_shas":["20165d434d8a3b3d635108cfa838cb739968f093","db63484eba5fc693ddceed76e0fe39844ce2ac35"],"validation":"direct invariant audit; GitHub Actions zero-step execution-layer blocker documented in file-scoped exceptions"},
+    {"repo":"Dossiya-SE/infrastructure-interface-resilience-review","primary_assets":["docs/assets/interface-resilience-math.svg"],"status":"merged_v4","merge_sha":"411d5082058700e241145f078f035439d7b0ad7f","validation":"direct invariant audit; zero-step Actions blocker documented in file-scoped exception"},
+    {"repo":"Dossiya-SE/africa-energy-dignity","primary_assets":["docs/assets/aed-mathematical-system.svg"],"status":"merged_v4","merge_sha":"4f4987aa1cefc0fc302af9d3a40d3306ef7d5616","validation":"AED application CI PASS"},
+    {"repo":"Dossiya-SE/responsible-gold-access-network-rgan","primary_assets":["docs/assets/rgan-system-math.svg"],"status":"merged_v4","merge_sha":"90ce4fad59d12dda1e1fe7607cece7b7afb773b8","validation":"direct invariant audit; new SVG-only zero-step Actions exception; prior exception not reused"},
+    {"repo":"Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab","primary_assets":["assets/math-art/quant-model-validation.svg"],"status":"merged_v4","merge_sha":"bcaa856a6cb7a3bb9b96896c6d99d62f9878d11c","validation":"direct invariant audit; zero-step Actions exception; canonical empirical RUN/DATASET frozen and untouched","merge_boundary":"visual migration cannot modify or supersede empirical/submission provenance"},
+    {"repo":"Dossiya-SE/dossiyadakou-mac-project","primary_assets":["assets/math-art/econometric-risk-atlas.svg"],"status":"merged_v4","merge_sha":"82eec26bb7e6bf054f4ff05ec22ec6430a675778","validation":"visual-only adaptive migration merged"},
+    {"repo":"Dossiya-SE/Python-for-rapid-engineering-solution","primary_assets":["assets/eda-mathematical-map.svg"],"status":"merged_v4","merge_sha":"cff7874559f82871d388f0e310bcb9ace98680bb","validation":"Evidence integrity PASS","legacy_raster_policy":"correlation_heatmap.png, covariance_heatmap.png and pairplot.png remain fixed evidence artifacts; do not invert because generating analysis source is not currently public/reproducible"},
+    {"repo":"Dossiya-SE/Data-Science-an-Machine-Learning","primary_assets":["assets/ml-evidence-pipeline.svg"],"status":"merged_v4","merge_sha":"6491d041dfc645127ae017abfc64a513cdcb256c","validation":"Adaptive visual audit PASS"},
+    {"repo":"Dossiya-SE/testasu","primary_assets":["public/readme/solar-stem-system.svg"],"status":"merged_v4","merge_sha":"f94e7ac66b8298d6ac38b26c4646e9cbcf3cf8ea","validation":"Adaptive visual audit PASS"},
+    {"repo":"Dossiya-SE/Kudo-IA","primary_assets":["public/readme/kudos-decision-system.svg"],"status":"merged_v4","merge_sha":"4dec629395539b8b983b7a49c534eb1585f2264e","validation":"direct invariant audit; temporary Actions job failed zero-step; scoped exception documented"},
+    {"repo":"Dossiya-SE/chatbot","primary_assets":["assets/chatbot-probability-architecture.svg"],"status":"merged_v4","merge_sha":"7c3f861068c9cf12a935074b8dc323d8543e8a6a","validation":"Adaptive visual audit PASS"}
   ],
   "promotion_levels": {"P0":"conceptual","P1":"formula-consistent","P2":"numerically/symbolically generated","P3":"invariant-checked","P4":"source-reproduced","P5":"empirically validated for represented claim"},
-  "forbidden": ["scientific raster inversion","theme-dependent numerical values","theme-dependent evidence categories","decorative manifolds presented as established mathematics","AI-generated equation text treated as canonical"]
+  "forbidden": ["scientific raster inversion","theme-dependent numerical values","theme-dependent evidence categories","decorative manifolds presented as established mathematics","AI-generated equation text treated as canonical"],
+  "closure_rule": "primary active mathematical SVGs are adaptive; archival raster evidence remains unmodified unless reproducible generating source exists; exceptions are file-scoped and expire with their merge"
 }
