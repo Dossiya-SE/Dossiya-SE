@@ -1,0 +1,27 @@
+name: adaptive-visual-audit
+
+on:
+  push:
+    paths:
+      - 'assets/math-art/**'
+      - 'mathematical-art/**'
+      - '.github/workflows/adaptive-visual-audit.yml'
+  pull_request:
+    paths:
+      - 'assets/math-art/**'
+      - 'mathematical-art/**'
+      - '.github/workflows/adaptive-visual-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  adaptive-svg:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit adaptive SVG masters
+        run: python mathematical-art/audit_adaptive_visuals.py
