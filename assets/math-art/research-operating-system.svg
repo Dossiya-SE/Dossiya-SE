@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Mathematical research operating system</title>
+<desc id="desc">A visual synthesis of coupled infrastructure dynamics, inverse problems, uncertainty, viability geometry, control, optimization and evidence validation.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#07111f"/><stop offset="0.55" stop-color="#0b2038"/><stop offset="1" stop-color="#07111f"/></linearGradient>
+  <linearGradient id="cyan" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <linearGradient id="green" x1="0" x2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#a3e635"/></linearGradient>
+  <linearGradient id="amber" x1="0" x2="1"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 z" fill="#7dd3fc"/></marker>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1d4d70" stroke-opacity="0.28" stroke-width="1"/></pattern>
+</defs>
+<rect width="1600" height="900" rx="34" fill="url(#bg)"/>
+<rect x="24" y="24" width="1552" height="852" rx="28" fill="url(#grid)" stroke="#1f4f70"/>
+<text x="70" y="82" fill="#e6f6ff" font-family="Inter,Segoe UI,Arial" font-size="34" font-weight="800">MATHEMATICAL RESEARCH OPERATING SYSTEM</text>
+<text x="70" y="116" fill="#9cc7df" font-family="Inter,Segoe UI,Arial" font-size="17">physics → evidence → inference → geometry → control → design → validation</text>
+<g font-family="Inter,Segoe UI,Arial">
+  <rect x="70" y="155" width="320" height="245" rx="24" fill="#0d2740" stroke="#2c78a5"/>
+  <text x="96" y="190" fill="#7dd3fc" font-size="20" font-weight="700">1 · Coupled dynamics</text>
+  <text x="96" y="224" fill="#e5f6ff" font-size="18">ẋᵢ = fᵢ(xᵢ,θᵢ) + Σⱼ gᵢⱼ(xᵢ,xⱼ,Gᵢⱼ)</text>
+  <text x="96" y="250" fill="#e5f6ff" font-size="18">      + Bᵢuᵢ + ξᵢ</text>
+  <g transform="translate(100 285)">
+    <line x1="55" y1="45" x2="145" y2="18" stroke="#60a5fa" stroke-width="4"/>
+    <line x1="145" y1="18" x2="220" y2="72" stroke="#2dd4bf" stroke-width="4"/>
+    <line x1="55" y1="45" x2="220" y2="72" stroke="#fbbf24" stroke-width="3" stroke-dasharray="8 7"/>
+    <line x1="55" y1="45" x2="138" y2="94" stroke="#c084fc" stroke-width="4"/>
+    <line x1="138" y1="94" x2="220" y2="72" stroke="#fb7185" stroke-width="4"/>
+    <circle cx="55" cy="45" r="25" fill="#0c4a6e" stroke="#7dd3fc" stroke-width="3"/><text x="55" y="52" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">P</text>
+    <circle cx="145" cy="18" r="25" fill="#064e3b" stroke="#5eead4" stroke-width="3"/><text x="145" y="25" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">W</text>
+    <circle cx="220" cy="72" r="25" fill="#78350f" stroke="#fbbf24" stroke-width="3"/><text x="220" y="79" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">T</text>
+    <circle cx="138" cy="94" r="25" fill="#3b0764" stroke="#c084fc" stroke-width="3"/><text x="138" y="101" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">SW</text>
+  </g>
+
+  <rect x="430" y="155" width="320" height="245" rx="24" fill="#0d2740" stroke="#2c78a5"/>
+  <text x="456" y="190" fill="#7dd3fc" font-size="20" font-weight="700">2 · Inverse problem</text>
+  <text x="456" y="224" fill="#e5f6ff" font-size="17">yₖ = h(xₖ,θ) + εₖ</text>
+  <text x="456" y="250" fill="#e5f6ff" font-size="17">p(θ|y) ∝ L(y|θ) p₀(θ)</text>
+  <path d="M470 340 C505 270,550 380,585 300 S665 265,712 330" fill="none" stroke="url(#cyan)" stroke-width="4"/>
+  <path d="M470 350 C515 315,555 330,590 305 S655 305,712 290" fill="none" stroke="#34d399" stroke-width="3" stroke-dasharray="8 6"/>
+  <g fill="#fde68a"><circle cx="495" cy="322" r="5"/><circle cx="535" cy="350" r="5"/><circle cx="580" cy="315" r="5"/><circle cx="625" cy="298" r="5"/><circle cx="678" cy="312" r="5"/></g>
+  <text x="470" y="378" fill="#9cc7df" font-size="13">observations • model • posterior geometry</text>
+
+  <rect x="790" y="155" width="320" height="245" rx="24" fill="#0d2740" stroke="#2c78a5"/>
+  <text x="816" y="190" fill="#7dd3fc" font-size="20" font-weight="700">3 · Uncertainty</text>
+  <text x="816" y="224" fill="#e5f6ff" font-size="17">θ ~ p(θ),  X = Φ(θ,η,u)</text>
+  <text x="816" y="250" fill="#e5f6ff" font-size="17">P_f = P[g(X) ≤ 0]</text>
+  <path d="M820 343 C850 282,885 268,930 282 C972 294,1017 342,1080 336" fill="none" stroke="#60a5fa" stroke-width="3"/>
+  <path d="M820 354 C850 298,889 290,930 304 C971 318,1016 365,1080 353" fill="none" stroke="#60a5fa" stroke-opacity="0.32" stroke-width="18"/>
+  <line x1="980" y1="274" x2="980" y2="365" stroke="#fb7185" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="991" y="291" fill="#fda4af" font-size="13">limit state</text>
+  <text x="820" y="378" fill="#9cc7df" font-size="13">ensemble envelope • tail probability • sensitivity</text>
+
+  <rect x="1150" y="155" width="380" height="245" rx="24" fill="#0d2740" stroke="#2c78a5"/>
+  <text x="1176" y="190" fill="#7dd3fc" font-size="20" font-weight="700">4 · Viability geometry</text>
+  <text x="1176" y="224" fill="#e5f6ff" font-size="17">V = {x₀ ∈ K : ∃u(·), x(t) ∈ K ∀t}</text>
+  <ellipse cx="1327" cy="318" rx="130" ry="63" fill="#10b981" fill-opacity="0.12" stroke="#34d399" stroke-width="3"/>
+  <ellipse cx="1327" cy="318" rx="82" ry="38" fill="#38bdf8" fill-opacity="0.13" stroke="#7dd3fc" stroke-width="2" stroke-dasharray="8 7"/>
+  <path d="M1198 353 C1240 338,1253 301,1290 307 C1332 314,1346 282,1395 292 C1434 300,1450 328,1480 314" fill="none" stroke="#fbbf24" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1192" y="382" fill="#9cc7df" font-size="13">K admissible • V viable • recovery trajectory</text>
+
+  <rect x="70" y="445" width="460" height="330" rx="24" fill="#0c2238" stroke="#2c78a5"/>
+  <text x="96" y="482" fill="#7dd3fc" font-size="20" font-weight="700">5 · Control &amp; recovery</text>
+  <text x="96" y="516" fill="#e5f6ff" font-size="17">u* = arg min J(x,u)</text>
+  <text x="96" y="542" fill="#e5f6ff" font-size="17">s.t. dynamics, budget, service, equity, safety</text>
+  <line x1="115" y1="715" x2="485" y2="715" stroke="#52758c"/>
+  <line x1="115" y1="715" x2="115" y2="575" stroke="#52758c"/>
+  <path d="M115 660 C175 660,196 650,230 625 C270 594,317 586,360 603 C395 616,422 606,480 582" fill="none" stroke="#fb7185" stroke-width="4"/>
+  <path d="M115 660 C170 646,205 618,238 606 C279 591,317 580,359 579 C405 578,443 564,480 553" fill="none" stroke="url(#green)" stroke-width="4"/>
+  <text x="124" y="592" fill="#34d399" font-size="13">controlled recovery</text>
+  <text x="326" y="650" fill="#fda4af" font-size="13">uncontrolled</text>
+  <text x="430" y="742" fill="#9cc7df" font-size="13">time</text>
+  <text x="88" y="589" fill="#9cc7df" font-size="13" transform="rotate(-90 88 589)">critical service</text>
+
+  <rect x="570" y="445" width="460" height="330" rx="24" fill="#0c2238" stroke="#2c78a5"/>
+  <text x="596" y="482" fill="#7dd3fc" font-size="20" font-weight="700">6 · Multi-objective design</text>
+  <text x="596" y="516" fill="#e5f6ff" font-size="17">min  [ cost(d), risk(d), carbon(d) ]</text>
+  <text x="596" y="542" fill="#e5f6ff" font-size="17">max [ resilience(d), equity(d) ]</text>
+  <line x1="620" y1="708" x2="990" y2="708" stroke="#52758c"/>
+  <line x1="620" y1="708" x2="620" y2="575" stroke="#52758c"/>
+  <path d="M660 676 C705 633,752 608,804 597 C861 584,911 588,966 606" fill="none" stroke="url(#amber)" stroke-width="5"/>
+  <g fill="#fbbf24"><circle cx="678" cy="659" r="6"/><circle cx="735" cy="618" r="6"/><circle cx="804" cy="597" r="6"/><circle cx="875" cy="589" r="6"/><circle cx="944" cy="600" r="6"/></g>
+  <text x="790" y="639" fill="#fde68a" font-size="14">Pareto-efficient frontier</text>
+  <text x="930" y="738" fill="#9cc7df" font-size="13">cost / burden</text>
+  <text x="592" y="594" fill="#9cc7df" font-size="13" transform="rotate(-90 592 594)">resilience / equity</text>
+
+  <rect x="1070" y="445" width="460" height="330" rx="24" fill="#0c2238" stroke="#2c78a5"/>
+  <text x="1096" y="482" fill="#7dd3fc" font-size="20" font-weight="700">7 · Evidence &amp; validation</text>
+  <g font-size="14" font-weight="700">
+    <rect x="1102" y="536" width="112" height="52" rx="14" fill="#0c4a6e" stroke="#38bdf8"/><text x="1158" y="567" text-anchor="middle" fill="#e6f6ff">Observed</text>
+    <rect x="1231" y="536" width="112" height="52" rx="14" fill="#064e3b" stroke="#34d399"/><text x="1287" y="567" text-anchor="middle" fill="#eafff7">Derived</text>
+    <rect x="1360" y="536" width="136" height="52" rx="14" fill="#78350f" stroke="#f59e0b"/><text x="1428" y="567" text-anchor="middle" fill="#fff7df">Model output</text>
+    <rect x="1102" y="620" width="112" height="52" rx="14" fill="#3b0764" stroke="#c084fc"/><text x="1158" y="651" text-anchor="middle" fill="#f5ebff">Verify</text>
+    <rect x="1231" y="620" width="112" height="52" rx="14" fill="#4c0519" stroke="#fb7185"/><text x="1287" y="651" text-anchor="middle" fill="#ffe7ef">Validate</text>
+    <rect x="1360" y="620" width="136" height="52" rx="14" fill="#1e293b" stroke="#94a3b8"/><text x="1428" y="651" text-anchor="middle" fill="#f1f5f9">Bound claim</text>
+  </g>
+  <path d="M1214 562 H1231 M1343 562 H1360 M1158 588 V620 M1287 588 V620 M1428 588 V620" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1102" y="724" fill="#9cc7df" font-size="14">claim strength ≤ evidence strength</text>
+</g>
+<text x="70" y="835" fill="#b9d7e7" font-family="Inter,Segoe UI,Arial" font-size="15">Visual ontology: solid = implemented/declared · dashed = uncertainty/planned boundary · geometry = admissibility/viability · trajectories = dynamics/control</text>
+</svg>
