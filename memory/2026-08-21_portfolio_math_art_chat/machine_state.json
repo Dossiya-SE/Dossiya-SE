@@ -1,8 +1,16 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "archive_date": "2026-08-21",
   "timezone": "Asia/Singapore",
   "scope": "GitHub profile/portfolio, mathematical research website, standards-aware mathematics atlas, evidence-first README architecture, mathematical-art visual system, repository-wide verification and memory continuity.",
+  "capsule_provenance": {
+    "repository": "Dossiya-SE/Dossiya-SE",
+    "folder": "memory/2026-08-21_portfolio_math_art_chat",
+    "archive_pull_request": 7,
+    "archive_merge_commit": "4347dbe8535a9fe6b672a02c3ce1dbd4bfcaaa7d",
+    "archive_merge_tree": "1ff49beb3572e9c7b3b9aac28b753ef56d983b28",
+    "archive_merge_signature_verified": true
+  },
   "central_profile": {
     "repository": "Dossiya-SE/Dossiya-SE",
     "verified_main_before_archive": "91f8f733c103b2b35375b42917d96407c90fe331",
@@ -130,6 +138,7 @@
   "known_corrections": [
     "website repo and profile repo are distinct",
     "GitHub profile raw LaTeX rendering was replaced by Unicode/plain text and SVG",
+    "physical forcing, inference, and service/viability mappings must remain semantically distinct",
     "viable time changed from sample fraction to threshold-crossing time-measure approximation",
     "RK4 final step shortened to terminate exactly at requested horizon",
     "seeded inverse experiment wording corrected",
@@ -153,6 +162,7 @@
     "SOURCES_AND_BOUNDARIES.md",
     "REPOSITORY_AND_PR_MANIFEST.csv",
     "AUTHENTIC_USER_REQUESTS.md",
-    "NEXT_STEPS.md"
+    "NEXT_STEPS.md",
+    "machine_state.json"
   ]
 }
