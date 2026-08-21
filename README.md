@@ -48,7 +48,7 @@ The portfolio is organized around one discipline: **a claim is only as strong as
 
 ### Prototype / learning work
 
-[Data Science & Machine Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) · [Chatbot](https://github.com/Dossiya-SE/chatbot) · private [Kudos IA](https://github.com/Dossiya-SE/Kudo-IA)
+[Data Science & Machine Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) · [Chatbot](https://github.com/Dossiya-SE/chatbot) · **Kudos IA — private product prototype**
 
 These are explicitly separated from mature research evidence so that repository visibility does not become capability inflation.
 
