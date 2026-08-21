@@ -1,0 +1,14 @@
+repository,visibility,relevant_visual_pr,visual_merge_commit,role_in_this_chat,verification_status,scope_note
+Dossiya-SE/Dossiya-SE,public,6,91f8f733c103b2b35375b42917d96407c90fe331,visual mathematical evidence atlas,no repository CI; diff audited,profile source of truth
+Dossiya-SE/dossiya-se.github.io,public,4,1592f91e9117d645c98bec5feae862d10d7c065e,visual-first mathematical portfolio README,Production portfolio audit + Verify mathematical portfolio: PASS,website numerical engine unchanged by visual PR
+Dossiya-SE/MSE-thesis,private,2,a99e55f97a1948e874b1f6e1d9525bed6756d882,advanced thesis master mathematical architecture,Scientific Architecture QA + Python package: PASS,later thesis memory-capsule work exists; do not assume this is current HEAD
+Dossiya-SE/africa-energy-dignity,public,25,741b29a6599c6ab0bb95b92a780ba6c92e661e23,AED mathematical engineering system visual,AED application: PASS,visual PR changed README + SVG only
+Dossiya-SE/infrastructure-interface-resilience-review,private,36,cc7cd28548c3bf844a4147dee53dbfb10807dcbd,interface-resilience mathematical systems visual,Scientific integrity checks: PASS,repo also contains NUS continuity skill; separate project scope
+Dossiya-SE/responsible-gold-access-network-rgan,private,7,a24c22acf64adaeebdcfcef0cff57e0c97b0a6ff,RGAN constrained network math visual,no PR-triggered CI observed,README + SVG scope audited
+Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab,private,23,c95b75dd38e4b39689e4f9ec7b98e2fe3a2777f2,stochastic model validation mathematical art,quality: PASS,quantitative source unchanged by visual PR
+Dossiya-SE/dossiyadakou-mac-project,public,2,b7f4671dad6bdc4f19bd18d00329c4b67577fde4,econometric model-risk atlas,no PR-triggered CI observed,README + SVG scope audited
+Dossiya-SE/Python-for-rapid-engineering-solution,public,2,c7f5ddb8abd4ff7cb3ae286ac695d166b414c085,EDA mathematical evidence visual,Evidence integrity: PASS,earlier misleading Django/PyPI automation replaced
+Dossiya-SE/testasu,public,2,320b0592706e5e2aa35567b98187045d21abc3b7,Solar+STEM energy-learning system visual,no PR-triggered CI observed,impact counters remain unverified prototype content
+Dossiya-SE/Data-Science-an-Machine-Learning,public,3,5316aad1dc11d0e6a57c9ab7e59b0a0776c08780,ML evidence pipeline visual,no PR-triggered CI observed,learning scaffold; not evidence-bearing yet
+Dossiya-SE/chatbot,public,2,4c2ef17310e54c2ae63addc75fbc467ca619444f,chatbot probability/API architecture visual,no PR-triggered CI observed,template-derived integration artifact
+Dossiya-SE/Kudo-IA,private,2,7e4af7c1772dfb88e6d66b146e6f2ca44473a523,scholarship decision-support/fairness visual,no PR-triggered CI observed,prototype claims remain unvalidated
