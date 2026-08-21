@@ -36,6 +36,8 @@ The portfolio is organized around one discipline: **a claim is only as strong as
   <img src="assets/math-art/computational-stack.svg" width="100%" alt="Mathematics to numerical methods to code to verification to validation" />
 </p>
 
+The [**Polyglot Resilience Atlas**](polyglot-resilience/README.md) maps one bounded infrastructure-service kernel across multiple programming paradigms as an interoperability and scientific-computing reference. It is **not** evidence of expert proficiency in every listed language and is not a frozen thesis equation.
+
 ### Evidence-bearing public work
 
 | Repository | Inspectable evidence | Boundary |
