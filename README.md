@@ -31,6 +31,12 @@ The portfolio is organized around one scientific rule:
 
 A sophisticated formula, visualization, programming language, simulation, or passing test is **not** presented as stronger evidence than it actually is.
 
+## Account-wide mathematics verification
+
+The complete 16-repository mathematics-rendering inventory, correction register,
+renderer results, preserved-review decisions and limitations are published in
+the **[Account-wide Mathematics-Surface Audit](docs/account-audits/MATHEMATICS_SURFACE_ACCOUNT_AUDIT_2026-08-23.md)**.
+
 ## Profile-wide mathematics universe
 
 <p align="center">
