@@ -8,7 +8,7 @@ It is intentionally different from a badge collection. The same canonical model 
 
 ## Canonical resilience kernel
 
-Let \(x_t\in[0,1]^n\) represent normalized service states of coupled infrastructure sectors. A simple discrete resilience kernel is
+Let $x_t\in[0,1]^n$ represent normalized service states of coupled infrastructure sectors. A simple discrete resilience kernel is
 
 $$
 x_{t+1}=\Pi_{[0,1]^n}\left[x_t+\Delta t\left(-D x_t+A\phi(x_t)+r\odot(1-x_t)-h_t+B u_t\right)\right],
@@ -16,13 +16,13 @@ $$
 
 where:
 
-- \(D\) = intrinsic degradation matrix;
-- \(A\) = interdependency / interface matrix;
-- \(\phi\) = nonlinear coupling map;
-- \(r\) = recovery capacity;
-- \(h_t\) = hazard forcing;
-- \(B u_t\) = control action;
-- \(\Pi\) = projection into physically admissible service bounds.
+- $D$ = intrinsic degradation matrix;
+- $A$ = interdependency / interface matrix;
+- $\phi$ = nonlinear coupling map;
+- $r$ = recovery capacity;
+- $h_t$ = hazard forcing;
+- $B u_t$ = control action;
+- $\Pi$ = projection into physically admissible service bounds.
 
 A normalized resilience score can be computed as
 

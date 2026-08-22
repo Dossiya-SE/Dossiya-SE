@@ -46,20 +46,20 @@ The status must not silently change when a formula is copied from one repository
 
 Use:
 
-- scalar: \(x,\theta,t\);
-- vector: \(\mathbf x,\mathbf u,\boldsymbol\theta\);
-- matrix/operator: \(A,B,L,\mathcal A\);
-- tensor components: \(g_{ij},R^i{}_{jkl}\);
-- sets: \(\mathcal V,\mathcal K,\mathcal U\);
-- probability: \(\mathbb P\);
-- expectation: \(\mathbb E\);
-- covariance: \(\operatorname{Cov}\);
-- variance: \(\operatorname{Var}\);
-- norm: \(\lVert\cdot\rVert\);
-- trace: \(\operatorname{tr}\);
-- determinant: \(\det\).
+- scalar: $x,\theta,t$;
+- vector: $\mathbf x,\mathbf u,\boldsymbol\theta$;
+- matrix/operator: $A,B,L,\mathcal A$;
+- tensor components: $g_{ij},R^i{}_{jkl}$;
+- sets: $\mathcal V,\mathcal K,\mathcal U$;
+- probability: $\mathbb P$;
+- expectation: $\mathbb E$;
+- covariance: $\operatorname{Cov}$;
+- variance: $\operatorname{Var}$;
+- norm: $\lVert\cdot\rVert$;
+- trace: $\operatorname{tr}$;
+- determinant: $\det$.
 
-Do not use plain text `P()` when \(\mathbb P(\cdot)\) is intended as probability in formal mathematical exposition.
+Do not use plain text `P()` when $\mathbb P(\cdot)$ is intended as probability in formal mathematical exposition.
 
 ### 3.2 Units
 
@@ -73,18 +73,18 @@ Never italicize unit symbols as if they were variables.
 
 ### 3.3 Differentiation
 
-- ordinary time derivative: \(\dot x\);
-- arc-length derivative: \(d/ds\);
-- partial derivative: \(\partial_i\);
-- covariant derivative: \(\nabla_i\) or source-consistent semicolon notation;
-- stochastic differential: \(dX_t\), never conflated with a finite difference.
+- ordinary time derivative: $\dot x$;
+- arc-length derivative: $d/ds$;
+- partial derivative: $\partial_i$;
+- covariant derivative: $\nabla_i$ or source-consistent semicolon notation;
+- stochastic differential: $dX_t$, never conflated with a finite difference.
 
 ### 3.4 Indicial conventions for differential geometry
 
 When using the Sochi differential-geometry foundation (`SOCHI-DG-2017-UPLOADED`):
 
-- Greek indices \(\alpha,\beta,\gamma\) denote surface coordinates;
-- Latin indices \(i,j,k\) denote ambient-space/general components when following the source convention;
+- Greek indices $\alpha,\beta,\gamma$ denote surface coordinates;
+- Latin indices $i,j,k$ denote ambient-space/general components when following the source convention;
 - notation changes must be declared rather than silently mixed.
 
 The source-specific equation registry is maintained in `Dossiya-SE/Dossiya-SE-Dossiya-SE/sources/sochi_2017/`.
