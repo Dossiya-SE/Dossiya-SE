@@ -42,7 +42,7 @@ Official contracts:
 | [chatbot](https://github.com/Dossiya-SE/chatbot) | 1 | 0 active findings | 1/1 pass | No source change |
 | [Data-Science-an-Machine-Learning](https://github.com/Dossiya-SE/Data-Science-an-Machine-Learning) | 1 | 0 active findings | 1/1 pass | No source change |
 | [Differential geometry and mathematics arts](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience) | 48 | 17 corrected | 121/121 pass | [PR #15 merged](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience/pull/15) |
-| [Dossiya-SE profile](https://github.com/Dossiya-SE/Dossiya-SE) | 21 | 28 corrected | 109/109 pass | Account-audit correction branch |
+| [Dossiya-SE profile](https://github.com/Dossiya-SE/Dossiya-SE) | 21 | 28 corrected | 109/109 pass | [PR #14](https://github.com/Dossiya-SE/Dossiya-SE/pull/14) |
 | [Dossiya-SE-Dossiya-SE](https://github.com/Dossiya-SE/Dossiya-SE-Dossiya-SE) | 49 | 224 corrected | 234/234 pass | [PR #16](https://github.com/Dossiya-SE/Dossiya-SE-Dossiya-SE/pull/16) |
 | [MScFE quantitative-finance lab](https://github.com/Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab) | 90 | 0 active findings | 168/168 pass | [PR #34](https://github.com/Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab/pull/34) |
 | [dossiya-se.github.io](https://github.com/Dossiya-SE/dossiya-se.github.io) | 4 | 28 corrected | 31/31 pass | [PR #8](https://github.com/Dossiya-SE/dossiya-se.github.io/pull/8) |
