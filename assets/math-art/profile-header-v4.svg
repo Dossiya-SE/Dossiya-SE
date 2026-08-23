@@ -5,9 +5,9 @@
   <defs>
     <style>
       :root{
-        --bg:#ffffff;--ink:#0b2114;--muted:#466454;--g0:#f5fff8;--g1:#e8f8ed;--g2:#c9ebd3;--g3:#86cf98;--g4:#45ad63;--g5:#248347;--g6:#116334;--g7:#084925;--grid:#dff1e5;--hair:#b9dcc4;--accent:#92d7a5;
+        --bg:#ffffff;--fg:#0b2114;--ink:#0b2114;--muted:#466454;--g0:#f5fff8;--g1:#e8f8ed;--g2:#c9ebd3;--g3:#86cf98;--g4:#45ad63;--g5:#248347;--g6:#116334;--g7:#084925;--grid:#dff1e5;--hair:#b9dcc4;--accent:#92d7a5;
       }
-      @media (prefers-color-scheme:dark){:root{--bg:#06130b;--ink:#ecfff1;--muted:#a6c8b0;--g0:#0a1c10;--g1:#0d2616;--g2:#164125;--g3:#2c7041;--g4:#4bb86a;--g5:#69d383;--g6:#8fe4a4;--g7:#baf1c7;--grid:#153a22;--hair:#2d6840;--accent:#6dd786;}}
+      @media (prefers-color-scheme:dark){:root{--bg:#06130b;--fg:#ecfff1;--ink:#ecfff1;--muted:#a6c8b0;--g0:#0a1c10;--g1:#0d2616;--g2:#164125;--g3:#2c7041;--g4:#4bb86a;--g5:#69d383;--g6:#8fe4a4;--g7:#baf1c7;--grid:#153a22;--hair:#2d6840;--accent:#6dd786;}}
       .bg{fill:var(--bg)}.ink{fill:var(--ink)}.muted{fill:var(--muted)}.brand{fill:var(--g6)}.brand2{fill:var(--g5)}.hair{stroke:var(--hair);fill:none}.grid{stroke:var(--grid);fill:none}.curve{stroke:var(--g5);fill:none}.curve2{stroke:var(--g3);fill:none}.mesh{stroke:var(--g3);fill:none}.mesh2{stroke:var(--g2);fill:none}.node{fill:var(--bg);stroke:var(--g5)}.nodefill{fill:var(--g5);stroke:var(--bg)}.math{font-family:Cambria Math,STIX Two Math,Georgia,'Times New Roman',serif}.sans{font-family:Inter,Segoe UI,Arial,sans-serif}
     </style>
     <radialGradient id="halo"><stop offset="0" stop-color="var(--g3)" stop-opacity=".22"/><stop offset=".7" stop-color="var(--g2)" stop-opacity=".07"/><stop offset="1" stop-color="var(--g2)" stop-opacity="0"/></radialGradient>
