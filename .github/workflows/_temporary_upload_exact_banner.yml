@@ -1,0 +1,48 @@
+name: Temporary exact banner upload
+
+on:
+  push:
+    branches:
+      - profile/exact-original-banner-png
+    paths:
+      - .github/workflows/_temporary_upload_exact_banner.yml
+
+permissions:
+  contents: write
+
+jobs:
+  upload-exact-original:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: profile/exact-original-banner-png
+      - name: Download exact user-supplied PNG and verify bytes
+        env:
+          SOURCE_URL: "https://chatgpt.com/backend-api/estuary/content?id=file_00000000a86c8207853f327f620d1c32&ts=496531&p=fs&cid=1&sig=b762feea527ead622a1aaa5953c8740c7fb1557cf6f35c875165c2368e2c35e1&v=0"
+          EXPECTED_SHA256: "620c3db966f8867050643a0f20e960b03d553e5057915a9deed9b3a733f4e031"
+        run: |
+          set -euo pipefail
+          mkdir -p assets/math-art
+          curl -L --fail --retry 2 "$SOURCE_URL" -o assets/math-art/profile-header-exact.png
+          actual="$(sha256sum assets/math-art/profile-header-exact.png | awk '{print $1}')"
+          test "$actual" = "$EXPECTED_SHA256"
+      - name: Point README hero to exact PNG only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('README.md')
+          s = p.read_text(encoding='utf-8')
+          old = 'assets/math-art/profile-header-v5.svg'
+          new = 'assets/math-art/profile-header-exact.png'
+          if old not in s:
+              raise SystemExit('expected current hero path not found')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          PY
+      - name: Commit exact PNG without transformation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/math-art/profile-header-exact.png README.md
+          git commit -m "Use exact user-supplied profile banner PNG"
+          git push origin HEAD:profile/exact-original-banner-png
