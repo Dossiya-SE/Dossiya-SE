@@ -1,8 +1,10 @@
 # Profile Master Specification
 
 **Profile architecture ID:** `DD-PROFILE-ARCH-001`  
-**Status:** `PROPOSED_FOR_PROFILE_REVIEW`  
-**Purpose:** define the professional and research trajectory that future GitHub/profile changes should preserve.
+**Status:** `ACTIVE_GOVERNING_PROFILE_ARCHITECTURE`  
+**Purpose:** define the professional and research trajectory that future GitHub/profile changes should preserve.  
+**Public release control:** [`PROFILE_RELEASE_GATE.md`](PROFILE_RELEASE_GATE.md)  
+**Credential control:** [`PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md`](PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md)
 
 ## 1. Core identity
 
@@ -42,6 +44,12 @@ The user states a bachelor's-level qualification described as:
 This stage should be presented as the bridge from electrical practice to physical modeling, energy conversion, renewable-energy systems and systems-level engineering.
 
 **Evidence status:** `USER_STATED / OFFICIAL_TITLE_TO_VERIFY` for the exact public degree title.
+
+The current public profile separately displays:
+
+> **Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques**
+
+The two descriptions remain under `RECONCILE_BEFORE_PUBLIC_CHANGE`; neither is silently substituted for the other until the official record establishes their relationship.
 
 ### Stage C — Sustainable engineering
 
@@ -185,3 +193,15 @@ A concise canonical sentence for future refinement is:
 > **From practical electrical engineering and renewable-energy systems to sustainable engineering, financial engineering and advanced mathematical research, my work is developing toward reusable mathematical and computational frameworks for understanding and improving resilient systems across sectors.**
 
 This sentence is a narrative synthesis, not a substitute for credential verification or project evidence.
+
+## 9. Release logic
+
+The architecture is active, but public statements remain evidence-gated.
+
+```text
+ACTIVE architecture
+    does not imply
+all credential titles VERIFIED
+```
+
+Current public-safe narrative is maintained in [`PUBLIC_PROFILE_TRAJECTORY.md`](PUBLIC_PROFILE_TRAJECTORY.md). Definitive credential-title changes remain blocked until the credential-verification checklist passes.
