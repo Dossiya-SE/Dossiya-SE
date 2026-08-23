@@ -2,7 +2,7 @@
 
 request_id: `DD-PROFILE-REQ-20260823-004`
 release_candidate: `professional-profile-composition-v1`
-status: `RELEASE_CANDIDATE`
+status: `VERIFIED_RELEASE_CANDIDATE`
 
 ## Objective
 
@@ -53,9 +53,13 @@ This avoids making the first-pass profile behave like a full technical report wh
 - two master's programmes remain ongoing;
 - unresolved technical and undergraduate credential titles remain under the existing release holds.
 
-## Validation state
+## Validation evidence
 
-profile_governance: `PENDING_HOSTED_CI`
-mathematical_presentation_audit: `PENDING_HOSTED_CI`
-adaptive_visual_audit: `PENDING_HOSTED_CI`
-release_status: `RELEASE_CANDIDATE`
+verification_head: `70a282d66b6aeb2f2c5c1bbe4f971262b085bf23`
+profile_governance: `PASS` — run `32641082791`
+mathematical_presentation_audit: `PASS` — run `32641082786`
+adaptive_visual_audit: `PASS` — run `32641082785`
+
+The first mathematical-presentation run failed because the audit still required legacy V3 public filenames. The audit was upgraded to the V4 canonical public contract; no gate was disabled or weakened.
+
+release_status: `VERIFIED_RELEASE_CANDIDATE`
