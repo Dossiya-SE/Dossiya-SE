@@ -1,6 +1,19 @@
 {
   "schema_version": "PRA-IMPLEMENTATION-REGISTRY-1.0",
   "kernel_version": "PRK-1.0",
+  "validation_provenance": {
+    "github_actions_workflow": "polyglot-resilience-conformance",
+    "github_actions_run_id": 32620003277,
+    "validated_commit": "b00dc3f80929e9b8ca3ca467edbf92a2f83d6a86",
+    "validation_result": "PASS",
+    "validation_scope": [
+      "runtime setup",
+      "syntax checks",
+      "structure and semantic-contract validation",
+      "reference scientific invariants",
+      "3 implementations x 3 frozen-fixture conformance checks"
+    ]
+  },
   "maturity_scale": [
     "PLANNED",
     "LEARNING",
@@ -16,11 +29,12 @@
       "role": "reference scientific implementation",
       "profile": "FULL_KERNEL",
       "path": "implementations/python/kernel.py",
-      "maturity": "TESTED",
-      "conformance": "PASS_LOCAL",
+      "maturity": "VALIDATED",
+      "conformance": "PASS_CI",
       "fixtures_tested": ["baseline", "controlled-recovery", "severe-hazard"],
       "max_observed_local_error": 0.0,
-      "notes": "Standard-library reference implementation; pending independent GitHub CI promotion."
+      "ci_validation_run_id": 32620003277,
+      "notes": "Standard-library reference implementation; independently rerun by GitHub Actions."
     },
     {
       "implementation_id": "go-native-prk1",
@@ -28,11 +42,12 @@
       "role": "native service/concurrent numerical implementation",
       "profile": "FULL_KERNEL",
       "path": "implementations/go/main.go",
-      "maturity": "TESTED",
-      "conformance": "PASS_LOCAL",
+      "maturity": "VALIDATED",
+      "conformance": "PASS_CI",
       "fixtures_tested": ["baseline", "controlled-recovery", "severe-hazard"],
       "max_observed_local_error": 0.0,
-      "notes": "Uses standard-library JSON and math packages; pending independent GitHub CI promotion."
+      "ci_validation_run_id": 32620003277,
+      "notes": "Standard-library JSON/math implementation; independently rerun by GitHub Actions."
     },
     {
       "implementation_id": "javascript-native-prk1",
@@ -40,10 +55,11 @@
       "role": "native browser/runtime implementation",
       "profile": "FULL_KERNEL",
       "path": "implementations/javascript/kernel.mjs",
-      "maturity": "TESTED",
-      "conformance": "PASS_LOCAL",
+      "maturity": "VALIDATED",
+      "conformance": "PASS_CI",
       "fixtures_tested": ["baseline", "controlled-recovery", "severe-hazard"],
       "max_observed_local_error": 0.0,
+      "ci_validation_run_id": 32620003277,
       "notes": "Node-compatible native implementation; browser packaging remains future work."
     },
     {
