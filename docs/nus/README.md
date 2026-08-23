@@ -16,7 +16,7 @@ This directory is the version-controlled external evidence/governance record for
 1. [`00_PROJECT_GOVERNANCE.md`](00_PROJECT_GOVERNANCE.md) — purpose, corpus identity, evidence hierarchy, fail-closed principles.
 2. [`01_FROZEN37_CORPUS.md`](01_FROZEN37_CORPUS.md) — canonical 37-paper order and calibration/production split.
 3. [`02_SCIENTIFIC_ONTOLOGY_AND_ADJUDICATION.md`](02_SCIENTIFIC_ONTOLOGY_AND_ADJUDICATION.md) — Q→I→M_E→P→F→M_S→S→D architecture, focality and adjudication order.
-4. [`03_ZOTERO_EVIDENCE_STANDARD.md`](03_ZOTERO_EVIDENCE_STANDARD.md) — visible annotation contract, labels, colors, verbatim-comment rule, zero-tag rule.
+4. [`03_ZOTERO_EVIDENCE_STANDARD.md`](03_ZOTERO_EVIDENCE_STANDARD.md) — visible annotation contract, colors, verbatim-comment rule, zero-tag rule, and permanent `ROLE here is SCIENTIFIC NATURE : EXACT AUTHOR WORDING` convention.
 5. [`04_NUS172_CALIBRATION_HISTORY.md`](04_NUS172_CALIBRATION_HISTORY.md) — first calibration/reference paper and frozen lessons.
 6. [`05_NUS48_FULL_DEVELOPMENT_HISTORY.md`](05_NUS48_FULL_DEVELOPMENT_HISTORY.md) — complete NUS-48 evolution from unannotated PDF through V8 `58/58 PASS`.
 7. [`06_NUS48_CURRENT_58_OF_58_STATE.md`](06_NUS48_CURRENT_58_OF_58_STATE.md) — frozen authoritative NUS-48 premutation state.
@@ -31,6 +31,7 @@ This directory is the version-controlled external evidence/governance record for
 16. [`15_T040_CANDIDATE_ADMINISTRATIVE_METADATA_REGRESSION.md`](15_T040_CANDIDATE_ADMINISTRATIVE_METADATA_REGRESSION.md) — candidate generic-engine lesson discovered during adjudication.
 17. [`machine/current_state.json`](machine/current_state.json) — machine-readable current NUS-48 state.
 18. [`machine/frozen37_order.json`](machine/frozen37_order.json) — machine-readable canonical corpus order.
+19. [`machine/comment_generation_rule_v2.json`](machine/comment_generation_rule_v2.json) — machine-readable scientific-nature visible-comment contract.
 
 ## Current governing interpretation
 
@@ -58,6 +59,22 @@ Automated scientific adjudication has now additionally resolved:
 
 The 55 candidates are not a target `N_final` and remain subject to visual verification, human review, geometry, and final redundancy analysis.
 
+## Permanent visible-comment convention
+
+When a scientifically important nature/subtype is directly supported by focal evidence, use:
+
+```text
+ROLE here is SCIENTIFIC NATURE : EXACT AUTHOR WORDING
+```
+
+If the nature cannot be established directly from focal evidence, fall back to:
+
+```text
+ROLE: EXACT AUTHOR WORDING
+```
+
+This convention is now frozen for the NUS evidence architecture and must be applied consistently to later papers. It does not alter the top-level role ontology and does not permit inferred subtype wording.
+
 The current transition is:
 
 ```text
@@ -66,7 +83,7 @@ PREPROCESSING FREEZE
 → HUMAN SCIENTIFIC REVIEW
 ```
 
-No Zotero mutation is authorized. Human approval must be explicit and cannot be inferred from automated adjudication.
+No Zotero mutation is authorized. Human approval must be explicit and cannot be inferred from automated adjudication or from this comment-generation rule change.
 
 ## Engine-change governance
 
