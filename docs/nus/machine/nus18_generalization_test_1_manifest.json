@@ -1,21 +1,31 @@
 {
-  "schema": "NUS18_GENERALIZATION_TEST_1_MANIFEST_V1",
-  "version": "1.0.0",
-  "status": "READY_FOR_IDENTITY_RESOLUTION",
+  "schema": "NUS18_GENERALIZATION_TEST_1_MANIFEST_V2",
+  "version": "2.0.0",
+  "status": "READY_FOR_LIVE_IDENTITY_AND_HASH_PREFLIGHT",
   "paper": {
     "paper_id": 18,
     "canonical_id": "NUS-18",
     "title": "An integrated energy-emergy approach to building form optimization: Use of EnergyPlus, emergy analysis and Taguchi-regression method",
     "doi": "10.1016/j.buildenv.2014.10.013",
-    "parent_key": null,
-    "attachment_key": null,
-    "expected_pdf_sha256": null
+    "parent_key": "BZZGBD2I",
+    "attachment_key": "Z8UEF2GH",
+    "attachment_item_id": 3442,
+    "historical_pdf_sha256": "826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839",
+    "historical_local_pdf_count": 1,
+    "fresh_live_pdf_sha256": null,
+    "execution_pdf_sha256_lock": null,
+    "identity_provenance": [
+      "Frozen-37 PDF recovery/final verification",
+      "controlled EP-SUS annotation ledger"
+    ]
   },
+  "source_preflight_rule": "Freshly rehash live attachment Z8UEF2GH. If the hash differs from the historical hash, fail closed and resolve source identity before extraction.",
   "engine": {
     "version": "NUS_EVIDENCE_ENGINE_V1",
     "status": "FROZEN_FOR_GENERALIZATION_TESTING",
     "regression_from": "T001",
     "regression_through": "T047",
+    "regression_corpus": "NUS_MASTER_FAILURE_REGRESSION_CORPUS_V17",
     "regression_corpus_sha256": "8595d33856aba1228a4aaeb512505241b3a8c88011a251d92ecbed16183ed77a"
   },
   "test_goal": "Demonstrate scientifically defensible processing without bespoke pipeline redesign.",
@@ -41,13 +51,14 @@
     "paper-specific expected scientific conclusions in generic code"
   ],
   "required_sequence": [
-    "IDENTITY_VERIFICATION",
-    "PDF_SHA256_LOCK",
+    "LIVE_PARENT_ATTACHMENT_IDENTITY",
+    "FRESH_PDF_SHA256",
+    "HASH_MATCH_OR_FAIL_CLOSED",
     "LIVE_ANNOTATION_BASELINE",
     "READ_ONLY_EXTRACTION",
     "ATOMIC_CLAIMS",
     "PHYSICAL_SURFACE_INVENTORY",
-    "MASTER_REGRESSION",
+    "MASTER_REGRESSION_T001_T047_AS_APPLICABLE",
     "INDEPENDENT_CERTIFICATION",
     "SCIENTIFIC_ADJUDICATION",
     "HUMAN_REVIEW",
