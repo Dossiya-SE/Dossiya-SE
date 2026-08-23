@@ -1,0 +1,181 @@
+{
+  "schema_version": "DSE-ACCOUNT-REGISTRY-1.0",
+  "audit_date": "2026-08-23",
+  "account": "Dossiya-SE",
+  "repository_count": 16,
+  "visibility_counts": {
+    "public": 11,
+    "private": 5
+  },
+  "maturity_scale": [
+    "FLAGSHIP_FRONT_DOOR",
+    "FLAGSHIP_RESEARCH",
+    "FLAGSHIP_ACADEMIC_LAB",
+    "FLAGSHIP_APPLIED_PROJECT",
+    "META_PLATFORM",
+    "SPECIALIST_TOOL",
+    "SPECIALIST_LEARNING",
+    "APPLIED_PROTOTYPE",
+    "LEARNING"
+  ],
+  "repositories": [
+    {
+      "name": "Dossiya-SE",
+      "visibility": "public",
+      "canonical_role": "account profile, account governance and mathematical presentation",
+      "maturity": "FLAGSHIP_FRONT_DOOR",
+      "disposition": "KEEP",
+      "priority_findings": ["front-door contract", "profile subproject sprawl"]
+    },
+    {
+      "name": "dossiya-se.github.io",
+      "visibility": "public",
+      "canonical_role": "interactive public mathematical research portfolio",
+      "maturity": "FLAGSHIP_FRONT_DOOR",
+      "disposition": "KEEP",
+      "priority_findings": ["maintain website-only role"]
+    },
+    {
+      "name": "africa-energy-dignity",
+      "visibility": "public",
+      "canonical_role": "applied energy-systems research and rapid-deployment engineering platform",
+      "maturity": "FLAGSHIP_RESEARCH",
+      "disposition": "KEEP",
+      "priority_findings": ["continue pre-alpha evidence discipline"]
+    },
+    {
+      "name": "Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience",
+      "visibility": "public",
+      "canonical_role": "domain-neutral mathematics and resilience research platform",
+      "maturity": "FLAGSHIP_RESEARCH",
+      "disposition": "KEEP",
+      "priority_findings": ["consider shorter discoverable repository name"]
+    },
+    {
+      "name": "MSE-thesis",
+      "visibility": "private",
+      "canonical_role": "MSE thesis research laboratory",
+      "maturity": "FLAGSHIP_RESEARCH",
+      "disposition": "KEEP_PRIVATE",
+      "priority_findings": ["formal freeze/release lifecycle", "private CI execution reliability"]
+    },
+    {
+      "name": "infrastructure-interface-resilience-review",
+      "visibility": "private",
+      "canonical_role": "interface-resilience evidence synthesis and research laboratory",
+      "maturity": "FLAGSHIP_RESEARCH",
+      "disposition": "KEEP_PRIVATE",
+      "priority_findings": ["preserve boundary with thesis", "private CI execution reliability"]
+    },
+    {
+      "name": "Dossiya-SE-mscfe-quantitative-finance-lab",
+      "visibility": "private",
+      "canonical_role": "MScFE programme, coursework and quantitative-finance methods laboratory",
+      "maturity": "FLAGSHIP_ACADEMIC_LAB",
+      "disposition": "KEEP_PRIVATE",
+      "priority_findings": ["complete programme architecture", "triage open academic PRs", "private CI execution reliability"]
+    },
+    {
+      "name": "responsible-gold-access-network-rgan",
+      "visibility": "private",
+      "canonical_role": "responsible-gold applied systems-design and competition research project",
+      "maturity": "FLAGSHIP_APPLIED_PROJECT",
+      "disposition": "KEEP_PRIVATE",
+      "priority_findings": ["large repository/history audit", "private CI execution reliability"]
+    },
+    {
+      "name": "Dossiya-SE-Dossiya-SE",
+      "visibility": "public",
+      "canonical_role": "mathematics research ecosystem bootstrap and integration monorepo",
+      "maturity": "META_PLATFORM",
+      "disposition": "KEEP_RENAME",
+      "recommended_name": "mathematics-research-ecosystem",
+      "priority_findings": ["ambiguous name", "role overlap with profile and differential-geometry platform"]
+    },
+    {
+      "name": "Math-Surface-Engineer-Demo",
+      "visibility": "public",
+      "canonical_role": "reproducible mathematics-publication validation demonstration",
+      "maturity": "SPECIALIST_TOOL",
+      "disposition": "KEEP",
+      "priority_findings": []
+    },
+    {
+      "name": "dossiyadakou-mac-project",
+      "visibility": "public",
+      "canonical_role": "financial econometrics and model-risk learning/demonstration repository",
+      "maturity": "SPECIALIST_LEARNING",
+      "disposition": "KEEP_OR_CONSOLIDATE",
+      "recommended_name": "financial-engineering-model-risk-lab",
+      "priority_findings": ["weak repository name", "define final lifecycle"]
+    },
+    {
+      "name": "Python-for-rapid-engineering-solution",
+      "visibility": "public",
+      "canonical_role": "engineering EDA coursework evidence archive",
+      "maturity": "LEARNING",
+      "disposition": "KEEP_BOUNDED_ARCHIVE",
+      "recommended_name": "python-rapid-engineering-solutions",
+      "priority_findings": ["generating source missing", "artifact-verifiable but not source-reproducible"]
+    },
+    {
+      "name": "testasu",
+      "visibility": "public",
+      "canonical_role": "Solar + STEM AI product prototype",
+      "maturity": "APPLIED_PROTOTYPE",
+      "disposition": "KEEP_RENAME_IF_ACTIVE",
+      "recommended_name": "solar-stem-ai-prototype",
+      "priority_findings": ["non-descriptive repository name", "formalize product claims registry"]
+    },
+    {
+      "name": "Kudo-IA",
+      "visibility": "private",
+      "canonical_role": "scholarship application platform prototype",
+      "maturity": "APPLIED_PROTOTYPE",
+      "disposition": "KEEP_PRIVATE",
+      "priority_findings": ["formalize product claims registry", "private CI execution reliability"]
+    },
+    {
+      "name": "Data-Science-an-Machine-Learning",
+      "visibility": "public",
+      "canonical_role": "data-science and machine-learning learning scaffold",
+      "maturity": "LEARNING",
+      "disposition": "RENAME_AND_PROMOTE_OR_CONSOLIDATE",
+      "recommended_name": "data-science-machine-learning-lab",
+      "priority_findings": ["spelling/naming defect", "no evidence-bearing project yet"]
+    },
+    {
+      "name": "chatbot",
+      "visibility": "public",
+      "canonical_role": "Streamlit and external-model API integration learning artifact",
+      "maturity": "LEARNING",
+      "disposition": "KEEP_SMALL_DEMO_OR_ARCHIVE",
+      "priority_findings": ["historical API configuration", "supersede when stronger integration project exists"]
+    }
+  ],
+  "account_priority_actions": {
+    "P0": [
+      "Configure branch protection or repository rulesets for flagship main branches",
+      "Triage all open pull requests into explicit lifecycle states",
+      "Resolve private GitHub Actions execution reliability",
+      "Publish and maintain the canonical repository registry",
+      "Freeze the profile-vs-portfolio-site front-door contract",
+      "Perform RGAN large-blob and history audit"
+    ],
+    "P1": [
+      "Rename ambiguous repositories after cross-link inventory",
+      "Add common lifecycle/status headers to all active READMEs",
+      "Standardize release classes and release checklists",
+      "Establish account-wide security baseline",
+      "Add claims registries to product prototypes",
+      "Restore source reproducibility for Python engineering archive"
+    ],
+    "P2": [
+      "Decide whether polyglot-resilience should become a dedicated repository",
+      "Decide whether learning repositories should remain independent or be consolidated",
+      "Reduce profile README technical sprawl",
+      "Generate public account architecture visual from the registry",
+      "Integrate DOI/ORCID with research releases where appropriate"
+    ]
+  }
+}
