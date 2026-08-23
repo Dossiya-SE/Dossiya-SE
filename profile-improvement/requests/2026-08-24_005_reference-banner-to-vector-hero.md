@@ -24,7 +24,7 @@ The supplied reference establishes the desired composition:
 
 ## Evidence and claim controls
 
-The implementation must not use decorative formulas that imply unsupported expertise. Equations and structures are limited to mathematics connected to the public research trajectory, including:
+The implementation does not use decorative formulas that imply unsupported expertise. Equations and structures are limited to mathematics connected to the public research trajectory, including:
 
 - electrical/control state-space structure `ẋ = Ax + Bu`;
 - energy balance;
@@ -39,26 +39,33 @@ The deeper-mathematics region is a forward research direction, not a completed c
 
 ## Rendering contract
 
-- keep the existing public path `assets/math-art/profile-header-v5.svg` to avoid README/path drift;
-- use a 2048×640 vector canvas;
-- use adaptive SVG theme tokens with `prefers-color-scheme`;
-- preserve geometry, equations, labels and evidence meaning across themes;
-- no raster dependency is required for the public master;
+- existing public path retained: `assets/math-art/profile-header-v5.svg`;
+- 2048×640 vector canvas;
+- adaptive SVG theme tokens with `prefers-color-scheme`;
+- geometry, equations, labels and evidence meaning invariant across themes;
+- no raster dependency for the public master;
 - the user-supplied 2047×639 raster is treated as a visual composition reference, not the canonical scientific artifact.
 
 ## Files changed
 
 - `assets/math-art/profile-header-v5.svg`
+- `profile-improvement/validate_profile.py`
+- `mathematical-art/audit_profile_math.py`
 - this request record
 
-## Validation required before merge
+The two validators were migrated from stale V4 filename requirements to the already-public V5 visual generation. Their evidence, accessibility and fail-closed behavior were preserved.
 
-1. SVG/XML structural validation.
-2. Profile governance check.
-3. Mathematical-presentation audit.
-4. Adaptive-visual audit.
-5. PR must be conflict-free on the exact final head.
+## Validation evidence
+
+Exact implementation head before documentation synchronization: `4c874a0c4dd8c65b267ea01fd500f34a77cfb977`.
+
+- profile-governance run `32660039077` — PASS;
+- mathematical-presentation-audit run `32660039068` — PASS;
+- adaptive-visual-audit run `32660039087` — PASS;
+- PR #23 reported mergeable/conflict-free at that head.
+
+A final exact-head CI pass is required after this record synchronization before merge.
 
 ## Status
 
-IMPLEMENTED_ON_REVIEW_BRANCH — pending CI and merge.
+VALIDATED_PRE_MERGE — final exact-head CI pending.
