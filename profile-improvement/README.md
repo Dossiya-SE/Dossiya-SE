@@ -56,9 +56,12 @@ The comparison with AI is therefore a **transferability ambition**, not an equiv
 | [`PROFILE_RELEASE_GATE.md`](PROFILE_RELEASE_GATE.md) | Public release criteria for credentials, research claims, visuals and links |
 | [`PROFILE_PUBLIC_NARRATIVE.md`](PROFILE_PUBLIC_NARRATIVE.md) | Draft short, medium and research-oriented public bios |
 | [`PUBLIC_PROFILE_TRAJECTORY.md`](PUBLIC_PROFILE_TRAJECTORY.md) | Strongest public-safe trajectory currently releasable without unresolved title substitution |
+| [`MATHEMATICS_ART_IDENTITY_V1.md`](MATHEMATICS_ART_IDENTITY_V1.md) | Semantic/scientific contract for the green mathematical-art identity and its domain-linked equations |
 | [`REQUEST_PROTOCOL.md`](REQUEST_PROTOCOL.md) | Exact protocol for every future profile-improvement request |
 | [`requests/README.md`](requests/README.md) | Request ledger and naming convention |
-| [`assets/engineering-to-mathematics-resilience-trajectory.svg`](assets/engineering-to-mathematics-resilience-trajectory.svg) | Canonical visual trajectory |
+| [`assets/engineering-to-mathematics-resilience-trajectory.svg`](assets/engineering-to-mathematics-resilience-trajectory.svg) | Canonical public mathematics-art trajectory |
+
+The root README continues to use the stable public header path `assets/math-art/profile-header-v4.svg`. Under `DD-PROFILE-REQ-20260823-003`, the internal composition at that path is upgraded to the mathematics-art design while the prior master is preserved under `assets/math-art/archive/` for provenance and rollback.
 
 ## Evidence states
 
@@ -78,7 +81,8 @@ The comparison with AI is therefore a **transferability ambition**, not an equiv
 - ongoing MSE Sustainable Engineering and MS Financial Engineering status;
 - implemented research programmes already supported by repositories;
 - discrete/differential geometry and cross-sector resilience as explicit research ambitions;
-- governed trajectory SVG and public-safe narrative.
+- governed mathematics-art header and trajectory SVGs;
+- public-safe narrative.
 
 ### Blocked pending credential reconciliation
 

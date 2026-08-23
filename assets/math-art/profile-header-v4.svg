@@ -1,17 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 320" role="img" aria-labelledby="title desc">
-<title id="title">Dossiya Dakou mathematical research profile</title>
-<desc id="desc">Adaptive light and dark header for mathematical physics, sustainable infrastructure, inference, geometry, control, design and scientific validation.</desc>
-<style>
-:root{--bg:#fff;--panel:#f8fafc;--fg:#0f172a;--muted:#475569;--grid:#e2e8f0;--state:#1d4ed8;--source:#4338ca;--viable:#047857;--unc:#b45309;--decision:#a16207;--border:#94a3b8}
-@media (prefers-color-scheme:dark){:root{--bg:#07111f;--panel:#0e1d31;--fg:#eaf1f8;--muted:#9eb0c3;--grid:#28445f;--state:#60a5fa;--source:#a5b4fc;--viable:#34d399;--unc:#fbbf24;--decision:#facc15;--border:#355a7b}}
-.bg{fill:var(--bg)}.panel{fill:var(--panel);stroke:var(--border)}.fg{fill:var(--fg)}.muted{fill:var(--muted)}.grid{stroke:var(--grid)}.state{stroke:var(--state);fill:none}.source{fill:var(--source)}.viable{fill:var(--viable)}.unc{fill:var(--unc)}.decision{fill:var(--decision)}
-text{font-family:Inter,Segoe UI,Arial,sans-serif}.math{font-family:Georgia,'Times New Roman',serif}
-</style>
-<rect class="bg" width="1600" height="320" rx="26"/>
-<g opacity=".55" class="grid" fill="none" stroke-width="1"><path d="M0 64H1600M0 128H1600M0 192H1600M0 256H1600"/><path d="M160 0V320M320 0V320M480 0V320M640 0V320M800 0V320M960 0V320M1120 0V320M1280 0V320M1440 0V320"/></g>
-<text x="80" y="92" class="fg" font-size="48" font-weight="800">Dossiya Dakou</text>
-<text x="80" y="132" class="muted" font-size="21">Mathematical Physics · Sustainable Infrastructure · Scientific Computing</text>
-<text x="80" y="202" class="fg math" font-size="25">Evidence → inference → dynamics → geometry → viability → control → design → validation</text>
-<g transform="translate(80 240)"><circle cx="12" cy="0" r="7" class="source"/><text x="30" y="7" class="muted" font-size="15">source mathematics</text><circle cx="220" cy="0" r="7" class="state" fill="var(--state)"/><text x="238" y="7" class="muted" font-size="15">dynamic state</text><circle cx="398" cy="0" r="7" class="unc"/><text x="416" y="7" class="muted" font-size="15">uncertainty</text><circle cx="550" cy="0" r="7" class="viable"/><text x="568" y="7" class="muted" font-size="15">viability / recovery</text><circle cx="765" cy="0" r="7" class="decision"/><text x="783" y="7" class="muted" font-size="15">optimization / decision</text></g>
-<g transform="translate(1190 46)"><rect class="panel" width="330" height="214" rx="18"/><text x="26" y="44" class="fg" font-size="17" font-weight="700">Research invariant</text><text x="26" y="86" class="fg math" font-size="24">claim strength ≤ evidence strength</text><text x="26" y="126" class="muted" font-size="15">theme changes presentation only;</text><text x="26" y="151" class="muted" font-size="15">equations, geometry, values, and</text><text x="26" y="176" class="muted" font-size="15">evidence state remain invariant.</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dossiya Dakou — engineering to mathematical research trajectory</title>
+  <desc id="desc">Adaptive mathematical-art profile header. A green 2016 to 2026 trajectory curve moves from electrical engineering and energy systems through sustainable and financial engineering toward deeper geometry, dynamics, networks, scientific computing and sustainable resilience research. Equations are domain-linked rather than decorative.</desc>
+  <metadata>Stable public path retained for README compatibility; mathematics-art redesign request DD-PROFILE-REQ-20260823-003.</metadata>
+  <defs>
+    <style>
+      :root{
+        --bg:#ffffff;--fg:#0b2114;--ink:#0b2114;--muted:#466454;--g0:#f5fff8;--g1:#e8f8ed;--g2:#c9ebd3;--g3:#86cf98;--g4:#45ad63;--g5:#248347;--g6:#116334;--g7:#084925;--grid:#dff1e5;--hair:#b9dcc4;--accent:#92d7a5;
+      }
+      @media (prefers-color-scheme:dark){:root{--bg:#06130b;--fg:#ecfff1;--ink:#ecfff1;--muted:#a6c8b0;--g0:#0a1c10;--g1:#0d2616;--g2:#164125;--g3:#2c7041;--g4:#4bb86a;--g5:#69d383;--g6:#8fe4a4;--g7:#baf1c7;--grid:#153a22;--hair:#2d6840;--accent:#6dd786;}}
+      .bg{fill:var(--bg)}.ink{fill:var(--ink)}.muted{fill:var(--muted)}.brand{fill:var(--g6)}.brand2{fill:var(--g5)}.hair{stroke:var(--hair);fill:none}.grid{stroke:var(--grid);fill:none}.curve{stroke:var(--g5);fill:none}.curve2{stroke:var(--g3);fill:none}.mesh{stroke:var(--g3);fill:none}.mesh2{stroke:var(--g2);fill:none}.node{fill:var(--bg);stroke:var(--g5)}.nodefill{fill:var(--g5);stroke:var(--bg)}.math{font-family:Cambria Math,STIX Two Math,Georgia,'Times New Roman',serif}.sans{font-family:Inter,Segoe UI,Arial,sans-serif}
+    </style>
+    <radialGradient id="halo"><stop offset="0" stop-color="var(--g3)" stop-opacity=".22"/><stop offset=".7" stop-color="var(--g2)" stop-opacity=".07"/><stop offset="1" stop-color="var(--g2)" stop-opacity="0"/></radialGradient>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--g5)"/></marker>
+    <clipPath id="rightClip"><rect x="1335" y="35" width="550" height="500" rx="28"/></clipPath>
+  </defs>
+  <rect class="bg" width="1920" height="600" rx="28"/>
+
+  <g opacity=".72">
+    <path class="mesh2" stroke-width="1" d="M0 88 C170 15 310 150 475 76 S795 8 955 82 S1280 150 1455 66 S1770 4 1920 74"/>
+    <path class="mesh2" stroke-width="1" d="M0 112 C175 38 315 174 482 100 S805 32 968 106 S1290 174 1468 90 S1780 28 1920 98"/>
+    <path class="mesh2" stroke-width="1" d="M0 136 C180 61 320 198 489 124 S815 56 981 130 S1300 198 1481 114 S1790 52 1920 122"/>
+    <path class="mesh2" stroke-width="1" d="M0 500 C175 428 335 554 505 486 S825 424 995 494 S1320 548 1490 478 S1775 423 1920 492"/>
+    <path class="mesh2" stroke-width="1" d="M0 522 C180 452 340 578 512 510 S835 448 1008 518 S1330 572 1503 502 S1785 447 1920 516"/>
+    <path class="mesh2" stroke-width="1" d="M0 544 C185 476 345 598 519 534 S845 472 1021 542 S1340 596 1516 526 S1795 471 1920 540"/>
+  </g>
+
+  <g transform="translate(40 72)">
+    <circle cx="180" cy="190" r="148" fill="url(#halo)"/>
+    <circle cx="180" cy="190" r="132" class="hair" stroke-width="1.2"/>
+    <circle cx="180" cy="190" r="92" class="hair" stroke-width="1.1" stroke-dasharray="4 8"/>
+    <circle cx="180" cy="190" r="47" class="hair" stroke-width="1"/>
+    <g class="curve2" stroke-width="2"><path d="M58 190 H95 L110 170 L130 210 L150 170 L170 210 L190 190 H229"/><path d="M180 58 V106"/><path d="M180 274 V322"/><path d="M52 278 L92 244"/><path d="M268 136 L306 102"/></g>
+    <g class="nodefill"><circle cx="58" cy="190" r="6"/><circle cx="229" cy="190" r="6"/><circle cx="180" cy="58" r="6"/><circle cx="180" cy="322" r="6"/><circle cx="52" cy="278" r="6"/><circle cx="306" cy="102" r="6"/><circle cx="180" cy="190" r="8"/></g>
+    <g class="curve" stroke-width="2" opacity=".72"><path d="M34 72 L62 12 L90 72 M48 42 H76 M40 58 H84 M62 12 V122 M28 122 H96"/><path d="M276 268 L304 208 L332 268 M290 238 H318 M282 254 H326 M304 208 V318 M270 318 H338"/></g>
+    <text x="16" y="356" class="ink math" font-size="21">ẋ = Ax + Bu</text>
+    <text x="16" y="386" class="muted sans" font-size="15">electrical systems · control · implementation</text>
+  </g>
+
+  <g transform="translate(410 70)">
+    <text x="430" y="78" text-anchor="middle" class="ink math" font-size="78" font-weight="700">Dossiya Dakou</text>
+    <line x1="120" y1="103" x2="740" y2="103" class="hair" stroke-width="1.2"/>
+    <text x="430" y="136" text-anchor="middle" class="brand sans" font-size="18" font-weight="650" letter-spacing="3.3">ENGINEERING · MATHEMATICS · SUSTAINABLE RESILIENCE</text>
+    <text x="430" y="183" text-anchor="middle" class="ink math" font-size="22">γ : [2016, 2026] → 𝓜</text>
+    <text x="430" y="208" text-anchor="middle" class="muted sans" font-size="14" letter-spacing="1.1">A DECADE OF TECHNICAL DEVELOPMENT → A DEEPER MATHEMATICAL RESEARCH DIRECTION</text>
+    <path d="M78 300 C180 220 285 352 392 278 S588 208 775 292" class="curve2" stroke-width="13" opacity=".16"/>
+    <path d="M78 300 C180 220 285 352 392 278 S588 208 775 292" class="curve" stroke-width="3.5" marker-end="url(#arrowGreen)"/>
+    <g class="node" stroke-width="3"><circle cx="92" cy="292" r="12"/><circle cx="232" cy="280" r="12"/><circle cx="390" cy="280" r="12"/><circle cx="556" cy="250" r="12"/><circle cx="726" cy="272" r="12"/></g>
+    <g class="nodefill"><circle cx="92" cy="292" r="4"/><circle cx="232" cy="280" r="4"/><circle cx="390" cy="280" r="4"/><circle cx="556" cy="250" r="4"/><circle cx="726" cy="272" r="4"/></g>
+    <text x="92" y="330" text-anchor="middle" class="brand sans" font-size="15" font-weight="700">2016</text><text x="92" y="351" text-anchor="middle" class="ink sans" font-size="14">Electrical systems</text>
+    <text x="232" y="319" text-anchor="middle" class="ink sans" font-size="14">Energy systems</text>
+    <text x="390" y="319" text-anchor="middle" class="ink sans" font-size="14">Sustainable engineering</text>
+    <text x="556" y="289" text-anchor="middle" class="ink sans" font-size="14">Financial engineering</text>
+    <text x="726" y="310" text-anchor="middle" class="brand sans" font-size="15" font-weight="700">2026 →</text><text x="726" y="331" text-anchor="middle" class="ink sans" font-size="14">Deeper mathematics</text>
+    <text x="430" y="398" text-anchor="middle" class="ink math" font-size="20">physical systems → state → dynamics → uncertainty → geometry → viability → decision</text>
+    <text x="430" y="430" text-anchor="middle" class="muted sans" font-size="15">discrete &amp; differential geometry · dynamical systems · networks · scientific computing · mathematical visualization</text>
+  </g>
+
+  <g clip-path="url(#rightClip)">
+    <circle cx="1585" cy="270" r="240" fill="url(#halo)"/>
+    <g opacity=".88"><path class="mesh" stroke-width="1.2" d="M1350 155 C1440 95 1510 98 1590 150 S1730 218 1882 132"/><path class="mesh" stroke-width="1.2" d="M1348 183 C1438 126 1512 128 1592 180 S1732 244 1880 160"/><path class="mesh" stroke-width="1.2" d="M1346 211 C1436 156 1514 158 1594 210 S1734 270 1878 188"/><path class="mesh" stroke-width="1.2" d="M1344 239 C1434 187 1516 188 1596 240 S1736 296 1876 216"/><path class="mesh" stroke-width="1.2" d="M1342 267 C1432 217 1518 218 1598 270 S1738 322 1874 244"/><path class="mesh" stroke-width="1.2" d="M1340 295 C1430 248 1520 248 1600 300 S1740 348 1872 272"/><path class="mesh" stroke-width="1.2" d="M1338 323 C1428 278 1522 278 1602 330 S1742 374 1870 300"/><path class="mesh2" stroke-width="1" d="M1390 120 C1380 190 1400 260 1468 345"/><path class="mesh2" stroke-width="1" d="M1442 102 C1430 178 1450 258 1515 357"/><path class="mesh2" stroke-width="1" d="M1494 94 C1482 174 1500 258 1564 363"/><path class="mesh2" stroke-width="1" d="M1546 96 C1534 178 1550 260 1614 365"/><path class="mesh2" stroke-width="1" d="M1598 108 C1586 190 1600 266 1664 355"/><path class="mesh2" stroke-width="1" d="M1650 126 C1638 204 1650 274 1714 340"/><path class="mesh2" stroke-width="1" d="M1702 146 C1690 218 1700 282 1764 322"/></g>
+    <path d="M1400 278 C1495 225 1578 245 1658 300 S1772 324 1848 245" class="curve" stroke-width="4"/>
+    <g class="nodefill"><circle cx="1400" cy="278" r="5"/><circle cx="1658" cy="300" r="5"/><circle cx="1848" cy="245" r="5"/></g>
+    <g class="hair" stroke-width="1.4"><path d="M1460 82 L1510 58 L1556 92 L1606 54 L1652 88 L1708 62"/><path d="M1460 82 L1518 118 L1556 92 L1610 126 L1652 88 L1712 120"/><path d="M1510 58 L1518 118 M1556 92 L1606 54 M1606 54 L1610 126 M1652 88 L1712 120"/></g>
+    <g class="nodefill"><circle cx="1460" cy="82" r="5"/><circle cx="1510" cy="58" r="5"/><circle cx="1518" cy="118" r="5"/><circle cx="1556" cy="92" r="6"/><circle cx="1606" cy="54" r="5"/><circle cx="1610" cy="126" r="5"/><circle cx="1652" cy="88" r="6"/><circle cx="1708" cy="62" r="5"/><circle cx="1712" cy="120" r="5"/></g>
+    <path d="M1390 398 C1430 370 1460 430 1495 397 S1550 375 1585 410 S1645 438 1680 402 S1740 370 1780 406 S1840 432 1880 392" class="curve2" stroke-width="2.2"/>
+    <path d="M1460 430 C1510 390 1580 392 1620 430 C1660 468 1640 510 1592 524 C1538 540 1470 510 1450 468 C1440 450 1445 440 1460 430Z" class="curve" stroke-width="2.2" stroke-dasharray="7 6" opacity=".82"/>
+  </g>
+
+  <g transform="translate(1370 378)"><text x="0" y="0" class="ink math" font-size="18">gᵢⱼ = ⟨∂ᵢr, ∂ⱼr⟩</text><text x="0" y="28" class="ink math" font-size="18">L = D − A</text><text x="0" y="56" class="ink math" font-size="18">dXₜ = b(Xₜ,t)dt + σ(Xₜ,t)dWₜ</text><text x="0" y="84" class="muted sans" font-size="13">geometry · networks · stochastic systems</text></g>
+
+  <line x1="62" y1="545" x2="1858" y2="545" class="hair" stroke-width="1"/>
+  <text x="62" y="574" class="ink math" font-size="16">Pgen + Pimport + Pdis = Pload + Ploss + Pch + Pexport</text>
+  <circle cx="705" cy="568" r="3.5" class="brand2"/>
+  <text x="728" y="574" class="ink math" font-size="16">claim strength ≤ evidence strength</text>
+  <circle cx="1110" cy="568" r="3.5" class="brand2"/>
+  <text x="1135" y="574" class="muted sans" font-size="14">cross-sector transferability = research programme, not universal validated theory</text>
 </svg>
