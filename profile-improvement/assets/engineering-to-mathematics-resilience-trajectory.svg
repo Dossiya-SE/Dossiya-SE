@@ -1,114 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
-  <title id="title">Engineering to mathematics research trajectory for sustainable resilience</title>
-  <desc id="desc">A professional research trajectory from electrical engineering foundations through renewable energy, sustainable engineering and financial engineering into deeper geometry, mathematical art and cross-sector resilience research.</desc>
-  <defs>
-    <style>
-      :root { color-scheme: light dark; }
-      .bg { fill: #ffffff; }
-      .ink { fill: #14213d; }
-      .muted { fill: #5f6b7a; }
-      .line { stroke: #17365d; stroke-width: 4; fill: none; }
-      .node { fill: #f7f9fc; stroke: #17365d; stroke-width: 3; }
-      .node2 { fill: #fff7df; stroke: #b88716; stroke-width: 3; }
-      .node3 { fill: #eef6f0; stroke: #3d7a53; stroke-width: 3; }
-      .research { fill: #f4f0fb; stroke: #66558c; stroke-width: 3; }
-      .sector { fill: #f5f7fa; stroke: #7c8796; stroke-width: 2; }
-      .title { font: 700 42px system-ui, -apple-system, Segoe UI, sans-serif; }
-      .subtitle { font: 500 22px system-ui, -apple-system, Segoe UI, sans-serif; }
-      .label { font: 700 22px system-ui, -apple-system, Segoe UI, sans-serif; }
-      .small { font: 500 17px system-ui, -apple-system, Segoe UI, sans-serif; }
-      .tiny { font: 500 14px system-ui, -apple-system, Segoe UI, sans-serif; }
-      @media (prefers-color-scheme: dark) {
-        .bg { fill: #0d1117; }
-        .ink { fill: #e6edf3; }
-        .muted { fill: #9da7b3; }
-        .line { stroke: #8fb3df; }
-        .node { fill: #161b22; stroke: #8fb3df; }
-        .node2 { fill: #211c0f; stroke: #d6a73a; }
-        .node3 { fill: #112019; stroke: #63a879; }
-        .research { fill: #1c1727; stroke: #9984c4; }
-        .sector { fill: #161b22; stroke: #6e7681; }
-      }
-    </style>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 z" fill="#17365d" />
-    </marker>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+<title id="title">Engineering to mathematics trajectory as mathematical art</title>
+<desc id="desc">A green mathematical field represents the 2016 to 2026 professional trajectory from electrical engineering through energy, sustainable engineering and financial engineering toward deeper mathematics and cross-sector sustainable resilience research. Domain equations are linked to their stages; no proficiency scores are implied.</desc>
+<metadata>Mathematics-art redesign request DD-PROFILE-REQ-20260823-003. Stable public path retained for README compatibility.</metadata>
+<defs>
+<style>
+:root{--bg:#fff;--ink:#0b2114;--muted:#456454;--g1:#eefbf2;--g2:#d6f2df;--g3:#a5ddb5;--g4:#62bd79;--g5:#2d9450;--g6:#146b38;--g7:#084a26;--hair:#c8e6d1;--grid:#e3f4e8}
+@media (prefers-color-scheme:dark){:root{--bg:#06130b;--ink:#ecfff1;--muted:#a8cbb2;--g1:#0b2012;--g2:#12351e;--g3:#215a33;--g4:#3c8c53;--g5:#61c67b;--g6:#8be1a0;--g7:#baf2c7;--hair:#2a633d;--grid:#143720}}
+.bg{fill:var(--bg)}.ink{fill:var(--ink)}.muted{fill:var(--muted)}.hair{stroke:var(--hair);fill:none}.grid{stroke:var(--grid);fill:none}.g1{stroke:var(--g3);fill:none}.g2{stroke:var(--g5);fill:none}.g3{stroke:var(--g6);fill:none}.n{fill:var(--bg);stroke:var(--g5)}.nf{fill:var(--g5);stroke:var(--bg)}.math{font-family:Cambria Math,STIX Two Math,Georgia,'Times New Roman',serif}.sans{font-family:Inter,Segoe UI,Arial,sans-serif}
+</style>
+<radialGradient id="halo"><stop offset="0" stop-color="var(--g3)" stop-opacity=".22"/><stop offset="1" stop-color="var(--g1)" stop-opacity="0"/></radialGradient>
+<marker id="arr" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="var(--g5)"/></marker>
+</defs>
+<rect class="bg" width="1600" height="760" rx="24"/>
 
-  <rect class="bg" x="0" y="0" width="1600" height="900" />
+<g opacity=".72"><path class="grid" d="M0 88C130 10 258 156 390 84S654 10 790 86S1050 160 1188 82S1460 8 1600 80"/><path class="grid" d="M0 112C134 34 262 180 396 108S662 34 800 110S1060 184 1200 106S1470 32 1600 104"/><path class="grid" d="M0 136C138 58 266 204 402 132S670 58 810 134S1070 208 1212 130S1480 56 1600 128"/><path class="grid" d="M0 638C140 560 270 704 408 634S684 560 824 636S1100 706 1240 630S1490 558 1600 626"/><path class="grid" d="M0 664C145 586 275 728 416 660S694 586 836 662S1110 732 1252 656S1500 584 1600 652"/></g>
 
-  <text class="ink title" x="800" y="70" text-anchor="middle">Engineering → Mathematics → Sustainable Resilience</text>
-  <text class="muted subtitle" x="800" y="108" text-anchor="middle">A cumulative education and research trajectory — not a claim of equal mastery at every stage</text>
+<text x="800" y="68" text-anchor="middle" class="ink math" font-size="46" font-weight="700">2016 → 2026 · Engineering becoming mathematical structure</text>
+<text x="800" y="104" text-anchor="middle" class="muted sans" font-size="16" letter-spacing="1.8">PHYSICAL IMPLEMENTATION → SYSTEMS → UNCERTAINTY → GEOMETRY → RESILIENCE RESEARCH</text>
 
-  <path class="line" marker-end="url(#arrow)" d="M270 245 L430 245" />
-  <path class="line" marker-end="url(#arrow)" d="M590 245 L750 245" />
-  <path class="line" marker-end="url(#arrow)" d="M910 245 L1070 245" />
-  <path class="line" marker-end="url(#arrow)" d="M1230 245 L1390 245" />
+<g opacity=".78"><path class="g1" stroke-width="1.2" d="M80 260C210 170 318 330 452 242S712 170 850 252S1110 334 1250 244S1470 176 1540 220"/><path class="g1" stroke-width="1.2" d="M80 286C210 196 318 356 452 268S712 196 850 278S1110 360 1250 270S1470 202 1540 246"/><path class="g1" stroke-width="1.2" d="M80 312C210 222 318 382 452 294S712 222 850 304S1110 386 1250 296S1470 228 1540 272"/><path class="g1" stroke-width="1.2" d="M80 338C210 248 318 408 452 320S712 248 850 330S1110 412 1250 322S1470 254 1540 298"/></g>
 
-  <rect class="node" x="70" y="170" rx="22" ry="22" width="200" height="150" />
-  <text class="ink label" x="170" y="212" text-anchor="middle">Electrical</text>
-  <text class="ink label" x="170" y="241" text-anchor="middle">Engineering</text>
-  <text class="muted small" x="170" y="276" text-anchor="middle">practice • measurement</text>
-  <text class="muted small" x="170" y="301" text-anchor="middle">circuits • systems</text>
+<path d="M120 392C245 270 360 438 492 328S735 256 864 360S1112 450 1242 334S1442 260 1512 314" class="g1" stroke-width="17" opacity=".18"/>
+<path d="M120 392C245 270 360 438 492 328S735 256 864 360S1112 450 1242 334S1442 260 1512 314" class="g2" stroke-width="4" marker-end="url(#arr)"/>
 
-  <rect class="node2" x="430" y="170" rx="22" ry="22" width="200" height="150" />
-  <text class="ink label" x="530" y="212" text-anchor="middle">Renewable Energy</text>
-  <text class="ink label" x="530" y="241" text-anchor="middle">&amp; Physical Systems</text>
-  <text class="muted small" x="530" y="276" text-anchor="middle">energy conversion</text>
-  <text class="muted small" x="530" y="301" text-anchor="middle">system behavior</text>
+<text x="805" y="180" text-anchor="middle" class="ink math" font-size="25">γ : [2016, 2026] → 𝓜</text>
+<text x="805" y="208" text-anchor="middle" class="muted sans" font-size="14">conceptual research trajectory in a profile state space — not a proficiency score or fitted empirical model</text>
 
-  <rect class="node3" x="750" y="170" rx="22" ry="22" width="200" height="150" />
-  <text class="ink label" x="850" y="212" text-anchor="middle">Sustainable</text>
-  <text class="ink label" x="850" y="241" text-anchor="middle">Engineering</text>
-  <text class="muted small" x="850" y="276" text-anchor="middle">coupled infrastructure</text>
-  <text class="muted small" x="850" y="301" text-anchor="middle">resilience • constraints</text>
+<g class="n" stroke-width="3"><circle cx="132" cy="382" r="16"/><circle cx="424" cy="360" r="16"/><circle cx="718" cy="294" r="16"/><circle cx="1000" cy="398" r="16"/><circle cx="1290" cy="310" r="16"/></g>
+<g class="nf"><circle cx="132" cy="382" r="5"/><circle cx="424" cy="360" r="5"/><circle cx="718" cy="294" r="5"/><circle cx="1000" cy="398" r="5"/><circle cx="1290" cy="310" r="5"/></g>
 
-  <rect class="node" x="1070" y="170" rx="22" ry="22" width="200" height="150" />
-  <text class="ink label" x="1170" y="212" text-anchor="middle">Financial</text>
-  <text class="ink label" x="1170" y="241" text-anchor="middle">Engineering</text>
-  <text class="muted small" x="1170" y="276" text-anchor="middle">stochastic models</text>
-  <text class="muted small" x="1170" y="301" text-anchor="middle">risk • optimization</text>
+<text x="132" y="430" text-anchor="middle" class="ink sans" font-size="17" font-weight="700">Electrical engineering</text><text x="132" y="454" text-anchor="middle" class="muted sans" font-size="14">practice · measurement · control</text><text x="132" y="488" text-anchor="middle" class="ink math" font-size="20">ẋ = Ax + Bu</text><text x="132" y="518" text-anchor="middle" class="muted sans" font-size="14">2016</text>
 
-  <rect class="research" x="1390" y="155" rx="22" ry="22" width="170" height="180" />
-  <text class="ink label" x="1475" y="197" text-anchor="middle">Deeper</text>
-  <text class="ink label" x="1475" y="226" text-anchor="middle">Mathematics</text>
-  <text class="muted small" x="1475" y="258" text-anchor="middle">discrete / differential</text>
-  <text class="muted small" x="1475" y="283" text-anchor="middle">geometry</text>
-  <text class="muted small" x="1475" y="308" text-anchor="middle">mathematical art</text>
+<text x="424" y="408" text-anchor="middle" class="ink sans" font-size="17" font-weight="700">Energy systems</text><text x="424" y="432" text-anchor="middle" class="muted sans" font-size="14">conversion · balance · integration</text><text x="424" y="466" text-anchor="middle" class="ink math" font-size="16">Pgen + Pimp + Pdis</text><text x="424" y="490" text-anchor="middle" class="ink math" font-size="16">= Pload + Ploss + Pch + Pexp</text>
 
-  <text class="ink label" x="800" y="410" text-anchor="middle">Transferable mathematical research capabilities</text>
+<text x="718" y="250" text-anchor="middle" class="ink sans" font-size="17" font-weight="700">Sustainable engineering</text><text x="718" y="226" text-anchor="middle" class="muted sans" font-size="14">coupled systems · constraints · viability</text><text x="718" y="346" text-anchor="middle" class="ink math" font-size="17">K_R = K_phys ∩ K_service ∩ K_sus ∩ K_eq</text>
 
-  <rect class="sector" x="95" y="450" rx="18" ry="18" width="210" height="92" />
-  <text class="ink small" x="200" y="488" text-anchor="middle">Dynamical systems</text>
-  <text class="muted tiny" x="200" y="516" text-anchor="middle">state • evolution • stability</text>
+<text x="1000" y="446" text-anchor="middle" class="ink sans" font-size="17" font-weight="700">Financial engineering</text><text x="1000" y="470" text-anchor="middle" class="muted sans" font-size="14">stochastic systems · risk · optimization</text><text x="1000" y="504" text-anchor="middle" class="ink math" font-size="18">dXₜ = b(Xₜ,t)dt + σ(Xₜ,t)dWₜ</text>
 
-  <rect class="sector" x="335" y="450" rx="18" ry="18" width="210" height="92" />
-  <text class="ink small" x="440" y="488" text-anchor="middle">Networks &amp; interfaces</text>
-  <text class="muted tiny" x="440" y="516" text-anchor="middle">coupling • topology • cascades</text>
+<text x="1290" y="266" text-anchor="middle" class="ink sans" font-size="17" font-weight="700">Deeper mathematics</text><text x="1290" y="242" text-anchor="middle" class="muted sans" font-size="14">geometry · dynamics · networks · computing</text><text x="1290" y="362" text-anchor="middle" class="ink math" font-size="18">gᵢⱼ = ⟨∂ᵢr, ∂ⱼr⟩</text><text x="1290" y="390" text-anchor="middle" class="ink math" font-size="18">L = D − A</text><text x="1290" y="418" text-anchor="middle" class="muted sans" font-size="14">2026 → research direction</text>
 
-  <rect class="sector" x="575" y="450" rx="18" ry="18" width="210" height="92" />
-  <text class="ink small" x="680" y="488" text-anchor="middle">Geometry</text>
-  <text class="muted tiny" x="680" y="516" text-anchor="middle">state spaces • local/global structure</text>
+<g transform="translate(1410 395)"><circle cx="70" cy="70" r="100" fill="url(#halo)"/><path d="M8 72C26 24 82 6 126 32C166 56 164 110 128 142C94 174 38 164 14 124C4 108 0 92 8 72Z" class="g2" stroke-width="2.2" stroke-dasharray="7 6"/><path d="M35 85C58 58 80 54 104 78S132 114 144 94" class="g3" stroke-width="2.4"/><circle cx="35" cy="85" r="4" class="nf"/><circle cx="104" cy="78" r="4" class="nf"/><circle cx="144" cy="94" r="4" class="nf"/></g>
+<text x="1475" y="570" text-anchor="middle" class="ink sans" font-size="17" font-weight="700">Sustainable resilient systems</text><text x="1475" y="594" text-anchor="middle" class="muted sans" font-size="14">cross-sector research programme</text>
 
-  <rect class="sector" x="815" y="450" rx="18" ry="18" width="210" height="92" />
-  <text class="ink small" x="920" y="488" text-anchor="middle">Uncertainty</text>
-  <text class="muted tiny" x="920" y="516" text-anchor="middle">inverse problems • UQ • inference</text>
-
-  <rect class="sector" x="1055" y="450" rx="18" ry="18" width="210" height="92" />
-  <text class="ink small" x="1160" y="488" text-anchor="middle">Optimization &amp; control</text>
-  <text class="muted tiny" x="1160" y="516" text-anchor="middle">admissibility • intervention</text>
-
-  <rect class="sector" x="1295" y="450" rx="18" ry="18" width="210" height="92" />
-  <text class="ink small" x="1400" y="488" text-anchor="middle">Scientific computing</text>
-  <text class="muted tiny" x="1400" y="516" text-anchor="middle">simulation • verification • visuals</text>
-
-  <path class="line" marker-end="url(#arrow)" d="M800 570 L800 645" />
-
-  <rect class="research" x="230" y="645" rx="24" ry="24" width="1140" height="105" />
-  <text class="ink label" x="800" y="686" text-anchor="middle">Cross-Sector Sustainable Resilience Research</text>
-  <text class="muted small" x="800" y="719" text-anchor="middle">Reusable mathematics for state, coupling, constraints, uncertainty, viability, recovery and decision</text>
-
-  <text class="ink small" x="800" y="803" text-anchor="middle">Energy • Infrastructure • Finance • Climate • Resources • Mobility • Digital Systems • Other Complex Sectors</text>
-  <text class="muted tiny" x="800" y="842" text-anchor="middle">Research ambition: cross-sector transferability. Not a claim of a universal validated theory.</text>
-  <text class="muted tiny" x="800" y="868" text-anchor="middle">Credential wording and completion status are controlled separately in PROFILE_CREDENTIALS_REGISTRY.json.</text>
+<line x1="160" y1="614" x2="1440" y2="614" class="hair"/>
+<text x="800" y="650" text-anchor="middle" class="ink math" font-size="20">claim strength ≤ evidence strength</text>
+<text x="800" y="682" text-anchor="middle" class="muted sans" font-size="14">mathematical art communicates the trajectory; sector-specific models, assumptions, evidence and validation remain separate</text>
+<text x="800" y="718" text-anchor="middle" class="muted sans" font-size="13">cross-sector transferability = research ambition · not an established universal theory</text>
 </svg>
