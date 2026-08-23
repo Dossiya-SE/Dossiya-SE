@@ -21,7 +21,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Download exact user-supplied PNG and verify bytes
         env:
-          SOURCE_URL: "https://chatgpt.com/backend-api/estuary/content?id=file_00000000a86c8207853f327f620d1c32&ts=496531&p=fs&cid=1&sig=b762feea527ead622a1aaa5953c8740c7fb1557cf6f35c875165c2368e2c35e1&v=0"
+          SOURCE_URL: "https://sdmntprseasia.oaiusercontent.com/files/00000000-c040-8207-a54b-958ede660dc4/raw?se=2026-08-23T20%3A48%3A13Z&sp=r&sv=2026-02-06&sr=b&scid=bbfb17f9-f8b3-5edc-85bf-48d4e5aa7c2c&skoid=6fa9748a-b7b2-4b56-a932-8c1417549c47&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-22T23%3A38%3A11Z&ske=2026-08-23T23%3A38%3A11Z&sks=b&skv=2026-02-06&sig=V0f0382JYrdBaAup7eUED60l0eCqyExQtHIftdmS8m0%3D"
           EXPECTED_SHA256: "620c3db966f8867050643a0f20e960b03d553e5057915a9deed9b3a733f4e031"
         run: |
           set -euo pipefail
