@@ -7,7 +7,8 @@ Its purpose is to ensure that future profile edits are based on the user's **exa
 **Workspace status:** `ACTIVE_GOVERNING_PROFILE_WORKSPACE`  
 **Architecture:** `DD-PROFILE-ARCH-001`  
 **Request protocol:** `DD-PROFILE-REQUEST-001`  
-**Release gate:** `DD-PROFILE-RELEASE-001`
+**Release gate:** `DD-PROFILE-RELEASE-001`  
+**Page composition:** `DD-PROFILE-COMPOSITION-V1`
 
 ## Governing principle
 
@@ -57,11 +58,14 @@ The comparison with AI is therefore a **transferability ambition**, not an equiv
 | [`PROFILE_PUBLIC_NARRATIVE.md`](PROFILE_PUBLIC_NARRATIVE.md) | Draft short, medium and research-oriented public bios |
 | [`PUBLIC_PROFILE_TRAJECTORY.md`](PUBLIC_PROFILE_TRAJECTORY.md) | Strongest public-safe trajectory currently releasable without unresolved title substitution |
 | [`MATHEMATICS_ART_IDENTITY_V1.md`](MATHEMATICS_ART_IDENTITY_V1.md) | Semantic/scientific contract for the green mathematical-art identity and its domain-linked equations |
+| [`PROFILE_PAGE_COMPOSITION_V1.md`](PROFILE_PAGE_COMPOSITION_V1.md) | Information hierarchy, visual-density, V4-master, disclosure, navigation and verification-placement rules for the public profile |
 | [`REQUEST_PROTOCOL.md`](REQUEST_PROTOCOL.md) | Exact protocol for every future profile-improvement request |
 | [`requests/README.md`](requests/README.md) | Request ledger and naming convention |
 | [`assets/engineering-to-mathematics-resilience-trajectory.svg`](assets/engineering-to-mathematics-resilience-trajectory.svg) | Canonical public mathematics-art trajectory |
 
-The root README continues to use the stable public header path `assets/math-art/profile-header-v4.svg`. Under `DD-PROFILE-REQ-20260823-003`, the internal composition at that path is upgraded to the mathematics-art design while the prior master is preserved under `assets/math-art/archive/` for provenance and rollback.
+The root README continues to use the stable public header path `assets/math-art/profile-header-v4.svg`. Under `DD-PROFILE-REQ-20260823-003`, the internal composition at that path was upgraded to the mathematics-art design while the prior master was preserved under `assets/math-art/archive/` for provenance and rollback.
+
+Under `DD-PROFILE-REQ-20260823-004`, the public page composition is governed as a research front door rather than an unfiltered technical report. Adaptive V4 technical masters are used whenever available, workflow verification is separated from identity, and deep formula/repository material remains available through disclosure sections.
 
 ## Evidence states
 
@@ -82,6 +86,8 @@ The root README continues to use the stable public header path `assets/math-art/
 - implemented research programmes already supported by repositories;
 - discrete/differential geometry and cross-sector resilience as explicit research ambitions;
 - governed mathematics-art header and trajectory SVGs;
+- V4 adaptive mathematics/research/computing/evidence visuals;
+- professional page hierarchy and compact navigation;
 - public-safe narrative.
 
 ### Blocked pending credential reconciliation

@@ -16,6 +16,14 @@ MASTER = WORKSPACE / "PROFILE_MASTER_SPEC.md"
 PUBLIC = WORKSPACE / "PUBLIC_PROFILE_TRAJECTORY.md"
 HEADER = ROOT / "assets" / "math-art" / "profile-header-v4.svg"
 TRAJECTORY_SVG = WORKSPACE / "assets" / "engineering-to-mathematics-resilience-trajectory.svg"
+TECHNICAL_SVGS = [
+    ROOT / "assets" / "math-art" / "profile-mathematics-universe-v4.svg",
+    ROOT / "assets" / "math-art" / "research-operating-system-v4.svg",
+    ROOT / "assets" / "math-art" / "differential-geometry-foundations-v4.svg",
+    ROOT / "assets" / "math-art" / "formula-evidence-lattice-v4.svg",
+    ROOT / "assets" / "math-art" / "evidence-maturity-map-v4.svg",
+    ROOT / "assets" / "math-art" / "computational-stack-v4.svg",
+]
 
 REQUIRED = [
     README,
@@ -25,8 +33,11 @@ REQUIRED = [
     WORKSPACE / "PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md",
     WORKSPACE / "PROFILE_RELEASE_GATE.md",
     WORKSPACE / "REQUEST_PROTOCOL.md",
+    WORKSPACE / "MATHEMATICS_ART_IDENTITY_V1.md",
+    WORKSPACE / "PROFILE_PAGE_COMPOSITION_V1.md",
     HEADER,
     TRAJECTORY_SVG,
+    *TECHNICAL_SVGS,
 ]
 
 
@@ -55,8 +66,18 @@ def main() -> int:
 
     required_readme_tokens = [
         "## Professional and research trajectory",
+        "## Research programmes",
+        "## Mathematics as a research operating system",
+        "## Scientific computing and mathematical art",
+        "## Evidence and validation",
         "assets/math-art/profile-header-v4.svg",
         "profile-improvement/assets/engineering-to-mathematics-resilience-trajectory.svg",
+        "assets/math-art/profile-mathematics-universe-v4.svg",
+        "assets/math-art/research-operating-system-v4.svg",
+        "assets/math-art/differential-geometry-foundations-v4.svg",
+        "assets/math-art/formula-evidence-lattice-v4.svg",
+        "assets/math-art/evidence-maturity-map-v4.svg",
+        "assets/math-art/computational-stack-v4.svg",
         "Profile Improvement Workspace",
         "MSE Sustainable Engineering — Arizona State University, ongoing",
         "MS Financial Engineering — WorldQuant University, ongoing",
@@ -64,6 +85,33 @@ def main() -> int:
     for token in required_readme_tokens:
         if token not in readme:
             fail(f"Public README missing required governed token: {token}")
+
+    legacy_primary_paths = [
+        "assets/math-art/profile-mathematics-universe-v3.svg",
+        "assets/math-art/research-operating-system.svg",
+        "assets/math-art/differential-geometry-viability-v3.svg",
+        "assets/math-art/formula-evidence-lattice-v3.svg",
+        "assets/math-art/evidence-maturity-map.svg",
+        "assets/math-art/computational-stack.svg",
+    ]
+    for token in legacy_primary_paths:
+        if token in readme:
+            fail(f"README still uses legacy primary visual path despite V4 master: {token}")
+
+    # Verification status belongs in the evidence section, not the hero.
+    evidence_index = readme.index("## Evidence and validation")
+    for workflow_token in (
+        "actions/workflows/verify.yml",
+        "actions/workflows/production-audit.yml",
+        "africa-energy-dignity/actions/workflows/python-app.yml",
+    ):
+        position = readme.find(workflow_token)
+        if position < evidence_index:
+            fail(f"Workflow badge appears before Evidence and validation: {workflow_token}")
+
+    # The text-only trajectory chain was redundant with the governed trajectory artwork.
+    if "Electrical engineering practice\n→ renewable-energy + physical systems" in readme:
+        fail("README still contains redundant text-only trajectory chain.")
 
     credentials = {item["credential_id"]: item for item in registry["credentials"]}
 
@@ -100,9 +148,11 @@ def main() -> int:
     if "not a claim of an already validated universal theory" not in readme:
         fail("Cross-sector research-ambition boundary is missing from root README.")
 
-    # Parse both public mathematical-art surfaces as XML.
+    # Parse public mathematical-art surfaces and all V4 technical masters as XML.
     header_text = svg_text(HEADER)
     trajectory_text = svg_text(TRAJECTORY_SVG)
+    for svg in TECHNICAL_SVGS:
+        svg_text(svg)
 
     # The artwork must use domain-linked mathematics rather than unrelated decorative formulae.
     required_header_tokens = [
@@ -146,7 +196,9 @@ def main() -> int:
     print("Unverified technical titles remain unpublished in root README: PASS")
     print("Ongoing graduate status preserved: PASS")
     print("Research-ambition boundary preserved: PASS")
-    print("Header + trajectory SVG XML parse: PASS")
+    print("Header + trajectory + six V4 technical SVG XML parses: PASS")
+    print("Professional page composition and V4 binding: PASS")
+    print("Verification badges moved below Evidence and validation: PASS")
     print("Mathematics-art semantic token audit: PASS")
     return 0
 

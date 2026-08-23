@@ -21,10 +21,13 @@ STANDARD = MATH_DIR / "MATHEMATICAL_PRESENTATION_STANDARD.md"
 ATLAS = MATH_DIR / "PROFILE_FORMULA_ATLAS.md"
 PROFILE = ROOT / "README.md"
 
-V3_SVGS = [
-    ASSET_DIR / "profile-mathematics-universe-v3.svg",
-    ASSET_DIR / "differential-geometry-viability-v3.svg",
-    ASSET_DIR / "formula-evidence-lattice-v3.svg",
+V4_SVGS = [
+    ASSET_DIR / "profile-mathematics-universe-v4.svg",
+    ASSET_DIR / "research-operating-system-v4.svg",
+    ASSET_DIR / "differential-geometry-foundations-v4.svg",
+    ASSET_DIR / "formula-evidence-lattice-v4.svg",
+    ASSET_DIR / "evidence-maturity-map-v4.svg",
+    ASSET_DIR / "computational-stack-v4.svg",
 ]
 
 ALLOWED_STATES = {"S", "D", "M", "C", "V", "E", "H", "T"}
@@ -108,9 +111,12 @@ def audit_docs() -> None:
 
     profile = PROFILE.read_text(encoding="utf-8")
     required_profile_refs = [
-        "profile-mathematics-universe-v3.svg",
-        "differential-geometry-viability-v3.svg",
-        "formula-evidence-lattice-v3.svg",
+        "profile-mathematics-universe-v4.svg",
+        "research-operating-system-v4.svg",
+        "differential-geometry-foundations-v4.svg",
+        "formula-evidence-lattice-v4.svg",
+        "evidence-maturity-map-v4.svg",
+        "computational-stack-v4.svg",
         "MATHEMATICAL_PRESENTATION_STANDARD.md",
         "PROFILE_FORMULA_ATLAS.md",
         "formula_registry.json",
@@ -118,6 +124,18 @@ def audit_docs() -> None:
     for ref in required_profile_refs:
         if ref not in profile:
             fail(f"profile README does not reference required artifact: {ref}")
+
+    legacy_primary_refs = [
+        "profile-mathematics-universe-v3.svg",
+        "differential-geometry-viability-v3.svg",
+        "formula-evidence-lattice-v3.svg",
+        "assets/math-art/research-operating-system.svg",
+        "assets/math-art/evidence-maturity-map.svg",
+        "assets/math-art/computational-stack.svg",
+    ]
+    for ref in legacy_primary_refs:
+        if ref in profile:
+            fail(f"profile README still references legacy primary artifact: {ref}")
 
     standard = STANDARD.read_text(encoding="utf-8")
     for state in sorted(ALLOWED_STATES):
@@ -129,10 +147,10 @@ def audit_docs() -> None:
 
 def main() -> None:
     count = audit_registry()
-    for svg in V3_SVGS:
+    for svg in V4_SVGS:
         audit_svg(svg)
     audit_docs()
-    print(f"PASS: profile mathematical presentation V3 audit complete ({count} formula records)")
+    print(f"PASS: profile mathematical presentation V4 audit complete ({count} formula records)")
 
 
 if __name__ == "__main__":
