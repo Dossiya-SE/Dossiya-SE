@@ -1,6 +1,6 @@
 {
-  "schema": "NUS_FROZEN37_CURRENT_STATE_V2",
-  "as_of": "2026-08-23",
+  "schema": "NUS_FROZEN37_CURRENT_STATE_V3",
+  "as_of": "2026-08-24",
   "paper": {
     "paper_id": 48,
     "canonical_id": "NUS-48",
@@ -20,43 +20,25 @@
     "automated_checks_total": 58
   },
   "scientific_adjudication": {
-    "protocol": "NUS48_AUTOMATED_SCIENTIFIC_ADJUDICATION_V1",
     "status": "PASS_AUTOMATED_SCIENTIFIC_ADJUDICATION_READY_FOR_HUMAN_REVIEW",
-    "atomic_claims_total": 426,
-    "focal": 289,
-    "focal_adopted": 20,
-    "external": 111,
-    "administrative_non_scientific": 6,
-    "text_claims_include": 25,
-    "text_annotations_after_adjacent_merge": 24,
-    "redundant_ledger_only": 229,
-    "excluded": 169,
-    "split_required": 2,
-    "abstain": 1,
-    "abstract_body": {
-      "BODY_CONFIRMED": 5,
-      "BODY_MORE_SPECIFIC": 4,
-      "BODY_CONTRADICTS": 1,
-      "ABSTRACT_ONLY": 1,
-      "NONCOMPARABLE": 0,
-      "UNRESOLVED": 0
-    },
-    "surface_disposition": {
-      "INCLUDE": 31,
-      "REDUNDANT": 3,
-      "EXCLUDE": 0,
-      "ABSTAIN": 0,
-      "redundant_surfaces": ["FIGURE_1", "FIGURE_18", "FIGURE_19"]
-    },
-    "candidate_annotation_set": {
-      "text": 24,
-      "regions": 31,
-      "total": 55,
-      "is_final_target_count": false
-    },
-    "author_inconsistencies": ["IC001", "IC002", "IC003"],
-    "t040_candidate": true,
-    "human_approved": false
+    "claims_total": 426,
+    "abstract_claims": 11,
+    "physical_surfaces": 34,
+    "text_candidates": 24,
+    "region_candidates": 31,
+    "candidate_total": 55,
+    "candidate_total_is_not_n_final": true,
+    "preserved_author_inconsistencies": ["IC001", "IC002", "IC003"],
+    "equation_2_visual_exactness_required": true,
+    "T040_status": "CANDIDATE_REGRESSION"
+  },
+  "comment_generation": {
+    "rule_schema": "NUS_COMMENT_GENERATION_RULE_V2",
+    "status": "FROZEN",
+    "preferred_pattern": "ROLE here is SCIENTIFIC NATURE : EXACT AUTHOR WORDING",
+    "fallback_pattern": "ROLE: EXACT AUTHOR WORDING",
+    "nature_requires_direct_focal_support": true,
+    "human_approval_implied": false
   },
   "source_state": {
     "live_annotation_count": 0,
@@ -69,18 +51,16 @@
     "physical_tables": 8,
     "physical_figures": 19,
     "physical_equations": 7,
-    "physical_objects_total": 34
+    "physical_objects_total": 34,
+    "known_v2r2_body_claims": 421,
+    "known_v2r2_excluded_reference_lines": 242,
+    "known_v2r2_excluded_boilerplate_lines": 64
   },
   "equation_2_exactness": {
     "detection_mode": "REFERENCE_ANCHORED_NON_TEXT_OR_FRAGMENTED",
     "formula_text": null,
     "content_exactness": "REFERENCE_ONLY_FORMULA_TEXT_NOT_RECOVERED",
     "visual_review_required": true
-  },
-  "transformation_links": {
-    "equation_1_embodied_carbon": "PARALLEL_ONLY",
-    "equation_2_eco_strength_efficiency": "COUPLED",
-    "equation_3_cost": "PARALLEL_ONLY"
   },
   "authorization": {
     "R": true,
