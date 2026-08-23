@@ -1,5 +1,7 @@
 # Polyglot Resilience Atlas
 
+[![Polyglot conformance](https://github.com/Dossiya-SE/Dossiya-SE/actions/workflows/polyglot-resilience-conformance.yml/badge.svg)](https://github.com/Dossiya-SE/Dossiya-SE/actions/workflows/polyglot-resilience-conformance.yml)
+
 ![Polyglot resilience computing architecture](architecture/polyglot-resilience-architecture.svg)
 
 **One scientific model. Multiple computing ecosystems. One explicit semantic contract.**
@@ -93,9 +95,9 @@ The authoritative status is machine-readable in [`registry/implementation-regist
 
 | Language / layer | Intended role | Profile | Current evidence state |
 |---|---|---|---|
-| **Python** | reference scientific implementation | `FULL_KERNEL` | locally conformance-tested against all frozen fixtures |
-| **Go** | service / concurrent numerical implementation | `FULL_KERNEL` | locally conformance-tested against the baseline fixture |
-| **JavaScript** | browser/runtime native implementation | `FULL_KERNEL` | locally conformance-tested against the baseline fixture |
+| **Python** | reference scientific implementation | `FULL_KERNEL` | **VALIDATED — GitHub CI conformance PASS** |
+| **Go** | service / concurrent numerical implementation | `FULL_KERNEL` | **VALIDATED — GitHub CI conformance PASS** |
+| **JavaScript** | browser/runtime native implementation | `FULL_KERNEL` | **VALIDATED — GitHub CI conformance PASS** |
 | Julia | scientific numerics / differential equations | `FULL_KERNEL` target | planned conformance implementation |
 | R | statistical uncertainty workflows | `FULL_KERNEL` target | planned conformance implementation |
 | C++ | HPC kernel | `FULL_KERNEL` target | planned conformance implementation |
@@ -109,6 +111,18 @@ The authoritative status is machine-readable in [`registry/implementation-regist
 | SQL | evidence/state persistence | `ADAPTER` | specified separately from numerical solvers |
 | Bash | reproducible orchestration | `ADAPTER` | specified separately from numerical solvers |
 | LaTeX | canonical mathematical communication | `ADAPTER` | specified separately from numerical solvers |
+
+### Independent validation evidence
+
+GitHub Actions run `32620003277` independently passed:
+
+- Python, Go and Node runtime setup;
+- static syntax checks;
+- structural and semantic-contract validation;
+- the reference scientific invariant suite;
+- **9 frozen conformance checks** = 3 native implementations × 3 scientific fixtures.
+
+The pre-CI local runs and independent CI runs both observed no numerical disagreement for the frozen fixture outputs at the declared tolerance. The run identity is also recorded in the implementation registry.
 
 No row is promoted merely because source code exists. The maturity ladder is:
 
