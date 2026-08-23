@@ -1,244 +1,301 @@
 # Polyglot Resilience Atlas
 
-This directory defines a **language-interoperability roadmap** for scientific infrastructure modeling.
+![Polyglot resilience computing architecture](architecture/polyglot-resilience-architecture.svg)
 
-It is intentionally different from a badge collection. The same canonical model is mapped to programming paradigms according to what each language is best suited to do.
+**One scientific model. Multiple computing ecosystems. One explicit semantic contract.**
 
-> This atlas is **not a claim of expert proficiency in every language**. It distinguishes a primary research stack from active learning, interoperability and deployment targets.
+The purpose of this atlas is not to reproduce similar syntax in many programming languages. It is to test whether a formally specified resilience model can retain its **mathematical semantics, numerical behavior, provenance, and scientific interpretation** across heterogeneous computing ecosystems.
 
-## Canonical resilience kernel
+> This atlas is **not a claim of expert proficiency in every language**. Every language is assigned an explicit role, implementation profile, maturity state, and conformance status. A language is not called validated until it passes the same frozen scientific fixtures as the reference implementation.
 
-Let $x_t\in[0,1]^n$ represent normalized service states of coupled infrastructure sectors. A simple discrete resilience kernel is
+## Scientific objective
+
+The project separates six claims that are often conflated:
+
+```text
+mathematical specification
+        ↓
+software implementation
+        ↓
+cross-language numerical agreement
+        ↓
+time-discretization convergence
+        ↓
+physical / resilience plausibility
+        ↓
+empirical validity
+```
+
+Agreement across languages establishes **software/numerical conformance**, not empirical truth.
+
+## Three model levels
+
+### Level A — continuous-time scientific model
+
+Let \(x(t)\in[0,1]^n\) denote normalized infrastructure-service states. The baseline continuous-time model is
 
 $$
-x_{t+1}=\Pi_{[0,1]^n}\left[x_t+\Delta t\left(-D x_t+A\phi(x_t)+r\odot(1-x_t)-h_t+B u_t\right)\right],
+\dot{x}(t)
+=
+-Dx(t)
++A\phi(x(t))
++r\odot(1-x(t))
+-h(t)
++Bu(t),
 $$
 
-where:
-
-- $D$ = intrinsic degradation matrix;
-- $A$ = interdependency / interface matrix;
-- $\phi$ = nonlinear coupling map;
-- $r$ = recovery capacity;
-- $h_t$ = hazard forcing;
-- $B u_t$ = control action;
-- $\Pi$ = projection into physically admissible service bounds.
-
-A normalized resilience score can be computed as
+with baseline nonlinearity
 
 $$
-R=\frac{1}{T}\sum_{t=1}^{T} w^\top x_t,
-\qquad \sum_i w_i=1.
+\phi(x)_i=\tanh(x_i).
 $$
 
-## Language architecture
+### Level B — canonical discrete kernel `PRK-1.0`
 
-| Layer | Languages | Intended role |
-|---|---|---|
-| **Primary research** | Python, SQL, LaTeX, Bash | data, modeling, optimization, reproducibility, documentation |
-| **Scientific numerics** | Julia, R, MATLAB/Octave, Wolfram Language | differential equations, statistics, optimization, symbolic work |
-| **HPC kernels** | C, C++, Fortran, Rust | high-performance numerical kernels, memory control, safe systems computation |
-| **Services / orchestration** | Go, Java, Kotlin, Scala | scalable services, pipelines, distributed or JVM ecosystems |
-| **Scientific interfaces** | TypeScript, JavaScript, HTML, CSS | interactive dashboards, visualization and research communication |
-| **Functional / formal thinking** | Haskell | pure transformations, algebraic modeling, type-driven design |
-| **Apple / field interfaces** | Swift | native scientific/field interfaces on Apple platforms |
+The reference numerical step uses explicit Euler followed by projection:
 
-## Same model, different computational paradigms
+$$
+\tilde{x}_{t+1}
+=
+x_t+\Delta t\,f(x_t,h_t,u_t),
+$$
 
-### Python — reference research implementation
+$$
+\boxed{
+ x_{t+1}=\Pi_{[0,1]^n}(\tilde{x}_{t+1})
+},
+$$
 
-```python
-import numpy as np
+where
 
-def step(x, D, A, r, h, B, u, dt=0.05):
-    phi = np.tanh(x)
-    dx = -D @ x + A @ phi + r * (1.0 - x) - h + B @ u
-    return np.clip(x + dt * dx, 0.0, 1.0)
+$$
+f(x,h,u)=-Dx+A\tanh(x)+r\odot(1-x)-h+Bu.
+$$
+
+The projection is componentwise clipping to \([0,1]\).
+
+### Level C — implementation profiles
+
+| Profile | Meaning |
+|---|---|
+| `FULL_KERNEL` | Implements the complete `PRK-1.0` kernel, including full \(D\), \(A\), recovery, hazard, \(Bu\), nonlinearity and projection |
+| `DIAGONAL_D_KERNEL` | Research variant with \(D=\operatorname{diag}(d)\); not automatically equivalent to `FULL_KERNEL` |
+| `BINDING` | Language interface to a separately validated compiled kernel |
+| `SERVICE_WRAPPER` | Orchestration/service layer; does not independently establish kernel correctness |
+| `VISUALIZATION_CLIENT` | Consumes validated results; does not solve the scientific model |
+| `ADAPTER` | Persistence, specification or workflow integration rather than numerical solving |
+
+The formal definitions are frozen in [`KERNEL_SPECIFICATION.md`](KERNEL_SPECIFICATION.md) and [`SEMANTIC_CONTRACT.md`](SEMANTIC_CONTRACT.md).
+
+## Current conformance status
+
+The authoritative status is machine-readable in [`registry/implementation-registry.json`](registry/implementation-registry.json).
+
+| Language / layer | Intended role | Profile | Current evidence state |
+|---|---|---|---|
+| **Python** | reference scientific implementation | `FULL_KERNEL` | locally conformance-tested against all frozen fixtures |
+| **Go** | service / concurrent numerical implementation | `FULL_KERNEL` | locally conformance-tested against the baseline fixture |
+| **JavaScript** | browser/runtime native implementation | `FULL_KERNEL` | locally conformance-tested against the baseline fixture |
+| Julia | scientific numerics / differential equations | `FULL_KERNEL` target | planned conformance implementation |
+| R | statistical uncertainty workflows | `FULL_KERNEL` target | planned conformance implementation |
+| C++ | HPC kernel | `FULL_KERNEL` target | planned conformance implementation |
+| Rust | memory-safe HPC / WASM candidate | `FULL_KERNEL` target | planned conformance implementation |
+| Fortran | scientific/HPC interoperability | `FULL_KERNEL` target | planned conformance implementation |
+| Java / Kotlin / Scala | JVM services and pipelines | service or native target | planned |
+| TypeScript | typed scientific interface | client / native target | planned |
+| Swift | native field interface | client / native target | planned |
+| Haskell | functional/formal experimentation | research profile | planned |
+| Wolfram Language | symbolic/exploratory mathematics | symbolic adapter | planned |
+| SQL | evidence/state persistence | `ADAPTER` | specified separately from numerical solvers |
+| Bash | reproducible orchestration | `ADAPTER` | specified separately from numerical solvers |
+| LaTeX | canonical mathematical communication | `ADAPTER` | specified separately from numerical solvers |
+
+No row is promoted merely because source code exists. The maturity ladder is:
+
+```text
+PLANNED → LEARNING → IMPLEMENTED → TESTED → VALIDATED → BENCHMARKED
 ```
 
-### Julia — numerical research / differential-equation ecosystem
+## Frozen scientific fixtures
 
-```julia
-function step(x, D, A, r, h, B, u; dt=0.05)
-    dx = -D*x + A*tanh.(x) + r.*(1 .- x) - h + B*u
-    clamp.(x + dt*dx, 0.0, 1.0)
-end
+Three canonical fixtures exercise different model terms:
+
+- [`baseline.json`](fixtures/baseline.json) — non-zero degradation, coupling, recovery, hazard and control;
+- [`controlled-recovery.json`](fixtures/controlled-recovery.json) — stronger recovery and control;
+- [`severe-hazard.json`](fixtures/severe-hazard.json) — materially stronger hazard forcing.
+
+The reference outputs are frozen in [`expected-results.json`](fixtures/expected-results.json).
+
+For implementation \(\ell\), one-step conformance requires
+
+$$
+\left\|x_{t+1}^{(\ell)}-x_{t+1}^{(\mathrm{ref})}\right\|_\infty\le\varepsilon,
+$$
+
+with the baseline tolerance set by the validation standard rather than chosen after seeing results.
+
+## Scientific invariant gates
+
+Every conforming kernel must satisfy at least:
+
+1. **dimension integrity** — matrix/vector dimensions agree with \(n\) and \(m\);
+2. **finite-input integrity** — all numerical inputs are finite;
+3. **state admissibility** — input and projected output states are in \([0,1]^n\);
+4. **recovery admissibility** — \(r_i\ge0\);
+5. **weight admissibility** — \(w_i\ge0\) and \(\sum_iw_i=1\);
+6. **determinism** — identical deterministic inputs produce identical outputs;
+7. **cross-language agreement** — frozen fixtures agree within tolerance;
+8. **directional plausibility tests** — controlled fixture changes are checked for the intended qualitative response where the model assumptions justify monotonicity.
+
+See [`VALIDATION_STANDARD.md`](VALIDATION_STANDARD.md).
+
+## Resilience metrics
+
+The baseline weighted-service statistic is
+
+$$
+R_{\mathrm{AUC}}
+=
+\frac{1}{T}\sum_{t=1}^{T}w^\top x_t,
+\qquad
+w_i\ge0,
+\quad
+\sum_iw_i=1.
+$$
+
+It is deliberately **not treated as a complete definition of resilience**. The research roadmap extends the metric into a vector such as
+
+$$
+\mathcal R=
+\left(
+R_{\mathrm{AUC}},
+R_{\min},
+T_{\mathrm{recovery}},
+P[\text{violation}],
+R_{\mathrm{critical\ service}}
+\right),
+$$
+
+because equal average service can hide materially different minima, recovery times, threshold violations and equity/critical-service outcomes.
+
+## Architecture
+
+```text
+                    CANONICAL MATHEMATICAL MODEL
+                              │
+                    SEMANTIC CONTRACT PRK-1.0
+                              │
+             ┌────────────────┼────────────────┐
+             ▼                ▼                ▼
+          Python             Go          JavaScript
+        reference          native           native
+             │                │                │
+             └────────────────┼────────────────┘
+                              ▼
+                    CONFORMANCE TESTS
+                              │
+                  frozen fixtures + tolerance
+                              │
+               ┌──────────────┴──────────────┐
+               ▼                             ▼
+        numerical validation            future bindings
+               │                             │
+        convergence / HPC                WASM / JVM / R
+               │                             │
+               └──────────────┬──────────────┘
+                              ▼
+                      evidence + provenance
 ```
 
-### R — statistical analysis and uncertainty workflows
+The editable vector version is [`architecture/polyglot-resilience-architecture.svg`](architecture/polyglot-resilience-architecture.svg).
 
-```r
-step_state <- function(x, D, A, r, h, B, u, dt=0.05) {
-  phi <- tanh(x)
-  dx <- -D %*% x + A %*% phi + r * (1 - x) - h + B %*% u
-  pmin(1, pmax(0, x + dt * dx))
-}
+## Repository structure
+
+```text
+polyglot-resilience/
+├── README.md
+├── KERNEL_SPECIFICATION.md
+├── SEMANTIC_CONTRACT.md
+├── MODEL_ASSUMPTIONS.md
+├── VALIDATION_STANDARD.md
+├── BENCHMARK_PROTOCOL.md
+├── architecture/
+├── schemas/
+├── fixtures/
+├── implementations/
+│   ├── python/
+│   ├── go/
+│   └── javascript/
+├── adapters/
+├── registry/
+├── tests/
+└── tools/
 ```
 
-### MATLAB / Octave — engineering numerics
+SQL, Bash and LaTeX are intentionally treated as adapters/specification layers rather than falsely presented as equivalent numerical solvers.
 
-```matlab
-function xn = step_state(x,D,A,r,h,B,u,dt)
-    phi = tanh(x);
-    dx = -D*x + A*phi + r.*(1-x) - h + B*u;
-    xn = min(1,max(0,x + dt*dx));
-end
-```
-
-### C — minimal numerical kernel
-
-```c
-for (int i = 0; i < n; ++i) {
-    double dx = -d[i] * x[i] + r[i] * (1.0 - x[i]) - h[i];
-    for (int j = 0; j < n; ++j) dx += A[i*n+j] * tanh(x[j]);
-    x_next[i] = fmin(1.0, fmax(0.0, x[i] + dt * dx));
-}
-```
-
-### C++ — typed HPC implementation
-
-```cpp
-for (std::size_t i=0; i<n; ++i) {
-    double dx = -d[i]*x[i] + r[i]*(1.0-x[i]) - h[i];
-    for (std::size_t j=0; j<n; ++j) dx += A[i*n+j]*std::tanh(x[j]);
-    xn[i] = std::clamp(x[i] + dt*dx, 0.0, 1.0);
-}
-```
-
-### Rust — memory-safe systems kernel
-
-```rust
-for i in 0..n {
-    let mut dx = -d[i]*x[i] + r[i]*(1.0-x[i]) - h[i];
-    for j in 0..n { dx += a[i*n+j] * x[j].tanh(); }
-    xn[i] = (x[i] + dt*dx).clamp(0.0, 1.0);
-}
-```
-
-### Fortran — scientific/HPC legacy interoperability
-
-```fortran
-do i = 1, n
-  dx = -d(i)*x(i) + r(i)*(1.0d0-x(i)) - h(i)
-  do j = 1, n
-    dx = dx + A(i,j)*tanh(x(j))
-  end do
-  xn(i) = min(1.0d0,max(0.0d0,x(i)+dt*dx))
-end do
-```
-
-### Go — services and concurrent simulation orchestration
-
-```go
-for i := 0; i < n; i++ {
-    dx := -d[i]*x[i] + r[i]*(1-x[i]) - h[i]
-    for j := 0; j < n; j++ { dx += A[i*n+j] * math.Tanh(x[j]) }
-    xn[i] = math.Min(1, math.Max(0, x[i]+dt*dx))
-}
-```
-
-### Java — JVM simulation services
-
-```java
-for (int i=0; i<n; i++) {
-    double dx = -d[i]*x[i] + r[i]*(1.0-x[i]) - h[i];
-    for (int j=0; j<n; j++) dx += A[i][j] * Math.tanh(x[j]);
-    xn[i] = Math.min(1.0, Math.max(0.0, x[i] + dt*dx));
-}
-```
-
-### Kotlin — concise JVM scientific services
-
-```kotlin
-for (i in 0 until n) {
-    var dx = -d[i]*x[i] + r[i]*(1.0-x[i]) - h[i]
-    for (j in 0 until n) dx += a[i][j] * tanh(x[j])
-    xn[i] = (x[i] + dt*dx).coerceIn(0.0, 1.0)
-}
-```
-
-### Scala — functional/JVM data and simulation pipelines
-
-```scala
-val xn = x.indices.map { i =>
-  val coupling = x.indices.map(j => A(i)(j) * math.tanh(x(j))).sum
-  math.max(0.0, math.min(1.0, x(i) + dt * (-d(i)*x(i) + coupling + r(i)*(1-x(i)) - h(i))))
-}
-```
-
-### JavaScript — browser simulation
-
-```javascript
-const xn = x.map((xi, i) => {
-  const coupling = x.reduce((s, xj, j) => s + A[i][j] * Math.tanh(xj), 0);
-  const dx = -d[i]*xi + coupling + r[i]*(1-xi) - h[i];
-  return Math.max(0, Math.min(1, xi + dt*dx));
-});
-```
-
-### TypeScript — typed browser / dashboard model
-
-```typescript
-const clip = (z: number) => Math.max(0, Math.min(1, z));
-const xn = x.map((xi, i) => {
-  const c = x.reduce((s, xj, j) => s + A[i][j] * Math.tanh(xj), 0);
-  return clip(xi + dt * (-d[i]*xi + c + r[i]*(1-xi) - h[i]));
-});
-```
-
-### Swift — native field / mobile computation
-
-```swift
-for i in 0..<n {
-    var dx = -d[i]*x[i] + r[i]*(1.0-x[i]) - h[i]
-    for j in 0..<n { dx += A[i][j] * tanh(x[j]) }
-    xn[i] = min(1.0, max(0.0, x[i] + dt*dx))
-}
-```
-
-### Haskell — functional formulation
-
-```haskell
-clip z = max 0 (min 1 z)
-next xi di ri hi coupling dt =
-  clip (xi + dt * (-di*xi + coupling + ri*(1-xi) - hi))
-```
-
-### Wolfram Language — symbolic and exploratory mathematics
-
-```wolfram
-StepState[x_, D_, A_, r_, h_, B_, u_, dt_:0.05] :=
- Clip[x + dt (-D.x + A.Tanh[x] + r (1 - x) - h + B.u), {0, 1}]
-```
-
-### SQL — persistent simulation state and evidence layers
-
-```sql
-SELECT sector_id,
-       GREATEST(0.0, LEAST(1.0,
-         x + :dt * (-degradation*x + recovery*(1.0-x) - hazard + coupling)
-       )) AS x_next
-FROM infrastructure_state;
-```
-
-### Bash — reproducible orchestration
+## Reference implementation
 
 ```bash
-python model.py --config configs/baseline.yaml \
-  && python validate.py outputs/run.json \
-  && python figures.py outputs/run.json
+python polyglot-resilience/implementations/python/kernel.py \
+  polyglot-resilience/fixtures/baseline.json
 ```
 
-### LaTeX — canonical mathematical specification
+Run structural and scientific checks with:
 
-```tex
-\dot{x}_i=f_i(x_i,\theta_i)+\sum_j g_{ij}(x_i,x_j,G_{ij},\theta_{ij})+B_i u_i+\xi_i.
+```bash
+python polyglot-resilience/tools/validate_structure.py
+python polyglot-resilience/tests/invariants/test_reference_kernel.py
+python polyglot-resilience/tests/conformance/compare_outputs.py
 ```
 
-## Why this matters
+## Benchmarking rule
 
-A resilient scientific workflow should not depend on one language. The goal is to preserve the **same model semantics** while selecting languages according to numerical performance, statistical capability, deployment constraints, interface requirements and reproducibility.
+Performance is measured **only after correctness and conformance pass**:
+
+```text
+scientific specification
+        ↓
+implementation correctness
+        ↓
+cross-language conformance
+        ↓
+numerical convergence
+        ↓
+benchmarking
+```
+
+Benchmark dimensions include runtime, throughput, memory, initialization cost and scaling with state dimension \(n\) and horizon \(T\). No language is called faster on the basis of an unvalidated implementation. See [`BENCHMARK_PROTOCOL.md`](BENCHMARK_PROTOCOL.md).
+
+## Reproducibility and provenance
+
+A validated run should record at minimum:
+
+```text
+SPEC_VERSION
+IMPLEMENTATION_ID
+IMPLEMENTATION_VERSION
+LANGUAGE_VERSION
+COMPILER / RUNTIME
+COMPILER_FLAGS where applicable
+INPUT_SHA256
+OUTPUT_SHA256
+GIT_COMMIT
+PLATFORM
+TOLERANCE_PROFILE
+```
+
+The goal is to distinguish **same scientific experiment** from merely **similar source code**.
+
+## Scientific limitations
+
+- `PRK-1.0` is a research kernel, not an empirically validated universal infrastructure law.
+- Projection to \([0,1]^n\) enforces service bounds numerically; it does not itself prove physical realism.
+- Explicit Euler introduces discretization error and requires convergence/stability analysis.
+- Cross-language agreement can reveal implementation inconsistency but cannot prove the scientific model is correct.
+- Monotonicity tests are valid only under clearly stated assumptions; nonlinear interdependency can invalidate naive directional expectations.
+- The scalar weighted-service score is incomplete for resilience, equity and critical-service analysis.
 
 ## Expansion rule
 
-Additional languages should only be added when they contribute a distinct computational paradigm, platform or scientific capability. The objective is **coverage with meaning**, not artificial badge count.
+A new language is added only when it contributes a distinct scientific, numerical, interoperability, deployment or formal-method capability **and** has a declared profile and evidence state. The objective is coverage with meaning, not artificial badge count.
