@@ -8,7 +8,8 @@ Its purpose is to ensure that future profile edits are based on the user's **exa
 **Architecture:** `DD-PROFILE-ARCH-001`  
 **Request protocol:** `DD-PROFILE-REQUEST-001`  
 **Release gate:** `DD-PROFILE-RELEASE-001`  
-**Page composition:** `DD-PROFILE-COMPOSITION-V1`
+**Page composition:** `DD-PROFILE-COMPOSITION-V1`  
+**Current public visual generation:** `V5`
 
 ## Governing principle
 
@@ -57,15 +58,24 @@ The comparison with AI is therefore a **transferability ambition**, not an equiv
 | [`PROFILE_RELEASE_GATE.md`](PROFILE_RELEASE_GATE.md) | Public release criteria for credentials, research claims, visuals and links |
 | [`PROFILE_PUBLIC_NARRATIVE.md`](PROFILE_PUBLIC_NARRATIVE.md) | Draft short, medium and research-oriented public bios |
 | [`PUBLIC_PROFILE_TRAJECTORY.md`](PUBLIC_PROFILE_TRAJECTORY.md) | Strongest public-safe trajectory currently releasable without unresolved title substitution |
-| [`MATHEMATICS_ART_IDENTITY_V1.md`](MATHEMATICS_ART_IDENTITY_V1.md) | Semantic/scientific contract for the green mathematical-art identity and its domain-linked equations |
-| [`PROFILE_PAGE_COMPOSITION_V1.md`](PROFILE_PAGE_COMPOSITION_V1.md) | Information hierarchy, visual-density, V4-master, disclosure, navigation and verification-placement rules for the public profile |
+| [`MATHEMATICS_ART_IDENTITY_V1.md`](MATHEMATICS_ART_IDENTITY_V1.md) | Semantic/scientific contract for the green mathematical-art identity and domain-linked mathematics |
+| [`PROFILE_PAGE_COMPOSITION_V1.md`](PROFILE_PAGE_COMPOSITION_V1.md) | Information hierarchy, visual-density, disclosure, navigation and verification-placement rules for the public profile |
 | [`REQUEST_PROTOCOL.md`](REQUEST_PROTOCOL.md) | Exact protocol for every future profile-improvement request |
 | [`requests/README.md`](requests/README.md) | Request ledger and naming convention |
-| [`assets/engineering-to-mathematics-resilience-trajectory.svg`](assets/engineering-to-mathematics-resilience-trajectory.svg) | Canonical public mathematics-art trajectory |
+| [`assets/engineering-to-mathematics-resilience-trajectory-v5.svg`](assets/engineering-to-mathematics-resilience-trajectory-v5.svg) | Current public V5 professional trajectory |
 
-The root README continues to use the stable public header path `assets/math-art/profile-header-v4.svg`. Under `DD-PROFILE-REQ-20260823-003`, the internal composition at that path was upgraded to the mathematics-art design while the prior master was preserved under `assets/math-art/archive/` for provenance and rollback.
+The root README currently uses `assets/math-art/profile-header-v5.svg` as the public identity surface and `profile-improvement/assets/engineering-to-mathematics-resilience-trajectory-v5.svg` as the professional-trajectory surface.
 
-Under `DD-PROFILE-REQ-20260823-004`, the public page composition is governed as a research front door rather than an unfiltered technical report. Adaptive V4 technical masters are used whenever available, workflow verification is separated from identity, and deep formula/repository material remains available through disclosure sections.
+The six current public technical masters are:
+
+- `assets/math-art/profile-mathematics-universe-v5.svg`;
+- `assets/math-art/research-operating-system-v5.svg`;
+- `assets/math-art/differential-geometry-foundations-v5.svg`;
+- `assets/math-art/formula-evidence-lattice-v5.svg`;
+- `assets/math-art/evidence-maturity-map-v5.svg`;
+- `assets/math-art/computational-stack-v5.svg`.
+
+V3/V4 artifacts remain provenance/history surfaces where retained, but they are not the current primary public binding.
 
 ## Evidence states
 
@@ -85,10 +95,11 @@ Under `DD-PROFILE-REQ-20260823-004`, the public page composition is governed as 
 - ongoing MSE Sustainable Engineering and MS Financial Engineering status;
 - implemented research programmes already supported by repositories;
 - discrete/differential geometry and cross-sector resilience as explicit research ambitions;
-- governed mathematics-art header and trajectory SVGs;
-- V4 adaptive mathematics/research/computing/evidence visuals;
+- governed V5 mathematics-art header and trajectory;
+- V5 mathematics/research/computing/evidence visuals;
 - professional page hierarchy and compact navigation;
-- public-safe narrative.
+- public-safe narrative;
+- aligned public portfolio website under `https://dossiya-se.github.io/` with its browser model retained as a specialist research demonstrator.
 
 ### Blocked pending credential reconciliation
 
@@ -106,6 +117,20 @@ mathematical analogy != validated transfer
 visual beauty != scientific evidence
 software verification != empirical validation
 ```
+
+## Cross-repository presentation rule
+
+The profile repository and portfolio website have different jobs:
+
+```text
+Dossiya-SE profile repository
+= identity + navigation + profile governance
+
+dossiya-se.github.io
+= interactive public research portfolio + executable demonstrators
+```
+
+The website may adapt the profile visual language to web interaction rather than duplicate every profile SVG byte-for-byte. Scientific/evidence semantics must remain compatible even when presentation differs.
 
 ## Future-use instruction
 
