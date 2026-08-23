@@ -4,6 +4,11 @@ This directory is the controlled workspace for improving the public professional
 
 Its purpose is to ensure that future profile edits are based on the user's **exact request**, preserve the distinction between verified credentials and narrative interpretation, and remain consistent across GitHub, the research portfolio, CV/bio text, research descriptions, diagrams, and future public-facing materials.
 
+**Workspace status:** `ACTIVE_GOVERNING_PROFILE_WORKSPACE`  
+**Architecture:** `DD-PROFILE-ARCH-001`  
+**Request protocol:** `DD-PROFILE-REQUEST-001`  
+**Release gate:** `DD-PROFILE-RELEASE-001`
+
 ## Governing principle
 
 ```text
@@ -47,7 +52,10 @@ The comparison with AI is therefore a **transferability ambition**, not an equiv
 |---|---|
 | [`PROFILE_MASTER_SPEC.md`](PROFILE_MASTER_SPEC.md) | Canonical professional/research identity and narrative boundaries |
 | [`PROFILE_CREDENTIALS_REGISTRY.json`](PROFILE_CREDENTIALS_REGISTRY.json) | Machine-readable credential/status/evidence registry |
-| [`PROFILE_PUBLIC_NARRATIVE.md`](PROFILE_PUBLIC_NARRATIVE.md) | Short, medium and research-oriented public bios |
+| [`PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md`](PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md) | Exact-title, translation/equivalence and completion-status controls |
+| [`PROFILE_RELEASE_GATE.md`](PROFILE_RELEASE_GATE.md) | Public release criteria for credentials, research claims, visuals and links |
+| [`PROFILE_PUBLIC_NARRATIVE.md`](PROFILE_PUBLIC_NARRATIVE.md) | Draft short, medium and research-oriented public bios |
+| [`PUBLIC_PROFILE_TRAJECTORY.md`](PUBLIC_PROFILE_TRAJECTORY.md) | Strongest public-safe trajectory currently releasable without unresolved title substitution |
 | [`REQUEST_PROTOCOL.md`](REQUEST_PROTOCOL.md) | Exact protocol for every future profile-improvement request |
 | [`requests/README.md`](requests/README.md) | Request ledger and naming convention |
 | [`assets/engineering-to-mathematics-resilience-trajectory.svg`](assets/engineering-to-mathematics-resilience-trajectory.svg) | Canonical visual trajectory |
@@ -60,6 +68,23 @@ The comparison with AI is therefore a **transferability ambition**, not an equiv
 - `ONGOING` — programme is currently in progress; never present as completed.
 - `RESEARCH_AMBITION` — future research direction, not an achieved result.
 - `IMPLEMENTED_RESEARCH` — supported by an existing repository/project.
+
+## Public-release state
+
+### Releasable now
+
+- cumulative engineering → energy → sustainability → finance → mathematics trajectory;
+- broad `electrical-engineering foundation` and `renewable-energy/energy-systems background` language;
+- ongoing MSE Sustainable Engineering and MS Financial Engineering status;
+- implemented research programmes already supported by repositories;
+- discrete/differential geometry and cross-sector resilience as explicit research ambitions;
+- governed trajectory SVG and public-safe narrative.
+
+### Blocked pending credential reconciliation
+
+- definitive publication of the three technical electrical credentials under translated English titles;
+- silent replacement of `Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques` by `Bachelor of Physical Science in Renewable Energy and Energy Systems`;
+- any completed-degree language for ongoing master's programmes.
 
 ## Non-conflation rules
 

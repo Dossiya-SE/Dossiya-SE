@@ -1,0 +1,36 @@
+name: profile-governance
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "profile-improvement/**"
+      - ".github/workflows/profile-governance.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+      - "profile-improvement/**"
+      - ".github/workflows/profile-governance.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile validator
+        run: python -m py_compile profile-improvement/validate_profile.py
+
+      - name: Validate governed profile architecture
+        run: python profile-improvement/validate_profile.py
