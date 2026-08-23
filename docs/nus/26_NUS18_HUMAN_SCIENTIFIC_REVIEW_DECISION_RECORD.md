@@ -3,67 +3,48 @@
 ## Status
 
 ```text
-PENDING_EXPLICIT_HUMAN_SCIENTIFIC_APPROVAL
+APPROVE_AS_ADJUDICATED
+HUMAN_APPROVED_FOR_READER_EXACTNESS_AND_GEOMETRY
 ```
 
-This gate prevents a technically valid Phase-2 package from being silently promoted to geometry/write authorization.
+Approval was explicitly provided by the human reviewer on 2026-08-24.
 
-## Already established
+## Approved statement
 
-```text
-Identity verified                      yes
-Whole-PDF discovery                    PASS
-Phase-2 package manifest               verified
-Physical objects reconciled            30
-Static Phase-2 controls                19/19 PASS
-Generic Engine V1.0.2 / T049           frozen
-Zotero annotations                     0
-Zotero mutation                        false
-PDF mutation                           false
-```
+> APPROVE_AS_ADJUDICATED — I approve NUS-18 Phase-2 Scientific Adjudication V1 for progression to Reader-token exactness and all-surface geometry. I accept the 30-object surface reconciliation, the provisional 25-record evidence set, engineering-output nature `energy`, environmental-only sustainability outcomes, `InternallyValidated` classification, two explicit P→S couplings, distinct energy-optimal and emergy-optimal decisions, and preservation of native page labels. The count of 25 remains provisional until exact geometry and final redundancy review.
 
 ## HR18-001 — Physical-object reconciliation
-
-Current scientific inventory:
 
 ```text
 10 tables + 9 figures + 11 numbered equations = 30 objects
 9 INCLUDE / 19 REDUNDANT / 2 EXCLUDE
 ```
 
-Decision required: accept, revise, or reject the scientific dispositions before geometry is treated as final.
+Human decision: `APPROVED_AS_ADJUDICATED`
 
-Human decision: `PENDING`
-
-## HR18-002 — Proposed evidence set is provisional
-
-Current set:
+## HR18-002 — Proposed evidence set
 
 ```text
-25 proposed nonredundant annotations
+25 proposed nonredundant records
 16 text
 9 regions
 ```
 
-This is evidence-derived, not preset. Exact Reader wording, region geometry, visual QA, and final redundancy control may still reduce/change the set.
+Human decision: `APPROVED_AS_PROVISIONAL`
 
-Human decision: `PENDING`
+The count remains provisional until Reader exactness, geometry, visual QA, and final redundancy review are complete.
 
-## HR18-003 — Engineering-output nature `energy`
-
-NUS-18 contains focal EUI/whole-building energy outputs. Engine V1.0.2 now supports:
+## HR18-003 — Engineering-output nature
 
 ```text
-Engineering output here is energy : [exact author wording]
+energy
 ```
 
-Do not coerce these outputs to `thermal` because the reported EUI includes lighting, equipment, conditioning, and other loads.
+Human decision: `APPROVED`
 
-Human decision: `PENDING`
+Do not coerce whole-building EUI/operational energy to `thermal`.
 
 ## HR18-004 — Sustainability-domain ruling
-
-Current ruling:
 
 ```text
 environmental = supported
@@ -72,13 +53,11 @@ social        = no focal quantified outcome found
 integrated    = not established
 ```
 
-`Integrated energy-emergy` describes methodological coupling and does not itself establish integrated environmental-economic-social sustainability.
+Human decision: `APPROVED`
 
-Human decision: `PENDING`
+`Integrated energy-emergy` remains methodological coupling, not integrated sustainability.
 
 ## HR18-005 — Validation ruling
-
-Current classification:
 
 ```text
 InternallyValidated
@@ -86,99 +65,87 @@ InternallyValidated
 
 Target: focal emergy metamodel.
 
-Basis:
-
-- analytical-versus-predicted comparison;
-- Fig. 8;
-- residual standard error / F-value;
-- regression significance tests.
+Human decision: `APPROVED`
 
 No external validation is claimed.
 
-Human decision: `PENDING`
-
 ## HR18-006 — Explicit engineering→sustainability coupling
 
-The transformation ledger identifies two direct P→S couplings:
+Approved direct P→S couplings:
 
 ```text
-operational energy contribution → total building emergy (Eq. 1b architecture)
-operational energy use → operational emergy (Eq. 3 architecture)
+operational energy contribution → total building emergy
+operational energy use → operational emergy
 ```
 
-Other transformations remain `PARALLEL_ONLY` unless an engineering output is actually consumed.
+Human decision: `APPROVED`
 
-Human decision: `PENDING`
-
-## HR18-007 — Energy-optimal vs emergy-optimal decisions
-
-The focal paper reports distinct optimization decisions for:
+## HR18-007 — Distinct decision scopes
 
 ```text
 operational-energy optimum
 emergy optimum
 ```
 
-These must remain separate decision scopes and must not be collapsed into a single universal optimum.
+Human decision: `APPROVED`
 
-Human decision: `PENDING`
+These must not be collapsed into a single universal optimum.
 
 ## HR18-008 — Page labels
 
-The Reader-extracted native labels contain the observed transition:
+The native Reader label transition:
 
 ```text
 8 → 97
 ```
 
-The labels remain source metadata and must be persisted exactly. They must not be silently normalized to sequential display numbers.
+must be preserved exactly.
 
-Human decision: `PENDING`
+Human decision: `APPROVED`
 
-## HR18-009 — Exact author wording and geometry are still open
+## HR18-009 — Exact author wording and geometry
 
-Line-joined Phase-2 strings are scientific-adjudication evidence only. They are not yet the final Zotero comment payload.
-
-Before schema/write authorization:
+These remain the next technical gates:
 
 ```text
 Reader token exactness
 → atomic exact wording
 → exact highlight/region geometry
 → visual QA
+→ final redundancy review
 ```
 
-must be proven.
+Human decision: `AUTHORIZED_TO_PROCEED_TO_THIS_GATE`
 
-Human decision: `PENDING`
-
-## Approval vocabulary
-
-A human reviewer must explicitly choose one of:
+## Approval artifact
 
 ```text
-APPROVE_AS_ADJUDICATED
-APPROVE_WITH_RECORDED_EXCEPTIONS
-REVISE_BEFORE_APPROVAL
-REJECT_ADJUDICATION
+NUS18_HUMAN_SCIENTIFIC_APPROVAL_V1.json
+SHA-256: de5f1fbbaf07f9cf21e1f396f36d29d505dde89b4012088b188ff6501ed518d4
 ```
 
-Automated tooling must not infer approval from package PASS, Engine V1.0.2 freeze, or the existence of 25 proposed records.
+## Authorization boundary
 
-## State after approval
+This approval changes:
 
-Only after explicit approval may NUS-18 advance to:
+```text
+H = 1
+```
+
+It does **not** change:
+
+```text
+geometry_proven = false
+schema_pass = false
+writer_dryrun_pass = false
+auditor_dryrun_pass = false
+mutation_authorized = false
+```
+
+The next allowed state is:
 
 ```text
 READER_EXACTNESS_AND_ALL_SURFACE_GEOMETRY
-→ FINAL_PROPOSED_SCHEMA
-→ WRITER_DRYRUN
-→ INDEPENDENT_AUDITOR_DRYRUN
-→ MUTATION_AUTHORIZATION
 ```
 
-Until then:
-
-```text
-mutation_authorized = false
-```
+No Zotero annotation creation, deletion, comment edit, geometry mutation, or PDF mutation is authorized by this approval.
