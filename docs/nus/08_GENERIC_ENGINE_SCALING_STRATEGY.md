@@ -121,6 +121,65 @@ scientifically correct result
 + no bespoke pipeline redesign
 ```
 
+## Comment-generation schema for generalization
+
+The generic engine now uses:
+
+```text
+NUS_COMMENT_GENERATION_RULE_V3
+```
+
+for new papers unless a later demonstrated failure produces a controlled successor.
+
+Nature is exposed visibly only for output roles:
+
+```text
+Engineering output here is [engineering nature] : [exact author wording]
+Sustainability output here is [environmental/economic/social/integrated] : [exact author wording]
+```
+
+The other seven roles retain concise role-only labels.
+
+This is important for scaling because it keeps human-facing Zotero comments informative without multiplying visible ontology complexity.
+
+The nature field remains fully available in the external ledger even when it is not visible for a non-output role.
+
+## Output-nature/metric separation
+
+Generic external metadata should preserve:
+
+```text
+Role → Nature → Metric → Result
+```
+
+Examples:
+
+```text
+ENGINEERING_OUTPUT → MECHANICAL → COMPRESSIVE_STRENGTH → 39.71 MPa
+SUSTAINABLE_OUTCOME → ENVIRONMENTAL → EMBODIED_CARBON → focal result
+```
+
+Nature is not evidence state. Evidence state, provenance, origin, method, unit, alternative and geometry remain separate machine fields.
+
+## Existing-calibration migration rule
+
+NUS-48 is now declared to contain 33 native annotations under its earlier authorized schema.
+
+V3 can govern NUS-18 and later papers without requiring NUS-48 retrofit.
+
+If NUS-48 is ever migrated, that migration is a separate controlled operation:
+
+```text
+schema revision
+→ migration regressions
+→ explicit authorization
+→ transactional comment-only migration
+→ zero-delta rerun
+→ independent audit
+```
+
+This prevents schema evolution from destabilizing already-frozen calibration evidence.
+
 ## Efficiency metrics
 
 For paper `i`, track at least:
@@ -185,3 +244,5 @@ new observed failure
 ```
 
 Implementation preference alone is insufficient.
+
+The V3 visible-comment schema is a controlled presentation-schema refinement, not a reopening of preprocessing logic.
