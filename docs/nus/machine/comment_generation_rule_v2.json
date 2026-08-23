@@ -1,0 +1,57 @@
+{
+  "schema": "NUS_COMMENT_GENERATION_RULE_V2",
+  "status": "FROZEN",
+  "general_pattern": "ROLE here is SCIENTIFIC NATURE : EXACT AUTHOR WORDING",
+  "fallback_pattern": "ROLE: EXACT AUTHOR WORDING",
+  "nature_guard": "Include scientific nature only when directly defensible from focal evidence; otherwise use fallback role-only form.",
+  "exactness": {
+    "text_after_colon": "AUTHOR_VERBATIM",
+    "paraphrase_allowed": false,
+    "grammar_correction_allowed": false,
+    "unit_normalization_allowed": false,
+    "silent_reconciliation_allowed": false
+  },
+  "roles": {
+    "ENGINEERING_OUTPUT": {
+      "visible_role": "Engineering output",
+      "nature_examples": ["mechanical", "physical", "durability", "thermal", "fresh-state", "transport", "structural", "damage/failure"]
+    },
+    "SUSTAINABLE_OUTCOME": {
+      "visible_role": "Sustainability output",
+      "nature_examples": ["environmental", "economic", "social", "integrated"],
+      "guard": "integrated requires explicit focal integration; co-occurrence is insufficient"
+    },
+    "ENGINEERING_METHOD": {
+      "visible_role": "Engineering method",
+      "nature_examples": ["experimental testing", "characterization", "statistical modelling", "optimization", "numerical modelling"]
+    },
+    "SUSTAINABILITY_METHOD": {
+      "visible_role": "Sustainability method",
+      "nature_examples": ["embodied carbon assessment", "cost assessment", "LCA", "life-cycle cost", "eco-efficiency", "multi-criteria assessment"]
+    },
+    "SUSTAINABILITY_TRANSFORMATION": {
+      "visible_role": "Sustainability transformation",
+      "nature_examples": ["environmental", "economic", "social", "integrated", "engineering–sustainability coupled"]
+    },
+    "INPUT": {
+      "visible_role": "Input",
+      "nature_examples": ["material", "mixture proportion", "energy", "transport", "emission factor", "cost factor", "operational parameter"]
+    },
+    "INTERVENTION": {
+      "visible_role": "Intervention",
+      "nature_examples": ["material substitution", "material addition", "design modification", "process modification", "treatment"],
+      "alternate_visible_role": "Design choice"
+    },
+    "DECISION": {
+      "visible_role": "Decision",
+      "nature_examples": ["optimum mixture selection", "optimum selection", "recommended alternative", "practical recommendation", "practical application", "ranking", "threshold decision"]
+    },
+    "PURPOSE": {
+      "visible_role": "Purpose",
+      "nature_examples": ["engineering", "environmental", "economic", "social", "integrated", "engineering and sustainability assessment", "engineering+sustainability"]
+    }
+  },
+  "zotero_annotation_tags": [],
+  "human_approval_implied": false,
+  "mutation_authorized": false
+}
