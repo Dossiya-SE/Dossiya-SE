@@ -1,0 +1,114 @@
+{
+  "schema": "NUS_COMMENT_GENERATION_RULE_V3",
+  "status": "FROZEN",
+  "effective_scope": "GENERIC_NUS_EVIDENCE_ENGINE",
+  "roles_unchanged": [
+    "PURPOSE",
+    "INTERVENTION",
+    "INPUT",
+    "ENGINEERING_METHOD",
+    "ENGINEERING_OUTPUT",
+    "SUSTAINABILITY_TRANSFORMATION",
+    "SUSTAINABILITY_METHOD",
+    "SUSTAINABLE_OUTCOME",
+    "DECISION"
+  ],
+  "nature_visible_only_for": [
+    "ENGINEERING_OUTPUT",
+    "SUSTAINABLE_OUTCOME"
+  ],
+  "simple_role_patterns": {
+    "PURPOSE": "Purpose : EXACT AUTHOR WORDING",
+    "INTERVENTION": "Intervention : EXACT AUTHOR WORDING",
+    "INPUT": "Input : EXACT AUTHOR WORDING",
+    "ENGINEERING_METHOD": "Engineering method : EXACT AUTHOR WORDING",
+    "SUSTAINABILITY_TRANSFORMATION": "Sustainability transformation : EXACT AUTHOR WORDING",
+    "SUSTAINABILITY_METHOD": "Sustainability method : EXACT AUTHOR WORDING",
+    "DECISION": "Decision : EXACT AUTHOR WORDING"
+  },
+  "output_patterns": {
+    "ENGINEERING_OUTPUT": {
+      "preferred": "Engineering output here is {nature} : EXACT AUTHOR WORDING",
+      "fallback": "Engineering output : EXACT AUTHOR WORDING",
+      "nature_required_to_use_preferred": true,
+      "controlled_natures": [
+        "mechanical",
+        "fresh-state",
+        "physical",
+        "durability",
+        "transport/permeability",
+        "thermal",
+        "structural/functional",
+        "fracture/damage",
+        "time-dependent",
+        "constructability/production"
+      ]
+    },
+    "SUSTAINABLE_OUTCOME": {
+      "visible_role": "Sustainability output",
+      "preferred": "Sustainability output here is {nature} : EXACT AUTHOR WORDING",
+      "fallback": "Sustainability output : EXACT AUTHOR WORDING",
+      "nature_required_to_use_preferred": true,
+      "controlled_natures": [
+        "environmental",
+        "economic",
+        "social",
+        "integrated"
+      ],
+      "integrated_guard": "ENV + ECO + SOC does not imply integrated; explicit focal integration is required."
+    }
+  },
+  "nature_metric_result_hierarchy": "Role -> Nature -> Metric -> Result",
+  "nature_is_not_evidence_state": true,
+  "observed_output_guard": "Mentioned, hypothesized, expected, or discussion-only performance is not an output unless focal evidence actually reports/evaluates it as an output.",
+  "exactness": {
+    "text_after_colon": "AUTHOR_VERBATIM",
+    "paraphrase_allowed": false,
+    "grammar_correction_allowed": false,
+    "terminology_substitution_allowed": false,
+    "unit_normalization_allowed": false,
+    "silent_reconciliation_allowed": false,
+    "reviewer_explanation_inside_author_wording_allowed": false
+  },
+  "colors_unchanged": {
+    "PURPOSE": "#6b7280",
+    "INTERVENTION": "#2ea8e5",
+    "INPUT": "#0072b2",
+    "ENGINEERING_METHOD": "#a28ae5",
+    "ENGINEERING_OUTPUT": "#5fb236",
+    "SUSTAINABILITY_TRANSFORMATION": "#f19837",
+    "SUSTAINABILITY_METHOD": "#e56eee",
+    "SUSTAINABLE_OUTCOME": "#ff6666",
+    "DECISION": "#ffd400"
+  },
+  "zotero_annotation_tags": [],
+  "annotation_count_rule": "The new wording changes description only and must not increase evidence quantity or preset N_final.",
+  "external_metadata_fields": [
+    "role",
+    "nature",
+    "metric",
+    "method",
+    "result",
+    "unit",
+    "alternative",
+    "origin",
+    "evidence_state",
+    "provenance",
+    "ontology_code",
+    "annotation_key",
+    "page",
+    "geometry"
+  ],
+  "nus48_existing_annotation_migration": {
+    "declared_existing_native_annotation_count": 33,
+    "automatic_retrofit_authorized": false,
+    "manual_comment_edit_allowed": false,
+    "required_sequence_if_retrofitting": [
+      "schema_revision",
+      "regression_validation",
+      "explicit_authorization",
+      "controlled_comment_only_migration",
+      "independent_audit"
+    ]
+  }
+}
