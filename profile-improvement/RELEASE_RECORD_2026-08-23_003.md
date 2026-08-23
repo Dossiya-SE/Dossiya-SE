@@ -2,7 +2,8 @@
 
 request_id: `DD-PROFILE-REQ-20260823-003`
 release_candidate: `mathematics-art-identity-v1`
-status: `RELEASE_CANDIDATE`
+status: `VERIFIED_RELEASE_CANDIDATE`
+pr: `#19`
 
 ## Objective
 
@@ -61,9 +62,13 @@ adaptive_dark_mode: `YES`
 - cross-sector transferability remains a research ambition, not an established universal theory;
 - geometry/art does not strengthen evidence claims.
 
-## Validation state before hosted CI
+## Validation evidence
 
 svg_xml_parse_local_design_stage: `PASS`
-profile_governance: `PENDING_HOSTED_CI`
-mathematical_presentation_audit: `PENDING_HOSTED_CI`
-release_status: `RELEASE_CANDIDATE`
+profile_governance: `PASS` — run `32624876819`
+mathematical_presentation_audit: `PASS` — run `32624876922`
+adaptive_visual_audit: `PASS` — run `32624876840`
+
+The first adaptive-visual run exposed a contract mismatch (`--fg` foreground token absent). The artwork was corrected to conform to the existing V4 adaptive-visual standard rather than weakening the audit. The corrected head passed all three gates.
+
+release_status: `VERIFIED_PENDING_FINAL_HEAD_CI_AND_MERGE`
