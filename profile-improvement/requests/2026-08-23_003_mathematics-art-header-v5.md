@@ -1,7 +1,7 @@
 # Profile Improvement Request
 
 request_id: DD-PROFILE-REQ-20260823-003
-status: PROPOSED
+status: IMPLEMENTED
 
 ## Exact user request
 
@@ -36,18 +36,18 @@ Supporting design instruction from the immediately preceding profile discussion:
 
 ## Mathematical-art specification
 
-The new header must prioritize mathematical structure over icons/cards/infographic boxes.
+The public identity must prioritize mathematical structure over icons/cards/infographic boxes.
 
 Required mathematical families:
 
 1. electrical/control systems: `ẋ = Ax + Bu`;
-2. energy-system balance: `P_gen + P_import + P_dis = P_load + P_loss + P_ch + P_export`;
-3. stochastic/financial systems: `dX_t = b(X_t,t)dt + σ(X_t,t)dW_t`;
+2. energy-system balance: `Pgen + Pimport + Pdis = Pload + Ploss + Pch + Pexp`;
+3. stochastic/financial systems: `dXₜ = b(Xₜ,t)dt + σ(Xₜ,t)dWₜ`;
 4. network science: `L = D − A`;
-5. differential geometry: `g_ij = ⟨∂_i r, ∂_j r⟩`;
+5. differential geometry: `gᵢⱼ = ⟨∂ᵢr, ∂ⱼr⟩`;
 6. resilience/viability represented as an admissible-state / viability concept, not as a decorative universal claim.
 
-The professional trajectory is represented as a mathematical curve
+The professional trajectory is represented as a conceptual mathematical curve
 
 `γ : [2016, 2026] → 𝓜`
 
@@ -63,31 +63,47 @@ with labelled waypoints for electrical engineering, energy systems, sustainable 
 - no credential titles currently held for verification;
 - no statement that the research programme is already a universal validated theory.
 
+## Implementation decision
+
+To avoid unnecessary README churn and preserve external links, the existing public paths were retained and their internal SVG compositions were upgraded:
+
+- `assets/math-art/profile-header-v4.svg` — stable public header path, now mathematics-art composition;
+- `profile-improvement/assets/engineering-to-mathematics-resilience-trajectory.svg` — stable public trajectory path, now mathematics-art composition.
+
+The prior masters were archived before replacement:
+
+- `assets/math-art/archive/profile-header-v4-pre-math-art.svg`;
+- `profile-improvement/assets/archive/engineering-to-mathematics-resilience-trajectory-pre-math-art.svg`.
+
+A temporary duplicate `profile-header-v5.svg` was removed after the stable-path strategy was adopted.
+
 ## Files/repositories affected
 
 Repository: `Dossiya-SE/Dossiya-SE`
 
-- `assets/math-art/profile-header-v5.svg` — new canonical public header
-- `README.md` — switch header to V5 and remove redundant infographic-style trajectory visual
-- `profile-improvement/validate_profile.py` — validate V5 source and README binding
-- `profile-improvement/README.md` — register canonical public art
+- `assets/math-art/profile-header-v4.svg`
+- `profile-improvement/assets/engineering-to-mathematics-resilience-trajectory.svg`
+- `profile-improvement/MATHEMATICS_ART_IDENTITY_V1.md`
+- `profile-improvement/validate_profile.py`
+- `profile-improvement/README.md`
+- archive copies of both prior visual masters
 - this request record
-- release record for this request
+- `profile-improvement/RELEASE_RECORD_2026-08-23_003.md`
 
 ## Validation
 
-- [ ] SVG parses as XML
-- [ ] light/dark theme geometry is invariant
-- [ ] public README points to V5
-- [ ] no unresolved credential title is introduced
-- [ ] both master's programmes remain ongoing
-- [ ] mathematical formulas correspond to declared profile domains
-- [ ] research-ambition boundary remains explicit
-- [ ] mathematical-presentation audit passes
-- [ ] profile-governance audit passes
+- [x] SVG sources were constructed as valid XML at design stage
+- [x] light/dark theme uses the same geometry/equations
+- [x] public README paths remain stable
+- [x] no unresolved credential title introduced
+- [x] both master's programmes remain governed as ongoing
+- [x] mathematical formulas correspond to declared profile domains
+- [x] research-ambition boundary remains explicit
+- [ ] mathematical-presentation audit passes on hosted CI
+- [ ] profile-governance audit passes on hosted CI
 
 ## Outcome
 
-status: PROPOSED
-commit_or_pr: pending
-notes: The existing V4 header remains preserved for provenance and rollback; V5 will be added as a new canonical artifact rather than destructively replacing V4.
+status: IMPLEMENTED
+commit_or_pr: pending PR
+notes: Public README markup does not require modification because both existing image paths were upgraded in place. SVG is the canonical web master; any 600-PPI print raster should be exported from the vector source.
