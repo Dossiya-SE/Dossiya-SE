@@ -1,7 +1,7 @@
 # Profile Improvement Request
 
 request_id: DD-PROFILE-REQ-20260823-003
-status: IMPLEMENTED
+status: VERIFIED
 
 ## Exact user request
 
@@ -99,11 +99,12 @@ Repository: `Dossiya-SE/Dossiya-SE`
 - [x] both master's programmes remain governed as ongoing
 - [x] mathematical formulas correspond to declared profile domains
 - [x] research-ambition boundary remains explicit
-- [ ] mathematical-presentation audit passes on hosted CI
-- [ ] profile-governance audit passes on hosted CI
+- [x] mathematical-presentation audit passes — run `32624876922`
+- [x] profile-governance audit passes — run `32624876819`
+- [x] adaptive-visual audit passes after conforming the new header to the required `--fg` token contract — run `32624876840`
 
 ## Outcome
 
-status: IMPLEMENTED
-commit_or_pr: pending PR
-notes: Public README markup does not require modification because both existing image paths were upgraded in place. SVG is the canonical web master; any 600-PPI print raster should be exported from the vector source.
+status: VERIFIED
+commit_or_pr: PR #19
+notes: Public README markup does not require modification because both existing image paths were upgraded in place. SVG is the canonical web master; any 600-PPI print raster should be exported from the vector source. A final hosted CI pass is required on the documentation-synchronized branch head before merge.
