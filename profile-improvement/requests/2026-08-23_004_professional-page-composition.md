@@ -1,7 +1,7 @@
 # Profile Improvement Request
 
 request_id: DD-PROFILE-REQ-20260823-004
-status: IMPLEMENTED
+status: VERIFIED
 
 ## Exact user request
 
@@ -22,7 +22,7 @@ Public GitHub profile page composition, visual hierarchy, SVG-version consistenc
 
 ## Professional composition decision
 
-The public page should use this information hierarchy:
+The public page uses this information hierarchy:
 
 1. mathematics-art identity header;
 2. compact professional links and navigation;
@@ -40,7 +40,7 @@ The public page should use this information hierarchy:
 
 ## Visual-version rule
 
-The public README must reference adaptive V4 masters whenever a V4 master exists:
+The public README references adaptive V4 masters whenever a V4 master exists:
 
 - `profile-mathematics-universe-v4.svg`;
 - `research-operating-system-v4.svg`;
@@ -77,14 +77,23 @@ Green remains the primary identity palette in the hero/trajectory. Technical V4 
 - `profile-improvement/PROFILE_PAGE_COMPOSITION_V1.md`
 - `profile-improvement/validate_profile.py`
 - `profile-improvement/README.md`
+- `mathematical-art/audit_profile_math.py`
 - this request record
+- `profile-improvement/RELEASE_RECORD_2026-08-23_004.md`
 
-## Validation required
+## Validation
 
-- profile-governance workflow;
-- mathematical-presentation audit;
-- adaptive-visual audit;
-- all six V4 public SVG masters parse as XML;
-- no legacy primary visual path remains in README when a V4 equivalent exists;
-- workflow badges occur only after the Evidence and validation heading;
-- credential and research-ambition boundaries remain unchanged.
+- [x] profile-governance workflow — run `32641082791` PASS
+- [x] mathematical-presentation audit — run `32641082786` PASS
+- [x] adaptive-visual audit — run `32641082785` PASS
+- [x] all six V4 public SVG masters parse as XML
+- [x] no legacy primary visual path remains in README when a V4 equivalent exists
+- [x] workflow badges occur only after the Evidence and validation heading
+- [x] credential and research-ambition boundaries remain unchanged
+
+## Outcome
+
+status: VERIFIED
+pull_request: `#21`
+verification_head: `70a282d66b6aeb2f2c5c1bbe4f971262b085bf23`
+notes: The first mathematical-presentation run correctly failed because its audit still required V3 public filenames. The audit itself was migrated to the adaptive V4 canonical contract; no check was weakened or bypassed.
