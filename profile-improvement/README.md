@@ -1,0 +1,89 @@
+# Profile Improvement Workspace
+
+This directory is the controlled workspace for improving the public professional and research profile of **Dossiya Dakou / Dossiya-SE**.
+
+Its purpose is to ensure that future profile edits are based on the user's **exact request**, preserve the distinction between verified credentials and narrative interpretation, and remain consistent across GitHub, the research portfolio, CV/bio text, research descriptions, diagrams, and future public-facing materials.
+
+## Governing principle
+
+```text
+exact user request
+→ evidence / credential check
+→ profile architecture
+→ proposed change
+→ repository-specific implementation
+→ visual / mathematical QA
+→ review
+→ release
+```
+
+A profile statement must never be made stronger than its evidence.
+
+## Canonical identity trajectory
+
+The current profile architecture is intentionally cumulative:
+
+```text
+Electrical engineering practice
+        ↓
+Physical science + renewable-energy systems
+        ↓
+Sustainable engineering
+        ↓
+Financial engineering
+        ↓
+Deeper discrete / differential geometry + mathematical art
+        ↓
+Cross-sector mathematics for sustainable and resilient systems
+```
+
+The long-term research ambition is not to claim that one mathematical field is universally sufficient. It is to investigate whether reusable mathematical structures—geometry, dynamical systems, networks, optimization/control, inverse problems, uncertainty quantification, computation and scientific visualization—can help formulate and solve sustainability/resilience problems across multiple sectors.
+
+The comparison with AI is therefore a **transferability ambition**, not an equivalence claim: AI is broadly reusable across domains; this research programme asks whether rigorous mathematical structures can likewise provide reusable ways to represent state, coupling, constraints, uncertainty, recovery, viability and decision across sectors.
+
+## Files
+
+| File | Purpose |
+|---|---|
+| [`PROFILE_MASTER_SPEC.md`](PROFILE_MASTER_SPEC.md) | Canonical professional/research identity and narrative boundaries |
+| [`PROFILE_CREDENTIALS_REGISTRY.json`](PROFILE_CREDENTIALS_REGISTRY.json) | Machine-readable credential/status/evidence registry |
+| [`PROFILE_PUBLIC_NARRATIVE.md`](PROFILE_PUBLIC_NARRATIVE.md) | Short, medium and research-oriented public bios |
+| [`REQUEST_PROTOCOL.md`](REQUEST_PROTOCOL.md) | Exact protocol for every future profile-improvement request |
+| [`requests/README.md`](requests/README.md) | Request ledger and naming convention |
+| [`assets/engineering-to-mathematics-resilience-trajectory.svg`](assets/engineering-to-mathematics-resilience-trajectory.svg) | Canonical visual trajectory |
+
+## Evidence states
+
+- `VERIFIED_PROFILE` — already represented consistently in the current public/private profile system.
+- `USER_STATED` — stated directly by the user and preserved without embellishment.
+- `OFFICIAL_TITLE_TO_VERIFY` — exact diploma wording should be checked against the credential before public freezing.
+- `ONGOING` — programme is currently in progress; never present as completed.
+- `RESEARCH_AMBITION` — future research direction, not an achieved result.
+- `IMPLEMENTED_RESEARCH` — supported by an existing repository/project.
+
+## Non-conflation rules
+
+```text
+education != expertise in every related subfield
+coursework != independent research
+research ambition != established contribution
+mathematical analogy != validated transfer
+visual beauty != scientific evidence
+software verification != empirical validation
+```
+
+## Future-use instruction
+
+For every new profile-improvement request, create or update a request record under `requests/` **before** changing the public profile when the change is substantial.
+
+The request record must preserve the user's wording and identify:
+
+1. exact request;
+2. intended public surface;
+3. evidence/credential basis;
+4. proposed edits;
+5. files/repositories affected;
+6. validation required;
+7. status: `PROPOSED`, `IMPLEMENTED`, `VERIFIED`, or `RELEASED`.
+
+This directory is the source of truth for profile-improvement intent. It does not replace official credentials, institutional records, CV source documents, or research evidence.
