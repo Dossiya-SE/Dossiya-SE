@@ -1,70 +1,74 @@
 # Permanent Regression Knowledge — T001–T047
 
-This is the successor to the earlier T001–T039 archive. It preserves all prior regressions and adds the post-adjudication, geometry/write/migration controls through T047.
+This is the successor to the earlier T001–T039 archive. The authoritative source is `NUS_MASTER_FAILURE_REGRESSION_CORPUS_V17`, which contains **47 permanent tests**.
 
 ## T001–T039
 
-The definitions of T001–T039 remain frozen as recorded in `07_REGRESSION_CORPUS_T001_T039.md`.
+Definitions remain frozen as recorded in `07_REGRESSION_CORPUS_T001_T039.md` and the authoritative V17 corpus.
 
-## T040–T047 successor controls
+## T040–T047 — exact successor controls
 
-The programme subsequently promoted additional generic invariants through the NUS-48 scientific closure, geometry, write, audit, and output-nature migration stages.
+### T040 — structurally bounded administrative fragments
 
-### T040 — structurally bounded administrative metadata
+**Failure:** non-scientific administrative fragments survived atomic-claim preprocessing, including orphaned affiliation-address tails and back-matter Data availability / Received / Accepted records.
 
-Scientific claim construction must exclude orphaned administrative/address/editorial metadata even when obvious markers such as `Department`, email, or DOI are absent.
+**Invariant:** scientific claim construction must exclude structurally bounded non-scientific administrative fragments at every representation boundary, including orphaned address tails, data-availability statements, and editorial received/accepted metadata.
 
-Examples include isolated address tails, editorial dates, and data-availability administration when they are not focal scientific evidence.
+### T041 — rendered-validated table geometry union
 
-### T041 — deterministic geometry integrity
+**Failure:** a detector-only bbox for NUS-48 Table 8 stopped before the final MOE column.
 
-Every proposed annotation geometry must be source-derived, deterministic, and independently auditable. Geometry must not be guessed from page labels or approximate visual placement.
+**Invariant:** complete table geometry must be derived from the rendered-validated union of the table detector bbox, intersecting table-grid drawing extents, and table text extents. Detector bbox alone cannot authorize a region.
 
-### T042 — table-grid union geometry
+### T042 — Zotero Run JavaScript authoritative return contract
 
-When a scientifically necessary table region spans multiple cells/boxes, final region geometry must be the deterministic union of the required table-grid geometry rather than a visually approximate rectangle.
+**Failure:** an unawaited top-level async IIFE displayed `undefined (completed successfully)` instead of an authoritative JSON result.
 
-### T043 — explicit page-label persistence
+**Invariant:** authoritative Zotero Run JavaScript scripts must use the harness-native contract: top-level await for async operations and a reachable top-level JSON return. A bare unawaited async IIFE is forbidden.
 
-Visible/printed page labels and internal page indices must remain separately persisted. A geometry record must not infer one from the other.
+### T043 — exactly one JSON serialization boundary
 
-### T044 — immediate rollback registration
+**Failure:** an embedded annotation schema was serialized twice, so `JSON.parse()` returned a string rather than the expected object and `SCHEMA.annotations` was undefined.
 
-Every mutation-capable writer operation must register its rollback state immediately before/with the mutation so an interruption cannot leave an untracked partial write.
+**Invariant:** every embedded JSON artifact crosses exactly one serialization boundary, followed immediately by runtime type/structure assertions.
 
-### T045 — explicit Zotero runtime JSON contract
+### T044 — rollback registration before downstream failure
 
-Mutation/audit runtimes must exchange explicit machine-readable JSON contracts with stable field semantics. Similar-looking field names must not be assumed equivalent across components.
+**Failure:** a native annotation was created, then validation failed before its key entered the rollback ledger, leaving an orphan annotation.
 
-### T046 — comment-only migration integrity
+**Invariant:** every native annotation ID must be registered in the compensating rollback ledger immediately after native creation returns an ID and before any persistence wait, validation, or downstream operation can throw.
 
-A comment-schema migration may change only explicitly authorized comment payloads. Annotation keys, source text, geometry, colors, roles, tags, count, PDF bytes, and unrelated Zotero state must remain unchanged, followed by independent post-write audit and zero-delta rerun.
+### T045 — explicit page-label persistence
+
+**Failure:** a persisted annotation had `annotationPageLabel=''` although the frozen schema required page label `3`.
+
+**Invariant:** every native Zotero annotation field participating in the frozen equality contract must be supplied explicitly when supported. `pageLabel` must be passed and verified; it cannot be inferred from page index.
+
+### T046 — idempotent recovery utilities
+
+**Failure:** the recovery utility returned `ABSTAIN_OR_FAIL` when the exact safe baseline already held.
+
+**Invariant:** every recovery utility must be idempotent. If its exact verified safe postcondition already holds, it must return explicit zero-delta PASS and perform no mutation.
 
 ### T047 — delta-set migration-state classification
 
-When two schema versions differ only on a subset of records or fields, migration phase must be classified from that **discriminating subset**.
+**Failure:** the output-nature migration prestate detector rejected a clean V1 state as mixed although all 13 mutable comments were V1 and none were V2.
 
-Version-invariant records:
+**Invariant:** when source and target schemas overlap on unchanged records, migration-state classification must be performed on the mutable delta set only. Unchanged records are verified against their common payload and must not infer mutually exclusive source/target state.
 
-```text
-validate payload integrity
-but do not vote on migration phase
-```
-
-For NUS-48 Output-Nature V2:
+For NUS-48:
 
 ```text
-13/13 discriminating comments V1
+20 unchanged common records + 13 old comments
 → V1_READY_FOR_MIGRATION
 
-13/13 discriminating comments V2
+20 unchanged common records + 13 target comments
 → V2_ALREADY_MIGRATED
 
-mixture among the 13
-→ MIXED_PARTIAL_MIGRATION_STATE
+any mixture among the 13 changed comments
+or any immutable-field drift
+→ fail closed
 ```
-
-This prevents the false-positive mixed state caused by exclusive state classification combined with an impossible aggregate prestate expectation.
 
 ## Current permanent boundary
 
@@ -72,9 +76,18 @@ This prevents the false-positive mixed state caused by exclusive state classific
 T001 → T047
 ```
 
+Authoritative corpus:
+
+```text
+NUS_MASTER_FAILURE_REGRESSION_CORPUS_V17
+version = 17.0.0
+test_count = 47
+SHA-256 = 8595d33856aba1228a4aaeb512505241b3a8c88011a251d92ecbed16183ed77a
+```
+
 This regression knowledge is frozen into Generic NUS Evidence Engine V1 and must be carried into NUS-18 generalization testing.
 
-## Promotion rule remains unchanged
+## Promotion rule
 
 A new regression after T047 requires:
 
@@ -86,4 +99,4 @@ new observed failure
 → controlled engine successor
 ```
 
-Do not add new regression IDs merely for deeper examples of an already-covered failure class.
+Do not add new regression IDs merely for deeper instances of an existing failure class.
