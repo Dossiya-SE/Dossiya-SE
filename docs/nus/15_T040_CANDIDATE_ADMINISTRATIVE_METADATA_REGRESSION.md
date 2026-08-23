@@ -1,17 +1,24 @@
-# T040 Candidate — Administrative Metadata Beyond Obvious Front Matter
+# T040 — Administrative Metadata Regression History
 
-## Status
+## Historical state
+
+T040 was first recorded as a **candidate regression** after automated scientific adjudication found six non-scientific administrative records that had survived preprocessing.
+
+That candidate state is preserved as part of the failure-learning chronology.
+
+## Current authoritative state
 
 ```text
-CANDIDATE_REGRESSION
-NOT_YET_PERMANENT
+T040 = PERMANENT
+Regression corpus = NUS_MASTER_FAILURE_REGRESSION_CORPUS_V17
+Regression range = T001–T047
 ```
 
-## Observed failure class
+## Permanent failure
 
-After the NUS-48 V8 preprocessing pipeline reached `58/58 PASS`, automated scientific adjudication still found six clearly non-scientific records in the atomic-claim register.
+Scientifically non-substantive administrative fragments survived atomic-claim preprocessing, including orphaned affiliation-address tails and back-matter Data availability / Received / Accepted records.
 
-Examples included orphaned address/editorial tails such as:
+Examples include:
 
 ```text
 Tronoh, Perak 32610, Malaysia.
@@ -21,62 +28,26 @@ Received: 1 July 2024
 Accepted: 26 November 2024
 ```
 
-These records were safely excluded during adjudication, so they did not contaminate final scientific evidence.
+## Root cause
 
-## Why this is distinct from T033–T036
+Metadata exclusion recognized complete contact/affiliation structures but did not fully cover structurally bounded administrative fragments that lack organization/contact keywords and can appear as grammatical sentences.
 
-T033–T036 already protect contact/publisher/affiliation metadata and representation-boundary leakage. The new observation is that administrative metadata may survive without obvious markers such as:
+## Permanent invariant
 
-```text
-Department
-email
-DOI
-publisher URL
-```
-
-The potential new generic invariant is therefore broader:
+Scientific claim construction must exclude structurally bounded non-scientific administrative fragments at every representation boundary, including:
 
 ```text
-Scientific claim construction must exclude structurally bounded administrative metadata,
-including orphaned address tails and editorial/process metadata even when obvious affiliation/contact tokens are absent.
+orphaned affiliation/address tails
+Data availability administration
+Received/Accepted editorial metadata
 ```
 
-## Candidate acceptance requirements
+while preserving genuine scientific prose containing ordinary place names or dates.
 
-Before promotion to permanent `T040`, a generic implementation should demonstrate:
+## Permanent test
 
-1. exclusion of orphaned postal/address tails in front matter;
-2. exclusion of editorial-process lines such as `Received`, `Accepted`, and similar administrative metadata;
-3. exclusion of data-availability boilerplate when it is administrative rather than scientific evidence;
-4. preservation of legitimate scientific prose containing place names, dates, addresses, or the word `data`;
-5. no paper-specific university/city/country hard-coding;
-6. independent negative controls against over-filtering;
-7. historical regression suite remains green.
-
-## Promotion rule
-
-Promote `T040` from candidate to permanent only after:
-
-```text
-observed NUS-48 examples
-→ generic structural rule
-→ implementation
-→ positive controls
-→ negative controls
-→ independent test
-→ historical retest
-```
-
-This promotion should occur before NUS-18 generalization if the generic implementation can be validated without reopening the already adjudicated NUS-48 scientific state.
+Synthetic and NUS-48 controls must exclude the known administrative examples while preserving true scientific prose containing place names or dates.
 
 ## Governance consequence
 
-The existence of this candidate does not revoke:
-
-```text
-PASS_AUTOMATED_SCIENTIFIC_ADJUDICATION_READY_FOR_HUMAN_REVIEW
-```
-
-because the six records were explicitly identified and excluded during adjudication.
-
-It does mean the generic engine should not be considered fully generalization-ready for NUS-18 until this candidate lesson is deliberately resolved.
+The earlier `CANDIDATE_REGRESSION` designation is no longer current. It remains only as historical evidence of how the failure was discovered, generalized, tested, and promoted before Generic NUS Evidence Engine V1 was frozen.
