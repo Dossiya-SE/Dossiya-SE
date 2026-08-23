@@ -14,7 +14,8 @@ README = ROOT / "README.md"
 REGISTRY = WORKSPACE / "PROFILE_CREDENTIALS_REGISTRY.json"
 MASTER = WORKSPACE / "PROFILE_MASTER_SPEC.md"
 PUBLIC = WORKSPACE / "PUBLIC_PROFILE_TRAJECTORY.md"
-SVG = WORKSPACE / "assets" / "engineering-to-mathematics-resilience-trajectory.svg"
+HEADER = ROOT / "assets" / "math-art" / "profile-header-v4.svg"
+TRAJECTORY_SVG = WORKSPACE / "assets" / "engineering-to-mathematics-resilience-trajectory.svg"
 
 REQUIRED = [
     README,
@@ -24,12 +25,19 @@ REQUIRED = [
     WORKSPACE / "PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md",
     WORKSPACE / "PROFILE_RELEASE_GATE.md",
     WORKSPACE / "REQUEST_PROTOCOL.md",
-    SVG,
+    HEADER,
+    TRAJECTORY_SVG,
 ]
 
 
 def fail(message: str) -> None:
     raise AssertionError(message)
+
+
+def svg_text(path: Path) -> str:
+    """Parse SVG as XML and return all visible text for semantic checks."""
+    tree = ET.parse(path)
+    return " ".join(part.strip() for part in tree.getroot().itertext() if part.strip())
 
 
 def main() -> int:
@@ -47,6 +55,7 @@ def main() -> int:
 
     required_readme_tokens = [
         "## Professional and research trajectory",
+        "assets/math-art/profile-header-v4.svg",
         "profile-improvement/assets/engineering-to-mathematics-resilience-trajectory.svg",
         "Profile Improvement Workspace",
         "MSE Sustainable Engineering — Arizona State University, ongoing",
@@ -91,15 +100,54 @@ def main() -> int:
     if "not a claim of an already validated universal theory" not in readme:
         fail("Cross-sector research-ambition boundary is missing from root README.")
 
-    # XML parser is sufficient to catch malformed SVG entities/structure.
-    ET.parse(SVG)
+    # Parse both public mathematical-art surfaces as XML.
+    header_text = svg_text(HEADER)
+    trajectory_text = svg_text(TRAJECTORY_SVG)
+
+    # The artwork must use domain-linked mathematics rather than unrelated decorative formulae.
+    required_header_tokens = [
+        "γ : [2016, 2026] → 𝓜",
+        "ẋ = Ax + Bu",
+        "L = D − A",
+        "gᵢⱼ = ⟨∂ᵢr, ∂ⱼr⟩",
+        "dXₜ = b(Xₜ,t)dt + σ(Xₜ,t)dWₜ",
+        "claim strength ≤ evidence strength",
+    ]
+    for token in required_header_tokens:
+        if token not in header_text:
+            fail(f"Mathematics-art header missing governed mathematical token: {token}")
+
+    required_trajectory_tokens = [
+        "2016 → 2026",
+        "conceptual research trajectory in a profile state space",
+        "Electrical engineering",
+        "Energy systems",
+        "Sustainable engineering",
+        "Financial engineering",
+        "Deeper mathematics",
+        "cross-sector transferability = research ambition",
+    ]
+    for token in required_trajectory_tokens:
+        if token not in trajectory_text:
+            fail(f"Mathematics-art trajectory missing governed token: {token}")
+
+    prohibited_art_tokens = [
+        "Schrödinger",
+        "quantum",
+        "universal resilience theory",
+    ]
+    combined_art = f"{header_text} {trajectory_text}".lower()
+    for token in prohibited_art_tokens:
+        if token.lower() in combined_art:
+            fail(f"Profile mathematical art contains prohibited/decorative claim token: {token}")
 
     print("PROFILE GOVERNANCE VALIDATION: PASS")
     print(f"Credentials checked: {len(credentials)}")
     print("Unverified technical titles remain unpublished in root README: PASS")
     print("Ongoing graduate status preserved: PASS")
     print("Research-ambition boundary preserved: PASS")
-    print("Trajectory SVG XML parse: PASS")
+    print("Header + trajectory SVG XML parse: PASS")
+    print("Mathematics-art semantic token audit: PASS")
     return 0
 
 
