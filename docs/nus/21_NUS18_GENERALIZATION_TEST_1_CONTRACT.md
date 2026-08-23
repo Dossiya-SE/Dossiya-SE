@@ -6,7 +6,16 @@
 **Title:** *An integrated energy-emergy approach to building form optimization: Use of EnergyPlus, emergy analysis and Taguchi-regression method*  
 **DOI:** `10.1016/j.buildenv.2014.10.013`
 
-Zotero parent key, attachment key, and focal-PDF SHA-256 must be resolved and verified before any extraction run.
+Historical Frozen-37/Zotero records resolve:
+
+```text
+parent_key = BZZGBD2I
+attachment_key = Z8UEF2GH
+attachment_item_id = 3442
+historical_pdf_sha256 = 826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839
+```
+
+The historical record also confirms one local PDF for NUS-18. The PDF SHA-256 must still be freshly recomputed from the live attachment before it becomes the current execution lock.
 
 ## Test objective
 
@@ -24,6 +33,7 @@ without bespoke pipeline redesign?
 ```text
 NUS18_SUCCESS =
   correct source identity
+  AND fresh live PDF SHA-256 = expected historical/current lock
   AND complete read-only extraction
   AND complete physical-surface inventory
   AND applicable T001–T047 regressions pass
@@ -67,37 +77,46 @@ T001–T047 knowledge
 
 ## NUS-18 paper-specific scientific risk areas to test without hard-coding
 
-The title indicates a combination of:
+Existing historical evidence indicates the paper contains building-form variables, EnergyPlus-based operational-energy outputs, construction/resource inventories, emergy transformities, Taguchi L18 design, ANOVA, regression metamodels, emergy outputs, and optimization. These are useful **prior expectations for audit coverage only**; they must not become hard-coded scientific conclusions in the engine.
+
+Likely structural families to test include:
 
 ```text
 building-form alternatives
-EnergyPlus-based engineering/energy simulation
-emergy analysis
-Taguchi/regression analysis
+EnergyPlus engineering/energy simulation
+emergy accounting/transformations
+Taguchi/ANOVA/regression modelling
 optimization/decision selection
 ```
 
-These are hypotheses about likely evidence structures only. The engine must derive the actual roles, transformations, metrics, outputs, and decisions from focal evidence rather than from the title or prior expectations.
+The engine must derive actual focal roles, transformations, metrics, outputs, provenance, and decisions from the verified focal PDF.
 
 ## Required first-run sequence
 
 ```text
-1. Identity verification
-2. PDF SHA-256 lock
-3. Live annotation baseline inventory
-4. Read-only extraction
-5. Atomic-claim construction
-6. Physical table/figure/equation inventory
-7. Master regression suite
-8. Independent certification
-9. Scientific adjudication
-10. Human review
-11. Geometry/schema/writer/auditor only after authorization
+1. Resolve parent BZZGBD2I and attachment Z8UEF2GH in live Zotero
+2. Verify DOI/title/parent-child relationship
+3. Freshly compute PDF SHA-256
+4. Compare to historical expected hash
+   826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839
+5. Inventory live native annotations without mutation
+6. Run read-only extraction
+7. Construct atomic claims
+8. Inventory every physical table/figure/equation
+9. Run applicable T001–T047 master regressions
+10. Run independent certification
+11. Perform scientific adjudication
+12. Human review
+13. Geometry/schema/writer/auditor only after authorization
 ```
 
-## Fail-closed rule
+## Fail-closed identity rule
 
-If NUS-18 reveals an apparent defect, first classify it:
+If the freshly computed live PDF hash differs from the historical hash, do **not** silently replace the expected hash and do not begin scientific extraction. Resolve whether the attachment bytes changed, whether the historical record refers to a different local copy, or whether a controlled new source identity must be frozen.
+
+## Fail-closed engine rule
+
+If NUS-18 reveals an apparent defect, classify it first:
 
 ```text
 paper-specific scientific difference
