@@ -1,5 +1,5 @@
 {
-  "schema": "NUS_FROZEN37_CURRENT_STATE_V7",
+  "schema": "NUS_FROZEN37_CURRENT_STATE_V8",
   "as_of": "2026-08-24",
   "frozen_calibration_paper": {
     "paper_id": 48,
@@ -83,10 +83,27 @@
       "sustainability_domains": {"environmental": 4, "economic": 0, "social": 0, "integrated": 0},
       "validation": "InternallyValidated",
       "explicit_p_to_s_coupled_transformations": 2,
-      "scientific_adjudication_status": "PASS_SCIENTIFIC_ADJUDICATION_PENDING_GEOMETRY_AND_EXPLICIT_HUMAN_APPROVAL",
+      "scientific_adjudication_status": "HUMAN_APPROVED_FOR_GEOMETRY",
       "live_annotation_count": 0,
       "zotero_mutation_performed": false,
       "pdf_mutation_performed": false
+    },
+    "human_approval": {
+      "decision": "APPROVE_AS_ADJUDICATED",
+      "approved": true,
+      "approval_artifact": "NUS18_HUMAN_SCIENTIFIC_APPROVAL_V1.json",
+      "approval_sha256": "de5f1fbbaf07f9cf21e1f396f36d29d505dde89b4012088b188ff6501ed518d4",
+      "scope": "READER_TOKEN_EXACTNESS_AND_ALL_SURFACE_GEOMETRY_ONLY",
+      "provisional_count_25_remains_unfrozen": true
+    },
+    "geometry_gate": {
+      "status": "AUTHORIZED_NOT_YET_PROVEN",
+      "runtime": "NUS18_READER_EXACTNESS_GEOMETRY_CONTEXT_V1.txt",
+      "runtime_sha256": "bb6b2f0f4b9380052dbad9734ad2272ed86b3db0ea35894dfa04c8bf7bca5b49",
+      "static_validation": {"pass": 12, "total": 12, "fail": 0},
+      "text_records": 16,
+      "region_records": 9,
+      "table_figure_bounds_fail_closed": true
     },
     "source_observations": {
       "references_boundary": {"page_index": 14, "page_label": "103", "line_index": 36},
@@ -101,13 +118,12 @@
       "bespoke_nus18_scientific_pipeline_redesign": false
     },
     "generalization_classification_if_remaining_gates_pass": "PASS_GENERALIZATION_WITH_NEW_GENERAL_REGRESSION",
-    "human_approval": false,
     "geometry_proven": false,
     "schema_pass": false,
     "writer_dryrun_pass": false,
     "auditor_dryrun_pass": false,
     "mutation_authorized": false,
-    "next_gate": "EXPLICIT_HUMAN_SCIENTIFIC_REVIEW_THEN_ALL_SURFACE_READER_GEOMETRY"
+    "next_gate": "READER_EXACTNESS_AND_ALL_SURFACE_GEOMETRY"
   },
   "visible_comment_contract": {
     "engineering_output": "Engineering output here is {evidence-grounded engineering nature} : EXACT AUTHOR WORDING",
