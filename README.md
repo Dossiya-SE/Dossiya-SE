@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/math-art/profile-header-v4.svg" width="100%" alt="Dossiya Dakou — engineering, mathematics and sustainable resilience research trajectory" />
+  <img src="assets/math-art/profile-header-v5.svg" width="100%" alt="Dossiya Dakou — engineering, mathematics and sustainable resilience research trajectory" />
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ A sophisticated formula, visualization, programming language, simulation, or pas
 ## Professional and research trajectory
 
 <p align="center">
-  <img src="profile-improvement/assets/engineering-to-mathematics-resilience-trajectory.svg" width="96%" alt="Conceptual 2016 to 2026 trajectory from electrical engineering through energy, sustainable engineering and financial engineering toward deeper mathematics and cross-sector sustainable resilience research" />
+  <img src="profile-improvement/assets/engineering-to-mathematics-resilience-trajectory-v5.svg" width="96%" alt="Conceptual 2016 to 2026 trajectory from electrical engineering through energy, sustainable engineering and financial engineering toward deeper mathematics and cross-sector sustainable resilience research" />
 </p>
 
 My technical path began in **practical electrical engineering** and developed through **renewable-energy and energy-systems study** into ongoing graduate work in **Sustainable Engineering** and **Financial Engineering**. Across these stages, the emphasis has moved progressively from physical implementation toward mathematical and computational representations of complex systems: dynamics, networks, uncertainty, optimization, viability, recovery and decision.
@@ -66,7 +66,7 @@ Profile wording, credential status and future public changes are governed in the
 ## Mathematics as a research operating system
 
 <p align="center">
-  <img src="assets/math-art/profile-mathematics-universe-v4.svg" width="96%" alt="Adaptive profile-wide mathematics universe connecting foundations, dynamics, networks, inference, uncertainty, viability and decisions" />
+  <img src="assets/math-art/profile-mathematics-universe-v5.svg" width="96%" alt="Adaptive profile-wide mathematics universe connecting foundations, dynamics, networks, inference, uncertainty, viability and decisions" />
 </p>
 
 The mathematics universe is a curated architecture of mathematics **actually used, implemented, or explicitly specified** across the profile. It is not a claim to contain all mathematics or to demonstrate equal mastery of every field.
@@ -76,7 +76,7 @@ The professional display contract is governed by the **[Mathematical Presentatio
 ### From evidence to bounded decision
 
 <p align="center">
-  <img src="assets/math-art/research-operating-system-v4.svg" width="96%" alt="Adaptive mathematical research operating system connecting coupled dynamics, inverse problems, uncertainty, viability, control, design and validation" />
+  <img src="assets/math-art/research-operating-system-v5.svg" width="96%" alt="Adaptive mathematical research operating system connecting coupled dynamics, inverse problems, uncertainty, viability, control, design and validation" />
 </p>
 
 The profile-level chain is
@@ -106,7 +106,7 @@ Displayed mathematical objects use the evidence states `[S] source-grounded`, `[
 ## Differential geometry and mathematical art
 
 <p align="center">
-  <img src="assets/math-art/differential-geometry-foundations-v4.svg" width="96%" alt="Adaptive differential-geometry foundations showing source mathematics and the boundary to engineering research transfer" />
+  <img src="assets/math-art/differential-geometry-foundations-v5.svg" width="96%" alt="Adaptive differential-geometry foundations showing source mathematics and the boundary to engineering research transfer" />
 </p>
 
 The profile explicitly separates **source differential geometry**, **geometric visualization**, and **formally defined state-space geometry**. The differential-geometry foundation is anchored to Taha Sochi, _Introduction to Differential Geometry of Space Curves and Surfaces_, registered as `SOCHI-DG-2017-UPLOADED` in the Mathematics Research Ecosystem.
@@ -118,7 +118,7 @@ Using curvature, geodesics, or manifold language for infrastructure recovery is 
 ## Scientific computing and mathematical art
 
 <p align="center">
-  <img src="assets/math-art/computational-stack-v4.svg" width="96%" alt="Adaptive scientific-computing stack from symbolic and numerical mathematics through verification, rendering and publication" />
+  <img src="assets/math-art/computational-stack-v5.svg" width="96%" alt="Adaptive scientific-computing stack from symbolic and numerical mathematics through verification, rendering and publication" />
 </p>
 
 Primary roles across the profile include **Python** for numerical integration, statistics, UQ, data engineering and orchestration; **Julia/MATLAB/C++/Rust/CUDA** where numerical or performance roles are justified; **Mathematica/SymPy/SageMath** for symbolic work; **Lean/mathlib/Coq** for formal-verification directions; and **LaTeX/TikZ/Asymptote/PyVista/VTK/Blender/WebGL** for verified mathematical presentation and scientific rendering.
@@ -130,7 +130,7 @@ The [**Polyglot Resilience Atlas**](polyglot-resilience/README.md) maps a bounde
 ## Evidence and validation
 
 <p align="center">
-  <img src="assets/math-art/formula-evidence-lattice-v4.svg" width="96%" alt="Adaptive formula and evidence lattice from source and derivation through verification, empirical evidence and bounded claims" />
+  <img src="assets/math-art/formula-evidence-lattice-v5.svg" width="96%" alt="Adaptive formula and evidence lattice from source and derivation through verification, empirical evidence and bounded claims" />
 </p>
 
 A professional mathematical object carries more than typography: provenance, assumptions, symbols/units, repository role, implementation, verification, validation and the bounded claim must remain distinguishable.
@@ -147,7 +147,7 @@ The complete 16-repository mathematics-rendering inventory, correction register,
 <summary><strong>Repository evidence-maturity map</strong></summary>
 
 <p align="center">
-  <img src="assets/math-art/evidence-maturity-map-v4.svg" width="96%" alt="Adaptive portfolio evidence-maturity map separating implementation maturity from external or empirical validation maturity" />
+  <img src="assets/math-art/evidence-maturity-map-v5.svg" width="96%" alt="Adaptive portfolio evidence-maturity map separating implementation maturity from external or empirical validation maturity" />
 </p>
 
 **Circle = evidence-bearing research implementation. Square = prototype/scaffold.** Position is descriptive, qualitative, and not certification, ranking, or a numeric research-quality score.
@@ -237,7 +237,6 @@ y_k=h(x_k,\theta)+\varepsilon_k,
 \qquad
 \pi(\theta\mid y)\propto L(y\mid\theta)\pi_0(\theta).
 ```
-
 ### Network/interface mathematics — [S/M]
 
 ```math
