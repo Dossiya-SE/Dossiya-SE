@@ -21,13 +21,14 @@ STANDARD = MATH_DIR / "MATHEMATICAL_PRESENTATION_STANDARD.md"
 ATLAS = MATH_DIR / "PROFILE_FORMULA_ATLAS.md"
 PROFILE = ROOT / "README.md"
 
-V4_SVGS = [
-    ASSET_DIR / "profile-mathematics-universe-v4.svg",
-    ASSET_DIR / "research-operating-system-v4.svg",
-    ASSET_DIR / "differential-geometry-foundations-v4.svg",
-    ASSET_DIR / "formula-evidence-lattice-v4.svg",
-    ASSET_DIR / "evidence-maturity-map-v4.svg",
-    ASSET_DIR / "computational-stack-v4.svg",
+VISUAL_GENERATION = "v5"
+V5_SVGS = [
+    ASSET_DIR / f"profile-mathematics-universe-{VISUAL_GENERATION}.svg",
+    ASSET_DIR / f"research-operating-system-{VISUAL_GENERATION}.svg",
+    ASSET_DIR / f"differential-geometry-foundations-{VISUAL_GENERATION}.svg",
+    ASSET_DIR / f"formula-evidence-lattice-{VISUAL_GENERATION}.svg",
+    ASSET_DIR / f"evidence-maturity-map-{VISUAL_GENERATION}.svg",
+    ASSET_DIR / f"computational-stack-{VISUAL_GENERATION}.svg",
 ]
 
 ALLOWED_STATES = {"S", "D", "M", "C", "V", "E", "H", "T"}
@@ -51,7 +52,7 @@ def fail(message: str) -> None:
 def audit_registry() -> int:
     try:
         data = json.loads(REGISTRY.read_text(encoding="utf-8"))
-    except Exception as exc:  # pragma: no cover - fail-closed path
+    except Exception as exc:  # pragma: no cover
         fail(f"cannot parse {REGISTRY}: {exc}")
 
     if data.get("schema_version") != "3.0.0":
@@ -111,12 +112,13 @@ def audit_docs() -> None:
 
     profile = PROFILE.read_text(encoding="utf-8")
     required_profile_refs = [
-        "profile-mathematics-universe-v4.svg",
-        "research-operating-system-v4.svg",
-        "differential-geometry-foundations-v4.svg",
-        "formula-evidence-lattice-v4.svg",
-        "evidence-maturity-map-v4.svg",
-        "computational-stack-v4.svg",
+        "profile-header-v5.svg",
+        "profile-mathematics-universe-v5.svg",
+        "research-operating-system-v5.svg",
+        "differential-geometry-foundations-v5.svg",
+        "formula-evidence-lattice-v5.svg",
+        "evidence-maturity-map-v5.svg",
+        "computational-stack-v5.svg",
         "MATHEMATICAL_PRESENTATION_STANDARD.md",
         "PROFILE_FORMULA_ATLAS.md",
         "formula_registry.json",
@@ -126,6 +128,13 @@ def audit_docs() -> None:
             fail(f"profile README does not reference required artifact: {ref}")
 
     legacy_primary_refs = [
+        "profile-header-v4.svg",
+        "profile-mathematics-universe-v4.svg",
+        "research-operating-system-v4.svg",
+        "differential-geometry-foundations-v4.svg",
+        "formula-evidence-lattice-v4.svg",
+        "evidence-maturity-map-v4.svg",
+        "computational-stack-v4.svg",
         "profile-mathematics-universe-v3.svg",
         "differential-geometry-viability-v3.svg",
         "formula-evidence-lattice-v3.svg",
@@ -147,10 +156,11 @@ def audit_docs() -> None:
 
 def main() -> None:
     count = audit_registry()
-    for svg in V4_SVGS:
+    for svg in V5_SVGS:
         audit_svg(svg)
+    audit_svg(ASSET_DIR / "profile-header-v5.svg")
     audit_docs()
-    print(f"PASS: profile mathematical presentation V4 audit complete ({count} formula records)")
+    print(f"PASS: profile mathematical presentation V5 audit complete ({count} formula records)")
 
 
 if __name__ == "__main__":
