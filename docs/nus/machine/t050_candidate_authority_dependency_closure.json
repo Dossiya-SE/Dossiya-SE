@@ -1,0 +1,22 @@
+{
+  "protocol": "NUS_T050_AUTHORITY_DEPENDENCY_CLOSURE_CANDIDATE_V1",
+  "version": "1.0.0",
+  "status": "CANDIDATE_REGRESSION_PENDING_RUNTIME_CONFIRMATION",
+  "first_observed_paper_id": 18,
+  "observed_failure": {
+    "protocol": "NUS18_READER_EXACTNESS_GEOMETRY_CONTEXT_V1",
+    "code": "APPROVAL_FILE_MISSING",
+    "zotero_mutation_performed": false,
+    "pdf_mutation_performed": false,
+    "mutation_authorized": false
+  },
+  "frozen_approval_sha256": "de5f1fbbaf07f9cf21e1f396f36d29d505dde89b4012088b188ff6501ed518d4",
+  "repaired_runtime": {
+    "file": "NUS18_READER_EXACTNESS_GEOMETRY_CONTEXT_V1R1.txt",
+    "sha256": "7e54714054eb7f0d67ca9a67a5b1c280e746bbfde61177997e7e1dda483cec4c",
+    "static_validation": {"pass": 13, "total": 13, "fail": 0}
+  },
+  "invariant": "A downstream authorized runtime must prove availability of every immutable authority before source processing. A previously approved immutable authority may be embedded byte-for-byte with a frozen SHA-256; any external duplicate is optional but, if present, must hash-match exactly.",
+  "permanent": false,
+  "promotion_rule": "Promote only after V1R1 passes runtime controls and generic dependency-closure review."
+}
