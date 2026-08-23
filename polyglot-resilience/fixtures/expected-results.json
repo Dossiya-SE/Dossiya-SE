@@ -1,0 +1,23 @@
+{
+  "kernel_version": "PRK-1.0",
+  "tolerance_profile": "binary64-one-step-v1",
+  "max_abs_tolerance": 1e-12,
+  "results": {
+    "baseline": {
+      "dx": [-0.018353050564547804, 0.000044679610941261716, 0.0052417025116724275],
+      "x_next": [0.8990823474717726, 0.7500022339805471, 0.6002620851255835],
+      "weighted_service_next": 0.7721992421632964
+    },
+    "controlled-recovery": {
+      "dx": [0.0016469494354521934, 0.03204467961094126, 0.05224170251167245],
+      "x_next": [0.9000823474717726, 0.751602233980547, 0.6026120851255836],
+      "weighted_service_next": 0.7737467421632964
+    },
+    "severe-hazard": {
+      "dx": [-0.15035305056454779, -0.16595532038905875, -0.12975829748832757],
+      "x_next": [0.8924823474717727, 0.741702233980547, 0.5935120851255836],
+      "weighted_service_next": 0.7649667421632964
+    }
+  },
+  "provenance_note": "Frozen from the PRK-1.0 Python reference implementation using IEEE-754 binary64 arithmetic. These values are verification targets, not empirical observations."
+}

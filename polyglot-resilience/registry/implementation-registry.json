@@ -1,0 +1,151 @@
+{
+  "schema_version": "PRA-IMPLEMENTATION-REGISTRY-1.0",
+  "kernel_version": "PRK-1.0",
+  "validation_provenance": {
+    "github_actions_workflow": "polyglot-resilience-conformance",
+    "github_actions_run_id": 32620003277,
+    "validated_commit": "b00dc3f80929e9b8ca3ca467edbf92a2f83d6a86",
+    "validation_result": "PASS",
+    "validation_scope": [
+      "runtime setup",
+      "syntax checks",
+      "structure and semantic-contract validation",
+      "reference scientific invariants",
+      "3 implementations x 3 frozen-fixture conformance checks"
+    ]
+  },
+  "maturity_scale": [
+    "PLANNED",
+    "LEARNING",
+    "IMPLEMENTED",
+    "TESTED",
+    "VALIDATED",
+    "BENCHMARKED"
+  ],
+  "implementations": [
+    {
+      "implementation_id": "python-reference-prk1",
+      "language": "Python",
+      "role": "reference scientific implementation",
+      "profile": "FULL_KERNEL",
+      "path": "implementations/python/kernel.py",
+      "maturity": "VALIDATED",
+      "conformance": "PASS_CI",
+      "fixtures_tested": ["baseline", "controlled-recovery", "severe-hazard"],
+      "max_observed_local_error": 0.0,
+      "ci_validation_run_id": 32620003277,
+      "notes": "Standard-library reference implementation; independently rerun by GitHub Actions."
+    },
+    {
+      "implementation_id": "go-native-prk1",
+      "language": "Go",
+      "role": "native service/concurrent numerical implementation",
+      "profile": "FULL_KERNEL",
+      "path": "implementations/go/main.go",
+      "maturity": "VALIDATED",
+      "conformance": "PASS_CI",
+      "fixtures_tested": ["baseline", "controlled-recovery", "severe-hazard"],
+      "max_observed_local_error": 0.0,
+      "ci_validation_run_id": 32620003277,
+      "notes": "Standard-library JSON/math implementation; independently rerun by GitHub Actions."
+    },
+    {
+      "implementation_id": "javascript-native-prk1",
+      "language": "JavaScript",
+      "role": "native browser/runtime implementation",
+      "profile": "FULL_KERNEL",
+      "path": "implementations/javascript/kernel.mjs",
+      "maturity": "VALIDATED",
+      "conformance": "PASS_CI",
+      "fixtures_tested": ["baseline", "controlled-recovery", "severe-hazard"],
+      "max_observed_local_error": 0.0,
+      "ci_validation_run_id": 32620003277,
+      "notes": "Node-compatible native implementation; browser packaging remains future work."
+    },
+    {
+      "implementation_id": "julia-native-prk1",
+      "language": "Julia",
+      "role": "scientific numerics and differential-equation ecosystem",
+      "profile": "FULL_KERNEL",
+      "maturity": "PLANNED",
+      "conformance": "NOT_RUN"
+    },
+    {
+      "implementation_id": "r-native-prk1",
+      "language": "R",
+      "role": "statistics and uncertainty quantification",
+      "profile": "FULL_KERNEL",
+      "maturity": "PLANNED",
+      "conformance": "NOT_RUN"
+    },
+    {
+      "implementation_id": "cpp-native-prk1",
+      "language": "C++",
+      "role": "high-performance native kernel",
+      "profile": "FULL_KERNEL",
+      "maturity": "PLANNED",
+      "conformance": "NOT_RUN"
+    },
+    {
+      "implementation_id": "rust-native-prk1",
+      "language": "Rust",
+      "role": "memory-safe HPC and WebAssembly candidate",
+      "profile": "FULL_KERNEL",
+      "maturity": "PLANNED",
+      "conformance": "NOT_RUN"
+    },
+    {
+      "implementation_id": "fortran-native-prk1",
+      "language": "Fortran",
+      "role": "scientific/HPC interoperability",
+      "profile": "FULL_KERNEL",
+      "maturity": "PLANNED",
+      "conformance": "NOT_RUN"
+    },
+    {
+      "implementation_id": "typescript-client",
+      "language": "TypeScript",
+      "role": "typed scientific interface",
+      "profile": "VISUALIZATION_CLIENT",
+      "maturity": "PLANNED",
+      "conformance": "NOT_APPLICABLE"
+    },
+    {
+      "implementation_id": "jvm-service-family",
+      "language": "Java/Kotlin/Scala",
+      "role": "JVM services and data/simulation pipelines",
+      "profile": "SERVICE_WRAPPER",
+      "maturity": "PLANNED",
+      "conformance": "NOT_APPLICABLE_UNTIL_NATIVE_PROFILE_EXISTS"
+    },
+    {
+      "implementation_id": "swift-client",
+      "language": "Swift",
+      "role": "native Apple/field interface",
+      "profile": "VISUALIZATION_CLIENT",
+      "maturity": "PLANNED",
+      "conformance": "NOT_APPLICABLE"
+    },
+    {
+      "implementation_id": "haskell-research",
+      "language": "Haskell",
+      "role": "functional/formal experimentation",
+      "profile": "RESEARCH_PROFILE",
+      "maturity": "PLANNED",
+      "conformance": "NOT_RUN"
+    },
+    {
+      "implementation_id": "wolfram-symbolic",
+      "language": "Wolfram Language",
+      "role": "symbolic and exploratory mathematics",
+      "profile": "ADAPTER",
+      "maturity": "PLANNED",
+      "conformance": "NOT_APPLICABLE"
+    }
+  ],
+  "adapters": [
+    {"id": "sql-evidence", "language": "SQL", "role": "persistent state/evidence storage", "profile": "ADAPTER"},
+    {"id": "bash-orchestration", "language": "Bash", "role": "reproducible orchestration", "profile": "ADAPTER"},
+    {"id": "latex-specification", "language": "LaTeX", "role": "canonical mathematical communication", "profile": "ADAPTER"}
+  ]
+}

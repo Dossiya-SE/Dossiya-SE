@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Polyglot Resilience Computing Architecture</title>
+  <desc id="desc">A canonical mathematical model flows through a semantic contract into conforming native implementations, validation, benchmarking, adapters and reproducible evidence.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#17345C"/>
+    </marker>
+    <style><![CDATA[
+      .sans{font-family:Inter,"DejaVu Sans",Arial,sans-serif;fill:#1D2734}
+      .title{font-size:42px;font-weight:750;fill:#10264A}
+      .subtitle{font-size:20px;fill:#586575}
+      .section{font-size:20px;font-weight:750;fill:#10264A}
+      .box{fill:#F7F9FC;stroke:#17345C;stroke-width:3}
+      .contract{fill:#FFF6DE;stroke:#B98610;stroke-width:3}
+      .native{fill:#EDF5FF;stroke:#2D6CDF;stroke-width:3}
+      .gate{fill:#EEF8F2;stroke:#2F7D4A;stroke-width:3}
+      .future{fill:#F4F1FA;stroke:#66558C;stroke-width:3}
+      .evidence{fill:#F1F3F5;stroke:#657180;stroke-width:3}
+      .label{font-size:21px;font-weight:700}
+      .small{font-size:17px}
+      .tiny{font-size:14px;fill:#586575}
+      .arrow{stroke:#17345C;stroke-width:3.5;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#657180;stroke-width:2.5;fill:none;stroke-dasharray:9 8;marker-end:url(#arrow)}
+    ]]></style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+  <text x="800" y="58" text-anchor="middle" class="sans title">Polyglot Resilience Computing Laboratory</text>
+  <text x="800" y="92" text-anchor="middle" class="sans subtitle">Specification → conformance → numerical validation → benchmark → reproducible evidence</text>
+
+  <rect x="460" y="125" width="680" height="95" rx="18" class="box"/>
+  <text x="800" y="162" text-anchor="middle" class="sans label">Canonical Mathematical Model</text>
+  <text x="800" y="192" text-anchor="middle" class="sans small">dx/dt = -Dx + A tanh(x) + r ⊙ (1 - x) - h + Bu</text>
+
+  <path d="M800 220 V255" class="arrow"/>
+
+  <rect x="500" y="255" width="600" height="92" rx="18" class="contract"/>
+  <text x="800" y="292" text-anchor="middle" class="sans label">Semantic Contract PRK-1.0</text>
+  <text x="800" y="322" text-anchor="middle" class="sans small">dimensions • matrix orientation • tanh • Euler • projection • JSON fixtures</text>
+
+  <text x="80" y="402" class="sans section">NATIVE CONFORMING IMPLEMENTATIONS</text>
+
+  <rect x="120" y="430" width="340" height="110" rx="18" class="native"/>
+  <text x="290" y="470" text-anchor="middle" class="sans label">Python</text>
+  <text x="290" y="498" text-anchor="middle" class="sans small">reference scientific kernel</text>
+  <text x="290" y="522" text-anchor="middle" class="sans tiny">FULL_KERNEL • TESTED</text>
+
+  <rect x="630" y="430" width="340" height="110" rx="18" class="native"/>
+  <text x="800" y="470" text-anchor="middle" class="sans label">Go</text>
+  <text x="800" y="498" text-anchor="middle" class="sans small">native service/numerical kernel</text>
+  <text x="800" y="522" text-anchor="middle" class="sans tiny">FULL_KERNEL • TESTED</text>
+
+  <rect x="1140" y="430" width="340" height="110" rx="18" class="native"/>
+  <text x="1310" y="470" text-anchor="middle" class="sans label">JavaScript</text>
+  <text x="1310" y="498" text-anchor="middle" class="sans small">native runtime/browser kernel</text>
+  <text x="1310" y="522" text-anchor="middle" class="sans tiny">FULL_KERNEL • TESTED</text>
+
+  <path d="M800 347 V385 H290 V430" class="arrow"/>
+  <path d="M800 347 V430" class="arrow"/>
+  <path d="M800 347 V385 H1310 V430" class="arrow"/>
+
+  <rect x="460" y="605" width="680" height="105" rx="18" class="gate"/>
+  <text x="800" y="643" text-anchor="middle" class="sans label">Cross-Language Conformance and Scientific Invariants</text>
+  <text x="800" y="672" text-anchor="middle" class="sans small">3 frozen fixtures • binary64 tolerance • Bu active • non-diagonal D • bounds • determinism</text>
+  <text x="800" y="696" text-anchor="middle" class="sans tiny">software agreement is evidence of conformance, not empirical truth</text>
+
+  <path d="M290 540 V575 H800 V605" class="arrow"/>
+  <path d="M800 540 V605" class="arrow"/>
+  <path d="M1310 540 V575 H800 V605" class="arrow"/>
+
+  <rect x="110" y="770" width="360" height="80" rx="16" class="future"/>
+  <text x="290" y="804" text-anchor="middle" class="sans label">Future Native Profiles</text>
+  <text x="290" y="830" text-anchor="middle" class="sans tiny">Julia • R • C++ • Rust • Fortran</text>
+
+  <rect x="620" y="770" width="360" height="80" rx="16" class="contract"/>
+  <text x="800" y="804" text-anchor="middle" class="sans label">Benchmark Layer</text>
+  <text x="800" y="830" text-anchor="middle" class="sans tiny">only after conformance and convergence gates</text>
+
+  <rect x="1130" y="770" width="360" height="80" rx="16" class="evidence"/>
+  <text x="1310" y="804" text-anchor="middle" class="sans label">Evidence and Interfaces</text>
+  <text x="1310" y="830" text-anchor="middle" class="sans tiny">SQL • Bash • LaTeX • future WASM/JVM/client layers</text>
+
+  <path d="M570 710 L310 770" class="dash"/>
+  <path d="M800 710 V770" class="arrow"/>
+  <path d="M1030 710 L1290 770" class="dash"/>
+</svg>
