@@ -31,6 +31,29 @@ The portfolio is organized around one scientific rule:
 
 A sophisticated formula, visualization, programming language, simulation, or passing test is **not** presented as stronger evidence than it actually is.
 
+## Professional and research trajectory
+
+<p align="center">
+  <img src="profile-improvement/assets/engineering-to-mathematics-resilience-trajectory.svg" width="100%" alt="Professional trajectory from electrical engineering through energy, sustainable engineering and financial engineering toward deeper mathematics and cross-sector resilience research" />
+</p>
+
+My technical path began in **practical electrical engineering** and developed through **renewable-energy and energy-systems study** into ongoing graduate work in **Sustainable Engineering** and **Financial Engineering**. Across these stages, my focus has progressively moved from physical implementation toward mathematical and computational representations of complex systems: dynamics, networks, uncertainty, optimization, viability, recovery and decision.
+
+The forward research direction is to deepen **discrete and differential geometry, mathematical physics, dynamical systems, scientific computing and mathematical visualization**, and to investigate where these structures can rigorously support sustainable and resilient systems across sectors.
+
+```text
+Electrical engineering practice
+→ renewable-energy + physical systems
+→ sustainable engineering
+→ financial engineering
+→ deeper mathematical structures
+→ cross-sector sustainable-resilience research
+```
+
+The cross-sector ambition is a **research programme**, not a claim of an already validated universal theory. The analogy with AI is limited to cross-domain reusability: the question is whether rigorously defined mathematical structures can provide transferable analytical tools while preserving domain-specific assumptions, evidence and validation requirements.
+
+Profile wording, credential status and future public changes are governed in the **[Profile Improvement Workspace](profile-improvement/README.md)**. Exact technical-diploma and undergraduate-title reconciliation remains controlled there rather than being silently translated or renamed in this README.
+
 ## Account-wide mathematics verification
 
 The complete 16-repository mathematics-rendering inventory, correction register,
@@ -218,7 +241,7 @@ P_{load}+P_{loss}+P_{ch}+P_{export}.
 ```math
 \begin{aligned}
 dS_t&=\mu S_t\,dt+\sqrt{v_t}S_t\,dW_t^S+\text{jump term},\\
-dv_t&=\kappa(\theta-v_t)\,dt+\sigma\sqrt{v_t}\,dW_t^v.
+dv_t&=\kappa(\theta-v_t)\,dt+\sigma\sqrt{v_t}dW_t^v.
 \end{aligned}
 ```
 
@@ -346,5 +369,7 @@ The [**Polyglot Resilience Atlas**](polyglot-resilience/README.md) maps a bounde
 **MSE Sustainable Engineering — Arizona State University, ongoing**  
 **MS Financial Engineering — WorldQuant University, ongoing**  
 **Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**
+
+Credential naming and future education-section expansion are governed by the **[Profile Credential Verification Checklist](profile-improvement/PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md)**. The current undergraduate title is intentionally preserved until its relationship to the newer English description is reconciled from the official record.
 
 <p align="center"><strong>Physics → Evidence → Mathematics → Computation → Verification → Validation → Decision → Resilient Service</strong></p>
