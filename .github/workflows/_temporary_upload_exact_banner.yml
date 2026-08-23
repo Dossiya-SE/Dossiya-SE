@@ -1,9 +1,9 @@
 name: Temporary exact banner upload
 
 on:
-  push:
+  pull_request:
     branches:
-      - profile/exact-original-banner-png
+      - main
     paths:
       - .github/workflows/_temporary_upload_exact_banner.yml
 
@@ -12,11 +12,13 @@ permissions:
 
 jobs:
   upload-exact-original:
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: profile/exact-original-banner-png
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Download exact user-supplied PNG and verify bytes
         env:
           SOURCE_URL: "https://chatgpt.com/backend-api/estuary/content?id=file_00000000a86c8207853f327f620d1c32&ts=496531&p=fs&cid=1&sig=b762feea527ead622a1aaa5953c8740c7fb1557cf6f35c875165c2368e2c35e1&v=0"
@@ -24,8 +26,9 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p assets/math-art
-          curl -L --fail --retry 2 "$SOURCE_URL" -o assets/math-art/profile-header-exact.png
+          curl -L --fail --retry 2 --retry-all-errors "$SOURCE_URL" -o assets/math-art/profile-header-exact.png
           actual="$(sha256sum assets/math-art/profile-header-exact.png | awk '{print $1}')"
+          echo "downloaded SHA256=$actual"
           test "$actual" = "$EXPECTED_SHA256"
       - name: Point README hero to exact PNG only
         run: |
@@ -35,14 +38,20 @@ jobs:
           s = p.read_text(encoding='utf-8')
           old = 'assets/math-art/profile-header-v5.svg'
           new = 'assets/math-art/profile-header-exact.png'
-          if old not in s:
-              raise SystemExit('expected current hero path not found')
-          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          if old not in s and new not in s:
+              raise SystemExit('expected current or exact hero path not found')
+          if old in s:
+              s = s.replace(old, new, 1)
+              p.write_text(s, encoding='utf-8')
           PY
       - name: Commit exact PNG without transformation
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/math-art/profile-header-exact.png README.md
+          if git diff --cached --quiet; then
+            echo "Exact PNG already committed."
+            exit 0
+          fi
           git commit -m "Use exact user-supplied profile banner PNG"
-          git push origin HEAD:profile/exact-original-banner-png
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
