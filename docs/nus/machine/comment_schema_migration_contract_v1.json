@@ -1,0 +1,76 @@
+{
+  "schema": "NUS_COMMENT_SCHEMA_MIGRATION_CONTRACT_V1",
+  "status": "FROZEN_CONTRACT_NOT_AUTHORIZATION",
+  "source_schema": "PRE_V3_EXISTING_NUS48_FROZEN_SCHEMA",
+  "target_schema": "NUS_COMMENT_GENERATION_RULE_V3",
+  "scope": "COMMENT_ONLY_WHERE_OUTPUT_NATURE_IS_DIRECTLY_SUPPORTED",
+  "existing_nus48_annotation_count_declared": 33,
+  "migration_authorized": false,
+  "allowed_changes": [
+    "ENGINEERING_OUTPUT visible prefix may change to include grounded engineering nature",
+    "SUSTAINABLE_OUTCOME visible prefix may change to include grounded sustainability nature",
+    "role-only fallback may be retained when nature is not directly supportable"
+  ],
+  "prohibited_changes": [
+    "annotation count increase caused by schema migration",
+    "new annotation creation solely for nature labels",
+    "geometry change",
+    "role change",
+    "role color change",
+    "annotation tag creation",
+    "author wording change after colon",
+    "unit normalization inside author wording",
+    "terminology expansion inside author wording",
+    "nature labels on PURPOSE",
+    "nature labels on INTERVENTION",
+    "nature labels on INPUT",
+    "nature labels on ENGINEERING_METHOD",
+    "nature labels on SUSTAINABILITY_TRANSFORMATION",
+    "nature labels on SUSTAINABILITY_METHOD",
+    "nature labels on DECISION",
+    "integrated sustainability assignment from co-occurrence alone"
+  ],
+  "required_prewrite_gates": [
+    "SOURCE_IDENTITY_VERIFIED",
+    "LIVE_ANNOTATION_BASELINE_VERIFIED",
+    "MIGRATION_MAPPING_COMPLETE",
+    "NATURE_GROUNDING_COMPLETE",
+    "AUTHOR_SUFFIX_BYTE_OR_TEXT_EQUIVALENCE_PROVEN",
+    "CARDINALITY_STABILITY_PROVEN",
+    "GEOMETRY_STABILITY_PROVEN",
+    "ROLE_COLOR_STABILITY_PROVEN",
+    "ZERO_TAG_STABILITY_PROVEN",
+    "MIGRATION_SCHEMA_VALIDATION_PASS",
+    "MIGRATION_REGRESSION_SUITE_PASS",
+    "MIGRATION_WRITER_DRYRUN_PASS",
+    "INDEPENDENT_MIGRATION_AUDITOR_DRYRUN_PASS",
+    "EXPLICIT_MIGRATION_AUTHORIZATION"
+  ],
+  "required_postwrite_gates": [
+    "LIVE_ANNOTATION_COUNT_UNCHANGED",
+    "WRITER_RERUN_ZERO_DELTA",
+    "INDEPENDENT_MIGRATION_AUDIT_PASS",
+    "PDF_SHA_UNCHANGED"
+  ],
+  "engineering_output_natures": [
+    "mechanical",
+    "fresh-state",
+    "physical",
+    "durability",
+    "transport/permeability",
+    "thermal",
+    "structural/functional",
+    "fracture/damage",
+    "time-dependent",
+    "constructability/production"
+  ],
+  "sustainability_output_natures": [
+    "environmental",
+    "economic",
+    "social",
+    "integrated"
+  ],
+  "integrated_guard": "Explicit focal integration is required; ENV + ECO + SOC does not imply INT.",
+  "idempotence_requirement": "Second migration writer run must produce zero delta.",
+  "historical_state_preservation": "The pre-migration 33-annotation state must remain reconstructible/auditable after any migration."
+}
