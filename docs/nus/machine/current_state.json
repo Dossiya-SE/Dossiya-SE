@@ -1,5 +1,5 @@
 {
-  "schema": "NUS_FROZEN37_CURRENT_STATE_V3",
+  "schema": "NUS_FROZEN37_CURRENT_STATE_V4",
   "as_of": "2026-08-24",
   "paper": {
     "paper_id": 48,
@@ -10,14 +10,16 @@
     "attachment_key": "3UL86A9R",
     "pdf_sha256": "bd27b10cb8110d7a48a0b28923e3e0cc2adc0fb2d7e416fb25714f8483db3609"
   },
-  "premutation": {
+  "historical_premutation_state": {
     "protocol": "NUS48_ONESHOT_PREMUTATION_READINESS_V8",
     "status": "PASS_PREMUTATION_READY_FOR_SCIENTIFIC_ADJUDICATION",
     "master": {"pass": 33, "total": 33},
     "independent_certification": {"pass": 24, "total": 24},
     "orchestration": {"pass": 1, "total": 1},
     "automated_checks_pass": 58,
-    "automated_checks_total": 58
+    "automated_checks_total": 58,
+    "live_annotation_count_at_premutation_freeze": 0,
+    "pdf_mutation_performed": false
   },
   "scientific_adjudication": {
     "status": "PASS_AUTOMATED_SCIENTIFIC_ADJUDICATION_READY_FOR_HUMAN_REVIEW",
@@ -32,19 +34,28 @@
     "equation_2_visual_exactness_required": true,
     "T040_status": "CANDIDATE_REGRESSION"
   },
-  "comment_generation": {
-    "rule_schema": "NUS_COMMENT_GENERATION_RULE_V2",
-    "status": "FROZEN",
-    "preferred_pattern": "ROLE here is SCIENTIFIC NATURE : EXACT AUTHOR WORDING",
-    "fallback_pattern": "ROLE: EXACT AUTHOR WORDING",
-    "nature_requires_direct_focal_support": true,
-    "human_approval_implied": false
+  "current_native_annotation_state": {
+    "declared_native_annotation_count": 33,
+    "state_source": "USER_SUPPLIED_PROJECT_UPDATE_2026-08-24",
+    "verification_status": "USER_DECLARED_NOT_MACHINE_REVERIFIED_IN_THIS_UPDATE",
+    "described_as_written_under_authorized_frozen_schema": true,
+    "prior_zero_annotation_state_preserved_as_historical_premutation_state": true,
+    "manual_retrofit_to_comment_schema_v3_authorized": false,
+    "comment_only_migration_authorized": false,
+    "independent_migration_audit_completed": false
   },
-  "source_state": {
-    "live_annotation_count": 0,
-    "zotero_annotation_mutation_performed": false,
-    "pdf_mutation_performed": false,
-    "mutation_authorized": false
+  "comment_generation": {
+    "rule_schema": "NUS_COMMENT_GENERATION_RULE_V3",
+    "status": "FROZEN",
+    "supersedes": "NUS_COMMENT_GENERATION_RULE_V2",
+    "nature_visible_only_for": ["ENGINEERING_OUTPUT", "SUSTAINABLE_OUTCOME"],
+    "engineering_output_pattern": "Engineering output here is {nature} : EXACT AUTHOR WORDING",
+    "sustainability_output_pattern": "Sustainability output here is {environmental|economic|social|integrated} : EXACT AUTHOR WORDING",
+    "other_seven_roles_use_simple_labels": true,
+    "nature_requires_direct_output_support": true,
+    "colors_unchanged": true,
+    "zotero_annotation_tags": [],
+    "annotation_count_must_not_increase_because_of_label_revision": true
   },
   "preprocessing_inventory": {
     "abstract_claims": 11,
@@ -62,21 +73,23 @@
     "content_exactness": "REFERENCE_ONLY_FORMULA_TEXT_NOT_RECOVERED",
     "visual_review_required": true
   },
-  "authorization": {
-    "R": true,
-    "C": true,
-    "A": true,
-    "H": false,
-    "F": true,
-    "S": true,
-    "G": false,
-    "SCHEMA": false,
-    "DW": false,
-    "DA": false,
-    "U0": false,
-    "W": false
+  "comment_schema_v3_migration_gate": {
+    "required_only_if_retrofitting_existing_nus48_annotations": true,
+    "required_sequence": [
+      "schema_revision",
+      "regression_validation",
+      "explicit_authorization",
+      "controlled_comment_only_migration",
+      "independent_audit"
+    ],
+    "current_status": "NOT_AUTHORIZED"
   },
-  "next_gate": "HUMAN_SCIENTIFIC_REVIEW",
+  "human_approval": {
+    "status_in_prior_archive": false,
+    "status_in_current_update": "NOT_EXPLICITLY_RESTATED",
+    "do_not_infer_from_native_annotation_count": true
+  },
+  "next_gate": "COMMENT_SCHEMA_V3_MIGRATION_DECISION_OR_GENERALIZATION_WITH_V3",
   "preprocessing_frozen": true,
   "engine_change_rule": "new observed failure -> general invariant -> permanent regression -> historical retest"
 }
