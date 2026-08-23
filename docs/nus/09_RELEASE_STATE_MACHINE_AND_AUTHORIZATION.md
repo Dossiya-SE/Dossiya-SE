@@ -1,6 +1,6 @@
 # Release State Machine and Mutation Authorization
 
-## Release state machine
+## Generic release state machine
 
 ```text
 UNVERIFIED
@@ -58,9 +58,9 @@ If any term is false:
 W = 0
 ```
 
-## Current NUS-48 state
+## Historical NUS-48 premutation state
 
-After V8 `58/58 PASS`:
+At V8 `58/58 PASS` the state was still premutation:
 
 ```text
 R = true
@@ -75,39 +75,108 @@ D_W = false
 D_A = false
 U_0 = false
 W = false
+live_annotation_count = 0
 ```
 
-Thus `58/58 PASS` is compatible with and requires:
+This remains the authoritative historical premutation state.
+
+## Automated adjudication state
+
+Subsequent automated scientific adjudication advanced the scientific fields, including completion of claim, focality/citation, surface and transformation adjudication at the automated level.
+
+That automated state did not itself constitute human approval or writer authorization.
+
+## Later declared native-annotation state
+
+A later project update states that NUS-48 now has:
 
 ```text
-mutation_authorized = false
+33 native Zotero annotations
 ```
 
-## Hypothetical final state before mutation
+written under the then-authorized frozen schema.
 
-Before any Zotero write, construct the entire proposed state:
+The GitHub archive treats this as a **later state transition**, not as a reason to rewrite the historical premutation state.
+
+The current update does not include the explicit human-approval, geometry, writer, zero-delta and independent-audit artifacts that led to the 33-annotation state. Therefore the archive records:
 
 ```text
-Z* = Z_current ∪ A_approved
+current native count = 33 (user-declared)
+historical write described as authorized = yes
+full write/audit provenance in this archive = incomplete
+```
+
+No missing gate is silently reconstructed.
+
+## Schema evolution creates a new authorization domain
+
+`NUS_COMMENT_GENERATION_RULE_V3` is now frozen for generic use.
+
+It changes visible output comments from prior role-only wording to:
+
+```text
+Engineering output here is [nature] : [exact author wording]
+Sustainability output here is [nature] : [exact author wording]
+```
+
+for supported output natures.
+
+Even if the existing 33 annotations were validly written under the prior schema, V3 retrofit is a **new mutation** and requires a new authorization path.
+
+Define a migration authorization:
+
+```text
+W_migrate = R_m ∧ SCHEMA_m ∧ PLAN_m ∧ H_m ∧ D_Wm ∧ D_Am ∧ U_m
+```
+
+where at minimum:
+
+- `R_m` = migration regression suite PASS;
+- `SCHEMA_m` = V3 migration schema PASS;
+- `PLAN_m` = exact comment-only migration plan complete;
+- `H_m` = explicit migration authorization;
+- `D_Wm` = migration writer dry-run PASS;
+- `D_Am` = independent migration auditor dry-run PASS;
+- `U_m` = zero unresolved critical migration ambiguity.
+
+Until all terms are true:
+
+```text
+W_migrate = false
+```
+
+Therefore:
+
+```text
+existing 33 annotations ≠ authorization to edit their comments
+```
+
+## Hypothetical final state before any new mutation
+
+Before any new write or migration, construct the proposed state:
+
+```text
+Z* = Z_current ∪ Δ_approved
 ```
 
 Validate `Z*` as a whole for:
 
 - source identity;
-- annotation count derived from approved evidence;
+- annotation cardinality;
 - unique anchors;
 - role/color consistency;
-- exact author-verbatim comments;
+- exact author-verbatim comment suffixes;
+- output nature grounding where V3 applies;
 - zero annotation tags;
 - ontology consistency;
 - ledger links;
-- no duplicate geometry;
-- no unresolved critical evidence;
+- geometry stability;
+- no duplicate state;
 - provenance and transformation lineage.
 
 ## Transactional writer requirements
 
-The writer must be transactional and idempotent.
+Any writer or migration writer must be transactional and idempotent.
 
 First run:
 
@@ -126,7 +195,7 @@ If the second run changes the state, freeze is prohibited.
 
 ## Independent final audit
 
-After mutation and zero-delta rerun, an independent auditor must verify at least:
+After any mutation and zero-delta rerun, an independent auditor must verify at least:
 
 - expected annotation count;
 - no duplicates;
@@ -134,8 +203,17 @@ After mutation and zero-delta rerun, an independent auditor must verify at least
 - correct role/color;
 - exact/approved geometry;
 - zero annotation tags;
-- unchanged PDF SHA-256;
+- unchanged focal PDF SHA-256;
 - complete evidence-ledger links;
 - writer/auditor report integrity.
 
-Only then may the state become `FROZEN`.
+For V3 comment migration, the auditor must additionally prove that:
+
+```text
+annotation count did not increase because of schema change
+source wording after colon is unchanged
+only supported output natures were added
+non-output roles remain simple labels
+```
+
+Only then may a migrated state become frozen under V3.
