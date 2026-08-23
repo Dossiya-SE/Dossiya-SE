@@ -1,0 +1,61 @@
+{
+  "schema": "NUS_FROZEN37_CURRENT_STATE_V1",
+  "as_of": "2026-08-23",
+  "paper": {
+    "paper_id": 48,
+    "canonical_id": "NUS-48",
+    "title": "Combined effect of jute fiber and corn cob ash on sustainability assessment and mechanical properties of roller compacted concrete using RSM modelling",
+    "doi": "10.1038/s41598-024-81345-7",
+    "parent_key": "LYG93FY6",
+    "attachment_key": "3UL86A9R",
+    "pdf_sha256": "bd27b10cb8110d7a48a0b28923e3e0cc2adc0fb2d7e416fb25714f8483db3609"
+  },
+  "premutation": {
+    "protocol": "NUS48_ONESHOT_PREMUTATION_READINESS_V8",
+    "status": "PASS_PREMUTATION_READY_FOR_SCIENTIFIC_ADJUDICATION",
+    "master": {"pass": 33, "total": 33},
+    "independent_certification": {"pass": 24, "total": 24},
+    "orchestration": {"pass": 1, "total": 1},
+    "automated_checks_pass": 58,
+    "automated_checks_total": 58
+  },
+  "source_state": {
+    "live_annotation_count": 0,
+    "zotero_annotation_mutation_performed": false,
+    "pdf_mutation_performed": false,
+    "mutation_authorized": false
+  },
+  "preprocessing_inventory": {
+    "abstract_claims": 11,
+    "physical_tables": 8,
+    "physical_figures": 19,
+    "physical_equations": 7,
+    "physical_objects_total": 34,
+    "known_v2r2_body_claims": 421,
+    "known_v2r2_excluded_reference_lines": 242,
+    "known_v2r2_excluded_boilerplate_lines": 64
+  },
+  "equation_2_exactness": {
+    "detection_mode": "REFERENCE_ANCHORED_NON_TEXT_OR_FRAGMENTED",
+    "formula_text": null,
+    "content_exactness": "REFERENCE_ONLY_FORMULA_TEXT_NOT_RECOVERED",
+    "visual_review_required": true
+  },
+  "authorization": {
+    "R": true,
+    "C": true,
+    "A": false,
+    "H": false,
+    "F": false,
+    "S": false,
+    "G": false,
+    "SCHEMA": false,
+    "DW": false,
+    "DA": false,
+    "U0": false,
+    "W": false
+  },
+  "next_gate": "SCIENTIFIC_ADJUDICATION",
+  "preprocessing_frozen": true,
+  "engine_change_rule": "new observed failure -> general invariant -> permanent regression -> historical retest"
+}
