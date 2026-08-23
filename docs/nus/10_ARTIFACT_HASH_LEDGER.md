@@ -66,9 +66,6 @@ SHA-256: 646e312f7e74f878575e5cb2d6d5ec82d5023a13afce793ce5fa4086ca1dfd9e
 
 NUS48_ONESHOT_PREMUTATION_READINESS_V8.txt
 SHA-256: b4b4ba0448607e531f07eee39d30a6a114172d9f6aed3a2a080bc992f13f3988
-
-NUS_MASTER_FAILURE_REGRESSION_CORPUS_V10.json
-SHA-256: 6f75090892388582800b407c1efb8f094802fbaef72d3570f61d8d300f736ccc
 ```
 
 ## Automated scientific adjudication V1
@@ -87,6 +84,32 @@ NUS48_AUTOMATED_SCIENTIFIC_ADJUDICATION_REVIEW_PACKAGE_V1.zip
 SHA-256: 8e9645b3b559a278ade368b4ae6db31dc6930793d40e3965deea3f6133714093
 ```
 
+## Final Output-Nature V2 freeze authorities
+
+```text
+NUS-48 Output-Nature Schema V2
+SHA-256: ec29431fd42469679e6442314bca0b97ad22c77bb2a1c226fd29f0ebdb3688e4
+
+Migration report
+SHA-256: c5eb4caa289342d6fe2f9aa8703fe5476507f208584b0dadd69f186d0e1272f0
+
+Post-write audit
+SHA-256: bab0e14ee3a49b3b0c878f8f0dc997882119097c25976ba712c5e260610d930c
+
+Final freeze manifest
+SHA-256: e5a798f1099a76835ba964ecf1376bd69b8d5cd504c7029f08378cfd0ea90009
+```
+
+## Permanent regression corpus V17
+
+```text
+NUS_MASTER_FAILURE_REGRESSION_CORPUS_V17.json
+Version: 17.0.0
+Test count: 47
+Range: T001–T047
+SHA-256: 8595d33856aba1228a4aaeb512505241b3a8c88011a251d92ecbed16183ed77a
+```
+
 ## Hash-governance rules
 
 1. Do not trust a filename as identity.
@@ -95,3 +118,4 @@ SHA-256: 8e9645b3b559a278ade368b4ae6db31dc6930793d40e3965deea3f6133714093
 4. Persisted artifacts and returned objects must not silently diverge.
 5. Cross-component manifests must be checked against actual persisted bytes.
 6. Historical artifacts are immutable evidence history; create successor versions instead of overwriting them.
+7. Final freeze hashes supersede earlier provisional/migration-preflight records for current-state authority while preserving those historical files for audit chronology.
