@@ -1,0 +1,48 @@
+% Canonical mathematical communication adapter for PRK-1.0.
+% This file specifies the model; it is not an independent numerical solver.
+
+\[
+\dot{x}(t)
+=
+-Dx(t)
++A\tanh(x(t))
++r\odot\bigl(1-x(t)\bigr)
+-h(t)
++Bu(t),
+\qquad
+x(t)\in[0,1]^n.
+\]
+
+\[
+\tilde{x}_{t+1}
+=
+x_t+\Delta t\left[
+-Dx_t
++A\tanh(x_t)
++r\odot(1-x_t)
+-h_t
++Bu_t
+\right].
+\]
+
+\[
+\boxed{
+ x_{t+1}=\Pi_{[0,1]^n}\!\left(\tilde{x}_{t+1}\right)
+}
+\]
+
+\[
+\bigl[\Pi_{[0,1]^n}(z)\bigr]_i
+=
+\min\{1,\max\{0,z_i\}\}.
+\]
+
+\[
+R_{\mathrm{AUC}}
+=
+\frac{1}{T}\sum_{t=1}^{T} w^{\top}x_t,
+\qquad
+w_i\ge0,
+\qquad
+\sum_i w_i=1.
+\]
