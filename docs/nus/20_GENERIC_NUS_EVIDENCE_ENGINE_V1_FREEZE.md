@@ -1,24 +1,45 @@
-# Generic NUS Evidence Engine V1 — Freeze Specification
+# Generic NUS Evidence Engine V1.0.1 — Frozen Maintenance Baseline
 
 ## Status
 
 ```text
-GENERIC NUS EVIDENCE ENGINE V1 = FROZEN FOR GENERALIZATION TESTING
+NUS Evidence Engine V1.0.1 = FROZEN FOR GENERALIZATION TESTING
 ```
 
-The engine is frozen from the accumulated lessons of NUS-172 and NUS-48 through permanent regression T047.
+V1.0.1 is the frozen maintenance successor to V1.0.0. It preserves the NUS-172/NUS-48 scientific and mutation architecture and adds only permanent regression `T048`, discovered during the NUS-18 identity locator.
 
-## Purpose
-
-The engine must now demonstrate that the NUS methodology is reusable across structurally different papers without another bespoke engineering cycle.
-
-The target transition is:
+## Release authority
 
 ```text
-NUS-48 closure
-→ Generic NUS Evidence Engine V1 freeze
-→ NUS-18 generalization test #1
+Package: NUS_EVIDENCE_ENGINE_V1.0.1_FROZEN.zip
+Package SHA-256:
+2ca74e7e99b3862e54d626ea90f37f9011112c1a08c0d77a5cdd9c9dfed74ee6
+
+Freeze-manifest SHA-256:
+9d09ae86a416cdabbd7b0c8bc9c7a165c34b7329837cb360f7427ccc41c6df2b
+
+Static controls: 19/19 PASS
+Regression range: T001–T048
 ```
+
+## Maintenance change — T048
+
+Permanent invariant:
+
+```text
+Any Zotero API that may return a Promise must be awaited before filtering,
+iteration, array assertions, or field access.
+```
+
+The triggering failure was read-only:
+
+```text
+TypeError: all.filter is not a function
+```
+
+caused by using `Zotero.Items.getAll(...)` without resolving the asynchronous return first.
+
+The repair did not alter scientific ontology, source interpretation, writer logic, or NUS-48 frozen evidence.
 
 ## Frozen scientific architecture
 
@@ -56,16 +77,14 @@ DECISION
 
 ## Frozen visible-comment rule
 
-Only output roles expose scientific nature visibly.
+Only output roles expose scientific nature visibly:
 
 ```text
 Engineering output here is [engineering nature] : [exact author wording]
 Sustainability output here is [environmental/economic/social/integrated] : [exact author wording]
 ```
 
-The other seven roles retain simple labels.
-
-Nature is evidence-grounded and never guessed.
+The other seven roles retain simple labels. Nature is evidence-grounded and never guessed.
 
 ## Frozen engineering-output natures
 
@@ -131,9 +150,7 @@ geometry
 
 ## Frozen mutation safety
 
-The writer remains fail-closed and transactional.
-
-Required principles:
+The writer remains fail-closed and transactional:
 
 ```text
 exact-author wording
@@ -160,48 +177,44 @@ second-pass Δ = 0
 
 ## Frozen regression architecture
 
-Permanent regression history:
-
 ```text
-T001 → T047
+T001 → T048
 ```
 
 The engine must preserve all applicable regressions when processing later papers.
 
-Key general invariants include:
+## NUS-18 generalization result so far
 
-- focality before role;
-- complete physical-surface inventory;
-- citation-safe quantitative extraction;
-- deterministic metadata/front-matter exclusion;
-- representation-boundary metadata rechecks;
-- dependency-closed regressions;
-- native-schema cross-component contracts;
-- explicit JSON runtime contracts;
-- comment-only migration controls;
-- delta-set migration-state classification;
-- fail-closed mutation;
-- independent auditing;
-- zero-delta post-write certification.
+NUS-18 Phase 1 discovery has now passed with no engine change:
+
+```text
+PASS_READ_ONLY_DISCOVERY
+pages = 16
+lines = 1466
+surface anchors = 22
+live annotations = 0
+PDF mutation = false
+Zotero mutation = false
+```
+
+The source map preserves the PDF's extracted page labels exactly, including the transition from `8` to `97`; the engine must not silently renumber them.
 
 ## Generic paper interface
 
-A new paper should normally require only identity/configuration changes, for example:
+NUS-18 demonstrates the intended minimal interface:
 
 ```json
 {
   "paper_id": 18,
-  "parent_key": "<resolved Zotero parent key>",
-  "attachment_key": "<resolved Zotero attachment key>",
-  "expected_pdf_sha256": "<resolved focal PDF SHA-256>"
+  "parent_key": "BZZGBD2I",
+  "attachment_key": "Z8UEF2GH",
+  "expected_pdf_sha256": "826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839"
 }
 ```
 
 No paper-specific scientific conclusion may be encoded into generic engine code.
 
 ## Generalization success criterion
-
-For paper `i`:
 
 ```text
 SUCCESS_i = scientifically defensible result
@@ -230,8 +243,6 @@ Assurance ↑
 
 ## Change-control rule
 
-The engine is frozen for NUS-18 generalization.
-
 A new engine modification is permitted only if NUS-18 demonstrates a genuinely new general failure class:
 
 ```text
@@ -242,4 +253,4 @@ observed failure
 → controlled engine successor
 ```
 
-Different titles, methods, values, journal layouts, figure counts, or conclusions are not by themselves grounds for engine redesign.
+Different titles, methods, values, journal layouts, figure counts, page labels, or conclusions are not by themselves grounds for engine redesign.
