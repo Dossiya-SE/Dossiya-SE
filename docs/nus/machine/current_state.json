@@ -1,55 +1,67 @@
 {
-  "schema": "NUS_FROZEN37_CURRENT_STATE_V5",
+  "schema": "NUS_FROZEN37_CURRENT_STATE_V6",
   "as_of": "2026-08-24",
-  "paper": {
+  "frozen_calibration_paper": {
     "paper_id": 48,
     "canonical_id": "NUS-48",
-    "title": "Combined effect of jute fiber and corn cob ash on sustainability assessment and mechanical properties of roller compacted concrete using RSM modelling",
-    "doi": "10.1038/s41598-024-81345-7",
-    "parent_key": "LYG93FY6",
-    "attachment_key": "3UL86A9R",
-    "pdf_sha256": "bd27b10cb8110d7a48a0b28923e3e0cc2adc0fb2d7e416fb25714f8483db3609"
-  },
-  "historical_premutation_state": {
-    "protocol": "NUS48_ONESHOT_PREMUTATION_READINESS_V8",
-    "status": "PASS_PREMUTATION_READY_FOR_SCIENTIFIC_ADJUDICATION",
-    "automated_checks_pass": 58,
-    "automated_checks_total": 58,
-    "live_annotation_count_at_premutation_freeze": 0,
-    "pdf_mutation_performed": false
-  },
-  "final_state": {
     "status": "FROZEN_OUTPUT_NATURE_V2",
     "annotation_count": 33,
     "highlight_count": 20,
     "region_count": 13,
     "tag_count": 0,
-    "comment_migration_count": 13,
-    "engineering_output_natures": {
-      "mechanical": 6
-    },
-    "sustainability_output_natures": {
-      "environmental": 4,
-      "economic": 3,
-      "social": 0,
-      "integrated": 0
-    },
     "internal_second_pass_delta": 0,
     "idempotency": "PASS",
-    "unauthorized_change_count": 0,
-    "pdf_mutation_performed": false,
-    "other_zotero_mutation_performed": false,
-    "frozen": true
-  },
-  "final_authorities": {
     "pdf_sha256": "bd27b10cb8110d7a48a0b28923e3e0cc2adc0fb2d7e416fb25714f8483db3609",
-    "output_nature_schema_v2_sha256": "ec29431fd42469679e6442314bca0b97ad22c77bb2a1c226fd29f0ebdb3688e4",
-    "migration_report_sha256": "c5eb4caa289342d6fe2f9aa8703fe5476507f208584b0dadd69f186d0e1272f0",
-    "post_write_audit_sha256": "bab0e14ee3a49b3b0c878f8f0dc997882119097c25976ba712c5e260610d930c",
     "freeze_manifest_sha256": "e5a798f1099a76835ba964ecf1376bd69b8d5cd504c7029f08378cfd0ea90009",
-    "regression_corpus": "NUS_MASTER_FAILURE_REGRESSION_CORPUS_V17",
-    "regression_corpus_sha256": "8595d33856aba1228a4aaeb512505241b3a8c88011a251d92ecbed16183ed77a",
-    "regression_count": 47
+    "do_not_modify": true
+  },
+  "generic_engine": {
+    "version": "NUS_EVIDENCE_ENGINE_V1.0.1",
+    "status": "FROZEN_FOR_GENERALIZATION_TESTING",
+    "package_sha256": "2ca74e7e99b3862e54d626ea90f37f9011112c1a08c0d77a5cdd9c9dfed74ee6",
+    "freeze_manifest_sha256": "9d09ae86a416cdabbd7b0c8bc9c7a165c34b7329837cb360f7427ccc41c6df2b",
+    "static_controls": {"pass": 19, "total": 19, "fail": 0},
+    "regression_from": "T001",
+    "regression_through": "T048",
+    "T048": "Any Zotero API that may return a Promise must be awaited before filtering, iteration, array assertions, or field access."
+  },
+  "active_generalization_test": {
+    "paper_id": 18,
+    "canonical_id": "NUS-18",
+    "role": "GENERALIZATION_TEST_1",
+    "identity": {
+      "parent_key": "BZZGBD2I",
+      "attachment_key": "Z8UEF2GH",
+      "doi": "10.1016/j.buildenv.2014.10.013",
+      "pdf_sha256": "826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839"
+    },
+    "phase1": {
+      "protocol": "NUS_GENERIC_READONLY_DISCOVERY_V1",
+      "status": "PASS_READ_ONLY_DISCOVERY",
+      "live_annotation_count": 0,
+      "page_count": 16,
+      "total_lines": 1466,
+      "surface_anchor_count": 22,
+      "page_lines_file": "NUS18_GENERIC_PHASE1_PAGE_LINES_V1.json",
+      "page_lines_sha256": "649705ed0423bbed4835de10479e3fa63c3c37428e980cc273c62c5fa8bc3b86",
+      "report_file": "NUS18_GENERIC_READONLY_DISCOVERY_V1.json",
+      "report_sha256": "c8a0d3de9e27b04a2e53225ea6710cef072b0339c7d1b61fecf1fb1932c08258",
+      "zotero_mutation_performed": false,
+      "pdf_mutation_performed": false
+    },
+    "source_observations": {
+      "references_boundary": {"page_index": 14, "page_label": "103", "line_index": 36},
+      "page_labels_must_remain_verbatim": true,
+      "nonsequential_page_label_transition_observed": "8 -> 97",
+      "surface_anchor_count_is_not_final_object_count": true
+    },
+    "generalization_metrics_so_far": {
+      "paper_specific_scientific_engine_changes": 0,
+      "new_permanent_runtime_regressions": 1,
+      "new_runtime_regression_ids": ["T048"]
+    },
+    "target_outcome": "PASS_GENERALIZATION_NO_ENGINE_CHANGE_AFTER_MAINTENANCE_BASELINE",
+    "next_gate": "GENERIC_PHASE2_ATOMIC_CLAIMS_AND_SURFACE_INVENTORY"
   },
   "visible_comment_contract": {
     "engineering_output": "Engineering output here is {evidence-grounded engineering nature} : EXACT AUTHOR WORDING",
@@ -58,24 +70,7 @@
     "other_seven_roles_use_simple_labels": true,
     "colors_role_based": true,
     "zotero_annotation_tags": [],
-    "exact_author_wording_required": true,
-    "nature_must_be_evidence_grounded": true
+    "exact_author_wording_required": true
   },
-  "regression_boundary": {
-    "from": "T001",
-    "through": "T047",
-    "T047": "migration-state classification uses the mutable delta set only"
-  },
-  "freeze_rule": "Do not modify NUS-48 further unless a genuinely new scientific requirement is formally introduced.",
-  "generic_engine": {
-    "version": "NUS_EVIDENCE_ENGINE_V1",
-    "status": "FROZEN_FOR_GENERALIZATION_TESTING"
-  },
-  "next_paper": {
-    "paper_id": 18,
-    "canonical_id": "NUS-18",
-    "role": "GENERALIZATION_TEST_1",
-    "target_outcome": "PASS_GENERALIZATION_NO_ENGINE_CHANGE"
-  },
-  "next_gate": "NUS18_IDENTITY_VERIFICATION_AND_GENERALIZATION_TEST_1"
+  "mutation_authorized": false
 }
