@@ -3,8 +3,9 @@
 **Project:** Construction sustainability review / Frozen-37 evidence workflow  
 **Repository snapshot date:** 2026-08-23  
 **Current paper:** NUS-48 — *Combined effect of jute fiber and corn cob ash on sustainability assessment and mechanical properties of roller compacted concrete using RSM modelling*  
-**Current state:** `PASS_PREMUTATION_READY_FOR_SCIENTIFIC_ADJUDICATION`  
-**Current automated assurance:** `58/58 PASS`  
+**Premutation state:** `PASS_PREMUTATION_READY_FOR_SCIENTIFIC_ADJUDICATION` (`58/58 PASS`)  
+**Current scientific state:** `PASS_AUTOMATED_SCIENTIFIC_ADJUDICATION_READY_FOR_HUMAN_REVIEW`  
+**Current gate:** `HUMAN_SCIENTIFIC_REVIEW`  
 **Zotero live annotations for NUS-48:** `0`  
 **Mutation authorized:** `false`
 
@@ -18,43 +19,65 @@ This directory is the version-controlled external evidence/governance record for
 4. [`03_ZOTERO_EVIDENCE_STANDARD.md`](03_ZOTERO_EVIDENCE_STANDARD.md) — visible annotation contract, labels, colors, verbatim-comment rule, zero-tag rule.
 5. [`04_NUS172_CALIBRATION_HISTORY.md`](04_NUS172_CALIBRATION_HISTORY.md) — first calibration/reference paper and frozen lessons.
 6. [`05_NUS48_FULL_DEVELOPMENT_HISTORY.md`](05_NUS48_FULL_DEVELOPMENT_HISTORY.md) — complete NUS-48 evolution from unannotated PDF through V8 `58/58 PASS`.
-7. [`06_NUS48_CURRENT_58_OF_58_STATE.md`](06_NUS48_CURRENT_58_OF_58_STATE.md) — current authoritative NUS-48 premutation state.
+7. [`06_NUS48_CURRENT_58_OF_58_STATE.md`](06_NUS48_CURRENT_58_OF_58_STATE.md) — frozen authoritative NUS-48 premutation state.
 8. [`07_REGRESSION_CORPUS_T001_T039.md`](07_REGRESSION_CORPUS_T001_T039.md) — permanent failure knowledge and current executable families.
 9. [`08_GENERIC_ENGINE_SCALING_STRATEGY.md`](08_GENERIC_ENGINE_SCALING_STRATEGY.md) — NUS Evidence Engine scaling and generalization criteria.
 10. [`09_RELEASE_STATE_MACHINE_AND_AUTHORIZATION.md`](09_RELEASE_STATE_MACHINE_AND_AUTHORIZATION.md) — release gates and mutation authorization equation.
 11. [`10_ARTIFACT_HASH_LEDGER.md`](10_ARTIFACT_HASH_LEDGER.md) — known controlled artifacts and hashes.
-12. [`11_NEXT_SCIENTIFIC_ADJUDICATION.md`](11_NEXT_SCIENTIFIC_ADJUDICATION.md) — exact next work after preprocessing freeze.
-13. [`machine/current_state.json`](machine/current_state.json) — machine-readable current NUS-48 state.
-14. [`machine/frozen37_order.json`](machine/frozen37_order.json) — machine-readable canonical corpus order.
+12. [`11_NEXT_SCIENTIFIC_ADJUDICATION.md`](11_NEXT_SCIENTIFIC_ADJUDICATION.md) — scientific-adjudication work specification preserved as the pre-adjudication plan.
+13. [`12_ARCHIVE_PROVENANCE_AND_COVERAGE.md`](12_ARCHIVE_PROVENANCE_AND_COVERAGE.md) — archive boundaries and external evidence objects.
+14. [`13_NUS48_AUTOMATED_SCIENTIFIC_ADJUDICATION_V1.md`](13_NUS48_AUTOMATED_SCIENTIFIC_ADJUDICATION_V1.md) — current automated scientific adjudication result.
+15. [`14_HUMAN_SCIENTIFIC_REVIEW_DECISION_RECORD.md`](14_HUMAN_SCIENTIFIC_REVIEW_DECISION_RECORD.md) — pending explicit human approval/revision record.
+16. [`15_T040_CANDIDATE_ADMINISTRATIVE_METADATA_REGRESSION.md`](15_T040_CANDIDATE_ADMINISTRATIVE_METADATA_REGRESSION.md) — candidate generic-engine lesson discovered during adjudication.
+17. [`machine/current_state.json`](machine/current_state.json) — machine-readable current NUS-48 state.
+18. [`machine/frozen37_order.json`](machine/frozen37_order.json) — machine-readable canonical corpus order.
 
-## Governing interpretation
+## Current governing interpretation
 
-`58/58 PASS` proves premutation readiness only:
+The frozen preprocessing result remains:
 
 ```text
-PDF
-→ extraction
-→ atomic claims
-→ physical surfaces
-→ master regression
-→ independent certification
-→ orchestration contract
+33/33 Master
+24/24 Independent
+1/1 Orchestration
+58/58 total
 ```
 
-It does **not** prove final focality, final role assignment, surface inclusion, geometry, human approval, writer safety, or Zotero mutation authorization.
+Automated scientific adjudication has now additionally resolved:
 
-The next legitimate transition is:
+```text
+426 atomic claims
+11 abstract/body relationships
+34 physical surfaces
+3 sustainability transformations
+3 preserved author inconsistencies
+24 text candidates
+31 region candidates
+55 total generated candidates
+```
+
+The 55 candidates are not a target `N_final` and remain subject to visual verification, human review, geometry, and final redundancy analysis.
+
+The current transition is:
 
 ```text
 PREPROCESSING FREEZE
-→ NUS-48 SCIENTIFIC ADJUDICATION
+→ AUTOMATED SCIENTIFIC ADJUDICATION
+→ HUMAN SCIENTIFIC REVIEW
 ```
 
-No further preprocessing change is justified by preference alone. A new change requires:
+No Zotero mutation is authorized. Human approval must be explicit and cannot be inferred from automated adjudication.
+
+## Engine-change governance
+
+No further preprocessing change is justified by preference alone. A new permanent engine change requires:
 
 ```text
 new observed failure
 → general invariant
+→ implementation
 → permanent regression
 → historical retest
 ```
+
+`T040` is currently a candidate lesson only and has not yet been promoted to the permanent regression corpus.
