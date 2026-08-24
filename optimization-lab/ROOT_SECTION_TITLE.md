@@ -1,1 +1,0 @@
-Optimization · Uncertainty · Bounded Decision
