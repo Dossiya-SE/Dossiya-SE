@@ -1,0 +1,118 @@
+{
+  "protocol": "NUS_ZOTERO_DIRECT_RUN_JAVASCRIPT_STANDARD_V1",
+  "version": "1.0.0",
+  "status": "FROZEN_REUSABLE_CODING_STANDARD",
+  "scope": "NUS Frozen-37 and future Zotero Run JavaScript generation",
+  "execution_surface": "Tools -> Developer -> Run JavaScript -> Run as async function",
+  "default_architecture": "ONE_SELF_CONTAINED_DIRECT_RUN_PROGRAM",
+  "required_header": "Conforms to: NUS_ZOTERO_DIRECT_RUN_JAVASCRIPT_STANDARD_V1",
+  "required_rules": {
+    "top_level_await": true,
+    "explicit_top_level_return": true,
+    "outer_async_iife_forbidden": true,
+    "mutation_default_false": true,
+    "fail_closed": true,
+    "await_possible_promises_before_consumption": true,
+    "identity_before_science": true,
+    "pdf_sha256_before_science_or_write": true,
+    "annotation_tags_exactly_zero": true,
+    "exact_author_wording_after_comment_label": true,
+    "output_nature_visible_only_on_output_roles": true,
+    "native_reader_adapter_isolated": true,
+    "native_reader_adapter_capability_tested": true,
+    "rollback_identity_registered_immediately_after_creation": true,
+    "pdf_bytes_must_remain_unchanged": true,
+    "zero_delta_second_pass_required": true,
+    "secondary_audit_required": true,
+    "human_scientific_approval_separate_from_final_schema_approval": true,
+    "complete_document_page_label_authority_required": true,
+    "per_page_label_fallback_forbidden": true
+  },
+  "recommended_modes": [
+    "STATUS",
+    "DISCOVER",
+    "EXTRACT",
+    "ADJUDICATE_CHECK",
+    "GEOMETRY",
+    "PREFLIGHT",
+    "AUDIT",
+    "WRITE",
+    "FREEZE_CHECK"
+  ],
+  "roles": {
+    "PURPOSE": "#6b7280",
+    "INTERVENTION": "#2ea8e5",
+    "INPUT": "#0072b2",
+    "ENGINEERING_METHOD": "#a28ae5",
+    "ENGINEERING_OUTPUT": "#5fb236",
+    "SUSTAINABILITY_TRANSFORMATION": "#f19837",
+    "SUSTAINABILITY_METHOD": "#e56eee",
+    "SUSTAINABLE_OUTCOME": "#ff6666",
+    "DECISION": "#ffd400"
+  },
+  "engineering_output_natures": [
+    "mechanical",
+    "fresh-state",
+    "physical",
+    "durability",
+    "transport/permeability",
+    "thermal",
+    "structural/functional",
+    "fracture/damage",
+    "time-dependent",
+    "constructability/production",
+    "energy"
+  ],
+  "sustainability_output_natures": [
+    "environmental",
+    "economic",
+    "social",
+    "integrated"
+  ],
+  "scientific_invariants": [
+    "FOCALITY_BEFORE_ROLE",
+    "INPUT <= USED_IN_FOCAL_METHOD",
+    "P + S != P->S",
+    "P->S <= EXPLICIT_TRANSFORMATION",
+    "ENV + ECO + SOC != INT",
+    "EXTERNAL -> reject",
+    "MIXED -> split or abstain",
+    "UNCLEAR -> abstain",
+    "Role != Nature != Metric != Result"
+  ],
+  "page_label_rule": {
+    "required_fields": [
+      "page_index",
+      "physical_page",
+      "authoritative_page_label",
+      "page_label_authority_mode"
+    ],
+    "authoritative_query": "PDFViewerApplication.pdfDocument.getPageLabels()",
+    "forbidden_pattern": "view._pageLabels?.[pageIndex] || (pageIndex + 1)"
+  },
+  "mutation_gate": [
+    "identity_pass",
+    "pdf_hash_pass",
+    "scientific_approval",
+    "surface_complete",
+    "page_label_authority",
+    "geometry_proven",
+    "final_schema_approval",
+    "writer_dryrun_pass",
+    "auditor_dryrun_pass",
+    "mutation_authorized"
+  ],
+  "frozen37_current_boundary": {
+    "NUS-172": "31 current native annotations; ZERO_DELTA/AUDIT only",
+    "NUS-48": "33 current native annotations; ZERO_DELTA/AUDIT only",
+    "NUS-18": "25 human-approved proposed records; WRITE FORBIDDEN until T051 + geometry + final schema",
+    "remaining_34": "WRITE FORBIDDEN until current-engine re-extraction/adjudication"
+  },
+  "regression_boundary": {
+    "permanent_current": "T001-T049",
+    "candidate": ["T050", "T051"]
+  },
+  "reuse_directive": "Whenever future NUS Zotero Run JavaScript code is generated, this standard is the default governing contract unless an explicitly versioned successor supersedes it. Do not silently weaken frozen invariants.",
+  "template_path": "docs/nus/runtime/NUS_ZOTERO_DIRECT_RUN_TEMPLATE_V1.txt",
+  "standard_document_path": "docs/nus/30_ZOTERO_DIRECT_RUN_JAVASCRIPT_STANDARD_V1.md"
+}
