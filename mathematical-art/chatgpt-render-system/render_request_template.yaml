@@ -1,0 +1,175 @@
+version: "1.1"
+schema_id: "CHATGPT_RESEARCH_RENDER_REQUEST_V1_1"
+
+request_metadata:
+  request_id: "render_request_001"
+  project_name: "rigorous_scientific_research_framework"
+  request_type: "render"
+  requested_by: "user"
+  timestamp_utc: null
+
+controller:
+  standard: "CHATGPT-RENDER-CONTROLLER-V1.1"
+  rigor_level: "high"
+  fail_closed: true
+  deterministic_preference: true
+
+intent:
+  title: "A Mathematical–Computational Framework for Rigorous Scientific Research"
+  objective: "Render a scientifically meaningful, mathematically generated, editable and reproducible research framework."
+  audience: ["researchers", "scientific reviewers", "engineering practitioners"]
+
+scientific_scope:
+  stage_order_locked: true
+  included_stages:
+    - real_problem
+    - evidence
+    - gap_architecture
+    - research_question
+    - system_and_assumptions
+    - mathematical_formulation
+    - computation
+    - verification
+    - calibration
+    - validation
+    - sensitivity_analysis
+    - uncertainty_quantification
+    - comparison
+    - scientific_results
+    - industrial_implication
+    - limitations_and_bounded_conclusion
+
+epistemic_status_vocabulary:
+  - USER_SPECIFIED
+  - COMPUTED
+  - OBSERVED
+  - PUBLISHED
+  - CALIBRATED
+  - DERIVED
+  - ASSUMED
+  - SYNTHETIC
+  - ILLUSTRATIVE
+  - TO_BE_VALIDATED
+
+editability:
+  editable_master_required: true
+
+  canonical_master:
+    format: "svg"
+    filename: "poster_EDITABLE.svg"
+    authoritative_for:
+      - layout
+      - vector_geometry
+      - text
+      - arrows
+      - panel_boundaries
+      - scientific_plot_placement
+
+  convenience_editable_output:
+    enabled: true
+    format: "pptx"
+    filename: "poster_EDITABLE.pptx"
+    note: "Convenience-editable derivative; canonical SVG remains authoritative where PowerPoint cannot preserve an advanced construct exactly."
+
+  preserve:
+    text_as_editable_objects: true
+    equations_as_source_latex: true
+    plots_as_vector_when_possible: true
+    layout_as_vector_objects: true
+    scientific_data: true
+    mathematical_parameters: true
+    rendering_configuration: true
+    object_ids_when_possible: true
+
+  rasterization:
+    allow_when_technically_required: true
+    require_source_generator: true
+    prohibit_untraceable_rasterization: true
+    required_provenance:
+      - source_equations
+      - parameters
+      - data
+      - generator_code
+      - random_seed_if_applicable
+      - camera_configuration_if_applicable
+      - render_configuration
+      - generated_raster_hash
+
+  source_bundle:
+    required: true
+    filename: "SOURCE_BUNDLE.zip"
+
+mathematical_source:
+  equation_file: "equations.tex"
+  preserve_editable_source: true
+  symbolic_verification_where_applicable: true
+
+research_data:
+  filename: "research_data.json"
+  require_parameter_provenance: true
+  prohibit_status_relabeling: true
+
+rendering:
+  canonical_vector_format: "svg"
+  preview_raster_format: "png"
+  publication_format: "pdf"
+  convenience_editable_format: "pptx"
+
+qa:
+  require_scientific_qa: true
+  require_mathematical_qa: true
+  require_visual_qa: true
+  require_editability_qa: true
+  require_reproducibility_qa: true
+  require_reproduction_test: true
+  fail_on_missing_required_artifact: true
+  fail_on_untraceable_raster: true
+
+reference_fidelity:
+  enabled: false
+  metrics:
+    - layout_displacement
+    - bounding_box_error
+    - text_equation_presence
+    - ssim
+    - pixel_error
+  rule: "Visual similarity does not establish mathematical or scientific equivalence."
+
+output_files:
+  required:
+    - "poster_EDITABLE.svg"
+    - "poster_EDITABLE.pptx"
+    - "poster.png"
+    - "poster.pdf"
+    - "render_request.yaml"
+    - "equations.tex"
+    - "research_data.json"
+    - "manifest.json"
+    - "qa_report.json"
+    - "SOURCE_BUNDLE.zip"
+
+manifest:
+  filename: "manifest.json"
+  required_fields:
+    - request_id
+    - schema_id
+    - timestamp_utc
+    - renderer_versions
+    - input_hashes
+    - equation_source_hash
+    - research_data_hash
+    - output_hashes
+    - qa_status
+    - reproduction_status
+
+acceptance:
+  declaration: "RENDER_PASS"
+  all_required:
+    scientific_qa: "PASS"
+    mathematical_qa: "PASS"
+    visual_qa: "PASS"
+    editable_svg_exists: true
+    editable_pptx_exists: true
+    source_bundle_exists: true
+    provenance_complete: true
+    reproduction_test: "PASS"
