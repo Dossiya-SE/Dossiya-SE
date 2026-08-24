@@ -34,32 +34,6 @@ jobs:
         run: python -m pip install -e './optimization-lab[test]'
       - name: Run mathematical regression tests
         run: pytest optimization-lab/tests
-      - name: Validate knowledge graph JSON
-        run: python - <<'PY'
-          import json
-          from pathlib import Path
-          p = Path('docs/knowledge-graphs/iee574_bayesian_knowledge_graph_v1.json')
-          g = json.loads(p.read_text())
-          ids = [n['id'] for n in g['nodes']]
-          assert len(ids) == len(set(ids)), 'duplicate graph node IDs'
-          known = set(ids)
-          dangling = [(e['source'], e['target']) for e in g['edges'] if e['source'] not in known or e['target'] not in known]
-          assert not dangling, f'dangling edges: {dangling}'
-          lectures = [n for n in g['nodes'] if n['id'].startswith('IEE574-')]
-          assert len(lectures) == 17, f'expected 17 lectures, got {len(lectures)}'
-          print(f'PASS: {len(lectures)} lectures, {len(g["nodes"])} total nodes, {len(g["edges"])} edges')
-          PY
-      - name: Validate source-anchor coverage
-        run: python - <<'PY'
-          from pathlib import Path
-          text = Path('docs/knowledge-graphs/OR_SOURCE_ANCHORS_V1.md').read_text()
-          required = [
-              'LP-STANDARD-001','CVX-SET-002','LP-BFS-004','LP-REDUCEDCOST-005',
-              'LP-WEAKDUAL-010','LP-STRONGDUAL-011','LP-CS-012','LP-SENS-013',
-              'IP-RELAX-002','IP-BOUND-003','NF-BALANCE-001','NF-MINCOST-002',
-              'NLP-LAGRANGE-002','NLP-KKT-003','NLP-QP-004'
-          ]
-          missing = [x for x in required if x not in text]
-          assert not missing, f'missing P0 source anchors: {missing}'
-          print(f'PASS: {len(required)} P0 anchors present')
-          PY
+      - name: Run fail-closed architecture audit
+        working-directory: optimization-lab
+        run: python audit_decision_math.py
