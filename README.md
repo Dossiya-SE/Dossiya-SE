@@ -71,7 +71,7 @@ Profile wording, credential status and future public changes are governed in the
 
 The mathematics universe is a curated architecture of mathematics **actually used, implemented, or explicitly specified** across the profile. It is not a claim to contain all mathematics or to demonstrate equal mastery of every field.
 
-The professional display contract is governed by the **[Mathematical Presentation Standard V3](mathematical-art/MATHEMATICAL_PRESENTATION_STANDARD.md)**, **[Adaptive Visual System V4](mathematical-art/ADAPTIVE_VISUAL_SYSTEM_V4.md)**, **[Profile Formula Atlas](mathematical-art/PROFILE_FORMULA_ATLAS.md)** and **[Machine-readable Formula Registry](mathematical-art/formula_registry.json)**.
+The professional display contract is governed by the **[Mathematical Presentation Standard V3](mathematical-art/MATHEMATICAL_PRESENTATION_STANDARD.md)**, **[Adaptive Visual System V4](mathematical-art/ADAPTIVE_VISUAL_SYSTEM_V4.md)**, **[Profile Rendering Architecture V6](mathematical-art/PROFILE_RENDERING_ARCHITECTURE_V6.md)**, **[Profile Formula Atlas](mathematical-art/PROFILE_FORMULA_ATLAS.md)** and **[Machine-readable Formula Registry](mathematical-art/formula_registry.json)**. The V6 renderer registry assigns each public visual its own motion, interaction and verification boundary rather than treating animation as a universal improvement.
 
 ### From evidence to bounded decision
 
@@ -113,6 +113,8 @@ The profile explicitly separates **source differential geometry**, **geometric v
 
 Using curvature, geodesics, or manifold language for infrastructure recovery is treated as a **research transfer requiring a formally defined state-space geometry**—metric, differentiability, distance, curvature meaning, estimator and validation must be declared rather than inferred from visual resemblance.
 
+The **[Verified Geometry Engine V6](mathematical-art/geometry-engine/README.md)** now provides an executable reference geometry layer: parameterized surface, coordinate tangents, unit normal, first fundamental form, Gaussian curvature, renderer-neutral exchange, regression tests and a fail-closed verification gate. Its reference torus is a computational differential-geometry demonstrator only; it does not promote application state spaces to manifolds by analogy.
+
 ---
 
 ## Scientific computing and mathematical art
@@ -121,7 +123,9 @@ Using curvature, geodesics, or manifold language for infrastructure recovery is 
   <img src="assets/math-art/computational-stack-v5.svg" width="96%" alt="Adaptive scientific-computing stack from symbolic and numerical mathematics through verification, rendering and publication" />
 </p>
 
-Primary roles across the profile include **Python** for numerical integration, statistics, UQ, data engineering and orchestration; **Julia/MATLAB/C++/Rust/CUDA** where numerical or performance roles are justified; **Mathematica/SymPy/SageMath** for symbolic work; **Lean/mathlib/Coq** for formal-verification directions; and **LaTeX/TikZ/Asymptote/PyVista/VTK/Blender/WebGL** for verified mathematical presentation and scientific rendering.
+Primary roles across the profile include **Python/NumPy/SciPy** for numerical integration, statistics, UQ, geometry and orchestration; **SymPy/Mathematica/SageMath** for symbolic work; **Geomstats** for explicit manifold algorithms where a manifold is actually defined; **Julia/MATLAB/C++/Rust/CUDA** where numerical or performance roles are justified; **Lean/mathlib/Coq** for formal-verification directions; **Matplotlib/PyVista/VTK** for scientific rendering; **Manim** for mathematical motion; **Blender/Geometry Nodes** for cinematic rendering downstream of verified data; **Three.js/WebGPU/WebGL/D3** for interactive browser mathematics; and **LaTeX/TikZ/Asymptote/SVG** for vector publication surfaces.
+
+The renderer architecture follows one rule: **compute and verify first; render second**. A renderer may change camera, typography, tessellation density, lighting or interaction, but it may not silently change the underlying equations, topology, field values, evidence state or scientific interpretation. Per-visual policies are machine-readable in the **[V6 Renderer Registry](mathematical-art/geometry-engine/renderer_registry_v6.json)**.
 
 The [**Polyglot Resilience Atlas**](polyglot-resilience/README.md) maps a bounded kernel across programming paradigms. Language presence is **not** used as a claim of expert proficiency.
 
@@ -136,6 +140,7 @@ The [**Polyglot Resilience Atlas**](polyglot-resilience/README.md) maps a bounde
 A professional mathematical object carries more than typography: provenance, assumptions, symbols/units, repository role, implementation, verification, validation and the bounded claim must remain distinguishable.
 
 <p align="center">
+  <a href="https://github.com/Dossiya-SE/Dossiya-SE/actions/workflows/verified-geometry-audit.yml"><img src="https://github.com/Dossiya-SE/Dossiya-SE/actions/workflows/verified-geometry-audit.yml/badge.svg" alt="Verified geometry audit" /></a>
   <a href="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/verify.yml"><img src="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/verify.yml/badge.svg" alt="Mathematical portfolio verification" /></a>
   <a href="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/production-audit.yml"><img src="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/production-audit.yml/badge.svg" alt="Production portfolio audit" /></a>
   <a href="https://github.com/Dossiya-SE/africa-energy-dignity/actions/workflows/python-app.yml"><img src="https://github.com/Dossiya-SE/africa-energy-dignity/actions/workflows/python-app.yml/badge.svg" alt="Africa Energy Dignity verification" /></a>
@@ -150,7 +155,7 @@ The complete 16-repository mathematics-rendering inventory, correction register,
   <img src="assets/math-art/evidence-maturity-map-v5.svg" width="96%" alt="Adaptive portfolio evidence-maturity map separating implementation maturity from external or empirical validation maturity" />
 </p>
 
-**Circle = evidence-bearing research implementation. Square = prototype/scaffold.** Position is descriptive, qualitative, and not certification, ranking, or a numeric research-quality score.
+**Circle = evidence-bearing research implementation. Square = prototype/scaffold.** Position is descriptive, qualitative, and not certification, ranking, or a numeric research-quality score. V6 explicitly prohibits temporal animation of this map unless longitudinal evidence is introduced; motion cannot manufacture a time dimension that the evidence does not contain.
 
 </details>
 
