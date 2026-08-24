@@ -1,1 +1,0 @@
-One root-profile section will be added after fetching the current README: Optimization, Uncertainty and Bounded Decision. It will link the professional SVG, executable lab, and source anchors without reproducing course content.
