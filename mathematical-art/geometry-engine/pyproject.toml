@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dossiya-profile-geometry"
+version = "0.1.0"
+description = "Verified mathematical geometry source layer for Dossiya-SE profile visuals"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+geometry = ["scipy>=1.14,<2", "sympy>=1.13,<2", "geomstats>=2.8,<3"]
+render = ["manim>=0.21,<0.22", "pyvista>=0.46,<0.47"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
