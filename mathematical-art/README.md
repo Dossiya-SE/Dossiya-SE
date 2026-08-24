@@ -1,42 +1,68 @@
-# Mathematical Art and Professional Formula System — V3
+# Mathematical Art and Verified Rendering System — V6
 
 This directory is the **profile-level visual mathematics control layer** for `Dossiya-SE`.
 
-The objective is not decoration and not capability inflation. Every equation, curve, surface, vector field, color field, network, uncertainty region, and topology graphic must correspond to a declared mathematical or scientific object.
+Its purpose is not decoration and not capability inflation. Every equation, curve, surface, vector field, color field, network, uncertainty region, topology graphic, and animation must correspond to a declared mathematical, scientific, or explicitly conceptual object.
 
 ## Governing files
 
-- [`MATHEMATICAL_PRESENTATION_STANDARD.md`](MATHEMATICAL_PRESENTATION_STANDARD.md) — typography, notation, semantics, evidence states, accessibility, and cross-repository display rules.
-- [`PROFILE_FORMULA_ATLAS.md`](PROFILE_FORMULA_ATLAS.md) — human-readable mathematical atlas across the profile.
+- [`MATHEMATICAL_PRESENTATION_STANDARD.md`](MATHEMATICAL_PRESENTATION_STANDARD.md) — notation, semantics, evidence states, accessibility, and scientific-integrity rules.
+- [`ADAPTIVE_VISUAL_SYSTEM_V4.md`](ADAPTIVE_VISUAL_SYSTEM_V4.md) — adaptive light/dark vector rendering contract.
+- [`PROFILE_RENDERING_ARCHITECTURE_V6.md`](PROFILE_RENDERING_ARCHITECTURE_V6.md) — renderer assignment and promotion rules for every major profile visual.
+- [`PROFILE_FORMULA_ATLAS.md`](PROFILE_FORMULA_ATLAS.md) — human-readable profile formula atlas.
 - [`formula_registry.json`](formula_registry.json) — machine-readable formula identity/provenance registry.
+- [`geometry-engine/`](geometry-engine/) — verified geometry source, numerical invariants, renderer-neutral exchange, Manim source, tests, and renderer registry.
 
-## New V3 profile visuals
+## Current public visual surfaces
 
-<p align="center">
-  <img src="../assets/math-art/profile-mathematics-universe-v3.svg" width="100%" alt="Profile-wide mathematics universe connecting foundations, dynamics, networks, inference, viability and decision mathematics" />
-</p>
+The GitHub profile currently exposes the V5 adaptive visual set. V6 adds the computation/verification architecture behind those visuals without falsely relabeling conceptual graphics as computed evidence.
 
-[`profile-mathematics-universe-v3.svg`](../assets/math-art/profile-mathematics-universe-v3.svg) maps the mathematical families actually used or explicitly specified across the portfolio. It is not presented as a map of all mathematics.
+| Profile surface | Current asset | V6 treatment |
+|---|---|---|
+| Profile header | `profile-header-v5.svg` | canonical adaptive SVG + bounded Manim signature source |
+| Professional trajectory | `engineering-to-mathematics-resilience-trajectory-v5.svg` | descriptive chronology; motion may reveal order only |
+| Mathematics universe | `profile-mathematics-universe-v5.svg` | adaptive SVG + declared D3/Three.js/Manim interaction contract |
+| Research operating system | `research-operating-system-v5.svg` | adaptive SVG + process-order Manim trace |
+| Differential geometry | `differential-geometry-foundations-v5.svg` | adaptive SVG + verified geometry engine, P3 promotion target |
+| Computational stack | `computational-stack-v5.svg` | static-first; implementation links preferred over animation |
+| Formula evidence lattice | `formula-evidence-lattice-v5.svg` | provenance motion permitted only if evidence states remain invariant |
+| Evidence maturity map | `evidence-maturity-map-v5.svg` | static; temporal motion prohibited without longitudinal evidence |
 
-<p align="center">
-  <img src="../assets/math-art/differential-geometry-viability-v3.svg" width="100%" alt="Differential geometry source mathematics separated from infrastructure viability research transfer" />
-</p>
+The machine-readable form of this table is [`geometry-engine/renderer_registry_v6.json`](geometry-engine/renderer_registry_v6.json).
 
-[`differential-geometry-viability-v3.svg`](../assets/math-art/differential-geometry-viability-v3.svg) separates three layers that must never be conflated:
+## Verified-geometry pipeline
 
-```text
-source differential geometry
-≠ geometric metaphor
-≠ formally defined research-state geometry
+```math
+\boxed{
+\text{mathematical definition}
+\rightarrow
+\text{computation}
+\rightarrow
+\text{invariant/residual verification}
+\rightarrow
+\text{renderer-neutral exchange}
+\rightarrow
+\text{faithful renderer}
+}
 ```
 
-<p align="center">
-  <img src="../assets/math-art/formula-evidence-lattice-v3.svg" width="100%" alt="Formula evidence lattice from provenance through verification and validation to bounded decisions" />
-</p>
+The first implemented reference object is a torus demonstrator. The source layer computes its parameterization, coordinate tangents, unit normal, first fundamental form, Gaussian curvature, sampled fields, and a renderer-neutral exchange. CI checks unit-normal and orthogonality invariants, metric symmetry/positive determinant, and analytic derivatives against independent central finite differences.
 
-[`formula-evidence-lattice-v3.svg`](../assets/math-art/formula-evidence-lattice-v3.svg) encodes the provenance and scientific-status contract for displayed mathematics.
+The demonstrator is **source/computed geometry only**. It does not establish that infrastructure, finance, or other application state spaces are Riemannian manifolds.
 
----
+## Renderer roles
+
+| Tool family | Permitted role |
+|---|---|
+| SymPy / NumPy / SciPy / Geomstats | mathematical computation and manifold algorithms |
+| Matplotlib / PyVista / VTK | scientific plotting and 3-D fields |
+| Manim | mathematical motion downstream of verified values |
+| Blender / Geometry Nodes | cinematic rendering downstream of verified geometry |
+| Three.js / WebGPU / WebGL / D3 | browser interaction and navigation |
+| TikZ / Asymptote / SVG | publication and GitHub vector surfaces |
+| p5.js / Processing / Houdini | explicitly identified generative mathematical art |
+
+A renderer may change presentation variables. It may not silently change equations, topology, field values, evidence state, or scientific interpretation.
 
 ## Visual grammar
 
@@ -55,80 +81,6 @@ source differential geometry
 
 A visual arrow means a **mapping, dependency, flow, or model relation** unless causal evidence is separately established.
 
----
-
-## Canonical profile equations
-
-### Coupled dynamics — [M]
-
-```math
-\dot{x}_i
-=
-f_i(x_i,\theta_i)
-+
-\sum_{j\ne i}g_{ij}(x_i,x_j,G_{ij},\theta_{ij})
-+
-B_i u_i
-+
-\xi_i.
-```
-
-### Observation and inverse problem — [M]
-
-```math
-y_k=h(x_k,\theta)+\varepsilon_k,
-\qquad
-\pi(\theta\mid y)\propto L(y\mid\theta)\pi_0(\theta).
-```
-
-### Reliability — [M]
-
-```math
-P_f
-=
-\mathbb P\!\left[g(X,H)\le0\right].
-```
-
-### Service resilience — [M]
-
-```math
-\mathcal R_T
-=
-\frac{1}{T}
-\int_0^T
-\frac{S(t)}{S_0}\,dt.
-```
-
-### Viability — [M]
-
-```math
-\mathcal V
-=
-\left\{
-x_0:\exists u(\cdot),\;x(t)\in\mathcal K,\;\forall t\in[0,T]
-\right\}.
-```
-
-### Differential geometry — [S]
-
-```math
-g_{\alpha\beta}=\partial_\alpha\mathbf r\cdot\partial_\beta\mathbf r,
-\qquad
-K=\frac{eg-f^2}{EG-F^2}.
-```
-
-```math
-\frac{d^2u^\alpha}{ds^2}
-+
-\Gamma^\alpha_{\beta\gamma}
-\frac{du^\beta}{ds}
-\frac{du^\gamma}{ds}=0.
-```
-
-The differential-geometry source layer is anchored to the Sochi foundation registered in `Dossiya-SE/Dossiya-SE-Dossiya-SE`.
-
----
-
 ## Evidence-state tags
 
 ```text
@@ -142,39 +94,35 @@ The differential-geometry source layer is anchored to the Sochi foundation regis
 [T] target
 ```
 
-A displayed formula retains its status when reused across repositories.
-
----
+A displayed object retains its evidence state across SVG, animation, website, presentation, and publication renderers.
 
 ## Design rules
 
-1. **Equation before ornament:** the visual object must have a mathematical role.
-2. **Semantics before color:** color encodes a declared quantity or category.
-3. **Source before attribution:** theorem/source mathematics is never presented as original research.
-4. **Assumptions before optimization:** objective and constraints must be explicit.
-5. **Uncertainty before confidence:** bands/tubes require a stated construction.
-6. **Geometry before metaphor:** metric/curvature language requires a formal geometric object.
-7. **Verification before promotion:** invariant or cross-method checks should exist when feasible.
-8. **Validation before decision:** software correctness is not empirical validity.
-9. **Accessibility by default:** all SVGs include `<title>`, `<desc>`, scalable `viewBox`, and non-color-only meaning.
-10. **Vector-first delivery:** SVG/PDF/TeX are preferred for publication-grade mathematical diagrams; raster is reserved for data images/rendered scenes.
-
----
+1. **Equation before ornament.**
+2. **Semantics before color.**
+3. **Source before attribution.**
+4. **Assumptions before optimization.**
+5. **Uncertainty before confidence.**
+6. **Geometry before metaphor.**
+7. **Verification before promotion.**
+8. **Validation before decision.**
+9. **Accessibility by default.**
+10. **Vector-first delivery for canonical GitHub/publication diagrams.**
+11. **Motion must encode declared change; decorative motion is not evidence.**
+12. **One mathematical object should feed multiple renderers rather than being reimplemented independently.**
 
 ## Rendering hierarchy
 
 ```text
 P0 conceptual
 → P1 formula-consistent
-→ P2 numerically generated
+→ P2 numerically/symbolically generated
 → P3 invariant-checked
 → P4 source-reproduced
 → P5 empirically validated
 ```
 
 Visual sophistication does not change evidence level.
-
----
 
 ## Profile mathematics pipeline
 
@@ -195,5 +143,3 @@ Visual sophistication does not change evidence level.
 \text{Bounded Decision}
 }
 ```
-
-This pipeline is the common visual and mathematical language of the profile.
