@@ -1,0 +1,39 @@
+name: verified-geometry-audit
+
+on:
+  push:
+    paths:
+      - 'mathematical-art/geometry-engine/**'
+      - 'assets/math-art/**'
+      - 'profile-improvement/assets/**'
+      - '.github/workflows/verified-geometry-audit.yml'
+  pull_request:
+    paths:
+      - 'mathematical-art/geometry-engine/**'
+      - 'assets/math-art/**'
+      - 'profile-improvement/assets/**'
+      - '.github/workflows/verified-geometry-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verified-geometry:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mathematical-art/geometry-engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install verified geometry core
+        run: python -m pip install -e '.[test]'
+      - name: Run geometry invariants and exchange regressions
+        run: python -m pytest
+      - name: Audit profile renderer registry
+        run: python audit_geometry_engine.py
+      - name: Syntax-check optional Manim scene source
+        run: python -m py_compile scenes/profile_scenes.py
