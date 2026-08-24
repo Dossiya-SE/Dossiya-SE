@@ -1,0 +1,27 @@
+{
+  "schema": "FGMVS_REPOSITORY_REGISTRY_V1",
+  "version": "1.0",
+  "status": "FROZEN_B01",
+  "account": "Dossiya-SE",
+  "repository_count": 16,
+  "rule": "public visual registry contains role/lifecycle metadata only; no private implementation detail",
+  "repositories": [
+    {"id":"repo.profile","name":"Dossiya-SE","visibility":"public","role":"front_door_profile_governance","layer":"FRONT_DOOR"},
+    {"id":"repo.portfolio","name":"dossiya-se.github.io","visibility":"public","role":"interactive_mathematical_research_portfolio","layer":"FRONT_DOOR"},
+    {"id":"repo.energy","name":"africa-energy-dignity","visibility":"public","role":"energy_systems_research_platform","layer":"RESEARCH_LAB"},
+    {"id":"repo.diffgeom","name":"Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience","visibility":"public","role":"differential_geometry_mathematical_art_resilience_research","layer":"RESEARCH_LAB"},
+    {"id":"repo.thesis","name":"MSE-thesis","visibility":"private","role":"thesis_research_laboratory","layer":"RESEARCH_LAB"},
+    {"id":"repo.interface_review","name":"infrastructure-interface-resilience-review","visibility":"private","role":"interface_resilience_evidence_synthesis","layer":"RESEARCH_LAB"},
+    {"id":"repo.finance","name":"Dossiya-SE-mscfe-quantitative-finance-lab","visibility":"private","role":"quantitative_finance_academic_lab","layer":"RESEARCH_LAB"},
+    {"id":"repo.rgan","name":"responsible-gold-access-network-rgan","visibility":"private","role":"applied_systems_design_research","layer":"RESEARCH_LAB"},
+    {"id":"repo.math_ecosystem","name":"Dossiya-SE-Dossiya-SE","visibility":"public","role":"mathematics_research_ecosystem","layer":"METHODS_TOOLS"},
+    {"id":"repo.math_surface_demo","name":"Math-Surface-Engineer-Demo","visibility":"public","role":"mathematics_publication_validation_demo","layer":"METHODS_TOOLS"},
+    {"id":"repo.fin_model_risk","name":"dossiyadakou-mac-project","visibility":"public","role":"financial_econometrics_model_risk_learning","layer":"LEARNING_ARCHIVE"},
+    {"id":"repo.python_engineering","name":"Python-for-rapid-engineering-solution","visibility":"public","role":"engineering_eda_coursework_archive","layer":"LEARNING_ARCHIVE"},
+    {"id":"repo.solar_stem","name":"testasu","visibility":"public","role":"solar_stem_product_prototype","layer":"APPLIED_PROTOTYPE"},
+    {"id":"repo.kudo","name":"Kudo-IA","visibility":"private","role":"scholarship_platform_prototype","layer":"APPLIED_PROTOTYPE"},
+    {"id":"repo.dsml","name":"Data-Science-an-Machine-Learning","visibility":"public","role":"data_science_machine_learning_learning_scaffold","layer":"LEARNING_ARCHIVE"},
+    {"id":"repo.chatbot","name":"chatbot","visibility":"public","role":"streamlit_api_integration_learning_artifact","layer":"LEARNING_ARCHIVE"}
+  ],
+  "layer_order": ["FRONT_DOOR","RESEARCH_LAB","METHODS_TOOLS","APPLIED_PROTOTYPE","LEARNING_ARCHIVE"]
+}
