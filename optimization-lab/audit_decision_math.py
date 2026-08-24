@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import re
 import sys
 
 from decision_math import (
@@ -36,6 +37,18 @@ REQUIRED_ANCHORS = {
     "NLP-QP-004",
 }
 
+SEMANTIC_COLOR_TOKENS = {
+    "--source",
+    "--state",
+    "--interface",
+    "--uncertainty",
+    "--viability",
+    "--decision",
+    "--computed",
+}
+
+MIN_SOURCE_FONT_SIZE = 30.0  # 30 * 768 / 1920 = 12 px at the target README width.
+
 
 def main() -> int:
     failures: list[str] = []
@@ -61,6 +74,19 @@ def main() -> int:
         if token not in svg:
             failures.append(f"professional decision SVG missing {token}")
 
+    missing_colors = sorted(token for token in SEMANTIC_COLOR_TOKENS if token not in svg)
+    if missing_colors:
+        failures.append(f"professional decision SVG missing semantic color tokens: {missing_colors}")
+
+    font_sizes = [float(x) for x in re.findall(r'font-size="([0-9]+(?:\.[0-9]+)?)"', svg)]
+    if not font_sizes:
+        failures.append("professional decision SVG has no explicit font sizes")
+    elif min(font_sizes) < MIN_SOURCE_FONT_SIZE:
+        failures.append(
+            f"professional decision SVG minimum font size {min(font_sizes):g} "
+            f"is below {MIN_SOURCE_FONT_SIZE:g} source units"
+        )
+
     for name, certificate in (
         ("LP primal/dual", lp_primal_dual_certificate()),
         ("min-cost flow", min_cost_flow_certificate()),
@@ -76,7 +102,10 @@ def main() -> int:
             print(f"FAIL: {failure}")
         return 1
 
-    print("PASS: professional optimization/decision architecture is structurally and numerically closed.")
+    print(
+        "PASS: professional optimization/decision architecture is source-anchored, "
+        "legible, semantically encoded, and numerically closed."
+    )
     return 0
 
 
