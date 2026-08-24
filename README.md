@@ -12,6 +12,7 @@
   <a href="#professional-and-research-trajectory">Trajectory</a> ·
   <a href="#research-programmes">Research programmes</a> ·
   <a href="#mathematics-as-a-research-operating-system">Mathematics</a> ·
+  <a href="#optimization-uncertainty-and-bounded-decision">Decision science</a> ·
   <a href="#scientific-computing-and-mathematical-art">Scientific computing</a> ·
   <a href="#evidence-and-validation">Evidence</a> ·
   <a href="#research-and-engineering-repositories">Repositories</a> ·
@@ -22,20 +23,17 @@
 
 My work connects **engineering practice, energy and infrastructure systems, quantitative finance, mathematical physics, scientific computing and sustainable resilience**. The common objective is to formulate complex systems through explicit state, dynamics, coupling, uncertainty, constraints, viability, recovery and decision structures rather than relying on visual or verbal analogy alone.
 
-The portfolio is governed by one invariant:
+The portfolio is governed by a non-compensatory evidence invariant:
 
 ```math
 \boxed{
-\text{claim strength}
+L(C)
 \le
-\text{source/evidence strength}
-+\text{mathematical specification}
-+\text{computational verification}
-+\text{relevant validation}
+\min_{k\in\mathcal R(C)} L_k
 }
 ```
 
-A sophisticated formula, visualization, programming language, simulation, or passing test is **not** presented as stronger evidence than it actually is.
+Here `L(C)` is the maturity permitted for a public claim and `\mathcal R(C)` is the set of support dimensions required by that claim. **A claim cannot exceed its weakest required support dimension.** Mathematical sophistication, computational verification, visual quality or software breadth cannot compensate for missing empirical evidence, missing assumptions, or an unvalidated model when those are required.
 
 ## Professional and research trajectory
 
@@ -71,7 +69,7 @@ Profile wording, credential status and future public changes are governed in the
 
 The mathematics universe is a curated architecture of mathematics **actually used, implemented, or explicitly specified** across the profile. It is not a claim to contain all mathematics or to demonstrate equal mastery of every field.
 
-The professional display contract is governed by the **[Mathematical Presentation Standard V3](mathematical-art/MATHEMATICAL_PRESENTATION_STANDARD.md)**, **[Adaptive Visual System V4](mathematical-art/ADAPTIVE_VISUAL_SYSTEM_V4.md)**, **[Profile Rendering Architecture V6](mathematical-art/PROFILE_RENDERING_ARCHITECTURE_V6.md)**, **[Profile Formula Atlas](mathematical-art/PROFILE_FORMULA_ATLAS.md)** and **[Machine-readable Formula Registry](mathematical-art/formula_registry.json)**. The V6 renderer registry assigns each public visual its own motion, interaction and verification boundary rather than treating animation as a universal improvement.
+The professional display contract is governed by the **[Mathematical Presentation Standard V3](mathematical-art/MATHEMATICAL_PRESENTATION_STANDARD.md)**, **[Adaptive Visual System V4](mathematical-art/ADAPTIVE_VISUAL_SYSTEM_V4.md)**, **[Profile Rendering Architecture V6](mathematical-art/PROFILE_RENDERING_ARCHITECTURE_V6.md)**, **[Professional Decision Architecture V1](docs/knowledge-graphs/PRO_PROFILE_DECISION_ARCHITECTURE_V1.md)**, **[Profile Formula Atlas](mathematical-art/PROFILE_FORMULA_ATLAS.md)** and **[Machine-readable Formula Registry](mathematical-art/formula_registry.json)**. The V6 renderer registry assigns each public visual its own motion, interaction and verification boundary rather than treating animation as a universal improvement.
 
 ### From evidence to bounded decision
 
@@ -103,6 +101,24 @@ Displayed mathematical objects use the evidence states `[S] source-grounded`, `[
 
 ---
 
+## Optimization, uncertainty and bounded decision
+
+<p align="center">
+  <img src="assets/math-art/optimization-decision-system-v6.svg" width="96%" alt="Adaptive operations-research and Bayesian decision architecture connecting explicit models, feasible geometry, optimality verification, posterior uncertainty, acquisition and bounded decisions" />
+</p>
+
+The decision-science layer now separates two complementary mathematical rails instead of treating all optimization as one generic node.
+
+**Deterministic operations research** follows **problem/data → variables, objective and constraints → feasible geometry/conservation → optimization → primal-dual or KKT certificate → sensitivity/post-optimal analysis**. The source inventory covers linear programming, convexity, basic feasible solutions, simplex structure, duality, sensitivity, integer relaxation/branch-and-bound, network flow and nonlinear constrained optimization.
+
+**Bayesian sequential optimization** follows **observations → probabilistic surrogate/posterior uncertainty → acquisition rule → new evaluation → update**. It is used as a distinct uncertainty-aware decision mechanism rather than as a replacement for deterministic optimization.
+
+The **[Optimization and Decision Verification Lab](optimization-lab/README.md)** provides executable benchmark certificates for LP primal/dual feasibility and complementary slackness, min-cost-flow conservation and bounds, an equality-constrained convex-QP KKT system, and compact EI/UCB regression semantics. The **[IEE 574 + Bayesian Knowledge Graph](docs/knowledge-graphs/IEE574_BAYESIAN_KNOWLEDGE_GRAPH_V1.md)** controls prerequisite/dependency structure, while **[OR Source Anchors V1](docs/knowledge-graphs/OR_SOURCE_ANCHORS_V1.md)** records the exact instructional slide/page anchors used for deterministic-OR promotion.
+
+Course-derived mathematics is presented as **source-grounded instructional mathematics `[S]`**, not as original research. A verified optimization benchmark establishes a mathematical certificate for that benchmark; it does **not** by itself validate an infrastructure, finance, or other real-world decision model.
+
+---
+
 ## Differential geometry and mathematical art
 
 <p align="center">
@@ -123,7 +139,7 @@ The **[Verified Geometry Engine V6](mathematical-art/geometry-engine/README.md)*
   <img src="assets/math-art/computational-stack-v5.svg" width="96%" alt="Adaptive scientific-computing stack from symbolic and numerical mathematics through verification, rendering and publication" />
 </p>
 
-Primary roles across the profile include **Python/NumPy/SciPy** for numerical integration, statistics, UQ, geometry and orchestration; **SymPy/Mathematica/SageMath** for symbolic work; **Geomstats** for explicit manifold algorithms where a manifold is actually defined; **Julia/MATLAB/C++/Rust/CUDA** where numerical or performance roles are justified; **Lean/mathlib/Coq** for formal-verification directions; **Matplotlib/PyVista/VTK** for scientific rendering; **Manim** for mathematical motion; **Blender/Geometry Nodes** for cinematic rendering downstream of verified data; **Three.js/WebGPU/WebGL/D3** for interactive browser mathematics; and **LaTeX/TikZ/Asymptote/SVG** for vector publication surfaces.
+Primary roles across the profile include **Python/NumPy/SciPy** for numerical integration, statistics, UQ, optimization, geometry and orchestration; **SciPy/HiGHS** for compact LP/network-flow verification benchmarks; **SymPy/Mathematica/SageMath** for symbolic work; **Geomstats** for explicit manifold algorithms where a manifold is actually defined; **Julia/MATLAB/C++/Rust/CUDA** where numerical or performance roles are justified; **Lean/mathlib/Coq** for formal-verification directions; **Matplotlib/PyVista/VTK** for scientific rendering; **Manim** for mathematical motion; **Blender/Geometry Nodes** for cinematic rendering downstream of verified data; **Three.js/WebGPU/WebGL/D3** for interactive browser mathematics; and **LaTeX/TikZ/Asymptote/SVG** for vector publication surfaces.
 
 The renderer architecture follows one rule: **compute and verify first; render second**. A renderer may change camera, typography, tessellation density, lighting or interaction, but it may not silently change the underlying equations, topology, field values, evidence state or scientific interpretation. Per-visual policies are machine-readable in the **[V6 Renderer Registry](mathematical-art/geometry-engine/renderer_registry_v6.json)**.
 
@@ -141,6 +157,7 @@ A professional mathematical object carries more than typography: provenance, ass
 
 <p align="center">
   <a href="https://github.com/Dossiya-SE/Dossiya-SE/actions/workflows/verified-geometry-audit.yml"><img src="https://github.com/Dossiya-SE/Dossiya-SE/actions/workflows/verified-geometry-audit.yml/badge.svg" alt="Verified geometry audit" /></a>
+  <a href="https://github.com/Dossiya-SE/Dossiya-SE/actions/workflows/optimization-decision-audit.yml"><img src="https://github.com/Dossiya-SE/Dossiya-SE/actions/workflows/optimization-decision-audit.yml/badge.svg" alt="Optimization and decision audit" /></a>
   <a href="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/verify.yml"><img src="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/verify.yml/badge.svg" alt="Mathematical portfolio verification" /></a>
   <a href="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/production-audit.yml"><img src="https://github.com/Dossiya-SE/dossiya-se.github.io/actions/workflows/production-audit.yml/badge.svg" alt="Production portfolio audit" /></a>
   <a href="https://github.com/Dossiya-SE/africa-energy-dignity/actions/workflows/python-app.yml"><img src="https://github.com/Dossiya-SE/africa-energy-dignity/actions/workflows/python-app.yml/badge.svg" alt="Africa Energy Dignity verification" /></a>
@@ -318,6 +335,7 @@ The complete profile formula map is maintained in the **[Profile Formula Atlas](
 - A probability requires a defined event/random object.
 - An uncertainty band requires a declared construction.
 - An optimization claim requires explicit objectives, constraints, variables, and admissibility conditions.
+- An optimization solver result is not presented as a validated real-world decision without model/data validation and, where available, mathematical optimality checks.
 - Differential-geometric language requires a defined metric/geometric structure when used as more than visualization.
 
 ### Standards-aware structure
