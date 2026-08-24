@@ -1,0 +1,6 @@
+{
+  "schema": "FGMVS_EVIDENCE_PROVENANCE_V1",
+  "evidence_state": {"S":"source-grounded","D":"derived under declared assumptions","M":"model/abstraction","C":"computed","V":"verified","E":"empirical/external evidence","H":"hypothesis/unvalidated transfer","T":"target/requirement"},
+  "provenance_class": ["USER_SPECIFIED","OBSERVED","PUBLISHED","COMPUTED","CALIBRATED","DERIVED","ASSUMED","SYNTHETIC","ILLUSTRATIVE","TO_BE_VALIDATED"],
+  "invariant": "evidence_state and provenance_class are orthogonal"
+}

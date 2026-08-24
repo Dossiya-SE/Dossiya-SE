@@ -1,0 +1,24 @@
+{
+  "schema": "FGMVS_B00_B01_QA_V1",
+  "B00": "PASS",
+  "B01": "PASS",
+  "checks": {
+    "parse_editability_contract.yaml":{"status":"PASS","detail":""},
+    "parse_object_id_schema.yaml":{"status":"PASS","detail":""},
+    "parse_render_profiles.yaml":{"status":"PASS","detail":""},
+    "parse_semantic_palette.yaml":{"status":"PASS","detail":""},
+    "parse_typography.yaml":{"status":"PASS","detail":""},
+    "parse_visual_grammar.yaml":{"status":"PASS","detail":""},
+    "palette_light_dark_all":{"status":"PASS","detail":""},
+    "palette_secondary_cues_all":{"status":"PASS","detail":""},
+    "system_safe_font_stacks":{"status":"PASS","detail":""},
+    "research_object_ids_unique":{"status":"PASS","detail":"7 unique public research object IDs"},
+    "provenance_present_all":{"status":"PASS","detail":""},
+    "evidence_state_present_all":{"status":"PASS","detail":""},
+    "equation_ids_resolve":{"status":"PASS","detail":"[]"},
+    "repository_count_16":{"status":"PASS","detail":"16"},
+    "repository_records_16":{"status":"PASS","detail":"16"},
+    "no_private_implementation_detail":{"status":"PASS","detail":"[]"},
+    "required_exact_files_exist":{"status":"PASS","detail":"[]"}
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "FGMVS_RESEARCH_OBJECT_REGISTRY_V1",
+  "version": "1.0",
+  "status": "FROZEN",
+  "objects": [
+    {"object_id":"math.graph.profile_dependency","evidence_state":"D","provenance_class":"DERIVED","source":"FGMVS architecture + declared edge registry","equation_ids":["FGMVS02-GRAPH-001","FGMVS02-ADJ-002","NET-LAPLACIAN-001","FGMVS02-FIEDLER-004"],"data_ids":["FGMVS02_MATH_DEPENDENCY_GRAPH_V1"],"generator":"FGMVS-02/generate_fgmvs02.py","promotion_level":"P2"},
+    {"object_id":"math.diffgeom.metric","evidence_state":"S","provenance_class":"PUBLISHED","source":"canonical formula registry / SOCHI-DG-2017-UPLOADED","equation_ids":["DG-METRIC-001"],"data_ids":[],"generator":"geometry-engine","promotion_level":"P3_TARGET"},
+    {"object_id":"math.diffgeom.gaussian_curvature","evidence_state":"S","provenance_class":"PUBLISHED","source":"canonical formula registry / SOCHI-DG-2017-UPLOADED","equation_ids":["DG-GAUSS-004"],"data_ids":[],"generator":"geometry-engine","promotion_level":"P3_TARGET"},
+    {"object_id":"research.model.coupled_dynamics","evidence_state":"M","provenance_class":"USER_SPECIFIED","source":"public profile research architecture","equation_ids":["DYN-COUPLED-001","DYN-HYBRID-002"],"data_ids":[],"generator":"future FGMVS-08 generator","promotion_level":"P1_P2"},
+    {"object_id":"research.uncertainty.posterior","evidence_state":"M","provenance_class":"PUBLISHED","source":"profile mathematical operating system","equation_ids":["INV-BAYES-001"],"data_ids":[],"generator":"future research-system renderer","promotion_level":"P1_P2"},
+    {"object_id":"resilience.viability.kernel","evidence_state":"M","provenance_class":"USER_SPECIFIED","source":"public thesis canonical formulation","equation_ids":["VIA-KERNEL-001"],"data_ids":[],"generator":"future FGMVS-08 generator","promotion_level":"P1_P2"},
+    {"object_id":"portfolio.repository_graph","evidence_state":"D","provenance_class":"DERIVED","source":"account repository registry snapshot","equation_ids":["FGMVS02-GRAPH-001"],"data_ids":["FGMVS_ACCOUNT_REPOSITORY_REGISTRY_SNAPSHOT_V1"],"generator":"future FGMVS-09 generator","promotion_level":"P2"}
+  ]
+}

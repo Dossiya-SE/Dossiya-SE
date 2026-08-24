@@ -1,0 +1,24 @@
+{
+  "schema": "FGMVS_ACCOUNT_REPOSITORY_REGISTRY_SNAPSHOT_V1",
+  "source": "PR #16 audit/account-repository-architecture-2026-08-23",
+  "source_status": "UNMERGED_AUDIT_SNAPSHOT",
+  "repository_count": 16,
+  "repositories": [
+    ["Dossiya-SE","public","profile + governance + mathematical presentation","FLAGSHIP_FRONT_DOOR"],
+    ["dossiya-se.github.io","public","interactive mathematical research portfolio","FLAGSHIP_FRONT_DOOR"],
+    ["africa-energy-dignity","public","applied energy-systems research platform","FLAGSHIP_RESEARCH"],
+    ["Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience","public","mathematics/resilience research platform","FLAGSHIP_RESEARCH"],
+    ["MSE-thesis","private","MSE thesis research laboratory","FLAGSHIP_RESEARCH"],
+    ["infrastructure-interface-resilience-review","private","interface-resilience evidence synthesis/research","FLAGSHIP_RESEARCH"],
+    ["Dossiya-SE-mscfe-quantitative-finance-lab","private","MScFE quantitative-finance methods laboratory","FLAGSHIP_ACADEMIC_LAB"],
+    ["responsible-gold-access-network-rgan","private","responsible-gold applied systems design","FLAGSHIP_APPLIED_PROJECT"],
+    ["Dossiya-SE-Dossiya-SE","public","mathematics research ecosystem/meta-platform","META_PLATFORM"],
+    ["Math-Surface-Engineer-Demo","public","mathematics-publication validation demonstration","SPECIALIST_TOOL"],
+    ["dossiyadakou-mac-project","public","financial econometrics/model-risk learning","SPECIALIST_LEARNING"],
+    ["Python-for-rapid-engineering-solution","public","engineering EDA coursework archive","LEARNING"],
+    ["testasu","public","Solar + STEM prototype","APPLIED_PROTOTYPE"],
+    ["Kudo-IA","private","scholarship-platform prototype","APPLIED_PROTOTYPE"],
+    ["Data-Science-an-Machine-Learning","public","data-science/machine-learning scaffold","LEARNING"],
+    ["chatbot","public","Streamlit/API integration learning artifact","LEARNING"]
+  ]
+}

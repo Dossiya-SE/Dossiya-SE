@@ -1,0 +1,9 @@
+{
+  "schema":"FGMVS_EXECUTION_GATE_V1",
+  "sequence":["B00_GLOBAL_CONTRACTS","B01_REGISTRIES_AND_TOKENS","FGMVS-02"],
+  "B00":"PASS",
+  "B01":"PASS",
+  "FGMVS-02":"PASS",
+  "next_gate":"FGMVS-03",
+  "reproduction":"PASS"
+}

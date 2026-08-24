@@ -1,0 +1,16 @@
+{
+  "schema": "FGMVS_PUBLIC_INFRASTRUCTURE_MODEL_V1",
+  "version": "1.0",
+  "status": "MODEL_ARCHITECTURE_ONLY",
+  "evidence_state": "M",
+  "provenance_class": "USER_SPECIFIED",
+  "boundary": "Public architecture only. No fabricated quantitative values; no empirical validation implied.",
+  "sectors": ["Power","Water/Drainage","Transportation","Solid Waste"],
+  "state_symbol": "x(t)",
+  "control_symbol": "u(t)",
+  "disturbance_symbol": "eta(t)",
+  "parameter_symbol": "theta",
+  "equation_ids": ["DYN-COUPLED-001","DYN-HYBRID-002","VIA-KERNEL-001"],
+  "semantic_objects": {"state":"state_dynamics","interfaces":"interface_coupling","hazard":"hazard_violation","uncertainty":"uncertainty_inference","viability":"viability_admissibility","control":"recovery_control"},
+  "prohibitions": ["no_private_implementation_detail","no_unverified_numeric_parameter","no_differential_geometry_claim_without_formal_state_geometry"]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "FGMVS_TOOL_ROLE_REGISTRY_V1",
+  "boundary": "tool presence/use is not a proficiency claim",
+  "roles": {
+    "symbolic_mathematics": ["SymPy","Mathematica","SageMath"],
+    "numerical_scientific_computing": ["NumPy","SciPy","Julia","MATLAB"],
+    "geometry_manifolds": ["Geomstats","PyVista","VTK"],
+    "scientific_plotting": ["Matplotlib","PyVista","VTK"],
+    "mathematical_animation": ["Manim"],
+    "high_performance": ["JAX","Taichi","C++","Rust","CUDA"],
+    "cinematic_rendering": ["Blender","Geometry Nodes"],
+    "interactive_web": ["Three.js","WebGPU","WebGL","D3"],
+    "publication_vector": ["LaTeX","TikZ","Asymptote","SVG","Quarto"],
+    "formal_ci_verification": ["Lean/mathlib","Coq","GitHub Actions"]
+  }
+}
