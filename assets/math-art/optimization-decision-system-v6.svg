@@ -11,25 +11,25 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif}.math{font-family:"STIX Two Mat
 </defs>
 <rect width="1920" height="600" fill="var(--bg)"/>
 <text x="960" y="58" text-anchor="middle" fill="var(--brand)" font-size="42" font-weight="800">OPTIMIZATION · UNCERTAINTY · BOUNDED DECISION</text>
-<text x="960" y="98" text-anchor="middle" fill="var(--muted)" font-size="28" font-weight="600">Model explicitly → solve transparently → verify certificates → quantify uncertainty → decide within scope</text>
+<text x="960" y="100" text-anchor="middle" fill="var(--muted)" font-size="30" font-weight="600">Model explicitly → solve transparently → verify certificates → quantify uncertainty → decide within scope</text>
 
 <!-- deterministic rail -->
 <text x="90" y="158" fill="var(--source)" font-size="30" font-weight="800">DETERMINISTIC OPERATIONS RESEARCH</text>
 <g>
   <rect x="90" y="190" width="300" height="145" rx="20" fill="var(--panel)" stroke="var(--source)" stroke-width="4"/>
   <text x="240" y="238" text-anchor="middle" fill="var(--source)" font-size="30" font-weight="800">MODEL</text>
-  <text x="240" y="280" text-anchor="middle" fill="var(--ink)" font-size="28">variables · objective</text>
-  <text x="240" y="316" text-anchor="middle" fill="var(--ink)" font-size="28">constraints · parameters</text>
+  <text x="240" y="280" text-anchor="middle" fill="var(--ink)" font-size="30">variables · objective</text>
+  <text x="240" y="318" text-anchor="middle" fill="var(--ink)" font-size="30">constraints · parameters</text>
 
   <rect x="475" y="190" width="300" height="145" rx="20" fill="var(--panel)" stroke="var(--state)" stroke-width="4"/>
   <text x="625" y="238" text-anchor="middle" fill="var(--state)" font-size="30" font-weight="800">FEASIBLE GEOMETRY</text>
-  <text x="625" y="280" text-anchor="middle" fill="var(--ink)" font-size="28">convex sets · BFS</text>
-  <text x="625" y="316" text-anchor="middle" fill="var(--ink)" font-size="28">flow balance · bounds</text>
+  <text x="625" y="280" text-anchor="middle" fill="var(--ink)" font-size="30">convex sets · BFS</text>
+  <text x="625" y="318" text-anchor="middle" fill="var(--ink)" font-size="30">flow balance · bounds</text>
 
   <rect x="860" y="190" width="300" height="145" rx="20" fill="var(--panel)" stroke="var(--viability)" stroke-width="4"/>
   <text x="1010" y="238" text-anchor="middle" fill="var(--viability)" font-size="30" font-weight="800">OPTIMALITY</text>
-  <text x="1010" y="280" text-anchor="middle" fill="var(--ink)" font-size="28">simplex · duality</text>
-  <text x="1010" y="316" text-anchor="middle" fill="var(--ink)" font-size="28">KKT · sensitivity</text>
+  <text x="1010" y="280" text-anchor="middle" fill="var(--ink)" font-size="30">simplex · duality</text>
+  <text x="1010" y="318" text-anchor="middle" fill="var(--ink)" font-size="30">KKT · sensitivity</text>
 </g>
 <g stroke="var(--computed)" stroke-width="4" marker-end="url(#arrow)">
   <line x1="405" y1="262" x2="455" y2="262"/>
@@ -41,15 +41,15 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif}.math{font-family:"STIX Two Mat
 <g>
   <rect x="90" y="435" width="300" height="115" rx="20" fill="var(--panel)" stroke="var(--uncertainty)" stroke-width="4"/>
   <text x="240" y="480" text-anchor="middle" fill="var(--uncertainty)" font-size="30" font-weight="800">POSTERIOR</text>
-  <text x="240" y="522" text-anchor="middle" fill="var(--ink)" font-size="28">mean + uncertainty</text>
+  <text x="240" y="522" text-anchor="middle" fill="var(--ink)" font-size="30">mean + uncertainty</text>
 
   <rect x="475" y="435" width="300" height="115" rx="20" fill="var(--panel)" stroke="var(--interface)" stroke-width="4"/>
   <text x="625" y="480" text-anchor="middle" fill="var(--interface)" font-size="30" font-weight="800">ACQUISITION</text>
-  <text x="625" y="522" text-anchor="middle" fill="var(--ink)" font-size="28">EI · UCB · next sample</text>
+  <text x="625" y="522" text-anchor="middle" fill="var(--ink)" font-size="30">EI · UCB · next sample</text>
 
   <rect x="860" y="435" width="300" height="115" rx="20" fill="var(--panel)" stroke="var(--computed)" stroke-width="4"/>
   <text x="1010" y="480" text-anchor="middle" fill="var(--computed)" font-size="30" font-weight="800">UPDATE</text>
-  <text x="1010" y="522" text-anchor="middle" fill="var(--ink)" font-size="28">observe · recompute · repeat</text>
+  <text x="1010" y="522" text-anchor="middle" fill="var(--ink)" font-size="30">observe · recompute · repeat</text>
 </g>
 <g stroke="var(--computed)" stroke-width="4" marker-end="url(#arrow)">
   <line x1="405" y1="493" x2="455" y2="493"/>
@@ -62,8 +62,8 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif}.math{font-family:"STIX Two Mat
 <rect x="1375" y="230" width="460" height="280" rx="26" fill="var(--panel)" stroke="var(--decision)" stroke-width="5"/>
 <text x="1605" y="285" text-anchor="middle" fill="var(--decision)" font-size="32" font-weight="800">VERIFIED BOUNDED DECISION</text>
 <line x1="1430" y1="315" x2="1780" y2="315" stroke="var(--grid)" stroke-width="3"/>
-<text x="1450" y="365" fill="var(--ink)" font-size="28">✓ feasibility / conservation</text>
-<text x="1450" y="408" fill="var(--ink)" font-size="28">✓ optimality certificate / residual</text>
-<text x="1450" y="451" fill="var(--ink)" font-size="28">✓ sensitivity / uncertainty boundary</text>
-<text x="1605" y="495" text-anchor="middle" fill="var(--muted)" font-size="26" font-weight="600">Mathematical sophistication does not upgrade evidence status.</text>
+<text x="1450" y="360" fill="var(--ink)" font-size="30">✓ feasibility / conservation</text>
+<text x="1450" y="402" fill="var(--ink)" font-size="30">✓ optimality certificate</text>
+<text x="1450" y="444" fill="var(--ink)" font-size="30">✓ sensitivity / uncertainty</text>
+<text x="1450" y="486" fill="var(--muted)" font-size="30">✓ validation boundary retained</text>
 </svg>
