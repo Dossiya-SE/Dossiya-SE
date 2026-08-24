@@ -1,0 +1,33 @@
+schema: FGMVS_EDITABILITY_CONTRACT_V1
+version: '1.0'
+status: FROZEN
+canonical_master:
+  format: svg
+  filename: visual_EDITABLE.svg
+  required: true
+convenience_editable:
+  format: pptx
+  filename: visual_EDITABLE.pptx
+  required: true
+preserve:
+  text_as_editable_objects: true
+  equations_as_latex_source: true
+  plots_as_vector_when_possible: true
+  scientific_data: true
+  mathematical_parameters: true
+  render_configuration: true
+rasterization:
+  allowed_only_when_technically_required: true
+  source_generator_required: true
+  untraceable_rasterization_prohibited: true
+required_outputs:
+- visual_EDITABLE.svg
+- visual_EDITABLE.pptx
+- visual.png
+- visual.pdf
+- render_request.yaml
+- equations.tex
+- research_data.json
+- manifest.json
+- qa_report.json
+- SOURCE_BUNDLE.zip

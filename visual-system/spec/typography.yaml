@@ -1,0 +1,11 @@
+schema: FGMVS_TYPOGRAPHY_V1
+version: '1.0'
+status: FROZEN
+font_stacks:
+  text: Inter, Segoe UI, Arial, sans-serif
+  math: STIX Two Math, Cambria Math, Georgia, serif
+policy:
+  system_safe_fallback_required: true
+  distribute_font_files: false
+  minimum_critical_label_target_px_at_768_width: 12
+  avoid_text_in_raster: true

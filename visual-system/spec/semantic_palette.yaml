@@ -1,0 +1,49 @@
+schema: FGMVS_SEMANTIC_PALETTE_V1
+version: '1.0'
+status: FROZEN
+roles:
+  source_math:
+    light: '#4338CA'
+    dark: '#A5B4FC'
+    secondary_cue: square or indigo rule
+  observed_evidence:
+    light: '#0369A1'
+    dark: '#38BDF8'
+    secondary_cue: solid marker
+  state_dynamics:
+    light: '#1D4ED8'
+    dark: '#60A5FA'
+    secondary_cue: solid trajectory
+  interface_coupling:
+    light: '#7E22CE'
+    dark: '#C084FC'
+    secondary_cue: linked nodes
+  hazard_violation:
+    light: '#B91C1C'
+    dark: '#FB7185'
+    secondary_cue: dashed red boundary
+  uncertainty_inference:
+    light: '#B45309'
+    dark: '#FBBF24'
+    secondary_cue: band or dotted contour
+  viability_admissibility:
+    light: '#047857'
+    dark: '#34D399'
+    secondary_cue: closed set
+  recovery_control:
+    light: '#0F766E'
+    dark: '#5EEAD4'
+    secondary_cue: directed teal path
+  optimization_decision:
+    light: '#A16207'
+    dark: '#FACC15'
+    secondary_cue: frontier or decision marker
+  computed_simulation:
+    light: '#475569'
+    dark: '#CBD5E1'
+    secondary_cue: numeric/code label
+  hypothesis_transfer:
+    light: '#BE185D'
+    dark: '#F472B6'
+    secondary_cue: dashed magenta
+invariant: theme changes presentation only; geometry, equations, values, topology, labels and evidence states remain invariant

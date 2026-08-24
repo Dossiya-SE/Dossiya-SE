@@ -1,0 +1,41 @@
+schema: FGMVS_RENDER_PROFILES_V1
+version: '1.0'
+status: FROZEN
+profiles:
+  github_adaptive:
+    format: svg
+    theme: adaptive
+    canonical: true
+    target_width_tests_px:
+    - 1440
+    - 768
+    - 390
+  publication_white:
+    formats:
+    - svg
+    - pdf
+    - png
+    background: white
+    theme: light
+  presentation_light:
+    formats:
+    - pptx
+    - png
+    aspect: 16:9_or_figure_native
+    theme: light
+  presentation_dark:
+    formats:
+    - pptx
+    - png
+    aspect: 16:9_or_figure_native
+    theme: dark
+  journal_vector:
+    formats:
+    - svg
+    - pdf
+    rasterized_equations: false
+  web_interactive:
+    formats:
+    - html
+    - webgl
+    only_when_interaction_has_scientific_meaning: true

@@ -1,0 +1,25 @@
+schema: FGMVS_OBJECT_ID_SCHEMA_V1
+version: '1.0'
+status: FROZEN
+pattern: <namespace>.<family>.<object>[.<subobject>]
+namespaces:
+- profile
+- trajectory
+- math
+- research
+- evidence
+- resilience
+- portfolio
+- stack
+- decision
+examples:
+- profile.header.geometry
+- math.diffgeom.gaussian_curvature
+- research.validation.comparison
+- research.conclusion.admissible_region
+- portfolio.repository_graph
+rules:
+- stable_after_freeze
+- unique_within_profile_visual_system
+- semantic_not_positional
+- no_random_UUID_as_primary_visual_ID

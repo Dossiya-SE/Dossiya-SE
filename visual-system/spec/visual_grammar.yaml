@@ -1,0 +1,52 @@
+schema: FGMVS_VISUAL_GRAMMAR_V1
+version: '1.0'
+status: FROZEN
+objects:
+  node:
+    meaning: typed mathematical, research, repository, system, or state object
+    secondary_cue: bounded shape + label
+  arrow_solid:
+    meaning: declared prerequisite, dependency, transformation, or justified coupling
+    secondary_cue: solid line + arrowhead
+  arrow_dashed:
+    meaning: methodological support, uncertainty, boundary, or unverified transfer only when labeled
+    secondary_cue: dash pattern + label/legend
+  curve:
+    meaning: trajectory, evolution, recovery, control, or optimization path
+    secondary_cue: directed curve
+  surface:
+    meaning: defined model, state, or admissible space
+    secondary_cue: mesh/contour + mathematical label
+  boundary:
+    meaning: constraint, validity, viability, or domain boundary
+    secondary_cue: closed/dashed contour
+  vector:
+    meaning: direction, gradient, control, flux, sensitivity, or influence only when defined
+    secondary_cue: arrow + symbol
+  width:
+    meaning: quantified uncertainty only
+    secondary_cue: band/tube annotation
+  density:
+    meaning: defined evidence strength only
+    secondary_cue: contours + scale
+  convergence:
+    meaning: verification
+    secondary_cue: residual/error annotation
+  optimization_path:
+    meaning: optimization or calibration
+    secondary_cue: path + objective
+  model_observation_pair:
+    meaning: validation
+    secondary_cue: paired series/markers
+  closed_region:
+    meaning: admissible, viable, or bounded conclusion
+    secondary_cue: closed set + membership symbol
+  faded_region:
+    meaning: unsupported, invalid, infeasible, or outside applicability
+    secondary_cue: reduced opacity + boundary label
+prohibitions:
+- formula_without_role
+- geometry_without_semantics
+- color_without_declared_meaning
+- untraceable_raster_scientific_layer
+- mastery_score_without_evidence
