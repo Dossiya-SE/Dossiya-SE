@@ -1,0 +1,73 @@
+{
+  "schema": "Dossiya-SE/profile-renderer-registry/v6",
+  "version": "6.0.0",
+  "status": "ACTIVE_CONTRACT",
+  "profile_parts": [
+    {
+      "id": "profile-header",
+      "asset": "assets/math-art/profile-header-v5.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "PERMITTED_BOUNDED",
+      "enhancement": "Manim signature film; no quantitative semantics",
+      "promotion_ceiling_without_new_evidence": "P0"
+    },
+    {
+      "id": "professional-trajectory",
+      "asset": "profile-improvement/assets/engineering-to-mathematics-resilience-trajectory-v5.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "PERMITTED_DESCRIPTIVE_ONLY",
+      "enhancement": "chronological reveal; no inferred proficiency magnitude",
+      "promotion_ceiling_without_new_evidence": "P0"
+    },
+    {
+      "id": "mathematics-universe",
+      "asset": "assets/math-art/profile-mathematics-universe-v5.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "PERMITTED_SEMANTIC",
+      "enhancement": "D3/Three.js interactive domain relationships; Manim declared transformations",
+      "promotion_ceiling_without_new_evidence": "P1"
+    },
+    {
+      "id": "research-operating-system",
+      "asset": "assets/math-art/research-operating-system-v5.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "PERMITTED_PROCESS_ORDER",
+      "enhancement": "Manim evidence-to-decision trace; web provenance drill-down",
+      "promotion_ceiling_without_new_evidence": "P1"
+    },
+    {
+      "id": "differential-geometry-foundations",
+      "asset": "assets/math-art/differential-geometry-foundations-v5.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "PERMITTED_FROM_VERIFIED_GEOMETRY",
+      "verified_source": "mathematical-art/geometry-engine/src/profile_geometry",
+      "reference_object": "DG-TORUS-001",
+      "enhancement": "Manim + PyVista/VTK + Blender + Three.js downstream of verified exchange",
+      "promotion_target": "P3"
+    },
+    {
+      "id": "computational-stack",
+      "asset": "assets/math-art/computational-stack-v5.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "STATIC_DEFAULT",
+      "enhancement": "link tools to reproducible implementations; animation not default",
+      "promotion_ceiling_without_new_evidence": "P0"
+    },
+    {
+      "id": "formula-evidence-lattice",
+      "asset": "assets/math-art/formula-evidence-lattice-v5.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "PERMITTED_PROVENANCE_ONLY",
+      "enhancement": "optional provenance trace preserving evidence states",
+      "promotion_ceiling_without_new_evidence": "P1"
+    },
+    {
+      "id": "evidence-maturity-map",
+      "asset": "assets/math-art/evidence-maturity-map-v5.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "NO_TEMPORAL_MOTION_WITHOUT_LONGITUDINAL_DATA",
+      "enhancement": "static positions; web tooltips may expose source status only",
+      "promotion_ceiling_without_new_evidence": "P0"
+    }
+  ]
+}
