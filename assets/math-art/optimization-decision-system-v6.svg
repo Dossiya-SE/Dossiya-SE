@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 600" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+<title id="title">Optimization, uncertainty and bounded decision architecture</title>
+<desc id="desc">A professional mathematical decision architecture linking deterministic operations research and Bayesian sequential optimization through explicit models, feasible geometry, optimality verification, uncertainty quantification and bounded decisions.</desc>
+<defs>
+<style>
+:root{--bg:#ffffff;--ink:#0f172a;--muted:#475569;--brand:#14532d;--source:#4338ca;--state:#1d4ed8;--interface:#7e22ce;--uncertainty:#b45309;--viability:#047857;--decision:#a16207;--computed:#475569;--panel:#f8fafc;--grid:#dbe3ea}
+@media(prefers-color-scheme:dark){:root{--bg:#07110b;--ink:#f1f5f9;--muted:#b8c4ce;--brand:#86efac;--source:#a5b4fc;--state:#60a5fa;--interface:#c084fc;--uncertainty:#fbbf24;--viability:#34d399;--decision:#facc15;--computed:#cbd5e1;--panel:#0c1710;--grid:#22352a}}
+text{font-family:Inter,Segoe UI,Arial,sans-serif}.math{font-family:"STIX Two Math","Cambria Math",Georgia,serif}
+</style>
+<marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="var(--computed)"/></marker>
+</defs>
+<rect width="1920" height="600" fill="var(--bg)"/>
+<text x="960" y="58" text-anchor="middle" fill="var(--brand)" font-size="42" font-weight="800">OPTIMIZATION · UNCERTAINTY · BOUNDED DECISION</text>
+<text x="960" y="100" text-anchor="middle" fill="var(--muted)" font-size="30" font-weight="600">Model explicitly → solve transparently → verify certificates → quantify uncertainty → decide within scope</text>
+
+<!-- deterministic rail -->
+<text x="90" y="158" fill="var(--source)" font-size="30" font-weight="800">DETERMINISTIC OPERATIONS RESEARCH</text>
+<g>
+  <rect x="90" y="190" width="300" height="145" rx="20" fill="var(--panel)" stroke="var(--source)" stroke-width="4"/>
+  <text x="240" y="238" text-anchor="middle" fill="var(--source)" font-size="30" font-weight="800">MODEL</text>
+  <text x="240" y="280" text-anchor="middle" fill="var(--ink)" font-size="30">variables · objective</text>
+  <text x="240" y="318" text-anchor="middle" fill="var(--ink)" font-size="30">constraints · parameters</text>
+
+  <rect x="475" y="190" width="300" height="145" rx="20" fill="var(--panel)" stroke="var(--state)" stroke-width="4"/>
+  <text x="625" y="238" text-anchor="middle" fill="var(--state)" font-size="30" font-weight="800">FEASIBLE GEOMETRY</text>
+  <text x="625" y="280" text-anchor="middle" fill="var(--ink)" font-size="30">convex sets · BFS</text>
+  <text x="625" y="318" text-anchor="middle" fill="var(--ink)" font-size="30">flow balance · bounds</text>
+
+  <rect x="860" y="190" width="300" height="145" rx="20" fill="var(--panel)" stroke="var(--viability)" stroke-width="4"/>
+  <text x="1010" y="238" text-anchor="middle" fill="var(--viability)" font-size="30" font-weight="800">OPTIMALITY</text>
+  <text x="1010" y="280" text-anchor="middle" fill="var(--ink)" font-size="30">simplex · duality</text>
+  <text x="1010" y="318" text-anchor="middle" fill="var(--ink)" font-size="30">KKT · sensitivity</text>
+</g>
+<g stroke="var(--computed)" stroke-width="4" marker-end="url(#arrow)">
+  <line x1="405" y1="262" x2="455" y2="262"/>
+  <line x1="790" y1="262" x2="840" y2="262"/>
+</g>
+
+<!-- Bayesian rail -->
+<text x="90" y="410" fill="var(--uncertainty)" font-size="30" font-weight="800">BAYESIAN SEQUENTIAL OPTIMIZATION</text>
+<g>
+  <rect x="90" y="435" width="300" height="115" rx="20" fill="var(--panel)" stroke="var(--uncertainty)" stroke-width="4"/>
+  <text x="240" y="480" text-anchor="middle" fill="var(--uncertainty)" font-size="30" font-weight="800">POSTERIOR</text>
+  <text x="240" y="522" text-anchor="middle" fill="var(--ink)" font-size="30">mean + uncertainty</text>
+
+  <rect x="475" y="435" width="300" height="115" rx="20" fill="var(--panel)" stroke="var(--interface)" stroke-width="4"/>
+  <text x="625" y="480" text-anchor="middle" fill="var(--interface)" font-size="30" font-weight="800">ACQUISITION</text>
+  <text x="625" y="522" text-anchor="middle" fill="var(--ink)" font-size="30">EI · UCB · next sample</text>
+
+  <rect x="860" y="435" width="300" height="115" rx="20" fill="var(--panel)" stroke="var(--computed)" stroke-width="4"/>
+  <text x="1010" y="480" text-anchor="middle" fill="var(--computed)" font-size="30" font-weight="800">UPDATE</text>
+  <text x="1010" y="522" text-anchor="middle" fill="var(--ink)" font-size="30">observe · recompute · repeat</text>
+</g>
+<g stroke="var(--computed)" stroke-width="4" marker-end="url(#arrow)">
+  <line x1="405" y1="493" x2="455" y2="493"/>
+  <line x1="790" y1="493" x2="840" y2="493"/>
+</g>
+
+<!-- verification and bounded decision -->
+<path d="M1185 262 C1280 262 1295 325 1345 350" fill="none" stroke="var(--computed)" stroke-width="4" marker-end="url(#arrow)"/>
+<path d="M1185 493 C1280 493 1295 420 1345 390" fill="none" stroke="var(--computed)" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="1375" y="230" width="460" height="280" rx="26" fill="var(--panel)" stroke="var(--decision)" stroke-width="5"/>
+<text x="1605" y="285" text-anchor="middle" fill="var(--decision)" font-size="32" font-weight="800">VERIFIED BOUNDED DECISION</text>
+<line x1="1430" y1="315" x2="1780" y2="315" stroke="var(--grid)" stroke-width="3"/>
+<text x="1450" y="360" fill="var(--ink)" font-size="30">✓ feasibility / conservation</text>
+<text x="1450" y="402" fill="var(--ink)" font-size="30">✓ optimality certificate</text>
+<text x="1450" y="444" fill="var(--ink)" font-size="30">✓ sensitivity / uncertainty</text>
+<text x="1450" y="486" fill="var(--muted)" font-size="30">✓ validation boundary retained</text>
+</svg>

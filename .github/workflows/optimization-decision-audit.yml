@@ -1,0 +1,39 @@
+name: optimization-decision-audit
+
+on:
+  pull_request:
+    paths:
+      - 'optimization-lab/**'
+      - 'docs/knowledge-graphs/**'
+      - 'assets/math-art/optimization-decision-system-v6.svg'
+      - 'README.md'
+      - '.github/workflows/optimization-decision-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'optimization-lab/**'
+      - 'docs/knowledge-graphs/**'
+      - 'assets/math-art/optimization-decision-system-v6.svg'
+      - 'README.md'
+      - '.github/workflows/optimization-decision-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: optimization-lab/pyproject.toml
+      - name: Install verification lab
+        run: python -m pip install -e './optimization-lab[test]'
+      - name: Run mathematical regression tests
+        run: pytest optimization-lab/tests
+      - name: Run fail-closed architecture audit
+        working-directory: optimization-lab
+        run: python audit_decision_math.py

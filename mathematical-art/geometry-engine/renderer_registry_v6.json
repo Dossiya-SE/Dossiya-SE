@@ -1,6 +1,6 @@
 {
   "schema": "Dossiya-SE/profile-renderer-registry/v6",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "status": "ACTIVE_CONTRACT",
   "profile_parts": [
     {
@@ -34,6 +34,16 @@
       "motion_policy": "PERMITTED_PROCESS_ORDER",
       "enhancement": "Manim evidence-to-decision trace; web provenance drill-down",
       "promotion_ceiling_without_new_evidence": "P1"
+    },
+    {
+      "id": "optimization-decision-system",
+      "asset": "assets/math-art/optimization-decision-system-v6.svg",
+      "canonical_renderer": "adaptive_svg",
+      "motion_policy": "PERMITTED_ALGORITHMIC_SEMANTICS_ONLY",
+      "verified_source": "optimization-lab/src/decision_math.py",
+      "source_anchors": "docs/knowledge-graphs/OR_SOURCE_ANCHORS_V1.md",
+      "enhancement": "Manim may animate feasible-set geometry, primal-dual certificates, network conservation, KKT geometry and Bayesian posterior/acquisition/update only from source-anchored or executable objects",
+      "promotion_target": "P3_FOR_IMPLEMENTED_BENCHMARKS"
     },
     {
       "id": "differential-geometry-foundations",

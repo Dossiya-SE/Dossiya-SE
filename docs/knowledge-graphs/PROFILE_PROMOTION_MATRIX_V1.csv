@@ -1,0 +1,29 @@
+node_id,source,title,profile_formula,executable_example,verified_visualization,manim_animation,research_background,priority,candidate_formula_ids
+IEE574-01,IEE574 lecture 1,Introduction to Operations Research,1,0,1,0,1,P0,OR-MODEL-001
+IEE574-02,IEE574 lecture 2,Basic Linear Algebra,1,1,1,1,0,P0,LA-DOT-001;LA-PNORM-002;LA-LINSYS-003
+IEE574-03,IEE574 lecture 3,Mathematical Modeling,1,1,1,1,1,P0,OR-ASSIGN-002;OR-LINK-003;OR-MAXLIN-004
+IEE574-04,IEE574 lecture 4,Linear Programming Models,1,1,1,1,0,P0,LP-STANDARD-001;LP-CANONICAL-002;LP-ABS-003
+IEE574-05,IEE574 lecture 5,LP Properties: Convexity and Recession,1,1,1,1,0,P0,CVX-COMB-001;CVX-SET-002;CVX-HYPERPLANE-003
+IEE574-06,IEE574 lecture 6,LP Graphical Representation and Basic Feasible Solutions,1,1,1,1,0,P0,LP-BFS-004
+IEE574-07,IEE574 lecture 7,The Simplex Method,1,1,1,1,0,P0,LP-REDUCEDCOST-005;LP-SIMPLEX-006
+IEE574-08,IEE574 lecture 8,Simplex Tableau and Revised Simplex,0,1,1,1,1,P1,LP-MRT-007
+IEE574-09,IEE574 lecture 9,Infeasible LP and Initial Basic Feasible Solution,0,1,1,0,1,P1,LP-PHASE1-008
+IEE574-10,IEE574 lecture 10,LP Duality,1,1,1,1,0,P0,LP-DUAL-009;LP-WEAKDUAL-010;LP-STRONGDUAL-011;LP-CS-012
+IEE574-11,IEE574 lecture 11,LP Sensitivity Analysis,1,1,1,1,0,P0,LP-SENS-013
+IEE574-12,IEE574 lecture 12,Integer Programming Models,1,1,1,1,0,P0,IP-MODEL-001
+IEE574-13,IEE574 lecture 13,Branch and Bound,1,1,1,1,0,P0,IP-RELAX-002;IP-BOUND-003
+IEE574-14,IEE574 lecture 14,Cutting Plane Algorithm,0,1,1,1,1,P1,IP-CUT-004;IP-GOMORY-005
+IEE574-15,IEE574 lecture 15,Network Flow Models,1,1,1,1,0,P0,NF-BALANCE-001;NF-MINCOST-002
+IEE574-16,IEE574 lecture 16,Network Flow Algorithms,1,1,1,1,0,P0,NF-LONGEST-003;NF-SHORTEST-004
+IEE574-17,IEE574 lecture 17,Nonlinear Programming,1,1,1,1,0,P0,NLP-GENERAL-001;NLP-LAGRANGE-002;NLP-KKT-003;NLP-QP-004
+BO-GP-001,Bayesian thesis Ch. 3.2-3.3,Gaussian-process surrogate,1,0,1,1,0,P0,BO-GP-001
+BO-RBF-002,Bayesian thesis §3.3.2,RBF kernel,1,1,1,0,0,P0,BO-RBF-002
+BO-MATERN-003,Bayesian thesis §3.3.2,Matérn kernel,0,1,0,0,1,P1,BO-MATERN-003
+BO-EI-004,Bayesian thesis §3.4.1,Expected Improvement,1,0,1,1,0,P0,BO-EI-004
+BO-PI-005,Bayesian thesis §3.4.3,Probability of Improvement,0,1,1,0,0,P1,BO-PI-005
+BO-UCB-006,Bayesian thesis §3.4.4,Upper Confidence Bound,1,0,1,1,0,P0,BO-UCB-006
+BO-QEI-007,Bayesian thesis §3.4.2,q-Expected Improvement,0,1,0,0,1,P1,BO-QEI-007
+BO-SOBOL-008,Bayesian thesis §3.5.1,Sobol initialization,0,1,1,1,0,P0,BO-SOBOL-008
+BO-LOOP-009,Bayesian thesis §3.8,Bayesian optimization loop,0,0,1,1,0,P0,BO-LOOP-009
+BO-MOO-010,Bayesian thesis §3.8.1,Multiobjective/outcome-constrained BO,0,1,0,0,1,P1,BO-MOO-010
+BO-INTEGER-011,Bayesian thesis §3.6 and Alg. 3,Discrete/integer BO bridge,0,1,1,0,1,P1,BO-INTEGER-011
