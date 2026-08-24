@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/math-art/profile-header-v5.svg" width="100%" alt="Dossiya Dakou — engineering, mathematics and sustainable resilience research trajectory" />
+  <img src="assets/math-art/profile-header-exact.png" width="100%" alt="Dossiya Dakou — engineering, mathematics and sustainable resilience research trajectory" />
 </p>
 
 <p align="center">

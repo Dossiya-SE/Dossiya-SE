@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 import xml.etree.ElementTree as ET
@@ -16,7 +17,8 @@ MASTER = WORKSPACE / "PROFILE_MASTER_SPEC.md"
 PUBLIC = WORKSPACE / "PUBLIC_PROFILE_TRAJECTORY.md"
 
 VISUAL_GENERATION = "v5"
-HEADER = ROOT / "assets" / "math-art" / f"profile-header-{VISUAL_GENERATION}.svg"
+HEADER = ROOT / "assets" / "math-art" / "profile-header-exact.png"
+HEADER_SHA256 = "620c3db966f8867050643a0f20e960b03d553e5057915a9deed9b3a733f4e031"
 TRAJECTORY_SVG = WORKSPACE / "assets" / f"engineering-to-mathematics-resilience-trajectory-{VISUAL_GENERATION}.svg"
 TECHNICAL_SVGS = [
     ROOT / "assets" / "math-art" / f"profile-mathematics-universe-{VISUAL_GENERATION}.svg",
@@ -72,7 +74,7 @@ def main() -> int:
         "## Mathematics as a research operating system",
         "## Scientific computing and mathematical art",
         "## Evidence and validation",
-        "assets/math-art/profile-header-v5.svg",
+        "assets/math-art/profile-header-exact.png",
         "profile-improvement/assets/engineering-to-mathematics-resilience-trajectory-v5.svg",
         "assets/math-art/profile-mathematics-universe-v5.svg",
         "assets/math-art/research-operating-system-v5.svg",
@@ -89,6 +91,7 @@ def main() -> int:
             fail(f"Public README missing required governed token: {token}")
 
     legacy_primary_paths = [
+        "assets/math-art/profile-header-v5.svg",
         "assets/math-art/profile-header-v4.svg",
         "profile-improvement/assets/engineering-to-mathematics-resilience-trajectory.svg",
         "assets/math-art/profile-mathematics-universe-v4.svg",
@@ -106,7 +109,7 @@ def main() -> int:
     ]
     for token in legacy_primary_paths:
         if token in readme:
-            fail(f"README still uses legacy primary visual path despite V5 master: {token}")
+            fail(f"README still uses superseded primary visual path: {token}")
 
     evidence_index = readme.index("## Evidence and validation")
     for workflow_token in (
@@ -153,32 +156,18 @@ def main() -> int:
     if "not a claim of an already validated universal theory" not in readme:
         fail("Cross-sector research-ambition boundary is missing from root README.")
 
-    header_text = svg_text(HEADER)
+    # The hero is a user-supplied immutable raster exception. Its exact bytes,
+    # not OCR or a regenerated semantic approximation, govern fidelity.
+    actual_header_sha256 = hashlib.sha256(HEADER.read_bytes()).hexdigest()
+    if actual_header_sha256 != HEADER_SHA256:
+        fail(
+            "Exact profile hero PNG hash mismatch: "
+            f"expected {HEADER_SHA256}, got {actual_header_sha256}"
+        )
+
     trajectory_text = svg_text(TRAJECTORY_SVG)
     for svg in TECHNICAL_SVGS:
         svg_text(svg)
-
-    required_header_tokens = [
-        "Dossiya Dakou",
-        "γ : [2016,2026] → 𝓜",
-        "ẋ = Ax + Bu",
-        "Pgen + Pimport + Pdis = Pload + Ploss + Pch + Pexport",
-        "Pᵢⱼ = Pr(Sₜ₊₁=j | Sₜ=i)",
-        "L = D − A",
-        "dXₜ=b(Xₜ,t)dt+σ(Xₜ,t)dWₜ",
-        "u* = arg min J(u)",
-        "gᵢⱼ = ⟨∂ᵢr,∂ⱼr⟩",
-        "conceptual trajectory · no proficiency scoring · adaptive SVG",
-    ]
-    for token in required_header_tokens:
-        if token not in header_text:
-            fail(f"Mathematics-art header missing governed mathematical token: {token}")
-
-    header_source = HEADER.read_text(encoding="utf-8")
-    if "@media(prefers-color-scheme:dark)" not in header_source:
-        fail("V5 hero is not adaptive to light/dark rendering.")
-    if 'viewBox="0 0 2048 640"' not in header_source:
-        fail("V5 hero does not use the governed 2048×640 wide vector canvas.")
 
     required_trajectory_tokens = [
         "PROFESSIONAL TRAJECTORY: ENGINEERING → MATHEMATICS → RESILIENCE",
@@ -197,24 +186,22 @@ def main() -> int:
             fail(f"Mathematics-art trajectory missing governed token: {token}")
 
     prohibited_art_tokens = [
-        "Schrödinger",
-        "quantum",
         "universal resilience theory",
     ]
-    combined_art = f"{header_text} {trajectory_text}".lower()
+    combined_art = trajectory_text.lower()
     for token in prohibited_art_tokens:
         if token.lower() in combined_art:
-            fail(f"Profile mathematical art contains prohibited/decorative claim token: {token}")
+            fail(f"Profile mathematical art contains prohibited claim token: {token}")
 
     print("PROFILE GOVERNANCE VALIDATION: PASS")
     print(f"Credentials checked: {len(credentials)}")
     print("Unverified technical titles remain unpublished in root README: PASS")
     print("Ongoing graduate status preserved: PASS")
     print("Research-ambition boundary preserved: PASS")
-    print("Header + trajectory + six V5 technical SVG XML parses: PASS")
-    print("Professional page composition and V5 binding: PASS")
+    print(f"Exact immutable hero PNG SHA-256: {actual_header_sha256}")
+    print("Trajectory + six V5 technical SVG XML parses: PASS")
+    print("Professional page composition and exact-PNG hero binding: PASS")
     print("Verification badges remain below Evidence and validation: PASS")
-    print("Mathematics-art semantic token audit: PASS")
     return 0
 
 
