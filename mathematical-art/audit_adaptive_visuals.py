@@ -28,7 +28,9 @@ REQUIRED = {
     "viewBox": re.compile(r"viewBox\s*=", re.I),
     "theme query": re.compile(r"prefers-color-scheme\s*:\s*dark", re.I),
     "background token": re.compile(r"--bg\s*:", re.I),
-    "foreground token": re.compile(r"--fg\s*:", re.I),
+    # V4 uses --fg in several masters; V5 also uses --ink as its canonical
+    # semantic foreground token. Either is acceptable if theme-adaptive.
+    "foreground token": re.compile(r"--(?:fg|ink)\s*:", re.I),
 }
 
 FORBIDDEN = {
