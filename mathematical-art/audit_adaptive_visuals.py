@@ -14,7 +14,13 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_DIR = ROOT / "assets" / "math-art"
 
-V4_ASSETS = sorted(ASSET_DIR.glob("*-v4.svg"))
+# V4 established the adaptive contract; V5 is the current public profile set;
+# V6+ assets must satisfy the same structural contract before promotion.
+ADAPTIVE_ASSETS = sorted(
+    list(ASSET_DIR.glob("*-v4.svg"))
+    + list(ASSET_DIR.glob("*-v5.svg"))
+    + list(ASSET_DIR.glob("*-v6.svg"))
+)
 
 REQUIRED = {
     "title": re.compile(r"<title(?:\s|>)", re.I),
@@ -46,12 +52,12 @@ def audit_svg(path: Path) -> list[str]:
 
 
 def main() -> int:
-    if not V4_ASSETS:
-        print("FAIL: no V4 adaptive SVG assets found")
+    if not ADAPTIVE_ASSETS:
+        print("FAIL: no adaptive V4+ SVG assets found")
         return 1
 
     failed = False
-    for asset in V4_ASSETS:
+    for asset in ADAPTIVE_ASSETS:
         issues = audit_svg(asset)
         if issues:
             failed = True
@@ -62,7 +68,7 @@ def main() -> int:
     if failed:
         return 1
 
-    print(f"PASS: {len(V4_ASSETS)} adaptive V4 SVG asset(s) satisfy structural theme requirements.")
+    print(f"PASS: {len(ADAPTIVE_ASSETS)} adaptive V4+ SVG asset(s) satisfy structural theme requirements.")
     return 0
 
 
