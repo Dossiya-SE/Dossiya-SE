@@ -1,0 +1,33 @@
+{
+  "protocol": "NUS18_PHASE2_SCIENTIFIC_FREEZE_MANIFEST_V1",
+  "version": "1.0.0",
+  "status": "FROZEN_PREGEOMETRY_SCIENTIFIC_PACKAGE",
+  "paper_id": 18,
+  "source_file_sha256": "649705ed0423bbed4835de10479e3fa63c3c37428e980cc273c62c5fa8bc3b86",
+  "pdf_sha256": "826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839",
+  "required_engine_maintenance": "T049 / add engineering nature energy before schema",
+  "engine_maintenance_resolution": {
+    "status": "RESOLVED",
+    "engine_version": "1.0.2",
+    "regression_through": "T049"
+  },
+  "phase2_package_sha256": "bdafce2fd16c633d6c67eff3c27293f017b197bb371e628b9af0b916dbf17438",
+  "freeze_manifest_sha256": "249fd58f8933ffdf277a3f1d7252b3e0656e1b04c03a7d05d7b6c4cb21e11af4",
+  "manifest_verification": {
+    "verified": true,
+    "file_count": 10,
+    "mismatch_count": 0
+  },
+  "scientific_state": {
+    "physical_objects": {"tables": 10, "figures": 9, "numbered_equations": 11, "total": 30},
+    "proposed_nonredundant_annotations": {"count": 25, "text": 16, "regions": 9},
+    "engineering_output_natures": {"energy": 2},
+    "sustainability_domains": {"environmental": 4, "economic": 0, "social": 0, "integrated": 0},
+    "validation": "InternallyValidated",
+    "explicit_p_to_s_coupled_transformations": 2,
+    "human_approval": false,
+    "geometry_proven": false,
+    "mutation_authorized": false
+  },
+  "next_gate": "EXPLICIT_HUMAN_SCIENTIFIC_REVIEW_THEN_ALL_SURFACE_READER_GEOMETRY"
+}

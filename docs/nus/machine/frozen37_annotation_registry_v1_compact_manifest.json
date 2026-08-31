@@ -1,0 +1,45 @@
+{
+  "protocol": "NUS_FROZEN37_ANNOTATION_REGISTRY_V1_GITHUB_COMPACT_MANIFEST",
+  "version": "1.0.0",
+  "paper_count": 37,
+  "counts": {
+    "current_native_total": 64,
+    "nus172_current_gold_native": 31,
+    "nus48_current_frozen_native": 33,
+    "nus18_human_approved_proposed_not_native": 25,
+    "source_evidence_seed_records": 39,
+    "all_registry_rows_excluding_paper_summary": 128
+  },
+  "current_engine": {
+    "version": "NUS_EVIDENCE_ENGINE_V1.0.2",
+    "regression_boundary": "T001-T049",
+    "candidate_controls": ["T050", "T051"]
+  },
+  "files": {
+    "NUS172_CURRENT_GOLD_ANNOTATIONS_V1.json": {
+      "sha256": "da5ecb9a684bff3d99f25b260c451f2aa364dffaf4748c69bafd0b2f404ad938",
+      "bytes": 8676
+    },
+    "NUS48_CURRENT_FROZEN_ANNOTATIONS_V1.json": {
+      "sha256": "d0f2935ef0afb9d50b03985dbcffd359d3ede387bedac32db7a1c3cae4e0cfad",
+      "bytes": 20203
+    },
+    "NUS18_APPROVED_PROPOSED_ANNOTATIONS_V1.json": {
+      "sha256": "b563296f8c1a76b2ab29510f9a59496dcb5b0ce0ffdd91c84d937529eb956655",
+      "bytes": 17454
+    },
+    "FROZEN37_ANNOTATION_PAPER_SUMMARY_V1.json": {
+      "sha256": "00d91dcd79347c8f979e80542e2845ba4747eedcf6382f6b6deae32ba4c240a9",
+      "bytes": 16820
+    }
+  },
+  "full_local_registry": {
+    "json_sha256": "deffeb6db78cb8527d4b9191a644d8b95e66b9c4b46a6469c8c6f5b68496ee3c",
+    "xlsx_sha256": "1cb311127528f0bea815e89e16ad84d8c3b005e39083c97c5829e4395f90cdc1"
+  },
+  "project_memory": {
+    "github_is_durable_project_registry": true,
+    "separate_chatgpt_persistent_memory_write": false
+  },
+  "zotero_mutation_performed": false
+}

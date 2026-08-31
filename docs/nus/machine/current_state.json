@@ -1,0 +1,138 @@
+{
+  "schema": "NUS_FROZEN37_CURRENT_STATE_V8",
+  "as_of": "2026-08-24",
+  "frozen_calibration_paper": {
+    "paper_id": 48,
+    "canonical_id": "NUS-48",
+    "status": "FROZEN_OUTPUT_NATURE_V2",
+    "annotation_count": 33,
+    "highlight_count": 20,
+    "region_count": 13,
+    "tag_count": 0,
+    "internal_second_pass_delta": 0,
+    "idempotency": "PASS",
+    "pdf_sha256": "bd27b10cb8110d7a48a0b28923e3e0cc2adc0fb2d7e416fb25714f8483db3609",
+    "freeze_manifest_sha256": "e5a798f1099a76835ba964ecf1376bd69b8d5cd504c7029f08378cfd0ea90009",
+    "do_not_modify": true
+  },
+  "generic_engine": {
+    "version": "NUS_EVIDENCE_ENGINE_V1.0.2",
+    "status": "FROZEN_ENGINE_V1_0_2_T049",
+    "package_sha256": "5f96b510fa286b2008a7e84063fd1c7b1acb5994de1c1ebc8a69c14bddc4e8b1",
+    "freeze_manifest_sha256": "a4ce6742cd7f1c73737f8ee5b7564d4dbdb499bb628111a310df14e2587277b2",
+    "static_controls": {"pass": 20, "total": 20, "fail": 0},
+    "regression_corpus_sha256": "415ff08df8b33afa2abac631c16e01453221356ea1b07603a476538a691ea3ee",
+    "regression_from": "T001",
+    "regression_through": "T049",
+    "T048": "Any Zotero API that may return a Promise must be awaited before filtering, iteration, array assertions, or field access.",
+    "T049": "Never coerce a legitimate focal engineering output into the nearest existing nature. If no exact controlled nature fits, fail closed, adjudicate the new nature, version the ontology, and add a permanent regression.",
+    "engineering_output_natures_added_by_T049": ["energy"]
+  },
+  "active_generalization_test": {
+    "paper_id": 18,
+    "canonical_id": "NUS-18",
+    "role": "GENERALIZATION_TEST_1",
+    "identity": {
+      "parent_key": "BZZGBD2I",
+      "attachment_key": "Z8UEF2GH",
+      "doi": "10.1016/j.buildenv.2014.10.013",
+      "pdf_sha256": "826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839"
+    },
+    "phase1": {
+      "protocol": "NUS_GENERIC_READONLY_DISCOVERY_V1",
+      "status": "PASS_READ_ONLY_DISCOVERY",
+      "live_annotation_count": 0,
+      "page_count": 16,
+      "total_lines": 1466,
+      "surface_anchor_count": 22,
+      "page_lines_file": "NUS18_GENERIC_PHASE1_PAGE_LINES_V1.json",
+      "page_lines_sha256": "649705ed0423bbed4835de10479e3fa63c3c37428e980cc273c62c5fa8bc3b86",
+      "report_file": "NUS18_GENERIC_READONLY_DISCOVERY_V1.json",
+      "report_sha256": "c8a0d3de9e27b04a2e53225ea6710cef072b0339c7d1b61fecf1fb1932c08258",
+      "zotero_mutation_performed": false,
+      "pdf_mutation_performed": false
+    },
+    "phase2": {
+      "status": "PASS_NUS18_PREGEOMETRY_SCIENTIFIC_ADJUDICATION",
+      "package_sha256": "bdafce2fd16c633d6c67eff3c27293f017b197bb371e628b9af0b916dbf17438",
+      "freeze_manifest_sha256": "249fd58f8933ffdf277a3f1d7252b3e0656e1b04c03a7d05d7b6c4cb21e11af4",
+      "package_manifest_verified": true,
+      "manifest_file_count": 10,
+      "static_validation": {"pass": 19, "total": 19, "fail": 0},
+      "physical_objects": {"tables": 10, "figures": 9, "numbered_equations": 11, "total": 30},
+      "surface_dispositions": {"include": 9, "redundant": 19, "exclude": 2},
+      "abstract_body_crosscheck": {"BODY_CONFIRMED": 4, "BODY_MORE_SPECIFIC": 3, "BODY_CONTRADICTS": 0, "ABSTRACT_ONLY": 0},
+      "proposed_nonredundant_annotations": {
+        "count": 25,
+        "text": 16,
+        "regions": 9,
+        "count_is_provisional_not_N_final": true,
+        "role_counts": {
+          "PURPOSE": 2,
+          "INTERVENTION": 1,
+          "INPUT": 1,
+          "ENGINEERING_METHOD": 2,
+          "ENGINEERING_OUTPUT": 2,
+          "SUSTAINABILITY_TRANSFORMATION": 4,
+          "SUSTAINABILITY_METHOD": 7,
+          "SUSTAINABLE_OUTCOME": 4,
+          "DECISION": 2
+        }
+      },
+      "engineering_output_natures": {"energy": 2},
+      "sustainability_domains": {"environmental": 4, "economic": 0, "social": 0, "integrated": 0},
+      "validation": "InternallyValidated",
+      "explicit_p_to_s_coupled_transformations": 2,
+      "scientific_adjudication_status": "HUMAN_APPROVED_FOR_GEOMETRY",
+      "live_annotation_count": 0,
+      "zotero_mutation_performed": false,
+      "pdf_mutation_performed": false
+    },
+    "human_approval": {
+      "decision": "APPROVE_AS_ADJUDICATED",
+      "approved": true,
+      "approval_artifact": "NUS18_HUMAN_SCIENTIFIC_APPROVAL_V1.json",
+      "approval_sha256": "de5f1fbbaf07f9cf21e1f396f36d29d505dde89b4012088b188ff6501ed518d4",
+      "scope": "READER_TOKEN_EXACTNESS_AND_ALL_SURFACE_GEOMETRY_ONLY",
+      "provisional_count_25_remains_unfrozen": true
+    },
+    "geometry_gate": {
+      "status": "AUTHORIZED_NOT_YET_PROVEN",
+      "runtime": "NUS18_READER_EXACTNESS_GEOMETRY_CONTEXT_V1.txt",
+      "runtime_sha256": "bb6b2f0f4b9380052dbad9734ad2272ed86b3db0ea35894dfa04c8bf7bca5b49",
+      "static_validation": {"pass": 12, "total": 12, "fail": 0},
+      "text_records": 16,
+      "region_records": 9,
+      "table_figure_bounds_fail_closed": true
+    },
+    "source_observations": {
+      "references_boundary": {"page_index": 14, "page_label": "103", "line_index": 36},
+      "page_labels_must_remain_verbatim": true,
+      "nonsequential_page_label_transition_observed": "8 -> 97",
+      "surface_anchor_count_is_not_final_object_count": true
+    },
+    "generalization_metrics_so_far": {
+      "paper_specific_scientific_engine_changes": 0,
+      "new_general_regressions": 2,
+      "new_general_regression_ids": ["T048", "T049"],
+      "bespoke_nus18_scientific_pipeline_redesign": false
+    },
+    "generalization_classification_if_remaining_gates_pass": "PASS_GENERALIZATION_WITH_NEW_GENERAL_REGRESSION",
+    "geometry_proven": false,
+    "schema_pass": false,
+    "writer_dryrun_pass": false,
+    "auditor_dryrun_pass": false,
+    "mutation_authorized": false,
+    "next_gate": "READER_EXACTNESS_AND_ALL_SURFACE_GEOMETRY"
+  },
+  "visible_comment_contract": {
+    "engineering_output": "Engineering output here is {evidence-grounded engineering nature} : EXACT AUTHOR WORDING",
+    "sustainability_output": "Sustainability output here is {environmental|economic|social|integrated} : EXACT AUTHOR WORDING",
+    "nature_visible_only_for": ["ENGINEERING_OUTPUT", "SUSTAINABLE_OUTCOME"],
+    "other_seven_roles_use_simple_labels": true,
+    "colors_role_based": true,
+    "zotero_annotation_tags": [],
+    "exact_author_wording_required": true
+  },
+  "mutation_authorized": false
+}
