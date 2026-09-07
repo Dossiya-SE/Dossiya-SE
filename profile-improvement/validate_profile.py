@@ -159,7 +159,7 @@ def main() -> int:
         "MATHEMATICAL SYSTEMS ENGINEERING",
         "SUSTAINABILITY · RESILIENCE · OPTIMIZATION",
         "ẋ = f(x,u,η)",
-        "ρ_g(x)=d_g(x,∂V)",
+        "ρ(x)=d(x,∂V)",
         "EVIDENCE → MODEL → COMPUTE → VERIFY → VALIDATE → DECIDE",
     ):
         if token not in header_text:
