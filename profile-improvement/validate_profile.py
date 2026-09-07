@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed validation for the governed public profile architecture."""
+"""Fail-closed validation for the professional public profile interface."""
 
 from __future__ import annotations
 
@@ -15,31 +15,21 @@ REGISTRY = WORKSPACE / "PROFILE_CREDENTIALS_REGISTRY.json"
 MASTER = WORKSPACE / "PROFILE_MASTER_SPEC.md"
 PUBLIC = WORKSPACE / "PUBLIC_PROFILE_TRAJECTORY.md"
 
-VISUAL_GENERATION = "v5"
-HEADER = ROOT / "assets" / "math-art" / f"profile-header-{VISUAL_GENERATION}.svg"
-TRAJECTORY_SVG = WORKSPACE / "assets" / f"engineering-to-mathematics-resilience-trajectory-{VISUAL_GENERATION}.svg"
-TECHNICAL_SVGS = [
-    ROOT / "assets" / "math-art" / f"profile-mathematics-universe-{VISUAL_GENERATION}.svg",
-    ROOT / "assets" / "math-art" / f"research-operating-system-{VISUAL_GENERATION}.svg",
-    ROOT / "assets" / "math-art" / f"differential-geometry-foundations-{VISUAL_GENERATION}.svg",
-    ROOT / "assets" / "math-art" / f"formula-evidence-lattice-{VISUAL_GENERATION}.svg",
-    ROOT / "assets" / "math-art" / f"evidence-maturity-map-{VISUAL_GENERATION}.svg",
-    ROOT / "assets" / "math-art" / f"computational-stack-{VISUAL_GENERATION}.svg",
+HEADER = ROOT / "assets" / "math-art" / "profile-header-v5.svg"
+PRIMARY_VISUALS = [
+    ROOT / "assets" / "math-art" / "research-operating-system-v5.svg",
+    ROOT / "assets" / "math-art" / "differential-geometry-foundations-v5.svg",
 ]
+PUBLIC_INTEGRITY = ROOT / "docs" / "RESEARCH_INTEGRITY.md"
 
 REQUIRED = [
     README,
     REGISTRY,
     MASTER,
     PUBLIC,
-    WORKSPACE / "PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md",
-    WORKSPACE / "PROFILE_RELEASE_GATE.md",
-    WORKSPACE / "REQUEST_PROTOCOL.md",
-    WORKSPACE / "MATHEMATICS_ART_IDENTITY_V1.md",
-    WORKSPACE / "PROFILE_PAGE_COMPOSITION_V1.md",
     HEADER,
-    TRAJECTORY_SVG,
-    *TECHNICAL_SVGS,
+    PUBLIC_INTEGRITY,
+    *PRIMARY_VISUALS,
 ]
 
 
@@ -48,15 +38,24 @@ def fail(message: str) -> None:
 
 
 def svg_text(path: Path) -> str:
-    """Parse SVG as XML and return all visible/accessible text for semantic checks."""
     tree = ET.parse(path)
     return " ".join(part.strip() for part in tree.getroot().itertext() if part.strip())
+
+
+def assert_native_vector(path: Path) -> None:
+    source = path.read_text(encoding="utf-8")
+    ET.fromstring(source)
+    lowered = source.lower()
+    if "<image" in lowered:
+        fail(f"Raster/image wrapper is prohibited in public vector visual: {path.relative_to(ROOT)}")
+    if "data:image/" in lowered:
+        fail(f"Embedded raster data URI is prohibited in public vector visual: {path.relative_to(ROOT)}")
 
 
 def main() -> int:
     for path in REQUIRED:
         if not path.is_file():
-            fail(f"Required profile-control artifact missing: {path.relative_to(ROOT)}")
+            fail(f"Required profile artifact missing: {path.relative_to(ROOT)}")
 
     readme = README.read_text(encoding="utf-8")
     master = MASTER.read_text(encoding="utf-8")
@@ -66,60 +65,57 @@ def main() -> int:
     if "ACTIVE_GOVERNING_PROFILE_ARCHITECTURE" not in master:
         fail("Profile master specification is not marked active.")
 
+    required_sections = [
+        "## About",
+        "## Featured research",
+        "## Research framework",
+        "## Mathematical focus",
+        "## Computational toolkit",
+        "## Education",
+        "## Research integrity",
+        "## Connect",
+    ]
+    positions = []
+    for section in required_sections:
+        if section not in readme:
+            fail(f"Public README missing required professional section: {section}")
+        positions.append(readme.index(section))
+    if positions != sorted(positions):
+        fail("Professional public sections are not in the governed order.")
+
     required_readme_tokens = [
-        "## Professional and research trajectory",
-        "## Research programmes",
-        "## Mathematics as a research operating system",
-        "## Scientific computing and mathematical art",
-        "## Evidence and validation",
+        "Mathematical Systems Engineering for Sustainable Resilience",
         "assets/math-art/profile-header-v5.svg",
-        "profile-improvement/assets/engineering-to-mathematics-resilience-trajectory-v5.svg",
-        "assets/math-art/profile-mathematics-universe-v5.svg",
         "assets/math-art/research-operating-system-v5.svg",
         "assets/math-art/differential-geometry-foundations-v5.svg",
-        "assets/math-art/formula-evidence-lattice-v5.svg",
-        "assets/math-art/evidence-maturity-map-v5.svg",
-        "assets/math-art/computational-stack-v5.svg",
-        "Profile Improvement Workspace",
+        "docs/RESEARCH_INTEGRITY.md",
         "MSE Sustainable Engineering — Arizona State University, ongoing",
         "MS Financial Engineering — WorldQuant University, ongoing",
+        "not a claim of an already validated universal theory",
     ]
     for token in required_readme_tokens:
         if token not in readme:
             fail(f"Public README missing required governed token: {token}")
 
-    legacy_primary_paths = [
-        "assets/math-art/profile-header-v4.svg",
-        "profile-improvement/assets/engineering-to-mathematics-resilience-trajectory.svg",
-        "assets/math-art/profile-mathematics-universe-v4.svg",
-        "assets/math-art/research-operating-system-v4.svg",
-        "assets/math-art/differential-geometry-foundations-v4.svg",
-        "assets/math-art/formula-evidence-lattice-v4.svg",
-        "assets/math-art/evidence-maturity-map-v4.svg",
-        "assets/math-art/computational-stack-v4.svg",
-        "assets/math-art/profile-mathematics-universe-v3.svg",
-        "assets/math-art/research-operating-system.svg",
-        "assets/math-art/differential-geometry-viability-v3.svg",
-        "assets/math-art/formula-evidence-lattice-v3.svg",
-        "assets/math-art/evidence-maturity-map.svg",
-        "assets/math-art/computational-stack.svg",
+    prohibited_public_tokens = [
+        "Profile Improvement Workspace",
+        "Profile Credential Verification Checklist",
+        "Repository evidence-maturity map",
+        "Full repository matrix",
+        "Core mathematical objects across the profile",
+        "<details>",
     ]
-    for token in legacy_primary_paths:
+    for token in prohibited_public_tokens:
         if token in readme:
-            fail(f"README still uses legacy primary visual path despite V5 master: {token}")
+            fail(f"Internal/dense profile content leaked into public interface: {token}")
 
-    evidence_index = readme.index("## Evidence and validation")
-    for workflow_token in (
-        "actions/workflows/verify.yml",
-        "actions/workflows/production-audit.yml",
-        "africa-energy-dignity/actions/workflows/python-app.yml",
-    ):
-        position = readme.find(workflow_token)
-        if 0 <= position < evidence_index:
-            fail(f"Workflow badge appears before Evidence and validation: {workflow_token}")
+    readme_bytes = len(readme.encode("utf-8"))
+    if not 5_000 <= readme_bytes <= 14_000:
+        fail(f"Public README must remain concise (5–14 KB); found {readme_bytes} bytes.")
 
-    if "Electrical engineering practice\n→ renewable-energy + physical systems" in readme:
-        fail("README still contains redundant text-only trajectory chain.")
+    local_image_refs = readme.count("<img src=\"assets/")
+    if local_image_refs != 3:
+        fail(f"Professional profile must use exactly three local visuals; found {local_image_refs}.")
 
     credentials = {item["credential_id"]: item for item in registry["credentials"]}
 
@@ -128,16 +124,13 @@ def main() -> int:
         if item.get("public_change_status") == "HOLD_UNTIL_TITLE_VERIFIED":
             title = item.get("user_stated_title", "")
             if title and title in readme:
-                fail(f"Unverified technical credential title was published in root README: {title}")
+                fail(f"Unverified technical credential title was published: {title}")
 
     undergrad = credentials["DD-EDU-004"]
     if undergrad.get("public_change_status") == "RECONCILE_BEFORE_PUBLIC_CHANGE":
         unresolved_title = undergrad.get("user_stated_title", "")
         if unresolved_title and unresolved_title in readme:
-            fail(
-                "Unreconciled undergraduate English title was published in root README: "
-                f"{unresolved_title}"
-            )
+            fail(f"Unreconciled undergraduate English title was published: {unresolved_title}")
         current_title = undergrad.get("current_public_profile_title", "")
         if current_title and current_title not in readme:
             fail("Current public undergraduate title disappeared before reconciliation.")
@@ -150,77 +143,50 @@ def main() -> int:
     if "RELEASABLE_WITH_CREDENTIAL_TITLE_RECONCILIATION_PENDING" not in public:
         fail("Public-safe trajectory is missing its controlled release status.")
 
-    if "not a claim of an already validated universal theory" not in readme:
-        fail("Cross-sector research-ambition boundary is missing from root README.")
-
-    header_text = svg_text(HEADER)
-    trajectory_text = svg_text(TRAJECTORY_SVG)
-    for svg in TECHNICAL_SVGS:
-        svg_text(svg)
-
-    required_header_tokens = [
-        "Dossiya Dakou",
-        "γ : [2016,2026] → 𝓜",
-        "ẋ = Ax + Bu",
-        "Pgen + Pimport + Pdis = Pload + Ploss + Pch + Pexport",
-        "Pᵢⱼ = Pr(Sₜ₊₁=j | Sₜ=i)",
-        "L = D − A",
-        "dXₜ=b(Xₜ,t)dt+σ(Xₜ,t)dWₜ",
-        "u* = arg min J(u)",
-        "gᵢⱼ = ⟨∂ᵢr,∂ⱼr⟩",
-        "conceptual trajectory · no proficiency scoring · adaptive SVG",
-    ]
-    for token in required_header_tokens:
-        if token not in header_text:
-            fail(f"Mathematics-art header missing governed mathematical token: {token}")
+    assert_native_vector(HEADER)
+    for visual in PRIMARY_VISUALS:
+        assert_native_vector(visual)
 
     header_source = HEADER.read_text(encoding="utf-8")
     if "@media(prefers-color-scheme:dark)" not in header_source:
-        fail("V5 hero is not adaptive to light/dark rendering.")
+        fail("Profile hero must adapt to light/dark rendering.")
     if 'viewBox="0 0 2048 640"' not in header_source:
-        fail("V5 hero does not use the governed 2048×640 wide vector canvas.")
+        fail("Profile hero must use the governed 2048×640 canvas.")
 
-    required_trajectory_tokens = [
-        "PROFESSIONAL TRAJECTORY: ENGINEERING → MATHEMATICS → RESILIENCE",
-        "2016",
-        "2026 →",
-        "PROFESSIONAL",
-        "ELECTRICAL ENGINEERING",
-        "RENEWABLE ENERGY",
-        "SUSTAINABLE",
-        "FINANCIAL",
-        "DEEPER MATHEMATICS",
-        "SUSTAINABLE RESILIENT",
-    ]
-    for token in required_trajectory_tokens:
-        if token not in trajectory_text:
-            fail(f"Mathematics-art trajectory missing governed token: {token}")
+    header_text = svg_text(HEADER)
+    for token in (
+        "Dossiya Dakou",
+        "MATHEMATICAL SYSTEMS ENGINEERING",
+        "SUSTAINABILITY · RESILIENCE · OPTIMIZATION",
+        "ẋ = f(x,u,η)",
+        "ρ_g(x)=d_g(x,∂V)",
+        "EVIDENCE → MODEL → COMPUTE → VERIFY → VALIDATE → DECIDE",
+    ):
+        if token not in header_text:
+            fail(f"Profile hero missing required semantic token: {token}")
 
-    prohibited_art_tokens = [
-        "Schrödinger",
-        "quantum",
-        "universal resilience theory",
-    ]
-    combined_art = f"{header_text} {trajectory_text}".lower()
-    for token in prohibited_art_tokens:
-        if token.lower() in combined_art:
-            fail(f"Profile mathematical art contains prohibited/decorative claim token: {token}")
+    integrity = PUBLIC_INTEGRITY.read_text(encoding="utf-8")
+    for token in (
+        "Simulation is not relabeled as observation.",
+        "Passing tests is not relabeled as empirical validation.",
+        "claim strength",
+    ):
+        if token not in integrity:
+            fail(f"Public research-integrity standard missing token: {token}")
 
-    print("PROFILE GOVERNANCE VALIDATION: PASS")
-    print(f"Credentials checked: {len(credentials)}")
-    print("Unverified technical titles remain unpublished in root README: PASS")
-    print("Ongoing graduate status preserved: PASS")
-    print("Research-ambition boundary preserved: PASS")
-    print("Header + trajectory + six V5 technical SVG XML parses: PASS")
-    print("Professional page composition and V5 binding: PASS")
-    print("Verification badges remain below Evidence and validation: PASS")
-    print("Mathematics-art semantic token audit: PASS")
+    print("PROFESSIONAL PROFILE VALIDATION: PASS")
+    print(f"README size: {readme_bytes} bytes")
+    print("Public sections: 8/8")
+    print("Local visuals: 3/3")
+    print("Native vector hero: PASS")
+    print("Credential safeguards: PASS")
+    print("Research-integrity boundary: PASS")
     return 0
 
 
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except (AssertionError, KeyError, ValueError, ET.ParseError) as exc:
-        print(f"PROFILE GOVERNANCE VALIDATION: FAIL — {exc}", file=sys.stderr)
+    except (AssertionError, KeyError, ValueError, ET.ParseError, json.JSONDecodeError) as exc:
+        print(f"PROFESSIONAL PROFILE VALIDATION: FAIL — {exc}", file=sys.stderr)
         raise SystemExit(1)
