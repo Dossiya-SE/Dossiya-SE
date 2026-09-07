@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Fail-closed audit for profile-wide mathematical presentation artifacts.
 
-This audit validates structure and provenance metadata. It does not prove the
-mathematics or empirically validate any model.
+The audit separates the complete mathematical-art inventory from the smaller
+set deliberately published on the GitHub profile. Passing this audit verifies
+structure and provenance metadata; it does not prove mathematics or empirical validity.
 """
 
 from __future__ import annotations
@@ -20,6 +21,7 @@ REGISTRY = MATH_DIR / "formula_registry.json"
 STANDARD = MATH_DIR / "MATHEMATICAL_PRESENTATION_STANDARD.md"
 ATLAS = MATH_DIR / "PROFILE_FORMULA_ATLAS.md"
 PROFILE = ROOT / "README.md"
+PUBLIC_INTEGRITY = ROOT / "docs" / "RESEARCH_INTEGRITY.md"
 
 VISUAL_GENERATION = "v5"
 V5_SVGS = [
@@ -29,6 +31,11 @@ V5_SVGS = [
     ASSET_DIR / f"formula-evidence-lattice-{VISUAL_GENERATION}.svg",
     ASSET_DIR / f"evidence-maturity-map-{VISUAL_GENERATION}.svg",
     ASSET_DIR / f"computational-stack-{VISUAL_GENERATION}.svg",
+]
+PUBLISHED_PROFILE_SVGS = [
+    ASSET_DIR / "profile-header-v5.svg",
+    ASSET_DIR / "research-operating-system-v5.svg",
+    ASSET_DIR / "differential-geometry-foundations-v5.svg",
 ]
 
 ALLOWED_STATES = {"S", "D", "M", "C", "V", "E", "H", "T"}
@@ -83,7 +90,7 @@ def audit_registry() -> int:
     return len(formulas)
 
 
-def audit_svg(path: Path) -> None:
+def audit_svg(path: Path, *, native_vector: bool = False) -> None:
     if not path.exists():
         fail(f"missing SVG: {path.relative_to(ROOT)}")
     try:
@@ -102,65 +109,64 @@ def audit_svg(path: Path) -> None:
     if desc is None or not (desc.text or "").strip():
         fail(f"SVG lacks non-empty desc: {path.relative_to(ROOT)}")
 
+    if native_vector:
+        source = path.read_text(encoding="utf-8").lower()
+        if "<image" in source or "data:image/" in source:
+            fail(f"published profile SVG embeds raster content: {path.relative_to(ROOT)}")
+
     print(f"PASS: accessible SVG {path.relative_to(ROOT)}")
 
 
 def audit_docs() -> None:
-    for path in (STANDARD, ATLAS, PROFILE):
+    for path in (STANDARD, ATLAS, PROFILE, PUBLIC_INTEGRITY):
         if not path.exists() or path.stat().st_size < 500:
             fail(f"missing or unexpectedly small documentation file: {path.relative_to(ROOT)}")
 
     profile = PROFILE.read_text(encoding="utf-8")
+
     required_profile_refs = [
         "profile-header-v5.svg",
-        "profile-mathematics-universe-v5.svg",
         "research-operating-system-v5.svg",
         "differential-geometry-foundations-v5.svg",
-        "formula-evidence-lattice-v5.svg",
-        "evidence-maturity-map-v5.svg",
-        "computational-stack-v5.svg",
-        "MATHEMATICAL_PRESENTATION_STANDARD.md",
-        "PROFILE_FORMULA_ATLAS.md",
-        "formula_registry.json",
+        "docs/RESEARCH_INTEGRITY.md",
     ]
     for ref in required_profile_refs:
         if ref not in profile:
-            fail(f"profile README does not reference required artifact: {ref}")
+            fail(f"profile README does not reference required public artifact: {ref}")
 
-    legacy_primary_refs = [
-        "profile-header-v4.svg",
-        "profile-mathematics-universe-v4.svg",
-        "research-operating-system-v4.svg",
-        "differential-geometry-foundations-v4.svg",
-        "formula-evidence-lattice-v4.svg",
-        "evidence-maturity-map-v4.svg",
-        "computational-stack-v4.svg",
-        "profile-mathematics-universe-v3.svg",
-        "differential-geometry-viability-v3.svg",
-        "formula-evidence-lattice-v3.svg",
-        "assets/math-art/research-operating-system.svg",
-        "assets/math-art/evidence-maturity-map.svg",
-        "assets/math-art/computational-stack.svg",
+    intentionally_unpublished_refs = [
+        "profile-mathematics-universe-v5.svg",
+        "formula-evidence-lattice-v5.svg",
+        "evidence-maturity-map-v5.svg",
+        "computational-stack-v5.svg",
+        "optimization-decision-system-v6.svg",
     ]
-    for ref in legacy_primary_refs:
+    for ref in intentionally_unpublished_refs:
         if ref in profile:
-            fail(f"profile README still references legacy primary artifact: {ref}")
+            fail(f"profile README exceeds the selected visual budget with: {ref}")
 
     standard = STANDARD.read_text(encoding="utf-8")
     for state in sorted(ALLOWED_STATES):
         if f"[{state}]" not in standard:
             fail(f"presentation standard does not define evidence state [{state}]")
 
-    print("PASS: profile and mathematical presentation documentation references are complete")
+    print("PASS: deep mathematical inventory is separated from concise public profile publication")
 
 
 def main() -> None:
     count = audit_registry()
+
     for svg in V5_SVGS:
         audit_svg(svg)
-    audit_svg(ASSET_DIR / "profile-header-v5.svg")
+
+    for svg in PUBLISHED_PROFILE_SVGS:
+        audit_svg(svg, native_vector=True)
+
     audit_docs()
-    print(f"PASS: profile mathematical presentation V5 audit complete ({count} formula records)")
+    print(
+        f"PASS: mathematical presentation inventory remains intact while the public profile "
+        f"uses a bounded three-visual interface ({count} formula records)"
+    )
 
 
 if __name__ == "__main__":
