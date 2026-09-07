@@ -51,7 +51,7 @@
   <text x="205" y="438" class="muted" font-size="21">→</text>
   <text x="247" y="438" class="ink math" font-size="25">V ⊂ K</text>
   <text x="365" y="438" class="muted" font-size="21">→</text>
-  <text x="407" y="438" class="ink math" font-size="25">ρ_g(x)=d_g(x,∂V)</text>
+  <text x="407" y="438" class="ink math" font-size="25">ρ(x)=d(x,∂V)</text>
 
   <text x="0" y="493" class="muted" font-size="19" font-weight="650" letter-spacing=".6">EVIDENCE → MODEL → COMPUTE → VERIFY → VALIDATE → DECIDE</text>
 </g>
