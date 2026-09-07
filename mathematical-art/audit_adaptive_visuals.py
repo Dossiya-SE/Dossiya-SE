@@ -14,8 +14,6 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_DIR = ROOT / "assets" / "math-art"
 
-# V4 established the adaptive contract; V5 is the current public profile set;
-# V6+ assets must satisfy the same structural contract before promotion.
 ADAPTIVE_ASSETS = sorted(
     list(ASSET_DIR.glob("*-v4.svg"))
     + list(ASSET_DIR.glob("*-v5.svg"))
@@ -27,10 +25,6 @@ REQUIRED = {
     "desc": re.compile(r"<desc(?:\s|>)", re.I),
     "viewBox": re.compile(r"viewBox\s*=", re.I),
     "theme query": re.compile(r"prefers-color-scheme\s*:\s*dark", re.I),
-    "background token": re.compile(r"--bg\s*:", re.I),
-    # V4 uses --fg in several masters; V5 also uses --ink as its canonical
-    # semantic foreground token. Either is acceptable if theme-adaptive.
-    "foreground token": re.compile(r"--(?:fg|ink)\s*:", re.I),
 }
 
 FORBIDDEN = {
@@ -39,17 +33,40 @@ FORBIDDEN = {
 }
 
 
+def has_semantic_background(text: str) -> bool:
+    return bool(
+        re.search(r"--bg\s*:", text, re.I)
+        or re.search(r"\.bg\s*\{[^}]*fill\s*:", text, re.I | re.S)
+    )
+
+
+def has_semantic_foreground(text: str) -> bool:
+    return bool(
+        re.search(r"--(?:fg|ink)\s*:", text, re.I)
+        or re.search(r"\.ink\s*\{[^}]*fill\s*:", text, re.I | re.S)
+    )
+
+
 def audit_svg(path: Path) -> list[str]:
     text = path.read_text(encoding="utf-8")
     failures: list[str] = []
+
     for label, pattern in REQUIRED.items():
         if not pattern.search(text):
             failures.append(f"missing {label}")
+
+    if not has_semantic_background(text):
+        failures.append("missing semantic background encoding")
+    if not has_semantic_foreground(text):
+        failures.append("missing semantic foreground encoding")
+
     for label, pattern in FORBIDDEN.items():
         if pattern.search(text):
             failures.append(f"contains forbidden {label}")
+
     if "<svg" not in text or "</svg>" not in text:
         failures.append("invalid SVG root")
+
     return failures
 
 
@@ -70,7 +87,10 @@ def main() -> int:
     if failed:
         return 1
 
-    print(f"PASS: {len(ADAPTIVE_ASSETS)} adaptive V4+ SVG asset(s) satisfy structural theme requirements.")
+    print(
+        f"PASS: {len(ADAPTIVE_ASSETS)} adaptive V4+ SVG asset(s) satisfy "
+        "structural and semantic theme requirements."
+    )
     return 0
 
 
