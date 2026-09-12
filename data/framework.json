@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "framework_name": "Seven-stage mathematical sustainable-engineering architecture",
+  "stages": [
+    {
+      "id": 1,
+      "name": "Multilayer Structure",
+      "symbol": "G",
+      "question": "How is the coupled infrastructure system structured across layers?"
+    },
+    {
+      "id": 2,
+      "name": "Causal Mechanisms",
+      "symbol": "M_ij",
+      "question": "By what mechanisms do dependencies transmit effects between system elements?"
+    },
+    {
+      "id": 3,
+      "name": "Coupled Hybrid Multiscale Dynamics",
+      "symbol": "F_G",
+      "question": "How do interacting states evolve and propagate disturbance across timescales?"
+    },
+    {
+      "id": 4,
+      "name": "Feedback & Control",
+      "symbol": "u",
+      "question": "Which admissible feedback and control actions alter system trajectories?"
+    },
+    {
+      "id": 5,
+      "name": "Viability",
+      "symbol": "V_sus",
+      "question": "Which states and controls keep the system inside required operating constraints?"
+    },
+    {
+      "id": 6,
+      "name": "Resilience-to-Sustainability Transformation Interface",
+      "symbol": "R-S",
+      "question": "When does recovery preserve, improve, or undermine long-horizon sustainability?"
+    },
+    {
+      "id": 7,
+      "name": "Sustainable Transformation Pathways",
+      "symbol": "Pi",
+      "question": "Which defensible intervention pathways move the system toward more sustainable viable futures?"
+    }
+  ]
+}
