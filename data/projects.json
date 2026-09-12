@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "owner": "Dossiya-SE",
+  "public_only": true,
+  "projects": [
+    {
+      "name": "Mathematical Research Portfolio",
+      "repository": "dossiya-se.github.io",
+      "research_role": "interactive mathematical visualization and research demonstrations",
+      "status": "active"
+    },
+    {
+      "name": "Mathematics Exploration for Sustainable Resilience",
+      "repository": "Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience",
+      "research_role": "differential geometry, dynamical systems and resilience mathematics",
+      "status": "active"
+    },
+    {
+      "name": "Optimization for Sustainability and Resilience",
+      "repository": "Optimization-for-sustainability-and-resilience",
+      "research_role": "optimization, constrained decision models and network methods",
+      "status": "active"
+    },
+    {
+      "name": "Python for Rapid Engineering Solutions",
+      "repository": "Python-for-rapid-engineering-solution",
+      "research_role": "reproducible numerical engineering computation",
+      "status": "active"
+    },
+    {
+      "name": "Mathematical Rendering & Verification",
+      "repository": "Math-Surface-Engineer-Demo",
+      "research_role": "renderer-aware mathematical publication and verification",
+      "status": "active"
+    },
+    {
+      "name": "Africa Energy Dignity",
+      "repository": "africa-energy-dignity",
+      "research_role": "energy-system modeling, geospatial engineering and constrained planning",
+      "status": "active"
+    }
+  ]
+}
