@@ -63,15 +63,14 @@ The comparison with AI is therefore a **transferability ambition**, not an equiv
 | [`requests/README.md`](requests/README.md) | Request ledger and naming convention |
 | [`assets/engineering-to-mathematics-resilience-trajectory.svg`](assets/engineering-to-mathematics-resilience-trajectory.svg) | Canonical public mathematics-art trajectory |
 
-The root README continues to use the stable public header path `assets/math-art/profile-header-v4.svg`. Under `DD-PROFILE-REQ-20260823-003`, the internal composition at that path was upgraded to the mathematics-art design while the prior master was preserved under `assets/math-art/archive/` for provenance and rollback.
-
-Under `DD-PROFILE-REQ-20260823-004`, the public page composition is governed as a research front door rather than an unfiltered technical report. Adaptive V4 technical masters are used whenever available, workflow verification is separated from identity, and deep formula/repository material remains available through disclosure sections.
+The root README continues to use the governed public mathematics-art assets under `assets/math-art/`. Profile visuals and profile text are independently evidence-gated: a stronger visual design does not strengthen a credential or research claim.
 
 ## Evidence states
 
 - `VERIFIED_PROFILE` — already represented consistently in the current public/private profile system.
 - `USER_STATED` — stated directly by the user and preserved without embellishment.
-- `OFFICIAL_TITLE_TO_VERIFY` — exact diploma wording should be checked against the credential before public freezing.
+- `USER_CONFIRMED` — explicitly corrected or confirmed by the account owner for public wording; this is distinct from independent documentary verification.
+- `OFFICIAL_TITLE_TO_VERIFY` — exact diploma wording should be checked against the credential before claiming documentary verification.
 - `ONGOING` — programme is currently in progress; never present as completed.
 - `RESEARCH_AMBITION` — future research direction, not an achieved result.
 - `IMPLEMENTED_RESEARCH` — supported by an existing repository/project.
@@ -81,24 +80,26 @@ Under `DD-PROFILE-REQ-20260823-004`, the public page composition is governed as 
 ### Releasable now
 
 - cumulative engineering → energy → sustainability → finance → mathematics trajectory;
+- user-confirmed undergraduate public title: **Licence, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**;
 - broad `electrical-engineering foundation` and `renewable-energy/energy-systems background` language;
 - ongoing MSE Sustainable Engineering and MS Financial Engineering status;
 - implemented research programmes already supported by repositories;
 - discrete/differential geometry and cross-sector resilience as explicit research ambitions;
-- governed mathematics-art header and trajectory SVGs;
-- V4 adaptive mathematics/research/computing/evidence visuals;
+- governed mathematics-art visuals;
 - professional page hierarchy and compact navigation;
 - public-safe narrative.
 
-### Blocked pending credential reconciliation
+### Blocked pending credential reconciliation or stronger evidence
 
 - definitive publication of the three technical electrical credentials under translated English titles;
-- silent replacement of `Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques` by `Bachelor of Physical Science in Renewable Energy and Energy Systems`;
+- silent replacement of `Licence` by an English degree title without explicit translation/equivalence evidence;
 - any completed-degree language for ongoing master's programmes.
 
 ## Non-conflation rules
 
 ```text
+user-confirmed wording != independent documentary verification
+original-language credential != silent English equivalence
 education != expertise in every related subfield
 coursework != independent research
 research ambition != established contribution
