@@ -3,103 +3,60 @@
 <desc id="desc">Charcoal-and-gold mathematical diagram showing a state manifold, local chart, tangent space, Riemannian metric, geodesic distance, curvature, and distance to a viability boundary.</desc>
 <metadata>Native editable SVG. Mathematical concepts shown schematically; use in engineering requires explicit structure and validation.</metadata>
 <defs>
-  <style>
-    text{font-family:Inter,Segoe UI,Arial,sans-serif}
-    .serif{font-family:Georgia,'Times New Roman',serif}
-    .math{font-family:'STIX Two Math','Cambria Math',Georgia,serif}
-  </style>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#080A0A"/><stop offset="1" stop-color="#141616"/></linearGradient>
-  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#FFFFFF" stroke-opacity="0.028"/></pattern>
-  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#D8B86B"/></marker>
+<style>
+:root{--bg:#0F1111;--ink:#F1EEE6;--muted:#8E928E;--line:#343735;--gold:#D8B86B;--gold2:#8F7138;--mesh:#555957}
+@media(prefers-color-scheme:dark){:root{--bg:#080A0A;--ink:#F5F1E8;--muted:#9A9E99;--line:#303331;--gold:#E0BF72;--gold2:#96753A;--mesh:#5B5F5D}}
+text{font-family:Inter,Segoe UI,Arial,sans-serif}.serif{font-family:Georgia,'Times New Roman',serif}.math{font-family:'STIX Two Math','Cambria Math',Georgia,serif}
+</style>
+<pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#fff" stroke-opacity=".028"/></pattern>
+<marker id="a" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="var(--gold)"/></marker>
 </defs>
-<rect width="1920" height="900" fill="url(#bg)"/><rect width="1920" height="900" fill="url(#grid)"/>
+<rect width="1920" height="900" fill="var(--bg)"/><rect width="1920" height="900" fill="url(#grid)"/>
 
-<text x="110" y="76" fill="#D8B86B" font-size="12" font-weight="800" letter-spacing="4">DIFFERENTIAL GEOMETRY / STATE-SPACE FOUNDATIONS</text>
-<text x="110" y="128" fill="#F1EEE6" font-size="48" font-weight="600" class="serif">Geometry of constrained dynamical systems</text>
-<text x="110" y="161" fill="#8E928E" font-size="16">Manifold structure → local coordinates → tangent dynamics → metric → geodesics → curvature → viability margin</text>
-<line x1="110" y1="190" x2="1810" y2="190" stroke="#303331"/>
+<text x="110" y="76" fill="var(--gold)" font-size="12" font-weight="800" letter-spacing="4">DIFFERENTIAL GEOMETRY / STATE-SPACE FOUNDATIONS</text>
+<text x="110" y="128" fill="var(--ink)" font-size="48" font-weight="600" class="serif">Geometry of constrained dynamical systems</text>
+<text x="110" y="161" fill="var(--muted)" font-size="16">Manifold structure → local coordinates → tangent dynamics → metric → geodesics → curvature → viability margin</text>
+<line x1="110" y1="190" x2="1810" y2="190" stroke="var(--line)"/>
 
-<!-- State manifold -->
 <g transform="translate(80 228)">
-  <text x="40" y="0" fill="#8A8E8A" font-size="11" font-weight="800" letter-spacing="3">STATE MANIFOLD 𝓜</text>
-  <g transform="translate(20 44)" fill="none" stroke-linecap="round">
-    <path d="M8 390C100 240 208 157 338 157C467 156 534 243 666 214C744 197 802 130 842 72" stroke="#555957" stroke-width="1.3"/>
-    <path d="M0 432C96 308 215 230 340 227C456 224 548 292 663 275C752 263 817 207 857 150" stroke="#555957" stroke-width="1.2"/>
-    <path d="M13 477C122 383 234 320 358 317C473 314 559 361 672 356C758 352 826 313 873 261" stroke="#555957" stroke-width="1.1"/>
-    <path d="M48 520C161 455 277 415 389 416C500 417 584 446 689 451C777 456 841 433 889 399" stroke="#555957" stroke-width="1.1"/>
-
-    <path d="M71 355C132 409 157 468 148 521" stroke="#3C403E"/>
-    <path d="M163 248C223 331 243 423 235 490" stroke="#3C403E"/>
-    <path d="M275 181C324 279 340 381 334 456" stroke="#3C403E"/>
-    <path d="M393 164C417 274 436 372 436 438" stroke="#3C403E"/>
-    <path d="M514 190C514 294 540 380 548 438" stroke="#3C403E"/>
-    <path d="M636 215C625 316 657 386 675 445" stroke="#3C403E"/>
-    <path d="M750 183C739 279 778 366 800 423" stroke="#3C403E"/>
-    <path d="M830 105C815 226 859 340 885 402" stroke="#3C403E"/>
-  </g>
-
-  <!-- viability subset -->
-  <path d="M178 426C234 314 320 262 413 261C510 259 585 314 673 293C725 281 769 247 809 201" fill="#D8B86B" fill-opacity="0.035" stroke="#D8B86B" stroke-width="2.8"/>
-  <text x="710" y="286" fill="#D8B86B" font-size="16" class="math">∂𝒱ₛᵤₛ</text>
-  <text x="480" y="325" fill="#B9B5AC" font-size="19" class="math">𝒱ₛᵤₛ ⊂ 𝓜</text>
-
-  <!-- trajectory/geodesic -->
-  <path d="M176 457C243 403 305 366 373 335C449 301 505 262 571 222" fill="none" stroke="#F1EEE6" stroke-width="3" marker-end="url(#arrow)"/>
-  <circle cx="176" cy="457" r="7" fill="#D8B86B"/>
-  <circle cx="373" cy="335" r="6" fill="#F1EEE6"/>
-  <text x="132" y="488" fill="#D8B86B" font-size="15" class="math">x</text>
-  <text x="389" y="330" fill="#F1EEE6" font-size="15" class="math">γ(s)</text>
-
-  <!-- tangent plane -->
-  <polygon points="367,334 485,298 553,342 432,382" fill="#D8B86B" fill-opacity="0.08" stroke="#8F7138" stroke-width="1.4"/>
-  <line x1="432" y1="357" x2="522" y2="314" stroke="#D8B86B" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="432" y1="357" x2="503" y2="386" stroke="#B6B3AA" stroke-width="2"/>
-  <text x="529" y="311" fill="#D8B86B" font-size="14" class="math">e₁</text>
-  <text x="509" y="400" fill="#B6B3AA" font-size="14" class="math">e₂</text>
-  <text x="430" y="417" fill="#858985" font-size="14" class="math">Tₓ𝓜</text>
-
-  <!-- shortest distance to boundary -->
-  <line x1="176" y1="457" x2="225" y2="389" stroke="#D8B86B" stroke-width="2" stroke-dasharray="7 6"/>
-  <circle cx="225" cy="389" r="4" fill="#D8B86B"/>
-  <text x="93" y="414" fill="#D8B86B" font-size="15" class="math">ρ_g(x)</text>
+<text x="40" y="0" fill="var(--muted)" font-size="11" font-weight="800" letter-spacing="3">STATE MANIFOLD 𝓜</text>
+<g transform="translate(20 44)" fill="none" stroke-linecap="round">
+<path d="M8 390C100 240 208 157 338 157C467 156 534 243 666 214C744 197 802 130 842 72" stroke="var(--mesh)" stroke-width="1.3"/>
+<path d="M0 432C96 308 215 230 340 227C456 224 548 292 663 275C752 263 817 207 857 150" stroke="var(--mesh)" stroke-width="1.2"/>
+<path d="M13 477C122 383 234 320 358 317C473 314 559 361 672 356C758 352 826 313 873 261" stroke="var(--mesh)" stroke-width="1.1"/>
+<path d="M48 520C161 455 277 415 389 416C500 417 584 446 689 451C777 456 841 433 889 399" stroke="var(--mesh)" stroke-width="1.1"/>
+<path d="M71 355C132 409 157 468 148 521" stroke="var(--line)"/><path d="M163 248C223 331 243 423 235 490" stroke="var(--line)"/><path d="M275 181C324 279 340 381 334 456" stroke="var(--line)"/><path d="M393 164C417 274 436 372 436 438" stroke="var(--line)"/><path d="M514 190C514 294 540 380 548 438" stroke="var(--line)"/><path d="M636 215C625 316 657 386 675 445" stroke="var(--line)"/><path d="M750 183C739 279 778 366 800 423" stroke="var(--line)"/><path d="M830 105C815 226 859 340 885 402" stroke="var(--line)"/>
+</g>
+<path d="M178 426C234 314 320 262 413 261C510 259 585 314 673 293C725 281 769 247 809 201" fill="var(--gold)" fill-opacity=".03" stroke="var(--gold)" stroke-width="2.8"/>
+<text x="710" y="286" fill="var(--gold)" font-size="16" class="math">∂𝒱ₛᵤₛ</text><text x="480" y="325" fill="var(--ink)" opacity=".72" font-size="19" class="math">𝒱ₛᵤₛ ⊂ 𝓜</text>
+<path d="M176 457C243 403 305 366 373 335C449 301 505 262 571 222" fill="none" stroke="var(--ink)" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="176" cy="457" r="7" fill="var(--gold)"/><circle cx="373" cy="335" r="6" fill="var(--ink)"/><text x="132" y="488" fill="var(--gold)" font-size="15" class="math">x</text><text x="389" y="330" fill="var(--ink)" font-size="15" class="math">γ(s)</text>
+<polygon points="367,334 485,298 553,342 432,382" fill="var(--gold)" fill-opacity=".07" stroke="var(--gold2)" stroke-width="1.4"/>
+<line x1="432" y1="357" x2="522" y2="314" stroke="var(--gold)" stroke-width="2" marker-end="url(#a)"/><line x1="432" y1="357" x2="503" y2="386" stroke="var(--ink)" stroke-opacity=".65" stroke-width="2"/>
+<text x="529" y="311" fill="var(--gold)" font-size="14" class="math">e₁</text><text x="509" y="400" fill="var(--ink)" opacity=".7" font-size="14" class="math">e₂</text><text x="430" y="417" fill="var(--muted)" font-size="14" class="math">Tₓ𝓜</text>
+<line x1="176" y1="457" x2="225" y2="389" stroke="var(--gold)" stroke-width="2" stroke-dasharray="7 6"/><circle cx="225" cy="389" r="4" fill="var(--gold)"/><text x="93" y="414" fill="var(--gold)" font-size="15" class="math">ρ_g(x)</text>
 </g>
 
-<!-- Chart mapping -->
 <g transform="translate(1030 245)">
-  <text x="0" y="0" fill="#8A8E8A" font-size="11" font-weight="800" letter-spacing="3">LOCAL CHART</text>
-  <path d="M0 140C85 123 119 69 178 46" fill="none" stroke="#D8B86B" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="83" y="91" fill="#D8B86B" font-size="22" class="math">φ</text>
-
-  <g transform="translate(210 20)">
-    <line x1="0" y1="215" x2="278" y2="215" stroke="#B8B5AC" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <line x1="34" y1="252" x2="34" y2="0" stroke="#B8B5AC" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <g stroke="#343735" stroke-width="1"><line x1="94" y1="20" x2="94" y2="215"/><line x1="154" y1="20" x2="154" y2="215"/><line x1="214" y1="20" x2="214" y2="215"/><line x1="34" y1="155" x2="268" y2="155"/><line x1="34" y1="95" x2="268" y2="95"/><line x1="34" y1="35" x2="268" y2="35"/></g>
-    <path d="M65 177C99 145 125 130 151 106C179 80 201 70 242 56" fill="none" stroke="#D8B86B" stroke-width="2.5"/>
-    <circle cx="118" cy="136" r="5" fill="#F1EEE6"/>
-    <text x="283" y="221" fill="#9DA09C" font-size="14" class="math">u¹</text>
-    <text x="11" y="0" fill="#9DA09C" font-size="14" class="math">u²</text>
-  </g>
-  <text x="220" y="300" fill="#9B9E9A" font-size="14" class="math">φ: U⊂𝓜 → ℝⁿ</text>
+<text x="0" y="0" fill="var(--muted)" font-size="11" font-weight="800" letter-spacing="3">LOCAL CHART</text>
+<path d="M0 140C85 123 119 69 178 46" fill="none" stroke="var(--gold)" stroke-width="2" marker-end="url(#a)"/><text x="83" y="91" fill="var(--gold)" font-size="22" class="math">φ</text>
+<g transform="translate(210 20)">
+<line x1="0" y1="215" x2="278" y2="215" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.5" marker-end="url(#a)"/><line x1="34" y1="252" x2="34" y2="0" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.5" marker-end="url(#a)"/>
+<g stroke="var(--line)"><line x1="94" y1="20" x2="94" y2="215"/><line x1="154" y1="20" x2="154" y2="215"/><line x1="214" y1="20" x2="214" y2="215"/><line x1="34" y1="155" x2="268" y2="155"/><line x1="34" y1="95" x2="268" y2="95"/><line x1="34" y1="35" x2="268" y2="35"/></g>
+<path d="M65 177C99 145 125 130 151 106C179 80 201 70 242 56" fill="none" stroke="var(--gold)" stroke-width="2.5"/><circle cx="118" cy="136" r="5" fill="var(--ink)"/>
+<text x="283" y="221" fill="var(--muted)" font-size="14" class="math">u¹</text><text x="11" y="0" fill="var(--muted)" font-size="14" class="math">u²</text>
+</g>
+<text x="220" y="300" fill="var(--muted)" font-size="14" class="math">φ: U⊂𝓜 → ℝⁿ</text>
 </g>
 
-<!-- Metric and curvature -->
 <g transform="translate(1030 590)">
-  <text x="0" y="0" fill="#8A8E8A" font-size="11" font-weight="800" letter-spacing="3">LOCAL GEOMETRY</text>
-  <text x="0" y="52" fill="#F1EEE6" font-size="26" class="math">g = gᵢⱼ duⁱ⊗duʲ</text>
-  <text x="0" y="98" fill="#D8B86B" font-size="22" class="math">ds² = gᵢⱼ dxⁱ dxʲ</text>
-  <text x="0" y="142" fill="#BDB9B0" font-size="21" class="math">L(γ)=∫ √(gᵢⱼ γ̇ⁱγ̇ʲ) ds</text>
-  <text x="0" y="186" fill="#BDB9B0" font-size="21" class="math">d_g(p,q)=inf₍γ₎ L(γ)</text>
-
-  <line x1="430" y1="16" x2="430" y2="196" stroke="#333635"/>
-  <text x="475" y="52" fill="#F1EEE6" font-size="22" class="math">Γᵏᵢⱼ = ½gᵏˡ(∂ᵢgⱼˡ+∂ⱼgᵢˡ−∂ˡgᵢⱼ)</text>
-  <text x="475" y="102" fill="#D8B86B" font-size="22" class="math">Rⁱⱼₖₗ</text>
-  <text x="534" y="102" fill="#989C98" font-size="14">curvature tensor</text>
-  <text x="475" y="150" fill="#F1EEE6" font-size="22" class="math">ρ_g(x)=d_g(x,∂𝒱ₛᵤₛ)</text>
-  <text x="475" y="185" fill="#8E928E" font-size="13">geometric margin; engineering meaning requires justified metric and validated boundary</text>
+<text x="0" y="0" fill="var(--muted)" font-size="11" font-weight="800" letter-spacing="3">LOCAL GEOMETRY</text>
+<text x="0" y="52" fill="var(--ink)" font-size="26" class="math">g = gᵢⱼ duⁱ⊗duʲ</text><text x="0" y="98" fill="var(--gold)" font-size="22" class="math">ds² = gᵢⱼ dxⁱ dxʲ</text><text x="0" y="142" fill="var(--ink)" opacity=".72" font-size="21" class="math">L(γ)=∫ √(gᵢⱼ γ̇ⁱγ̇ʲ) ds</text><text x="0" y="186" fill="var(--ink)" opacity=".72" font-size="21" class="math">d_g(p,q)=inf₍γ₎ L(γ)</text>
+<line x1="430" y1="16" x2="430" y2="196" stroke="var(--line)"/>
+<text x="475" y="52" fill="var(--ink)" font-size="22" class="math">Γᵏᵢⱼ = ½gᵏˡ(∂ᵢgⱼˡ+∂ⱼgᵢˡ−∂ˡgᵢⱼ)</text><text x="475" y="102" fill="var(--gold)" font-size="22" class="math">Rⁱⱼₖₗ</text><text x="534" y="102" fill="var(--muted)" font-size="14">curvature tensor</text><text x="475" y="150" fill="var(--ink)" font-size="22" class="math">ρ_g(x)=d_g(x,∂𝒱ₛᵤₛ)</text><text x="475" y="185" fill="var(--muted)" font-size="13">geometric margin; engineering meaning requires a justified metric and validated boundary</text>
 </g>
 
-<!-- footer -->
-<line x1="110" y1="840" x2="1810" y2="840" stroke="#303331"/>
-<text x="110" y="871" fill="#858985" font-size="11" font-weight="800" letter-spacing="2.6">MANIFOLD → CHART → TANGENT SPACE → METRIC → GEODESIC → CURVATURE → VIABILITY BOUNDARY</text>
-<text x="1810" y="871" text-anchor="end" fill="#D8B86B" font-size="11" font-weight="800" letter-spacing="2.4">GEOMETRY IS USED ONLY WHEN THE REQUIRED STRUCTURE IS FORMALLY DEFINED</text>
+<line x1="110" y1="840" x2="1810" y2="840" stroke="var(--line)"/>
+<text x="110" y="871" fill="var(--muted)" font-size="11" font-weight="800" letter-spacing="2.6">MANIFOLD → CHART → TANGENT SPACE → METRIC → GEODESIC → CURVATURE → VIABILITY BOUNDARY</text>
+<text x="1810" y="871" text-anchor="end" fill="var(--gold)" font-size="11" font-weight="800" letter-spacing="2.4">GEOMETRY IS USED ONLY WHEN THE REQUIRED STRUCTURE IS FORMALLY DEFINED</text>
 </svg>
