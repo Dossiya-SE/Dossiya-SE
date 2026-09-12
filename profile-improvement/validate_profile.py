@@ -19,11 +19,20 @@ RELEASE_GATE = WORKSPACE / "PROFILE_RELEASE_GATE.md"
 WORKSPACE_README = WORKSPACE / "README.md"
 
 HEADER = ROOT / "assets" / "math-art" / "profile-header-v5.svg"
+LIVING_STATE = ROOT / "assets" / "math-art" / "research-state-v1.svg"
 PRIMARY_VISUALS = [
+    LIVING_STATE,
     ROOT / "assets" / "math-art" / "research-operating-system-v5.svg",
     ROOT / "assets" / "math-art" / "differential-geometry-foundations-v5.svg",
 ]
 PUBLIC_INTEGRITY = ROOT / "docs" / "RESEARCH_INTEGRITY.md"
+
+APPROVED_LOCAL_VISUAL_REFS = [
+    "assets/math-art/profile-header-v5.svg",
+    "assets/math-art/research-state-v1.svg",
+    "assets/math-art/research-operating-system-v5.svg",
+    "assets/math-art/differential-geometry-foundations-v5.svg",
+]
 
 REQUIRED = [
     README,
@@ -103,6 +112,7 @@ def main() -> int:
     required_readme_tokens = [
         CANONICAL_PROFILE_IDENTITY,
         "assets/math-art/profile-header-v5.svg",
+        "assets/math-art/research-state-v1.svg",
         "assets/math-art/research-operating-system-v5.svg",
         "assets/math-art/differential-geometry-foundations-v5.svg",
         "docs/RESEARCH_INTEGRITY.md",
@@ -110,6 +120,7 @@ def main() -> int:
         "MS Financial Engineering — WorldQuant University, ongoing",
         UNDERGRAD_PUBLIC_TITLE,
         "not a claim of an already validated universal theory",
+        "Repository activity is telemetry, **not evidence of scientific validity**.",
     ]
     for token in required_readme_tokens:
         if token not in readme:
@@ -146,8 +157,14 @@ def main() -> int:
         fail(f"Public README must remain concise (5–14 KB); found {readme_bytes} bytes.")
 
     local_image_refs = readme.count("<img src=\"assets/")
-    if local_image_refs != 3:
-        fail(f"Professional profile must use exactly three local visuals; found {local_image_refs}.")
+    if local_image_refs != len(APPROVED_LOCAL_VISUAL_REFS):
+        fail(
+            "Professional profile must use exactly four governed local visuals; "
+            f"found {local_image_refs}."
+        )
+    for visual_ref in APPROVED_LOCAL_VISUAL_REFS:
+        if readme.count(f'<img src="{visual_ref}"') != 1:
+            fail(f"Governed local visual must appear exactly once: {visual_ref}")
 
     credentials = {item["credential_id"]: item for item in registry["credentials"]}
 
@@ -204,6 +221,16 @@ def main() -> int:
         if token not in header_text:
             fail(f"Profile hero missing required semantic token: {token}")
 
+    living_text = svg_text(LIVING_STATE)
+    for token in (
+        "Living Research State",
+        "SEVEN-STAGE RESEARCH ARCHITECTURE",
+        "PUBLIC RESEARCH TELEMETRY",
+        "PROVENANCE",
+    ):
+        if token not in living_text:
+            fail(f"Living research-state visual missing required semantic token: {token}")
+
     integrity = PUBLIC_INTEGRITY.read_text(encoding="utf-8")
     for token in (
         "Simulation is not relabeled as observation.",
@@ -216,8 +243,9 @@ def main() -> int:
     print("PROFESSIONAL PROFILE VALIDATION: PASS")
     print(f"README size: {readme_bytes} bytes")
     print("Public sections: 8/8")
-    print("Local visuals: 3/3")
-    print("Native vector hero: PASS")
+    print("Governed local visuals: 4/4")
+    print("Native vector visual system: PASS")
+    print("Living research-state semantic contract: PASS")
     print("Credential safeguards: PASS")
     print("Licence-title regression guard: PASS")
     print("Canonical identity regression guard: PASS")

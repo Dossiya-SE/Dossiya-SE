@@ -3,6 +3,7 @@ from __future__ import annotations
 import json, math, subprocess, sys
 from html import escape
 from pathlib import Path
+from render_research_state import render_research_state
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
@@ -121,4 +122,4 @@ def geometry():
   b += [text(x+160,466,eqs[i][0],13,'middle'),text(x+160,490,eqs[i][1],13,'middle'),text(x+160,550,meanings[i],12,'middle',style='italic',fill=MUTED)]
  b += [text(960,650,'GEOMETRY CHAIN',12,'middle','700',fill=MUTED),chain(960,682,['MANIFOLD','TANGENT SPACE','METRIC','GEODESICS','CURVATURE','VIABILITY'],13),text(960,715,'Geometry is an engineering claim only after the state space, metric and validity domain are formally justified.',12,'middle',style='italic',fill=MUTED),close()]; write('differential-geometry-foundations-v5.svg',''.join(b))
 
-if __name__=='__main__': hero(); research(); geometry(); print('generated canonical profile SVGs')
+if __name__=='__main__': hero(); research(); geometry(); render_research_state(); print('generated canonical and dynamic profile SVGs')
