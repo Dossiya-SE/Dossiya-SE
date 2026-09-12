@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "source": "GitHub REST API",
+  "evidence_state": "OBSERVED_PUBLIC_REPOSITORY_METADATA",
+  "status": "bootstrap_pending_refresh",
+  "generated_at": null,
+  "repositories": []
+}
