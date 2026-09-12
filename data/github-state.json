@@ -2,7 +2,134 @@
   "schema_version": "1.0",
   "source": "GitHub REST API",
   "evidence_state": "OBSERVED_PUBLIC_REPOSITORY_METADATA",
-  "status": "bootstrap_pending_refresh",
-  "generated_at": null,
-  "repositories": []
+  "status": "live",
+  "generated_at": "2026-09-12T15:41:24+00:00",
+  "repositories": [
+    {
+      "repository": "Optimization-for-sustainability-and-resilience",
+      "display_name": "Optimization for Sustainability and Resilience",
+      "research_role": "optimization, constrained decision models and network methods",
+      "status": "active",
+      "url": "https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience",
+      "language": "Python",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "updated_at": "2026-09-12T14:14:18Z",
+      "pushed_at": "2026-09-12T14:14:14Z",
+      "latest_commit": {
+        "sha": "da006e957748",
+        "date": "2026-09-12T14:14:14Z",
+        "message": "Link IEE 574 modeling reasoning protocol"
+      },
+      "latest_release": null
+    },
+    {
+      "repository": "Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience",
+      "display_name": "Mathematics Exploration for Sustainable Resilience",
+      "research_role": "differential geometry, dynamical systems and resilience mathematics",
+      "status": "active",
+      "url": "https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience",
+      "language": "Python",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 5,
+      "updated_at": "2026-09-09T08:30:49Z",
+      "pushed_at": "2026-09-09T08:29:46Z",
+      "latest_commit": {
+        "sha": "ec6b2051d612",
+        "date": "2026-09-09T08:29:46Z",
+        "message": "Add export manifest and archive hashes"
+      },
+      "latest_release": null
+    },
+    {
+      "repository": "Math-Surface-Engineer-Demo",
+      "display_name": "Mathematical Rendering & Verification",
+      "research_role": "renderer-aware mathematical publication and verification",
+      "status": "active",
+      "url": "https://github.com/Dossiya-SE/Math-Surface-Engineer-Demo",
+      "language": "Jupyter Notebook",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "updated_at": "2026-09-07T03:07:02Z",
+      "pushed_at": "2026-09-07T03:06:58Z",
+      "latest_commit": {
+        "sha": "7c4b09e022ee",
+        "date": "2026-09-07T03:06:58Z",
+        "message": "Align README with mathematical surface engineering identity"
+      },
+      "latest_release": null
+    },
+    {
+      "repository": "dossiya-se.github.io",
+      "display_name": "Mathematical Research Portfolio",
+      "research_role": "interactive mathematical visualization and research demonstrations",
+      "status": "active",
+      "url": "https://github.com/Dossiya-SE/dossiya-se.github.io",
+      "language": "JavaScript",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 1,
+      "updated_at": "2026-08-23T18:45:34Z",
+      "pushed_at": "2026-08-23T18:44:52Z",
+      "latest_commit": {
+        "sha": "5f2f60c9e063",
+        "date": "2026-08-23T18:44:52Z",
+        "message": "Freeze approved screenshot as canonical portfolio design"
+      },
+      "latest_release": null
+    },
+    {
+      "repository": "Python-for-rapid-engineering-solution",
+      "display_name": "Python for Rapid Engineering Solutions",
+      "research_role": "reproducible numerical engineering computation",
+      "status": "active",
+      "url": "https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution",
+      "language": "Python",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "updated_at": "2026-08-21T23:10:33Z",
+      "pushed_at": "2026-08-21T23:10:23Z",
+      "latest_commit": {
+        "sha": "cff7874559f8",
+        "date": "2026-08-21T23:10:22Z",
+        "message": "Adaptive EDA Mathematical Map V4"
+      },
+      "latest_release": null
+    },
+    {
+      "repository": "africa-energy-dignity",
+      "display_name": "Africa Energy Dignity",
+      "research_role": "energy-system modeling, geospatial engineering and constrained planning",
+      "status": "active",
+      "url": "https://github.com/Dossiya-SE/africa-energy-dignity",
+      "language": "Python",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "updated_at": "2026-08-21T23:11:01Z",
+      "pushed_at": "2026-08-21T23:10:16Z",
+      "latest_commit": {
+        "sha": "4f4987aa1cef",
+        "date": "2026-08-21T23:10:16Z",
+        "message": "Adaptive Africa Energy Dignity Systems Visual V4"
+      },
+      "latest_release": null
+    }
+  ]
 }
