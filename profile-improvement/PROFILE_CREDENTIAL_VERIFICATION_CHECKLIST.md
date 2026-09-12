@@ -5,18 +5,18 @@
 
 ## Governing rule
 
-A credential may appear in the public profile under a definitive official title only when its wording and status are reconciled against the authoritative record.
+A credential may appear in the public profile under a definitive title when the account owner has explicitly confirmed the public wording or when the wording is reconciled against an authoritative record. These are distinct evidence states and must not be conflated.
 
 ```text
-user-stated title
+user-stated / user-corrected title
     ↓
-official document / official programme record
+public wording control
+    ↓
+official document / official programme record when available
     ↓
 exact-title reconciliation
     ↓
 translation/equivalence note if needed
-    ↓
-public wording approved
 ```
 
 ## Credential verification fields
@@ -25,7 +25,8 @@ For each credential record, capture:
 
 | Field | Requirement |
 |---|---|
-| Original-language title | Exact diploma/certificate wording |
+| Original-language title | Exact diploma/certificate wording when available |
+| User-confirmed public title | Account-owner correction used for public wording when explicitly supplied |
 | English public wording | Exact or explicitly identified translation |
 | Awarding institution | Exact legal/institutional name |
 | Country | Official jurisdiction |
@@ -33,15 +34,15 @@ For each credential record, capture:
 | Field/specialization | Exact wording where present |
 | Completion status | Completed / ongoing / expected |
 | Award date | If appropriate for public use |
-| Evidence source | Diploma, transcript, official portal or programme page |
-| Reconciliation status | VERIFIED / NEEDS_RECONCILIATION / ONGOING |
+| Evidence source | User confirmation, diploma, transcript, official portal or programme page |
+| Reconciliation status | USER_CONFIRMED / VERIFIED / NEEDS_RECONCILIATION / ONGOING |
 | Public-release status | APPROVED / BLOCKED |
 
-## Current unresolved items
+## Current controlled items
 
 ### Electrical-engineering technical credentials
 
-The following are currently `USER_STATED / OFFICIAL_TITLE_TO_VERIFY`:
+The following remain `USER_STATED / OFFICIAL_TITLE_TO_VERIFY`:
 
 1. Professional Qualification Certificate in Electricity;
 2. Technical Baccalaureate of Benin — Electrical Engineering;
@@ -51,24 +52,22 @@ The following are currently `USER_STATED / OFFICIAL_TITLE_TO_VERIFY`:
 
 ### Undergraduate renewable-energy credential
 
-Two descriptions currently coexist:
+The account owner explicitly corrected the public French title on 2026-09-12 to:
 
-- current public profile: `Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques`;
-- newer user description: `Bachelor of Physical Science in Renewable Energy and Energy Systems`.
+> **Licence, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**
 
-These must not be treated as interchangeable until their relationship is established.
+Status: `USER_CONFIRMED_PUBLIC_TITLE`.
 
-Required determination:
+This correction resolves the stale public wording. It does **not** establish an independent documentary-verification state and it does not authorize a silent English replacement.
+
+Translation/equivalence boundary:
 
 ```text
-same credential + translation/equivalence
-OR
-same programme but different public naming convention
-OR
-different credentials
+French public title = user-confirmed
+English translation/equivalence = separate evidence question
 ```
 
-Status: `RECONCILE_BEFORE_PUBLIC_CHANGE`.
+If an English rendering is later needed, it must be explicitly labeled and supported rather than substituted for `Licence`.
 
 ### Graduate programmes
 
@@ -84,7 +83,7 @@ If an official credential is in French or another language, preserve the origina
 Preferred pattern:
 
 ```text
-Official title — Institution
+Official/original-language title — Institution
 (English translation: ...)
 ```
 
@@ -94,7 +93,7 @@ when the translation materially helps an international reader.
 
 Do not automatically convert:
 
-- `Licence Professionnelle` → `Bachelor of Science`;
+- `Licence` → `Bachelor of Science` or another English degree title without controlled translation/equivalence evidence;
 - technical/professional certificates → university diplomas;
 - diploma titles → occupational licenses;
 - ongoing master's programmes → completed degrees;
@@ -102,7 +101,9 @@ Do not automatically convert:
 
 ## Release gate
 
-A definitive public credential title is `APPROVED` only if:
+A public credential wording may be released as `USER_CONFIRMED` when the account owner explicitly corrects their own public profile wording. `VERIFIED` remains reserved for authoritative documentary or institutional evidence.
+
+For documentary verification, the stronger state requires:
 
 ```text
 exact title verified
@@ -111,4 +112,4 @@ AND completion status verified
 AND translation/equivalence explicitly controlled
 ```
 
-Otherwise use broader narrative language such as `electrical-engineering foundation`, `renewable-energy and energy-systems background`, or `pursuing graduate study in ...` where that wording is supported without asserting an unresolved official credential title.
+Otherwise preserve the exact user-confirmed original-language wording and avoid stronger translation/equivalence claims.
