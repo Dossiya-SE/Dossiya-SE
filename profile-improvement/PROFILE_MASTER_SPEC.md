@@ -37,19 +37,15 @@ These credentials establish the profile's practical electrical-engineering origi
 
 ### Stage B — Physical science, renewable energy and energy systems
 
-The user states a bachelor's-level qualification described as:
+The account owner explicitly confirms the public French credential title as:
 
-> **Bachelor of Physical Science in Renewable Energy and Energy Systems**
+> **Licence, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**
 
 This stage should be presented as the bridge from electrical practice to physical modeling, energy conversion, renewable-energy systems and systems-level engineering.
 
-**Evidence status:** `USER_STATED / OFFICIAL_TITLE_TO_VERIFY` for the exact public degree title.
+**Evidence status:** `USER_CONFIRMED_PUBLIC_TITLE`. This means the account owner has corrected the public wording. It is **not** relabeled as independent documentary verification.
 
-The current public profile separately displays:
-
-> **Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques**
-
-The two descriptions remain under `RECONCILE_BEFORE_PUBLIC_CHANGE`; neither is silently substituted for the other until the official record establishes their relationship.
+No English degree-title translation or equivalence is asserted by this profile architecture. If an English rendering is later needed, it must be handled as a separate evidence-controlled translation rather than silently replacing the French title.
 
 ### Stage C — Sustainable engineering
 
@@ -173,7 +169,7 @@ The public profile should show **development of capabilities**, not only accumul
 - “AI-equivalent technology”;
 - “validated across every sector”;
 - completion of ongoing master's degrees;
-- official credential names that have not been checked against the diploma text.
+- unverified English translations/equivalence claims for credentials.
 
 ## 7. Profile hierarchy
 
@@ -204,4 +200,4 @@ ACTIVE architecture
 all credential titles VERIFIED
 ```
 
-Current public-safe narrative is maintained in [`PUBLIC_PROFILE_TRAJECTORY.md`](PUBLIC_PROFILE_TRAJECTORY.md). Definitive credential-title changes remain blocked until the credential-verification checklist passes.
+Current public-safe narrative is maintained in [`PUBLIC_PROFILE_TRAJECTORY.md`](PUBLIC_PROFILE_TRAJECTORY.md). The undergraduate French title is user-confirmed as **Licence, Énergies Renouvelables et Systèmes Énergétiques**; unresolved title verification remains for the three technical electrical credentials and for any future English translation/equivalence claim.
