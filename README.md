@@ -1,54 +1,42 @@
 <p align="center">
-  <img src="assets/math-art/profile-header-v5.svg" width="100%" alt="Dossiya Dakou — Mathematical Systems Engineering for Sustainable Resilience" />
+  <img src="assets/math-art/profile-header-v6.svg" width="100%" alt="Dossiya Dakou — Mathematical Systems Engineering for Sustainable Resilience" />
 </p>
 
 <p align="center">
-  <a href="https://dossiya-se.github.io/"><img src="https://img.shields.io/badge/Research%20Portfolio-Live-176A38?style=flat-square" alt="Research portfolio" /></a>
-  <a href="https://orcid.org/0009-0004-1071-9948"><img src="https://img.shields.io/badge/ORCID-0009--0004--1071--9948-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID" /></a>
-  <a href="https://www.linkedin.com/in/dossiya-dakou-/"><img src="https://img.shields.io/badge/LinkedIn-Dossiya%20Dakou-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <strong>Mathematical Systems Engineering · Sustainable Infrastructure · Resilience · Optimization · Differential Geometry</strong>
 </p>
 
 <p align="center">
-  <a href="#about">About</a> ·
-  <a href="#featured-research">Research</a> ·
-  <a href="#research-framework">Framework</a> ·
-  <a href="#mathematical-focus">Mathematics</a> ·
-  <a href="#computational-toolkit">Computation</a> ·
-  <a href="#research-integrity">Evidence</a>
+  <a href="https://dossiya-se.github.io/">Research Portfolio</a>
+  &nbsp;·&nbsp;
+  <a href="https://orcid.org/0009-0004-1071-9948">ORCID</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/dossiya-dakou-/">LinkedIn</a>
 </p>
 
-# Dossiya Dakou
+---
 
-**Mathematical Systems Engineering for Sustainable Resilience**
+## Research programme
 
-Engineer and quantitative researcher developing mathematical and computational frameworks for sustainable and resilient systems.
+I develop mathematical and computational frameworks for **interdependent infrastructure systems** operating under disturbance, uncertainty, feedback, recovery and sustainability constraints.
 
-> **Evidence invariant:** a mathematical model is not an observed mechanism; software verification is not empirical validation; a research architecture is not a universal theory.
+The present engineering focus is a minimum four-layer system:
 
-## About
+```math
+\boxed{
+\text{Power}
+\;\times\;
+\text{Transportation}
+\;\times\;
+\text{Information}
+\;\times\;
+\text{Organization}
+}
+```
 
-My trajectory connects **electrical and energy systems → sustainable engineering → quantitative modeling → advanced mathematical structures**. The current research focus is the behavior of **coupled infrastructure systems under disturbance, uncertainty, feedback, recovery and sustainability constraints**.
+The central problem is not only whether infrastructures are connected, but **how dependencies transmit state, stress, delay, control, uncertainty and recovery across system boundaries**.
 
-The central engineering question is:
-
-> **How can the structure, dynamics and interfaces of interdependent systems be represented rigorously enough to identify failure propagation, viable operating regions and defensible interventions?**
-
-The cross-sector direction is a research programme, **not a claim of an already validated universal theory**.
-
-## Featured research
-
-### Multilayer interdependent infrastructure
-
-The present technical case centers on **power and transportation**, while explicitly separating physical, informational and organizational mechanisms when they affect system behavior.
-
-| Layer | Engineering role | Representative objects |
-|---|---|---|
-| **Power** | supply, network operation and charging support | generation, substations, feeders, charging supply |
-| **Transportation** | mobility and accessibility | roads, flows, EV demand, travel constraints |
-| **Information** | sensing, estimation and control communication | measurements, communication links, state estimates, signals |
-| **Organization** | coordination and recovery decision-making | operators, procedures, priorities, restoration actions |
-
-A dependency is treated as a structured scientific object rather than only an edge in a graph:
+A dependency is therefore treated as a structured scientific object:
 
 ```math
 \boxed{
@@ -68,25 +56,17 @@ m,
 }
 ```
 
-The object distinguishes **source, receiver, mechanism, strength, direction, delay, operating mode and time-varying context** before the dependency is embedded in coupled dynamics.
+This separates the **source**, **receiver**, **mechanism**, **strength**, **direction**, **delay**, **operating mode**, and **time-varying context** before the dependency is embedded in coupled dynamics.
 
-### Active research systems
+---
 
-| Research system | Primary role | Maturity boundary |
-|---|---|---|
-| [**Mathematical Research Portfolio**](https://github.com/Dossiya-SE/dossiya-se.github.io) | nonlinear dynamics, inverse problems, uncertainty, viability and interactive mathematical visualization | research demonstrators; not a calibrated digital twin |
-| [**Mathematics Exploration for Sustainable Resilience**](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience) | differential geometry, dynamical systems, resilience mathematics, reproducible computation and mathematical art | research architecture under development |
-| [**Optimization for Sustainability and Resilience**](https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience) | linear algebra, LP/MILP, network optimization and constrained sustainability/resilience models | deterministic optimization foundations |
-| [**Mathematical Rendering & Verification**](https://github.com/Dossiya-SE/Math-Surface-Engineer-Demo) | renderer-aware publication and mathematical regression checking | verification demonstrator |
-| [**Africa Energy Dignity**](https://github.com/Dossiya-SE/africa-energy-dignity) | energy-system modeling, geospatial engineering and constrained planning | pre-alpha research system |
-
-## Research framework
+## Research architecture
 
 <p align="center">
-  <img src="assets/math-art/research-operating-system-v5.svg" width="96%" alt="Research operating system connecting evidence, state, dynamics, inference, uncertainty, viability, control and validation" />
+  <img src="assets/math-art/research-operating-system-v6.svg" width="98%" alt="Seven-stage mathematical research architecture for sustainable and resilient interdependent infrastructure systems" />
 </p>
 
-The current seven-stage research architecture is
+The governing research pathway is
 
 ```math
 \boxed{
@@ -102,27 +82,94 @@ The current seven-stage research architecture is
 \rightarrow
 \text{Resilience-to-Sustainability Interface}
 \rightarrow
-\text{Transformation Pathways}
+\text{Sustainable Transformation Pathways}
 }
 ```
 
-A generic coupled-system representation is
+A compact coupled representation is
 
 ```math
 \dot{x}_i
 =
 f_i(x_i,\theta_i)
 +
-\sum_{j\neq i} g_{ij}(x_i,x_j,\mathfrak I_{ij},\theta_{ij})
+\sum_{j\neq i}
+g_{ij}(x_i,x_j,\mathfrak I_{ij},\theta_{ij})
 +
 B_i u_i
 +
-\xi_i,
+\xi_i.
 ```
 
-where $x_i$ is a subsystem state, $\mathfrak I_{ij}$ is a structured interdependency, $u_i$ is an admissible intervention, $\theta$ contains model parameters, and $\xi_i$ represents disturbance or uncertainty.
+The model is useful only when its assumptions, mechanisms, parameters, uncertainty and validity domain are explicit.
 
-The research workflow separates construction from validation:
+---
+
+## Geometry of resilience and viability
+
+<p align="center">
+  <img src="assets/math-art/differential-geometry-foundations-v6.svg" width="98%" alt="Differential geometry foundations for constrained infrastructure dynamics and viability analysis" />
+</p>
+
+For a state manifold \(\mathcal M\), admissible set \(K\), and viable region \(\mathcal V_{\mathrm{sus}}\subseteq K\), a geometric resilience margin can be written as
+
+```math
+\boxed{
+\rho_g(Y)
+=
+d_g\!\left(Y,\partial\mathcal V_{\mathrm{sus}}\right)
+}
+```
+
+where \(d_g\) is the geodesic distance induced by a justified metric \(g\).
+
+The quantity is first a **geometric margin**. It becomes an engineering resilience indicator only after the metric, state representation, viability boundary, physical interpretation and empirical relationship to service performance are established.
+
+---
+
+## Mathematical and computational foundations
+
+| Domain | Research role |
+|---|---|
+| **Dynamical systems** | nonlinear state evolution, stability, cascading propagation, recovery |
+| **Network science** | multilayer topology, interdependency mechanisms, structural criticality |
+| **Optimization & control** | constrained intervention, feedback design, recovery and transition decisions |
+| **Probability & uncertainty** | stochastic hazards, parameter uncertainty, model risk, reliability |
+| **Viability & reachability** | feasible long-horizon operation under constraints and admissible control |
+| **Differential geometry** | metric structure, tangent dynamics, geodesics, curvature and boundary distance |
+| **Inverse problems & estimation** | inference of hidden states, mechanisms and parameters from heterogeneous observations |
+
+The computational stack is selected by the mathematical problem rather than by software fashion:
+
+```text
+Scientific definitions + equations
+            ↓
+typed research objects and assumptions
+            ↓
+Python / Julia numerical models
+            ↓
+simulation · inference · optimization · uncertainty
+            ↓
+verification · validation · engineering interpretation
+```
+
+Representative tools include **Python, Julia, MATLAB, NumPy, SciPy, SymPy, Geomstats, Matplotlib, PyVista/VTK, Manim, TikZ/Asymptote, D3.js and Three.js** where justified by the research question.
+
+---
+
+## Selected research systems
+
+| Repository | Scientific purpose |
+|---|---|
+| [**Mathematical Research Portfolio**](https://github.com/Dossiya-SE/dossiya-se.github.io) | interactive nonlinear dynamics, inverse problems, uncertainty, viability and mathematical visualization |
+| [**Mathematics Exploration for Sustainable Resilience**](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience) | differential geometry, dynamical systems, resilience mathematics and mathematical art |
+| [**Optimization for Sustainability and Resilience**](https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience) | linear algebra, LP/MILP, network optimization and constrained engineering decisions |
+| [**Mathematical Rendering & Verification**](https://github.com/Dossiya-SE/Math-Surface-Engineer-Demo) | renderer-aware mathematical publication and regression verification |
+| [**Africa Energy Dignity**](https://github.com/Dossiya-SE/africa-energy-dignity) | energy-system modeling, geospatial engineering and constrained planning |
+
+---
+
+## Evidence discipline
 
 ```math
 \boxed{
@@ -142,93 +189,20 @@ The research workflow separates construction from validation:
 }
 ```
 
-## Mathematical focus
-
-<p align="center">
-  <img src="assets/math-art/differential-geometry-foundations-v5.svg" width="96%" alt="Differential-geometry foundations connecting parameterization, tangent structure, metric, curvature and geodesic analysis" />
-</p>
-
-| Mathematical area | Research role |
-|---|---|
-| **Dynamical systems** | state evolution, stability, disturbance propagation and recovery trajectories |
-| **Optimization and control** | objectives, constraints, intervention design and feedback decisions |
-| **Network science** | multilayer coupling, interface structure, propagation and structural criticality |
-| **Probability and uncertainty** | stochastic disturbances, parameter uncertainty, reliability and model risk |
-| **Viability / reachability** | feasible long-horizon operation under constraints and admissible control |
-| **Differential geometry** | metrics, geodesics, curvature and state-space geometry when the required structure is formally defined |
-
-For a constraint set $K$ and viable set $\mathcal V\subseteq K$, one geometric quantity of interest is
-
-```math
-\rho_g(x)=d_g\!\left(x,\partial\mathcal V\right).
-```
-
-This is first a **geometric margin**. It becomes an engineering resilience indicator only after the metric, viability boundary, physical interpretation and empirical relationship to system performance are justified.
-
-## Computational toolkit
-
-The research repositories separate **scientific meaning**, **typed research structure**, **presentation**, **interaction** and **numerical verification**.
-
-```text
-Markdown + LaTeX
-      ↓
-structured research records
-      ↓
-TypeScript contracts
-      ↓
-HTML / SVG views
-      ↓
-JavaScript interaction
-      ↓
-Python / Julia computation and verification
-```
-
-| Layer | Responsibility |
-|---|---|
-| **Markdown + LaTeX** | definitions, assumptions, derivations, references and equations |
-| **TypeScript** | typed records for dependencies, mechanisms, evidence states and validity domains |
-| **HTML** | semantic page structure and navigation |
-| **CSS / SVG** | visual hierarchy, responsive presentation and mathematical graphics |
-| **JavaScript** | filtering, linked diagrams, inspection and interactive research exploration |
-| **Python / Julia** | simulation, optimization, inference, uncertainty analysis and reproducible numerical verification |
-
-**GitHub README constraint:** GitHub does not execute arbitrary project JavaScript or TypeScript inside a profile README. The README therefore remains a static, auditable research surface; richer interaction belongs in the linked research portfolio.
-
-Additional numerical and mathematical tooling includes NumPy, SciPy, MATLAB, SymPy, Geomstats, Matplotlib, PyVista/VTK, Manim, TikZ/Asymptote, D3.js and Three.js where the research question justifies them. Tool presence indicates a research role, not equal proficiency in every system.
-
-## Education
-
-- **MSE Sustainable Engineering — Arizona State University, ongoing**
-- **MS Financial Engineering — WorldQuant University, ongoing**
-- **Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**
-
-The profile emphasizes a cumulative capability trajectory rather than treating education, research interests and validated expertise as equivalent claims.
-
-## Research integrity
-
-Mathematical models, simulations, software verification, empirical validation and engineering decisions are treated as distinct evidence levels.
-
-| Evidence state | Meaning |
-|---|---|
-| **Observed / sourced** | supported by data, literature, measurements or authoritative records |
-| **Modeled** | mathematically represented under explicit assumptions |
-| **Computed** | produced by reproducible numerical or symbolic procedures |
-| **Verified** | implementation checked against stated mathematical or software properties |
-| **Validated** | compared against appropriate empirical or external evidence |
-| **Decision-ready** | usable only inside a stated validity domain and uncertainty boundary |
-
-A model is not promoted to an observed mechanism because it is mathematically elegant; passing software tests does not establish empirical validity; and geometric language is used for engineering systems only when the required structure is formally defined.
+**Observed mechanisms, mathematical models, numerical outputs, software verification and empirical validation are not treated as interchangeable evidence states.** A model is not promoted to physical truth because it is mathematically elegant, and a passing software test does not establish empirical validity.
 
 See the public [Research Integrity Standard](docs/RESEARCH_INTEGRITY.md).
 
-## Connect
+---
+
+## Education
+
+**MSE Sustainable Engineering** — Arizona State University, ongoing  
+**MS Financial Engineering** — WorldQuant University, ongoing  
+**Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques** — Université d’Abomey-Calavi
+
+---
 
 <p align="center">
-  <a href="https://dossiya-se.github.io/"><strong>Research portfolio</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://orcid.org/0009-0004-1071-9948"><strong>ORCID</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/dossiya-dakou-/"><strong>LinkedIn</strong></a>
+  <strong>Evidence → Mathematics → Computation → Verification → Validation → Engineering Decision</strong>
 </p>
-
-<p align="center"><strong>Evidence → Mathematics → Computation → Verification → Validation → Decision</strong></p>
