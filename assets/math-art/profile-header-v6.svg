@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 680" width="2048" height="680" role="img" aria-labelledby="title desc">
+<title id="title">Dossiya Dakou — Mathematical Systems Engineering for Sustainable Resilience</title>
+<desc id="desc">High-rigor charcoal and gold research identity banner integrating multilayer infrastructure, coupled dynamics, viability geometry, and differential-geometric state-space structure.</desc>
+<metadata>Native editable SVG. Conceptual research identity graphic; not an empirical result.</metadata>
+<defs>
+  <style>
+    text{font-family:Inter,Segoe UI,Arial,sans-serif}
+    .serif{font-family:Georgia,'Times New Roman',serif}
+    .math{font-family:'STIX Two Math','Cambria Math',Georgia,serif}
+  </style>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#070909"/>
+    <stop offset="0.55" stop-color="#0D1010"/>
+    <stop offset="1" stop-color="#141616"/>
+  </linearGradient>
+  <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8C6A2F"/>
+    <stop offset="0.5" stop-color="#E1C173"/>
+    <stop offset="1" stop-color="#9A7534"/>
+  </linearGradient>
+  <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#D8B86B" stop-opacity="0.22"/>
+    <stop offset="1" stop-color="#D8B86B" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="microgrid" width="36" height="36" patternUnits="userSpaceOnUse">
+    <path d="M36 0H0V36" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+  </pattern>
+  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="7" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <marker id="arrowGold" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
+    <path d="M0 0L9 4.5L0 9Z" fill="#D8B86B"/>
+  </marker>
+</defs>
+
+<rect width="2048" height="680" fill="url(#bg)"/>
+<rect width="2048" height="680" fill="url(#microgrid)"/>
+<circle cx="1640" cy="340" r="360" fill="url(#goldGlow)"/>
+
+<!-- left identity column -->
+<g transform="translate(126 106)">
+  <line x1="0" y1="0" x2="0" y2="178" stroke="#D8B86B" stroke-width="3"/>
+  <text x="26" y="12" fill="#D8B86B" font-size="13" font-weight="800" letter-spacing="4.5">MATHEMATICAL SYSTEMS ENGINEERING</text>
+  <text x="26" y="74" fill="#F3F0E8" font-size="74" font-weight="600" class="serif">Dossiya Dakou</text>
+  <text x="26" y="122" fill="#D9D4C8" font-size="25" font-weight="500">Sustainable &amp; Resilient Interdependent Infrastructure Systems</text>
+  <text x="26" y="161" fill="#8F948F" font-size="15" font-weight="700" letter-spacing="2.7">POWER · TRANSPORTATION · INFORMATION · ORGANIZATION</text>
+
+  <g transform="translate(26 226)">
+    <text x="0" y="0" fill="#8E918D" font-size="12" font-weight="800" letter-spacing="3.2">RESEARCH OBJECT</text>
+    <text x="0" y="48" fill="#F0ECE2" font-size="29" class="math">𝕀ᵅᵝᵢⱼ = (Eᵅᵢ,Eᵝⱼ,Mᵢⱼ,wᵢⱼ,δᵢⱼ,τᵢⱼ,aᵢⱼ,m,ℋₜ)</text>
+    <line x1="0" y1="72" x2="848" y2="72" stroke="#2F3332" stroke-width="1"/>
+    <text x="0" y="116" fill="#D8B86B" font-size="24" class="math">Ẏ = F(Y,u,η;θ)</text>
+    <text x="300" y="116" fill="#8B8F8A" font-size="20" class="math">Y ∈ 𝒱ₛᵤₛ(t)</text>
+    <text x="550" y="116" fill="#F0ECE2" font-size="20" class="math">ρ_g(Y)=d_g(Y,∂𝒱ₛᵤₛ)</text>
+  </g>
+
+  <g transform="translate(26 392)">
+    <text x="0" y="0" fill="#8E918D" font-size="11" font-weight="800" letter-spacing="3">RESEARCH LOGIC</text>
+    <line x1="0" y1="35" x2="782" y2="35" stroke="url(#goldLine)" stroke-width="2"/>
+    <g fill="#D8B86B">
+      <circle cx="0" cy="35" r="5"/><circle cx="130" cy="35" r="5"/><circle cx="260" cy="35" r="5"/><circle cx="390" cy="35" r="5"/><circle cx="520" cy="35" r="5"/><circle cx="650" cy="35" r="5"/><circle cx="782" cy="35" r="5"/>
+    </g>
+    <g fill="#C8C4BA" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="0" y="63">STRUCTURE</text><text x="130" y="63">MECHANISMS</text><text x="260" y="63">DYNAMICS</text><text x="390" y="63">CONTROL</text><text x="520" y="63">VIABILITY</text><text x="650" y="63">INTERFACE</text><text x="782" y="63">PATHWAYS</text>
+    </g>
+  </g>
+</g>
+
+<!-- right mathematical-art field -->
+<g transform="translate(1180 55)">
+  <!-- manifold mesh -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M46 426C126 250 219 164 330 155C451 145 517 251 655 208C736 183 791 109 824 65" stroke="#4E5150" stroke-width="1.4"/>
+    <path d="M23 463C121 317 213 230 331 219C440 209 536 291 650 257C744 229 789 151 839 107" stroke="#4E5150" stroke-width="1.2"/>
+    <path d="M10 501C110 388 223 305 345 292C454 281 541 341 649 319C731 302 801 230 853 172" stroke="#4E5150" stroke-width="1.2"/>
+    <path d="M22 542C131 454 247 392 361 382C474 373 553 418 660 406C746 397 816 347 870 286" stroke="#4E5150" stroke-width="1.2"/>
+    <path d="M60 579C176 523 277 477 391 474C500 472 584 502 685 500C770 498 837 463 892 421" stroke="#4E5150" stroke-width="1.2"/>
+
+    <path d="M86 404C146 452 166 517 149 575" stroke="#3E4140" stroke-width="1"/>
+    <path d="M171 295C227 367 237 467 224 541" stroke="#3E4140" stroke-width="1"/>
+    <path d="M280 209C327 302 333 407 323 510" stroke="#3E4140" stroke-width="1"/>
+    <path d="M394 176C418 281 430 377 422 490" stroke="#3E4140" stroke-width="1"/>
+    <path d="M508 205C511 310 529 394 533 485" stroke="#3E4140" stroke-width="1"/>
+    <path d="M618 222C605 317 632 394 650 490" stroke="#3E4140" stroke-width="1"/>
+    <path d="M722 180C708 277 745 374 775 472" stroke="#3E4140" stroke-width="1"/>
+    <path d="M803 107C791 221 832 330 867 427" stroke="#3E4140" stroke-width="1"/>
+  </g>
+
+  <!-- viability region contour -->
+  <path d="M176 448C219 326 305 254 408 248C518 242 595 310 688 286C736 274 778 238 811 195" fill="none" stroke="#D8B86B" stroke-width="3.5"/>
+  <text x="705" y="270" fill="#D8B86B" font-size="17" class="math">∂𝒱ₛᵤₛ</text>
+
+  <!-- geodesic / trajectory -->
+  <path d="M183 492C263 429 334 399 402 367C477 332 544 286 617 252" fill="none" stroke="#F1EDE4" stroke-width="3" marker-end="url(#arrowGold)"/>
+  <circle cx="183" cy="492" r="7" fill="#D8B86B" filter="url(#softGlow)"/>
+  <circle cx="402" cy="367" r="6" fill="#F1EDE4"/>
+  <text x="137" y="520" fill="#D8B86B" font-size="17" class="math">Y(t₀)</text>
+  <text x="423" y="360" fill="#F1EDE4" font-size="17" class="math">Y(t)</text>
+
+  <!-- tangent plane -->
+  <polygon points="396,367 509,332 565,372 449,410" fill="#D8B86B" fill-opacity="0.09" stroke="#8E7440" stroke-width="1.4"/>
+  <line x1="448" y1="388" x2="530" y2="348" stroke="#D8B86B" stroke-width="2" marker-end="url(#arrowGold)"/>
+  <line x1="448" y1="388" x2="511" y2="408" stroke="#B7B4AC" stroke-width="2"/>
+  <text x="536" y="347" fill="#D8B86B" font-size="15" class="math">e₁</text>
+  <text x="515" y="424" fill="#B7B4AC" font-size="15" class="math">e₂</text>
+  <text x="430" y="438" fill="#8E918D" font-size="14" class="math">T_Y𝓜</text>
+
+  <!-- multilayer graph embedded over manifold -->
+  <g transform="translate(560 76)">
+    <g stroke="#6B6F6D" stroke-width="1.3">
+      <line x1="15" y1="45" x2="95" y2="18"/><line x1="95" y1="18" x2="165" y2="60"/><line x1="15" y1="45" x2="85" y2="93"/><line x1="85" y1="93" x2="165" y2="60"/>
+      <line x1="15" y1="135" x2="95" y2="112"/><line x1="95" y1="112" x2="168" y2="149"/><line x1="15" y1="135" x2="86" y2="179"/><line x1="86" y1="179" x2="168" y2="149"/>
+      <line x1="15" y1="45" x2="15" y2="135" stroke="#D8B86B"/><line x1="95" y1="18" x2="95" y2="112" stroke="#D8B86B"/><line x1="165" y1="60" x2="168" y2="149" stroke="#D8B86B"/><line x1="85" y1="93" x2="86" y2="179" stroke="#D8B86B"/>
+    </g>
+    <g fill="#101212" stroke="#D8B86B" stroke-width="2">
+      <circle cx="15" cy="45" r="8"/><circle cx="95" cy="18" r="8"/><circle cx="165" cy="60" r="8"/><circle cx="85" cy="93" r="8"/>
+      <circle cx="15" cy="135" r="8"/><circle cx="95" cy="112" r="8"/><circle cx="168" cy="149" r="8"/><circle cx="86" cy="179" r="8"/>
+    </g>
+    <text x="192" y="58" fill="#CFCBC2" font-size="12" font-weight="700" letter-spacing="2">POWER / TRANSPORT</text>
+    <text x="192" y="148" fill="#8E918D" font-size="12" font-weight="700" letter-spacing="2">INFO / ORGANIZATION</text>
+  </g>
+
+  <text x="840" y="592" text-anchor="end" fill="#6E726F" font-size="11" font-weight="800" letter-spacing="3">STATE MANIFOLD · GEODESIC MARGIN · MULTILAYER COUPLING</text>
+</g>
+
+<line x1="120" y1="640" x2="1928" y2="640" stroke="#292C2B" stroke-width="1"/>
+<text x="120" y="661" fill="#777B78" font-size="11" font-weight="700" letter-spacing="2.7">EVIDENCE → MODEL → COMPUTATION → VERIFICATION → VALIDATION → ENGINEERING DECISION</text>
+<text x="1928" y="661" text-anchor="end" fill="#D8B86B" font-size="11" font-weight="800" letter-spacing="2.7">DOSSİYA-SE / RESEARCH PROFILE</text>
+</svg>
