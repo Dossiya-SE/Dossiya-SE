@@ -22,9 +22,10 @@ A profile change is releasable only when every gate required for the specific ch
 
 PASS requires:
 
-- official credential title verified where a definitive title is used;
-- institution and completion state correct;
-- translation/equivalence controlled;
+- public credential wording matches the strongest available evidence state;
+- user-confirmed corrections are not relabeled as independent documentary verification;
+- institution and completion state are correct where stated;
+- translation/equivalence is controlled;
 - no certificate/diploma/degree inflation;
 - ongoing degrees remain ongoing.
 
@@ -103,16 +104,17 @@ Not permitted without much stronger evidence:
 
 ### Safe now
 
+- publish the user-confirmed undergraduate wording **Licence, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**;
 - publish a trajectory section using broad, controlled educational language;
 - state that both master's programmes are ongoing;
 - describe implemented repositories and research programmes with their existing evidence boundaries;
 - describe discrete/differential geometry and cross-sector resilience as forward research directions;
 - link to the governed profile-improvement workspace.
 
-### Blocked pending credential reconciliation
+### Blocked pending credential reconciliation or stronger evidence
 
-- replacement of the current undergraduate official title;
 - publication of the three technical electrical credentials under definitive English titles;
+- replacement of `Licence` by an English degree title without explicit translation/equivalence evidence;
 - any claim that an ongoing master's degree has been earned.
 
 ## Release record template
