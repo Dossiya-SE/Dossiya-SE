@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/math-art/profile-header-v5.svg" width="100%" alt="Dossiya Dakou — Mathematical Systems Engineering for Sustainable Resilience" />
+  <img src="assets/math-art/profile-header-v5.svg" width="100%" alt="Dossiya Dakou — Mathematical Sustainable Engineering for Sustainable Resilience" />
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 
 # Dossiya Dakou
 
-**Mathematical Systems Engineering for Sustainable Resilience**
+**Mathematical Sustainable Engineering for Sustainable Resilience**
 
 Engineer and quantitative researcher developing mathematical and computational frameworks for sustainable and resilient systems.
 

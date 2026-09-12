@@ -40,6 +40,10 @@ REQUIRED = [
 
 UNDERGRAD_PUBLIC_TITLE = "Licence, Énergies Renouvelables et Systèmes Énergétiques"
 STALE_UNDERGRAD_TITLE = "Licence Professionnelle"
+CANONICAL_PROFILE_IDENTITY = "Mathematical Sustainable Engineering for Sustainable Resilience"
+CANONICAL_PROFILE_IDENTITY_TOKEN = "MATHEMATICAL SUSTAINABLE ENGINEERING"
+STALE_PROFILE_IDENTITY = "Mathematical Systems Engineering for Sustainable Resilience"
+STALE_PROFILE_IDENTITY_TOKEN = "MATHEMATICAL SYSTEMS ENGINEERING"
 
 
 def fail(message: str) -> None:
@@ -97,7 +101,7 @@ def main() -> int:
         fail("Professional public sections are not in the governed order.")
 
     required_readme_tokens = [
-        "Mathematical Systems Engineering for Sustainable Resilience",
+        CANONICAL_PROFILE_IDENTITY,
         "assets/math-art/profile-header-v5.svg",
         "assets/math-art/research-operating-system-v5.svg",
         "assets/math-art/differential-geometry-foundations-v5.svg",
@@ -119,6 +123,7 @@ def main() -> int:
         "Core mathematical objects across the profile",
         "<details>",
         STALE_UNDERGRAD_TITLE,
+        STALE_PROFILE_IDENTITY,
     ]
     for token in prohibited_public_tokens:
         if token in readme:
@@ -184,11 +189,13 @@ def main() -> int:
         fail("Profile hero must adapt to light/dark rendering.")
     if 'viewBox="0 0 2048 640"' not in header_source:
         fail("Profile hero must use the governed 2048×640 canvas.")
+    if STALE_PROFILE_IDENTITY in header_source or STALE_PROFILE_IDENTITY_TOKEN in header_source:
+        fail("Stale profile identity wording remains in the public hero source.")
 
     header_text = svg_text(HEADER)
     for token in (
         "Dossiya Dakou",
-        "MATHEMATICAL SYSTEMS ENGINEERING",
+        CANONICAL_PROFILE_IDENTITY_TOKEN,
         "SUSTAINABILITY · RESILIENCE · OPTIMIZATION",
         "ẋ = f(x,u,η)",
         "ρ(x)=d(x,∂V)",
@@ -213,6 +220,7 @@ def main() -> int:
     print("Native vector hero: PASS")
     print("Credential safeguards: PASS")
     print("Licence-title regression guard: PASS")
+    print("Canonical identity regression guard: PASS")
     print("Research-integrity boundary: PASS")
     return 0
 
