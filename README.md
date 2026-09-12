@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="#about">About</a> ·
+  <a href="#current-research-state">State</a> ·
   <a href="#featured-research">Research</a> ·
   <a href="#research-framework">Framework</a> ·
   <a href="#mathematical-focus">Mathematics</a> ·
@@ -24,6 +25,14 @@
 Engineer and quantitative researcher developing mathematical and computational frameworks for sustainable and resilient systems.
 
 > **Evidence invariant:** a mathematical model is not an observed mechanism; software verification is not empirical validation; a research architecture is not a universal theory.
+
+## Current research state
+
+<p align="center">
+  <img src="assets/math-art/research-state-v1.svg" width="96%" alt="Current mathematical and engineering research state generated from declared research configuration and allowlisted public GitHub metadata" />
+</p>
+
+The living panel separates **declared research configuration** from **observed public repository metadata**. It is generated from versioned data, validated before publication, and excludes private repositories by construction. Repository activity is telemetry, **not evidence of scientific validity**.
 
 ## About
 
