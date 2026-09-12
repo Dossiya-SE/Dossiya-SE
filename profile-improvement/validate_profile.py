@@ -14,6 +14,9 @@ README = ROOT / "README.md"
 REGISTRY = WORKSPACE / "PROFILE_CREDENTIALS_REGISTRY.json"
 MASTER = WORKSPACE / "PROFILE_MASTER_SPEC.md"
 PUBLIC = WORKSPACE / "PUBLIC_PROFILE_TRAJECTORY.md"
+CREDENTIAL_CHECKLIST = WORKSPACE / "PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md"
+RELEASE_GATE = WORKSPACE / "PROFILE_RELEASE_GATE.md"
+WORKSPACE_README = WORKSPACE / "README.md"
 
 HEADER = ROOT / "assets" / "math-art" / "profile-header-v5.svg"
 PRIMARY_VISUALS = [
@@ -27,10 +30,16 @@ REQUIRED = [
     REGISTRY,
     MASTER,
     PUBLIC,
+    CREDENTIAL_CHECKLIST,
+    RELEASE_GATE,
+    WORKSPACE_README,
     HEADER,
     PUBLIC_INTEGRITY,
     *PRIMARY_VISUALS,
 ]
+
+UNDERGRAD_PUBLIC_TITLE = "Licence, Énergies Renouvelables et Systèmes Énergétiques"
+STALE_UNDERGRAD_TITLE = "Licence Professionnelle"
 
 
 def fail(message: str) -> None:
@@ -60,7 +69,11 @@ def main() -> int:
     readme = README.read_text(encoding="utf-8")
     master = MASTER.read_text(encoding="utf-8")
     public = PUBLIC.read_text(encoding="utf-8")
-    registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    checklist = CREDENTIAL_CHECKLIST.read_text(encoding="utf-8")
+    release_gate = RELEASE_GATE.read_text(encoding="utf-8")
+    workspace_readme = WORKSPACE_README.read_text(encoding="utf-8")
+    registry_source = REGISTRY.read_text(encoding="utf-8")
+    registry = json.loads(registry_source)
 
     if "ACTIVE_GOVERNING_PROFILE_ARCHITECTURE" not in master:
         fail("Profile master specification is not marked active.")
@@ -91,6 +104,7 @@ def main() -> int:
         "docs/RESEARCH_INTEGRITY.md",
         "MSE Sustainable Engineering — Arizona State University, ongoing",
         "MS Financial Engineering — WorldQuant University, ongoing",
+        UNDERGRAD_PUBLIC_TITLE,
         "not a claim of an already validated universal theory",
     ]
     for token in required_readme_tokens:
@@ -104,10 +118,23 @@ def main() -> int:
         "Full repository matrix",
         "Core mathematical objects across the profile",
         "<details>",
+        STALE_UNDERGRAD_TITLE,
     ]
     for token in prohibited_public_tokens:
         if token in readme:
-            fail(f"Internal/dense profile content leaked into public interface: {token}")
+            fail(f"Prohibited or stale content leaked into public interface: {token}")
+
+    active_credential_surfaces = {
+        "PROFILE_CREDENTIALS_REGISTRY.json": registry_source,
+        "PROFILE_MASTER_SPEC.md": master,
+        "PUBLIC_PROFILE_TRAJECTORY.md": public,
+        "PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md": checklist,
+        "PROFILE_RELEASE_GATE.md": release_gate,
+        "profile-improvement/README.md": workspace_readme,
+    }
+    for name, text in active_credential_surfaces.items():
+        if STALE_UNDERGRAD_TITLE in text:
+            fail(f"Stale undergraduate credential wording remains in active governance surface: {name}")
 
     readme_bytes = len(readme.encode("utf-8"))
     if not 5_000 <= readme_bytes <= 14_000:
@@ -127,13 +154,18 @@ def main() -> int:
                 fail(f"Unverified technical credential title was published: {title}")
 
     undergrad = credentials["DD-EDU-004"]
-    if undergrad.get("public_change_status") == "RECONCILE_BEFORE_PUBLIC_CHANGE":
-        unresolved_title = undergrad.get("user_stated_title", "")
-        if unresolved_title and unresolved_title in readme:
-            fail(f"Unreconciled undergraduate English title was published: {unresolved_title}")
-        current_title = undergrad.get("current_public_profile_title", "")
-        if current_title and current_title not in readme:
-            fail("Current public undergraduate title disappeared before reconciliation.")
+    if undergrad.get("user_stated_title") != UNDERGRAD_PUBLIC_TITLE:
+        fail("Credential registry does not preserve the user-confirmed undergraduate title.")
+    if undergrad.get("current_public_profile_title") != UNDERGRAD_PUBLIC_TITLE:
+        fail("Credential registry public undergraduate title is inconsistent with the correction.")
+    if undergrad.get("public_change_status") != "USER_CONFIRMED_PUBLIC_TITLE":
+        fail("Undergraduate credential correction is not marked USER_CONFIRMED_PUBLIC_TITLE.")
+    if "USER_CONFIRMED" not in undergrad.get("evidence_state", []):
+        fail("Undergraduate credential correction is missing USER_CONFIRMED evidence state.")
+    if undergrad.get("translation_status") != "NO_ENGLISH_TITLE_ASSERTED":
+        fail("Undergraduate translation boundary is not explicitly controlled.")
+    if undergrad.get("institution") != "Université d’Abomey-Calavi":
+        fail("Undergraduate institution changed unexpectedly.")
 
     for credential_id in ("DD-EDU-005", "DD-EDU-006"):
         item = credentials[credential_id]
@@ -180,6 +212,7 @@ def main() -> int:
     print("Local visuals: 3/3")
     print("Native vector hero: PASS")
     print("Credential safeguards: PASS")
+    print("Licence-title regression guard: PASS")
     print("Research-integrity boundary: PASS")
     return 0
 
