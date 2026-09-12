@@ -1,0 +1,42 @@
+name: profile-visual-pipeline
+
+on:
+  push:
+    paths:
+      - 'assets/math-art/**'
+      - 'profile-improvement/visual-pipeline/**'
+      - '.github/workflows/profile-visual-pipeline.yml'
+  pull_request:
+    paths:
+      - 'assets/math-art/**'
+      - 'profile-improvement/visual-pipeline/**'
+      - '.github/workflows/profile-visual-pipeline.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-mathematical-visuals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile deterministic generator and validator
+        run: |
+          python -m py_compile profile-improvement/visual-pipeline/generate_synthetic_math.py
+          python -m py_compile profile-improvement/visual-pipeline/validate_visual_pipeline.py
+
+      - name: Validate mathematical source and canonical SVGs
+        run: python profile-improvement/visual-pipeline/validate_visual_pipeline.py
+
+      - name: Verify deterministic regeneration
+        run: |
+          cp profile-improvement/visual-pipeline/synthetic_profile_data.json /tmp/profile-data-a.json
+          python profile-improvement/visual-pipeline/generate_synthetic_math.py
+          cmp /tmp/profile-data-a.json profile-improvement/visual-pipeline/synthetic_profile_data.json
