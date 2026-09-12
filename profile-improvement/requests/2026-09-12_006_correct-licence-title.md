@@ -1,7 +1,7 @@
 # Profile Improvement Request
 
 **request_id:** `DD-PROFILE-REQ-20260912-006`  
-**status:** `IMPLEMENTED`  
+**status:** `RELEASED`  
 **date:** `2026-09-12`
 
 ## Exact user request
@@ -49,14 +49,14 @@ The superseded wording `Licence Professionnelle` must not remain in active profi
 
 ## Validation requirements
 
-- [ ] root README contains the corrected French title;
-- [ ] root README does not contain `Licence Professionnelle`;
-- [ ] active profile governance documents do not contain `Licence Professionnelle`;
-- [ ] credential registry records the correction as user-confirmed rather than document-verified;
-- [ ] ongoing graduate programme status remains unchanged;
-- [ ] profile-governance workflow passes;
-- [ ] mathematical/visual profile checks remain unaffected.
+- [x] root README contains the corrected French title;
+- [x] root README does not contain `Licence Professionnelle`;
+- [x] active profile governance documents do not contain `Licence Professionnelle`;
+- [x] credential registry records the correction as user-confirmed rather than document-verified;
+- [x] ongoing graduate programme status remains unchanged;
+- [x] profile-governance workflow passes;
+- [x] mathematical-presentation audit passes.
 
 ## Outcome
 
-Implementation is being applied directly to the governed profile source on `main`. Final status will be promoted to `RELEASED` after automated validation passes.
+**Released on `main`.** The public profile now uses `Licence, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi`. The credential registry, governing profile documents and automated validator are aligned with this correction. The old wording is retained only inside this historical request record as provenance of the correction.
