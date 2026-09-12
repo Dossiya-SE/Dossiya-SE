@@ -1,7 +1,7 @@
 # Profile Improvement Request
 
 **request_id:** `DD-PROFILE-REQ-20260912-008`  
-**status:** `IMPLEMENTED`  
+**status:** `RELEASED`  
 **date:** `2026-09-12`
 
 ## Exact user request
@@ -51,20 +51,28 @@ MATHEMATICAL SUSTAINABLE ENGINEERING
 
 ## Reproducibility rule
 
-The generated hero must be corrected at the **renderer/source level**, not only by manually editing the emitted SVG, so deterministic regeneration cannot restore the stale wording.
+The generated hero is corrected at the **renderer/source level**, not only by manually editing the emitted SVG, so deterministic regeneration cannot restore the stale wording.
 
 ## Validation requirements
 
 - [x] canonical terminology recorded;
-- [x] root README source updated in implementation tree;
+- [x] root README source updated;
 - [x] deterministic renderer source updated;
 - [x] visual specification updated;
 - [x] profile validator updated with stale-wording regression guard;
-- [ ] canonical SVG regenerated from source;
-- [ ] visual pipeline passes;
-- [ ] profile governance passes;
-- [ ] mathematical-presentation audit passes;
-- [ ] final public `main` release verified.
+- [x] canonical SVG regenerated from source;
+- [x] visual pipeline passes;
+- [x] profile governance passes;
+- [x] mathematical-presentation audit passes;
+- [x] final public `main` release verified.
+
+## Release evidence
+
+- source implementation commit: `f48161a85d45600ad493f618ef05af0f038b5733`;
+- deterministic SVG regeneration commit: `7247d641569e1984117cadf084a8751bd30c1b88`;
+- `profile-visual-pipeline`: PASS;
+- `profile-governance`: PASS;
+- `mathematical-presentation-audit`: PASS.
 
 ## Evidence boundary
 
