@@ -21,6 +21,6 @@ YYYY-MM-DD_NNN_short-slug.md
 | Request | Purpose | Status |
 |---|---|---|
 | [`2026-08-23_001_education-to-research-profile-architecture.md`](2026-08-23_001_education-to-research-profile-architecture.md) | establish electrical-engineering → energy → sustainability → finance → mathematics/resilience profile architecture and future request workspace | IMPLEMENTED |
-| [`2026-09-12_006_correct-licence-title.md`](2026-09-12_006_correct-licence-title.md) | correct the undergraduate public title from stale wording to `Licence, Énergies Renouvelables et Systèmes Énergétiques` and add regression safeguards | IMPLEMENTED |
+| [`2026-09-12_006_correct-licence-title.md`](2026-09-12_006_correct-licence-title.md) | correct the undergraduate public title to `Licence, Énergies Renouvelables et Systèmes Énergétiques` and add regression safeguards | RELEASED |
 
 Future records should preserve the user's original request text and link to the resulting branch/PR/commit.
