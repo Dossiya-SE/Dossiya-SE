@@ -3,7 +3,7 @@
 **Profile layer ID:** `DD-PROFILE-PUBLIC-TRAJECTORY-001`  
 **Status:** `RELEASABLE_WITH_CREDENTIAL_TITLE_RECONCILIATION_PENDING`
 
-This document contains the strongest profile narrative currently supportable without changing unresolved official diploma titles.
+This document contains the strongest profile narrative currently supportable while keeping unresolved credential titles and translation claims evidence-bounded.
 
 ## Canonical public trajectory
 
@@ -98,7 +98,13 @@ future geometry / cross-sector programme
 
 ## Credential boundary
 
-This document does not replace the credential registry. Until official-title reconciliation is complete, definitive public naming of the three technical electrical credentials and the undergraduate renewable-energy qualification remains governed by:
+The account owner has explicitly confirmed the undergraduate public French title as:
+
+> **Licence, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**
+
+This is a `USER_CONFIRMED_PUBLIC_TITLE`; it is not presented here as independent documentary verification, and no English translation/equivalence is asserted.
+
+Credential-title reconciliation remains pending for the three technical electrical credentials and for any future translated/equivalent English credential wording. Those boundaries remain governed by:
 
 - `PROFILE_CREDENTIALS_REGISTRY.json`;
 - `PROFILE_CREDENTIAL_VERIFICATION_CHECKLIST.md`;
