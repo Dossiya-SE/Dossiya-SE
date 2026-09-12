@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/math-art/profile-header-v7.svg" width="100%" alt="Dossiya Dakou — Mathematical Systems Engineering for Sustainable Resilience" />
+  <img src="assets/math-art/profile-header-v5.svg" width="100%" alt="Dossiya Dakou — Mathematical Systems Engineering for Sustainable Resilience" />
 </p>
 
 <p align="center">
@@ -83,7 +83,7 @@ The object distinguishes **source, receiver, mechanism, strength, direction, del
 ## Research framework
 
 <p align="center">
-  <img src="assets/math-art/research-operating-system-v7.svg" width="96%" alt="Research operating system connecting evidence, state, dynamics, inference, uncertainty, viability, control and validation" />
+  <img src="assets/math-art/research-operating-system-v5.svg" width="96%" alt="Research operating system connecting evidence, state, dynamics, inference, uncertainty, viability, control and validation" />
 </p>
 
 The current seven-stage research architecture is
@@ -145,7 +145,7 @@ The research workflow separates construction from validation:
 ## Mathematical focus
 
 <p align="center">
-  <img src="assets/math-art/differential-geometry-foundations-v7.svg" width="96%" alt="Differential-geometry foundations connecting parameterization, tangent structure, metric, curvature and geodesic analysis" />
+  <img src="assets/math-art/differential-geometry-foundations-v5.svg" width="96%" alt="Differential-geometry foundations connecting parameterization, tangent structure, metric, curvature and geodesic analysis" />
 </p>
 
 | Mathematical area | Research role |
