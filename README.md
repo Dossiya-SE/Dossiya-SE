@@ -200,7 +200,7 @@ Additional numerical and mathematical tooling includes NumPy, SciPy, MATLAB, Sym
 
 - **MSE Sustainable Engineering — Arizona State University, ongoing**
 - **MS Financial Engineering — WorldQuant University, ongoing**
-- **Licence Professionnelle, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**
+- **Licence, Énergies Renouvelables et Systèmes Énergétiques — Université d’Abomey-Calavi**
 
 The profile emphasizes a cumulative capability trajectory rather than treating education, research interests and validated expertise as equivalent claims.
 
