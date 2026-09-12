@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "framework_version": "1.0",
+  "evidence_state": "DECLARED_RESEARCH_CONFIGURATION",
+  "system": {
+    "physical": ["power", "transportation"],
+    "nonphysical": ["information", "organization"]
+  },
+  "current_focus": {
+    "stage": 2,
+    "name": "Causal Mechanisms",
+    "label": "interdependency mechanisms"
+  },
+  "framework": {
+    "stages": 7,
+    "active_stage": 2
+  },
+  "research_status": "active",
+  "last_updated": "2026-09-12"
+}
