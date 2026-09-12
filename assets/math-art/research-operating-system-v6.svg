@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 840" width="1920" height="840" role="img" aria-labelledby="title desc">
+<title id="title">Seven-stage mathematical research architecture for interdependent infrastructure systems</title>
+<desc id="desc">Continuous charcoal-and-gold scientific architecture connecting multilayer structure, causal mechanisms, hybrid multiscale dynamics, feedback and control, viability, resilience-to-sustainability interfaces, and transformation pathways.</desc>
+<metadata>Native editable SVG. Conceptual research architecture, not empirical validation.</metadata>
+<defs>
+  <style>
+    text{font-family:Inter,Segoe UI,Arial,sans-serif}
+    .serif{font-family:Georgia,'Times New Roman',serif}
+    .math{font-family:'STIX Two Math','Cambria Math',Georgia,serif}
+  </style>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#080A0A"/><stop offset="1" stop-color="#131515"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8F6B31"/><stop offset="0.48" stop-color="#DFC075"/><stop offset="1" stop-color="#9B7431"/></linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.03"/></pattern>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#D8B86B"/></marker>
+</defs>
+<rect width="1920" height="840" fill="url(#bg)"/><rect width="1920" height="840" fill="url(#grid)"/>
+
+<text x="110" y="78" fill="#D8B86B" font-size="12" font-weight="800" letter-spacing="4">RESEARCH ARCHITECTURE / SYSTEMS ENGINEERING</text>
+<text x="110" y="129" fill="#F1EEE6" font-size="48" font-weight="600" class="serif">From interdependent structure to sustainable transformation</text>
+<text x="110" y="162" fill="#8F938F" font-size="16" font-weight="600">A seven-stage mathematical pathway with explicit physical, informational, organizational, and decision layers.</text>
+<line x1="110" y1="190" x2="1810" y2="190" stroke="#303331"/>
+
+<!-- infrastructure strata -->
+<g transform="translate(110 222)">
+  <text x="0" y="0" fill="#7F8380" font-size="11" font-weight="800" letter-spacing="3">MULTILAYER SYSTEM</text>
+  <g transform="translate(0 28)">
+    <line x1="0" y1="0" x2="420" y2="0" stroke="#D8B86B" stroke-width="2.3"/>
+    <line x1="0" y1="24" x2="420" y2="24" stroke="#B7B3AA" stroke-width="1.8"/>
+    <line x1="0" y1="48" x2="420" y2="48" stroke="#666A67" stroke-width="1.6"/>
+    <line x1="0" y1="72" x2="420" y2="72" stroke="#3E4240" stroke-width="1.6"/>
+    <g fill="#0C0E0E" stroke="#D8B86B" stroke-width="1.8">
+      <circle cx="38" cy="0" r="7"/><circle cx="128" cy="0" r="7"/><circle cx="234" cy="0" r="7"/><circle cx="365" cy="0" r="7"/>
+      <circle cx="70" cy="24" r="7"/><circle cx="182" cy="24" r="7"/><circle cx="316" cy="24" r="7"/>
+      <circle cx="38" cy="48" r="6"/><circle cx="146" cy="48" r="6"/><circle cx="266" cy="48" r="6"/><circle cx="390" cy="48" r="6"/>
+      <circle cx="91" cy="72" r="6"/><circle cx="210" cy="72" r="6"/><circle cx="341" cy="72" r="6"/>
+    </g>
+    <g stroke="#6F5630" stroke-width="1.3" stroke-dasharray="4 5">
+      <line x1="38" y1="0" x2="70" y2="24"/><line x1="128" y1="0" x2="146" y2="48"/><line x1="234" y1="0" x2="210" y2="72"/><line x1="365" y1="0" x2="390" y2="48"/><line x1="182" y1="24" x2="210" y2="72"/><line x1="316" y1="24" x2="341" y2="72"/>
+    </g>
+  </g>
+  <g transform="translate(458 31)" fill="#A5A8A3" font-size="12" font-weight="700" letter-spacing="2">
+    <text x="0" y="0">POWER</text><text x="0" y="24">TRANSPORTATION</text><text x="0" y="48">INFORMATION</text><text x="0" y="72">ORGANIZATION</text>
+  </g>
+  <text x="0" y="130" fill="#D8B86B" font-size="20" class="math">𝕀ᵅᵝᵢⱼ = (Eᵅᵢ,Eᵝⱼ,Mᵢⱼ,wᵢⱼ,δᵢⱼ,τᵢⱼ,aᵢⱼ,m,ℋₜ)</text>
+</g>
+
+<!-- causal/dynamics field -->
+<g transform="translate(800 226)">
+  <text x="0" y="0" fill="#7F8380" font-size="11" font-weight="800" letter-spacing="3">COUPLED STATE EVOLUTION</text>
+  <text x="0" y="52" fill="#F0ECE3" font-size="29" class="math">Ẏ = F𝒢(Y,u,η;θ)</text>
+  <g transform="translate(0 86)" fill="none">
+    <path d="M0 83C55 9 111 12 165 72S276 135 335 54S442 -5 502 65S620 130 692 31" stroke="#D8B86B" stroke-width="3"/>
+    <path d="M0 112C58 48 111 46 166 91S273 142 335 89S446 43 505 94S618 140 690 72" stroke="#6E726F" stroke-width="1.8"/>
+    <path d="M0 140C60 95 119 86 176 117S279 154 344 122S452 84 514 123S622 156 692 111" stroke="#3E4240" stroke-width="1.5"/>
+  </g>
+  <text x="712" y="118" fill="#D8B86B" font-size="15" class="math">τ₁ ≠ τ₂ ≠ τ₃</text>
+  <text x="0" y="265" fill="#8F938F" font-size="13" font-weight="700" letter-spacing="2">HYBRID · MULTISCALE · NONLINEAR · UNCERTAIN</text>
+</g>
+
+<!-- viability geometry -->
+<g transform="translate(1435 214)">
+  <text x="0" y="0" fill="#7F8380" font-size="11" font-weight="800" letter-spacing="3">VIABILITY GEOMETRY</text>
+  <ellipse cx="178" cy="112" rx="154" ry="82" fill="none" stroke="#444846" stroke-width="1.3"/>
+  <ellipse cx="178" cy="112" rx="116" ry="58" fill="#D8B86B" fill-opacity="0.035" stroke="#D8B86B" stroke-width="2.3"/>
+  <path d="M77 144C113 102 145 84 185 90C228 96 249 67 283 54" fill="none" stroke="#F0ECE3" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <circle cx="77" cy="144" r="6" fill="#D8B86B"/>
+  <text x="52" y="171" fill="#D8B86B" font-size="14" class="math">Y(t)</text>
+  <text x="294" y="53" fill="#A4A7A3" font-size="14" class="math">∂𝒱ₛᵤₛ</text>
+  <text x="80" y="226" fill="#F0ECE3" font-size="22" class="math">ρ_g=d_g(Y,∂𝒱ₛᵤₛ)</text>
+</g>
+
+<!-- seven-stage continuous path -->
+<g transform="translate(110 500)">
+  <text x="0" y="0" fill="#7F8380" font-size="11" font-weight="800" letter-spacing="3">SEVEN-STAGE RESEARCH PATH</text>
+  <path d="M30 106C170 34 340 36 485 92S773 165 930 100S1235 38 1395 86S1600 125 1685 76" fill="none" stroke="url(#gold)" stroke-width="3.2" marker-end="url(#arrow)"/>
+
+  <g text-anchor="middle">
+    <g transform="translate(45 98)"><circle r="21" fill="#0B0D0D" stroke="#D8B86B" stroke-width="2"/><text y="6" fill="#F0ECE3" font-size="16" font-weight="800">1</text><text y="58" fill="#F0ECE3" font-size="15" font-weight="750">Multilayer</text><text y="77" fill="#9DA09C" font-size="12">Structure</text></g>
+    <g transform="translate(320 57)"><circle r="21" fill="#0B0D0D" stroke="#D8B86B" stroke-width="2"/><text y="6" fill="#F0ECE3" font-size="16" font-weight="800">2</text><text y="58" fill="#F0ECE3" font-size="15" font-weight="750">Causal</text><text y="77" fill="#9DA09C" font-size="12">Mechanisms</text></g>
+    <g transform="translate(595 111)"><circle r="21" fill="#0B0D0D" stroke="#D8B86B" stroke-width="2"/><text y="6" fill="#F0ECE3" font-size="16" font-weight="800">3</text><text y="58" fill="#F0ECE3" font-size="15" font-weight="750">Hybrid Multiscale</text><text y="77" fill="#9DA09C" font-size="12">Dynamics</text></g>
+    <g transform="translate(865 127)"><circle r="21" fill="#0B0D0D" stroke="#D8B86B" stroke-width="2"/><text y="6" fill="#F0ECE3" font-size="16" font-weight="800">4</text><text y="58" fill="#F0ECE3" font-size="15" font-weight="750">Feedback</text><text y="77" fill="#9DA09C" font-size="12">&amp; Control</text></g>
+    <g transform="translate(1126 71)"><circle r="21" fill="#0B0D0D" stroke="#D8B86B" stroke-width="2"/><text y="6" fill="#F0ECE3" font-size="16" font-weight="800">5</text><text y="58" fill="#F0ECE3" font-size="15" font-weight="750">Viability</text><text y="77" fill="#9DA09C" font-size="12">Safe states</text></g>
+    <g transform="translate(1396 87)"><circle r="21" fill="#0B0D0D" stroke="#D8B86B" stroke-width="2"/><text y="6" fill="#F0ECE3" font-size="16" font-weight="800">6</text><text y="58" fill="#F0ECE3" font-size="15" font-weight="750">Resilience → Sustainability</text><text y="77" fill="#9DA09C" font-size="12">Transformation interface</text></g>
+    <g transform="translate(1670 80)"><circle r="21" fill="#0B0D0D" stroke="#D8B86B" stroke-width="2"/><text y="6" fill="#F0ECE3" font-size="16" font-weight="800">7</text><text y="58" fill="#F0ECE3" font-size="15" font-weight="750">Sustainable</text><text y="77" fill="#9DA09C" font-size="12">Pathways</text></g>
+  </g>
+</g>
+
+<!-- footer scientific logic -->
+<line x1="110" y1="772" x2="1810" y2="772" stroke="#303331"/>
+<text x="110" y="805" fill="#8B8F8B" font-size="11" font-weight="800" letter-spacing="2.6">EVIDENCE → DEFINITIONS → ASSUMPTIONS → MODEL → COMPUTATION → VERIFICATION → VALIDATION → DECISION</text>
+<text x="1810" y="805" text-anchor="end" fill="#D8B86B" font-size="11" font-weight="800" letter-spacing="2.6">CONCEPTUAL ARCHITECTURE · VALIDITY MUST BE ESTABLISHED EMPIRICALLY</text>
+</svg>
