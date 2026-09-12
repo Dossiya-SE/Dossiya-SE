@@ -1,7 +1,7 @@
 # Profile Improvement Request
 
 **request_id:** `DD-PROFILE-REQ-20260912-007`  
-**status:** `IMPLEMENTED`  
+**status:** `RELEASED`  
 **date:** `2026-09-12`
 
 ## Exact user request
@@ -65,15 +65,15 @@ The graphics are conceptual / synthetic research illustrations. They are not pre
 
 ## Validation requirements
 
-- [ ] SVG/XML parses;
-- [ ] no embedded raster image;
-- [ ] governed `viewBox="0 0 2048 640"` retained;
-- [ ] required semantic tokens retained for profile validation;
-- [ ] central name/subtitle/discipline labels occupy non-overlapping bands;
-- [ ] minimum practical caption sizes increased relative to the previous design;
-- [ ] `profile-governance` passes;
-- [ ] `mathematical-presentation-audit` passes.
+- [x] SVG/XML parses;
+- [x] no embedded raster image;
+- [x] governed `viewBox="0 0 2048 640"` retained;
+- [x] required semantic tokens retained for profile validation;
+- [x] central name/subtitle/discipline labels occupy non-overlapping bands;
+- [x] minimum practical caption sizes increased relative to the previous design;
+- [x] `profile-governance` passes;
+- [x] `mathematical-presentation-audit` passes.
 
 ## Outcome
 
-Implementation is being applied directly to the governed canonical hero path on `main`. Final status will be promoted to `RELEASED` after validation passes.
+Released directly on `main` using the canonical public hero path. The redesign is a native vector mathematical-art composition with a protected identity band, explicitly synthetic nonlinear visualization, viability geometry, multilayer network structure and manifold geometry. The governing profile and mathematical-presentation workflows both passed on the release state.
