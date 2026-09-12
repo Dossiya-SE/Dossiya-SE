@@ -1,0 +1,79 @@
+name: update-research-state
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "17 2 * * *"
+
+  push:
+    branches:
+      - main
+    paths:
+      - "data/research-state.json"
+      - "data/framework.json"
+      - "data/projects.json"
+      - "scripts/fetch_github_state.py"
+      - "profile-improvement/visual-pipeline/render_research_state.py"
+      - "profile-improvement/visual-pipeline/render_profile_visuals.py"
+      - "profile-improvement/visual-pipeline/validate_visual_pipeline.py"
+      - ".github/workflows/update-research-state.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: living-research-profile
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile dynamic profile pipeline
+        run: |
+          python -m py_compile scripts/fetch_github_state.py
+          python -m py_compile profile-improvement/visual-pipeline/render_research_state.py
+          python -m py_compile profile-improvement/visual-pipeline/render_profile_visuals.py
+          python -m py_compile profile-improvement/visual-pipeline/validate_visual_pipeline.py
+
+      - name: Fetch allowlisted public GitHub state
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_github_state.py
+
+      - name: Render canonical and living profile visuals
+        run: python profile-improvement/visual-pipeline/render_profile_visuals.py
+
+      - name: Validate scientific and rendering contracts
+        run: python profile-improvement/visual-pipeline/validate_visual_pipeline.py
+
+      - name: Run existing visual audits
+        run: |
+          python mathematical-art/audit_adaptive_visuals.py
+          python mathematical-art/audit_profile_math.py
+
+      - name: Commit changed public telemetry and living SVG
+        if: github.ref_name == 'main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/github-state.json assets/math-art/research-state-v1.svg
+
+          if git diff --cached --quiet; then
+            echo "Living research state is already current."
+          else
+            git commit -m "chore: update living research state [skip ci]"
+            git push origin HEAD:main
+          fi
