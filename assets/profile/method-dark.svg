@@ -10,7 +10,6 @@
   <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif">
     <text x="70" y="72" fill="#f0f6fc" font-size="30" font-weight="760">From physical system to engineering action</text>
     <text x="70" y="105" fill="#8b949e" font-size="17">Each representation must preserve a defensible link to the mechanism it claims to model.</text>
-
     <g transform="translate(70 155)">
       <text x="0" y="0" fill="#8b949e" font-size="14" font-weight="800" letter-spacing="1.8">01 · PHYSICAL REALITY</text>
       <rect x="0" y="28" width="330" height="210" rx="18" fill="#161b22" stroke="#30363d"/>
@@ -21,34 +20,36 @@
         <circle cx="214" cy="26" r="7"/><circle cx="268" cy="50" r="7"/>
         <path d="M221 29L261 47"/>
         <path d="M150 56C170 82 190 82 207 35" stroke="#d29922" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+        <path d="M207 35C190 7 169 7 150 56" stroke="#58a6ff" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
       </g>
       <text x="22" y="174" fill="#8b949e" font-size="14">components · flows · services · limits</text>
       <text x="22" y="198" fill="#8b949e" font-size="14">hazards · timescales · measurements</text>
     </g>
-
     <path d="M420 286H505" stroke="#8b949e" stroke-width="2" marker-end="url(#arrowMuted)"/>
     <g transform="translate(525 155)">
       <text x="0" y="0" fill="#8b949e" font-size="14" font-weight="800" letter-spacing="1.8">02 · CAUSALITY</text>
       <rect x="0" y="28" width="330" height="210" rx="18" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
       <text x="22" y="58" fill="#f0f6fc" font-size="17" font-weight="700">Interface mechanism</text>
       <text x="22" y="99" fill="#d29922" font-size="19" font-family="Georgia,'Times New Roman',serif">source → mechanism → receiver</text>
-      <text x="22" y="138" fill="#f0f6fc" font-size="17" font-family="Georgia,'Times New Roman',serif">𝕀ᵅᵝᵢⱼ = (Eᵢ, Eⱼ, Mᵢⱼ, …)</text>
+      <text x="22" y="138" fill="#f0f6fc" font-size="17" font-family="Georgia,'Times New Roman',serif">
+        <tspan>I</tspan><tspan baseline-shift="sub" font-size="12">ij</tspan><tspan baseline-shift="super" font-size="12">αβ</tspan>
+        <tspan> = (E</tspan><tspan baseline-shift="sub" font-size="12">i</tspan><tspan>, E</tspan><tspan baseline-shift="sub" font-size="12">j</tspan>
+        <tspan>, M</tspan><tspan baseline-shift="sub" font-size="12">ij</tspan><tspan>, …)</tspan>
+      </text>
       <text x="22" y="174" fill="#8b949e" font-size="14">direction · sign · magnitude · delay</text>
       <text x="22" y="198" fill="#8b949e" font-size="14">activation · evidence · validity context</text>
     </g>
-
     <path d="M875 286H960" stroke="#8b949e" stroke-width="2" marker-end="url(#arrowMuted)"/>
     <g transform="translate(980 155)">
       <text x="0" y="0" fill="#8b949e" font-size="14" font-weight="800" letter-spacing="1.8">03 · MATHEMATICS</text>
       <rect x="0" y="28" width="390" height="210" rx="18" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
       <text x="22" y="58" fill="#f0f6fc" font-size="17" font-weight="700">Structure + dynamics</text>
-      <text x="22" y="100" fill="#58a6ff" font-size="21" font-family="Georgia,'Times New Roman',serif">𝒢 ,  Ẏ = F𝒢(Y,u,η;θ)</text>
+      <text x="22" y="100" fill="#58a6ff" font-size="20" font-family="Georgia,'Times New Roman',serif"><tspan>G, dY/dt = F</tspan><tspan baseline-shift="sub" font-size="14">G</tspan><tspan>(Y,u,η;θ)</tspan></text>
       <text x="22" y="138" fill="#f0f6fc" font-size="17" font-family="Georgia,'Times New Roman',serif">C(Y,u,η;θ)=0</text>
       <text x="204" y="138" fill="#f0f6fc" font-size="17" font-family="Georgia,'Times New Roman',serif">G(Y,u,η;θ)≤0</text>
       <text x="22" y="174" fill="#8b949e" font-size="14">graphs · ODE/DAE/PDE · topology</text>
       <text x="22" y="198" fill="#8b949e" font-size="14">probability · geometry · optimization</text>
     </g>
-
     <path d="M1175 405V463" stroke="#58a6ff" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
     <g transform="translate(755 478)">
       <text x="0" y="0" fill="#8b949e" font-size="14" font-weight="800" letter-spacing="1.8">04 · VIABILITY + UNCERTAINTY</text>
@@ -58,22 +59,20 @@
       <path d="M110 144 C210 82 345 83 487 127" fill="none" stroke="#58a6ff" stroke-width="3"/>
       <circle cx="319" cy="96" r="7" fill="#58a6ff"/>
       <path d="M319 96L394 64" stroke="#58a6ff" stroke-width="2.3" marker-end="url(#arrowBlue)"/>
-      <text x="407" y="68" fill="#58a6ff" font-size="18" font-family="Georgia,'Times New Roman',serif">ρ₍g₎</text>
+      <text x="407" y="68" fill="#58a6ff" font-size="18" font-family="Georgia,'Times New Roman',serif"><tspan>ρ</tspan><tspan baseline-shift="sub" font-size="12">g</tspan></text>
       <path d="M477 91L527 91" stroke="#ff7b72" stroke-width="2" stroke-dasharray="5 5"/>
       <text x="24" y="58" fill="#f0f6fc" font-size="17" font-weight="700">Admissible trajectories and critical boundaries</text>
-      <text x="24" y="184" fill="#8b949e" font-size="14">𝒱 · ∂𝒱 · sensitivity · uncertainty propagation · model validity</text>
+      <text x="24" y="184" fill="#8b949e" font-size="14">V · ∂V · sensitivity · uncertainty propagation · model validity</text>
     </g>
-
     <path d="M735 590H650" stroke="#8b949e" stroke-width="2" marker-end="url(#arrowMuted)"/>
     <g transform="translate(70 478)">
       <text x="0" y="0" fill="#8b949e" font-size="14" font-weight="800" letter-spacing="1.8">05 · ENGINEERING DECISION</text>
       <rect x="0" y="28" width="550" height="196" rx="18" fill="#161b22" stroke="#30363d"/>
       <text x="24" y="62" fill="#f0f6fc" font-size="17" font-weight="700">Compare interventions under constraints</text>
-      <text x="24" y="112" fill="#f0f6fc" font-size="24" font-family="Georgia,'Times New Roman',serif">u★ = arg min  J(u)</text>
+      <text x="24" y="112" fill="#f0f6fc" font-size="24" font-family="Georgia,'Times New Roman',serif">u* = arg min J(u)</text>
       <text x="24" y="148" fill="#8b949e" font-size="14">control · restoration · design · resource allocation</text>
       <text x="24" y="174" fill="#8b949e" font-size="14">service · safety · resilience · sustainability</text>
     </g>
-
     <text x="70" y="724" fill="#8b949e" font-size="14">Scientific invariant: mathematical elegance ≠ physical validity ≠ empirical validation.</text>
   </g>
 </svg>
