@@ -25,6 +25,12 @@ REQUIRED_GENERATED = {
     "project-system.svg",
     "research-pipeline.svg",
 }
+README_GENERATED = {
+    "research-state-light.svg",
+    "research-state-dark.svg",
+    "project-system.svg",
+    "research-pipeline.svg",
+}
 
 
 def load_json(name: str) -> dict:
@@ -81,12 +87,12 @@ def validate_projects(projects: dict, observed: dict) -> None:
 def validate_readme() -> None:
     text = README.read_text(encoding="utf-8")
     lower = text.lower()
-    for asset in REQUIRED_GENERATED:
+    for asset in README_GENERATED:
         require(f"assets/generated/{asset}" in text, f"README does not reference {asset}")
     for forbidden in ("visitor counter", "github streak", "typing animation", "language percentage"):
         require(forbidden not in lower, f"README contains prohibited vanity concept: {forbidden}")
     require("green" in lower and "red" in lower and "light yellow" in lower, "README must state the permanent scientific palette")
-    require("not a measured flow" in lower, "README must preserve the motion/measurement boundary")
+    require("not measured infrastructure behavior" in lower or "not a measured flow" in lower, "README must preserve the motion/measurement boundary")
     require("claim strength" in lower and "evidence strength" in lower, "README must state the claim/evidence invariant")
 
 
@@ -115,12 +121,12 @@ def validate_generated() -> None:
     hero = rendered["research-hero-light.svg"]
     pipeline = rendered["research-pipeline.svg"]
     projects = rendered["project-system.svg"]
-    require('class="vector-field"' in hero, "hero must include deterministic state-space vector field")
-    require('class="level-set"' in hero, "hero must include deterministic level sets")
-    require("critical-boundary" in hero and "flow-red" in hero, "hero must encode critical boundary in red")
-    require("flow-green" in hero, "hero must encode viable/sustainable state evolution in green")
-    require("flow-yellow" in hero, "hero must encode causal/decision pathway in light yellow")
-    require("not a measured flow" in hero.lower(), "hero must preserve mathematical-art/data boundary")
+    require('class="vector-field"' in hero, "legacy mathematical portrait must retain deterministic state-space vector field")
+    require('class="level-set"' in hero, "legacy mathematical portrait must retain deterministic level sets")
+    require("critical-boundary" in hero and "flow-red" in hero, "legacy portrait must encode critical boundary in red")
+    require("flow-green" in hero, "legacy portrait must encode viable/sustainable state evolution in green")
+    require("flow-yellow" in hero, "legacy portrait must encode causal/decision pathway in light yellow")
+    require("not a measured flow" in hero.lower(), "legacy portrait must preserve mathematical-art/data boundary")
     require("flow-yellow" in pipeline and "var(--red)" in pipeline and "var(--green)" in pipeline, "pipeline must use governed three-color semantics")
     require("MOST RECENT PUBLIC CHANGE" in projects, "project system must identify most recent public change")
 
@@ -139,7 +145,7 @@ def main() -> int:
     if not args.input_only:
         validate_generated()
         validate_readme()
-    print("PROFILE VALIDATION: PASS — research state, public evidence, green/red/light-yellow semantics, mathematical art, motion, and scientific boundaries are consistent.")
+    print("PROFILE VALIDATION: PASS — research state, public evidence, palette, mathematical art, motion, and scientific boundaries are consistent.")
     return 0
 
 
