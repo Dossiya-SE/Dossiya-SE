@@ -2,7 +2,7 @@
 <title id="title">Governed living research state</title>
 <desc id="desc">Research-state panel using green for viable/sustainable state, red for boundaries or criticality, and light yellow for causal transitions.</desc>
 <style>
-:root{--bg:#fffdf6;--panel:#ffffff;--ink:#10151b;--muted:#66706c;--line:#d8d5ca;--green:#157347;--green-soft:#e8f4e7;--red:#c62828;--red-soft:#fdebec;--yellow:#efc84a;--yellow-soft:#fff3bd;--yellow-ink:#6f5610;--ghost:#eeeae0}
+:root{--bg:#FBFAF6;--panel:#FFFFFF;--ink:#1F2328;--muted:#59636E;--line:#D1D9E0;--topology:#24292F;--green:#1A7F37;--green-soft:#DAFBE1;--red:#CF222E;--red-soft:#FFEBE9;--yellow:#9A6700;--yellow-soft:#FFF8C5;--yellow-ink:#6A4B00;--ghost:#F6F8FA}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .k{font-size:12px;font-weight:800;letter-spacing:.14em} .h{font-size:30px;font-weight:780} .hero{font-size:45px;font-weight:820;letter-spacing:-.025em}

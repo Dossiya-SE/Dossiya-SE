@@ -2,21 +2,21 @@
 <title id="title">Coupled Power–Transportation network geometry</title>
 <desc id="desc">Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and light yellow denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.</desc>
 <style>
-:root{--bg:#0b100d;--panel:#111712;--ink:#f3f6f3;--muted:#a2ada6;--line:#303a33;--green:#56d887;--green-soft:#173924;--red:#ff6b6b;--red-soft:#421f22;--yellow:#f2cc60;--yellow-soft:#423816;--yellow-ink:#ffe69a;--ghost:#18201a}
+:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#8B949E;--line:#30363D;--topology:#C9D1D9;--green:#3FB950;--green-soft:#1B4721;--red:#F85149;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
 .title{font-size:34px;font-weight:820;letter-spacing:-.02em}
 .h{font-size:23px;font-weight:780} .k{font-size:12px;font-weight:800;letter-spacing:.13em}
 .m{font-size:14px;fill:var(--muted)} .s{font-size:11px;fill:var(--muted)} .node-label{font-size:13px;font-weight:760}
-.edge{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;opacity:.72}
-.edge-soft{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;opacity:.38;stroke-dasharray:5 6}
-.flow{fill:none;stroke:var(--green);stroke-width:3.4;stroke-linecap:round;stroke-dasharray:10 12;animation:serviceFlow 3.3s linear infinite}
-.interface-flow{fill:none;stroke:var(--yellow);stroke-width:4;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}
-.critical-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:5;stroke-linecap:round;stroke-dasharray:8 8;animation:criticalPhase 20s linear infinite}
-.propagation-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:7 9;animation:propagationPhase 20s linear infinite}
-.control-demo{opacity:0;fill:none;stroke:var(--yellow);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}
-.recovery-demo{opacity:0;fill:none;stroke:var(--green);stroke-width:5;stroke-linecap:round;stroke-dasharray:10 10;animation:recoveryPhase 20s linear infinite}
+.edge{fill:none;stroke:var(--topology);stroke-width:2.2;stroke-linecap:round;opacity:1}
+.edge-soft{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-linecap:round;opacity:1;stroke-dasharray:5 6}
+.flow{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 12;animation:serviceFlow 3.3s linear infinite}
+.interface-flow{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}
+.critical-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;stroke-dasharray:8 8;animation:criticalPhase 20s linear infinite}
+.propagation-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;stroke-dasharray:7 9;animation:propagationPhase 20s linear infinite}
+.control-demo{opacity:0;fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}
+.recovery-demo{opacity:0;fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 10;animation:recoveryPhase 20s linear infinite}
 .critical-node{opacity:0;fill:var(--red);animation:criticalPhase 20s linear infinite}
 .control-node{opacity:0;fill:var(--yellow);animation:controlPhase 20s linear infinite}
 @keyframes serviceFlow{to{stroke-dashoffset:-44}} @keyframes interfaceFlow{to{stroke-dashoffset:-40}}
@@ -30,11 +30,11 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="52" y="58" class="title">Coupled Power–Transportation Network Geometry</text>
 <text x="52" y="88" class="m">topology first · typed nodes and edges · explicit shared interface · explanatory dynamics</text>
 <text x="1548" y="58" text-anchor="end" class="k" fill="var(--green)">PHYSICS-GROUNDED SUSTAINABLE ENGINEERING</text>
-<rect x="52" y="125" width="1000" height="250" rx="22" fill="var(--panel)" stroke="var(--green)" stroke-width="1.8"/>
-<rect x="52" y="430" width="1000" height="250" rx="22" fill="var(--panel)" stroke="var(--green)" stroke-width="1.8"/>
-<text x="76" y="159" class="h" fill="var(--green)">POWER NETWORK 𝓖<tspan baseline-shift="sub" font-size="13">P</tspan></text>
+<rect x="52" y="125" width="1000" height="250" rx="22" fill="var(--panel)" stroke="var(--line)" stroke-width="1.2"/>
+<rect x="52" y="430" width="1000" height="250" rx="22" fill="var(--panel)" stroke="var(--line)" stroke-width="1.2"/>
+<text x="76" y="159" class="h" fill="var(--ink)">POWER NETWORK 𝓖<tspan baseline-shift="sub" font-size="13">P</tspan></text>
 <text x="76" y="181" class="s">𝓖<tspan baseline-shift="sub" font-size="9">P</tspan>=(V<tspan baseline-shift="sub" font-size="9">P</tspan>,E<tspan baseline-shift="sub" font-size="9">P</tspan>) · generation → substations → interface / loads</text>
-<text x="76" y="464" class="h" fill="var(--green)">TRANSPORTATION NETWORK 𝓖<tspan baseline-shift="sub" font-size="13">T</tspan></text>
+<text x="76" y="464" class="h" fill="var(--ink)">TRANSPORTATION NETWORK 𝓖<tspan baseline-shift="sub" font-size="13">T</tspan></text>
 <text x="76" y="486" class="s">𝓖<tspan baseline-shift="sub" font-size="9">T</tspan>=(V<tspan baseline-shift="sub" font-size="9">T</tspan>,E<tspan baseline-shift="sub" font-size="9">T</tspan>) · origins → intersections → shared interface / hub → terminals</text>
 <path id="P01" d="M102.0 212.1L402.0 220.7" class="edge"/>
 <path id="P02" d="M102.0 212.1L402.0 314.9" class="edge"/>

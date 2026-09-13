@@ -2,8 +2,8 @@
 <title id="title">Graph to viability transformation</title>
 <desc id="desc">Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, light yellow is causal/decision. Geometry is explanatory, not fitted data.</desc>
 <style>
-:root{--bg:#fffdf6;--panel:#ffffff;--ink:#11161c;--muted:#69736f;--line:#d7d5ca;--green:#157347;--green-soft:#e8f4e7;--red:#c62828;--red-soft:#fdebec;--yellow:#efc84a;--yellow-soft:#fff3bd;--yellow-ink:#6f5610;--ghost:#f0ede5}
-@media(prefers-color-scheme:dark){:root{--bg:#0b100d;--panel:#111712;--ink:#f3f6f3;--muted:#a2ada6;--line:#303a33;--green:#56d887;--green-soft:#173924;--red:#ff6b6b;--red-soft:#421f22;--yellow:#f2cc60;--yellow-soft:#423816;--yellow-ink:#ffe69a;--ghost:#18201a}}
+:root{--bg:#FBFAF6;--panel:#FFFFFF;--ink:#1F2328;--muted:#59636E;--line:#D1D9E0;--topology:#24292F;--green:#1A7F37;--green-soft:#DAFBE1;--red:#CF222E;--red-soft:#FFEBE9;--yellow:#9A6700;--yellow-soft:#FFF8C5;--yellow-ink:#6A4B00;--ghost:#F6F8FA}
+@media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#8B949E;--line:#30363D;--topology:#C9D1D9;--green:#3FB950;--green-soft:#1B4721;--red:#F85149;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D}}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
 .title{font-size:34px;font-weight:820;letter-spacing:-.02em}

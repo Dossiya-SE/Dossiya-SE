@@ -2,8 +2,8 @@
 <title id="title">Seven-stage research architecture</title>
 <desc id="desc">Seven-stage transformation path with light-yellow causal transition, green viable/sustainable states and red critical resilience-sustainability boundary.</desc>
 <style>
-:root{--bg:#fffdf6;--panel:#ffffff;--ink:#10151b;--muted:#66706c;--line:#d8d5ca;--green:#157347;--green-soft:#e8f4e7;--red:#c62828;--red-soft:#fdebec;--yellow:#efc84a;--yellow-soft:#fff3bd;--yellow-ink:#6f5610;--ghost:#eeeae0}
-@media(prefers-color-scheme:dark){:root{--bg:#0d1210;--panel:#121913;--ink:#f3f7f2;--muted:#9da99f;--line:#344039;--green:#7bd49a;--green-soft:#193025;--red:#ff8585;--red-soft:#34191c;--yellow:#ffd96a;--yellow-soft:#332b16;--yellow-ink:#ffe9a0;--ghost:#1d2721}}
+:root{--bg:#FBFAF6;--panel:#FFFFFF;--ink:#1F2328;--muted:#59636E;--line:#D1D9E0;--topology:#24292F;--green:#1A7F37;--green-soft:#DAFBE1;--red:#CF222E;--red-soft:#FFEBE9;--yellow:#9A6700;--yellow-soft:#FFF8C5;--yellow-ink:#6A4B00;--ghost:#F6F8FA}
+@media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#8B949E;--line:#30363D;--topology:#C9D1D9;--green:#3FB950;--green-soft:#1B4721;--red:#F85149;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D}}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .k{font-size:12px;font-weight:800;letter-spacing:.14em} .h{font-size:30px;font-weight:780} .hero{font-size:45px;font-weight:820;letter-spacing:-.025em}
 .v{font-size:19px;font-weight:720} .m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)}
