@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 570" role="img" aria-labelledby="title desc">
+<title id="title">Dossiya Dakou — animated physics-to-mathematics research system</title>
+<desc id="desc">Semantic animated SVG showing coupled Power and Transportation infrastructure, causal-interface transfer, mathematical state evolution, viability geometry, and engineering decision. Motion is schematic and not an empirical measurement.</desc>
+<style>
+:root{--bg:#0d1117;--panel:#111820;--ink:#f0f3f6;--muted:#9ba5b0;--line:#30363d;--gold:#d2a63c;--blue:#72a7ff;--soft:#161d26}
+
+text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
+.k{font-size:13px;font-weight:800;letter-spacing:.11em} .h{font-size:28px;font-weight:800} .v{font-size:20px;font-weight:750}
+.m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)} .math{font-family:Georgia,"Times New Roman",serif;font-size:21px}
+.flow-gold{stroke:var(--gold);stroke-dasharray:10 12;animation:flowGold 2.8s linear infinite}
+.flow-blue{stroke:var(--blue);stroke-dasharray:9 12;animation:flowBlue 3.4s linear infinite}
+.pulse-gold{animation:pulseGold 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.pulse-blue{animation:pulseBlue 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.latest{animation:latestPulse 3.2s ease-in-out infinite}
+@keyframes flowGold{to{stroke-dashoffset:-44}}
+@keyframes flowBlue{to{stroke-dashoffset:-42}}
+@keyframes pulseGold{0%,100%{opacity:.48;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes pulseBlue{0%,100%{opacity:.58;transform:scale(.97)}50%{opacity:1;transform:scale(1.03)}}
+@keyframes latestPulse{0%,100%{stroke-opacity:.42}50%{stroke-opacity:1}}
+@media(prefers-reduced-motion:reduce){.flow-gold,.flow-blue,.pulse-gold,.pulse-blue,.latest{animation:none!important}}
+</style>
+<rect x="1" y="1" width="1398" height="568" rx="30" fill="var(--bg)" stroke="var(--line)"/>
+<text x="58" y="62" class="k" fill="var(--gold)">PHYSICS-GROUNDED MATHEMATICAL ENGINEERING</text>
+<text x="58" y="108" class="h">Physical reality → causality → mathematical structure → engineering decision</text>
+<text x="58" y="140" class="m">Current formal transition: Causal Mechanisms → Coupled Hybrid Multiscale Dynamics · public evidence observed 13 Sep 2026</text>
+<g transform="translate(70 205)">
+<text x="0" y="0" class="k">POWER</text>
+<line x1="10" y1="55" x2="116" y2="22" stroke="var(--ink)" stroke-width="2"/>
+<line x1="116" y1="22" x2="222" y2="58" stroke="var(--ink)" stroke-width="2"/>
+<line x1="116" y1="22" x2="128" y2="120" stroke="var(--ink)" stroke-width="2"/>
+<line x1="128" y1="120" x2="235" y2="128" stroke="var(--ink)" stroke-width="2"/>
+<line x1="222" y1="58" x2="235" y2="128" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="10" cy="55" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="116" cy="22" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="222" cy="58" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="128" cy="120" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="235" cy="128" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<path d="M11 55L116 22L222 58" fill="none" class="flow-gold" stroke-width="4" stroke-linecap="round"/>
+<text x="0" y="168" class="s">generation · grid · charging supply</text>
+</g>
+<g transform="translate(70 405)">
+<text x="0" y="0" class="k">TRANSPORTATION</text>
+<path d="M8 56C78 2 164 14 238 58S350 111 430 64" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<path d="M18 102C118 142 207 105 298 129S394 154 440 118" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<path d="M8 56C78 2 164 14 238 58S350 111 430 64" fill="none" class="flow-gold" stroke-width="4" stroke-linecap="round"/>
+<circle cx="8" cy="56" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="135" cy="26" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="238" cy="58" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="298" cy="129" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="430" cy="64" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="440" cy="118" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+</g>
+<g transform="translate(420 224)">
+<text x="0" y="0" class="k" fill="var(--gold)">CAUSAL INTERFACE</text>
+<path d="M70 34V216" fill="none" class="flow-gold" stroke-width="4"/>
+<path d="M47 58L70 34L93 58M47 192L70 216L93 192" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="70" cy="125" r="15" fill="var(--gold)" class="pulse-gold"/>
+<text x="106" y="111" class="math" fill="var(--gold)">I<tspan baseline-shift="sub" font-size="12">PT</tspan></text>
+<text x="106" y="140" class="s">mechanism · sign · delay</text>
+</g>
+<line x1="624" y1="182" x2="624" y2="524" stroke="var(--line)"/>
+<g transform="translate(690 205)">
+<text x="0" y="0" class="k" fill="var(--blue)">MATHEMATICAL STATE</text>
+<text x="0" y="29" class="s">schematic state-space trajectory constrained by engineering admissibility</text>
+<path d="M35 112C120 37 284 45 369 128C438 195 422 305 330 346C233 390 96 360 42 271C4 208 7 144 35 112Z" fill="var(--soft)" stroke="var(--blue)" stroke-width="2"/>
+<path d="M86 302C132 254 160 213 202 194C247 174 286 193 296 231C307 272 266 294 225 278C197 267 187 239 200 215" fill="none" stroke="var(--blue)" stroke-width="2.4" opacity=".30"/>
+<path d="M86 302C132 254 160 213 202 194C247 174 286 193 296 231C307 272 266 294 225 278C197 267 187 239 200 215" fill="none" class="flow-blue" stroke-width="4" stroke-linecap="round"/>
+<circle cx="200" cy="215" r="9" fill="var(--blue)" class="pulse-blue"/>
+<line x1="200" y1="215" x2="88" y2="176" stroke="var(--gold)" stroke-width="2" stroke-dasharray="5 7"/>
+<text x="42" y="169" class="math" fill="var(--gold)">ρ<tspan baseline-shift="sub" font-size="12">g</tspan></text>
+<text x="334" y="116" class="math" fill="var(--blue)">∂V</text>
+<text x="105" y="332" class="math">Y(t)</text>
+<text x="298" y="338" class="s">viable region</text>
+<path d="M438 226H554" class="flow-gold" stroke-width="3"/>
+<text x="456" y="211" class="k" fill="var(--gold)">DECISION</text>
+<text x="474" y="263" class="math" fill="var(--gold)">u*</text>
+</g>
+<text x="58" y="548" class="s">Motion encodes schematic causal transfer and state evolution; it is not a measured flow, calibrated trajectory, or empirical validation claim.</text>
+</svg>
