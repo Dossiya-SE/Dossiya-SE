@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "evidence_state": "DECLARED_EXPLANATORY_INTERFACE_MODEL",
+  "interfaces": [
+    {
+      "id": "I_PT_1",
+      "shared_asset": "C1",
+      "power_entity": "C1",
+      "transport_entity": "C1",
+      "object": "I_PT^(1) = (E_i^P, E_j^T, M_ij, w_ij, delta_ij, tau_ij, a_ij, m, H_t)",
+      "mechanisms": [
+        {
+          "id": "M_PT_electricity_supply",
+          "source_layer": "power",
+          "receiver_layer": "transportation",
+          "mechanism": "electricity supply to EV charging / electrified mobility",
+          "direction": "P_to_T",
+          "sign": "service_enabling",
+          "delay": "tau_PT",
+          "activation": "charging interface available",
+          "magnitude": "w_PT",
+          "evidence_status": "mechanism declaration; no calibrated magnitude claimed"
+        },
+        {
+          "id": "M_TP_charging_demand",
+          "source_layer": "transportation",
+          "receiver_layer": "power",
+          "mechanism": "charging demand imposed on electrical network",
+          "direction": "T_to_P",
+          "sign": "load_increasing",
+          "delay": "tau_TP",
+          "activation": "charging demand present",
+          "magnitude": "w_TP",
+          "evidence_status": "mechanism declaration; no calibrated magnitude claimed"
+        },
+        {
+          "id": "M_TP_v2g",
+          "source_layer": "transportation",
+          "receiver_layer": "power",
+          "mechanism": "conditional vehicle-to-grid support",
+          "direction": "T_to_P",
+          "sign": "service_supporting",
+          "delay": "tau_V2G",
+          "activation": "V2G capability and control enabled",
+          "magnitude": "w_V2G",
+          "evidence_status": "conditional mechanism declaration; no operational deployment claimed"
+        }
+      ],
+      "history_context": "H_t",
+      "scientific_boundary": "The interface is a formal explanatory object. Delays and magnitudes remain symbolic until supported by case-specific evidence or calibration."
+    }
+  ]
+}
