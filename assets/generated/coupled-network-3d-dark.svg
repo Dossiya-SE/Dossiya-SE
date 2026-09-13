@@ -1,156 +1,176 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
-<title id="title">Isometric 3D coupled Power–Transportation research geometry</title>
-<desc id="desc">Static isometric multilayer infrastructure geometry. Power and Transportation are separated by visual depth, C1 links the layer representations, and a pseudo-3D viability geometry shows Y(t), the critical boundary, resilience margin and intervention. Depth is explanatory, not geographic elevation or telemetry.</desc>
+<title id="title">Coupled Power–Transportation multilayer research geometry</title>
+<desc id="desc">Static isometric multilayer infrastructure geometry with typed Power and Transportation networks, a shared EV charging interface C1, and a separate pseudo-3D viability panel. Depth encodes layer separation only and is not geographic elevation, GIS height, telemetry, or a calibrated state coordinate.</desc>
 <style>
 :root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#8B949E;--line:#30363D;--topology:#C9D1D9;--green:#3FB950;--green-soft:#1B4721;--red:#F85149;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
-.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:20px} .math-sm{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:17px}
-.title{font-size:34px;font-weight:820;letter-spacing:-.02em} .eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;fill:var(--muted)}
-.layer{font-size:19px;font-weight:780} .small{font-size:12px;fill:var(--muted)} .node{font-size:10px;font-weight:800;fill:var(--ink)}
-.edge{fill:none;stroke:var(--topology);stroke-width:2.2;stroke-linecap:round} .edge-soft{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:5 6}
-.service{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round} .interface{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-dasharray:8 7}
-.axis{fill:none;stroke:var(--topology);stroke-width:1.6} .green{fill:var(--green)} .red{fill:var(--red)} .yellow{fill:var(--yellow-ink)}
-@media(prefers-reduced-motion:reduce){}
+.math,.equation,.math-small{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
+.title{font-size:38px;font-weight:820;letter-spacing:-.025em}
+.subtitle{font-size:17px;fill:var(--muted)}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;fill:var(--muted)}
+.layer{font-size:19px;font-weight:790} .side-title{font-size:22px;font-weight:760}
+.small{font-size:15px;fill:var(--muted)} .axis-label{font-size:15px;fill:var(--muted)}
+.node{font-size:13px;font-weight:820;fill:var(--ink)} .callout{font-size:18px;font-weight:760}
+.math{font-size:22px} .math-small{font-size:17px} .equation{font-size:20px}
+.label-box{fill:var(--bg);stroke:var(--line);stroke-width:1.4}
+.side-panel{fill:var(--panel);stroke:var(--line);stroke-width:1.5}
+.interface-box{fill:var(--yellow-soft);stroke:var(--yellow);stroke-width:1.8}
+.edge{fill:none;stroke:var(--topology);stroke-width:2.2;stroke-linecap:round}
+.edge-soft{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:5 6}
+.service{fill:none;stroke:var(--green);stroke-width:3.2;stroke-linecap:round}
+.interface{fill:none;stroke:var(--yellow);stroke-width:3.8;stroke-dasharray:9 7}
+.axis{fill:none;stroke:var(--topology);stroke-width:1.7}
+.critical{stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}
+.margin{fill:none;stroke:var(--red);stroke-width:2.5;stroke-dasharray:6 6}
+.control{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-dasharray:9 7}
+.green-text{fill:var(--green)} .red-text{fill:var(--red)} .yellow-text{fill:var(--yellow-ink)}
+.legend{font-size:14px;fill:var(--muted)}
 </style>
-<rect x="1" y="1" width="1598" height="758" rx="30" fill="var(--bg)" stroke="var(--line)"/>
-<text x="50" y="58" class="title">Coupled Power–Transportation · Isometric Research Geometry</text>
-<text x="50" y="87" class="small">typed multilayer topology · explicit physical interface · state/viability geometry</text>
-<text x="1550" y="58" text-anchor="end" class="eyebrow">3D SCHEMATIC · NOT GIS ELEVATION</text>
-<path d="M300.0 500.0L300.0 270.0" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
-<path d="M820.0 635.0L820.0 405.0" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
-<path d="M600.0 740.0L600.0 510.0" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
-<path d="M80.0 605.0L80.0 375.0" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
-<polygon points="300.0,500.0 820.0,635.0 600.0,740.0 80.0,605.0" fill="var(--panel)" fill-opacity=".88" stroke="var(--line)" stroke-width="1.5"/>
-<path d="M430.0 533.8L210.0 638.8M245.0 526.2L765.0 661.2" stroke="var(--line)" stroke-width=".8" opacity=".45"/>
-<path d="M560.0 567.5L340.0 672.5M190.0 552.5L710.0 687.5" stroke="var(--line)" stroke-width=".8" opacity=".45"/>
-<path d="M690.0 601.2L470.0 706.2M135.0 578.8L655.0 713.8" stroke="var(--line)" stroke-width=".8" opacity=".45"/>
-<text x="309.0" y="487.2" class="layer">TRANSPORTATION NETWORK <tspan class="math">𝓖_T</tspan></text>
-<text x="309.0" y="505.2" class="small">mobility service topology</text>
-<polygon points="300.0,270.0 820.0,405.0 600.0,510.0 80.0,375.0" fill="var(--panel)" fill-opacity=".88" stroke="var(--line)" stroke-width="1.5"/>
-<path d="M430.0 303.8L210.0 408.8M245.0 296.2L765.0 431.2" stroke="var(--line)" stroke-width=".8" opacity=".45"/>
-<path d="M560.0 337.5L340.0 442.5M190.0 322.5L710.0 457.5" stroke="var(--line)" stroke-width=".8" opacity=".45"/>
-<path d="M690.0 371.2L470.0 476.2M135.0 348.8L655.0 483.8" stroke="var(--line)" stroke-width=".8" opacity=".45"/>
-<text x="309.0" y="257.2" class="layer">POWER NETWORK <tspan class="math">𝓖_P</tspan></text>
-<text x="309.0" y="275.2" class="small">electrical service topology</text>
-<path d="M312.4 294.8L445.9 338.3" class="edge"/>
-<path d="M312.4 294.8L445.9 338.3" class="service"/>
-<path d="M312.4 294.8L313.3 401.6" class="edge"/>
-<path d="M155.7 369.5L313.3 401.6" class="edge"/>
-<path d="M155.7 369.5L313.3 401.6" class="service"/>
-<path d="M445.9 338.3L313.3 401.6" class="edge-soft"/>
-<path d="M445.9 338.3L474.4 389.8" class="edge-soft"/>
-<path d="M313.3 401.6L474.4 389.8" class="edge-soft"/>
-<path d="M313.3 401.6L474.4 389.8" class="service"/>
-<path d="M474.4 389.8L756.4 404.7" class="edge-soft"/>
-<path d="M474.4 389.8L580.4 488.7" class="edge-soft"/>
-<path d="M474.4 389.8L580.4 488.7" class="service"/>
-<path d="M217.3 570.1L376.6 557.2" class="edge"/>
-<path d="M217.3 570.1L376.6 557.2" class="service"/>
-<path d="M217.3 570.1L229.2 627.5" class="edge"/>
-<path d="M376.6 557.2L474.4 619.8" class="edge"/>
-<path d="M376.6 557.2L474.4 619.8" class="service"/>
-<path d="M376.6 557.2L229.2 627.5" class="edge"/>
-<path d="M474.4 619.8L534.5 603.8" class="edge"/>
-<path d="M534.5 603.8L397.0 669.5" class="edge"/>
-<path d="M229.2 627.5L397.0 669.5" class="edge"/>
-<path d="M534.5 603.8L579.2 651.9" class="edge"/>
-<path d="M534.5 603.8L579.2 651.9" class="service"/>
-<path d="M397.0 669.5L579.2 651.9" class="edge"/>
-<path d="M579.2 651.9L745.4 640.0" class="edge"/>
-<path d="M579.2 651.9L580.4 718.7" class="edge"/>
-<path d="M579.2 651.9L580.4 718.7" class="service"/>
-<path d="M397.0 669.5L580.4 718.7" class="edge-soft"/>
-<line x1="312.4" y1="306.8" x2="312.4" y2="319.8" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="312.4" cy="320.8" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<ellipse cx="312.4" cy="294.8" rx="15" ry="10" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.2"/>
-<text x="312.4" y="298.8" text-anchor="middle" class="node">G1</text>
-<line x1="155.7" y1="381.5" x2="155.7" y2="394.5" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="155.7" cy="395.5" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<ellipse cx="155.7" cy="369.5" rx="15" ry="10" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.2"/>
-<text x="155.7" y="373.5" text-anchor="middle" class="node">G2</text>
-<line x1="445.9" y1="350.3" x2="445.9" y2="363.3" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="445.9" cy="364.3" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="445.9,326.3 461.9,338.3 445.9,350.3 429.9,338.3" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="445.9" y="342.3" text-anchor="middle" class="node">S1</text>
-<line x1="313.3" y1="413.6" x2="313.3" y2="426.6" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="313.3" cy="427.6" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="313.3,389.6 329.3,401.6 313.3,413.6 297.3,401.6" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="313.3" y="405.6" text-anchor="middle" class="node">S2</text>
-<line x1="474.4" y1="401.8" x2="474.4" y2="414.8" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="474.4" cy="415.8" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="474.4,374.8 494.4,389.8 474.4,404.8 454.4,389.8" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="2.8"/>
-<text x="474.4" y="393.8" text-anchor="middle" class="node">C1</text>
-<line x1="756.4" y1="416.7" x2="756.4" y2="429.7" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="756.4" cy="430.7" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<ellipse cx="756.4" cy="404.7" rx="15" ry="10" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="756.4" y="408.7" text-anchor="middle" class="node">L1</text>
-<line x1="580.4" y1="500.7" x2="580.4" y2="513.7" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="580.4" cy="514.7" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<ellipse cx="580.4" cy="488.7" rx="15" ry="10" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="580.4" y="492.7" text-anchor="middle" class="node">L2</text>
-<line x1="217.3" y1="582.1" x2="217.3" y2="595.1" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="217.3" cy="596.1" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<ellipse cx="217.3" cy="570.1" rx="15" ry="10" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.2"/>
-<text x="217.3" y="574.1" text-anchor="middle" class="node">O1</text>
-<line x1="376.6" y1="569.2" x2="376.6" y2="582.2" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="376.6" cy="583.2" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="376.6,545.2 392.6,557.2 376.6,569.2 360.6,557.2" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="376.6" y="561.2" text-anchor="middle" class="node">I1</text>
-<line x1="229.2" y1="639.5" x2="229.2" y2="652.5" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="229.2" cy="653.5" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="229.2,615.5 245.2,627.5 229.2,639.5 213.2,627.5" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="229.2" y="631.5" text-anchor="middle" class="node">I3</text>
-<line x1="474.4" y1="631.8" x2="474.4" y2="644.8" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="474.4" cy="645.8" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="474.4,604.8 494.4,619.8 474.4,634.8 454.4,619.8" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="2.8"/>
-<text x="474.4" y="623.8" text-anchor="middle" class="node">C1</text>
-<line x1="534.5" y1="615.8" x2="534.5" y2="628.8" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="534.5" cy="629.8" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="534.5,591.8 550.5,603.8 534.5,615.8 518.5,603.8" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="534.5" y="607.8" text-anchor="middle" class="node">I2</text>
-<line x1="397.0" y1="681.5" x2="397.0" y2="694.5" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="397.0" cy="695.5" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="397.0,657.5 413.0,669.5 397.0,681.5 381.0,669.5" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="397.0" y="673.5" text-anchor="middle" class="node">I4</text>
-<line x1="579.2" y1="663.9" x2="579.2" y2="676.9" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="579.2" cy="677.9" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<ellipse cx="579.2" cy="651.9" rx="15" ry="10" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.2"/>
-<text x="579.2" y="655.9" text-anchor="middle" class="node">H1</text>
-<line x1="745.4" y1="652.0" x2="745.4" y2="665.0" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="745.4" cy="666.0" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<polygon points="745.4,625.0 761.4,651.0 729.4,651.0" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.2"/>
-<text x="745.4" y="644.0" text-anchor="middle" class="node">T1</text>
-<line x1="580.4" y1="730.7" x2="580.4" y2="743.7" stroke="var(--line)" stroke-width="1.2"/>
-<ellipse cx="580.4" cy="744.7" rx="14" ry="5" fill="var(--ghost)" stroke="var(--line)"/>
-<ellipse cx="580.4" cy="718.7" rx="15" ry="10" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.2"/>
-<text x="580.4" y="722.7" text-anchor="middle" class="node">D1</text>
-<path d="M474.4 603.8L474.4 405.8" class="interface"/>
-<rect x="492.4" y="477.8" width="158" height="50" rx="12" fill="var(--yellow-soft)" stroke="var(--yellow)"/>
-<text x="571.4" y="498.8" text-anchor="middle" class="math yellow">𝕀_PT</text>
-<text x="571.4" y="517.8" text-anchor="middle" class="small">same physical asset · C1</text>
-<text x="54" y="706" class="small">Green = admissible service · Red = critical boundary · Light yellow/ochre = causal interface or intervention · Charcoal = physical topology</text>
-<text x="1032" y="160" class="eyebrow">STATE / VIABILITY GEOMETRY</text>
-<text x="1032" y="194" class="small">pseudo-3D state space · explanatory geometry</text>
-<path d="M1040 430L1455 510M1040 430L1220 295M1040 430L1040 215" class="axis"/>
-<text x="1465" y="516" class="small">x₁</text><text x="1226" y="290" class="small">x₂</text><text x="1027" y="207" class="small">x₃</text>
-<ellipse cx="1220" cy="430" rx="185" ry="64" fill="var(--green-soft)" fill-opacity="0.28" stroke="var(--green)" stroke-width="2.3" opacity=".9"/>
-<ellipse cx="1220" cy="402" rx="156" ry="55" fill="none" fill-opacity="0.22" stroke="var(--green)" stroke-width="1.2" opacity=".9"/>
-<ellipse cx="1220" cy="376" rx="124" ry="44" fill="none" fill-opacity="0.18" stroke="var(--green)" stroke-width="1.2" opacity=".9"/>
-<ellipse cx="1220" cy="352" rx="88" ry="32" fill="none" fill-opacity="0.14" stroke="var(--green)" stroke-width="1.2" opacity=".9"/>
-<path d="M1038 430C1085 374 1126 337 1220 352C1314 337 1355 374 1402 430" fill="none" stroke="var(--green)" stroke-width="1.1" opacity=".32"/>
-<path d="M1120 392C1154 362 1180 343 1220 352C1260 343 1286 362 1320 392" fill="none" stroke="var(--green)" stroke-width="1.1" opacity=".28"/>
-<ellipse cx="1220" cy="430" rx="196" ry="70" fill="none" stroke="var(--red)" stroke-width="3" stroke-dasharray="9 8"/>
-<text x="1360" y="385" class="math red">∂𝒱</text>
-<text x="1245" y="455" class="math green">𝒱ₛᵤₛ</text>
-<circle cx="1184" cy="370" r="8" fill="var(--green)" stroke="var(--panel)" stroke-width="2"/>
-<text x="1198" y="366" class="math">Y(t)</text>
-<path d="M1190 375L1363 418" stroke="var(--red)" stroke-width="2.3" stroke-dasharray="6 6"/>
-<text x="1270" y="388" class="math red">ρ_g</text>
-<path d="M1190 365Q1238 322 1295 338" fill="none" stroke="var(--yellow)" stroke-width="3.5" stroke-dasharray="9 8"/>
-<polygon points="1295,326 1299,335 1309,336 1301,343 1303,353 1295,348 1287,353 1289,343 1281,336 1291,335" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="2"/>
-<text x="1315" y="344" class="math yellow">u*</text>
-<text x="1032" y="575" class="math-sm">Ẏ = F_𝒢(Y,u,η;θ)</text>
-<text x="1032" y="606" class="math-sm green">Y(t) ∈ 𝒱ₛᵤₛ(t)</text>
-<text x="1032" y="637" class="math-sm red">ρ_g(Y)=d_g(Y,∂𝒱)</text>
-<text x="1548" y="735" text-anchor="end" class="small">Visual depth encodes layer separation only; coordinates are explanatory and uncalibrated.</text>
+<rect x="1" y="1" width="1598" height="758" rx="28" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="58" class="title">Coupled Power–Transportation Systems</text>
+<text x="48" y="88" class="subtitle">Isometric multilayer topology · shared physical interface · viability geometry</text>
+<text x="1550" y="56" text-anchor="end" class="eyebrow">STATIC 3D SCHEMATIC · NOT GIS ELEVATION</text>
+<path d="M985 120L985 662" stroke="var(--line)" stroke-width="1.4"/>
+<path d="M275.0 475.0L275.0 257.0" stroke="var(--line)" stroke-width="1.1" stroke-dasharray="4 7"/>
+<path d="M820.0 595.0L820.0 377.0" stroke="var(--line)" stroke-width="1.1" stroke-dasharray="4 7"/>
+<path d="M615.0 687.0L615.0 469.0" stroke="var(--line)" stroke-width="1.1" stroke-dasharray="4 7"/>
+<path d="M70.0 567.0L70.0 349.0" stroke="var(--line)" stroke-width="1.1" stroke-dasharray="4 7"/>
+<polygon points="275.0,475.0 820.0,595.0 615.0,687.0 70.0,567.0" fill="var(--panel)" fill-opacity=".94" stroke="var(--line)" stroke-width="1.7"/>
+<path d="M456.7 515.0L251.7 607.0M206.7 505.7L751.7 625.7" stroke="var(--line)" stroke-width="1" opacity=".45"/>
+<path d="M638.3 555.0L433.3 647.0M138.3 536.3L683.3 656.3" stroke="var(--line)" stroke-width="1" opacity=".45"/>
+<polygon points="275.0,257.0 820.0,377.0 615.0,469.0 70.0,349.0" fill="var(--panel)" fill-opacity=".94" stroke="var(--line)" stroke-width="1.7"/>
+<path d="M456.7 297.0L251.7 389.0M206.7 287.7L751.7 407.7" stroke="var(--line)" stroke-width="1" opacity=".45"/>
+<path d="M638.3 337.0L433.3 429.0M138.3 318.3L683.3 438.3" stroke="var(--line)" stroke-width="1" opacity=".45"/>
+<rect x="58" y="175" width="285" height="64" rx="13" class="label-box"/>
+<text x="76" y="202" class="layer">POWER NETWORK 𝒢<tspan baseline-shift="sub" font-size="70%">P</tspan></text>
+<text x="76" y="225" class="small">electrical service topology</text>
+<path d="M343 207L263.7 263.1" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="58" y="493" width="285" height="64" rx="13" class="label-box"/>
+<text x="76" y="520" class="layer">TRANSPORTATION NETWORK 𝒢<tspan baseline-shift="sub" font-size="70%">T</tspan></text>
+<text x="76" y="543" class="small">mobility service topology</text>
+<path d="M343 525L263.7 481.1" stroke="var(--line)" stroke-width="1.5"/>
+<path d="M297.0 279.9L435.0 317.7" class="edge"/>
+<path d="M297.0 279.9L435.0 317.7" class="service"/>
+<path d="M297.0 279.9L314.5 371.7" class="edge"/>
+<path d="M154.6 343.8L314.5 371.7" class="edge"/>
+<path d="M154.6 343.8L314.5 371.7" class="service"/>
+<path d="M435.0 317.7L314.5 371.7" class="edge-soft"/>
+<path d="M435.0 317.7L480.4 365.3" class="edge-soft"/>
+<path d="M314.5 371.7L480.4 365.3" class="edge-soft"/>
+<path d="M314.5 371.7L480.4 365.3" class="service"/>
+<path d="M480.4 365.3L750.5 375.4" class="edge-soft"/>
+<path d="M480.4 365.3L590.6 447.2" class="edge-soft"/>
+<path d="M480.4 365.3L590.6 447.2" class="service"/>
+<path d="M210.6 536.7L365.2 526.0" class="edge"/>
+<path d="M210.6 536.7L365.2 526.0" class="service"/>
+<path d="M210.6 536.7L231.3 586.1" class="edge"/>
+<path d="M365.2 526.0L480.4 583.3" class="edge"/>
+<path d="M365.2 526.0L480.4 583.3" class="service"/>
+<path d="M365.2 526.0L231.3 586.1" class="edge"/>
+<path d="M480.4 583.3L527.6 566.4" class="edge"/>
+<path d="M527.6 566.4L402.7 622.5" class="edge"/>
+<path d="M231.3 586.1L402.7 622.5" class="edge"/>
+<path d="M527.6 566.4L579.0 607.8" class="edge"/>
+<path d="M527.6 566.4L579.0 607.8" class="service"/>
+<path d="M402.7 622.5L579.0 607.8" class="edge"/>
+<path d="M579.0 607.8L740.5 597.9" class="edge"/>
+<path d="M579.0 607.8L590.5 665.2" class="edge"/>
+<path d="M579.0 607.8L590.5 665.2" class="service"/>
+<path d="M402.7 622.5L590.5 665.2" class="edge-soft"/>
+<line x1="297.0" y1="293.9" x2="297.0" y2="306.9" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="297.0" cy="308.9" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<ellipse cx="297.0" cy="279.9" rx="18" ry="12" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="297.0" y="284.9" text-anchor="middle" class="node">G1</text>
+<line x1="154.6" y1="357.8" x2="154.6" y2="370.8" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="154.6" cy="372.8" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<ellipse cx="154.6" cy="343.8" rx="18" ry="12" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="154.6" y="348.8" text-anchor="middle" class="node">G2</text>
+<line x1="435.0" y1="331.7" x2="435.0" y2="344.7" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="435.0" cy="346.7" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="435.0,303.7 453.0,317.7 435.0,331.7 417.0,317.7" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="435.0" y="322.7" text-anchor="middle" class="node">S1</text>
+<line x1="314.5" y1="385.7" x2="314.5" y2="398.7" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="314.5" cy="400.7" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="314.5,357.7 332.5,371.7 314.5,385.7 296.5,371.7" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="314.5" y="376.7" text-anchor="middle" class="node">S2</text>
+<line x1="480.4" y1="379.3" x2="480.4" y2="392.3" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="480.4" cy="394.3" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="480.4,348.3 502.4,365.3 480.4,382.3 458.4,365.3" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="3"/>
+<text x="480.4" y="370.3" text-anchor="middle" class="node">C1</text>
+<line x1="750.5" y1="389.4" x2="750.5" y2="402.4" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="750.5" cy="404.4" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<ellipse cx="750.5" cy="375.4" rx="18" ry="12" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="750.5" y="380.4" text-anchor="middle" class="node">L1</text>
+<line x1="590.6" y1="461.2" x2="590.6" y2="474.2" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="590.6" cy="476.2" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<ellipse cx="590.6" cy="447.2" rx="18" ry="12" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="590.6" y="452.2" text-anchor="middle" class="node">L2</text>
+<line x1="210.6" y1="550.7" x2="210.6" y2="563.7" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="210.6" cy="565.7" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<ellipse cx="210.6" cy="536.7" rx="18" ry="12" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="210.6" y="541.7" text-anchor="middle" class="node">O1</text>
+<line x1="365.2" y1="540.0" x2="365.2" y2="553.0" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="365.2" cy="555.0" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="365.2,512.0 383.2,526.0 365.2,540.0 347.2,526.0" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="365.2" y="531.0" text-anchor="middle" class="node">I1</text>
+<line x1="231.3" y1="600.1" x2="231.3" y2="613.1" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="231.3" cy="615.1" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="231.3,572.1 249.3,586.1 231.3,600.1 213.3,586.1" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="231.3" y="591.1" text-anchor="middle" class="node">I3</text>
+<line x1="480.4" y1="597.3" x2="480.4" y2="610.3" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="480.4" cy="612.3" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="480.4,566.3 502.4,583.3 480.4,600.3 458.4,583.3" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="3"/>
+<text x="480.4" y="588.3" text-anchor="middle" class="node">C1</text>
+<line x1="527.6" y1="580.4" x2="527.6" y2="593.4" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="527.6" cy="595.4" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="527.6,552.4 545.6,566.4 527.6,580.4 509.6,566.4" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="527.6" y="571.4" text-anchor="middle" class="node">I2</text>
+<line x1="402.7" y1="636.5" x2="402.7" y2="649.5" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="402.7" cy="651.5" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="402.7,608.5 420.7,622.5 402.7,636.5 384.7,622.5" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="402.7" y="627.5" text-anchor="middle" class="node">I4</text>
+<line x1="579.0" y1="621.8" x2="579.0" y2="634.8" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="579.0" cy="636.8" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<ellipse cx="579.0" cy="607.8" rx="18" ry="12" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="579.0" y="612.8" text-anchor="middle" class="node">H1</text>
+<line x1="740.5" y1="611.9" x2="740.5" y2="624.9" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="740.5" cy="626.9" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<polygon points="740.5,580.9 758.5,610.9 722.5,610.9" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="740.5" y="602.9" text-anchor="middle" class="node">T1</text>
+<line x1="590.5" y1="679.2" x2="590.5" y2="692.2" stroke="var(--line)" stroke-width="1.3"/>
+<ellipse cx="590.5" cy="694.2" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>
+<ellipse cx="590.5" cy="665.2" rx="18" ry="12" fill="var(--panel)" stroke="var(--topology)" stroke-width="2.4"/>
+<text x="590.5" y="670.2" text-anchor="middle" class="node">D1</text>
+<path d="M480.4 384.3L480.4 564.3" class="interface"/>
+<path d="M490.4 474.3L653 449" stroke="var(--yellow)" stroke-width="1.8" fill="none"/>
+<rect x="665" y="412" width="270" height="86" rx="15" class="interface-box"/>
+<text x="683" y="436" class="eyebrow yellow-text">SHARED PHYSICAL INTERFACE</text>
+<text x="683" y="463" class="callout">C₁ · EV charging asset</text>
+<text x="683" y="486" class="math-small yellow-text">𝕀<tspan baseline-shift="sub" font-size="70%">PT</tspan> · Power ⇄ Transport</text>
+<rect x="1015" y="125" width="530" height="535" rx="22" class="side-panel"/>
+<text x="1050" y="165" class="eyebrow">STATE / VIABILITY GEOMETRY</text>
+<text x="1050" y="193" class="side-title">State-space margin to criticality</text>
+<text x="1050" y="217" class="small">schematic geometry · not calibrated</text>
+<path d="M1080 446L1465 515M1080 446L1250 302M1080 446L1080 255" class="axis"/>
+<text x="1474" y="522" class="axis-label">x₁</text>
+<text x="1256" y="298" class="axis-label">x₂</text>
+<text x="1064" y="249" class="axis-label">x₃</text>
+<ellipse cx="1260" cy="438" rx="178" ry="61" fill="var(--green-soft)" fill-opacity="0.25" stroke="var(--green)" stroke-width="2.4"/>
+<ellipse cx="1260" cy="410" rx="148" ry="51" fill="none" fill-opacity="0.16" stroke="var(--green)" stroke-width="1.3"/>
+<ellipse cx="1260" cy="382" rx="116" ry="40" fill="none" fill-opacity="0.11" stroke="var(--green)" stroke-width="1.3"/>
+<ellipse cx="1260" cy="438" rx="194" ry="70" fill="none" class="critical"/>
+<text x="1430" y="405" class="math red-text">∂𝒱</text>
+<text x="1300" y="472" class="math green-text">𝒱ₛᵤₛ</text>
+<circle cx="1214" cy="386" r="9" fill="var(--green)" stroke="var(--panel)" stroke-width="3"/>
+<text x="1180" y="365" class="math">Y(t)</text>
+<path d="M1224 390L1418 426" class="margin"/>
+<text x="1310" y="396" class="math red-text">ρ<tspan baseline-shift="sub" font-size="70%">g</tspan></text>
+<path d="M1218 376Q1270 330 1332 344" class="control"/>
+<polygon points="1332,331 1337,341 1348,342 1339,350 1342,361 1332,355 1322,361 1325,350 1316,342 1327,341" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="2.2"/>
+<text x="1352" y="350" class="math yellow-text">u*</text>
+<text x="1050" y="566" class="equation">Ẏ = F<tspan baseline-shift="sub" font-size="70%">𝒢</tspan>(Y,u,η;θ)</text>
+<text x="1050" y="598" class="equation green-text">Y(t) ∈ 𝒱ₛᵤₛ(t)</text>
+<text x="1050" y="630" class="equation red-text">ρ<tspan baseline-shift="sub" font-size="70%">g</tspan>(Y) = d<tspan baseline-shift="sub" font-size="70%">g</tspan>(Y,∂𝒱)</text>
+<text x="48" y="713" class="legend">Green solid path = admissible service · Ochre dashed rail = causal interface · Red dashed boundary = criticality · Charcoal = physical topology</text>
+<text x="1550" y="713" text-anchor="end" class="legend">Coordinates and depth are explanatory and uncalibrated.</text>
 </svg>
