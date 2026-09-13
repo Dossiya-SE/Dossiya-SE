@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "evidence_state": "VALIDATED_VISUAL_DESIGN_SPECIFICATION",
+  "design_principle": "neutral scientific canvas with semantic accents",
+  "semantic_roles": {
+    "topology": "physical structure and neutral baseline geometry",
+    "viable": "sustainable, admissible, operational or recovery state",
+    "critical": "constraint, disturbance, critical boundary or propagation",
+    "causal": "causal interface, highlighted mechanism or engineering intervention"
+  },
+  "light": {
+    "bg": "#FBFAF6",
+    "panel": "#FFFFFF",
+    "ink": "#1F2328",
+    "muted": "#59636E",
+    "line": "#D1D9E0",
+    "topology": "#24292F",
+    "green": "#1A7F37",
+    "green_soft": "#DAFBE1",
+    "red": "#CF222E",
+    "red_soft": "#FFEBE9",
+    "yellow": "#9A6700",
+    "yellow_soft": "#FFF8C5",
+    "yellow_ink": "#6A4B00",
+    "ghost": "#F6F8FA"
+  },
+  "dark": {
+    "bg": "#0D1117",
+    "panel": "#161B22",
+    "ink": "#F0F6FC",
+    "muted": "#8B949E",
+    "line": "#30363D",
+    "topology": "#C9D1D9",
+    "green": "#3FB950",
+    "green_soft": "#1B4721",
+    "red": "#F85149",
+    "red_soft": "#3D1A1D",
+    "yellow": "#DDBA55",
+    "yellow_soft": "#3A3218",
+    "yellow_ink": "#F2CC60",
+    "ghost": "#21262D"
+  },
+  "minimum_contrast": {
+    "normal_text": 4.5,
+    "large_text": 3.0,
+    "meaningful_graphics": 3.0
+  },
+  "line_hierarchy_px": {
+    "secondary_physical": 1.5,
+    "major_physical": 2.2,
+    "service_flow": 3.0,
+    "causal_interface": 3.5,
+    "critical_overlay": 4.0
+  },
+  "color_redundancy": {
+    "operational": "green + directional animated dash pattern",
+    "critical": "red + dashed critical overlay + explicit label",
+    "causal": "light-yellow fill + dark-ochre stroke + double/dashed interface line + interface label",
+    "node_type": "shape geometry + text label"
+  },
+  "scientific_boundary": "Color and visual emphasis encode model semantics only; they do not strengthen the evidence class of a scientific claim."
+}
