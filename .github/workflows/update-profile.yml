@@ -15,11 +15,14 @@ on:
       - "data/transport-network.json"
       - "data/interfaces.json"
       - "data/network-dynamics.json"
+      - "data/visual-palette.json"
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
+      - "scripts/apply_visual_palette.py"
       - "scripts/validate_profile.py"
       - "scripts/validate_network.py"
+      - "scripts/validate_visual_palette.py"
       - ".github/workflows/update-profile.yml"
   pull_request:
     paths:
@@ -32,11 +35,14 @@ on:
       - "data/transport-network.json"
       - "data/interfaces.json"
       - "data/network-dynamics.json"
+      - "data/visual-palette.json"
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
+      - "scripts/apply_visual_palette.py"
       - "scripts/validate_profile.py"
       - "scripts/validate_network.py"
+      - "scripts/validate_visual_palette.py"
       - "assets/generated/**"
       - ".github/workflows/update-profile.yml"
 
@@ -81,17 +87,23 @@ jobs:
       - name: Render coupled-network and viability SVG assets
         run: python scripts/render_network.py
 
+      - name: Apply validated neutral-semantic palette
+        run: python scripts/apply_visual_palette.py
+
       - name: Validate generated research profile
         run: python scripts/validate_profile.py
 
       - name: Validate generated network and mathematical semantics
         run: python scripts/validate_network.py
 
+      - name: Validate visual contrast and semantic redundancy
+        run: python scripts/validate_visual_palette.py
+
       - name: Verify pull-request rendering is deterministic
         if: github.event_name == 'pull_request'
         run: |
           git diff --check
-          echo "Governed network/profile renderers and validators completed successfully."
+          echo "Governed network/profile renderers, palette transform and validators completed successfully."
 
       - name: Commit meaningful profile changes only
         if: github.event_name != 'pull_request'
