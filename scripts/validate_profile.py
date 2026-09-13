@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the living research-profile data and generated assets."""
+"""Validate the living research-profile data and generated animated assets."""
 
 from __future__ import annotations
 
@@ -18,11 +18,14 @@ README = ROOT / "README.md"
 
 REQUIRED_MATH_OBJECTS = {"R_phys", "C", "G", "I", "F_G", "V", "rho_g", "u_star"}
 REQUIRED_GENERATED = {
+    "research-hero-light.svg",
+    "research-hero-dark.svg",
     "research-state-light.svg",
     "research-state-dark.svg",
     "project-system.svg",
     "research-pipeline.svg",
 }
+ANIMATED_GENERATED = REQUIRED_GENERATED.copy()
 
 
 def load_json(name: str) -> dict:
@@ -95,6 +98,8 @@ def validate_readme() -> None:
         require(f"assets/generated/{asset}" in text, f"README does not reference generated asset: {asset}")
     for forbidden in ("visitor counter", "github streak", "typing animation", "language percentage"):
         require(forbidden not in text.lower(), f"README contains prohibited vanity-profile concept: {forbidden}")
+    require("semantic motion" in text.lower(), "README must explain the meaning of animation")
+    require("not a measured flow" in text.lower(), "README must preserve the motion/measurement scientific boundary")
 
 
 def validate_generated() -> None:
@@ -102,7 +107,8 @@ def validate_generated() -> None:
         path = GENERATED / name
         require(path.exists(), f"missing generated visual: {path.relative_to(ROOT)}")
         text = path.read_text(encoding="utf-8")
-        require("<script" not in text.lower(), f"generated SVG contains script: {name}")
+        lower = text.lower()
+        require("<script" not in lower, f"generated SVG contains script: {name}")
         require(re.search(r"\b(?:href|src)=[\"']http://", text, flags=re.IGNORECASE) is None, f"generated SVG contains insecure external reference: {name}")
         try:
             root = ET.fromstring(text)
@@ -111,6 +117,16 @@ def validate_generated() -> None:
         require(root.tag.endswith("svg"), f"generated file is not an SVG: {name}")
         require(root.attrib.get("viewBox") is not None, f"generated SVG lacks viewBox: {name}")
         require("<title" in text and "<desc" in text, f"generated SVG lacks accessible title/description: {name}")
+        if name in ANIMATED_GENERATED:
+            require("@keyframes" in text, f"generated SVG lacks self-contained animation: {name}")
+            require("prefers-reduced-motion:reduce" in text, f"generated SVG lacks reduced-motion fallback: {name}")
+
+    hero_light = (GENERATED / "research-hero-light.svg").read_text(encoding="utf-8")
+    pipeline = (GENERATED / "research-pipeline.svg").read_text(encoding="utf-8")
+    projects = (GENERATED / "project-system.svg").read_text(encoding="utf-8")
+    require("flow-gold" in hero_light and "flow-blue" in hero_light, "hero must encode causal transfer and state evolution separately")
+    require("flow-gold" in pipeline, "pipeline must animate only the active transition")
+    require("MOST RECENT PUBLIC CHANGE" in projects, "project panel must identify the most recent observed public change")
 
 
 def main() -> int:
@@ -131,7 +147,7 @@ def main() -> int:
         validate_generated()
         validate_readme()
 
-    print("PROFILE VALIDATION: PASS — declared state, public evidence, and scientific boundaries are consistent.")
+    print("PROFILE VALIDATION: PASS — declared state, observed evidence, semantic motion, and scientific boundaries are consistent.")
     return 0
 
 
