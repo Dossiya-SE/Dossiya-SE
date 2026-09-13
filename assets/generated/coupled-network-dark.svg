@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+<title id="title">Coupled Power–Transportation network geometry</title>
+<desc id="desc">Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and light yellow denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.</desc>
+<style>
+:root{--bg:#0b100d;--panel:#111712;--ink:#f3f6f3;--muted:#a2ada6;--line:#303a33;--green:#56d887;--green-soft:#173924;--red:#ff6b6b;--red-soft:#421f22;--yellow:#f2cc60;--yellow-soft:#423816;--yellow-ink:#ffe69a;--ghost:#18201a}
+
+text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
+.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
+.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
+.h{font-size:23px;font-weight:780} .k{font-size:12px;font-weight:800;letter-spacing:.13em}
+.m{font-size:14px;fill:var(--muted)} .s{font-size:11px;fill:var(--muted)} .node-label{font-size:13px;font-weight:760}
+.edge{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;opacity:.72}
+.edge-soft{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;opacity:.38;stroke-dasharray:5 6}
+.flow{fill:none;stroke:var(--green);stroke-width:3.4;stroke-linecap:round;stroke-dasharray:10 12;animation:serviceFlow 3.3s linear infinite}
+.interface-flow{fill:none;stroke:var(--yellow);stroke-width:4;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}
+.critical-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:5;stroke-linecap:round;stroke-dasharray:8 8;animation:criticalPhase 20s linear infinite}
+.propagation-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:7 9;animation:propagationPhase 20s linear infinite}
+.control-demo{opacity:0;fill:none;stroke:var(--yellow);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}
+.recovery-demo{opacity:0;fill:none;stroke:var(--green);stroke-width:5;stroke-linecap:round;stroke-dasharray:10 10;animation:recoveryPhase 20s linear infinite}
+.critical-node{opacity:0;fill:var(--red);animation:criticalPhase 20s linear infinite}
+.control-node{opacity:0;fill:var(--yellow);animation:controlPhase 20s linear infinite}
+@keyframes serviceFlow{to{stroke-dashoffset:-44}} @keyframes interfaceFlow{to{stroke-dashoffset:-40}}
+@keyframes criticalPhase{0%,19%,60%,100%{opacity:0}22%,55%{opacity:1}}
+@keyframes propagationPhase{0%,36%,60%,100%{opacity:0}40%,56%{opacity:1}}
+@keyframes controlPhase{0%,56%,81%,100%{opacity:0}61%,76%{opacity:1}}
+@keyframes recoveryPhase{0%,76%,100%{opacity:0}81%,96%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.flow,.interface-flow,.critical-demo,.propagation-demo,.control-demo,.recovery-demo,.critical-node,.control-node{animation:none!important}.critical-demo,.propagation-demo,.control-demo,.recovery-demo,.critical-node,.control-node{opacity:0!important}}
+</style>
+<rect x="1" y="1" width="1598" height="758" rx="30" fill="var(--bg)" stroke="var(--line)"/>
+<text x="52" y="58" class="title">Coupled Power–Transportation Network Geometry</text>
+<text x="52" y="88" class="m">topology first · typed nodes and edges · explicit shared interface · explanatory dynamics</text>
+<text x="1548" y="58" text-anchor="end" class="k" fill="var(--green)">PHYSICS-GROUNDED SUSTAINABLE ENGINEERING</text>
+<rect x="52" y="125" width="1000" height="250" rx="22" fill="var(--panel)" stroke="var(--green)" stroke-width="1.8"/>
+<rect x="52" y="430" width="1000" height="250" rx="22" fill="var(--panel)" stroke="var(--green)" stroke-width="1.8"/>
+<text x="76" y="159" class="h" fill="var(--green)">POWER NETWORK 𝓖<tspan baseline-shift="sub" font-size="13">P</tspan></text>
+<text x="76" y="181" class="s">𝓖<tspan baseline-shift="sub" font-size="9">P</tspan>=(V<tspan baseline-shift="sub" font-size="9">P</tspan>,E<tspan baseline-shift="sub" font-size="9">P</tspan>) · generation → substations → interface / loads</text>
+<text x="76" y="464" class="h" fill="var(--green)">TRANSPORTATION NETWORK 𝓖<tspan baseline-shift="sub" font-size="13">T</tspan></text>
+<text x="76" y="486" class="s">𝓖<tspan baseline-shift="sub" font-size="9">T</tspan>=(V<tspan baseline-shift="sub" font-size="9">T</tspan>,E<tspan baseline-shift="sub" font-size="9">T</tspan>) · origins → intersections → shared interface / hub → terminals</text>
+<path id="P01" d="M102.0 212.1L402.0 220.7" class="edge"/>
+<path id="P02" d="M102.0 212.1L402.0 314.9" class="edge"/>
+<path id="P03" d="M102.0 323.4L402.0 314.9" class="edge"/>
+<path id="P04" d="M402.0 220.7L402.0 314.9" class="edge-soft"/>
+<path id="P05" d="M402.0 220.7L716.3 269.5" class="edge-soft"/>
+<path id="P06" d="M402.0 314.9L716.3 269.5" class="edge-soft"/>
+<path id="P07" d="M716.3 269.5L1002.0 207.0" class="edge-soft"/>
+<path id="P08" d="M716.3 269.5L1002.0 332.0" class="edge-soft"/>
+<path d="M102.0 212.1L402.0 220.7" class="flow"/>
+<path d="M102.0 323.4L402.0 314.9" class="flow"/>
+<path d="M402.0 314.9L716.3 269.5" class="flow"/>
+<path d="M716.3 269.5L1002.0 332.0" class="flow"/>
+<path id="T01" d="M102.0 584.7L278.5 532.3" class="edge"/>
+<path id="T02" d="M102.0 584.7L278.5 637.0" class="edge"/>
+<path id="T03" d="M278.5 532.3L490.2 512.0" class="edge"/>
+<path id="T04" d="M278.5 532.3L278.5 637.0" class="edge"/>
+<path id="T05" d="M490.2 512.0L619.6 537.8" class="edge"/>
+<path id="T06" d="M619.6 537.8L619.6 635.4" class="edge"/>
+<path id="T07" d="M278.5 637.0L619.6 635.4" class="edge"/>
+<path id="T08" d="M619.6 537.8L813.8 572.9" class="edge"/>
+<path id="T09" d="M619.6 635.4L813.8 572.9" class="edge"/>
+<path id="T10" d="M813.8 572.9L1002.0 519.8" class="edge"/>
+<path id="T11" d="M813.8 572.9L1002.0 637.0" class="edge"/>
+<path id="T12" d="M619.6 635.4L1002.0 637.0" class="edge-soft"/>
+<path d="M102.0 584.7L278.5 532.3" class="flow"/>
+<path d="M278.5 532.3L490.2 512.0" class="flow"/>
+<path d="M619.6 537.8L813.8 572.9" class="flow"/>
+<path d="M813.8 572.9L1002.0 637.0" class="flow"/>
+<circle cx="102.0" cy="212.13698630136986" r="15" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.4"/>
+<text x="102.0" y="216.13698630136986" text-anchor="middle" class="node-label">G1</text>
+<text x="102.0" y="245.13698630136986" text-anchor="middle" class="s">generator</text>
+<circle cx="102.0" cy="323.43835616438355" r="15" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.4"/>
+<text x="102.0" y="327.43835616438355" text-anchor="middle" class="node-label">G2</text>
+<text x="102.0" y="356.43835616438355" text-anchor="middle" class="s">generator</text>
+<rect x="389.0" y="207.6986301369863" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="402.0" y="224.6986301369863" text-anchor="middle" class="node-label">S1</text>
+<text x="402.0" y="253.6986301369863" text-anchor="middle" class="s">substation</text>
+<rect x="389.0" y="301.8767123287671" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="402.0" y="318.8767123287671" text-anchor="middle" class="node-label">S2</text>
+<text x="402.0" y="347.8767123287671" text-anchor="middle" class="s">substation</text>
+<polygon points="716.3,251.5 734.3,269.5 716.3,287.5 698.3,269.5" fill="var(--yellow-soft)" stroke="var(--yellow-ink)" stroke-width="2.5"/>
+<text x="716.2857142857143" y="273.5" text-anchor="middle" class="node-label">C1</text>
+<text x="716.2857142857143" y="302.5" text-anchor="middle" class="s">interface</text>
+<circle cx="1002.0" cy="207.0" r="15" fill="var(--ghost)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="1002.0" y="211.0" text-anchor="middle" class="node-label">L1</text>
+<text x="1002.0" y="240.0" text-anchor="middle" class="s">load</text>
+<circle cx="1002.0" cy="332.0" r="15" fill="var(--ghost)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="1002.0" y="336.0" text-anchor="middle" class="node-label">L2</text>
+<text x="1002.0" y="365.0" text-anchor="middle" class="s">load</text>
+<circle cx="102.0" cy="584.65625" r="15" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.4"/>
+<text x="102.0" y="588.65625" text-anchor="middle" class="node-label">O1</text>
+<text x="102.0" y="618.65625" text-anchor="middle" class="s">origin</text>
+<rect x="265.47058823529414" y="519.3125" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="278.47058823529414" y="536.3125" text-anchor="middle" class="node-label">I1</text>
+<text x="278.47058823529414" y="566.3125" text-anchor="middle" class="s">intersection</text>
+<rect x="265.47058823529414" y="624.0" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="278.47058823529414" y="641.0" text-anchor="middle" class="node-label">I3</text>
+<text x="278.47058823529414" y="671.0" text-anchor="middle" class="s">intersection</text>
+<polygon points="490.2,494.0 508.2,512.0 490.2,530.0 472.2,512.0" fill="var(--yellow-soft)" stroke="var(--yellow-ink)" stroke-width="2.5"/>
+<text x="490.2352941176471" y="516.0" text-anchor="middle" class="node-label">C1</text>
+<text x="490.2352941176471" y="546.0" text-anchor="middle" class="s">interface</text>
+<rect x="606.6470588235294" y="524.78125" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="619.6470588235294" y="541.78125" text-anchor="middle" class="node-label">I2</text>
+<text x="619.6470588235294" y="571.78125" text-anchor="middle" class="s">intersection</text>
+<rect x="606.6470588235294" y="622.4375" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="619.6470588235294" y="639.4375" text-anchor="middle" class="node-label">I4</text>
+<text x="619.6470588235294" y="669.4375" text-anchor="middle" class="s">intersection</text>
+<circle cx="813.7647058823529" cy="572.9375" r="15" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.4"/>
+<text x="813.7647058823529" y="576.9375" text-anchor="middle" class="node-label">H1</text>
+<text x="813.7647058823529" y="606.9375" text-anchor="middle" class="s">hub</text>
+<polygon points="1002.0,502.8 1019.0,533.8 985.0,533.8" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
+<text x="1002.0" y="523.8125" text-anchor="middle" class="node-label">T1</text>
+<text x="1002.0" y="553.8125" text-anchor="middle" class="s">terminal</text>
+<circle cx="1002.0" cy="637.0" r="15" fill="var(--green-soft)" stroke="var(--green)" stroke-width="2.4"/>
+<text x="1002.0" y="641.0" text-anchor="middle" class="node-label">D1</text>
+<text x="1002.0" y="671.0" text-anchor="middle" class="s">destination</text>
+<path d="M716.3 289.5L490.2 492.0" class="interface-flow"/>
+<rect x="531.3" y="365.8" width="144" height="50" rx="12" fill="var(--yellow-soft)" stroke="var(--yellow)"/>
+<text x="603.3" y="387.8" text-anchor="middle" class="math" font-size="18" fill="var(--yellow-ink)">𝕀<tspan baseline-shift="sub" font-size="11">PT</tspan></text>
+<text x="603.3" y="406.8" text-anchor="middle" class="s">shared physical asset · C1</text>
+<path d="M402.0 220.7L716.3 269.5" class="critical-demo"/>
+<circle cx="716.2857142857143" cy="269.5" r="24" class="critical-node" opacity="0"/>
+<path d="M716.3 269.5L490.2 512.0L813.8 572.9" class="propagation-demo"/>
+<path d="M402.0 314.9Q683.3 390.8 813.8 572.9" class="control-demo"/>
+<circle cx="813.8" cy="572.9" r="23" class="control-node" opacity="0"/>
+<path d="M813.8 572.9L1002.0 637.0" class="recovery-demo"/>
+<rect x="1090" y="125" width="458" height="555" rx="22" fill="var(--panel)" stroke="var(--line)"/>
+<text x="1114" y="163" class="k" fill="var(--yellow-ink)">FORMAL COUPLING OBJECT</text>
+<text x="1114" y="203" class="math" font-size="23">𝓖=(𝓖<tspan baseline-shift="sub" font-size="13">P</tspan>,𝓖<tspan baseline-shift="sub" font-size="13">T</tspan>,𝕀<tspan baseline-shift="sub" font-size="13">PT</tspan>)</text>
+<text x="1114" y="241" class="math" font-size="17">𝕀<tspan baseline-shift="sub" font-size="11">PT</tspan><tspan baseline-shift="super" font-size="11">(1)</tspan>=(E<tspan baseline-shift="sub" font-size="10">i</tspan><tspan baseline-shift="super" font-size="10">P</tspan>, E<tspan baseline-shift="sub" font-size="10">j</tspan><tspan baseline-shift="super" font-size="10">T</tspan>, M<tspan baseline-shift="sub" font-size="10">ij</tspan>, …, ℋ<tspan baseline-shift="sub" font-size="10">t</tspan>)</text>
+<text x="1114" y="279" class="math" font-size="19">Ẏ=F<tspan baseline-shift="sub" font-size="11">𝓖</tspan>(Y,u,η;θ)</text>
+<path d="M1114 303H1524" stroke="var(--line)"/>
+<rect x="1114" y="321" width="72" height="28" rx="8" fill="var(--ghost)" stroke="var(--line)"/>
+<text x="1150" y="340" text-anchor="middle" class="k" fill="var(--green)">P → T</text>
+<text x="1202" y="340" class="m">electricity supply</text>
+<rect x="1114" y="371" width="72" height="28" rx="8" fill="var(--ghost)" stroke="var(--line)"/>
+<text x="1150" y="390" text-anchor="middle" class="k" fill="var(--red)">T → P</text>
+<text x="1202" y="390" class="m">charging demand</text>
+<rect x="1114" y="421" width="72" height="28" rx="8" fill="var(--ghost)" stroke="var(--line)"/>
+<text x="1150" y="440" text-anchor="middle" class="k" fill="var(--yellow-ink)">T → P</text>
+<text x="1202" y="440" class="m">conditional V2G support</text>
+<path d="M1114 479H1524" stroke="var(--line)"/>
+<text x="1114" y="517" class="k" fill="var(--green)">EXPLANATORY DYNAMIC CYCLE</text>
+<circle cx="1118" cy="551" r="17" fill="var(--panel)" stroke="var(--green)" stroke-width="2"/>
+<text x="1118" y="555" text-anchor="middle" class="k" fill="var(--green)">01</text>
+<text x="1118" y="588" text-anchor="middle" class="s">Nominal</text>
+<path d="M1138 551H1180" stroke="var(--line)"/>
+<circle cx="1200" cy="551" r="17" fill="var(--panel)" stroke="var(--red)" stroke-width="2"/>
+<text x="1200" y="555" text-anchor="middle" class="k" fill="var(--red)">02</text>
+<text x="1200" y="588" text-anchor="middle" class="s">Disturbance</text>
+<path d="M1220 551H1262" stroke="var(--line)"/>
+<circle cx="1282" cy="551" r="17" fill="var(--panel)" stroke="var(--red)" stroke-width="2"/>
+<text x="1282" y="555" text-anchor="middle" class="k" fill="var(--red)">03</text>
+<text x="1282" y="588" text-anchor="middle" class="s">Propagation</text>
+<path d="M1302 551H1344" stroke="var(--line)"/>
+<circle cx="1364" cy="551" r="17" fill="var(--panel)" stroke="var(--yellow-ink)" stroke-width="2"/>
+<text x="1364" y="555" text-anchor="middle" class="k" fill="var(--yellow-ink)">04</text>
+<text x="1364" y="588" text-anchor="middle" class="s">Control</text>
+<path d="M1384 551H1426" stroke="var(--line)"/>
+<circle cx="1446" cy="551" r="17" fill="var(--panel)" stroke="var(--green)" stroke-width="2"/>
+<text x="1446" y="555" text-anchor="middle" class="k" fill="var(--green)">05</text>
+<text x="1446" y="588" text-anchor="middle" class="s">Recovery</text>
+<text x="1114" y="645" class="s">Animation = model semantics; timing ≠ measured event duration.</text>
+<text x="52" y="720" class="s">Green = viable/service flow · Red = active constraint/critical propagation · Light yellow = causal interface/control · Charcoal = topology.</text>
+<text x="1548" y="720" text-anchor="end" class="s">Coordinates and scenario timing are explanatory, not GIS or telemetry.</text>
+</svg>
