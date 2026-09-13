@@ -24,6 +24,7 @@ on:
       - "scripts/refine_profile_layout.py"
       - "scripts/validate_profile.py"
       - "scripts/validate_network.py"
+      - "scripts/validate_network_3d.py"
       - "scripts/validate_visual_palette.py"
       - "scripts/validate_profile_layout.py"
       - ".github/workflows/update-profile.yml"
@@ -47,6 +48,7 @@ on:
       - "scripts/refine_profile_layout.py"
       - "scripts/validate_profile.py"
       - "scripts/validate_network.py"
+      - "scripts/validate_network_3d.py"
       - "scripts/validate_visual_palette.py"
       - "scripts/validate_profile_layout.py"
       - "assets/generated/**"
@@ -101,6 +103,9 @@ jobs:
 
       - name: Render static isometric 3D hero
         run: python scripts/render_network_3d.py
+
+      - name: Validate static 3D hero semantics
+        run: python scripts/validate_network_3d.py
 
       - name: Validate generated research profile
         run: python scripts/validate_profile.py
