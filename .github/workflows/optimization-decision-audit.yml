@@ -5,16 +5,12 @@ on:
     paths:
       - 'optimization-lab/**'
       - 'docs/knowledge-graphs/**'
-      - 'assets/math-art/optimization-decision-system-v6.svg'
-      - 'README.md'
       - '.github/workflows/optimization-decision-audit.yml'
   push:
     branches: [main]
     paths:
       - 'optimization-lab/**'
       - 'docs/knowledge-graphs/**'
-      - 'assets/math-art/optimization-decision-system-v6.svg'
-      - 'README.md'
       - '.github/workflows/optimization-decision-audit.yml'
 
 permissions:
@@ -24,8 +20,8 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: pip
