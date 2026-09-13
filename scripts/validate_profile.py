@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the living research-profile data and generated animated assets."""
+"""Validate the living research-profile data and generated mathematical-art assets."""
 
 from __future__ import annotations
 
@@ -94,12 +94,15 @@ def validate_projects(projects: dict, observed: dict) -> None:
 
 def validate_readme() -> None:
     text = README.read_text(encoding="utf-8")
+    lower = text.lower()
     for asset in REQUIRED_GENERATED:
         require(f"assets/generated/{asset}" in text, f"README does not reference generated asset: {asset}")
     for forbidden in ("visitor counter", "github streak", "typing animation", "language percentage"):
-        require(forbidden not in text.lower(), f"README contains prohibited vanity-profile concept: {forbidden}")
-    require("semantic motion" in text.lower(), "README must explain the meaning of animation")
-    require("not a measured flow" in text.lower(), "README must preserve the motion/measurement scientific boundary")
+        require(forbidden not in lower, f"README contains prohibited vanity-profile concept: {forbidden}")
+    require("semantic motion" in lower, "README must explain the meaning of animation")
+    require("not a measured flow" in lower, "README must preserve the motion/measurement scientific boundary")
+    require("deterministic mathematical visual constructions" in lower, "README must distinguish mathematical art from fitted data")
+    require("claim strength" in lower and "evidence strength" in lower, "README must state the claim/evidence invariant")
 
 
 def validate_generated() -> None:
@@ -124,7 +127,11 @@ def validate_generated() -> None:
     hero_light = (GENERATED / "research-hero-light.svg").read_text(encoding="utf-8")
     pipeline = (GENERATED / "research-pipeline.svg").read_text(encoding="utf-8")
     projects = (GENERATED / "project-system.svg").read_text(encoding="utf-8")
+
     require("flow-gold" in hero_light and "flow-blue" in hero_light, "hero must encode causal transfer and state evolution separately")
+    require('class="vector-field"' in hero_light, "hero must include a deterministic state-space vector field")
+    require('class="level-set"' in hero_light, "hero must include deterministic level-set geometry")
+    require("not measured infrastructure telemetry" in hero_light.lower(), "hero description must preserve the mathematical-art/data boundary")
     require("flow-gold" in pipeline, "pipeline must animate only the active transition")
     require("MOST RECENT PUBLIC CHANGE" in projects, "project panel must identify the most recent observed public change")
 
@@ -147,7 +154,7 @@ def main() -> int:
         validate_generated()
         validate_readme()
 
-    print("PROFILE VALIDATION: PASS — declared state, observed evidence, semantic motion, and scientific boundaries are consistent.")
+    print("PROFILE VALIDATION: PASS — research state, evidence, mathematical art, semantic motion, and scientific boundaries are consistent.")
     return 0
 
 
