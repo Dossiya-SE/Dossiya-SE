@@ -1,23 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 430" role="img" aria-labelledby="title desc">
 <title id="title">Dynamic seven-stage research pipeline</title>
-<desc id="desc">Seven-stage research architecture with causal mechanisms and coupled dynamics highlighted as the current transition.</desc>
-<style>:root{--bg:#fffdfa;--ink:#0d1117;--muted:#57606a;--line:#d8d3c8;--gold:#9a6700;--blue:#2f6fda;--soft:#f4f1e8}@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--ink:#f0f3f6;--muted:#9ba5b0;--line:#30363d;--gold:#d2a63c;--blue:#72a7ff;--soft:#161d26}}text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}.k{font-size:13px;font-weight:800;letter-spacing:.1em}.n{font-size:15px;font-weight:750}.s{font-size:12px;fill:var(--muted)}</style>
+<desc id="desc">Formal seven-stage research architecture with the currently active transition highlighted from causal mechanisms to coupled dynamics.</desc>
+<style>
+:root{--bg:#fffdfa;--ink:#0d1117;--muted:#57606a;--line:#d8d3c8;--gold:#9a6700;--blue:#2f6fda;--soft:#f4f1e8}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--ink:#f0f3f6;--muted:#9ba5b0;--line:#30363d;--gold:#d2a63c;--blue:#72a7ff;--soft:#161d26}}
+text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
+.k{font-size:13px;font-weight:800;letter-spacing:.1em}.n{font-size:15px;font-weight:750}.s{font-size:12px;fill:var(--muted)}
+</style>
 <rect x="1" y="1" width="1398" height="428" rx="28" fill="var(--bg)" stroke="var(--line)"/>
-<text x="54" y="58" class="k" fill="var(--gold)">FORMAL RESEARCH PIPELINE</text><text x="54" y="88" class="s">Physical grounding constrains the formal architecture; highlighted stages are the current research transition.</text>
-<g>
-<rect x="54" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)"/><text x="72" y="162" class="k">01</text><text x="72" y="201" class="n">Multilayer</text><text x="72" y="223" class="n">structure</text><text x="72" y="264" class="s">G</text>
-<path d="M232 213H242" stroke="var(--muted)"/>
-<rect x="246" y="132" width="174" height="162" rx="18" fill="var(--soft)" stroke="var(--gold)" stroke-width="2.5"/><text x="264" y="162" class="k" fill="var(--gold)">02</text><text x="264" y="201" class="n">Causal</text><text x="264" y="223" class="n">mechanisms</text><text x="264" y="264" class="s">M_ij</text>
-<path d="M424 213H434" stroke="var(--gold)" stroke-width="2"/>
-<rect x="438" y="132" width="174" height="162" rx="18" fill="var(--soft)" stroke="var(--blue)" stroke-width="2.5"/><text x="456" y="162" class="k" fill="var(--blue)">03</text><text x="456" y="201" class="n">Coupled</text><text x="456" y="223" class="n">dynamics</text><text x="456" y="264" class="s">F_G</text>
-<path d="M616 213H626" stroke="var(--muted)"/>
-<rect x="630" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)"/><text x="648" y="162" class="k">04</text><text x="648" y="201" class="n">Feedback &amp;</text><text x="648" y="223" class="n">control</text><text x="648" y="264" class="s">u</text>
-<path d="M808 213H818" stroke="var(--muted)"/>
-<rect x="822" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)"/><text x="840" y="162" class="k">05</text><text x="840" y="201" class="n">Viability</text><text x="840" y="264" class="s">V_sus</text>
-<path d="M1000 213H1010" stroke="var(--muted)"/>
-<rect x="1014" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)"/><text x="1032" y="162" class="k">06</text><text x="1032" y="201" class="n">Resilience →</text><text x="1032" y="223" class="n">sustainability</text><text x="1032" y="264" class="s">R-S</text>
-<path d="M1192 213H1202" stroke="var(--muted)"/>
-<rect x="1206" y="132" width="140" height="162" rx="18" fill="var(--bg)" stroke="var(--line)"/><text x="1224" y="162" class="k">07</text><text x="1224" y="201" class="n">Transformation</text><text x="1224" y="223" class="n">pathways</text><text x="1224" y="264" class="s">Pi</text>
-</g>
-<text x="54" y="346" class="k" fill="var(--muted)">CURRENT TRANSITION</text><text x="54" y="380" class="n" fill="var(--gold)">Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text><text x="54" y="406" class="s">Stage highlight reports research configuration only; it is not a claim of completion or empirical validation.</text>
+<text x="54" y="58" class="k" fill="var(--gold)">FORMAL RESEARCH PIPELINE</text>
+<text x="54" y="88" class="s">Physical grounding constrains the formal architecture; highlighted stages are the current research transition.</text>
+<rect x="54" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2"/>
+<text x="72" y="162" class="k" fill="var(--line)">01</text>
+<text x="72" y="201" class="n">Multilayer structure</text>
+<text x="72" y="264" class="s">G</text>
+<path d="M232 213H242" stroke="var(--muted)" stroke-width="1.4"/>
+<rect x="246" y="132" width="174" height="162" rx="18" fill="var(--soft)" stroke="var(--gold)" stroke-width="2.5"/>
+<text x="264" y="162" class="k" fill="var(--gold)">02</text>
+<text x="264" y="201" class="n">Causal mechanisms</text>
+<text x="264" y="264" class="s">M_ij</text>
+<path d="M424 213H434" stroke="var(--muted)" stroke-width="1.4"/>
+<rect x="438" y="132" width="174" height="162" rx="18" fill="var(--soft)" stroke="var(--blue)" stroke-width="2.5"/>
+<text x="456" y="162" class="k" fill="var(--blue)">03</text>
+<text x="456" y="201" class="n">Coupled dynamics</text>
+<text x="456" y="264" class="s">F_G</text>
+<path d="M616 213H626" stroke="var(--muted)" stroke-width="1.4"/>
+<rect x="630" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2"/>
+<text x="648" y="162" class="k" fill="var(--line)">04</text>
+<text x="648" y="201" class="n">Feedback</text>
+<text x="648" y="223" class="n">&amp; control</text>
+<text x="648" y="264" class="s">u</text>
+<path d="M808 213H818" stroke="var(--muted)" stroke-width="1.4"/>
+<rect x="822" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2"/>
+<text x="840" y="162" class="k" fill="var(--line)">05</text>
+<text x="840" y="201" class="n">Viability</text>
+<text x="840" y="264" class="s">V_sus</text>
+<path d="M1000 213H1010" stroke="var(--muted)" stroke-width="1.4"/>
+<rect x="1014" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2"/>
+<text x="1032" y="162" class="k" fill="var(--line)">06</text>
+<text x="1032" y="201" class="n">Resilience</text>
+<text x="1032" y="223" class="n">→ sustainability</text>
+<text x="1032" y="264" class="s">R-S</text>
+<path d="M1192 213H1202" stroke="var(--muted)" stroke-width="1.4"/>
+<rect x="1206" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2"/>
+<text x="1224" y="162" class="k" fill="var(--line)">07</text>
+<text x="1224" y="201" class="n">Transformation pathways</text>
+<text x="1224" y="264" class="s">Pi</text>
+<text x="54" y="346" class="k" fill="var(--muted)">CURRENT TRANSITION</text>
+<text x="54" y="380" class="n" fill="var(--gold)">Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text>
+<text x="54" y="406" class="s">Stage highlight reports research configuration only; it is not a claim of completion or empirical validation.</text>
 </svg>
