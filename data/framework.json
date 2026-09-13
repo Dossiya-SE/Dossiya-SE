@@ -1,46 +1,66 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "framework_name": "Seven-stage mathematical sustainable-engineering architecture",
+  "grounding": {
+    "principle": "Physical reality and causal evidence constrain formal abstraction.",
+    "method_sequence": [
+      "Physical Reality",
+      "Causal Mechanisms",
+      "Governing Relations",
+      "Mathematical Structure",
+      "Dynamics + Uncertainty",
+      "Validation",
+      "Engineering Decision"
+    ],
+    "note": "The seven formal stages organize the research architecture after the engineering system boundary, observable quantities and evidence status are stated explicitly."
+  },
   "stages": [
     {
       "id": 1,
       "name": "Multilayer Structure",
+      "display_label": "Multilayer structure",
       "symbol": "G",
       "question": "How is the coupled infrastructure system structured across layers?"
     },
     {
       "id": 2,
       "name": "Causal Mechanisms",
+      "display_label": "Causal mechanisms",
       "symbol": "M_ij",
       "question": "By what mechanisms do dependencies transmit effects between system elements?"
     },
     {
       "id": 3,
       "name": "Coupled Hybrid Multiscale Dynamics",
+      "display_label": "Coupled dynamics",
       "symbol": "F_G",
       "question": "How do interacting states evolve and propagate disturbance across timescales?"
     },
     {
       "id": 4,
       "name": "Feedback & Control",
+      "display_label": "Feedback & control",
       "symbol": "u",
       "question": "Which admissible feedback and control actions alter system trajectories?"
     },
     {
       "id": 5,
       "name": "Viability",
+      "display_label": "Viability",
       "symbol": "V_sus",
       "question": "Which states and controls keep the system inside required operating constraints?"
     },
     {
       "id": 6,
       "name": "Resilience-to-Sustainability Transformation Interface",
+      "display_label": "Resilience → sustainability",
       "symbol": "R-S",
       "question": "When does recovery preserve, improve, or undermine long-horizon sustainability?"
     },
     {
       "id": 7,
       "name": "Sustainable Transformation Pathways",
+      "display_label": "Transformation pathways",
       "symbol": "Pi",
       "question": "Which defensible intervention pathways move the system toward more sustainable viable futures?"
     }
