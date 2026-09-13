@@ -20,9 +20,11 @@ on:
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
       - "scripts/apply_visual_palette.py"
+      - "scripts/refine_profile_layout.py"
       - "scripts/validate_profile.py"
       - "scripts/validate_network.py"
       - "scripts/validate_visual_palette.py"
+      - "scripts/validate_profile_layout.py"
       - ".github/workflows/update-profile.yml"
   pull_request:
     paths:
@@ -40,9 +42,11 @@ on:
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
       - "scripts/apply_visual_palette.py"
+      - "scripts/refine_profile_layout.py"
       - "scripts/validate_profile.py"
       - "scripts/validate_network.py"
       - "scripts/validate_visual_palette.py"
+      - "scripts/validate_profile_layout.py"
       - "assets/generated/**"
       - ".github/workflows/update-profile.yml"
 
@@ -90,11 +94,17 @@ jobs:
       - name: Apply validated neutral-semantic palette
         run: python scripts/apply_visual_palette.py
 
+      - name: Refine scientific container hierarchy
+        run: python scripts/refine_profile_layout.py
+
       - name: Validate generated research profile
         run: python scripts/validate_profile.py
 
       - name: Validate generated network and mathematical semantics
         run: python scripts/validate_network.py
+
+      - name: Validate scientific information architecture
+        run: python scripts/validate_profile_layout.py
 
       - name: Validate visual contrast and semantic redundancy
         run: python scripts/validate_visual_palette.py
@@ -103,7 +113,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           git diff --check
-          echo "Governed network/profile renderers, palette transform and validators completed successfully."
+          echo "Governed scientific state, network semantics, palette, container hierarchy and validators completed successfully."
 
       - name: Commit meaningful profile changes only
         if: github.event_name != 'pull_request'
