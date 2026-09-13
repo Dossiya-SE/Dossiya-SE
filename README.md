@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/profile/hero-light.svg">
-  <img src="./assets/profile/hero-light.svg" width="100%" alt="Dossiya Dakou — physics-grounded mathematical engineering for sustainable infrastructure">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/research-hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/generated/research-hero-light.svg">
+  <img src="./assets/generated/research-hero-light.svg" width="100%" alt="Animated scientific profile showing Power and Transportation infrastructure, causal interfaces, mathematical state evolution, viability geometry and engineering intervention">
 </picture>
 
 <div align="center">
@@ -23,6 +23,17 @@ I study engineering systems by beginning with **what physically exists, how it i
 My current research focuses on **interdependent power and transportation infrastructure**, with informational and organizational mechanisms included when they alter physical operation, coordination, failure propagation, or recovery.
 
 > **Research principle:** mechanism before model · physics before abstraction · validation before strong claims.
+
+### Dynamic visual semantics
+
+The profile uses **semantic motion**, not decorative movement:
+
+- **gold moving structure** = schematic causal/interface transfer;
+- **blue moving structure** = mathematical state evolution;
+- **motion between stages 2 → 3** = the declared current research transition;
+- **a pulsing project boundary** = the most recently observed public repository change.
+
+The motion is explanatory. It is **not a measured flow**, calibrated trajectory, real-time infrastructure telemetry, or evidence of empirical validation. All generated SVGs include a reduced-motion fallback.
 
 ---
 
@@ -69,7 +80,7 @@ u^\star
 
 where the physical interpretation of every mathematical object must be justified for the engineering system under study.
 
-<img src="./assets/generated/research-pipeline.svg" width="100%" alt="Seven-stage research architecture with causal mechanisms and coupled dynamics highlighted as the current research transition">
+<img src="./assets/generated/research-pipeline.svg" width="100%" alt="Animated seven-stage research architecture with semantic motion from causal mechanisms to coupled dynamics">
 
 The current governed transition is **Causal Mechanisms → Coupled Hybrid Multiscale Dynamics**: establishing physically defensible interface mechanisms and translating them into coupled state evolution under disturbance and control.
 
@@ -160,9 +171,9 @@ I use pure mathematical structures when they reveal engineering structure that i
 
 ## Observed public research systems
 
-<img src="./assets/generated/project-system.svg" width="100%" alt="Observed allowlisted public research systems with evidence timestamp, research role and latest public activity">
+<img src="./assets/generated/project-system.svg" width="100%" alt="Animated observed allowlisted public research systems; the most recent public repository change is highlighted dynamically">
 
-The visual above is generated from the **public allowlist**, not from a scan of every repository on the account. Private work is intentionally outside the automated profile evidence boundary.
+The visual above is generated from the **public allowlist**, not from a scan of every repository on the account. Private work is intentionally outside the automated profile evidence boundary. The animated boundary marks only the most recent observed public change; it is not a ranking of scientific importance.
 
 ### Selected research & engineering work
 
@@ -220,7 +231,7 @@ Infrastructure-system interfaces and resilience: representing, measuring and con
 
 ```text
 Declared research state ─────┐
-                             ├─→ validation ─→ deterministic SVG ─→ README
+                             ├─→ validation ─→ animated deterministic SVG ─→ README
 Allowlisted public evidence ─┘
           ↑
           └──── GitHub REST API · public repositories only
@@ -240,6 +251,8 @@ Dossiya-SE/
 │   └── validate_profile.py
 ├── assets/
 │   └── generated/
+│       ├── research-hero-light.svg
+│       ├── research-hero-dark.svg
 │       ├── research-state-light.svg
 │       ├── research-state-dark.svg
 │       ├── project-system.svg
@@ -251,14 +264,15 @@ Dossiya-SE/
 
 ### Automation contract
 
-The workflow runs **daily**, **on demand**, and when governed profile inputs change. It:
+The workflow runs **every 6 hours**, **on demand**, and when governed profile inputs change. It:
 
 1. queries only the explicitly allowlisted public repositories;
 2. refuses non-public repository metadata;
 3. validates research-state, framework and evidence consistency;
-4. renders deterministic SVG assets with no remote scripts or runtime JavaScript;
-5. validates SVG XML, accessibility metadata and README references;
-6. commits only when the stable public evidence or generated research state actually changes.
+4. renders self-contained animated SVG assets with no remote scripts or runtime JavaScript;
+5. encodes only governed semantic motion and provides a reduced-motion fallback;
+6. validates SVG XML, accessibility metadata and README references;
+7. commits only when the stable public evidence or generated research state actually changes.
 
 The profile therefore separates three time scales:
 
