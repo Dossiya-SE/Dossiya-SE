@@ -19,6 +19,7 @@ on:
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
+      - "scripts/render_network_3d.py"
       - "scripts/apply_visual_palette.py"
       - "scripts/refine_profile_layout.py"
       - "scripts/validate_profile.py"
@@ -41,6 +42,7 @@ on:
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
+      - "scripts/render_network_3d.py"
       - "scripts/apply_visual_palette.py"
       - "scripts/refine_profile_layout.py"
       - "scripts/validate_profile.py"
@@ -97,6 +99,9 @@ jobs:
       - name: Refine scientific container hierarchy
         run: python scripts/refine_profile_layout.py
 
+      - name: Render static isometric 3D hero
+        run: python scripts/render_network_3d.py
+
       - name: Validate generated research profile
         run: python scripts/validate_profile.py
 
@@ -113,7 +118,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           git diff --check
-          echo "Governed scientific state, network semantics, palette, container hierarchy and validators completed successfully."
+          echo "Governed scientific state, network semantics, static 3D geometry, palette, container hierarchy and validators completed successfully."
 
       - name: Commit meaningful profile changes only
         if: github.event_name != 'pull_request'
