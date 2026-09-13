@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/coupled-network-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/generated/coupled-network-light.svg">
-  <img src="./assets/generated/coupled-network-light.svg" width="100%" alt="Coupled Power and Transportation multilayer network with typed physical nodes, shared EV charging interface C1, causal interdependency and explanatory disturbance-control-recovery dynamics">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/coupled-network-3d-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/generated/coupled-network-3d-light.svg">
+  <img src="./assets/generated/coupled-network-3d-light.svg" width="100%" alt="Static isometric 3D coupled Power and Transportation multilayer network with typed physical nodes, shared EV charging interface C1, layer-separation depth and a pseudo-3D viability geometry">
 </picture>
 
 <div align="center">
@@ -71,6 +71,8 @@ The physical model is a typed multilayer system:
 ```
 
 The same physical object **`C_1`** appears in both layers as the shared EV-charging / coupling asset. It is not a floating cross-layer arrow: it is a physical interface linking electrical and mobility states.
+
+In the 3D hero, vertical separation is **only a visual encoding of multilayer structure**. It is not geographic elevation, GIS height, a calibrated state coordinate or measured infrastructure telemetry.
 
 A governed interdependency is represented by
 
@@ -285,7 +287,7 @@ The profile uses a **neutral scientific canvas with semantic accents**:
 | Encoding | Meaning | Redundant cue |
 |---|---|---|
 | **Charcoal / neutral** | physical topology, axes, baseline structure | solid geometry / node type |
-| **Green** | viable, sustainable, operational, recovery | directional moving dash + label |
+| **Green** | viable, sustainable, operational, recovery | directional dash pattern + label |
 | **Red** | critical constraint, boundary, disturbance, propagation | thicker dashed overlay + label |
 | **Light yellow + ochre** | causal interface, highlighted mechanism, intervention | diamond/interface geometry + explicit label |
 
@@ -311,7 +313,7 @@ causal interface           3.5 px
 critical overlay           4.0 px
 ```
 
-**Animation illustrates model structure and propagation semantics; it is not measured infrastructure behavior or live infrastructure telemetry.** Phase durations are visual-design parameters, not measured event durations.
+The GitHub profile is designed to remain scientifically complete as a **static rendering**. Some source SVGs retain motion-capable CSS semantics for compatible renderers, but GitHub should not be treated as guaranteeing SVG animation. Any motion, when visible elsewhere, illustrates model structure and is **not measured infrastructure behavior or live infrastructure telemetry**.
 
 </details>
 
@@ -321,19 +323,19 @@ critical overlay           4.0 px
 ```text
 power-network.json ───────┐
 transport-network.json ───┤
-interfaces.json ──────────┼─→ network validation ─→ SVG rendering
-network-dynamics.json ────┘                         │
-                                                     ▼
-visual-palette.json ───────────────→ palette + layout refinement
-                                                     │
-research-state.json ───────────────→ profile validation
-allowlisted public state ──────────→ evidence validation
-                                                     │
-                                                     ▼
-                                                  README
+interfaces.json ──────────┼─→ network validation ─→ 2D + isometric 3D SVG rendering
+network-dynamics.json ────┘                                  │
+                                                              ▼
+visual-palette.json ─────────────────────→ palette + layout refinement
+                                                              │
+research-state.json ─────────────────────→ profile validation
+allowlisted public state ─────────────────→ evidence validation
+                                                              │
+                                                              ▼
+                                                           README
 ```
 
-The generated figures use controlled light/dark palettes, self-contained SVG motion, `prefers-reduced-motion`, no embedded JavaScript, XML/accessibility validation, semantic color checks, non-color redundancy and explicit scientific evidence boundaries.
+The generated figures use controlled light/dark palettes, deterministic SVG geometry, no embedded JavaScript, XML/accessibility validation, semantic color checks, non-color redundancy and explicit scientific evidence boundaries. Source figures may contain CSS motion semantics, but the README does not depend on them for meaning.
 
 </details>
 
