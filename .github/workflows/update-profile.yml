@@ -11,9 +11,15 @@ on:
       - "data/framework.json"
       - "data/projects.json"
       - "data/research-state.json"
+      - "data/power-network.json"
+      - "data/transport-network.json"
+      - "data/interfaces.json"
+      - "data/network-dynamics.json"
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
+      - "scripts/render_network.py"
       - "scripts/validate_profile.py"
+      - "scripts/validate_network.py"
       - ".github/workflows/update-profile.yml"
   pull_request:
     paths:
@@ -22,9 +28,15 @@ on:
       - "data/projects.json"
       - "data/research-state.json"
       - "data/public-github-state.json"
+      - "data/power-network.json"
+      - "data/transport-network.json"
+      - "data/interfaces.json"
+      - "data/network-dynamics.json"
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
+      - "scripts/render_network.py"
       - "scripts/validate_profile.py"
+      - "scripts/validate_network.py"
       - "assets/generated/**"
       - ".github/workflows/update-profile.yml"
 
@@ -57,20 +69,29 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/fetch_public_state.py
 
-      - name: Validate governed source state
+      - name: Validate governed research source state
         run: python scripts/validate_profile.py --input-only
 
-      - name: Render self-contained animated SVG profile assets
+      - name: Validate governed network source state
+        run: python scripts/validate_network.py --input-only
+
+      - name: Render living research-state SVG assets
         run: python scripts/render_research_state.py
 
-      - name: Validate generated profile and semantic motion
+      - name: Render coupled-network and viability SVG assets
+        run: python scripts/render_network.py
+
+      - name: Validate generated research profile
         run: python scripts/validate_profile.py
+
+      - name: Validate generated network and mathematical semantics
+        run: python scripts/validate_network.py
 
       - name: Verify pull-request rendering is deterministic
         if: github.event_name == 'pull_request'
         run: |
           git diff --check
-          echo "Renderer and validators completed successfully against committed profile data."
+          echo "Governed network/profile renderers and validators completed successfully."
 
       - name: Commit meaningful profile changes only
         if: github.event_name != 'pull_request'
@@ -79,8 +100,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/public-github-state.json assets/generated/
           if git diff --cached --quiet; then
-            echo "No meaningful public research-state change detected."
+            echo "No meaningful public research-state or generated-visual change detected."
             exit 0
           fi
-          git commit -m "chore(profile): refresh verified public research state"
+          git commit -m "chore(profile): refresh verified research network state"
           git push

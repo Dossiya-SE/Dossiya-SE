@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "evidence_state": "DECLARED_EXPLANATORY_NETWORK_MODEL",
+  "network_id": "G_P",
+  "label": "Power Network",
+  "description": "Schematic typed power-network topology for the GitHub research profile. Coordinates are explanatory layout coordinates, not GIS locations.",
+  "coordinate_system": "normalized_explanatory_layout",
+  "nodes": [
+    {"id": "G1", "type": "generator", "label": "Generator 1", "x": 90, "y": 88},
+    {"id": "G2", "type": "generator", "label": "Generator 2", "x": 90, "y": 218},
+    {"id": "S1", "type": "substation", "label": "Substation 1", "x": 300, "y": 98},
+    {"id": "S2", "type": "substation", "label": "Substation 2", "x": 300, "y": 208},
+    {"id": "C1", "type": "interface", "label": "EV charging interface", "x": 520, "y": 155, "shared_physical_asset": true},
+    {"id": "L1", "type": "load", "label": "Load 1", "x": 720, "y": 82},
+    {"id": "L2", "type": "load", "label": "Load 2", "x": 720, "y": 228}
+  ],
+  "edges": [
+    {"id": "P01", "source": "G1", "target": "S1", "type": "transmission", "direction": "forward", "state": "operational"},
+    {"id": "P02", "source": "G1", "target": "S2", "type": "transmission", "direction": "forward", "state": "operational"},
+    {"id": "P03", "source": "G2", "target": "S2", "type": "transmission", "direction": "forward", "state": "operational"},
+    {"id": "P04", "source": "S1", "target": "S2", "type": "distribution", "direction": "forward", "state": "operational"},
+    {"id": "P05", "source": "S1", "target": "C1", "type": "distribution", "direction": "forward", "state": "operational", "scenario_role": "disturbance_origin"},
+    {"id": "P06", "source": "S2", "target": "C1", "type": "distribution", "direction": "forward", "state": "operational"},
+    {"id": "P07", "source": "C1", "target": "L1", "type": "distribution", "direction": "forward", "state": "operational"},
+    {"id": "P08", "source": "C1", "target": "L2", "type": "distribution", "direction": "forward", "state": "operational"}
+  ],
+  "node_type_semantics": {
+    "generator": "power source",
+    "substation": "network transformation/switching node",
+    "load": "electrical demand",
+    "interface": "shared cross-infrastructure coupling asset"
+  },
+  "edge_type_semantics": {
+    "transmission": "bulk power-transfer connection",
+    "distribution": "downstream electrical connection"
+  },
+  "scientific_boundary": "Topology and coordinates are explanatory unless replaced by documented physical network data."
+}

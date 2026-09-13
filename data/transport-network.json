@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "evidence_state": "DECLARED_EXPLANATORY_NETWORK_MODEL",
+  "network_id": "G_T",
+  "label": "Transportation Network",
+  "description": "Schematic typed transportation-network topology for the GitHub research profile. Coordinates are explanatory layout coordinates, not GIS locations.",
+  "coordinate_system": "normalized_explanatory_layout",
+  "nodes": [
+    {"id": "O1", "type": "origin", "label": "Origin 1", "x": 70, "y": 165},
+    {"id": "I1", "type": "intersection", "label": "Intersection 1", "x": 220, "y": 98},
+    {"id": "I3", "type": "intersection", "label": "Intersection 3", "x": 220, "y": 232},
+    {"id": "C1", "type": "interface", "label": "EV charging interface", "x": 400, "y": 72, "shared_physical_asset": true},
+    {"id": "I2", "type": "intersection", "label": "Intersection 2", "x": 510, "y": 105},
+    {"id": "I4", "type": "intersection", "label": "Intersection 4", "x": 510, "y": 230},
+    {"id": "H1", "type": "hub", "label": "Mobility Hub 1", "x": 675, "y": 150},
+    {"id": "T1", "type": "terminal", "label": "Terminal 1", "x": 835, "y": 82},
+    {"id": "D1", "type": "destination", "label": "Destination 1", "x": 835, "y": 232}
+  ],
+  "edges": [
+    {"id": "T01", "source": "O1", "target": "I1", "type": "road", "direction": "forward", "state": "operational"},
+    {"id": "T02", "source": "O1", "target": "I3", "type": "road", "direction": "forward", "state": "operational"},
+    {"id": "T03", "source": "I1", "target": "C1", "type": "road", "direction": "forward", "state": "operational"},
+    {"id": "T04", "source": "I1", "target": "I3", "type": "road", "direction": "bidirectional", "state": "operational"},
+    {"id": "T05", "source": "C1", "target": "I2", "type": "road", "direction": "forward", "state": "operational"},
+    {"id": "T06", "source": "I2", "target": "I4", "type": "road", "direction": "bidirectional", "state": "operational"},
+    {"id": "T07", "source": "I3", "target": "I4", "type": "road", "direction": "bidirectional", "state": "operational", "scenario_role": "propagation_path"},
+    {"id": "T08", "source": "I2", "target": "H1", "type": "transit", "direction": "forward", "state": "operational"},
+    {"id": "T09", "source": "I4", "target": "H1", "type": "road", "direction": "forward", "state": "operational"},
+    {"id": "T10", "source": "H1", "target": "T1", "type": "rail", "direction": "forward", "state": "operational"},
+    {"id": "T11", "source": "H1", "target": "D1", "type": "road", "direction": "forward", "state": "operational"},
+    {"id": "T12", "source": "I4", "target": "D1", "type": "logistics", "direction": "forward", "state": "operational"}
+  ],
+  "node_type_semantics": {
+    "origin": "mobility demand origin",
+    "destination": "mobility demand destination",
+    "intersection": "transport network junction",
+    "hub": "multimodal mobility hub",
+    "terminal": "terminal or logistics endpoint",
+    "interface": "shared cross-infrastructure coupling asset"
+  },
+  "edge_type_semantics": {
+    "road": "road mobility connection",
+    "rail": "rail connection",
+    "transit": "transit service connection",
+    "logistics": "logistics/service connection"
+  },
+  "scientific_boundary": "Topology and coordinates are explanatory unless replaced by documented spatial transportation data."
+}
