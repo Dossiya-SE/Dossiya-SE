@@ -1,0 +1,43 @@
+% FGMVS B01 canonical public equation source
+% Status: FROZEN-B01. Display permission does not imply empirical validation.
+
+% Non-compensatory claim bound
+\newcommand{\ClaimBound}{L(C)\le \min_{k\in\mathcal R(C)}L_k}
+
+% Generic research-system dynamics
+\newcommand{\StateDynamics}{\dot{\mathbf x}=f(\mathbf x,\mathbf u,\boldsymbol\eta,\boldsymbol\theta,t)}
+\newcommand{\ObservationMap}{\mathbf y=h(\mathbf x,\boldsymbol\theta,t)+\boldsymbol\varepsilon}
+\newcommand{\AdmissibleSet}{\mathcal M=\{\mathbf x\in\mathbb R^n:g(\mathbf x,\mathbf u)\le0\}}
+
+% Evidence/gap architecture
+\newcommand{\EvidenceField}{E(\mathbf z)=\sum_{i=1}^{N}E_i\phi_i(\mathbf z)}
+\newcommand{\GapVector}{\mathbf G=(g_{\mathrm{scientific}},g_{\mathrm{theoretical}},g_{\mathrm{methodological}},g_{\mathrm{mathematical}},g_{\mathrm{data}},g_{\mathrm{validation}},g_{\mathrm{industrial}},g_{\mathrm{technology}},g_{\mathrm{implementation}},g_{\mathrm{regulatory}},g_{\mathrm{institutional}},g_{\mathrm{economic}},g_{\mathrm{equity}},g_{\mathrm{computational}},g_{\mathrm{reproducibility}})^\top}
+
+% Verification / calibration / validation
+\newcommand{\VerificationResidual}{\epsilon_h=\lVert x_h-x_{\mathrm{ref}}\rVert}
+\newcommand{\CalibrationObjective}{\widehat{\boldsymbol\theta}=\arg\min_{\boldsymbol\theta}J(\boldsymbol\theta)}
+\newcommand{\ValidationDistance}{D=d(\mathbf y_{\mathrm{model}},\mathbf y_{\mathrm{observed}})}
+\newcommand{\LocalSensitivity}{S_i=\partial Y/\partial\theta_i}
+
+% Uncertainty
+\newcommand{\UncertaintyTube}{\mathcal U_t=\{\mathbf x:(\mathbf x-\boldsymbol\mu_t)^\top\Sigma_t^{-1}(\mathbf x-\boldsymbol\mu_t)\le c\}}
+
+% Differential geometry
+\newcommand{\SurfaceMap}{\mathbf X(u,v)}
+\newcommand{\TangentU}{\mathbf X_u=\partial_u\mathbf X}
+\newcommand{\TangentV}{\mathbf X_v=\partial_v\mathbf X}
+\newcommand{\MetricTensor}{g_{\alpha\beta}=\partial_\alpha\mathbf X\cdot\partial_\beta\mathbf X}
+\newcommand{\UnitNormal}{\mathbf N=\frac{\mathbf X_u\times\mathbf X_v}{\lVert\mathbf X_u\times\mathbf X_v\rVert}}
+\newcommand{\GaussianCurvature}{K=\frac{eg-f^2}{EG-F^2}}
+\newcommand{\MeanCurvature}{H=\frac{eG-2fF+gE}{2(EG-F^2)}}
+\newcommand{\GeodesicEquation}{\frac{d^2u^\alpha}{ds^2}+\Gamma^\alpha_{\beta\gamma}\frac{du^\beta}{ds}\frac{du^\gamma}{ds}=0}
+
+% Graph/network mathematics
+\newcommand{\GraphLaplacian}{L=D-A}
+
+% Viability/recovery
+\newcommand{\ViabilityKernel}{\mathcal V_R=\{x_0\in K_R:\exists u(\cdot),\,X(t;x_0,u,\eta,\theta)\in K_R\;\forall t\ge0\}}
+\newcommand{\CaptureSet}{\mathcal C_R=\{x_0:\exists u(\cdot),\exists T<\infty,\,X(T;x_0,u)\in\mathcal V_R\}}
+
+% Bounded conclusion
+\newcommand{\AdmissibleConclusion}{\mathcal C_{\mathrm{admissible}}=\{c:E(c)\ge\tau_E,\,V_{\mathrm{verify}}(c)=1,\,V_{\mathrm{validate}}(c)\ge\tau_V,\,U(c)\le\tau_U\}}

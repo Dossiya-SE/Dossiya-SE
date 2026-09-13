@@ -1,0 +1,109 @@
+schema: FGMVS_GLOBAL_VISUAL_CONTRACT_V1
+version: "1.0"
+status: FROZEN
+scope: Dossiya-SE profile mathematical-scientific visual system
+
+governing_invariants:
+  - "L(C) <= min_{k in R(C)} L_k"
+  - "simulation != observation"
+  - "verification != validation"
+  - "calibration != validation"
+  - "visual similarity != mathematical equivalence"
+  - "renderer success != empirical validity"
+
+visual_grammar:
+  node: typed_research_or_mathematical_object
+  arrow: dependency_transformation_or_justified_coupling
+  curve: trajectory_evolution_recovery_control_or_optimization_path
+  surface: defined_model_state_or_admissible_space
+  boundary: constraint_viability_validity_or_domain_boundary
+  vector: direction_gradient_control_flux_sensitivity_or_influence
+  vector_length: quantified_magnitude_only
+  tube_width: quantified_uncertainty_only
+  density: defined_evidence_strength_only
+  curvature: mathematically_defined_curvature_only
+  convergence: verification
+  optimization_path: calibration_or_optimization
+  model_observation_pair: validation
+  closed_region: admissible_viable_or_bounded_conclusion
+  faded_region: unsupported_invalid_infeasible_or_outside_scope
+
+semantic_palette:
+  source_math: {light: "#4338CA", dark: "#A5B4FC", cue: square_or_indigo_rule}
+  observed_evidence: {light: "#0369A1", dark: "#38BDF8", cue: solid_marker}
+  state_dynamics: {light: "#1D4ED8", dark: "#60A5FA", cue: solid_trajectory}
+  interface_coupling: {light: "#7E22CE", dark: "#C084FC", cue: linked_nodes}
+  hazard_violation: {light: "#B91C1C", dark: "#FB7185", cue: dashed_boundary}
+  uncertainty_inference: {light: "#B45309", dark: "#FBBF24", cue: band_or_dotted_contour}
+  viability_admissibility: {light: "#047857", dark: "#34D399", cue: closed_set}
+  recovery_control: {light: "#0F766E", dark: "#5EEAD4", cue: directed_path}
+  optimization_decision: {light: "#A16207", dark: "#FACC15", cue: frontier_or_decision_marker}
+  computed_simulation: {light: "#475569", dark: "#CBD5E1", cue: numeric_or_code_label}
+  hypothesis_transfer: {light: "#BE185D", dark: "#F472B6", cue: dashed_magenta}
+
+typography:
+  text_stack: "Inter, Segoe UI, Arial, sans-serif"
+  math_stack: "STIX Two Math, Cambria Math, Georgia, serif"
+  public_font_files_forbidden: true
+
+canonical_master:
+  format: adaptive_svg
+  requirements:
+    - viewBox
+    - title
+    - desc
+    - responsive_geometry
+    - light_dark_tokens
+    - no_external_scripts
+    - no_foreignObject_dependency
+    - no_clipped_labels
+    - stable_semantic_object_ids
+  test_widths_px: [1440, 768, 390]
+
+render_profiles:
+  - github_adaptive
+  - publication_white
+  - presentation_light
+  - presentation_dark
+  - journal_vector
+  - web_interactive
+
+editability_contract:
+  canonical_master: visual_EDITABLE.svg
+  convenience_derivative: visual_EDITABLE.pptx
+  required_outputs:
+    - visual_EDITABLE.svg
+    - visual_EDITABLE.pptx
+    - visual.png
+    - visual.pdf
+    - render_request.yaml
+    - equations.tex
+    - research_data.json
+    - manifest.json
+    - qa_report.json
+    - SOURCE_BUNDLE.zip
+  no_silent_flattening: true
+  reproduction_must_not_use_final_render_as_input: true
+
+qa:
+  fail_closed: true
+  required_gates:
+    - scientific
+    - mathematical
+    - visual_semantic
+    - github_compatibility
+    - editability
+    - provenance
+    - reproduction
+
+object_id_rules:
+  pattern: "<domain>.<family>.<object>"
+  immutable_after_freeze: true
+  duplicates_forbidden: true
+  examples:
+    - profile.header.geometry
+    - math.universe.analysis
+    - math.diffgeom.surface
+    - research.validation.comparison
+    - research.uncertainty.tube
+    - research.conclusion.admissible_region

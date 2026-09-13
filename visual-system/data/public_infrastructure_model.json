@@ -1,0 +1,44 @@
+{
+  "schema": "FGMVS_PUBLIC_INFRASTRUCTURE_MODEL_V1",
+  "version": "1.0",
+  "status": "FROZEN_B01_PUBLIC_ARCHITECTURE_ONLY",
+  "evidence_state": "M",
+  "provenance_class": "USER_SPECIFIED",
+  "boundary": "Public profile-level model architecture; no private implementation parameters, calibration values, empirical validation claims, or hidden project details.",
+  "sectors": [
+    {"id":"sector.power","label":"Power"},
+    {"id":"sector.water","label":"Water/Drainage"},
+    {"id":"sector.transport","label":"Transportation"},
+    {"id":"sector.waste","label":"Solid Waste"}
+  ],
+  "state_model": {
+    "equation_id": "StateDynamics",
+    "state": "x(t)",
+    "control": "u(t)",
+    "disturbance": "eta(t)",
+    "parameters": "theta",
+    "constraint_object": "research.model.state_space"
+  },
+  "public_coupling_classes": [
+    "resource_dependency",
+    "service_dependency",
+    "physical_interface",
+    "operational_coordination",
+    "common_cause_hazard",
+    "recovery_dependency"
+  ],
+  "visual_semantics": {
+    "state": "state_dynamics",
+    "interface": "interface_coupling",
+    "hazard": "hazard_violation",
+    "uncertainty": "uncertainty_inference",
+    "control": "recovery_control",
+    "viability": "viability_admissibility"
+  },
+  "prohibitions": [
+    "no fabricated quantitative coupling strengths",
+    "no manifold or curvature claim without formally defined state geometry",
+    "no simulation-as-observation presentation",
+    "no empirical validation claim from architecture alone"
+  ]
+}
