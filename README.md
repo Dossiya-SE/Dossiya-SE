@@ -1,14 +1,18 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/coupled-network-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/generated/coupled-network-light.svg">
-  <img src="./assets/generated/coupled-network-light.svg" width="100%" alt="Rigorous coupled Power and Transportation multilayer network with typed nodes, shared EV charging interface C1, causal interdependency object, explanatory disturbance-control-recovery dynamics and formal mathematical annotations">
+  <img src="./assets/generated/coupled-network-light.svg" width="100%" alt="Coupled Power and Transportation multilayer network with typed physical nodes, shared EV charging interface C1, causal interdependency, explanatory disturbance-control-recovery dynamics and mathematical annotations">
 </picture>
 
 <div align="center">
 
-### Physics · Mathematical Foundations · Sustainable Engineering · Infrastructure Systems
+# Dossiya Dakou
+
+### Physics-Grounded Mathematical Engineering for Sustainable Infrastructure
 
 **Physical Reality → Causal Mechanisms → Mathematical Structure → Engineering Decision**
+
+Power–Transportation Systems · Resilience · Complex Systems · Sustainable Engineering
 
 [Research Portfolio](https://dossiya-se.github.io/) · [Research Laboratory](https://dossiya-se.github.io/lab.html) · [LinkedIn](https://www.linkedin.com/in/dossiya-dakou-/) · [ORCID](https://orcid.org/0009-0004-1071-9948)
 
@@ -16,11 +20,13 @@
 
 ---
 
-## Research position
+## Research focus
 
-I study **interdependent engineering systems** by starting from the physical system: components, service flows, operating constraints, disturbances and timescales. I then identify the causal mechanisms by which one subsystem can alter another, and only after that introduce mathematical structure for dynamics, uncertainty, viability and engineering decision-making.
+I study how **interdependent infrastructure systems** behave when physical service flows, cross-system dependencies, disturbances, operational constraints and recovery actions interact over time.
 
-My current physical system is **Power ↔ Transportation**, with **Information + Organization** included when they materially alter operation, coordination, failure propagation or recovery.
+My current physical system is **Power ↔ Transportation**. **Information + Organization** are included when they materially alter operation, coordination, failure propagation, state estimation or recovery.
+
+The research logic is deliberately ordered:
 
 ```math
 \boxed{
@@ -40,13 +46,17 @@ u^\star
 }
 ```
 
-> **Research principle:** topology first · mechanism before model · physics before abstraction · validation before strong claims.
+**Topology first. Mechanism before model. Physics before abstraction. Validation before strong claims.**
+
+### Current question
+
+> **How do physically supported Power–Transportation interfaces generate time-dependent coupled state evolution under disturbance and control, and how can that evolution be kept inside a sustainable viable region?**
 
 ---
 
 ## Coupled physical system
 
-The profile hero is generated from governed network data rather than hand-drawn decorative geometry:
+The profile network is generated from governed topology data rather than decorative geometry:
 
 ```math
 \boxed{
@@ -56,34 +66,17 @@ The profile hero is generated from governed network data rather than hand-drawn 
 \mathcal G_P,
 \mathcal G_T,
 \mathcal I_{PT}
-\right)
+\right),
+\qquad
+\mathcal G_P=(V_P,E_P),
+\quad
+\mathcal G_T=(V_T,E_T)
 }
 ```
 
-with
+The same physical object **`C_1`** is represented in both layers as the shared EV charging / coupling asset. It is therefore not a floating cross-layer arrow: it is a physical interface through which explicitly defined mechanisms act.
 
-```math
-\mathcal G_P=(V_P,E_P),
-\qquad
-\mathcal G_T=(V_T,E_T).
-```
-
-### Typed physical objects
-
-| Layer | Node geometry | Engineering meaning |
-|---|---|---|
-| Power | `● G` | generator / source |
-| Power | `□ S` | substation / switching-transformation node |
-| Power | `○ L` | electrical load |
-| Shared interface | `◇ C` | EV charging / cross-infrastructure coupling asset |
-| Transportation | `○ O,D` | origin / destination |
-| Transportation | `□ I` | intersection / junction |
-| Transportation | `● H` | mobility hub |
-| Transportation | `△ T` | terminal / logistics endpoint |
-
-The same physical object **`C_1`** is represented in both layers. It is therefore not merely a floating arrow between networks: it is the shared charging/coupling asset through which explicitly defined mechanisms act.
-
-A cross-infrastructure interface is represented as
+The corresponding interdependency object is
 
 ```math
 \boxed{
@@ -103,13 +96,35 @@ m,
 }
 ```
 
-The governed profile model distinguishes at least three mechanisms: **Power→Transportation electricity supply**, **Transportation→Power charging demand**, and **conditional V2G support**. Delays and coupling magnitudes remain symbolic until case-specific evidence supports calibration.
+with three currently governed mechanism classes:
+
+- **Power → Transportation:** electricity supply to charging / mobility assets;
+- **Transportation → Power:** charging demand imposed on the electrical system;
+- **Transportation → Power:** conditional V2G support when physically and operationally admissible.
+
+Coupling magnitudes and delays remain symbolic until case-specific evidence supports calibration.
+
+<details>
+<summary><b>Typed physical objects</b></summary>
+
+| Layer | Geometry | Engineering meaning |
+|---|---|---|
+| Power | `● G` | generator / source |
+| Power | `□ S` | substation / switching-transformation node |
+| Power | `○ L` | electrical load |
+| Shared | `◇ C` | EV charging / cross-infrastructure coupling asset |
+| Transportation | `○ O,D` | origin / destination |
+| Transportation | `□ I` | intersection / junction |
+| Transportation | `● H` | mobility hub |
+| Transportation | `△ T` | terminal / logistics endpoint |
+
+</details>
 
 ---
 
-## From topology to viability
+## From graph structure to viable engineering states
 
-<img src="./assets/generated/graph-to-viability.svg" width="100%" alt="Graph-to-viability transformation from coupled topology and causal interface through dynamics to viable region, critical boundary, resilience margin and engineering decision">
+<img src="./assets/generated/graph-to-viability.svg" width="100%" alt="Graph-to-viability transformation from coupled topology and causal interface through system dynamics to viable region, critical boundary, resilience margin and engineering decision">
 
 The mathematical transformation is
 
@@ -131,7 +146,7 @@ u^\star
 }
 ```
 
-with coupled state evolution
+with coupled dynamics
 
 ```math
 \dot Y
@@ -151,7 +166,7 @@ Y(t)\in K\;\forall t
 \right\},
 ```
 
-and, when a physically defensible metric is available,
+and, when a physically defensible metric exists,
 
 ```math
 \rho_g(Y)
@@ -159,48 +174,7 @@ and, when a physically defensible metric is available,
 d_g\!\left(Y,\partial\mathcal V\right).
 ```
 
-The visual geometry is explanatory: it shows how topology and causal coupling can be transformed into dynamics and viability reasoning. Geometry alone does not establish empirical validity.
-
----
-
-## Dynamic scientific semantics
-
-The network animation follows a controlled explanatory cycle:
-
-```math
-\boxed{
-\text{Nominal}
-\rightarrow
-\text{Disturbance}
-\rightarrow
-\text{Propagation}
-\rightarrow
-\text{Control}
-\rightarrow
-\text{Recovery}
-}
-```
-
-- **Nominal:** green directional motion represents admissible service flow.
-- **Disturbance:** one local power-network connection becomes red; the entire network is not declared failed.
-- **Propagation:** a red dashed path illustrates a source → interface → receiver mechanism through `C_1`.
-- **Control:** a light-yellow intervention path represents \(u^\star\).
-- **Recovery:** green motion represents return toward admissible service.
-
-**Animation illustrates model structure and propagation semantics; it is not measured infrastructure behavior or live telemetry.** The phase durations are visual-design parameters, not event-duration estimates.
-
----
-
-## Scientific visual language
-
-| Visual encoding | Scientific meaning |
-|---|---|
-| **Green** | viable / sustainable / admissible state and service flow |
-| **Red** | active constraint / critical boundary / disturbance or propagation path |
-| **Light yellow** | causal interface / highlighted mechanism / engineering intervention |
-| **Charcoal** | neutral physical topology and baseline structure |
-
-Color and motion never increase the evidence strength of a scientific claim.
+The geometry is explanatory. A mathematically coherent region, trajectory or metric does not by itself establish physical validity or empirical calibration.
 
 ---
 
@@ -209,21 +183,19 @@ Color and motion never increase the evidence strength of a scientific claim.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/research-state-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/generated/research-state-light.svg">
-  <img src="./assets/generated/research-state-light.svg" width="100%" alt="Governed current research state for Power and Transportation infrastructure with active causal-mechanism to coupled-dynamics transition and public evidence timestamps">
+  <img src="./assets/generated/research-state-light.svg" width="100%" alt="Governed living research state for coupled Power and Transportation systems with current causal-mechanism to coupled-dynamics transition and public evidence timestamps">
 </picture>
-
-**Current question:** How do physically supported power–transport interfaces generate time-dependent coupled state evolution under disturbance and control?
 
 The profile separates two evidence classes:
 
-- **Declared research configuration** — system boundary, active scientific stage, mathematical objects, explanatory topology and integrity rules.
+- **Declared research configuration** — system boundary, active scientific stage, mathematical objects, topology and integrity rules;
 - **Observed public evidence** — metadata from explicitly allowlisted public repositories only.
 
-Repository activity can show that public work changed. It cannot establish that a physical mechanism or mathematical model is empirically valid.
+Repository activity can show that public work changed. It cannot establish that a physical mechanism, parameter or mathematical model is empirically valid.
 
 ---
 
-## Seven-stage research architecture
+## Research architecture
 
 <img src="./assets/generated/research-pipeline.svg" width="100%" alt="Seven-stage research architecture with the current Causal Mechanisms to Coupled Hybrid Multiscale Dynamics transition highlighted">
 
@@ -245,7 +217,7 @@ Repository activity can show that public work changed. It cannot establish that 
 }
 ```
 
-The current governed transition is **Causal Mechanisms → Coupled Hybrid Multiscale Dynamics**: from physically defensible interfaces toward coupled state evolution, not from correlation directly to a graph or differential equation.
+The current governed transition is **Causal Mechanisms → Coupled Hybrid Multiscale Dynamics**: the objective is to move from physically defensible interfaces to coupled state evolution, not from correlation directly to a graph or differential equation.
 
 ---
 
@@ -253,42 +225,47 @@ The current governed transition is **Causal Mechanisms → Coupled Hybrid Multis
 
 | Foundation | Engineering role |
 |---|---|
-| **Graph theory & topology** | multilayer structure, typed connectivity, interfaces and propagation paths |
+| **Graph theory & topology** | multilayer structure, connectivity, interfaces and propagation paths |
 | **Analysis & differential equations** | coupled state evolution, bounds and continuous dynamics |
-| **Dynamical systems** | equilibria, transitions, cascading propagation and recovery trajectories |
+| **Dynamical systems** | equilibria, transitions, cascading propagation and recovery |
 | **Differential geometry** | state-space structure, metrics, boundaries and resilience margins |
 | **Probability & stochastic processes** | hazards, uncertainty, reliability and inference |
 | **Optimization & control** | intervention, restoration, constrained design and resource allocation |
 
-Mathematics is selected after the physical variables, mechanisms and admissible assumptions have been made explicit.
+Mathematics is selected after the physical variables, mechanisms, assumptions and admissible states are made explicit.
 
 ---
 
-## Selected public research systems
+## Selected research systems
 
-<img src="./assets/generated/project-system.svg" width="100%" alt="Observed allowlisted public research systems using the governed scientific visual palette">
+<img src="./assets/generated/project-system.svg" width="100%" alt="Observed allowlisted public research systems rendered with the governed scientific visual language">
 
-**Mathematics for Sustainable Resilience** — differential geometry · dynamical systems · resilience mathematics  
+### Mathematics for Sustainable Resilience
+Differential geometry · dynamical systems · resilience mathematics  
 [Repository →](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience)
 
-**Optimization for Sustainability and Resilience** — LP/MILP · network optimization · constrained engineering decisions  
+### Optimization for Sustainability and Resilience
+LP/MILP · network optimization · constrained engineering decisions  
 [Repository →](https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience)
 
-**Africa Energy Dignity** — energy systems · geospatial engineering · infrastructure planning  
+### Africa Energy Dignity
+Energy systems · geospatial engineering · infrastructure planning  
 [Repository →](https://github.com/Dossiya-SE/africa-energy-dignity)
 
-**Engineering Computation** — scientific computing · numerical analysis · reproducible engineering workflows  
+### Engineering Computation
+Scientific computing · numerical analysis · reproducible engineering workflows  
 [Repository →](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution)
 
-**Mathematical Research Portfolio** — interactive mathematical communication · executable research demonstrations  
+### Mathematical Research Portfolio
+Interactive mathematical communication · executable research demonstrations  
 [Portfolio →](https://dossiya-se.github.io/) · [Laboratory →](https://dossiya-se.github.io/lab.html)
 
 ---
 
 ## Research experience
 
-**National University of Singapore** — Visiting Graduate Researcher, 2026  
-Research on infrastructure-system interfaces and resilience: representing, measuring and connecting cross-infrastructure dependencies to failure, propagation and recovery behavior.
+**National University of Singapore** — Visiting Graduate Researcher · 2026  
+Research on infrastructure-system interfaces and resilience: representing cross-infrastructure dependencies and connecting them to failure, propagation and recovery behavior.
 
 ---
 
@@ -299,6 +276,47 @@ Research on infrastructure-system interfaces and resilience: representing, measu
 | **Arizona State University** | MSE · Sustainable Engineering · Ongoing |
 | **WorldQuant University** | MSc · Financial Engineering · Ongoing |
 | **Université d’Abomey-Calavi** | Licence · Énergies Renouvelables et Systèmes Énergétiques |
+
+---
+
+## Scientific visual constitution
+
+The profile uses a **neutral scientific canvas with semantic accents**. Neutral structure carries most of the figure; color appears only when it adds scientific meaning.
+
+| Encoding | Meaning | Redundant cue |
+|---|---|---|
+| **Charcoal / neutral** | physical topology, axes, baseline structure | solid geometry / node type |
+| **Green** | viable, sustainable, operational, recovery | directional moving dash + label |
+| **Red** | critical constraint, boundary, disturbance, propagation | thicker dashed overlay + label |
+| **Light yellow + ochre** | causal interface, highlighted mechanism, intervention | diamond/interface geometry + explicit label |
+
+The design therefore uses
+
+```math
+\boxed{
+\text{color}
++
+\text{geometry}
++
+\text{line pattern}
++
+\text{label}
+}
+```
+
+rather than color alone.
+
+The line hierarchy is governed as:
+
+```text
+secondary physical edge    1.5 px
+major physical topology    2.2 px
+operational service flow   3.0 px
+causal interface           3.5 px
+critical overlay           4.0 px
+```
+
+**Animation illustrates model structure and propagation semantics; it is not measured infrastructure behavior or live telemetry.** Phase durations are visual-design parameters, not measured event durations.
 
 ---
 
@@ -339,19 +357,19 @@ The governing invariant is
 </details>
 
 <details>
-<summary><b>Living-profile architecture</b></summary>
+<summary><b>Living-profile engine</b></summary>
 
 ```text
 power-network.json ───────┐
 transport-network.json ───┤
-interfaces.json ──────────┼─→ network validation ─→ SVG rendering ─→ README
+interfaces.json ──────────┼─→ network validation ─→ SVG rendering ─→ palette validation ─→ README
 network-dynamics.json ────┘
 
 research-state.json ──────┐
-allowlisted public state ─┴─→ profile validation ─→ research-state visuals
+allowlisted public state ─┴─→ profile validation ─→ living research-state visuals
 ```
 
-The SVGs are self-contained, have a `prefers-reduced-motion` fallback, use no embedded JavaScript, and are regenerated through GitHub Actions only after governed data pass validation.
+The generated figures use controlled light/dark palettes, self-contained SVG animation, a `prefers-reduced-motion` fallback, no embedded JavaScript, and automated validation for XML structure, accessibility metadata, semantic color usage, non-color redundancy and scientific evidence boundaries.
 
 </details>
 
@@ -360,8 +378,6 @@ The SVGs are self-contained, have a `prefers-reduced-motion` fallback, use no em
 <div align="center">
 
 **Observe the physical system. Identify the mechanism. Formalize mathematically. Compute. Validate. Intervene.**
-
-**Green = viable · Red = critical · Light yellow = causal / decision · Charcoal = topology**
 
 [Research Portfolio](https://dossiya-se.github.io/) · [Research Laboratory](https://dossiya-se.github.io/lab.html) · [LinkedIn](https://www.linkedin.com/in/dossiya-dakou-/) · [ORCID](https://orcid.org/0009-0004-1071-9948)
 
