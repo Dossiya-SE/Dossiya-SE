@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the static isometric 3D profile hero and its evidence boundary."""
+"""Validate the static isometric 3D profile hero, legibility and evidence boundary."""
 
 from __future__ import annotations
 
@@ -7,60 +7,87 @@ import sys
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"assets"/"generated"
-README=ROOT/"README.md"
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "assets" / "generated"
+README = ROOT / "README.md"
 
 
-def require(c: bool, m: str) -> None:
-    if not c:
-        raise ValueError(m)
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise ValueError(message)
 
 
 def validate_svg(name: str) -> None:
-    p=OUT/name
-    require(p.exists(),f"missing 3D hero asset: {name}")
-    text=p.read_text(encoding="utf-8")
+    path = OUT / name
+    require(path.exists(), f"missing 3D hero asset: {name}")
+    text = path.read_text(encoding="utf-8")
     try:
-        root=ET.fromstring(text)
+        root = ET.fromstring(text)
     except ET.ParseError as exc:
         raise ValueError(f"invalid SVG XML: {name}: {exc}") from exc
-    require(root.tag.endswith("svg"),f"{name}: root must be SVG")
-    require(root.attrib.get("viewBox")=="0 0 1600 760",f"{name}: governed 3D viewBox changed")
-    require("<title" in text and "<desc" in text,f"{name}: accessibility metadata missing")
-    require("<script" not in text.lower(),f"{name}: scripts are forbidden")
-    require("@keyframes" not in text,f"{name}: README 3D hero must not depend on SVG animation")
+
+    require(root.tag.endswith("svg"), f"{name}: root must be SVG")
+    require(root.attrib.get("viewBox") == "0 0 1600 760", f"{name}: governed 3D viewBox changed")
+    require("<title" in text and "<desc" in text, f"{name}: accessibility metadata missing")
+    require("<script" not in text.lower(), f"{name}: scripts are forbidden")
+    require("@keyframes" not in text, f"{name}: README 3D hero must not depend on SVG animation")
+
     for phrase in (
-        "POWER NETWORK","TRANSPORTATION NETWORK","C1","𝕀_PT",
-        "STATE / VIABILITY GEOMETRY","∂𝒱","ρ_g","u*",
-        "3D SCHEMATIC · NOT GIS ELEVATION","Visual depth encodes layer separation only",
+        "POWER NETWORK",
+        "TRANSPORTATION NETWORK",
+        "SHARED PHYSICAL INTERFACE",
+        "STATE / VIABILITY GEOMETRY",
+        "C₁ · EV charging asset",
+        "∂𝒱",
+        "STATIC 3D SCHEMATIC · NOT GIS ELEVATION",
+        "Coordinates and depth are explanatory and uncalibrated.",
     ):
-        require(phrase in text,f"{name}: missing governed 3D semantic: {phrase}")
-    require(text.count("same physical asset · C1")==1,f"{name}: shared interface annotation must appear exactly once")
-    require("stroke-dasharray" in text and "var(--yellow)" in text and "var(--green)" in text and "var(--red)" in text,f"{name}: semantic redundancy/palette missing")
+        require(phrase in text, f"{name}: missing governed 3D semantic: {phrase}")
+
+    # SVG text is not TeX. Raw underscore notation was visibly broken in GitHub.
+    for broken in ("𝓖_", "𝒢_", "𝕀_", "ρ_", "d_", "F_"):
+        require(broken not in text, f"{name}: raw TeX-like underscore leaked into SVG text: {broken}")
+    require(text.count('baseline-shift="sub"') >= 6, f"{name}: mathematical subscripts must use SVG baseline shift")
+
+    # Collision-safe architecture: layer labels, interface callout and viability geometry
+    # must occupy separate governed containers.
+    require('class="label-box"' in text, f"{name}: layer-label containers missing")
+    require('class="interface-box"' in text, f"{name}: offset interface callout missing")
+    require('class="side-panel"' in text, f"{name}: independent viability panel missing")
+    require(text.count('class="label-box"') == 2, f"{name}: exactly two physical layer labels required")
+
+    # Minimum profile-scale legibility.
+    require(".node{font-size:13px" in text, f"{name}: node labels too small for GitHub profile scale")
+    require(".small{font-size:15px" in text, f"{name}: explanatory text too small for GitHub profile scale")
+    require(".equation{font-size:20px" in text, f"{name}: equations too small for GitHub profile scale")
+
+    require("stroke-dasharray" in text, f"{name}: non-color semantic redundancy missing")
+    require("var(--yellow)" in text and "var(--green)" in text and "var(--red)" in text, f"{name}: semantic palette missing")
+    require("Depth encodes layer separation only" in text, f"{name}: depth interpretation missing from accessible description")
 
 
 def validate_readme() -> None:
-    text=README.read_text(encoding="utf-8")
-    lower=text.lower()
-    require("coupled-network-3d-light.svg" in text and "coupled-network-3d-dark.svg" in text,"README must use light/dark 3D hero")
-    require("static isometric 3d" in lower,"README alt text must describe static isometric 3D")
-    require("visual encoding of multilayer structure" in lower,"README must explain the meaning of depth")
-    require("not geographic elevation" in lower,"README must reject geographic interpretation of 3D depth")
-    require("github should not be treated as guaranteeing svg animation" in lower,"README must preserve GitHub static-rendering boundary")
+    text = README.read_text(encoding="utf-8")
+    lower = text.lower()
+    require("coupled-network-3d-light.svg" in text and "coupled-network-3d-dark.svg" in text, "README must use light/dark 3D hero")
+    require("static isometric 3d" in lower, "README alt text must describe static isometric 3D")
+    require("visual encoding of multilayer structure" in lower, "README must explain the meaning of depth")
+    require("not geographic elevation" in lower, "README must reject geographic interpretation of 3D depth")
+    require("github should not be treated as guaranteeing svg animation" in lower, "README must preserve GitHub static-rendering boundary")
+    require("# dossiya dakou" not in lower, "README must not repeat a large H1 identity directly below the hero")
 
 
 def main() -> int:
     validate_svg("coupled-network-3d-light.svg")
     validate_svg("coupled-network-3d-dark.svg")
     validate_readme()
-    print("3D HERO VALIDATION: PASS — static isometric geometry, multilayer semantics and evidence boundaries are consistent.")
+    print("3D HERO VALIDATION: PASS — mathematics, legibility, collision-safe layout, multilayer semantics and evidence boundaries are consistent.")
     return 0
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except (OSError,ValueError) as exc:
-        print(f"3D HERO VALIDATION: FAIL — {exc}",file=sys.stderr)
+    except (OSError, ValueError) as exc:
+        print(f"3D HERO VALIDATION: FAIL — {exc}", file=sys.stderr)
         raise SystemExit(1)
