@@ -1,0 +1,86 @@
+name: Update living research profile
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "data/framework.json"
+      - "data/projects.json"
+      - "data/research-state.json"
+      - "scripts/fetch_public_state.py"
+      - "scripts/render_research_state.py"
+      - "scripts/validate_profile.py"
+      - ".github/workflows/update-profile.yml"
+  pull_request:
+    paths:
+      - "README.md"
+      - "data/framework.json"
+      - "data/projects.json"
+      - "data/research-state.json"
+      - "data/public-github-state.json"
+      - "scripts/fetch_public_state.py"
+      - "scripts/render_research_state.py"
+      - "scripts/validate_profile.py"
+      - "assets/generated/**"
+      - ".github/workflows/update-profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: living-research-profile
+  cancel-in-progress: false
+
+jobs:
+  build-profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh allowlisted public evidence
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_public_state.py
+
+      - name: Validate governed source state
+        run: python scripts/validate_profile.py --input-only
+
+      - name: Render deterministic SVG profile assets
+        run: python scripts/render_research_state.py
+
+      - name: Validate generated profile
+        run: python scripts/validate_profile.py
+
+      - name: Verify pull-request rendering is deterministic
+        if: github.event_name == 'pull_request'
+        run: |
+          git diff --check
+          echo "Renderer and validators completed successfully against committed profile data."
+
+      - name: Commit meaningful profile changes only
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/public-github-state.json assets/generated/
+          if git diff --cached --quiet; then
+            echo "No meaningful public research-state change detected."
+            exit 0
+          fi
+          git commit -m "chore(profile): refresh verified public research state"
+          git push
