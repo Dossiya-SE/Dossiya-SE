@@ -1,67 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 610" role="img" aria-labelledby="title desc">
-<title id="title">Observed public research systems</title>
-<desc id="desc">Public research systems using green for active featured work, light yellow for the most recent public change, and red only for inactive or critical status.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 510" role="img" aria-labelledby="title desc">
+<title id="title">Featured public research systems</title>
+<desc id="desc">Four featured public research systems shown in neutral research cards. Green indicates active public status. A light-yellow metadata cue identifies the most recent public repository change without implying scientific importance or validity.</desc>
 <style>
 :root{--bg:#FBFAF6;--panel:#FFFFFF;--ink:#1F2328;--muted:#59636E;--line:#D1D9E0;--topology:#24292F;--green:#1A7F37;--green-soft:#DAFBE1;--red:#CF222E;--red-soft:#FFEBE9;--yellow:#9A6700;--yellow-soft:#FFF8C5;--yellow-ink:#6A4B00;--ghost:#F6F8FA}
 @media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#8B949E;--line:#30363D;--topology:#C9D1D9;--green:#3FB950;--green-soft:#1B4721;--red:#F85149;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D}}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
-.k{font-size:12px;font-weight:800;letter-spacing:.14em} .h{font-size:30px;font-weight:780} .hero{font-size:45px;font-weight:820;letter-spacing:-.025em}
-.v{font-size:19px;font-weight:720} .m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)}
-.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:22px} .math-sm{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:16px}
-.label-yellow{fill:var(--yellow-soft);stroke:var(--yellow)} .label-green{fill:var(--green-soft);stroke:var(--green)} .label-red{fill:var(--red-soft);stroke:var(--red)}
-.flow-yellow{stroke:var(--yellow);stroke-dasharray:10 13;animation:flowYellow 3.1s linear infinite} .flow-green{stroke:var(--green);stroke-dasharray:9 13;animation:flowGreen 3.8s linear infinite} .flow-red{stroke:var(--red);stroke-dasharray:7 11;animation:flowRed 3.3s linear infinite}
-.pulse-yellow{animation:pulseYellow 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center} .pulse-green{animation:pulseGreen 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center} .pulse-red{animation:pulseRed 2.7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.latest{animation:latestPulse 3.4s ease-in-out infinite} .level-set{fill:none;stroke:var(--green)} .critical-boundary{fill:none;stroke:var(--red)}
-@keyframes flowYellow{to{stroke-dashoffset:-46}} @keyframes flowGreen{to{stroke-dashoffset:-44}} @keyframes flowRed{to{stroke-dashoffset:-38}}
-@keyframes pulseYellow{0%,100%{opacity:.58;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}} @keyframes pulseGreen{0%,100%{opacity:.62;transform:scale(.98)}50%{opacity:1;transform:scale(1.035)}} @keyframes pulseRed{0%,100%{opacity:.55;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}
-@keyframes latestPulse{0%,100%{stroke-opacity:.40}50%{stroke-opacity:1}}
-@media(prefers-reduced-motion:reduce){.flow-yellow,.flow-green,.flow-red,.pulse-yellow,.pulse-green,.pulse-red,.latest{animation:none!important}}
+.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;fill:var(--muted)}
+.title{font-size:31px;font-weight:800;letter-spacing:-.02em}
+.h{font-size:20px;font-weight:760} .m{font-size:14px;fill:var(--muted)} .s{font-size:11px;fill:var(--muted)}
+.value{font-size:18px;font-weight:720} .math-lg{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:25px}
+.panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
+.flow-yellow{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 11;animation:flow 3.2s linear infinite}
+.flow-green{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 12;animation:flow 3.8s linear infinite}
+.pulse-green{animation:pulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.latest{animation:latest 3.4s ease-in-out infinite}
+@keyframes flow{to{stroke-dashoffset:-42}}
+@keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
+@keyframes latest{0%,100%{stroke-opacity:.35}50%{stroke-opacity:1}}
+@media(prefers-reduced-motion:reduce){.flow-yellow,.flow-green,.pulse-green,.latest{animation:none!important}}
 </style>
-<rect x="1" y="1" width="1398" height="608" rx="28" fill="var(--bg)" stroke="var(--line)"/>
-<rect x="48" y="28" width="310" height="31" rx="9" class="label-green" stroke-width="1"/>
-<text x="62" y="49" class="k" fill="var(--green)">SELECTED PUBLIC RESEARCH SYSTEMS</text>
-<text x="48" y="84" class="s">observed 13 Sep 2026 · explicit public allowlist only</text>
-<rect x="48" y="116" width="408" height="190" rx="18" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="3" class="latest"/>
-<text x="68" y="146" class="k" fill="var(--yellow)">01 · MOST RECENT PUBLIC CHANGE</text>
-<text x="68" y="182" font-size="20" font-weight="780">Research Portfolio</text>
-<text x="68" y="212" class="m">interactive mathematical visualization and research demonstrations</text>
-<text x="68" y="234" class="m"></text>
-<text x="68" y="270" class="s">HTML · latest public commit 13 Sep 2026</text>
-<text x="68" y="292" class="s">public · active</text>
-<rect x="490" y="116" width="408" height="190" rx="18" fill="var(--panel)" stroke="var(--green)" stroke-width="2" class=""/>
-<text x="510" y="146" class="k" fill="var(--green)">02 · FEATURED</text>
-<text x="510" y="182" font-size="20" font-weight="780">Geometry + Resilience</text>
-<text x="510" y="212" class="m">differential geometry, dynamical systems and resilience mathematics</text>
-<text x="510" y="234" class="m"></text>
-<text x="510" y="270" class="s">Python · latest public commit 09 Sep 2026</text>
-<text x="510" y="292" class="s">public · active</text>
-<rect x="932" y="116" width="408" height="190" rx="18" fill="var(--panel)" stroke="var(--green)" stroke-width="2" class=""/>
-<text x="952" y="146" class="k" fill="var(--green)">03 · FEATURED</text>
-<text x="952" y="182" font-size="20" font-weight="780">Optimization + Resilience</text>
-<text x="952" y="212" class="m">optimization, constrained decision models and network methods</text>
-<text x="952" y="234" class="m"></text>
-<text x="952" y="270" class="s">Python · latest public commit 12 Sep 2026</text>
-<text x="952" y="292" class="s">public · active</text>
-<rect x="48" y="336" width="408" height="190" rx="18" fill="var(--panel)" stroke="var(--green)" stroke-width="2" class=""/>
-<text x="68" y="366" class="k" fill="var(--green)">04 · FEATURED</text>
-<text x="68" y="402" font-size="20" font-weight="780">Africa Energy Dignity</text>
-<text x="68" y="432" class="m">energy-system modeling, geospatial engineering and constrained planning</text>
-<text x="68" y="454" class="m"></text>
-<text x="68" y="490" class="s">Python · latest public commit 21 Aug 2026</text>
-<text x="68" y="512" class="s">public · active</text>
-<rect x="490" y="336" width="408" height="190" rx="18" fill="var(--panel)" stroke="var(--line)" stroke-width="1" class=""/>
-<text x="510" y="366" class="k" fill="var(--line)">05 · SUPPORTING</text>
-<text x="510" y="402" font-size="20" font-weight="780">Engineering Computation</text>
-<text x="510" y="432" class="m">reproducible numerical engineering computation</text>
-<text x="510" y="454" class="m"></text>
-<text x="510" y="490" class="s">Python · latest public commit 21 Aug 2026</text>
-<text x="510" y="512" class="s">public · active</text>
-<rect x="932" y="336" width="408" height="190" rx="18" fill="var(--panel)" stroke="var(--line)" stroke-width="1" class=""/>
-<text x="952" y="366" class="k" fill="var(--line)">06 · SUPPORTING</text>
-<text x="952" y="402" font-size="20" font-weight="780">Math Rendering</text>
-<text x="952" y="432" class="m">renderer-aware mathematical publication and verification</text>
-<text x="952" y="454" class="m"></text>
-<text x="952" y="490" class="s">Jupyter Notebook · latest public commit 07 Sep 2026</text>
-<text x="952" y="512" class="s">public · active</text>
-<text x="48" y="582" class="s">Light-yellow pulse = most recent public change. Recency is not scientific importance, quality, or empirical validation.</text>
+<rect x="1" y="1" width="1398" height="508" rx="28" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="48" class="eyebrow">FEATURED RESEARCH SYSTEMS</text>
+<text x="48" y="79" class="m">four research-facing public systems · observed 13 Sep 2026</text>
+<rect x="48" y="112" width="628" height="132" rx="17" class="panel research-card"/>
+<circle cx="72" cy="139" r="5.5" fill="var(--green)"/>
+<text x="90" y="144" class="h">Research Portfolio</text>
+<text x="72" y="177" class="m">interactive mathematical visualization and research demonstrations</text>
+<text x="72" y="226" class="s">HTML · latest public commit 13 Sep 2026</text>
+<rect x="710" y="112" width="628" height="132" rx="17" class="panel research-card"/>
+<circle cx="734" cy="139" r="5.5" fill="var(--green)"/>
+<text x="752" y="144" class="h">Geometry + Resilience</text>
+<text x="734" y="177" class="m">differential geometry, dynamical systems and resilience mathematics</text>
+<text x="734" y="226" class="s">Python · latest public commit 09 Sep 2026</text>
+<rect x="48" y="270" width="628" height="132" rx="17" class="panel research-card"/>
+<circle cx="72" cy="297" r="5.5" fill="var(--green)"/>
+<text x="90" y="302" class="h">Optimization + Resilience</text>
+<text x="72" y="335" class="m">optimization, constrained decision models and network methods</text>
+<text x="72" y="384" class="s">Python · latest public commit 12 Sep 2026</text>
+<rect x="710" y="270" width="628" height="132" rx="17" class="panel research-card"/>
+<circle cx="734" cy="297" r="5.5" fill="var(--green)"/>
+<text x="752" y="302" class="h">Africa Energy Dignity</text>
+<text x="734" y="335" class="m">energy-system modeling, geospatial engineering and constrained planning</text>
+<text x="734" y="384" class="s">Python · latest public commit 21 Aug 2026</text>
+<line x1="48" y1="442" x2="1352" y2="442" stroke="var(--line)"/>
+<rect x="48" y="459" width="206" height="28" rx="8" fill="var(--yellow-soft)" stroke="var(--yellow)" class="latest"/>
+<text x="61" y="478" class="eyebrow" fill="var(--yellow-ink)">MOST RECENT PUBLIC CHANGE</text>
+<text x="275" y="478" class="s">Research Portfolio · recency is metadata, not scientific importance or validation.</text>
 </svg>
