@@ -120,7 +120,7 @@ def validate_generated() -> None:
     require("critical-boundary" in hero and "flow-red" in hero, "hero must encode critical boundary in red")
     require("flow-green" in hero, "hero must encode viable/sustainable state evolution in green")
     require("flow-yellow" in hero, "hero must encode causal/decision pathway in light yellow")
-    require("not measured infrastructure telemetry" in hero.lower(), "hero must preserve mathematical-art/data boundary")
+    require("not a measured flow" in hero.lower(), "hero must preserve mathematical-art/data boundary")
     require("flow-yellow" in pipeline and "var(--red)" in pipeline and "var(--green)" in pipeline, "pipeline must use governed three-color semantics")
     require("MOST RECENT PUBLIC CHANGE" in projects, "project system must identify most recent public change")
 
