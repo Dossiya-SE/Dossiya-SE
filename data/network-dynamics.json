@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "evidence_state": "DECLARED_EXPLANATORY_DYNAMIC_CYCLE",
+  "cycle_seconds": 20,
+  "states": [
+    {
+      "id": "nominal",
+      "fraction": [0.00, 0.20],
+      "meaning": "admissible service flow under normal explanatory operation",
+      "visual": "green directional flow"
+    },
+    {
+      "id": "disturbance",
+      "fraction": [0.20, 0.38],
+      "meaning": "constraint becomes active on power edge P05",
+      "visual": "localized red pulse; eta(t) > 0"
+    },
+    {
+      "id": "propagation",
+      "fraction": [0.38, 0.58],
+      "meaning": "critical effect propagates through C1 toward transportation service path",
+      "visual": "red dashed path S1 -> C1 -> H1"
+    },
+    {
+      "id": "control",
+      "fraction": [0.58, 0.78],
+      "meaning": "engineering intervention u* activates an alternative admissible support path",
+      "visual": "light-yellow decision path"
+    },
+    {
+      "id": "recovery",
+      "fraction": [0.78, 1.00],
+      "meaning": "service trajectory returns toward viable operation",
+      "visual": "green recovery flow and state-space trajectory"
+    }
+  ],
+  "scenario_path": {
+    "disturbance_origin": "P05",
+    "interface": "C1",
+    "transport_receiver": "H1",
+    "transport_propagation_edge": "T07",
+    "control_symbol": "u*"
+  },
+  "scientific_boundary": "The cycle illustrates model semantics only. Timing fractions are animation design parameters, not measured infrastructure event durations."
+}
