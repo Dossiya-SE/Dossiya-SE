@@ -77,7 +77,7 @@ def validate_dynamics(dyn: dict, power: dict, transport: dict) -> None:
     expected = ["nominal","disturbance","propagation","control","recovery"]
     require([s.get("id") for s in states] == expected, "dynamic cycle order must be nominal→disturbance→propagation→control→recovery")
     previous = 0.0
-    for idx,s in enumerate(states):
+    for s in states:
         fr = s.get("fraction")
         require(isinstance(fr,list) and len(fr)==2, "state fraction must be [start,end]")
         start,end = map(float,fr)
@@ -127,11 +127,14 @@ def validate_generated() -> None:
 
 def validate_readme() -> None:
     text = README.read_text(encoding="utf-8")
-    require("assets/generated/coupled-network-light.svg" in text and "assets/generated/coupled-network-dark.svg" in text, "README must use coupled network as primary hero")
+    lower = text.lower()
+    hero_2d = "assets/generated/coupled-network-light.svg" in text and "assets/generated/coupled-network-dark.svg" in text
+    hero_3d = "assets/generated/coupled-network-3d-light.svg" in text and "assets/generated/coupled-network-3d-dark.svg" in text
+    require(hero_2d or hero_3d, "README must use a governed coupled network as primary hero")
     require("assets/generated/graph-to-viability.svg" in text, "README must include graph-to-viability transformation")
-    require("same physical object" in text.lower() and "c_1" in text.lower(), "README must explain shared-interface semantics")
-    require("animation illustrates model structure" in text.lower(), "README must state animation/measurement boundary")
-    require("topology first" in text.lower(), "README must preserve topology-first principle")
+    require("same physical object" in lower and "c_1" in lower, "README must explain shared-interface semantics")
+    require("not measured infrastructure behavior" in lower or "not live infrastructure telemetry" in lower, "README must state visualization/measurement boundary")
+    require("topology first" in lower, "README must preserve topology-first principle")
 
 
 def main() -> int:
