@@ -1,20 +1,62 @@
 {
-  "schema_version": "1.0",
-  "framework_version": "1.0",
+  "schema_version": "2.0",
   "evidence_state": "DECLARED_RESEARCH_CONFIGURATION",
+  "research_status": "active",
+  "identity": {
+    "stable_statement": "Physics-grounded mathematical engineering for sustainable infrastructure",
+    "method": [
+      "Physical Reality",
+      "Causal Mechanisms",
+      "Governing Relations",
+      "Mathematical Structure",
+      "Dynamics + Uncertainty",
+      "Validation",
+      "Engineering Decision"
+    ],
+    "principle": "mechanism before model; physics before abstraction; validation before strong claims"
+  },
   "system": {
-    "physical": ["power", "transportation"],
-    "nonphysical": ["information", "organization"]
+    "physical": [
+      {"id": "P", "name": "power"},
+      {"id": "T", "name": "transportation"}
+    ],
+    "nonphysical": [
+      {"id": "I", "name": "information"},
+      {"id": "O", "name": "organization"}
+    ]
   },
   "current_focus": {
-    "stage": 2,
-    "name": "Causal Mechanisms",
-    "label": "interdependency mechanisms"
+    "active_stages": [2, 3],
+    "transition": "Causal Mechanisms → Coupled Hybrid Multiscale Dynamics",
+    "label": "causal interdependency mechanisms and graph-to-dynamics mapping",
+    "question": "How do physically supported power–transport interfaces generate time-dependent coupled state evolution under disturbance and control?"
   },
+  "mathematical_objects": [
+    {"id": "R_phys", "display": "R_phys", "role": "physical system boundary and engineering reality"},
+    {"id": "C", "display": "C", "role": "causal mechanism set"},
+    {"id": "G", "display": "G", "role": "multilayer infrastructure structure"},
+    {"id": "I", "display": "I_ij", "role": "rigorous interdependency object"},
+    {"id": "F_G", "display": "F_G", "role": "coupled hybrid multiscale dynamics"},
+    {"id": "V", "display": "V", "role": "viability set"},
+    {"id": "rho_g", "display": "rho_g", "role": "geometric resilience margin when justified"},
+    {"id": "u_star", "display": "u*", "role": "engineering intervention or control decision"}
+  ],
   "framework": {
-    "stages": 7,
-    "active_stage": 2
+    "source": "data/framework.json",
+    "formal_stages": 7,
+    "active_stages": [2, 3]
   },
-  "research_status": "active",
-  "last_updated": "2026-09-12"
+  "scientific_integrity": {
+    "invariant": "claim strength <= evidence strength",
+    "distinctions": [
+      "declared research configuration",
+      "observed public repository metadata",
+      "generated deterministic visualization",
+      "numerical verification",
+      "empirical validation"
+    ],
+    "note": "Profile automation reports research state and public evidence; it does not establish empirical validity of scientific mechanisms."
+  },
+  "last_verified": "2026-09-13",
+  "verification_scope": "research configuration and profile-data consistency"
 }
