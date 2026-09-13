@@ -1,12 +1,12 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/research-hero-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/generated/research-hero-light.svg">
-  <img src="./assets/generated/research-hero-light.svg" width="100%" alt="Animated scientific profile showing Power and Transportation infrastructure, causal interfaces, mathematical state evolution, viability geometry and engineering intervention">
+  <img src="./assets/generated/research-hero-light.svg" width="100%" alt="Dossiya Dakou mathematical engineering research portrait: Power and Transportation infrastructure, causal interfaces, state-space vector field, viability level sets, resilience margin and engineering decision">
 </picture>
 
 <div align="center">
 
-### Physics · Pure Mathematical Foundations · Sustainable Engineering · Infrastructure Systems
+### Physics · Mathematical Foundations · Sustainable Engineering · Infrastructure Systems
 
 **Physical Reality → Causal Mechanisms → Mathematical Structure → Engineering Decision**
 
@@ -16,49 +16,11 @@
 
 ---
 
-## Profile
+## Research position
 
-I study engineering systems by beginning with **what physically exists, how it interacts, and what can causally change what**. I then use mathematics as a formal language for representation, analysis, uncertainty, computation, validation, and engineering decision-making.
+I study **interdependent engineering systems** by starting from physical components, flows, operating constraints, timescales and disturbances; identifying the causal mechanisms through which one subsystem can alter another; and only then introducing mathematical structure for analysis, uncertainty, control and engineering decision-making.
 
-My current research focuses on **interdependent power and transportation infrastructure**, with informational and organizational mechanisms included when they alter physical operation, coordination, failure propagation, or recovery.
-
-> **Research principle:** mechanism before model · physics before abstraction · validation before strong claims.
-
-### Dynamic visual semantics
-
-The profile uses **semantic motion**, not decorative movement:
-
-- **gold moving structure** = schematic causal/interface transfer;
-- **blue moving structure** = mathematical state evolution;
-- **motion between stages 2 → 3** = the declared current research transition;
-- **a pulsing project boundary** = the most recently observed public repository change.
-
-The motion is explanatory. It is **not a measured flow**, calibrated trajectory, real-time infrastructure telemetry, or evidence of empirical validation. All generated SVGs include a reduced-motion fallback.
-
----
-
-## Living research state
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/research-state-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/generated/research-state-light.svg">
-  <img src="./assets/generated/research-state-light.svg" width="100%" alt="Current governed research state for power–transportation infrastructure, supporting information and organization layers, mathematical objects, and public evidence">
-</picture>
-
-This panel is **generated from governed research data**, not manually edited profile statistics. It combines two evidence classes without confusing them:
-
-- **Declared research configuration** — `data/research-state.json`: system boundary, current formal stage transition, mathematical objects, and scientific-integrity rules.
-- **Observed public evidence** — `data/public-github-state.json`: metadata only from repositories explicitly allowlisted in `data/projects.json`.
-
-The automation does **not** infer scientific validity from repository activity. Public code activity is evidence that a repository changed; it is not evidence that an engineering mechanism is empirically validated.
-
----
-
-## Current research
-
-### Interdependent Power–Transportation Systems
-
-The core problem is to move rigorously from real infrastructure and causal dependencies to mathematical structure that can support analysis, verification and intervention.
+My current physical focus is **Power ↔ Transportation**, with **Information + Organization** included when they change operation, coordination, failure propagation or recovery.
 
 ```math
 \boxed{
@@ -78,33 +40,58 @@ u^\star
 }
 ```
 
-where the physical interpretation of every mathematical object must be justified for the engineering system under study.
-
-<img src="./assets/generated/research-pipeline.svg" width="100%" alt="Animated seven-stage research architecture with semantic motion from causal mechanisms to coupled dynamics">
-
-The current governed transition is **Causal Mechanisms → Coupled Hybrid Multiscale Dynamics**: establishing physically defensible interface mechanisms and translating them into coupled state evolution under disturbance and control.
+> **Research principle:** mechanism before model · physics before abstraction · validation before strong claims.
 
 ---
 
-## Physics → causality → mathematics → decision
+## Living research state
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile/method-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/profile/method-light.svg">
-  <img src="./assets/profile/method-light.svg" width="100%" alt="Research method from physical infrastructure through causal interfaces and mathematical dynamics to viability and engineering intervention">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/research-state-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/generated/research-state-light.svg">
+  <img src="./assets/generated/research-state-light.svg" width="100%" alt="Governed current research state for Power and Transportation infrastructure with active causal-mechanism to coupled-dynamics transition and public evidence timestamps">
 </picture>
 
-| Layer | Main question | Formal object |
-|---|---|---|
-| **Physical reality** | What components, flows, constraints, services, hazards and timescales actually exist? | $`\mathcal R_{\mathrm{phys}}`$ |
-| **Causality** | Through what mechanism does one subsystem change another? | $`\mathcal C,\ \mathfrak I_{ij}^{\alpha\beta}`$ |
-| **Structure** | How should physically supported dependencies be represented? | multilayer graph $`\mathcal G`$ |
-| **Dynamics** | How do coupled states evolve under disturbance and control? | $`\dot Y=F_{\mathcal G}(Y,u,\eta;\theta)`$ |
-| **Feasibility / viability** | Which trajectories remain inside admissible engineering conditions? | $`K,\ \mathcal V`$ |
-| **Resilience geometry** | When justified, how far is the state from a critical boundary? | $`\rho_g(Y,\partial\mathcal V)`$ |
-| **Decision** | Which intervention improves service, safety, recovery or sustainability? | $`u^\star`$ |
+**Current question:** How do physically supported power–transport interfaces generate time-dependent coupled state evolution under disturbance and control?
 
-For interdependent infrastructure, I use a dependency object richer than an edge:
+The profile separates two evidence classes:
+
+- **Declared research configuration** — system boundary, active scientific stage, mathematical objects and integrity rules.
+- **Observed public evidence** — metadata from explicitly allowlisted public repositories only.
+
+Repository activity can show that public work changed. It cannot establish that a scientific mechanism is valid.
+
+---
+
+## Research architecture
+
+<img src="./assets/generated/research-pipeline.svg" width="100%" alt="Seven-stage research architecture with the current Causal Mechanisms to Coupled Hybrid Multiscale Dynamics transition highlighted">
+
+The formal research architecture is:
+
+```math
+\boxed{
+\text{Multilayer Structure}
+\rightarrow
+\text{Causal Mechanisms}
+\rightarrow
+\text{Coupled Hybrid Multiscale Dynamics}
+\rightarrow
+\text{Feedback \& Control}
+\rightarrow
+\text{Viability}
+\rightarrow
+\text{Resilience--Sustainability Interface}
+\rightarrow
+\text{Sustainable Transformation Pathways}
+}
+```
+
+The current governed transition is **Causal Mechanisms → Coupled Hybrid Multiscale Dynamics**. The objective is to move from physically defensible interface mechanisms to coupled state evolution—not from correlation directly to a mathematical graph.
+
+### Interdependency object
+
+I use an interdependency representation richer than a generic edge:
 
 ```math
 \mathfrak I_{ij}^{\alpha\beta}
@@ -122,87 +109,80 @@ m,
 \right).
 ```
 
-This forces the model to distinguish **source, receiver, mechanism, magnitude, direction/sign, delay, activation, evidence status and validity context** rather than treating interdependence as a purely graphical connection.
-
-<details>
-<summary><b>Scientific and engineering standard</b></summary>
-
-A mathematical analogy is not automatically a physical model. A defensible engineering model should state, where applicable:
-
-- system boundary, state variables, parameters, units, initial/boundary conditions;
-- conservation, constitutive, operational, safety and capacity relations;
-- causal assumptions, delays, feedback, activation conditions and timescales;
-- numerical method, convergence/verification checks and limiting cases;
-- measurement, parameter, structural, scenario and numerical uncertainty;
-- validation evidence, validity domain, limitations and decision relevance.
-
-I keep the following distinctions explicit:
-
-```math
-\text{mathematical consistency}
-\neq
-\text{physical plausibility}
-\neq
-\text{numerical verification}
-\neq
-\text{empirical validation}
-\neq
-\text{engineering usefulness}.
-```
-
-</details>
+It forces the model to state the interacting entities, mechanism, strength, direction/sign, delay, activation conditions, evidence status and temporal context explicitly.
 
 ---
 
 ## Mathematical foundations
 
-I use pure mathematical structures when they reveal engineering structure that is otherwise difficult to see directly.
+Mathematics is used as a **formal instrument for engineering reasoning**, selected after the physical and causal problem has been defined.
 
-| Mathematical area | Engineering role |
+| Foundation | Engineering role |
 |---|---|
-| **Differential geometry** | constrained state spaces, metrics, geodesic structure, boundary distance |
-| **Graph theory & topology** | multilayer structure, connectivity, interfaces, propagation pathways |
-| **Analysis & differential equations** | state evolution, bounds, stability, coupled continuous dynamics |
-| **Dynamical systems** | equilibria, regime transitions, recovery trajectories, multiscale behavior |
-| **Probability & stochastic processes** | hazards, measurement uncertainty, parameter uncertainty, reliability |
-| **Optimization & control** | intervention, restoration, design, constrained resource allocation |
+| **Graph theory & topology** | multilayer infrastructure structure, connectivity, interfaces and propagation pathways |
+| **Differential equations & analysis** | conservation-constrained state evolution, bounds and coupled continuous dynamics |
+| **Dynamical systems** | equilibria, stability, regime transition, propagation and recovery |
+| **Differential geometry** | constrained state spaces, metrics, geodesic structure and boundary distance when justified |
+| **Probability & stochastic processes** | hazard, measurement, parameter and scenario uncertainty |
+| **Optimization & control** | intervention, restoration, resource allocation and admissible feedback decisions |
+
+A generic coupled engineering model is closer to
+
+```math
+\dot Y = F_{\mathcal G}(Y,u,\eta;\theta),
+\qquad
+C(Y,u,\eta;\theta)=0,
+\qquad
+G(Y,u,\eta;\theta)\le 0,
+```
+
+than to an unconstrained predictive relation. The exact form must come from the physical system being modeled.
 
 ---
 
-## Observed public research systems
+## Mathematical visual language
 
-<img src="./assets/generated/project-system.svg" width="100%" alt="Animated observed allowlisted public research systems; the most recent public repository change is highlighted dynamically">
+The profile uses **semantic motion** and deterministic mathematical geometry:
 
-The visual above is generated from the **public allowlist**, not from a scan of every repository on the account. Private work is intentionally outside the automated profile evidence boundary. The animated boundary marks only the most recent observed public change; it is not a ranking of scientific importance.
+- **ink / charcoal** → physical infrastructure and observable engineering structure;
+- **gold** → causal interfaces and engineering decisions;
+- **blue** → mathematical state, dynamics, level sets and trajectories;
+- **moving gold structure** → schematic causal/interface transfer;
+- **moving blue structure** → schematic state evolution;
+- **pulsing project boundary** → most recently observed public repository change.
 
-### Selected research & engineering work
+The hero's vector field and nested level sets are **deterministic mathematical visual constructions** used to express phase-space and viability ideas. They are not fitted infrastructure data. Motion is **not a measured flow**, calibrated trajectory, real-time telemetry or empirical validation.
 
-**01 / Mathematics for Sustainable Resilience**  
+All generated SVGs provide a `prefers-reduced-motion` fallback.
+
+---
+
+## Selected public research systems
+
+<img src="./assets/generated/project-system.svg" width="100%" alt="Allowlisted public research systems with current public metadata and most recent observed repository change">
+
+### 01 · Mathematics for Sustainable Resilience
 Differential geometry · dynamical systems · resilience mathematics  
-[Open repository →](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience)
+[Repository →](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience)
 
-**02 / Optimization for Sustainability and Resilience**  
+### 02 · Optimization for Sustainability & Resilience
 Linear algebra · LP/MILP · network optimization · constrained decisions  
-[Open repository →](https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience)
+[Repository →](https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience)
 
-**03 / Africa Energy Dignity**  
+### 03 · Africa Energy Dignity
 Energy systems · geospatial engineering · infrastructure planning  
-[Open repository →](https://github.com/Dossiya-SE/africa-energy-dignity)
+[Repository →](https://github.com/Dossiya-SE/africa-energy-dignity)
 
-**04 / Python for Rapid Engineering Solutions**  
-Scientific computing · numerical analysis · reproducible engineering workflows  
-[Open repository →](https://github.com/Dossiya-SE/Python-for-rapid-engineering-solution)
-
-**05 / Mathematical Research Portfolio**  
+### 04 · Mathematical Research Portfolio
 Interactive mathematical communication · executable research demonstrations  
-[Open portfolio →](https://dossiya-se.github.io/) · [Research lab →](https://dossiya-se.github.io/lab.html)
+[Portfolio →](https://dossiya-se.github.io/) · [Research laboratory →](https://dossiya-se.github.io/lab.html)
 
 ---
 
 ## Research experience
 
 **National University of Singapore** — Visiting Graduate Researcher, 2026  
-Infrastructure-system interfaces and resilience: representing, measuring and connecting cross-infrastructure dependencies to failure and recovery behavior.
+Infrastructure-system interfaces and resilience: representing and connecting cross-infrastructure dependencies to failure, propagation and recovery behavior.
 
 ---
 
@@ -212,89 +192,74 @@ Infrastructure-system interfaces and resilience: representing, measuring and con
 |---|---|
 | **Arizona State University** | MSE · Sustainable Engineering · Ongoing |
 | **WorldQuant University** | MSc · Financial Engineering · Ongoing |
-| **Université d’Abomey-Calavi** | Licence · Énergies Renouvelables et Systèmes Énergétiques |
+| **Université d’Abomey-Calavi** | Licence · Renewable Energy & Energy Systems |
 
 ---
 
-## Capabilities
+<details>
+<summary><b>Scientific standard</b></summary>
 
-**Physical-system reasoning** · **Causal mechanism modeling** · **Mathematical abstraction** · **Coupled dynamical systems** · **Optimization & control** · **Scientific computing** · **Uncertainty reasoning** · **Verification & validation**
+A mathematical analogy is not automatically a physical model. A defensible engineering model should state, where relevant:
 
-**Scientific computing:** Python · NumPy · SciPy · SymPy · pandas · NetworkX · Matplotlib  
-**Numerical / optimization work:** mathematical programming · numerical linear algebra · Julia / MATLAB where appropriate  
-**Research communication:** LaTeX · Overleaf · TikZ · Markdown  
-**Engineering workflow:** Git · GitHub Actions · reproducible computational pipelines
+- system boundary, state variables, parameters, units and initial/boundary conditions;
+- conservation, constitutive, operational, safety and capacity relations;
+- causal assumptions, delays, feedback, activation conditions and timescales;
+- numerical method, convergence checks, limiting cases and sensitivity;
+- measurement, parameter, structural, scenario and numerical uncertainty;
+- validation evidence, validity domain, limitations and decision relevance.
 
----
+```math
+\boxed{
+\text{mathematical consistency}
+\neq
+\text{physical plausibility}
+\neq
+\text{numerical verification}
+\neq
+\text{empirical validation}
+\neq
+\text{engineering usefulness}
+}
+```
 
-## Dynamic profile engine
+The governing invariant of the automated profile is
+
+```math
+\boxed{\text{claim strength}\le\text{evidence strength}}.
+```
+
+</details>
+
+<details>
+<summary><b>Living profile architecture</b></summary>
 
 ```text
 Declared research state ─────┐
-                             ├─→ validation ─→ animated deterministic SVG ─→ README
+                             ├─→ validate ─→ mathematical SVG ─→ README
 Allowlisted public evidence ─┘
           ↑
           └──── GitHub REST API · public repositories only
 ```
 
-```text
-Dossiya-SE/
-├── README.md
-├── data/
-│   ├── framework.json
-│   ├── research-state.json
-│   ├── projects.json
-│   └── public-github-state.json
-├── scripts/
-│   ├── fetch_public_state.py
-│   ├── render_research_state.py
-│   └── validate_profile.py
-├── assets/
-│   └── generated/
-│       ├── research-hero-light.svg
-│       ├── research-hero-dark.svg
-│       ├── research-state-light.svg
-│       ├── research-state-dark.svg
-│       ├── project-system.svg
-│       └── research-pipeline.svg
-└── .github/
-    └── workflows/
-        └── update-profile.yml
-```
+The generator is intentionally polyglot by **function**, not by decoration:
 
-### Automation contract
+- **Markdown + MathJax** — publication and mathematical notation;
+- **Python** — governed data, computation and SVG generation;
+- **SVG + CSS** — mathematical geometry, light/dark rendering and semantic motion;
+- **GitHub Actions** — scheduled evidence refresh and fail-closed publication;
+- **Jupyter / Julia / TypeScript / D3 / React** — reserved for reproducible research, independent numerical verification, typed schemas and richer website visual systems where they add a defensible capability.
 
-The workflow runs **every 6 hours**, **on demand**, and when governed profile inputs change. It:
+The automated evidence refresh runs on a scheduled cadence and commits only when meaningful public state changes.
 
-1. queries only the explicitly allowlisted public repositories;
-2. refuses non-public repository metadata;
-3. validates research-state, framework and evidence consistency;
-4. renders self-contained animated SVG assets with no remote scripts or runtime JavaScript;
-5. encodes only governed semantic motion and provides a reduced-motion fallback;
-6. validates SVG XML, accessibility metadata and README references;
-7. commits only when the stable public evidence or generated research state actually changes.
-
-The profile therefore separates three time scales:
-
-```math
-\boxed{
-\tau_{\mathrm{identity}}
-\gg
-\tau_{\mathrm{research}}
-\gg
-\tau_{\mathrm{public\ activity}}
-}
-```
-
-**Stable identity** changes rarely. **Research state** changes when the scientific programme changes. **Public evidence** may update more frequently, but it cannot strengthen a scientific claim by itself.
+</details>
 
 ---
 
 ## Research interests
 
-**Physics-grounded mathematical engineering** · Pure mathematical structures for engineering applications  
+**Physics-grounded mathematical engineering** · Interdependent infrastructure · Complex systems  
 Differential geometry · Graph theory · Topology · Dynamical systems · Analysis · Optimization · Uncertainty  
-Complex systems · Sustainable infrastructure · Infrastructure resilience
+Sustainable infrastructure · Resilience · Scientific computing
 
 ---
 
