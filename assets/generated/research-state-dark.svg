@@ -1,53 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 470" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 480" role="img" aria-labelledby="title desc">
 <title id="title">Governed living research state</title>
-<desc id="desc">Compact generated panel distinguishing declared research configuration from observed public repository evidence.</desc>
+<desc id="desc">Research-state panel using green for viable/sustainable state, red for boundaries or criticality, and light yellow for causal transitions.</desc>
 <style>
-:root{--bg:#0b0f14;--panel:#10161e;--ink:#f3f6f8;--muted:#9aa5b1;--line:#2b3440;--gold:#d4ad4c;--blue:#78a9ff;--soft:#151d27;--ghost:#1c2632}
+:root{--bg:#0d1210;--panel:#121913;--ink:#f3f7f2;--muted:#9da99f;--line:#344039;--green:#7bd49a;--green-soft:#193025;--red:#ff8585;--red-soft:#34191c;--yellow:#ffd96a;--yellow-soft:#332b16;--yellow-ink:#ffe9a0;--ghost:#1d2721}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .k{font-size:12px;font-weight:800;letter-spacing:.14em} .h{font-size:30px;font-weight:780} .hero{font-size:45px;font-weight:820;letter-spacing:-.025em}
 .v{font-size:19px;font-weight:720} .m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)}
 .math{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:22px} .math-sm{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:16px}
-.flow-gold{stroke:var(--gold);stroke-dasharray:10 13;animation:flowGold 3.1s linear infinite}
-.flow-blue{stroke:var(--blue);stroke-dasharray:9 13;animation:flowBlue 3.8s linear infinite}
-.pulse-gold{animation:pulseGold 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.pulse-blue{animation:pulseBlue 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.latest{animation:latestPulse 3.4s ease-in-out infinite}
-.level-set{fill:none;stroke:var(--blue)}
-@keyframes flowGold{to{stroke-dashoffset:-46}}
-@keyframes flowBlue{to{stroke-dashoffset:-44}}
-@keyframes pulseGold{0%,100%{opacity:.52;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}
-@keyframes pulseBlue{0%,100%{opacity:.60;transform:scale(.98)}50%{opacity:1;transform:scale(1.035)}}
-@keyframes latestPulse{0%,100%{stroke-opacity:.38}50%{stroke-opacity:1}}
-@media(prefers-reduced-motion:reduce){.flow-gold,.flow-blue,.pulse-gold,.pulse-blue,.latest{animation:none!important}}
+.label-yellow{fill:var(--yellow-soft);stroke:var(--yellow)} .label-green{fill:var(--green-soft);stroke:var(--green)} .label-red{fill:var(--red-soft);stroke:var(--red)}
+.flow-yellow{stroke:var(--yellow);stroke-dasharray:10 13;animation:flowYellow 3.1s linear infinite} .flow-green{stroke:var(--green);stroke-dasharray:9 13;animation:flowGreen 3.8s linear infinite} .flow-red{stroke:var(--red);stroke-dasharray:7 11;animation:flowRed 3.3s linear infinite}
+.pulse-yellow{animation:pulseYellow 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center} .pulse-green{animation:pulseGreen 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center} .pulse-red{animation:pulseRed 2.7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.latest{animation:latestPulse 3.4s ease-in-out infinite} .level-set{fill:none;stroke:var(--green)} .critical-boundary{fill:none;stroke:var(--red)}
+@keyframes flowYellow{to{stroke-dashoffset:-46}} @keyframes flowGreen{to{stroke-dashoffset:-44}} @keyframes flowRed{to{stroke-dashoffset:-38}}
+@keyframes pulseYellow{0%,100%{opacity:.58;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}} @keyframes pulseGreen{0%,100%{opacity:.62;transform:scale(.98)}50%{opacity:1;transform:scale(1.035)}} @keyframes pulseRed{0%,100%{opacity:.55;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes latestPulse{0%,100%{stroke-opacity:.40}50%{stroke-opacity:1}}
+@media(prefers-reduced-motion:reduce){.flow-yellow,.flow-green,.flow-red,.pulse-yellow,.pulse-green,.pulse-red,.latest{animation:none!important}}
 </style>
-<rect x="1" y="1" width="1398" height="468" rx="28" fill="var(--bg)" stroke="var(--line)"/>
-<text x="48" y="56" class="k" fill="var(--gold)">CURRENT RESEARCH STATE</text>
-<text x="48" y="98" class="h">Power ↔ Transportation</text>
-<text x="48" y="126" class="m">information + organization as supporting non-physical layers</text>
-<line x1="48" y1="158" x2="1352" y2="158" stroke="var(--line)"/>
-<text x="48" y="202" class="k" fill="var(--muted)">ACTIVE FORMAL TRANSITION</text>
-<text x="48" y="238" class="v" fill="var(--gold)">Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text>
-<path d="M48 269H566" class="flow-gold" stroke-width="3"/>
-<text x="48" y="311" class="m">causal interdependency mechanisms and graph-to-dynamics mapping</text>
-<text x="720" y="202" class="k" fill="var(--muted)">MATHEMATICAL SIGNATURE</text>
-<text x="720" y="243" class="math" fill="var(--blue)">R_phys → C → (G, I_ij) → F_G → V → ρ_g → u*</text>
-<path d="M720 270H1265" class="flow-blue" stroke-width="2.7"/>
-<text x="720" y="310" class="s">objects are governed by research-state.json; public activity cannot promote a scientific claim</text>
-<rect x="48" y="354" width="250" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
-<text x="66" y="381" class="k" fill="var(--muted)">PUBLIC SYSTEMS</text>
-<text x="66" y="410" class="v" fill="var(--ink)">06</text>
-<text x="280" y="410" text-anchor="end" class="s">allowlisted</text>
-<rect x="330" y="354" width="250" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
-<text x="348" y="381" class="k" fill="var(--muted)">FEATURED</text>
-<text x="348" y="410" class="v" fill="var(--gold)">04</text>
-<text x="562" y="410" text-anchor="end" class="s">research-facing</text>
-<rect x="612" y="354" width="350" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
-<text x="630" y="381" class="k" fill="var(--muted)">STATE VERIFIED</text>
-<text x="630" y="410" class="v" fill="var(--blue)">13 Sep 2026</text>
-<text x="944" y="410" text-anchor="end" class="s">declared configuration</text>
-<rect x="1002" y="354" width="350" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
-<text x="1020" y="381" class="k" fill="var(--muted)">EVIDENCE OBSERVED</text>
-<text x="1020" y="410" class="v" fill="var(--ink)">13 Sep 2026</text>
-<text x="1334" y="410" text-anchor="end" class="s">public metadata</text>
+<rect x="1" y="1" width="1398" height="478" rx="28" fill="var(--bg)" stroke="var(--line)"/>
+<rect x="48" y="35" width="230" height="31" rx="9" class="label-green" stroke-width="1"/>
+<text x="62" y="56" class="k" fill="var(--green)">CURRENT RESEARCH STATE</text>
+<text x="48" y="108" class="h" fill="var(--green)">Power ↔ Transportation</text>
+<text x="48" y="137" class="m">Information + Organization as supporting non-physical layers</text>
+<line x1="48" y1="165" x2="1352" y2="165" stroke="var(--line)"/>
+<rect x="48" y="190" width="255" height="31" rx="9" class="label-yellow" stroke-width="1"/>
+<text x="62" y="211" class="k" fill="var(--yellow-ink)">ACTIVE FORMAL TRANSITION</text>
+<text x="48" y="260" class="v" fill="var(--yellow-ink)">Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text>
+<path d="M48 286H555" class="flow-yellow" stroke-width="3"/>
+<text x="48" y="320" class="m">causal interdependency mechanisms and graph-to-dynamics mapping</text>
+<rect x="720" y="190" width="230" height="31" rx="9" class="label-green" stroke-width="1"/>
+<text x="734" y="211" class="k" fill="var(--green)">MATHEMATICAL SIGNATURE</text>
+<text x="720" y="260" class="math" fill="var(--green)">R_phys → C → (G, I_ij) → F_G → V → ρ_g → u*</text>
+<path d="M720 286H1265" class="flow-green" stroke-width="2.7"/>
+<text x="720" y="320" class="s">public activity cannot promote a scientific claim</text>
+<rect x="48" y="355" width="250" height="86" rx="16" class="label-green" stroke-width="1"/>
+<text x="66" y="383" class="k" fill="var(--green)">PUBLIC SYSTEMS</text>
+<text x="66" y="415" class="v" fill="var(--green)">06</text>
+<text x="280" y="415" text-anchor="end" class="s">allowlisted</text>
+<rect x="330" y="355" width="250" height="86" rx="16" class="label-yellow" stroke-width="1"/>
+<text x="348" y="383" class="k" fill="var(--yellow-ink)">FEATURED</text>
+<text x="348" y="415" class="v" fill="var(--yellow-ink)">04</text>
+<text x="562" y="415" text-anchor="end" class="s">research-facing</text>
+<rect x="612" y="355" width="350" height="86" rx="16" class="label-green" stroke-width="1"/>
+<text x="630" y="383" class="k" fill="var(--green)">STATE VERIFIED</text>
+<text x="630" y="415" class="v" fill="var(--green)">13 Sep 2026</text>
+<text x="944" y="415" text-anchor="end" class="s">declared configuration</text>
+<rect x="1002" y="355" width="350" height="86" rx="16" class="label-red" stroke-width="1"/>
+<text x="1020" y="383" class="k" fill="var(--red)">EVIDENCE OBSERVED</text>
+<text x="1020" y="415" class="v" fill="var(--red)">13 Sep 2026</text>
+<text x="1334" y="415" text-anchor="end" class="s">public metadata</text>
 </svg>
