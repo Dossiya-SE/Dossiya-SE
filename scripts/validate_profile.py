@@ -103,7 +103,7 @@ def validate_generated() -> None:
         require(path.exists(), f"missing generated visual: {path.relative_to(ROOT)}")
         text = path.read_text(encoding="utf-8")
         require("<script" not in text.lower(), f"generated SVG contains script: {name}")
-        require("http://" not in text.lower(), f"generated SVG contains insecure URL: {name}")
+        require(re.search(r"\b(?:href|src)=[\"']http://", text, flags=re.IGNORECASE) is None, f"generated SVG contains insecure external reference: {name}")
         try:
             root = ET.fromstring(text)
         except ET.ParseError as exc:
