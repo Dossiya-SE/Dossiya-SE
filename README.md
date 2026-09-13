@@ -6,13 +6,10 @@
 
 <div align="center">
 
-# Dossiya Dakou
+**Dossiya Dakou · Physics-Grounded Mathematical Engineering for Sustainable Infrastructure**
 
-### Physics-Grounded Mathematical Engineering for Sustainable Infrastructure
-
-**Physical Reality → Causal Mechanisms → Mathematical Structure → Engineering Decision**
-
-**Coupled Power–Transportation Systems · Dynamics · Viability · Resilience**
+Physical Reality → Causal Mechanisms → Mathematical Structure → Engineering Decision  
+Dynamics · Viability · Resilience · Sustainable Infrastructure
 
 [Research Portfolio](https://dossiya-se.github.io/) · [Research Laboratory](https://dossiya-se.github.io/lab.html) · [LinkedIn](https://www.linkedin.com/in/dossiya-dakou-/) · [ORCID](https://orcid.org/0009-0004-1071-9948)
 
