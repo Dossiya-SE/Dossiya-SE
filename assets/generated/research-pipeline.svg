@@ -1,64 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 430" role="img" aria-labelledby="title desc">
-<title id="title">Animated seven-stage research pipeline</title>
-<desc id="desc">Formal seven-stage research architecture with semantic motion only on the declared active transition from causal mechanisms to coupled hybrid multiscale dynamics.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 390" role="img" aria-labelledby="title desc">
+<title id="title">Seven-stage research architecture</title>
+<desc id="desc">A transformation-first seven-stage research path. Only the declared active transition from causal mechanisms to coupled dynamics is animated.</desc>
 <style>
-:root{--bg:#fffdfa;--panel:#ffffff;--ink:#0d1117;--muted:#57606a;--line:#d8d3c8;--gold:#9a6700;--blue:#2f6fda;--soft:#f4f1e8}
-@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--panel:#111820;--ink:#f0f3f6;--muted:#9ba5b0;--line:#30363d;--gold:#d2a63c;--blue:#72a7ff;--soft:#161d26}}
+:root{--bg:#fbfaf7;--panel:#ffffff;--ink:#11161d;--muted:#606a76;--line:#d8d4cb;--gold:#9a6a12;--blue:#316fc7;--soft:#f3f0e8;--ghost:#eae6dc}
+@media(prefers-color-scheme:dark){:root{--bg:#0b0f14;--panel:#10161e;--ink:#f3f6f8;--muted:#9aa5b1;--line:#2b3440;--gold:#d4ad4c;--blue:#78a9ff;--soft:#151d27;--ghost:#1c2632}}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
-.k{font-size:13px;font-weight:800;letter-spacing:.11em} .h{font-size:28px;font-weight:800} .v{font-size:20px;font-weight:750}
-.m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)} .math{font-family:Georgia,"Times New Roman",serif;font-size:21px}
-.flow-gold{stroke:var(--gold);stroke-dasharray:10 12;animation:flowGold 2.8s linear infinite}
-.flow-blue{stroke:var(--blue);stroke-dasharray:9 12;animation:flowBlue 3.4s linear infinite}
-.pulse-gold{animation:pulseGold 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.pulse-blue{animation:pulseBlue 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.latest{animation:latestPulse 3.2s ease-in-out infinite}
-@keyframes flowGold{to{stroke-dashoffset:-44}}
-@keyframes flowBlue{to{stroke-dashoffset:-42}}
-@keyframes pulseGold{0%,100%{opacity:.48;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
-@keyframes pulseBlue{0%,100%{opacity:.58;transform:scale(.97)}50%{opacity:1;transform:scale(1.03)}}
-@keyframes latestPulse{0%,100%{stroke-opacity:.42}50%{stroke-opacity:1}}
+.k{font-size:12px;font-weight:800;letter-spacing:.14em} .h{font-size:30px;font-weight:780} .hero{font-size:45px;font-weight:820;letter-spacing:-.025em}
+.v{font-size:19px;font-weight:720} .m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)}
+.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:22px} .math-sm{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:16px}
+.flow-gold{stroke:var(--gold);stroke-dasharray:10 13;animation:flowGold 3.1s linear infinite}
+.flow-blue{stroke:var(--blue);stroke-dasharray:9 13;animation:flowBlue 3.8s linear infinite}
+.pulse-gold{animation:pulseGold 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.pulse-blue{animation:pulseBlue 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.latest{animation:latestPulse 3.4s ease-in-out infinite}
+.level-set{fill:none;stroke:var(--blue)}
+@keyframes flowGold{to{stroke-dashoffset:-46}}
+@keyframes flowBlue{to{stroke-dashoffset:-44}}
+@keyframes pulseGold{0%,100%{opacity:.52;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes pulseBlue{0%,100%{opacity:.60;transform:scale(.98)}50%{opacity:1;transform:scale(1.035)}}
+@keyframes latestPulse{0%,100%{stroke-opacity:.38}50%{stroke-opacity:1}}
 @media(prefers-reduced-motion:reduce){.flow-gold,.flow-blue,.pulse-gold,.pulse-blue,.latest{animation:none!important}}
 </style>
-<rect x="1" y="1" width="1398" height="428" rx="28" fill="var(--bg)" stroke="var(--line)"/>
-<text x="54" y="58" class="k" fill="var(--gold)">FORMAL RESEARCH PIPELINE</text>
-<text x="54" y="88" class="s">Only the declared active transition moves; inactive stages remain static context.</text>
-<rect x="54" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2" class=""/>
-<text x="72" y="162" class="k" fill="var(--line)">01</text>
-<text x="72" y="201" class="v" font-size="15">Multilayer structure</text>
-<text x="72" y="264" class="s">G</text>
-<path d="M232 213H242"  stroke="var(--muted)" stroke-width="1.4"/>
-<rect x="246" y="132" width="174" height="162" rx="18" fill="var(--soft)" stroke="var(--gold)" stroke-width="2.5" class="pulse-gold"/>
-<text x="264" y="162" class="k" fill="var(--gold)">02</text>
-<text x="264" y="201" class="v" font-size="15">Causal mechanisms</text>
-<text x="264" y="264" class="s">M_ij</text>
-<path d="M424 213H434" class="flow-gold" stroke="var(--gold)" stroke-width="3"/>
-<rect x="438" y="132" width="174" height="162" rx="18" fill="var(--soft)" stroke="var(--blue)" stroke-width="2.5" class="pulse-blue"/>
-<text x="456" y="162" class="k" fill="var(--blue)">03</text>
-<text x="456" y="201" class="v" font-size="15">Coupled dynamics</text>
-<text x="456" y="264" class="s">F_G</text>
-<path d="M616 213H626"  stroke="var(--muted)" stroke-width="1.4"/>
-<rect x="630" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2" class=""/>
-<text x="648" y="162" class="k" fill="var(--line)">04</text>
-<text x="648" y="201" class="v" font-size="15">Feedback</text>
-<text x="648" y="223" class="v" font-size="15">&amp; control</text>
-<text x="648" y="264" class="s">u</text>
-<path d="M808 213H818"  stroke="var(--muted)" stroke-width="1.4"/>
-<rect x="822" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2" class=""/>
-<text x="840" y="162" class="k" fill="var(--line)">05</text>
-<text x="840" y="201" class="v" font-size="15">Viability</text>
-<text x="840" y="264" class="s">V_sus</text>
-<path d="M1000 213H1010"  stroke="var(--muted)" stroke-width="1.4"/>
-<rect x="1014" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2" class=""/>
-<text x="1032" y="162" class="k" fill="var(--line)">06</text>
-<text x="1032" y="201" class="v" font-size="15">Resilience</text>
-<text x="1032" y="223" class="v" font-size="15">→ sustainability</text>
-<text x="1032" y="264" class="s">R-S</text>
-<path d="M1192 213H1202"  stroke="var(--muted)" stroke-width="1.4"/>
-<rect x="1206" y="132" width="174" height="162" rx="18" fill="var(--bg)" stroke="var(--line)" stroke-width="1.2" class=""/>
-<text x="1224" y="162" class="k" fill="var(--line)">07</text>
-<text x="1224" y="201" class="v" font-size="15">Transformation pathways</text>
-<text x="1224" y="264" class="s">Pi</text>
-<text x="54" y="346" class="k" fill="var(--muted)">CURRENT TRANSITION</text>
-<text x="54" y="380" class="v" font-size="15" fill="var(--gold)">Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text>
-<text x="54" y="406" class="s">Motion represents declared research focus, not stage completion or empirical validation.</text>
+<rect x="1" y="1" width="1398" height="388" rx="28" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="55" class="k" fill="var(--gold)">FORMAL RESEARCH ARCHITECTURE</text>
+<text x="48" y="84" class="s">engineering reality constrains abstraction · motion appears only on the currently declared research transition</text>
+<path d="M90 184C200 132,235 132,285 184S440 236,480 184S635 132,675 184S830 236,870 184S1025 132,1065 184S1220 236,1260 184" fill="none" stroke="var(--line)" stroke-width="2"/>
+<path d="M285 184C345 236,425 236,480 184" fill="none" class="flow-gold" stroke-width="4"/>
+<circle cx="90" cy="184" r="27" fill="var(--panel)" stroke="var(--line)" stroke-width="1.4"/>
+<text x="90" y="189" text-anchor="middle" class="k" fill="var(--line)">01</text>
+<text x="90" y="245" text-anchor="middle" class="s">Multilayer structure</text>
+<text x="90" y="136" text-anchor="middle" class="math-sm" fill="var(--line)">G</text>
+<circle cx="285" cy="184" r="27" fill="var(--soft)" stroke="var(--gold)" stroke-width="2.8"/>
+<text x="285" y="189" text-anchor="middle" class="k" fill="var(--gold)">02</text>
+<text x="285" y="245" text-anchor="middle" class="s">Causal mechanisms</text>
+<text x="285" y="136" text-anchor="middle" class="math-sm" fill="var(--gold)">M_ij</text>
+<circle cx="480" cy="184" r="27" fill="var(--soft)" stroke="var(--blue)" stroke-width="2.8"/>
+<text x="480" y="189" text-anchor="middle" class="k" fill="var(--blue)">03</text>
+<text x="480" y="245" text-anchor="middle" class="s">Coupled dynamics</text>
+<text x="480" y="136" text-anchor="middle" class="math-sm" fill="var(--blue)">F_G</text>
+<circle cx="675" cy="184" r="27" fill="var(--panel)" stroke="var(--line)" stroke-width="1.4"/>
+<text x="675" y="189" text-anchor="middle" class="k" fill="var(--line)">04</text>
+<text x="675" y="245" text-anchor="middle" class="s">Feedback</text>
+<text x="675" y="263" text-anchor="middle" class="s">&amp; control</text>
+<text x="675" y="136" text-anchor="middle" class="math-sm" fill="var(--line)">u</text>
+<circle cx="870" cy="184" r="27" fill="var(--panel)" stroke="var(--line)" stroke-width="1.4"/>
+<text x="870" y="189" text-anchor="middle" class="k" fill="var(--line)">05</text>
+<text x="870" y="245" text-anchor="middle" class="s">Viability</text>
+<text x="870" y="136" text-anchor="middle" class="math-sm" fill="var(--line)">V_sus</text>
+<circle cx="1065" cy="184" r="27" fill="var(--panel)" stroke="var(--line)" stroke-width="1.4"/>
+<text x="1065" y="189" text-anchor="middle" class="k" fill="var(--line)">06</text>
+<text x="1065" y="245" text-anchor="middle" class="s">Resilience</text>
+<text x="1065" y="263" text-anchor="middle" class="s">→ sustainability</text>
+<text x="1065" y="136" text-anchor="middle" class="math-sm" fill="var(--line)">R-S</text>
+<circle cx="1260" cy="184" r="27" fill="var(--panel)" stroke="var(--line)" stroke-width="1.4"/>
+<text x="1260" y="189" text-anchor="middle" class="k" fill="var(--line)">07</text>
+<text x="1260" y="245" text-anchor="middle" class="s">Transformation pathways</text>
+<text x="1260" y="136" text-anchor="middle" class="math-sm" fill="var(--line)">Pi</text>
+<text x="48" y="334" class="k" fill="var(--muted)">CURRENT TRANSITION</text>
+<text x="48" y="363" class="v" fill="var(--gold)">Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text>
 </svg>

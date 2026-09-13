@@ -1,57 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 560" role="img" aria-labelledby="title desc">
-<title id="title">Current animated research state</title>
-<desc id="desc">Generated panel showing Power–Transportation research configuration, active formal transition, mathematical objects, and observed public research evidence. The live indicator is visual status only.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 470" role="img" aria-labelledby="title desc">
+<title id="title">Governed living research state</title>
+<desc id="desc">Compact generated panel distinguishing declared research configuration from observed public repository evidence.</desc>
 <style>
-:root{--bg:#fffdfa;--panel:#ffffff;--ink:#0d1117;--muted:#57606a;--line:#d8d3c8;--gold:#9a6700;--blue:#2f6fda;--soft:#f4f1e8}
+:root{--bg:#fbfaf7;--panel:#ffffff;--ink:#11161d;--muted:#606a76;--line:#d8d4cb;--gold:#9a6a12;--blue:#316fc7;--soft:#f3f0e8;--ghost:#eae6dc}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
-.k{font-size:13px;font-weight:800;letter-spacing:.11em} .h{font-size:28px;font-weight:800} .v{font-size:20px;font-weight:750}
-.m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)} .math{font-family:Georgia,"Times New Roman",serif;font-size:21px}
-.flow-gold{stroke:var(--gold);stroke-dasharray:10 12;animation:flowGold 2.8s linear infinite}
-.flow-blue{stroke:var(--blue);stroke-dasharray:9 12;animation:flowBlue 3.4s linear infinite}
-.pulse-gold{animation:pulseGold 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.pulse-blue{animation:pulseBlue 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.latest{animation:latestPulse 3.2s ease-in-out infinite}
-@keyframes flowGold{to{stroke-dashoffset:-44}}
-@keyframes flowBlue{to{stroke-dashoffset:-42}}
-@keyframes pulseGold{0%,100%{opacity:.48;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
-@keyframes pulseBlue{0%,100%{opacity:.58;transform:scale(.97)}50%{opacity:1;transform:scale(1.03)}}
-@keyframes latestPulse{0%,100%{stroke-opacity:.42}50%{stroke-opacity:1}}
+.k{font-size:12px;font-weight:800;letter-spacing:.14em} .h{font-size:30px;font-weight:780} .hero{font-size:45px;font-weight:820;letter-spacing:-.025em}
+.v{font-size:19px;font-weight:720} .m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)}
+.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:22px} .math-sm{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:16px}
+.flow-gold{stroke:var(--gold);stroke-dasharray:10 13;animation:flowGold 3.1s linear infinite}
+.flow-blue{stroke:var(--blue);stroke-dasharray:9 13;animation:flowBlue 3.8s linear infinite}
+.pulse-gold{animation:pulseGold 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.pulse-blue{animation:pulseBlue 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.latest{animation:latestPulse 3.4s ease-in-out infinite}
+.level-set{fill:none;stroke:var(--blue)}
+@keyframes flowGold{to{stroke-dashoffset:-46}}
+@keyframes flowBlue{to{stroke-dashoffset:-44}}
+@keyframes pulseGold{0%,100%{opacity:.52;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes pulseBlue{0%,100%{opacity:.60;transform:scale(.98)}50%{opacity:1;transform:scale(1.035)}}
+@keyframes latestPulse{0%,100%{stroke-opacity:.38}50%{stroke-opacity:1}}
 @media(prefers-reduced-motion:reduce){.flow-gold,.flow-blue,.pulse-gold,.pulse-blue,.latest{animation:none!important}}
 </style>
-<rect x="1" y="1" width="1398" height="558" rx="30" fill="var(--bg)" stroke="var(--line)"/>
-<rect x="34" y="34" width="1332" height="492" rx="24" fill="var(--panel)" stroke="var(--line)"/>
-<circle cx="1315" cy="72" r="7" fill="var(--gold)" class="pulse-gold"/>
-<text x="1288" y="77" text-anchor="end" class="k" fill="var(--gold)">LIVING STATE</text>
-<text x="70" y="80" class="k" fill="var(--gold)">CURRENT RESEARCH STATE</text>
-<text x="70" y="122" class="h">Governed scientific state</text>
-<text x="70" y="153" class="m">Declared research configuration + observed public repository evidence</text>
-<text x="70" y="208" class="k" fill="var(--muted)">PRIMARY PHYSICAL SYSTEM</text>
-<text x="70" y="239" class="v" fill="var(--gold)">POWER</text>
-<line x1="168" y1="232" x2="304" y2="232" class="flow-gold" stroke-width="3"/>
-<text x="329" y="239" class="v" fill="var(--gold)">TRANSPORTATION</text>
-<text x="70" y="284" class="k" fill="var(--muted)">SUPPORTING NON-PHYSICAL LAYERS</text>
-<text x="70" y="315" class="v" fill="var(--ink)">INFORMATION  ·  ORGANIZATION</text>
-<text x="70" y="360" class="k" fill="var(--muted)">CURRENT FORMAL TRANSITION</text>
-<text x="70" y="391" class="v" fill="var(--blue)">Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text>
-<text x="70" y="436" class="k" fill="var(--muted)">CURRENT QUESTION</text>
-<text x="70" y="466" class="v" fill="var(--ink)">How do physically supported power–transport interfaces generate time-dependent coupled state evolution</text>
-<text x="70" y="493" class="v" fill="var(--ink)">under disturbance and control?</text>
-<line x1="820" y1="184" x2="820" y2="486" stroke="var(--line)"/>
-<text x="870" y="208" class="k" fill="var(--muted)">MATHEMATICAL OBJECTS</text>
-<text x="870" y="248" class="math" fill="var(--blue)">R_phys · C · G · I_ij · F_G · V · rho_g · u*</text>
-<path d="M872 265H1260" class="flow-blue" stroke-width="2"/>
-<rect x="870" y="282" width="216" height="96" rx="18" fill="var(--soft)" stroke="var(--line)"/>
-<text x="892" y="315" class="k" fill="var(--muted)">PUBLIC SYSTEMS</text>
-<text x="892" y="356" class="h">06</text>
-<text x="948" y="354" class="s">active allowlisted</text>
-<rect x="1104" y="282" width="216" height="96" rx="18" fill="var(--soft)" stroke="var(--line)"/>
-<text x="1126" y="315" class="k" fill="var(--muted)">FEATURED SYSTEMS</text>
-<text x="1126" y="356" class="h" fill="var(--gold)">04</text>
-<text x="1182" y="354" class="s">research-facing</text>
-<text x="870" y="426" class="k" fill="var(--muted)">STATE LAST VERIFIED</text>
-<text x="870" y="456" class="v">13 Sep 2026</text>
-<text x="1104" y="426" class="k" fill="var(--muted)">PUBLIC EVIDENCE OBSERVED</text>
-<text x="1104" y="456" class="v">13 Sep 2026</text>
-<text x="870" y="500" class="s">DECLARED ≠ OBSERVED ≠ VERIFIED COMPUTATION ≠ EMPIRICALLY VALIDATED</text>
+<rect x="1" y="1" width="1398" height="468" rx="28" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="56" class="k" fill="var(--gold)">CURRENT RESEARCH STATE</text>
+<text x="48" y="98" class="h">Power ↔ Transportation</text>
+<text x="48" y="126" class="m">information + organization as supporting non-physical layers</text>
+<line x1="48" y1="158" x2="1352" y2="158" stroke="var(--line)"/>
+<text x="48" y="202" class="k" fill="var(--muted)">ACTIVE FORMAL TRANSITION</text>
+<text x="48" y="238" class="v" fill="var(--gold)">Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text>
+<path d="M48 269H566" class="flow-gold" stroke-width="3"/>
+<text x="48" y="311" class="m">causal interdependency mechanisms and graph-to-dynamics mapping</text>
+<text x="720" y="202" class="k" fill="var(--muted)">MATHEMATICAL SIGNATURE</text>
+<text x="720" y="243" class="math" fill="var(--blue)">R_phys → C → (G, I_ij) → F_G → V → ρ_g → u*</text>
+<path d="M720 270H1265" class="flow-blue" stroke-width="2.7"/>
+<text x="720" y="310" class="s">objects are governed by research-state.json; public activity cannot promote a scientific claim</text>
+<rect x="48" y="354" width="250" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
+<text x="66" y="381" class="k" fill="var(--muted)">PUBLIC SYSTEMS</text>
+<text x="66" y="410" class="v" fill="var(--ink)">06</text>
+<text x="280" y="410" text-anchor="end" class="s">allowlisted</text>
+<rect x="330" y="354" width="250" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
+<text x="348" y="381" class="k" fill="var(--muted)">FEATURED</text>
+<text x="348" y="410" class="v" fill="var(--gold)">04</text>
+<text x="562" y="410" text-anchor="end" class="s">research-facing</text>
+<rect x="612" y="354" width="350" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
+<text x="630" y="381" class="k" fill="var(--muted)">STATE VERIFIED</text>
+<text x="630" y="410" class="v" fill="var(--blue)">13 Sep 2026</text>
+<text x="944" y="410" text-anchor="end" class="s">declared configuration</text>
+<rect x="1002" y="354" width="350" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
+<text x="1020" y="381" class="k" fill="var(--muted)">EVIDENCE OBSERVED</text>
+<text x="1020" y="410" class="v" fill="var(--ink)">13 Sep 2026</text>
+<text x="1334" y="410" text-anchor="end" class="s">public metadata</text>
 </svg>

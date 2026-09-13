@@ -1,79 +1,151 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 570" role="img" aria-labelledby="title desc">
-<title id="title">Dossiya Dakou — animated physics-to-mathematics research system</title>
-<desc id="desc">Semantic animated SVG showing coupled Power and Transportation infrastructure, causal-interface transfer, mathematical state evolution, viability geometry, and engineering decision. Motion is schematic and not an empirical measurement.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 690" role="img" aria-labelledby="title desc">
+<title id="title">Dossiya Dakou — mathematical engineering research portrait</title>
+<desc id="desc">Animated mathematical-art research portrait separating physical Power and Transportation topology, causal interfaces, and schematic state-space viability geometry. Vector field, level sets and motion are explanatory visual mathematics, not measured infrastructure telemetry.</desc>
 <style>
-:root{--bg:#fffdfa;--panel:#ffffff;--ink:#0d1117;--muted:#57606a;--line:#d8d3c8;--gold:#9a6700;--blue:#2f6fda;--soft:#f4f1e8}
+:root{--bg:#fbfaf7;--panel:#ffffff;--ink:#11161d;--muted:#606a76;--line:#d8d4cb;--gold:#9a6a12;--blue:#316fc7;--soft:#f3f0e8;--ghost:#eae6dc}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
-.k{font-size:13px;font-weight:800;letter-spacing:.11em} .h{font-size:28px;font-weight:800} .v{font-size:20px;font-weight:750}
-.m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)} .math{font-family:Georgia,"Times New Roman",serif;font-size:21px}
-.flow-gold{stroke:var(--gold);stroke-dasharray:10 12;animation:flowGold 2.8s linear infinite}
-.flow-blue{stroke:var(--blue);stroke-dasharray:9 12;animation:flowBlue 3.4s linear infinite}
-.pulse-gold{animation:pulseGold 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.pulse-blue{animation:pulseBlue 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.latest{animation:latestPulse 3.2s ease-in-out infinite}
-@keyframes flowGold{to{stroke-dashoffset:-44}}
-@keyframes flowBlue{to{stroke-dashoffset:-42}}
-@keyframes pulseGold{0%,100%{opacity:.48;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
-@keyframes pulseBlue{0%,100%{opacity:.58;transform:scale(.97)}50%{opacity:1;transform:scale(1.03)}}
-@keyframes latestPulse{0%,100%{stroke-opacity:.42}50%{stroke-opacity:1}}
+.k{font-size:12px;font-weight:800;letter-spacing:.14em} .h{font-size:30px;font-weight:780} .hero{font-size:45px;font-weight:820;letter-spacing:-.025em}
+.v{font-size:19px;font-weight:720} .m{font-size:15px;fill:var(--muted)} .s{font-size:12px;fill:var(--muted)}
+.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:22px} .math-sm{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:16px}
+.flow-gold{stroke:var(--gold);stroke-dasharray:10 13;animation:flowGold 3.1s linear infinite}
+.flow-blue{stroke:var(--blue);stroke-dasharray:9 13;animation:flowBlue 3.8s linear infinite}
+.pulse-gold{animation:pulseGold 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.pulse-blue{animation:pulseBlue 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.latest{animation:latestPulse 3.4s ease-in-out infinite}
+.level-set{fill:none;stroke:var(--blue)}
+@keyframes flowGold{to{stroke-dashoffset:-46}}
+@keyframes flowBlue{to{stroke-dashoffset:-44}}
+@keyframes pulseGold{0%,100%{opacity:.52;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes pulseBlue{0%,100%{opacity:.60;transform:scale(.98)}50%{opacity:1;transform:scale(1.035)}}
+@keyframes latestPulse{0%,100%{stroke-opacity:.38}50%{stroke-opacity:1}}
 @media(prefers-reduced-motion:reduce){.flow-gold,.flow-blue,.pulse-gold,.pulse-blue,.latest{animation:none!important}}
 </style>
-<rect x="1" y="1" width="1398" height="568" rx="30" fill="var(--bg)" stroke="var(--line)"/>
-<text x="58" y="62" class="k" fill="var(--gold)">PHYSICS-GROUNDED MATHEMATICAL ENGINEERING</text>
-<text x="58" y="108" class="h">Physical reality → causality → mathematical structure → engineering decision</text>
-<text x="58" y="140" class="m">Current formal transition: Causal Mechanisms → Coupled Hybrid Multiscale Dynamics · public evidence observed 13 Sep 2026</text>
-<g transform="translate(70 205)">
-<text x="0" y="0" class="k">POWER</text>
-<line x1="10" y1="55" x2="116" y2="22" stroke="var(--ink)" stroke-width="2"/>
-<line x1="116" y1="22" x2="222" y2="58" stroke="var(--ink)" stroke-width="2"/>
-<line x1="116" y1="22" x2="128" y2="120" stroke="var(--ink)" stroke-width="2"/>
-<line x1="128" y1="120" x2="235" y2="128" stroke="var(--ink)" stroke-width="2"/>
-<line x1="222" y1="58" x2="235" y2="128" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="10" cy="55" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="116" cy="22" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="222" cy="58" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="128" cy="120" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="235" cy="128" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<path d="M11 55L116 22L222 58" fill="none" class="flow-gold" stroke-width="4" stroke-linecap="round"/>
-<text x="0" y="168" class="s">generation · grid · charging supply</text>
+<rect x="1" y="1" width="1598" height="688" rx="30" fill="var(--bg)" stroke="var(--line)"/>
+<path d="M42 172H1558" stroke="var(--line)" stroke-width="1"/>
+<text x="56" y="55" class="k" fill="var(--gold)">MATHEMATICAL ENGINEERING · LIVING RESEARCH PROFILE</text>
+<text x="56" y="108" class="hero">Dossiya Dakou</text>
+<text x="56" y="143" class="m">Physical reality → causal mechanism → mathematical structure → engineering decision</text>
+<text x="1544" y="55" text-anchor="end" class="s">public evidence · 13 Sep 2026</text>
+<g transform="translate(58 215)">
+<text x="0" y="0" class="k">01 · PHYSICAL REALITY</text>
+<text x="0" y="30" class="v">Power ↔ Transportation</text>
+<text x="0" y="54" class="s">components · flows · constraints · timescales</text>
+<line x1="24" y1="128" x2="118" y2="91" stroke="var(--ink)" stroke-width="1.8" opacity=".78"/>
+<line x1="118" y1="91" x2="214" y2="126" stroke="var(--ink)" stroke-width="1.8" opacity=".78"/>
+<line x1="118" y1="91" x2="119" y2="185" stroke="var(--ink)" stroke-width="1.8" opacity=".78"/>
+<line x1="119" y1="185" x2="229" y2="206" stroke="var(--ink)" stroke-width="1.8" opacity=".78"/>
+<line x1="214" y1="126" x2="229" y2="206" stroke="var(--ink)" stroke-width="1.8" opacity=".78"/>
+<line x1="24" y1="128" x2="35" y2="220" stroke="var(--ink)" stroke-width="1.8" opacity=".78"/>
+<line x1="35" y1="220" x2="119" y2="185" stroke="var(--ink)" stroke-width="1.8" opacity=".78"/>
+<circle cx="24" cy="128" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="118" cy="91" r="10" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="214" cy="126" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="119" cy="185" r="10" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="229" cy="206" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="35" cy="220" r="8" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<path d="M24 128L118 91L214 126L229 206" fill="none" class="flow-gold" stroke-width="3.5" stroke-linecap="round"/>
+<text x="0" y="263" class="s">power network</text>
+<g transform="translate(0 298)">
+<path d="M8 46C64 4 134 7 190 43S287 94 347 54" fill="none" stroke="var(--ink)" stroke-width="2" opacity=".86"/>
+<path d="M22 91C96 120 163 92 233 111S319 137 366 103" fill="none" stroke="var(--ink)" stroke-width="1.6" opacity=".55"/>
+<path d="M8 46C64 4 134 7 190 43S287 94 347 54" fill="none" class="flow-gold" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="8" cy="46" r="6.5" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.8"/>
+<circle cx="103" cy="17" r="6.5" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.8"/>
+<circle cx="190" cy="43" r="6.5" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.8"/>
+<circle cx="279" cy="82" r="6.5" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.8"/>
+<circle cx="347" cy="54" r="6.5" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.8"/>
+<circle cx="366" cy="103" r="6.5" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.8"/>
+<text x="0" y="147" class="s">mobility network</text>
+</g></g>
+<g transform="translate(505 258)">
+<text x="0" y="0" class="k" fill="var(--gold)">02 · CAUSAL INTERFACE</text>
+<text x="0" y="34" class="math" fill="var(--gold)">𝕀<tspan baseline-shift="sub" font-size="13">PT</tspan></text>
+<text x="58" y="32" class="s">mechanism · magnitude · sign · delay</text>
+<path d="M45 86V330" fill="none" class="flow-gold" stroke-width="4"/>
+<path d="M27 108L45 86L63 108M27 308L45 330L63 308" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="45" cy="208" r="18" fill="var(--gold)" class="pulse-gold"/>
+<path d="M80 208H182" class="flow-gold" stroke-width="3"/>
+<text x="87" y="190" class="s">graph → dynamics</text>
 </g>
-<g transform="translate(70 405)">
-<text x="0" y="0" class="k">TRANSPORTATION</text>
-<path d="M8 56C78 2 164 14 238 58S350 111 430 64" fill="none" stroke="var(--ink)" stroke-width="2"/>
-<path d="M18 102C118 142 207 105 298 129S394 154 440 118" fill="none" stroke="var(--ink)" stroke-width="2"/>
-<path d="M8 56C78 2 164 14 238 58S350 111 430 64" fill="none" class="flow-gold" stroke-width="4" stroke-linecap="round"/>
-<circle cx="8" cy="56" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="135" cy="26" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="238" cy="58" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="298" cy="129" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="430" cy="64" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="440" cy="118" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+<rect x="760" y="208" width="785" height="422" rx="24" fill="var(--panel)" stroke="var(--line)"/>
+<text x="792" y="246" class="k" fill="var(--blue)">03 · STATE / VIABILITY GEOMETRY</text>
+<text x="792" y="276" class="s">schematic phase portrait · level sets · admissible boundary · resilience margin</text>
+<g class="vector-field" opacity=".20">
+<path d="M1074.5 328.0L1093.2 318.4M1093.2 318.4L1091.6 321.4M1093.2 318.4L1089.9 318.0" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1121.8 326.7L1141.6 319.6M1141.6 319.6L1139.5 322.4M1141.6 319.6L1138.3 318.8" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1169.1 325.0L1189.8 321.3M1189.8 321.3L1187.3 323.7M1189.8 321.3L1186.7 319.9" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1216.7 322.9L1237.7 323.4M1237.7 323.4L1234.9 325.2M1237.7 323.4L1234.9 321.5" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1264.8 320.5L1285.2 325.8M1285.2 325.8L1282.0 326.9M1285.2 325.8L1282.9 323.2" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1313.5 318.2L1332.0 328.1M1332.0 328.1L1328.7 328.4M1332.0 328.1L1330.4 325.1" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1362.6 316.3L1378.5 330.0M1378.5 330.0L1375.2 329.6M1378.5 330.0L1377.6 326.7" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1411.8 315.0L1424.9 331.3M1424.9 331.3L1421.7 330.3M1424.9 331.3L1424.6 328.0" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1460.8 314.1L1471.4 332.2M1471.4 332.2L1468.3 330.8M1471.4 332.2L1471.6 328.9" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1075.9 376.3L1091.9 362.7M1091.9 362.7L1091.0 366.0M1091.9 362.7L1088.5 363.1" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1122.9 375.2L1140.5 363.8M1140.5 363.8L1139.1 366.9M1140.5 363.8L1137.1 363.7" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1169.7 373.5L1189.2 365.5M1189.2 365.5L1187.3 368.3M1189.2 365.5L1185.8 364.8" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1216.8 370.7L1237.7 368.3M1237.7 368.3L1235.1 370.5M1237.7 368.3L1234.6 366.7" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1264.8 366.9L1285.2 372.1M1285.2 372.1L1282.0 373.3M1285.2 372.1L1282.9 369.6" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1314.3 363.3L1331.2 375.7M1331.2 375.7L1327.8 375.6M1331.2 375.7L1330.1 372.5" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1364.4 361.0L1376.7 378.0M1376.7 378.0L1373.5 376.8M1376.7 378.0L1376.6 374.6" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1414.2 359.9L1422.5 379.1M1422.5 379.1L1419.6 377.3M1422.5 379.1L1423.1 375.8" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1463.4 359.4L1468.8 379.6M1468.8 379.6L1466.3 377.4M1468.8 379.6L1469.9 376.4" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1078.6 424.9L1089.2 406.8M1089.2 406.8L1089.4 410.1M1089.2 406.8L1086.1 408.2" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1125.8 424.6L1137.5 407.1M1137.5 407.1L1137.5 410.5M1137.5 407.1L1134.4 408.4" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1172.6 423.8L1186.3 407.9M1186.3 407.9L1185.9 411.2M1186.3 407.9L1183.0 408.8" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1218.4 421.6L1236.0 410.1M1236.0 410.1L1234.7 413.2M1236.0 410.1L1232.6 410.1" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1264.8 413.2L1285.2 418.5M1285.2 418.5L1282.0 419.6M1285.2 418.5L1282.9 415.9" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1318.6 406.2L1326.9 425.5M1326.9 425.5L1324.1 423.6M1326.9 425.5L1327.6 422.1" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1369.6 405.4L1371.5 426.3M1371.5 426.3L1369.3 423.6M1371.5 426.3L1373.1 423.3" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1418.8 405.3L1417.9 426.3M1417.9 426.3L1416.1 423.4M1417.9 426.3L1419.9 423.6" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1467.3 405.4L1464.9 426.3M1464.9 426.3L1463.4 423.3M1464.9 426.3L1467.1 423.7" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1082.7 472.6L1085.1 451.7M1085.1 451.7L1086.6 454.7M1085.1 451.7L1082.9 454.3" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1131.2 472.7L1132.1 451.7M1132.1 451.7L1133.9 454.6M1132.1 451.7L1130.1 454.4" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1180.4 472.6L1178.5 451.7M1178.5 451.7L1180.7 454.4M1178.5 451.7L1176.9 454.7" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1231.4 471.8L1223.1 452.5M1223.1 452.5L1225.9 454.4M1223.1 452.5L1222.4 455.9" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1285.2 464.8L1264.8 459.5M1264.8 459.5L1268.0 458.4M1264.8 459.5L1267.1 462.1" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1331.6 456.4L1314.0 467.9M1314.0 467.9L1315.3 464.8M1314.0 467.9L1317.4 467.9" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1377.4 454.2L1363.7 470.1M1363.7 470.1L1364.1 466.8M1363.7 470.1L1367.0 469.2" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1424.2 453.4L1412.5 470.9M1412.5 470.9L1412.5 467.5M1412.5 470.9L1415.6 469.6" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1471.4 453.1L1460.8 471.2M1460.8 471.2L1460.6 467.9M1460.8 471.2L1463.9 469.8" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1086.6 518.6L1081.2 498.4M1081.2 498.4L1083.7 500.6M1081.2 498.4L1080.1 501.6" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1135.8 518.1L1127.5 498.9M1127.5 498.9L1130.4 500.7M1127.5 498.9L1126.9 502.2" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1185.6 517.0L1173.3 500.0M1173.3 500.0L1176.5 501.2M1173.3 500.0L1173.4 503.4" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1235.7 514.7L1218.8 502.3M1218.8 502.3L1222.2 502.4M1218.8 502.3L1219.9 505.5" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1285.2 511.1L1264.8 505.9M1264.8 505.9L1268.0 504.7M1264.8 505.9L1267.1 508.4" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1333.2 507.3L1312.3 509.7M1312.3 509.7L1314.9 507.5M1312.3 509.7L1315.4 511.3" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1380.3 504.5L1360.8 512.5M1360.8 512.5L1362.7 509.7M1360.8 512.5L1364.2 513.2" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1427.1 502.8L1409.5 514.2M1409.5 514.2L1410.9 511.1M1409.5 514.2L1412.9 514.3" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1474.1 501.7L1458.1 515.3M1458.1 515.3L1459.0 512.0M1458.1 515.3L1461.5 514.9" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1089.2 563.9L1078.6 545.8M1078.6 545.8L1081.7 547.2M1078.6 545.8L1078.4 549.1" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1138.2 563.0L1125.1 546.7M1125.1 546.7L1128.3 547.7M1125.1 546.7L1125.4 550.0" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1187.4 561.7L1171.5 548.0M1171.5 548.0L1174.8 548.4M1171.5 548.0L1172.4 551.3" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1236.5 559.8L1218.0 549.9M1218.0 549.9L1221.3 549.6M1218.0 549.9L1219.6 552.9" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1285.2 557.5L1264.8 552.2M1264.8 552.2L1268.0 551.1M1264.8 552.2L1267.1 554.8" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1333.3 555.1L1312.3 554.6M1312.3 554.6L1315.1 552.8M1312.3 554.6L1315.1 556.5" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1380.9 553.0L1360.2 556.7M1360.2 556.7L1362.7 554.3M1360.2 556.7L1363.3 558.1" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1428.2 551.3L1408.4 558.4M1408.4 558.4L1410.5 555.6M1408.4 558.4L1411.7 559.2" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
+<path d="M1475.5 550.0L1456.8 559.6M1456.8 559.6L1458.4 556.6M1456.8 559.6L1460.1 560.0" fill="none" stroke="var(--blue)" stroke-width="1.05"/>
 </g>
-<g transform="translate(420 224)">
-<text x="0" y="0" class="k" fill="var(--gold)">CAUSAL INTERFACE</text>
-<path d="M70 34V216" fill="none" class="flow-gold" stroke-width="4"/>
-<path d="M47 58L70 34L93 58M47 192L70 216L93 192" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="70" cy="125" r="15" fill="var(--gold)" class="pulse-gold"/>
-<text x="106" y="111" class="math" fill="var(--gold)">I<tspan baseline-shift="sub" font-size="12">PT</tspan></text>
-<text x="106" y="140" class="s">mechanism · sign · delay</text>
-</g>
-<line x1="624" y1="182" x2="624" y2="524" stroke="var(--line)"/>
-<g transform="translate(690 205)">
-<text x="0" y="0" class="k" fill="var(--blue)">MATHEMATICAL STATE</text>
-<text x="0" y="29" class="s">schematic state-space trajectory constrained by engineering admissibility</text>
-<path d="M35 112C120 37 284 45 369 128C438 195 422 305 330 346C233 390 96 360 42 271C4 208 7 144 35 112Z" fill="var(--soft)" stroke="var(--blue)" stroke-width="2"/>
-<path d="M86 302C132 254 160 213 202 194C247 174 286 193 296 231C307 272 266 294 225 278C197 267 187 239 200 215" fill="none" stroke="var(--blue)" stroke-width="2.4" opacity=".30"/>
-<path d="M86 302C132 254 160 213 202 194C247 174 286 193 296 231C307 272 266 294 225 278C197 267 187 239 200 215" fill="none" class="flow-blue" stroke-width="4" stroke-linecap="round"/>
-<circle cx="200" cy="215" r="9" fill="var(--blue)" class="pulse-blue"/>
-<line x1="200" y1="215" x2="88" y2="176" stroke="var(--gold)" stroke-width="2" stroke-dasharray="5 7"/>
-<text x="42" y="169" class="math" fill="var(--gold)">ρ<tspan baseline-shift="sub" font-size="12">g</tspan></text>
-<text x="334" y="116" class="math" fill="var(--blue)">∂V</text>
-<text x="105" y="332" class="math">Y(t)</text>
-<text x="298" y="338" class="s">viable region</text>
-<path d="M438 226H554" class="flow-gold" stroke-width="3"/>
-<text x="456" y="211" class="k" fill="var(--gold)">DECISION</text>
-<text x="474" y="263" class="math" fill="var(--gold)">u*</text>
-</g>
-<text x="58" y="548" class="s">Motion encodes schematic causal transfer and state evolution; it is not a measured flow, calibrated trajectory, or empirical validation claim.</text>
+<path d="M1463.0,442.9L1465.2,451.8L1465.7,460.6L1464.5,469.1L1461.6,477.4L1457.2,485.1L1451.5,492.4L1444.6,499.1L1436.7,505.2L1428.2,510.9L1419.2,516.0L1409.7,520.8L1400.0,525.3L1390.0,529.5L1379.7,533.5L1369.1,537.3L1358.2,540.9L1347.0,544.2L1335.4,547.2L1323.5,549.8L1311.3,552.1L1299.0,553.8L1286.5,555.2L1274.0,556.1L1261.6,556.6L1249.3,556.8L1237.1,556.7L1225.0,556.3L1213.0,555.7L1201.0,554.9L1189.1,553.8L1177.1,552.3L1165.2,550.4L1153.4,547.9L1141.9,544.7L1130.8,540.7L1120.4,535.8L1110.9,530.0L1102.6,523.4L1095.7,515.9L1090.2,507.7L1086.4,499.0L1084.1,490.0L1083.2,480.7L1083.6,471.5L1085.1,462.5L1087.3,453.7L1090.0,445.2L1093.0,437.1L1096.0,429.2L1098.9,421.6L1101.6,414.3L1104.2,407.0L1106.9,399.8L1109.6,392.7L1112.7,385.6L1116.3,378.6L1120.6,371.8L1125.6,365.2L1131.6,358.9L1138.4,352.9L1146.0,347.4L1154.5,342.4L1163.6,337.8L1173.2,333.7L1183.4,330.0L1193.8,326.7L1204.6,323.8L1215.6,321.1L1226.8,318.8L1238.2,316.8L1249.8,315.3L1261.6,314.2L1273.5,313.7L1285.4,313.8L1297.2,314.8L1308.8,316.5L1320.0,319.1L1330.7,322.5L1340.8,326.7L1350.2,331.5L1359.0,336.9L1367.1,342.7L1374.7,348.9L1382.0,355.2L1389.1,361.6L1396.1,368.0L1403.3,374.5L1410.6,381.1L1418.2,387.8L1425.9,394.7L1433.6,401.9L1441.0,409.5L1448.0,417.4L1454.2,425.6L1459.2,434.2Z" class="level-set" stroke-width="2.4" opacity="0.62"/>
+<path d="M1434.4,441.8L1436.0,449.5L1436.0,457.1L1434.5,464.5L1431.6,471.6L1427.3,478.3L1421.7,484.4L1415.2,490.1L1407.9,495.2L1400.1,499.7L1391.9,503.9L1383.5,507.6L1375.0,511.1L1366.4,514.4L1357.7,517.6L1349.0,520.7L1340.0,523.6L1330.9,526.5L1321.5,529.1L1311.9,531.6L1302.0,533.8L1291.9,535.7L1281.6,537.2L1271.2,538.3L1260.8,539.0L1250.4,539.4L1240.1,539.4L1229.9,539.1L1219.8,538.5L1209.9,537.6L1200.0,536.5L1190.3,535.0L1180.7,533.1L1171.3,530.7L1162.1,527.9L1153.4,524.4L1145.2,520.2L1137.8,515.4L1131.3,509.9L1125.8,503.7L1121.6,497.0L1118.5,489.8L1116.7,482.4L1116.0,474.8L1116.4,467.1L1117.5,459.6L1119.3,452.2L1121.4,445.1L1123.6,438.2L1125.8,431.5L1127.9,425.0L1129.7,418.7L1131.4,412.4L1133.0,406.1L1134.6,399.8L1136.5,393.6L1138.8,387.3L1141.7,381.2L1145.3,375.3L1149.8,369.7L1155.2,364.4L1161.4,359.6L1168.5,355.3L1176.3,351.5L1184.6,348.3L1193.5,345.6L1202.6,343.3L1212.0,341.5L1221.6,340.0L1231.3,338.8L1241.0,337.8L1250.9,337.2L1260.8,336.9L1270.7,336.9L1280.6,337.3L1290.5,338.1L1300.3,339.5L1309.8,341.4L1318.9,343.9L1327.7,346.9L1336.1,350.5L1343.9,354.5L1351.3,358.8L1358.3,363.5L1365.0,368.4L1371.5,373.4L1377.9,378.5L1384.3,383.8L1390.7,389.2L1397.3,394.7L1403.8,400.5L1410.3,406.6L1416.6,413.0L1422.4,419.8L1427.4,426.9L1431.5,434.3Z" class="level-set" stroke-width="1.2" opacity="0.17"/>
+<path d="M1405.6,440.8L1406.4,447.2L1406.1,453.5L1404.4,459.8L1401.6,465.7L1397.6,471.3L1392.6,476.4L1386.9,481.1L1380.5,485.3L1373.7,489.0L1366.6,492.3L1359.5,495.3L1352.4,498.1L1345.3,500.7L1338.3,503.3L1331.2,505.8L1324.2,508.3L1317.0,510.7L1309.6,513.1L1302.0,515.4L1294.2,517.5L1286.1,519.3L1277.8,520.8L1269.3,521.9L1260.8,522.7L1252.2,523.1L1243.8,523.1L1235.4,522.7L1227.1,522.0L1219.1,521.0L1211.2,519.7L1203.5,518.2L1196.0,516.3L1188.8,514.1L1181.8,511.5L1175.1,508.5L1168.9,505.0L1163.3,501.1L1158.3,496.6L1154.0,491.8L1150.6,486.5L1148.1,480.8L1146.5,474.9L1145.8,468.9L1145.8,462.8L1146.4,456.7L1147.5,450.7L1148.8,444.9L1150.3,439.2L1151.7,433.7L1152.9,428.2L1154.0,422.8L1155.0,417.5L1155.9,412.1L1156.8,406.7L1157.9,401.3L1159.4,395.9L1161.4,390.6L1164.1,385.5L1167.6,380.6L1171.8,376.1L1177.0,372.0L1182.8,368.4L1189.4,365.4L1196.5,362.9L1204.1,360.9L1211.9,359.5L1220.0,358.5L1228.1,357.8L1236.3,357.4L1244.5,357.2L1252.6,357.2L1260.8,357.4L1268.9,357.8L1277.1,358.3L1285.2,359.1L1293.2,360.1L1301.2,361.5L1308.9,363.2L1316.4,365.3L1323.7,367.7L1330.6,370.5L1337.2,373.7L1343.5,377.1L1349.5,380.7L1355.2,384.6L1360.8,388.6L1366.3,392.8L1371.7,397.1L1377.1,401.7L1382.4,406.4L1387.5,411.5L1392.4,416.8L1396.8,422.4L1400.6,428.3L1403.6,434.5Z" class="level-set" stroke-width="1.2" opacity="0.23"/>
+<path d="M1375.0,440.0L1375.3,445.0L1374.7,450.0L1373.1,454.9L1370.6,459.6L1367.3,464.0L1363.2,468.1L1358.5,471.8L1353.4,475.1L1348.0,478.1L1342.4,480.7L1336.8,483.1L1331.2,485.3L1325.8,487.4L1320.4,489.5L1315.1,491.5L1309.8,493.6L1304.4,495.6L1298.9,497.7L1293.2,499.6L1287.3,501.4L1281.1,503.0L1274.7,504.4L1268.2,505.4L1261.5,506.0L1254.8,506.3L1248.2,506.2L1241.6,505.8L1235.2,505.0L1229.1,503.9L1223.1,502.6L1217.3,501.0L1211.8,499.3L1206.5,497.2L1201.4,495.0L1196.6,492.5L1192.2,489.7L1188.0,486.7L1184.3,483.3L1181.1,479.7L1178.4,475.8L1176.3,471.6L1174.8,467.2L1173.9,462.7L1173.5,458.2L1173.5,453.6L1173.9,449.0L1174.5,444.5L1175.2,440.0L1175.9,435.6L1176.6,431.3L1177.2,426.9L1177.6,422.6L1178.1,418.2L1178.6,413.8L1179.3,409.4L1180.4,405.0L1181.8,400.6L1183.9,396.4L1186.6,392.4L1189.9,388.8L1194.0,385.5L1198.8,382.7L1204.1,380.4L1209.9,378.5L1216.0,377.2L1222.4,376.4L1229.0,375.9L1235.5,375.7L1242.1,375.8L1248.6,376.1L1255.1,376.5L1261.5,376.9L1267.9,377.4L1274.2,378.0L1280.6,378.6L1287.0,379.3L1293.3,380.2L1299.5,381.3L1305.7,382.6L1311.7,384.2L1317.5,386.1L1323.1,388.2L1328.4,390.6L1333.4,393.2L1338.2,396.0L1342.8,399.0L1347.2,402.2L1351.4,405.6L1355.5,409.2L1359.4,413.0L1363.1,416.9L1366.5,421.1L1369.5,425.6L1372.0,430.2L1373.9,435.0Z" class="level-set" stroke-width="1.2" opacity="0.29"/>
+<path d="M1345.7,439.5L1345.6,443.2L1344.9,446.9L1343.6,450.5L1341.6,453.9L1339.1,457.2L1336.1,460.3L1332.6,463.1L1328.8,465.6L1324.9,467.9L1320.8,470.0L1316.8,471.8L1312.8,473.6L1308.8,475.2L1305.0,476.8L1301.2,478.5L1297.4,480.1L1293.6,481.7L1289.7,483.3L1285.6,484.9L1281.4,486.4L1276.9,487.7L1272.3,488.7L1267.5,489.5L1262.6,490.0L1257.6,490.1L1252.7,490.0L1247.9,489.5L1243.2,488.7L1238.7,487.6L1234.4,486.4L1230.4,484.9L1226.5,483.3L1222.8,481.6L1219.4,479.8L1216.1,477.8L1213.0,475.8L1210.1,473.5L1207.4,471.1L1205.0,468.6L1203.0,465.9L1201.2,463.0L1199.8,460.0L1198.7,456.8L1198.0,453.6L1197.6,450.4L1197.5,447.1L1197.5,443.8L1197.7,440.5L1197.9,437.2L1198.2,433.9L1198.4,430.6L1198.7,427.3L1199.0,424.0L1199.3,420.6L1199.9,417.2L1200.7,413.8L1201.8,410.5L1203.4,407.3L1205.5,404.3L1208.1,401.5L1211.2,399.0L1214.9,396.9L1219.0,395.2L1223.4,393.9L1228.2,393.1L1233.1,392.6L1238.1,392.4L1243.1,392.5L1248.0,392.8L1253.0,393.2L1257.8,393.7L1262.6,394.2L1267.3,394.7L1272.0,395.2L1276.7,395.6L1281.5,396.1L1286.3,396.7L1291.1,397.3L1295.8,398.1L1300.5,399.0L1305.1,400.2L1309.5,401.6L1313.7,403.2L1317.6,405.0L1321.4,407.0L1324.8,409.2L1328.1,411.6L1331.1,414.1L1333.9,416.7L1336.5,419.6L1338.9,422.5L1341.0,425.7L1342.8,429.0L1344.2,432.4L1345.2,435.9Z" class="level-set" stroke-width="1.2" opacity="0.34"/>
+<path d="M1427.2,476.0L1423.2,482.1L1418.8,487.9L1413.8,493.5L1408.4,498.8L1402.6,503.9L1396.3,508.6L1389.7,513.0L1382.7,517.0L1375.5,520.7L1368.0,524.1L1360.2,527.1L1352.3,529.7L1344.2,531.9L1335.9,533.7L1327.6,535.2L1319.2,536.2L1310.9,536.9L1302.5,537.2L1294.2,537.1L1286.0,536.7L1277.9,535.9L1270.0,534.7L1262.3,533.2L1254.8,531.4L1247.5,529.2L1240.6,526.8L1233.9,524.0L1227.5,521.0L1221.5,517.8L1215.8,514.3L1210.6,510.6L1205.7,506.6L1201.3,502.6L1197.2,498.3L1193.6,494.0L1190.5,489.5L1187.8,484.9L1185.5,480.3L1183.7,475.6L1182.3,470.9L1181.4,466.2L1181.0,461.5L1180.9,456.9L1181.3,452.3L1182.2,447.7L1183.4,443.3L1185.0,439.0L1187.0,434.8L1189.4,430.7L1192.1,426.9L1195.1,423.1L1198.4,419.6L1202.0,416.3L1205.9,413.2L1210.0,410.3L1214.3,407.6L1218.8,405.1L1223.5,402.9L1228.3,401.0L1233.2,399.3L1238.2,397.8L1243.3,396.6L1248.4,395.6L1253.5,394.9L1258.6,394.4L1263.7,394.2L1268.7,394.2L1273.6,394.4L1278.5,394.9L1283.2,395.5L1287.8,396.4L1292.2,397.5L1296.5,398.7L1300.5,400.2L1304.4,401.8L1308.0,403.5L1311.4,405.4L1314.6,407.4L1317.5,409.5L1320.2,411.8L1322.6,414.1L1324.8,416.4L1326.6,418.9L1328.2,421.3L1329.6,423.8L1330.7,426.4L1331.5,428.9L1332.0,431.4L1332.3,433.8L1332.4,436.3L1332.2,438.7L1331.7,441.0L1331.1,443.3L1330.3,445.4L1329.2,447.5L1328.0,449.5L1326.6,451.4L1325.0,453.2L1323.3,454.8L1321.5,456.3L1319.6,457.7L1317.6,459.0L1315.5,460.1L1313.3,461.1L1311.1,461.9L1308.9,462.7L1306.6,463.2L1304.4,463.7L1302.1,464.0L1300.0,464.2L1297.8,464.2L1295.7,464.2L1293.7,464.0L1291.8,463.7L1289.9,463.4L1288.2,462.9L1286.6,462.3L1285.1,461.7L1283.7,461.0" fill="none" stroke="var(--blue)" stroke-width="1.7" opacity=".24"/>
+<path d="M1427.2,476.0L1423.2,482.1L1418.8,487.9L1413.8,493.5L1408.4,498.8L1402.6,503.9L1396.3,508.6L1389.7,513.0L1382.7,517.0L1375.5,520.7L1368.0,524.1L1360.2,527.1L1352.3,529.7L1344.2,531.9L1335.9,533.7L1327.6,535.2L1319.2,536.2L1310.9,536.9L1302.5,537.2L1294.2,537.1L1286.0,536.7L1277.9,535.9L1270.0,534.7L1262.3,533.2L1254.8,531.4L1247.5,529.2L1240.6,526.8L1233.9,524.0L1227.5,521.0L1221.5,517.8L1215.8,514.3L1210.6,510.6L1205.7,506.6L1201.3,502.6L1197.2,498.3L1193.6,494.0L1190.5,489.5L1187.8,484.9L1185.5,480.3L1183.7,475.6L1182.3,470.9L1181.4,466.2L1181.0,461.5L1180.9,456.9L1181.3,452.3L1182.2,447.7L1183.4,443.3L1185.0,439.0L1187.0,434.8L1189.4,430.7L1192.1,426.9L1195.1,423.1L1198.4,419.6L1202.0,416.3L1205.9,413.2L1210.0,410.3L1214.3,407.6L1218.8,405.1L1223.5,402.9L1228.3,401.0L1233.2,399.3L1238.2,397.8L1243.3,396.6L1248.4,395.6L1253.5,394.9L1258.6,394.4L1263.7,394.2L1268.7,394.2L1273.6,394.4L1278.5,394.9L1283.2,395.5L1287.8,396.4L1292.2,397.5L1296.5,398.7L1300.5,400.2L1304.4,401.8L1308.0,403.5L1311.4,405.4L1314.6,407.4L1317.5,409.5L1320.2,411.8L1322.6,414.1L1324.8,416.4L1326.6,418.9L1328.2,421.3L1329.6,423.8L1330.7,426.4L1331.5,428.9L1332.0,431.4L1332.3,433.8L1332.4,436.3L1332.2,438.7L1331.7,441.0L1331.1,443.3L1330.3,445.4L1329.2,447.5L1328.0,449.5L1326.6,451.4L1325.0,453.2L1323.3,454.8L1321.5,456.3L1319.6,457.7L1317.6,459.0L1315.5,460.1L1313.3,461.1L1311.1,461.9L1308.9,462.7L1306.6,463.2L1304.4,463.7L1302.1,464.0L1300.0,464.2L1297.8,464.2L1295.7,464.2L1293.7,464.0L1291.8,463.7L1289.9,463.4L1288.2,462.9L1286.6,462.3L1285.1,461.7L1283.7,461.0" fill="none" class="flow-blue" stroke-width="4.2" stroke-linecap="round"/>
+<circle cx="1283.7" cy="461.0" r="9" fill="var(--blue)" class="pulse-blue"/>
+<path d="M1283.7 461.0L1101.0 402.0" stroke="var(--gold)" stroke-width="2" stroke-dasharray="5 7" opacity=".9"/>
+<text x="1092.0" y="392.0" class="math-sm" fill="var(--gold)">ρ<tspan baseline-shift="sub" font-size="10">g</tspan></text>
+<text x="1417" y="342" class="math-sm" fill="var(--blue)">∂𝒱</text>
+<text x="1200" y="585" class="math-sm">Y(t)</text>
+<text x="794" y="344" class="math-sm">Ẏ = F<tspan baseline-shift="sub" font-size="10">𝒢</tspan>(Y,u,η;θ)</text>
+<text x="794" y="382" class="math-sm">Y ∈ 𝒱<tspan baseline-shift="sub" font-size="10">sus</tspan></text>
+<text x="794" y="420" class="math-sm" fill="var(--gold)">ρ<tspan baseline-shift="sub" font-size="10">g</tspan> = d<tspan baseline-shift="sub" font-size="10">g</tspan>(Y,∂𝒱)</text>
+<path d="M844 478H990" class="flow-gold" stroke-width="3"/>
+<text x="794" y="466" class="k" fill="var(--gold)">04 · DECISION</text>
+<text x="872" y="512" class="math" fill="var(--gold)">u*</text>
+<text x="794" y="563" class="s">vector field + level sets are deterministic visual mathematics, not fitted data</text>
+<text x="794" y="589" class="s">current research transition · Causal Mechanisms → Coupled Hybrid Multiscale Dynamics</text>
+<text x="56" y="660" class="s">Visual grammar: ink = physical system · gold = causal/decision structure · blue = mathematical state/dynamics. Motion is not a measured flow or empirical validation.</text>
 </svg>
