@@ -3,7 +3,7 @@ name: Update living research profile
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 2 * * *"
+    - cron: "17 */6 * * *"
   push:
     branches: [main]
     paths:
@@ -60,10 +60,10 @@ jobs:
       - name: Validate governed source state
         run: python scripts/validate_profile.py --input-only
 
-      - name: Render deterministic SVG profile assets
+      - name: Render self-contained animated SVG profile assets
         run: python scripts/render_research_state.py
 
-      - name: Validate generated profile
+      - name: Validate generated profile and semantic motion
         run: python scripts/validate_profile.py
 
       - name: Verify pull-request rendering is deterministic
