@@ -265,8 +265,8 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
     viability(parts)
 
     parts.extend([
-        '<text x="48" y="713" class="legend">Green solid path = admissible service · Ochre dashed rail = causal interface · Red dashed boundary = criticality · Charcoal = physical topology</text>',
-        '<text x="1550" y="713" text-anchor="end" class="legend">Coordinates and depth are explanatory and uncalibrated.</text>',
+        '<text x="48" y="708" class="legend">Green solid path = admissible service · Ochre dashed rail = causal interface · Red dashed boundary = criticality · Charcoal = physical topology</text>',
+        '<text x="48" y="738" class="legend">Coordinates and depth are explanatory and uncalibrated.</text>',
         '</svg>',
     ])
     return "\n".join(parts) + "\n"
