@@ -37,29 +37,37 @@ def validate_svg(name: str) -> None:
         "TRANSPORTATION NETWORK",
         "SHARED PHYSICAL INTERFACE",
         "STATE / VIABILITY GEOMETRY",
-        "C₁ · EV charging asset",
-        "∂𝒱",
+        "C1 · EV charging asset",
+        "∂V",
         "STATIC 3D SCHEMATIC · NOT GIS ELEVATION",
         "Coordinates and depth are explanatory and uncalibrated.",
     ):
         require(phrase in text, f"{name}: missing governed 3D semantic: {phrase}")
 
     # SVG text is not TeX. Raw underscore notation was visibly broken in GitHub.
-    for broken in ("𝓖_", "𝒢_", "𝕀_", "ρ_", "d_", "F_"):
+    for broken in ("G_", "I_", "ρ_", "d_", "F_"):
         require(broken not in text, f"{name}: raw TeX-like underscore leaked into SVG text: {broken}")
-    require(text.count('baseline-shift="sub"') >= 6, f"{name}: mathematical subscripts must use SVG baseline shift")
+
+    # Cross-renderer portability: avoid unstable script-plane math glyphs and
+    # baseline-shift. Subscripts must use explicit dy offsets.
+    for unstable in ("𝒢", "𝕀", "𝒱", 'baseline-shift="sub"'):
+        require(unstable not in text, f"{name}: unstable SVG math construct present: {unstable}")
+    require(text.count('dy="5" font-size="13"') >= 6, f"{name}: portable explicit SVG subscripts missing")
+    require('font-family:"DejaVu Serif","Liberation Serif",serif' in text, f"{name}: portable math font stack missing")
 
     # Collision-safe architecture: layer labels, interface callout and viability geometry
-    # must occupy separate governed containers.
+    # must occupy separate governed containers. Runtime geometry checks are performed
+    # separately by validate_network_3d_runtime.py.
     require('class="label-box"' in text, f"{name}: layer-label containers missing")
     require('class="interface-box"' in text, f"{name}: offset interface callout missing")
     require('class="side-panel"' in text, f"{name}: independent viability panel missing")
     require(text.count('class="label-box"') == 2, f"{name}: exactly two physical layer labels required")
 
-    # Minimum profile-scale legibility.
-    require(".node{font-size:13px" in text, f"{name}: node labels too small for GitHub profile scale")
-    require(".small{font-size:15px" in text, f"{name}: explanatory text too small for GitHub profile scale")
-    require(".equation{font-size:20px" in text, f"{name}: equations too small for GitHub profile scale")
+    # Minimum source sizes. The runtime validator converts these to effective pixels
+    # at the observed ~980 px GitHub profile width.
+    require(".node{font-size:16px" in text, f"{name}: node labels below governed source size")
+    require(".small{font-size:17px" in text, f"{name}: explanatory text below governed source size")
+    require(".equation{font-size:20px" in text, f"{name}: equations below governed source size")
 
     require("stroke-dasharray" in text, f"{name}: non-color semantic redundancy missing")
     require("var(--yellow)" in text and "var(--green)" in text and "var(--red)" in text, f"{name}: semantic palette missing")
@@ -81,7 +89,7 @@ def main() -> int:
     validate_svg("coupled-network-3d-light.svg")
     validate_svg("coupled-network-3d-dark.svg")
     validate_readme()
-    print("3D HERO VALIDATION: PASS — mathematics, legibility, collision-safe layout, multilayer semantics and evidence boundaries are consistent.")
+    print("3D HERO VALIDATION: PASS — portable math, source legibility, collision-safe architecture, multilayer semantics and evidence boundaries are consistent.")
     return 0
 
 
