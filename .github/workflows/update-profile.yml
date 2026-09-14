@@ -25,6 +25,7 @@ on:
       - "scripts/validate_profile.py"
       - "scripts/validate_network.py"
       - "scripts/validate_network_3d.py"
+      - "scripts/validate_network_3d_runtime.py"
       - "scripts/validate_visual_palette.py"
       - "scripts/validate_profile_layout.py"
       - ".github/workflows/update-profile.yml"
@@ -49,6 +50,7 @@ on:
       - "scripts/validate_profile.py"
       - "scripts/validate_network.py"
       - "scripts/validate_network_3d.py"
+      - "scripts/validate_network_3d_runtime.py"
       - "scripts/validate_visual_palette.py"
       - "scripts/validate_profile_layout.py"
       - "assets/generated/**"
@@ -76,6 +78,9 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
+      - name: Install visual runtime test dependencies
+        run: python -m pip install --disable-pip-version-check "CairoSVG==2.8.2" "Pillow==11.3.0"
 
       - name: Refresh allowlisted public evidence
         if: github.event_name != 'pull_request'
@@ -107,6 +112,18 @@ jobs:
       - name: Validate static 3D hero semantics
         run: python scripts/validate_network_3d.py
 
+      - name: Runtime-render 3D hero at GitHub widths
+        run: python scripts/validate_network_3d_runtime.py
+
+      - name: Upload runtime-render previews
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3d-runtime-previews
+          path: artifacts/runtime-preview/*.png
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Validate generated research profile
         run: python scripts/validate_profile.py
 
@@ -123,7 +140,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           git diff --check
-          echo "Governed scientific state, network semantics, static 3D geometry, palette, container hierarchy and validators completed successfully."
+          echo "Governed scientific state, network semantics, runtime-rendered 3D geometry, palette, container hierarchy and validators completed successfully."
 
       - name: Commit meaningful profile changes only
         if: github.event_name != 'pull_request'
