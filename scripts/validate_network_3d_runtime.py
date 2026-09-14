@@ -2,9 +2,14 @@
 """Runtime render validation for the governed 3D GitHub profile hero.
 
 This test complements source/semantic validation by actually rasterizing the light and
- dark SVGs at representative GitHub widths, checking that the render is non-empty,
- preserving semantic colors, and keeping governed annotation containers disjoint from
- projected physical nodes. It also writes PNG previews for CI artifacts.
+dark SVGs at representative GitHub widths, checking that the render is non-empty,
+preserving semantic colors, and keeping governed annotation containers disjoint from
+projected physical nodes. It also writes PNG previews for CI artifacts.
+
+CairoSVG does not reliably resolve CSS custom properties in this SVG context, while
+GitHub's renderer does. The test therefore materializes the already-governed `:root`
+color variables into concrete hex values in an in-memory copy before rasterization.
+The repository SVG itself is not altered by this compatibility step.
 """
 
 from __future__ import annotations
@@ -65,6 +70,20 @@ def css_font_px(svg_text: str, selector: str) -> float:
     match = re.search(pattern, svg_text)
     require(match is not None, f"missing governed font size for .{selector}")
     return float(match.group(1))
+
+
+def materialize_css_vars(svg_text: str) -> str:
+    declarations = dict(re.findall(r"--([a-z0-9-]+):([^;}{]+)", svg_text, flags=re.IGNORECASE))
+    require(declarations, "runtime rasterizer could not find governed CSS custom properties")
+
+    def replace(match: re.Match[str]) -> str:
+        token = match.group(1)
+        require(token in declarations, f"runtime rasterizer found unresolved CSS token --{token}")
+        return declarations[token].strip()
+
+    resolved = re.sub(r"var\(--([a-z0-9-]+)\)", replace, svg_text, flags=re.IGNORECASE)
+    require("var(--" not in resolved, "runtime rasterizer left unresolved CSS variables")
+    return resolved
 
 
 def rgb(hex_value: str) -> tuple[int, int, int]:
@@ -135,15 +154,16 @@ def validate_profile_scale(svg_text: str, name: str) -> None:
     require(effective["layer"] >= 11.0, f"{name}: layer labels render below 11 px at 980 px GitHub width ({effective['layer']:.2f}px)")
 
 
-def render_and_validate(svg_path: Path, palette: dict, theme: str) -> None:
+def render_and_validate(svg_path: Path, svg_text: str, palette: dict, theme: str) -> None:
     PREVIEW.mkdir(parents=True, exist_ok=True)
     background = rgb(palette[theme]["bg"])
     semantic = [rgb(palette[theme][key]) for key in ("green", "red", "yellow")]
+    raster_source = materialize_css_vars(svg_text).encode("utf-8")
 
     for width in TARGET_WIDTHS:
         height = round(width * VIEW_H / VIEW_W)
         out = PREVIEW / f"{svg_path.stem}-{width}px.png"
-        cairosvg.svg2png(url=str(svg_path), write_to=str(out), output_width=width, output_height=height)
+        cairosvg.svg2png(bytestring=raster_source, write_to=str(out), output_width=width, output_height=height)
         with Image.open(out) as image:
             require(image.size == (width, height), f"{svg_path.name}: raster size mismatch at {width}px")
             require(image.getbbox() is not None, f"{svg_path.name}: blank raster at {width}px")
@@ -165,7 +185,7 @@ def validate(name: str, palette: dict, theme: str) -> None:
     root = ET.fromstring(text)
     validate_geometry(root, name)
     validate_profile_scale(text, name)
-    render_and_validate(path, palette, theme)
+    render_and_validate(path, text, palette, theme)
 
 
 def main() -> int:
