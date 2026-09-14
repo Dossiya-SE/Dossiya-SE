@@ -3,8 +3,9 @@
 
 The renderer is optimized for the actual GitHub profile width. Visual depth encodes
 multilayer separation only; it is not geography, elevation, telemetry, or a calibrated
-state coordinate. Mathematics in SVG text uses real SVG baseline-shifted subscripts
-instead of TeX-like underscore strings, because SVG text is not a TeX renderer.
+state coordinate. SVG mathematics uses renderer-portable serif symbols and explicit
+`dy` subscripts rather than TeX-like underscores, script-plane Unicode glyphs, or
+`baseline-shift`, all of which proved unstable across renderers.
 """
 
 from __future__ import annotations
@@ -31,9 +32,9 @@ def vars_for(p: dict) -> str:
     return ";".join(f"--{k.replace('_', '-')}:{p[k]}" for k in order)
 
 
-def sub(base: str, index: str, cls: str = "") -> str:
-    klass = f' class="{cls}"' if cls else ""
-    return f'{base}<tspan{klass} baseline-shift="sub" font-size="70%">{index}</tspan>'
+def sub(base: str, index: str) -> str:
+    # Explicit vertical offsets are more portable than SVG baseline-shift.
+    return f'{base}<tspan dy="5" font-size="13">{index}</tspan><tspan dy="-5"></tspan>'
 
 
 def project(u: float, v: float, z: float) -> tuple[float, float]:
@@ -111,13 +112,13 @@ def plane(parts: list[str], z: float) -> None:
 def layer_label(parts: list[str], *, power: bool) -> None:
     if power:
         x, y = 58, 205
-        title = f'POWER NETWORK {sub("𝒢", "P")}'
+        title = f'POWER NETWORK {sub("G", "P")}'
         subtitle = "electrical service topology"
         target = project(0.02, 0.04, 218)
     else:
         # The transport label sits in the inter-layer gap, not on top of O1 or a road node.
         x, y = 58, 465
-        title = f'TRANSPORTATION NETWORK {sub("𝒢", "T")}'
+        title = f'TRANSPORTATION NETWORK {sub("G", "T")}'
         subtitle = "mobility service topology"
         target = project(0.02, 0.04, 0)
 
@@ -151,9 +152,9 @@ def interface_callout(parts: list[str], p: tuple[float, float], t: tuple[float, 
     )
     parts.append(f'<rect x="{bx}" y="{by}" width="270" height="86" rx="15" class="interface-box"/>')
     parts.append(f'<text x="{bx+18}" y="{by+24}" class="eyebrow yellow-text">SHARED PHYSICAL INTERFACE</text>')
-    parts.append(f'<text x="{bx+18}" y="{by+51}" class="callout">C₁ · EV charging asset</text>')
+    parts.append(f'<text x="{bx+18}" y="{by+51}" class="callout">C1 · EV charging asset</text>')
     parts.append(
-        f'<text x="{bx+18}" y="{by+74}" class="math-small yellow-text">{sub("𝕀", "PT")} · Power ⇄ Transport</text>'
+        f'<text x="{bx+18}" y="{by+74}" class="math-small yellow-text">{sub("I", "PT")} · Power ⇄ Transport</text>'
     )
 
 
@@ -165,9 +166,9 @@ def viability(parts: list[str]) -> None:
 
     x0, y0 = 1080, 446
     parts.append(f'<path d="M{x0} {y0}L1465 515M{x0} {y0}L1250 302M{x0} {y0}L{x0} 255" class="axis"/>')
-    parts.append('<text x="1474" y="522" class="axis-label">x₁</text>')
-    parts.append('<text x="1256" y="298" class="axis-label">x₂</text>')
-    parts.append('<text x="1064" y="249" class="axis-label">x₃</text>')
+    parts.append('<text x="1474" y="522" class="axis-label">x1</text>')
+    parts.append('<text x="1256" y="298" class="axis-label">x2</text>')
+    parts.append('<text x="1064" y="249" class="axis-label">x3</text>')
 
     contours = [(1260, 438, 178, 61, .25), (1260, 410, 148, 51, .16), (1260, 382, 116, 40, .11)]
     for i, (cx, cy, rx, ry, op) in enumerate(contours):
@@ -178,8 +179,8 @@ def viability(parts: list[str]) -> None:
         )
 
     parts.append('<ellipse cx="1260" cy="438" rx="194" ry="70" fill="none" class="critical"/>')
-    parts.append('<text x="1430" y="405" class="math red-text">∂𝒱</text>')
-    parts.append('<text x="1300" y="472" class="math green-text">𝒱ₛᵤₛ</text>')
+    parts.append('<text x="1430" y="405" class="math red-text">∂V</text>')
+    parts.append(f'<text x="1300" y="472" class="math green-text">{sub("V", "sus")}</text>')
 
     parts.append('<circle cx="1214" cy="386" r="9" fill="var(--green)" stroke="var(--panel)" stroke-width="3"/>')
     parts.append('<text x="1180" y="365" class="math">Y(t)</text>')
@@ -190,10 +191,10 @@ def viability(parts: list[str]) -> None:
     parts.append('<polygon points="1332,331 1337,341 1348,342 1339,350 1342,361 1332,355 1322,361 1325,350 1316,342 1327,341" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="2.2"/>')
     parts.append('<text x="1352" y="350" class="math yellow-text">u*</text>')
 
-    parts.append(f'<text x="1050" y="566" class="equation">Ẏ = {sub("F", "𝒢")}(Y,u,η;θ)</text>')
-    parts.append('<text x="1050" y="598" class="equation green-text">Y(t) ∈ 𝒱ₛᵤₛ(t)</text>')
+    parts.append(f'<text x="1050" y="566" class="equation">dY/dt = {sub("F", "G")}(Y,u,η;θ)</text>')
+    parts.append(f'<text x="1050" y="598" class="equation green-text">Y(t) ∈ {sub("V", "sus")}(t)</text>')
     parts.append(
-        f'<text x="1050" y="630" class="equation red-text">{sub("ρ", "g")}(Y) = {sub("d", "g")}(Y,∂𝒱)</text>'
+        f'<text x="1050" y="630" class="equation red-text">{sub("ρ", "g")}(Y) = {sub("d", "g")}(Y,∂V)</text>'
     )
 
 
@@ -202,7 +203,7 @@ def render(power: dict, transport: dict, palette: dict, dark: bool) -> str:
     css = f'''<style>
 :root{{{vars_for(p)}}}
 text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}}
-.math,.equation,.math-small{{font-family:Georgia,"STIX Two Text","Times New Roman",serif}}
+.math,.equation,.math-small{{font-family:"DejaVu Serif","Liberation Serif",serif;font-style:italic}}
 .title{{font-size:38px;font-weight:820;letter-spacing:-.025em}}
 .subtitle{{font-size:17px;fill:var(--muted)}}
 .eyebrow{{font-size:13px;font-weight:800;letter-spacing:.12em;fill:var(--muted)}}
@@ -278,7 +279,7 @@ def main() -> int:
     palette = load("visual-palette.json")
     (OUT / "coupled-network-3d-light.svg").write_text(render(power, transport, palette, False), encoding="utf-8")
     (OUT / "coupled-network-3d-dark.svg").write_text(render(power, transport, palette, True), encoding="utf-8")
-    print("Rendered legible static isometric 3D network hero assets.")
+    print("Rendered portable, legible static isometric 3D network hero assets.")
     return 0
 
 
