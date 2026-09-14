@@ -139,6 +139,13 @@ def validate_geometry(root: ET.Element, name: str) -> None:
         require(not point_in(interface, x, y, pad=16), f"{name}: node {label} intrudes into interface-callout container")
         require(not point_in(side, x, y, pad=8), f"{name}: physical node {label} intrudes into viability panel")
 
+    # Footer statements must occupy separate baselines so long semantic text cannot
+    # collide with the calibration/evidence disclaimer at real GitHub widths.
+    legends = [t for t in root.findall(f".//{SVG_NS}text") if t.get("class") == "legend"]
+    require(len(legends) == 2, f"{name}: expected exactly two footer legend lines")
+    legend_y = sorted(as_float(t.get("y"), "legend y") for t in legends)
+    require(legend_y[1] - legend_y[0] >= 24, f"{name}: footer legend/disclaimer baselines are too close")
+
 
 def validate_profile_scale(svg_text: str, name: str) -> None:
     desktop = 980 / VIEW_W
@@ -192,7 +199,7 @@ def main() -> int:
     palette = json.loads((DATA / "visual-palette.json").read_text(encoding="utf-8"))
     validate("coupled-network-3d-light.svg", palette, "light")
     validate("coupled-network-3d-dark.svg", palette, "dark")
-    print("3D RUNTIME VALIDATION: PASS — rasterization, profile-scale legibility, semantic colors and collision geometry are valid.")
+    print("3D RUNTIME VALIDATION: PASS — rasterization, profile-scale legibility, semantic colors, collision geometry and footer separation are valid.")
     return 0
 
 
