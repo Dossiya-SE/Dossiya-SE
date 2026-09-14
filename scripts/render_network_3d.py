@@ -115,7 +115,8 @@ def layer_label(parts: list[str], *, power: bool) -> None:
         subtitle = "electrical service topology"
         target = project(0.02, 0.04, 218)
     else:
-        x, y = 58, 523
+        # The transport label sits in the inter-layer gap, not on top of O1 or a road node.
+        x, y = 58, 465
         title = f'TRANSPORTATION NETWORK {sub("𝒢", "T")}'
         subtitle = "mobility service topology"
         target = project(0.02, 0.04, 0)
@@ -206,8 +207,8 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .subtitle{{font-size:17px;fill:var(--muted)}}
 .eyebrow{{font-size:13px;font-weight:800;letter-spacing:.12em;fill:var(--muted)}}
 .layer{{font-size:19px;font-weight:790}} .side-title{{font-size:22px;font-weight:760}}
-.small{{font-size:15px;fill:var(--muted)}} .axis-label{{font-size:15px;fill:var(--muted)}}
-.node{{font-size:13px;font-weight:820;fill:var(--ink)}} .callout{{font-size:18px;font-weight:760}}
+.small{{font-size:17px;fill:var(--muted)}} .axis-label{{font-size:17px;fill:var(--muted)}}
+.node{{font-size:16px;font-weight:820;fill:var(--ink)}} .callout{{font-size:18px;font-weight:760}}
 .math{{font-size:22px}} .math-small{{font-size:17px}} .equation{{font-size:20px}}
 .label-box{{fill:var(--bg);stroke:var(--line);stroke-width:1.4}}
 .side-panel{{fill:var(--panel);stroke:var(--line);stroke-width:1.5}}
@@ -221,7 +222,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .margin{{fill:none;stroke:var(--red);stroke-width:2.5;stroke-dasharray:6 6}}
 .control{{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-dasharray:9 7}}
 .green-text{{fill:var(--green)}} .red-text{{fill:var(--red)}} .yellow-text{{fill:var(--yellow-ink)}}
-.legend{{font-size:14px;fill:var(--muted)}}
+.legend{{font-size:15px;fill:var(--muted)}}
 </style>'''
 
     parts = [
