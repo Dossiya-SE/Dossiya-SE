@@ -22,7 +22,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 </style>
 <rect x="1" y="1" width="1398" height="508" rx="28" fill="var(--bg)" stroke="var(--line)"/>
 <text x="48" y="48" class="eyebrow">FEATURED RESEARCH SYSTEMS</text>
-<text x="48" y="79" class="m">four research-facing public systems · observed 14 Sep 2026</text>
+<text x="48" y="79" class="m">four research-facing public systems · observed 17 Sep 2026</text>
 <rect x="48" y="112" width="628" height="132" rx="17" class="panel research-card"/>
 <circle cx="72" cy="139" r="5.5" fill="var(--green)"/>
 <text x="90" y="144" class="h">Research Portfolio</text>
