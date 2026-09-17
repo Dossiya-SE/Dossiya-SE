@@ -4,7 +4,7 @@
   "allowlist_source": "data/projects.json",
   "evidence_state": "OBSERVED_PUBLIC_REPOSITORY_METADATA",
   "status": "live",
-  "generated_at": "2026-09-17T04:49:54+00:00",
+  "generated_at": "2026-09-17T11:38:31+00:00",
   "observation_scope": "Allowlisted public repository metadata, latest default-branch commit, and latest public release when available.",
   "repositories": [
     {
@@ -64,12 +64,12 @@
       "language": "Python",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-12T14:14:18Z",
-      "pushed_at": "2026-09-12T14:14:14Z",
+      "updated_at": "2026-09-17T05:21:58Z",
+      "pushed_at": "2026-09-17T05:21:54Z",
       "latest_commit": {
-        "sha": "da006e957748",
-        "date": "2026-09-12T14:14:14Z",
-        "message": "Link IEE 574 modeling reasoning protocol"
+        "sha": "b77a97db695b",
+        "date": "2026-09-17T05:21:54Z",
+        "message": "Add design thinking to foundational thesis mind map"
       },
       "latest_release": null
     },
