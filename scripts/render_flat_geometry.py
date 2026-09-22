@@ -26,7 +26,9 @@ def vars_for(p: dict) -> str:
     keys = (
         "bg","panel","ink","muted","line","topology",
         "green","green_soft","red","red_soft","yellow","yellow_soft","yellow_ink","ghost",
-        "violet","violet_soft","gold","gold_soft"
+        "power","power_soft","transport","transport_soft",
+        "information","information_soft","organization","organization_ink","organization_soft",
+        "cyan","cyan_soft","violet","violet_soft","magenta","magenta_soft","gold","gold_soft"
     )
     return ";".join(f"--{k.replace('_','-')}:{p[k]}" for k in keys)
 
