@@ -75,7 +75,7 @@ The physical model is a typed multilayer system:
   <img src="./assets/generated/coupled-network-3d-light.svg" width="100%" alt="Static isometric 3D coupled Power and Transportation multilayer network with a shared EV charging interface and separate schematic viability geometry">
 </picture>
 
-The shared object **C₁** is a physical coupling asset, not a decorative cross-layer arrow. Vertical separation in the figure encodes multilayer structure only; it is not GIS elevation, measured infrastructure behavior, or live infrastructure telemetry.
+The shared object **C₁** is a physical coupling asset, not a decorative cross-layer arrow. Vertical separation in the figure is only a **visual encoding of multilayer structure**. It is **not geographic elevation**, GIS height, measured infrastructure behavior, or live infrastructure telemetry.
 
 A governed interdependency can be represented as
 
@@ -272,7 +272,7 @@ The profile uses a neutral scientific canvas with semantic accents:
 
 Color never carries meaning alone. Geometry, line pattern and labels provide redundant encoding.
 
-Some SVG sources retain motion-capable CSS semantics for compatible renderers. Any motion is explanatory and is **not a measured flow**, not measured infrastructure behavior, and not live infrastructure telemetry.
+Some SVG sources retain motion-capable CSS semantics for compatible renderers, but **GitHub should not be treated as guaranteeing SVG animation**. Any motion is explanatory and is **not a measured flow**, not measured infrastructure behavior, and not live infrastructure telemetry.
 
 </details>
 
