@@ -261,7 +261,7 @@ A defensible engineering model should state the system boundary, variables, para
 <details>
 <summary><b>Scientific visual and accessibility standard</b></summary>
 
-The profile uses **sRGB** with a neutral publication canvas, sparse semantic color, and a governed geometric grammar: polygons for typed/discrete structure, affine planes for layers or model subspaces, ellipses for bounded/admissible regions, dashed hyperplanes for critical constraints, and orthogonal projections for distance/intervention directions. Approximate composition is **65% neutral canvas · 20% light geometry · 10% structural semantic color · ≤5% strong emphasis**.
+The profile uses **sRGB** with a neutral publication canvas, sparse semantic color, and a governed computational geometry pipeline. Scientific coordinates for affine layers, viability boundaries, nearest-boundary projections, state-space projections and continuous research trajectories are generated from the mathematical source contract and numerically verified before deterministic SVG rendering. Approximate composition is **65% neutral canvas · 20% light geometry · 10% structural semantic color · ≤5% strong emphasis**.
 
 | Encoding | Meaning | Redundant cue |
 |---|---|---|
