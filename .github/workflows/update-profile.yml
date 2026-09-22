@@ -31,6 +31,7 @@ on:
       - "scripts/validate_profile_layout.py"
       - "scripts/render_flat_geometry.py"
       - "scripts/validate_flat_geometry.py"
+      - "scripts/validate_flat_geometry_runtime.py"
       - "mathematical-art/flat-geometry/**"
       - ".github/workflows/update-profile.yml"
   pull_request:
@@ -60,6 +61,7 @@ on:
       - "scripts/validate_profile_layout.py"
       - "scripts/render_flat_geometry.py"
       - "scripts/validate_flat_geometry.py"
+      - "scripts/validate_flat_geometry_runtime.py"
       - "mathematical-art/flat-geometry/**"
       - "assets/generated/**"
       - ".github/workflows/update-profile.yml"
@@ -158,6 +160,18 @@ jobs:
 
       - name: Validate flat geometry mathematics and polyglot sources
         run: python scripts/validate_flat_geometry.py
+
+      - name: Runtime-render flat geometry at GitHub widths
+        run: python scripts/validate_flat_geometry_runtime.py
+
+      - name: Upload flat-geometry runtime previews
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: flat-geometry-runtime-previews
+          path: artifacts/flat-geometry-preview/*.png
+          if-no-files-found: warn
+          retention-days: 7
 
       - name: Verify pull-request rendering is deterministic
         if: github.event_name == 'pull_request'
