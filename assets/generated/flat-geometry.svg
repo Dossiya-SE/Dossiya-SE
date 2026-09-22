@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="flat-title flat-desc">
+<title id="flat-title">Geometry of flats — plane figures, affine subspaces and a hyperplane</title>
+<desc id="flat-desc">A rigorous mathematical visual separating bounded plane figures from affine flats. Regular polygons from triangle through decagon, circle, ellipse and semicircle appear on the left; point, line, plane and the affine k-flat definition appear in the center; a hyperplane and point-to-hyperplane distance appear on the right.</desc>
+<style>
+:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--yellow:#9A6700;--yellow-soft:#FFF4CC;--yellow-ink:#6B4B00;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#A66F00;--organization-ink:#7A5200;--organization-soft:#FBF0DA;--cyan:#007A88;--cyan-soft:#E6F6F8;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#A21CAF;--magenta-soft:#F8E8FB;--gold:#8B5E00;--gold-soft:#F6EEDC}
+@media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E3B341;--organization-ink:#F0C96B;--organization-soft:#372D14;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#DDBA55;--gold-soft:#352D18}}
+text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
+.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
+.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.13em;fill:var(--muted)}
+.label{font-size:13px;font-weight:650}
+.small{font-size:12px;fill:var(--muted)}
+.eq{font-size:19px}
+.panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
+.math-shape{fill:none;stroke:var(--violet);stroke-width:2.2;stroke-linejoin:round}
+.math-fill{fill:var(--violet-soft);stroke:var(--violet);stroke-width:2.2}
+.topology{fill:none;stroke:var(--topology);stroke-width:2}
+.critical{fill:none;stroke:var(--red);stroke-width:3;stroke-dasharray:10 8}
+.projection{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:8 7}
+.admissible{fill:var(--green-soft);stroke:var(--green);stroke-width:1.4}
+.state{fill:var(--violet);stroke:var(--panel);stroke-width:3}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<rect x="1" y="1" width="1598" height="698" rx="18" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="58" class="title">Geometry of Flats</text>
+<text x="48" y="88" class="small">plane figures → affine subspaces → hyperplane distance · mathematical definition, not empirical calibration</text>
+<line x1="48" y1="108" x2="1552" y2="108" stroke="var(--line)"/>
+<rect x="48" y="132" width="660" height="492" rx="16" class="panel"/>
+<text x="74" y="168" class="eyebrow">PLANE GEOMETRY · ℝ²</text>
+<text x="74" y="194" class="small">bounded figures and exact curves · violet = mathematical abstraction</text>
+<polygon points="130.0,229.0 92.8,293.5 167.2,293.5" class="math-shape"/>
+<text x="130" y="339" text-anchor="middle" class="small">TRIANGLE · n=3</text>
+<polygon points="285.0,229.0 242.0,272.0 285.0,315.0 328.0,272.0" class="math-shape"/>
+<text x="285" y="339" text-anchor="middle" class="small">QUADRILATERAL · n=4</text>
+<polygon points="440.0,229.0 399.1,258.7 414.7,306.8 465.3,306.8 480.9,258.7" class="math-shape"/>
+<text x="440" y="339" text-anchor="middle" class="small">PENTAGON · n=5</text>
+<polygon points="595.0,229.0 557.8,250.5 557.8,293.5 595.0,315.0 632.2,293.5 632.2,250.5" class="math-shape"/>
+<text x="595" y="339" text-anchor="middle" class="small">HEXAGON · n=6</text>
+<polygon points="130.0,364.0 96.4,380.2 88.1,416.6 111.3,445.7 148.7,445.7 171.9,416.6 163.6,380.2" class="math-shape"/>
+<text x="130" y="474" text-anchor="middle" class="small">HEPTAGON · n=7</text>
+<polygon points="285.0,364.0 254.6,376.6 242.0,407.0 254.6,437.4 285.0,450.0 315.4,437.4 328.0,407.0 315.4,376.6" class="math-shape"/>
+<text x="285" y="474" text-anchor="middle" class="small">OCTAGON · n=8</text>
+<polygon points="440.0,364.0 412.4,374.1 397.7,399.5 402.8,428.5 425.3,447.4 454.7,447.4 477.2,428.5 482.3,399.5 467.6,374.1" class="math-shape"/>
+<text x="440" y="474" text-anchor="middle" class="small">NONAGON · n=9</text>
+<polygon points="595.0,364.0 569.7,372.2 554.1,393.7 554.1,420.3 569.7,441.8 595.0,450.0 620.3,441.8 635.9,420.3 635.9,393.7 620.3,372.2" class="math-shape"/>
+<text x="595" y="474" text-anchor="middle" class="small">DECAGON · n=10</text>
+<circle cx="150" cy="548" r="38" class="math-shape"/>
+<text x="150" y="603" text-anchor="middle" class="small">CIRCLE</text>
+<ellipse cx="355" cy="548" rx="55" ry="34" class="math-shape"/>
+<text x="355" y="603" text-anchor="middle" class="small">ELLIPSE</text>
+<path d="M515 570A46 46 0 0 1 607 570Z" class="math-shape"/>
+<text x="561" y="603" text-anchor="middle" class="small">SEMICIRCLE</text>
+<rect x="730" y="132" width="382" height="492" rx="16" class="panel"/>
+<text x="756" y="168" class="eyebrow">AFFINE FLATS</text>
+<text x="756" y="194" class="math eq">F = x₀ + span{v₁,…,vₖ}</text>
+<circle cx="790" cy="250" r="7" fill="var(--violet)"/>
+<text x="816" y="255" class="label">0D · point</text>
+<path d="M770 326H1070" class="topology"/>
+<path d="M770 326l14 -8v16zM1070 326l-14 -8v16z" fill="var(--topology)"/>
+<text x="816" y="310" class="label">1D · line</text>
+<polygon points="785,445 1042,472 995,530 738,503" class="math-fill"/>
+<text x="760" y="430" class="label">2D · plane</text>
+<line x1="758" y1="560" x2="1080" y2="560" stroke="var(--line)"/>
+<text x="756" y="589" class="small">v₁,…,vₖ linearly independent</text>
+<text x="756" y="611" class="small">dim F = k · ambient space ℝⁿ</text>
+<rect x="1134" y="132" width="418" height="492" rx="16" class="panel"/>
+<text x="1160" y="168" class="eyebrow">HYPERPLANE · (n−1)-FLAT</text>
+<text x="1160" y="194" class="math eq">H = {x ∈ ℝⁿ : aᵀx = b}, a ≠ 0</text>
+<rect x="1175" y="226" width="338" height="265" rx="10" class="admissible"/>
+<text x="1192" y="254" class="small" fill="var(--green)">admissible side</text>
+<path d="M1210 468L1480 250" class="critical"/>
+<text x="1450" y="276" class="math eq" fill="var(--red)">H</text>
+<circle cx="1275" cy="292" r="9" class="state"/>
+<text x="1292" y="286" class="math eq">x</text>
+<path d="M1283 299L1358 360" class="projection"/>
+<path d="M1348 350L1358 360L1346 366" fill="none" stroke="var(--gold)" stroke-width="2"/>
+<text x="1298" y="340" class="math" font-size="16" fill="var(--gold)">d(x,H)</text>
+<line x1="1160" y1="524" x2="1525" y2="524" stroke="var(--line)"/>
+<text x="1160" y="560" class="math eq">d(x,H) = |aᵀx − b| / ‖a‖₂</text>
+<text x="1160" y="590" class="small">red dashed = boundary · gold dashed = orthogonal projection</text>
+<line x1="48" y1="648" x2="1552" y2="648" stroke="var(--line)"/>
+<text x="48" y="676" class="small">Plane figures and affine flats are distinct objects. The visual bridge is constraint and state-space geometry. Contract: FLAT-GEOMETRY-V1.</text>
+</svg>
