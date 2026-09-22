@@ -275,7 +275,7 @@ The profile uses **sRGB** with a neutral publication canvas and sparse semantic 
 | **Mathematical model — violet** | separate mathematical abstraction cue | equation/symbol label + geometric context |
 | **Inference / state information — cyan** | observation or data-mediated state cue | state marker + label |
 
-RGB defines appearance and navigation—not scientific truth. Color never carries meaning alone; geometry, line pattern, direction and labels remain authoritative. The permanent state-semantic subset remains **green** for viable/recovery state, **red** for criticality/boundaries, and **light yellow / ochre** for causal or intervention emphasis.
+RGB defines appearance and navigation—not scientific truth. Color never carries meaning alone; geometry, line pattern, direction and labels remain authoritative. The permanent state-semantic subset remains **green** for viable/recovery state, **red** for criticality/boundaries, and **light yellow / ochre** for causal or intervention emphasis. The machine-readable authority for these values is [`data/visual-palette.json`](data/visual-palette.json).
 
 Some SVG sources retain motion-capable CSS semantics for compatible renderers, but **GitHub should not be treated as guaranteeing SVG animation**. Any motion is explanatory and is **not a measured flow**, not measured infrastructure behavior, and not live infrastructure telemetry.
 
