@@ -28,20 +28,20 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <line x1="120" y1="100" x2="120" y2="420" stroke="var(--line)"/>
 <text x="1490" y="425" text-anchor="end" class="small">component 1</text>
 <text x="92" y="112" class="small">component 2</text>
-<path d="M1100.0 347.6L935.7 184.3" class="model"/>
-<path d="M935.7 184.3L733.4 151.2" class="model"/>
-<path d="M733.4 151.2L599.8 247.3" class="model"/>
-<path d="M599.8 247.3L515.0 348.8" class="model"/>
-<polygon points="1100.0,329.6 1115.6,338.6 1115.6,356.6 1100.0,365.6 1084.4,356.6 1084.4,338.6" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
-<text x="1100.0" y="313.6" text-anchor="middle" class="label">STRUCTURE</text>
-<polygon points="935.7,160.3 956.5,172.3 956.5,196.3 935.7,208.3 914.9,196.3 914.9,172.3" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>
-<text x="935.7" y="150.3" text-anchor="middle" class="label">MECHANISM</text>
-<polygon points="733.4,127.2 756.2,143.8 747.5,170.6 719.3,170.6 710.6,143.8" fill="var(--information-soft)" stroke="var(--information)" stroke-width="3"/>
-<text x="733.4" y="117.2" text-anchor="middle" class="label">DYNAMICS</text>
-<polygon points="599.8,229.3 615.4,238.3 615.4,256.3 599.8,265.3 584.2,256.3 584.2,238.3" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
-<text x="599.8" y="213.3" text-anchor="middle" class="label">CONTROL</text>
-<polygon points="515.0,330.8 530.6,339.8 530.6,357.8 515.0,366.8 499.4,357.8 499.4,339.8" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
-<text x="515.0" y="314.8" text-anchor="middle" class="label">VIABILITY</text>
-<path d="M935.7 184.3L733.4 151.2M743.6 147.0L733.4 151.2L741.7 158.4" class="control"/>
+<path d="M515.0 152.4L679.3 315.7" class="model"/>
+<path d="M679.3 315.7L881.6 348.8" class="model"/>
+<path d="M881.6 348.8L1015.2 252.7" class="model"/>
+<path d="M1015.2 252.7L1100.0 151.2" class="model"/>
+<polygon points="515.0,134.4 530.6,143.4 530.6,161.4 515.0,170.4 499.4,161.4 499.4,143.4" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
+<text x="515.0" y="118.4" text-anchor="middle" class="label">STRUCTURE</text>
+<polygon points="679.3,291.7 700.1,303.7 700.1,327.7 679.3,339.7 658.5,327.7 658.5,303.7" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>
+<text x="679.3" y="281.7" text-anchor="middle" class="label">MECHANISM</text>
+<polygon points="881.6,324.8 904.4,341.4 895.7,368.2 867.5,368.2 858.8,341.4" fill="var(--information-soft)" stroke="var(--information)" stroke-width="3"/>
+<text x="881.6" y="314.8" text-anchor="middle" class="label">DYNAMICS</text>
+<polygon points="1015.2,234.7 1030.8,243.7 1030.8,261.7 1015.2,270.7 999.6,261.7 999.6,243.7" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
+<text x="1015.2" y="218.7" text-anchor="middle" class="label">CONTROL</text>
+<polygon points="1100.0,133.2 1115.6,142.2 1115.6,160.2 1100.0,169.2 1084.4,160.2 1084.4,142.2" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
+<text x="1100.0" y="117.2" text-anchor="middle" class="label">VIABILITY</text>
+<path d="M679.3 315.7L881.6 348.8M871.4 353.0L881.6 348.8L873.3 341.6" class="control"/>
 <text x="48" y="466" class="small">Conceptual normalized state r=(r_s,r_c,r_d,r_v); SVD projection only. First two components explain 97.7% of the configured conceptual variance; not empirical measurement.</text>
 </svg>
