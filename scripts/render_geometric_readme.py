@@ -231,7 +231,8 @@ def graph_viability(g,palette):
           arrow(870,270,930,270,"control"),
           '<text x="955" y="100" class="label">STATE / VIABILITY SPACE</text>']
     vm,vl=draw_viability(g,945,125,1540,440); p.extend(vm)
-    p += [f'<text x="965" y="475" class="small">V = intersection of {len(g["viability"]["constraints"])} governed constraints · active boundary: {escape(g["viability"]["active_constraint"])}</text>',
+    active_label="g"+subscript_int(g["viability"]["active_constraint_index"])+"(Y)=0"
+    p += [f'<text x="965" y="475" class="small">V = intersection of {len(g["viability"]["constraints"])} governed constraints · active boundary: {active_label}</text>',
           '<text x="48" y="520" class="small">The feasible set, nearest boundary point and ρ_g are computed objects. They remain schematic until their physical constraints are calibrated and empirically validated.</text>','</svg>']
     return "\n".join(p),{"viewbox":[0,0,w,h],"major":[[60,125,635,420],[690,165,855,355],vl["region"]]}
 
