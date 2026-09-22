@@ -72,7 +72,7 @@ The physical model is a typed multilayer system:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/coupled-network-3d-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/generated/coupled-network-3d-light.svg">
-  <img src="./assets/generated/coupled-network-3d-light.svg" width="100%" alt="Static isometric 3D coupled Power and Transportation multilayer network with a shared EV charging interface and separate schematic viability geometry">
+  <img src="./assets/generated/coupled-network-3d-light.svg" width="100%" alt="Computed projection of a verified 3D coupled Power and Transportation affine multilayer system with a shared interface and computed viability geometry">
 </picture>
 
 The **same physical object**, written **C_1** in the governed network data and **C₁** in display notation, is a physical coupling asset shared by both layers—not a decorative cross-layer arrow. Vertical separation in the figure is only a **visual encoding of multilayer structure**. It is **not geographic elevation**, GIS height, measured infrastructure behavior, or live infrastructure telemetry.
@@ -148,7 +148,7 @@ A coherent trajectory, metric or viable region is a mathematical object. It beco
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/research-state-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/generated/research-state-light.svg">
-  <img src="./assets/generated/research-state-light.svg" width="100%" alt="Governed research state showing the Power–Transportation focus and the active Causal Mechanisms to Coupled Hybrid Multiscale Dynamics transition">
+  <img src="./assets/generated/research-state-light.svg" width="100%" alt="SVD projection of the conceptual four-dimensional research state highlighting the Causal Mechanisms to Coupled Hybrid Multiscale Dynamics transition">
 </picture>
 
 **Active transition:** Causal Mechanisms → Coupled Hybrid Multiscale Dynamics.
@@ -174,7 +174,7 @@ The mathematical method is selected **after** the physical variables, mechanisms
 
 ## 06 · Research systems
 
-<img src="./assets/generated/project-system.svg" width="100%" alt="Four featured public research systems rendered as a restrained publication-style research index">
+<img src="./assets/generated/project-system.svg" width="100%" alt="Four featured public research systems rendered with equal-area geometric signatures for navigation only">
 
 <div align="center">
 
@@ -209,7 +209,7 @@ The trajectory is cumulative: practical and physical engineering foundations →
 <details>
 <summary><b>Full seven-stage research architecture</b></summary>
 
-<img src="./assets/generated/research-pipeline.svg" width="100%" alt="Seven-stage research architecture from multilayer structure through causal mechanisms, coupled dynamics, control, viability and sustainable transformation">
+<img src="./assets/generated/research-pipeline.svg" width="100%" alt="Continuous seven-stage research trajectory gamma(t) from multilayer structure through causal mechanisms, dynamics, control, viability and sustainable transformation">
 
 ~~~math
 \boxed{
