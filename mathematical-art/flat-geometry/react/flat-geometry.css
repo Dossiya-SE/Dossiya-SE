@@ -1,0 +1,23 @@
+/* FLAT-GEOMETRY-V1 */
+.flat-geometry {
+  width: 100%;
+  background: #fff;
+  color: #1e2933;
+}
+.fg-title { font: 700 28px Inter, system-ui, sans-serif; fill: currentColor; }
+.fg-eq { font: 18px Georgia, serif; fill: currentColor; }
+.fg-math { fill: none; stroke: #6d28d9; stroke-width: 2; }
+.fg-topology { stroke: #2b333d; stroke-width: 2; }
+.fg-plane { fill: #f0eafe; stroke: #6d28d9; stroke-width: 2; }
+.fg-critical { stroke: #cf222e; stroke-width: 3; stroke-dasharray: 9 7; }
+.fg-state { fill: #16823a; }
+.fg-distance { stroke: #8b5e00; stroke-width: 3; }
+@media (prefers-color-scheme: dark) {
+  .flat-geometry { background: #0d1117; color: #f0f6fc; }
+  .fg-math, .fg-plane { stroke: #a371f7; }
+  .fg-plane { fill: #271b3d; }
+  .fg-topology { stroke: #c9d1d9; }
+  .fg-critical { stroke: #ff7b72; }
+  .fg-state { fill: #56d364; }
+  .fg-distance { stroke: #ddba55; }
+}
