@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 348" role="img" aria-labelledby="title desc">
 <title id="title">Governed living research state</title>
-<desc id="desc">Minimal research-state panel. Neutral structure dominates, light yellow marks the active causal-to-dynamics transition, and green marks the active mathematical research state. No red is used for metadata.</desc>
+<desc id="desc">Publication-style current research state. Power, Transportation, Information and Organization use separate RGB-derived semantic channels; active transition and mathematical state remain explicitly labeled.</desc>
 <style>
-:root{--bg:#FBFAF6;--panel:#FFFFFF;--ink:#1F2328;--muted:#59636E;--line:#D1D9E0;--topology:#24292F;--green:#1A7F37;--green-soft:#DAFBE1;--red:#CF222E;--red-soft:#FFEBE9;--yellow:#9A6700;--yellow-soft:#FFF8C5;--yellow-ink:#6A4B00;--ghost:#F6F8FA}
+:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--yellow:#9A6700;--yellow-soft:#FFF4CC;--yellow-ink:#6B4B00;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#A66F00;--organization-ink:#7A5200;--organization-soft:#FBF0DA;--cyan:#007A88;--cyan-soft:#E6F6F8;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#A21CAF;--magenta-soft:#F8E8FB;--gold:#8B5E00;--gold-soft:#F6EEDC}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
@@ -10,33 +10,31 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .title{font-size:31px;font-weight:800;letter-spacing:-.02em}
 .h{font-size:20px;font-weight:760} .m{font-size:14px;fill:var(--muted)} .s{font-size:11px;fill:var(--muted)}
 .value{font-size:18px;font-weight:720} .math-lg{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:25px}
-.panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
-.flow-yellow{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 11;animation:flow 3.2s linear infinite}
+.panel{fill:var(--panel);stroke:var(--line);stroke-width:1.1}
+.flow-yellow{fill:none;stroke:var(--yellow);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:9 11;animation:flow 3.2s linear infinite}
 .flow-green{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 12;animation:flow 3.8s linear infinite}
+.flow-blue{fill:none;stroke:var(--information);stroke-width:2.8;stroke-linecap:round;stroke-dasharray:8 10;animation:flow 4.1s linear infinite}
 .pulse-green{animation:pulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 .latest{animation:latest 3.4s ease-in-out infinite}
 @keyframes flow{to{stroke-dashoffset:-42}}
 @keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
 @keyframes latest{0%,100%{stroke-opacity:.35}50%{stroke-opacity:1}}
-@media(prefers-reduced-motion:reduce){.flow-yellow,.flow-green,.pulse-green,.latest{animation:none!important}}
+@media(prefers-reduced-motion:reduce){.flow-yellow,.flow-green,.flow-blue,.pulse-green,.latest{animation:none!important}}
 </style>
-<rect x="1" y="1" width="1398" height="358" rx="28" fill="var(--bg)" stroke="var(--line)"/>
-<circle cx="55" cy="47" r="6" fill="var(--green)" class="pulse-green"/>
-<text x="74" y="52" class="eyebrow">CURRENT RESEARCH STATE</text>
-<text x="48" y="104" class="title">Power ↔ Transportation</text>
-<text x="48" y="132" class="m">Information + Organization enter only when they materially alter operation, coordination, inference or recovery.</text>
-<line x1="48" y1="158" x2="1352" y2="158" stroke="var(--line)"/>
-<text x="48" y="194" class="eyebrow">CURRENT SCIENTIFIC TRANSITION</text>
-<rect x="48" y="215" width="268" height="54" rx="13" class="panel"/>
-<text x="68" y="248" class="value">Causal Mechanisms</text>
-<path d="M334 242H535" class="flow-yellow"/>
-<rect x="554" y="215" width="410" height="54" rx="13" class="panel"/>
-<text x="574" y="248" class="value">Coupled Hybrid Multiscale Dynamics</text>
-<text x="48" y="296" class="m">physically supported interfaces → coupled state evolution under disturbance and control</text>
-<text x="1010" y="194" class="eyebrow">MATHEMATICAL STATE</text>
-<text x="1010" y="237" class="math-lg">R_phys → C → (G,I) → F_G → V → ρ_g → u*</text>
-<path d="M1010 261H1348" class="flow-green"/>
-<line x1="48" y1="318" x2="1352" y2="318" stroke="var(--line)"/>
-<text x="48" y="342" class="s">06 public systems  ·  04 featured  ·  state verified 13 Sep 2026  ·  public evidence observed 22 Sep 2026</text>
-<text x="1352" y="342" text-anchor="end" class="s">public activity cannot promote a scientific claim</text>
+<rect x="1" y="1" width="1398" height="346" rx="18" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="49" class="eyebrow">CURRENT RESEARCH STATE</text>
+<text x="48" y="94" class="title"><tspan fill="var(--power)">Power</tspan><tspan> ↔ </tspan><tspan fill="var(--transport)">Transportation</tspan></text>
+<text x="48" y="124" class="m">Information and Organization enter only when they materially alter sensing, coordination, inference, operation or recovery.</text>
+<line x1="48" y1="154" x2="1352" y2="154" stroke="var(--line)"/>
+<text x="48" y="190" class="eyebrow">CURRENT SCIENTIFIC TRANSITION</text>
+<text x="48" y="230" class="value">Causal Mechanisms</text>
+<path d="M235 223H485" class="flow-yellow"/>
+<text x="515" y="230" class="value" fill="var(--information)">Coupled Hybrid Multiscale Dynamics</text>
+<text x="48" y="265" class="m">physically supported interfaces → coupled state evolution under disturbance and control</text>
+<text x="965" y="190" class="eyebrow">MATHEMATICAL STATE</text>
+<text x="965" y="232" class="math-lg">R_phys → C → (G,I) → F_G → V → ρ_g → u*</text>
+<path d="M965 256H1348" class="flow-green"/>
+<line x1="48" y1="297" x2="1352" y2="297" stroke="var(--line)"/>
+<text x="48" y="325" class="s">06 public systems · 04 featured · state verified 13 Sep 2026 · evidence observed 22 Sep 2026</text>
+<text x="1352" y="325" text-anchor="end" class="s">public activity cannot promote a scientific claim</text>
 </svg>
