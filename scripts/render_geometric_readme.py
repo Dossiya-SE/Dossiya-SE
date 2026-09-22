@@ -126,17 +126,22 @@ def research_question(palette):
     p += ['<rect x="1" y="1" width="1598" height="418" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
           '<text x="48" y="58" class="micro">RESEARCH QUESTION · GEOMETRIC LOGIC</text>']
     centers=[(175,220),(515,220),(860,220),(1240,220)]
-    shapes=[(3,"power","PHYSICAL SYSTEM","Power ↔ Transportation"),
-            (6,"gold","CAUSAL INTERFACE","typed coupling C₁"),
-            (5,"information","DYNAMICS","Ẏ = F_G(Y,u,η;θ)")]
-    for (x,y),(n,col,title,sub) in zip(centers[:3],shapes):
+    shapes=[
+        (3,"power","PHYSICAL SYSTEM","P ↔ T","Power ↔ Transportation"),
+        (6,"gold","CAUSAL INTERFACE","C₁","typed coupling"),
+        (5,"information","DYNAMICS","F_G","coupled hybrid dynamics")
+    ]
+    for (x,y),(n,col,title,symbol,sub) in zip(centers[:3],shapes):
+        p.append(f'<text x="{x}" y="{y-106}" text-anchor="middle" class="label">{title}</text>')
         p.append(f'<polygon points="{polygon(n,x,y,72)}" fill="var(--{col}-soft)" stroke="var(--{col})" stroke-width="3"/>')
-        p.append(f'<text x="{x}" y="{y+5}" text-anchor="middle" class="label">{title}</text><text x="{x}" y="{y+118}" text-anchor="middle" class="small">{sub}</text>')
+        p.append(f'<text x="{x}" y="{y+7}" text-anchor="middle" class="math h2">{symbol}</text>')
+        p.append(f'<text x="{x}" y="{y+118}" text-anchor="middle" class="small">{sub}</text>')
     p += [
+      '<text x="1240" y="114" text-anchor="middle" class="label">VIABILITY</text>',
       '<ellipse cx="1240" cy="220" rx="125" ry="76" class="viable"/>',
       '<ellipse cx="1240" cy="220" rx="78" ry="42" class="model"/>',
       '<path d="M1140 285L1355 160" class="critical"/>',
-      '<text x="1240" y="225" text-anchor="middle" class="label">VIABILITY</text>',
+      '<text x="1240" y="227" text-anchor="middle" class="math h2">V</text>',
       '<text x="1240" y="338" text-anchor="middle" class="small">Y(t) ∈ V · maximize ρ_g</text>'
     ]
     for a,b in zip(centers[:-1],centers[1:]):
