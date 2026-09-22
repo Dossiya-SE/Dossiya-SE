@@ -71,7 +71,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .math-fill{{fill:var(--violet-soft);stroke:var(--violet);stroke-width:2.2}}
 .topology{{fill:none;stroke:var(--topology);stroke-width:2}}
 .critical{{fill:none;stroke:var(--red);stroke-width:3;stroke-dasharray:10 8}}
-.projection{{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:8 7}}
+.projection{{fill:none;stroke:var(--gold);stroke-width:4.2;stroke-dasharray:8 7}}
 .admissible{{fill:var(--green-soft);stroke:var(--green);stroke-width:2}}
 .state{{fill:var(--violet);stroke:var(--panel);stroke-width:3}}
 @media(prefers-reduced-motion:reduce){{*{{animation:none!important;transition:none!important}}}}
@@ -135,9 +135,9 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 
         '<circle cx="1275" cy="292" r="9" class="state"/>',
         '<text x="1292" y="286" class="math eq">x</text>',
-        '<path d="M1283 299L1358 360" class="projection"/>',
-        '<path d="M1348 350L1358 360L1346 366" fill="none" stroke="var(--gold)" stroke-width="2"/>',
-        '<text x="1298" y="340" class="math" font-size="16" fill="var(--gold)">d(x,H)</text>',
+        '<path d="M1275 292L1335.4 366.8" class="projection"/>',
+        '<circle cx="1335.4" cy="366.8" r="6" fill="var(--gold)" stroke="var(--panel)" stroke-width="2"/>',
+        '<text x="1288" y="340" class="math" font-size="16" fill="var(--gold)">d(x,H)</text>',
 
         '<line x1="1160" y1="524" x2="1525" y2="524" stroke="var(--line)"/>',
         '<text x="1160" y="560" class="math eq">d(x,H) = |aᵀx − b| / ‖a‖₂</text>',
