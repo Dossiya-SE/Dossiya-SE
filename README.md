@@ -159,6 +159,24 @@ The objective is to move from physically defensible interfaces to coupled state 
 
 ## 05 · Mathematical foundations for the physical problem
 
+<img src="./assets/generated/flat-geometry.svg" width="100%" alt="Geometry of flats: regular polygons from triangle through decagon, circle, ellipse and semicircle, followed by affine point, line and plane geometry and a hyperplane distance construction">
+
+The figure deliberately separates **plane figures** from **affine flats**. Regular polygons, circles and ellipses are bounded figures or curves in a plane; an affine (k)-flat is an object of the form (x_0+\operatorname{span}\{v_1,\ldots,v_k\}). The bridge to resilience research is **constraint and state-space geometry**, not an identification of polygons with subspaces.
+
+<details>
+<summary><b>Reproducible flat-geometry sources</b></summary>
+
+**Publication authority:** [TikZ / Overleaf](./mathematical-art/flat-geometry/overleaf/flat_geometry.tex)  
+**Deterministic GitHub renderer:** [Python](./scripts/render_flat_geometry.py)  
+**Mathematical computation mirror:** [Julia](./mathematical-art/flat-geometry/julia/flat_geometry.jl)  
+**Interactive web mirror:** [React](./mathematical-art/flat-geometry/react/FlatGeometry.tsx) + [CSS](./mathematical-art/flat-geometry/react/flat-geometry.css)  
+**Static renderer mirror:** [Go](./mathematical-art/flat-geometry/go/main.go)  
+**Engineering integration mirror:** [C#](./mathematical-art/flat-geometry/csharp/FlatGeometry.cs)
+
+All sources implement the same governed contract: **FLAT-GEOMETRY-V1**.
+
+</details>
+
 | Foundation | Engineering role |
 |---|---|
 | **Graph theory & topology** | multilayer structure, connectivity, typed interfaces and propagation paths |
