@@ -72,7 +72,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .topology{{fill:none;stroke:var(--topology);stroke-width:2}}
 .critical{{fill:none;stroke:var(--red);stroke-width:3;stroke-dasharray:10 8}}
 .projection{{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:8 7}}
-.admissible{{fill:var(--green-soft);stroke:var(--green);stroke-width:1.4}}
+.admissible{{fill:var(--green-soft);stroke:var(--green);stroke-width:2}}
 .state{{fill:var(--violet);stroke:var(--panel);stroke-width:3}}
 @media(prefers-reduced-motion:reduce){{*{{animation:none!important;transition:none!important}}}}
 </style>''',
@@ -128,7 +128,8 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
         '<text x="1160" y="194" class="math eq">H = {x ∈ ℝⁿ : aᵀx = b}, a ≠ 0</text>',
 
         '<rect x="1175" y="226" width="338" height="265" rx="10" class="admissible"/>',
-        '<text x="1192" y="254" class="small" fill="var(--green)">admissible side</text>',
+        '<circle cx="1192" cy="250" r="6" fill="var(--green)"/>',
+        '<text x="1208" y="254" class="small" fill="var(--green)">admissible side</text>',
         '<path d="M1210 468L1480 250" class="critical"/>',
         '<text x="1450" y="276" class="math eq" fill="var(--red)">H</text>',
 
