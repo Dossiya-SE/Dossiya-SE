@@ -39,7 +39,8 @@ def main():
 
     v=g["viability"]
     require(float(v["boundary_residual"])<1e-8,"viability nearest point not on active boundary")
-    require(float(v["orthogonality_residual"])<1e-8,"rho direction not normal to active boundary")\n    require(1 <= int(v["active_constraint_index"]) <= len(v["constraints"]),"active constraint index out of range")
+    require(float(v["orthogonality_residual"])<1e-8,"rho direction not normal to active boundary")
+    require(1 <= int(v["active_constraint_index"]) <= len(v["constraints"]),"active constraint index out of range")
 
     # G2 — numerical correctness and independent Julia cross-check.
     with JULIA.open("rb") as f:
