@@ -17,6 +17,7 @@ on:
       - "data/network-dynamics.json"
       - "data/visual-palette.json"
       - "data/flat-geometry.json"
+      - "data/geometric-readme.json"
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
@@ -33,6 +34,10 @@ on:
       - "scripts/validate_flat_geometry.py"
       - "scripts/validate_flat_geometry_runtime.py"
       - "mathematical-art/flat-geometry/**"
+      - "mathematical-art/profile-geometry/**"
+      - "scripts/render_geometric_readme.py"
+      - "scripts/validate_geometric_readme.py"
+      - "scripts/validate_geometric_readme_runtime.py"
       - ".github/workflows/update-profile.yml"
   pull_request:
     paths:
@@ -47,6 +52,7 @@ on:
       - "data/network-dynamics.json"
       - "data/visual-palette.json"
       - "data/flat-geometry.json"
+      - "data/geometric-readme.json"
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
@@ -63,6 +69,10 @@ on:
       - "scripts/validate_flat_geometry.py"
       - "scripts/validate_flat_geometry_runtime.py"
       - "mathematical-art/flat-geometry/**"
+      - "mathematical-art/profile-geometry/**"
+      - "scripts/render_geometric_readme.py"
+      - "scripts/validate_geometric_readme.py"
+      - "scripts/validate_geometric_readme_runtime.py"
       - "assets/generated/**"
       - ".github/workflows/update-profile.yml"
 
@@ -116,9 +126,6 @@ jobs:
       - name: Refine scientific container hierarchy
         run: python scripts/refine_profile_layout.py
 
-      - name: Render flat-geometry mathematical figure
-        run: python scripts/render_flat_geometry.py
-
       - name: Render static isometric 3D hero
         run: python scripts/render_network_3d.py
 
@@ -158,26 +165,29 @@ jobs:
       - name: Validate visual contrast and semantic redundancy
         run: python scripts/validate_visual_palette.py
 
-      - name: Validate flat geometry mathematics and polyglot sources
-        run: python scripts/validate_flat_geometry.py
+      - name: Render final geometry-driven README visuals
+        run: python scripts/render_geometric_readme.py
 
-      - name: Runtime-render flat geometry at GitHub widths
-        run: python scripts/validate_flat_geometry_runtime.py
+      - name: Validate final geometric README semantics
+        run: python scripts/validate_geometric_readme.py
 
-      - name: Upload flat-geometry runtime previews
+      - name: Runtime-render all final README visuals
+        run: python scripts/validate_geometric_readme_runtime.py
+
+      - name: Upload final geometry runtime previews
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: flat-geometry-runtime-previews
-          path: artifacts/flat-geometry-preview/*.png
-          if-no-files-found: warn
+          name: geometric-readme-runtime-previews
+          path: artifacts/geometric-readme-preview/*.png
+          if-no-files-found: error
           retention-days: 7
 
       - name: Verify pull-request rendering is deterministic
         if: github.event_name == 'pull_request'
         run: |
           git diff --check
-          echo "Governed scientific state, network semantics, runtime-rendered 3D geometry, palette, container hierarchy and validators completed successfully."
+          echo "Governed scientific state, legacy model validation, final geometric redesign, palette, accessibility and GitHub-width raster checks completed successfully."
 
       - name: Commit validated generated visuals to PR branch
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
