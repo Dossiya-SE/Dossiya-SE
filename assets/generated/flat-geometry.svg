@@ -16,8 +16,8 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .math-fill{fill:var(--violet-soft);stroke:var(--violet);stroke-width:2.2}
 .topology{fill:none;stroke:var(--topology);stroke-width:2}
 .critical{fill:none;stroke:var(--red);stroke-width:3;stroke-dasharray:10 8}
-.projection{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:8 7}
-.admissible{fill:var(--green-soft);stroke:var(--green);stroke-width:1.4}
+.projection{fill:none;stroke:var(--gold);stroke-width:4.2;stroke-dasharray:8 7}
+.admissible{fill:var(--green-soft);stroke:var(--green);stroke-width:2}
 .state{fill:var(--violet);stroke:var(--panel);stroke-width:3}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -67,14 +67,15 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="1160" y="168" class="eyebrow">HYPERPLANE · (n−1)-FLAT</text>
 <text x="1160" y="194" class="math eq">H = {x ∈ ℝⁿ : aᵀx = b}, a ≠ 0</text>
 <rect x="1175" y="226" width="338" height="265" rx="10" class="admissible"/>
-<text x="1192" y="254" class="small" fill="var(--green)">admissible side</text>
+<circle cx="1192" cy="250" r="6" fill="var(--green)"/>
+<text x="1208" y="254" class="small" fill="var(--green)">admissible side</text>
 <path d="M1210 468L1480 250" class="critical"/>
 <text x="1450" y="276" class="math eq" fill="var(--red)">H</text>
 <circle cx="1275" cy="292" r="9" class="state"/>
 <text x="1292" y="286" class="math eq">x</text>
-<path d="M1283 299L1358 360" class="projection"/>
-<path d="M1348 350L1358 360L1346 366" fill="none" stroke="var(--gold)" stroke-width="2"/>
-<text x="1298" y="340" class="math" font-size="16" fill="var(--gold)">d(x,H)</text>
+<path d="M1275 292L1335.4 366.8" class="projection"/>
+<circle cx="1335.4" cy="366.8" r="6" fill="var(--gold)" stroke="var(--panel)" stroke-width="2"/>
+<text x="1288" y="340" class="math" font-size="16" fill="var(--gold)">d(x,H)</text>
 <line x1="1160" y1="524" x2="1525" y2="524" stroke="var(--line)"/>
 <text x="1160" y="560" class="math eq">d(x,H) = |aᵀx − b| / ‖a‖₂</text>
 <text x="1160" y="590" class="small">red dashed = boundary · gold dashed = orthogonal projection</text>
