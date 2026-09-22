@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "FLAT-GEOMETRY-V1",
+  "evidence_state": "MATHEMATICAL_DEFINITION",
+  "plane_geometry": {
+    "regular_polygons": [
+      {"name":"triangle","sides":3},
+      {"name":"quadrilateral","sides":4},
+      {"name":"pentagon","sides":5},
+      {"name":"hexagon","sides":6},
+      {"name":"heptagon","sides":7},
+      {"name":"octagon","sides":8},
+      {"name":"nonagon","sides":9},
+      {"name":"decagon","sides":10}
+    ],
+    "curves": [
+      {"name":"circle","definition":"(x-c_x)^2+(y-c_y)^2=r^2"},
+      {"name":"ellipse","definition":"(x-c_x)^2/a^2+(y-c_y)^2/b^2=1"},
+      {"name":"semicircle","definition":"(x-c_x)^2+(y-c_y)^2=r^2, y>=c_y"}
+    ],
+    "regular_polygon_vertices":"p_j=c+r(cos(2*pi*j/n), sin(2*pi*j/n)), j=0,...,n-1"
+  },
+  "euclidean_flats": {
+    "affine_k_flat":"F=x_0+span{v_1,...,v_k}",
+    "independence_condition":"v_1,...,v_k linearly independent",
+    "dimension_examples":[
+      {"dimension":0,"term":"point"},
+      {"dimension":1,"term":"line"},
+      {"dimension":2,"term":"plane"},
+      {"dimension":3,"term":"space"}
+    ],
+    "hyperplane":{
+      "definition":"H={x in R^n : a^T x=b}, a!=0",
+      "dimension":"n-1",
+      "point_distance":"d(x,H)=|a^T x-b|/||a||_2"
+    }
+  },
+  "scientific_boundary":"Plane figures and affine flats are distinct mathematical objects. The visual bridge is constraint geometry and state-space reasoning, not an identification of polygons with affine subspaces.",
+  "render_authority":{
+    "publication":"mathematical-art/flat-geometry/overleaf/flat_geometry.tex",
+    "github":"scripts/render_flat_geometry.py"
+  }
+}
