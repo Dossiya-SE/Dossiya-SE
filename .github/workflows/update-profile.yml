@@ -162,14 +162,22 @@ jobs:
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
         env:
           HEAD_REF: ${{ github.head_ref }}
+          TRIGGER_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           rm -rf /tmp/profile-v3
           mkdir -p /tmp/profile-v3/assets /tmp/profile-v3/data /tmp/profile-v3/tikz
           cp -R assets/generated/. /tmp/profile-v3/assets/
           cp data/computed-geometry-v3.json /tmp/profile-v3/data/
           cp mathematical-art/profile-geometry/overleaf/profile_geometry_v3.tex /tmp/profile-v3/tikz/
+
           git fetch origin "$HEAD_REF"
-          git checkout -B "$HEAD_REF" "origin/$HEAD_REF"
+          REMOTE_SHA="$(git rev-parse "origin/$HEAD_REF")"
+          if [ "$REMOTE_SHA" != "$TRIGGER_SHA" ]; then
+            echo "Stale workflow run: trigger $TRIGGER_SHA, current branch $REMOTE_SHA. Generated artifacts will not be committed."
+            exit 0
+          fi
+
+          git checkout -B "$HEAD_REF" "$TRIGGER_SHA"
           rm -rf assets/generated
           mkdir -p assets/generated
           cp -R /tmp/profile-v3/assets/. assets/generated/
