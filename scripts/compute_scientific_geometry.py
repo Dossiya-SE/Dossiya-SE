@@ -143,26 +143,54 @@ def halfplane_polygon(a: float, b: float, c: float, L: float) -> Polygon:
 
 
 def line_segment_for_constraint(a: float, b: float, c: float, region: Polygon, L: float = 100.0):
+    """Return the portion of an active constraint carried by the feasible polygon.
+
+    Prefer vertices lying on the active line; this is numerically more robust than
+    intersecting a floating-point polygon with the exact supporting line.
+    """
+    coords=np.asarray(region.exterior.coords[:-1],dtype=float)
+    residual=np.abs(a*coords[:,0]+b*coords[:,1]-c)
+    tol=max(1e-9,1e-8*max(1.0,abs(c)))
+    on=coords[residual<=tol]
+    if len(on)>=2:
+        # Choose the farthest pair so the full active edge is represented.
+        best=None; best_d=-1.0
+        for i in range(len(on)):
+            for j in range(i+1,len(on)):
+                d=float(np.linalg.norm(on[i]-on[j]))
+                if d>best_d:
+                    best_d=d; best=(on[i],on[j])
+        return np.vstack(best)
+
+    # Fallback: intersect a tiny strip around the supporting line with the region,
+    # then use the two most separated points from that contact geometry.
     n=np.array([a,b],dtype=float)
     nn=float(n@n)
     if nn<=0:
         raise ValueError("line normal must be nonzero")
     p0=(c/nn)*n
-    t=np.array([-n[1],n[0]],dtype=float)
-    t=t/np.linalg.norm(t)
+    t=np.array([-n[1],n[0]],dtype=float); t=t/np.linalg.norm(t)
     line=LineString([p0-L*t,p0+L*t])
-    inter=region.intersection(line)
-    if inter.is_empty:
-        raise ValueError("constraint line does not intersect region")
-    if inter.geom_type=="LineString":
-        coords=list(inter.coords)
+    contact=region.boundary.intersection(line.buffer(tol,cap_style=2))
+    pts=[]
+    if contact.geom_type=="LineString":
+        pts.extend(list(contact.coords))
     else:
-        parts=[g for g in getattr(inter,"geoms",[]) if g.geom_type=="LineString"]
-        if not parts:
-            raise ValueError("constraint intersection has no line segment")
-        seg=max(parts,key=lambda g:g.length)
-        coords=list(seg.coords)
-    return np.asarray([coords[0],coords[-1]],dtype=float)
+        for geom in getattr(contact,"geoms",[]):
+            if geom.geom_type=="LineString":
+                pts.extend(list(geom.coords))
+            elif geom.geom_type=="Point":
+                pts.append(geom.coords[0])
+    if len(pts)<2:
+        raise ValueError("active constraint cannot be resolved on feasible boundary")
+    arrp=np.asarray(pts,dtype=float)
+    best=None; best_d=-1.0
+    for i in range(len(arrp)):
+        for j in range(i+1,len(arrp)):
+            d=float(np.linalg.norm(arrp[i]-arrp[j]))
+            if d>best_d:
+                best_d=d; best=(arrp[i],arrp[j])
+    return np.vstack(best)
 
 
 def viability_region(cfg):
