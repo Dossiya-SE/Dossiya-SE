@@ -127,7 +127,15 @@ def validate_generated() -> None:
     require("flow-green" in hero, "legacy portrait must encode viable/sustainable state evolution in green")
     require("flow-yellow" in hero, "legacy portrait must encode causal/decision pathway in light yellow")
     require("not a measured flow" in hero.lower(), "legacy portrait must preserve mathematical-art/data boundary")
-    require("flow-yellow" in pipeline and "var(--red)" in pipeline and "var(--green)" in pipeline, "pipeline must use governed three-color semantics")
+    hero_body = hero.split("</style>", 1)[-1]
+    for token in ("var(--power)", "var(--transport)", "var(--information)", "var(--organization-ink)"):
+        require(token in hero_body, f"RGB research portrait missing semantic sector token: {token}")
+    require("SYSTEM CHANNELS" in hero_body, "RGB research portrait must label the system-channel ontology")
+    pipeline_body = pipeline.split("</style>", 1)[-1]
+    for token in ("var(--power)", "var(--organization)", "var(--transport)", "var(--cyan)", "var(--information)", "var(--magenta)"):
+        require(token in pipeline_body, f"RGB pipeline missing stage-navigation token: {token}")
+    require("RGB progression is a visual navigation system" in pipeline_body, "pipeline must state RGB is not scientific ontology")
+    require("flow-yellow" in pipeline and "var(--red)" in pipeline and "var(--green)" in pipeline, "pipeline must retain governed state semantics")
     require("MOST RECENT PUBLIC CHANGE" in projects, "project system must identify most recent public change")
 
 
