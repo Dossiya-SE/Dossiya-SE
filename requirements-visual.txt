@@ -1,0 +1,8 @@
+numpy>=2.0,<3
+scipy>=1.14,<2
+sympy>=1.13,<2
+shapely>=2.0,<3
+pyvista>=0.44,<1
+trimesh>=4.0,<5
+CairoSVG>=2.8,<3
+Pillow>=11,<13
