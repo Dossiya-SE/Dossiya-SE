@@ -27,3 +27,8 @@ A geometric primitive is selected by mathematical role:
 - orthogonal projection → distance/intervention direction.
 
 No shape is inserted merely because it exists in the primitive library.
+
+## Release gate
+
+Every public README visual is regenerated from `scripts/render_geometric_readme.py`, validated semantically, and raster-tested at **980 px** and **640 px**. Manual QA additionally checks label placement, geometric role clarity, and small-width readability. The standalone flat-geometry lesson introduced in the earlier iteration is intentionally absent from the public README.
+
