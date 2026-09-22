@@ -57,9 +57,6 @@ def validate_readme() -> None:
     require("assets/generated/graph-to-viability.svg" in text, "README must surface graph-to-viability transformation")
     require("assets/generated/research-state-light.svg" in text, "README must surface living research state")
     require("assets/generated/project-system.svg" in text, "README must surface featured research systems")
-    require("assets/generated/flat-geometry.svg" in text, "README must surface the governed flat-geometry visual")
-    require("mathematical-art/flat-geometry/overleaf/flat_geometry.tex" in text, "README must expose the publication-quality TikZ source")
-    require("plane figures" in lower and "affine flats" in lower, "README must distinguish bounded plane figures from affine flats")
 
     # Full framework, design manual and automation are secondary, not primary sections.
     for forbidden_heading in ("## Research architecture", "## Scientific visual constitution", "## Living-profile engine"):

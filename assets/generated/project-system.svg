@@ -1,50 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 510" role="img" aria-labelledby="title desc">
-<title id="title">Featured public research systems</title>
-<desc id="desc">Four featured public research systems shown as a restrained publication index. Accent colors aid navigation only and do not encode scientific quality, importance or evidence strength.</desc>
-<style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc"><title id="title">Featured research systems as geometric signatures</title><desc id="desc">Four featured research systems represented by distinct geometric signatures: triangle, hexagon, quadrilateral and pentagon. Shape differentiates systems without implying scientific ranking.</desc><style>
 :root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--yellow:#9A6700;--yellow-soft:#FFF4CC;--yellow-ink:#6B4B00;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#A66F00;--organization-ink:#7A5200;--organization-soft:#FBF0DA;--cyan:#007A88;--cyan-soft:#E6F6F8;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#A21CAF;--magenta-soft:#F8E8FB;--gold:#8B5E00;--gold-soft:#F6EEDC}
 @media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E3B341;--organization-ink:#F0C96B;--organization-soft:#372D14;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#DDBA55;--gold-soft:#352D18}}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
-.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
-.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;fill:var(--muted)}
-.title{font-size:31px;font-weight:800;letter-spacing:-.02em}
-.h{font-size:20px;font-weight:760} .m{font-size:14px;fill:var(--muted)} .s{font-size:11px;fill:var(--muted)}
-.value{font-size:18px;font-weight:720} .math-lg{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:25px}
-.panel{fill:var(--panel);stroke:var(--line);stroke-width:1.1}
-.flow-yellow{fill:none;stroke:var(--yellow);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:9 11;animation:flow 3.2s linear infinite}
-.flow-green{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 12;animation:flow 3.8s linear infinite}
-.flow-blue{fill:none;stroke:var(--information);stroke-width:2.8;stroke-linecap:round;stroke-dasharray:8 10;animation:flow 4.1s linear infinite}
-.pulse-green{animation:pulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.latest{animation:latest 3.4s ease-in-out infinite}
-@keyframes flow{to{stroke-dashoffset:-42}}
-@keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
-@keyframes latest{0%,100%{stroke-opacity:.35}50%{stroke-opacity:1}}
-@media(prefers-reduced-motion:reduce){.flow-yellow,.flow-green,.flow-blue,.pulse-green,.latest{animation:none!important}}
+.math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
+.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
+.h2{font-size:22px;font-weight:780}
+.label{font-size:15px;font-weight:720}
+.small{font-size:13px;fill:var(--muted)}
+.micro{font-size:11px;fill:var(--muted);letter-spacing:.08em}
+.panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
+.plane{fill:var(--ghost);stroke:var(--line);stroke-width:1.3}
+.power{fill:none;stroke:var(--power);stroke-width:3}
+.transport{fill:none;stroke:var(--transport);stroke-width:3}
+.info{fill:none;stroke:var(--information);stroke-width:2;stroke-dasharray:8 7}
+.org{fill:none;stroke:var(--organization);stroke-width:2;stroke-dasharray:2 6}
+.model{fill:none;stroke:var(--violet);stroke-width:2.3}
+.viable{fill:var(--green-soft);stroke:var(--green);stroke-width:2.2}
+.critical{fill:none;stroke:var(--red);stroke-width:3;stroke-dasharray:10 8}
+.control{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:8 6}
+.state{fill:var(--cyan);stroke:var(--panel);stroke-width:2}
+.node{fill:var(--panel);stroke-width:2.4}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-<rect x="1" y="1" width="1398" height="508" rx="18" fill="var(--bg)" stroke="var(--line)"/>
-<text x="48" y="48" class="eyebrow">FEATURED RESEARCH SYSTEMS</text>
-<text x="48" y="79" class="m">four research-facing public systems · observed 22 Sep 2026</text>
-<rect x="48" y="108" width="1304" height="68" rx="4" class="panel research-card"/>
-<line x1="48" y1="108" x2="48" y2="176" stroke="var(--violet)" stroke-width="5"/>
-<text x="72" y="137" class="h">Research Portfolio</text>
-<text x="478" y="136" class="m">interactive mathematical visualization and research demonstrations</text>
-<text x="72" y="160" class="s">HTML · latest public commit 13 Sep 2026</text>
-<rect x="48" y="190" width="1304" height="68" rx="4" class="panel research-card"/>
-<line x1="48" y1="190" x2="48" y2="258" stroke="var(--information)" stroke-width="5"/>
-<text x="72" y="219" class="h">Geometry + Resilience</text>
-<text x="478" y="218" class="m">differential geometry, dynamical systems and resilience mathematics</text>
-<text x="72" y="242" class="s">Python · latest public commit 09 Sep 2026</text>
-<rect x="48" y="272" width="1304" height="68" rx="4" class="panel research-card"/>
-<line x1="48" y1="272" x2="48" y2="340" stroke="var(--transport)" stroke-width="5"/>
-<text x="72" y="301" class="h">Optimization + Resilience</text>
-<text x="478" y="300" class="m">optimization, constrained decision models and network methods</text>
-<text x="72" y="324" class="s">TeX · latest public commit 22 Sep 2026</text>
-<rect x="48" y="354" width="1304" height="68" rx="4" class="panel research-card"/>
-<line x1="48" y1="354" x2="48" y2="422" stroke="var(--cyan)" stroke-width="5"/>
-<text x="72" y="383" class="h">Africa Energy Dignity</text>
-<text x="478" y="382" class="m">energy-system modeling, geospatial engineering and constrained planning</text>
-<text x="72" y="406" class="s">Python · latest public commit 21 Aug 2026</text>
-<line x1="48" y1="447" x2="1352" y2="447" stroke="var(--line)"/>
-<text x="48" y="478" class="eyebrow" fill="var(--yellow-ink)">MOST RECENT PUBLIC CHANGE</text>
-<text x="285" y="478" class="s">Optimization + Resilience · recency is metadata, not scientific importance or validation; row accent is navigation, not evidence status.</text>
+<rect x="1" y="1" width="1598" height="498" rx="18" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="58" class="micro">FEATURED RESEARCH SYSTEMS · GEOMETRIC INDEX</text>
+<polygon points="220.0,134.0 285.8,248.0 154.2,248.0" fill="var(--power-soft)" stroke="var(--power)" stroke-width="3"/>
+<text x="220" y="324" text-anchor="middle" class="label">Africa Energy Dignity</text>
+<text x="220" y="351" text-anchor="middle" class="small">3-vertex signature · navigation only</text>
+<polygon points="600.0,134.0 665.8,172.0 665.8,248.0 600.0,286.0 534.2,248.0 534.2,172.0" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
+<text x="600" y="324" text-anchor="middle" class="label">Mathematics Exploration</text>
+<text x="600" y="351" text-anchor="middle" class="small">6-vertex signature · navigation only</text>
+<polygon points="980.0,134.0 1056.0,210.0 980.0,286.0 904.0,210.0" fill="var(--transport-soft)" stroke="var(--transport)" stroke-width="3"/>
+<text x="980" y="324" text-anchor="middle" class="label">Optimization for Sustainability</text>
+<text x="980" y="351" text-anchor="middle" class="small">4-vertex signature · navigation only</text>
+<polygon points="1360.0,134.0 1432.3,186.5 1404.7,271.5 1315.3,271.5 1287.7,186.5" fill="var(--cyan-soft)" stroke="var(--cyan)" stroke-width="3"/>
+<text x="1360" y="324" text-anchor="middle" class="label">Mathematical Surface Engineering</text>
+<text x="1360" y="351" text-anchor="middle" class="small">5-vertex signature · navigation only</text>
+<line x1="48" y1="402" x2="1552" y2="402" stroke="var(--line)"/>
+<text x="48" y="435" class="micro" fill="var(--gold)">MOST RECENT PUBLIC CHANGE</text>
+<text x="280" y="435" class="small">recency is metadata, not scientific importance or validation; shape and color are navigation only.</text>
 </svg>

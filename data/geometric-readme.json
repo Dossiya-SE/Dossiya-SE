@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "contract_id":"GEOMETRIC-README-V2",
+  "principle":"Use plane geometry and affine geometry as structural visual grammar for existing README figures, never as standalone educational content.",
+  "visuals":{
+    "research-hero":{"primary_geometry":["affine planes","typed polygons","ellipse","hyperplane","orthogonal projection"],"authority":["React/CSS composition","Python deterministic SVG"]},
+    "research-question":{"primary_geometry":["triangle","hexagon","pentagon","ellipse"],"authority":["TikZ construction","Python deterministic SVG"]},
+    "coupled-network-3d":{"primary_geometry":["two affine planes","typed polygons","shared hexagonal intersection","ellipse","hyperplane"],"authority":["Julia coordinate model","Python deterministic SVG"]},
+    "graph-to-viability":{"primary_geometry":["polygonal graph complex","affine model plane","ellipse","hyperplane","normal projection"],"authority":["Julia linear algebra","TikZ construction","Python deterministic SVG"]},
+    "research-state":{"primary_geometry":["triangle","quadrilateral","hexagon","pentagon","ellipse"],"authority":["React/CSS responsive composition","Python deterministic SVG"]},
+    "project-system":{"primary_geometry":["triangle","hexagon","quadrilateral","pentagon"],"authority":["Go static geometry mirror","C# engineering mirror","Python deterministic SVG"]},
+    "research-pipeline":{"primary_geometry":["triangle","hexagon","pentagon","quadrilateral","ellipse","octagon","decagon"],"authority":["TikZ sequence design","Python deterministic SVG"]}
+  },
+  "scientific_boundary":"Geometry communicates structure, category, state-space relation and constraint direction. Shape/color never increase evidence strength and never imply measured behavior."
+}
