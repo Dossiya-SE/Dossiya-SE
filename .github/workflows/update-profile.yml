@@ -109,6 +109,15 @@ jobs:
       - name: Render static isometric 3D hero
         run: python scripts/render_network_3d.py
 
+      - name: Upload regenerated profile SVGs
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-profile-svg
+          path: assets/generated/*.svg
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Validate static 3D hero semantics
         run: python scripts/validate_network_3d.py
 
