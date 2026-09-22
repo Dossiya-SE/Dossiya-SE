@@ -27,7 +27,9 @@ def vars_for(p: dict) -> str:
     order = [
         "bg", "panel", "ink", "muted", "line", "topology", "green",
         "green_soft", "red", "red_soft", "yellow", "yellow_soft",
-        "yellow_ink", "ghost",
+        "yellow_ink", "ghost", "power", "power_soft", "transport", "transport_soft",
+        "information", "information_soft", "organization", "organization_ink", "organization_soft",
+        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft", "gold", "gold_soft",
     ]
     return ";".join(f"--{k.replace('_', '-')}:{p[k]}" for k in order)
 
@@ -57,40 +59,26 @@ def norm_positions(layer: dict, z: float) -> dict[str, tuple[float, float]]:
     return out
 
 
-def node(parts: list[str], n: dict, x: float, y: float) -> None:
-    t = n["type"]
-    parts.append(
-        f'<line x1="{x:.1f}" y1="{y+14:.1f}" x2="{x:.1f}" y2="{y+27:.1f}" '
-        'stroke="var(--line)" stroke-width="1.3"/>'
-    )
-    parts.append(
-        f'<ellipse cx="{x:.1f}" cy="{y+29:.1f}" rx="16" ry="5.5" '
-        'fill="var(--ghost)" stroke="var(--line)"/>'
-    )
-
-    fill, stroke = "var(--panel)", "var(--topology)"
-    if t == "interface":
-        fill, stroke = "var(--yellow-soft)", "var(--yellow)"
-
-    if t in {"generator", "load", "origin", "destination", "hub"}:
-        parts.append(
-            f'<ellipse cx="{x:.1f}" cy="{y:.1f}" rx="18" ry="12" fill="{fill}" '
-            f'stroke="{stroke}" stroke-width="2.4"/>'
-        )
-    elif t in {"substation", "intersection"}:
-        pts = f"{x:.1f},{y-14:.1f} {x+18:.1f},{y:.1f} {x:.1f},{y+14:.1f} {x-18:.1f},{y:.1f}"
+def node(parts: list[str], n: dict, x: float, y: float, *, sector: str) -> None:
+    t=n["type"]
+    parts.append(f'<line x1="{x:.1f}" y1="{y+14:.1f}" x2="{x:.1f}" y2="{y+27:.1f}" stroke="var(--line)" stroke-width="1.3"/>')
+    parts.append(f'<ellipse cx="{x:.1f}" cy="{y+29:.1f}" rx="16" ry="5.5" fill="var(--ghost)" stroke="var(--line)"/>')
+    sector_color="var(--power)" if sector=="power" else "var(--transport)"
+    fill,stroke="var(--panel)",sector_color
+    if t=="interface":
+        fill,stroke="var(--yellow-soft)","var(--yellow)"
+    if t in {"generator","load","origin","destination","hub"}:
+        parts.append(f'<ellipse cx="{x:.1f}" cy="{y:.1f}" rx="18" ry="12" fill="{fill}" stroke="{stroke}" stroke-width="2.4"/>')
+    elif t in {"substation","intersection"}:
+        pts=f"{x:.1f},{y-14:.1f} {x+18:.1f},{y:.1f} {x:.1f},{y+14:.1f} {x-18:.1f},{y:.1f}"
         parts.append(f'<polygon points="{pts}" fill="{fill}" stroke="{stroke}" stroke-width="2.4"/>')
-    elif t == "interface":
-        pts = f"{x:.1f},{y-17:.1f} {x+22:.1f},{y:.1f} {x:.1f},{y+17:.1f} {x-22:.1f},{y:.1f}"
+    elif t=="interface":
+        pts=f"{x:.1f},{y-17:.1f} {x+22:.1f},{y:.1f} {x:.1f},{y+17:.1f} {x-22:.1f},{y:.1f}"
         parts.append(f'<polygon points="{pts}" fill="{fill}" stroke="{stroke}" stroke-width="3"/>')
-    elif t == "terminal":
-        pts = f"{x:.1f},{y-17:.1f} {x+18:.1f},{y+13:.1f} {x-18:.1f},{y+13:.1f}"
+    elif t=="terminal":
+        pts=f"{x:.1f},{y-17:.1f} {x+18:.1f},{y+13:.1f} {x-18:.1f},{y+13:.1f}"
         parts.append(f'<polygon points="{pts}" fill="{fill}" stroke="{stroke}" stroke-width="2.4"/>')
-
-    parts.append(
-        f'<text x="{x:.1f}" y="{y+5:.1f}" text-anchor="middle" class="node">{escape(n["id"])}</text>'
-    )
-
+    parts.append(f'<text x="{x:.1f}" y="{y+5:.1f}" text-anchor="middle" class="node">{escape(n["id"])}</text>')
 
 def plane(parts: list[str], z: float) -> None:
     pts = [project(0, 0, z), project(1, 0, z), project(1, 1, z), project(0, 1, z)]
@@ -111,34 +99,32 @@ def plane(parts: list[str], z: float) -> None:
 
 def layer_label(parts: list[str], *, power: bool) -> None:
     if power:
-        x, y = 58, 205
-        title = f'POWER NETWORK {sub("G", "P")}'
-        subtitle = "electrical service topology"
-        target = project(0.02, 0.04, 218)
+        x,y=58,205
+        title=f'POWER NETWORK {sub("G","P")}'
+        subtitle="electrical service topology"
+        target=project(0.02,0.04,218)
+        color="var(--power)"
     else:
-        # The transport label sits in the inter-layer gap, not on top of O1 or a road node.
-        x, y = 58, 465
-        title = f'TRANSPORTATION NETWORK {sub("G", "T")}'
-        subtitle = "mobility service topology"
-        target = project(0.02, 0.04, 0)
-
-    parts.append(f'<rect x="{x}" y="{y-30}" width="285" height="64" rx="13" class="label-box"/>')
-    parts.append(f'<text x="{x+18}" y="{y-3}" class="layer">{title}</text>')
+        x,y=58,465
+        title=f'TRANSPORTATION NETWORK {sub("G","T")}'
+        subtitle="mobility service topology"
+        target=project(0.02,0.04,0)
+        color="var(--transport)"
+    parts.append(f'<rect x="{x}" y="{y-30}" width="285" height="64" rx="9" class="label-box"/>')
+    parts.append(f'<line x1="{x}" y1="{y-30}" x2="{x}" y2="{y+34}" stroke="{color}" stroke-width="5"/>')
+    parts.append(f'<text x="{x+18}" y="{y-3}" class="layer" fill="{color}">{title}</text>')
     parts.append(f'<text x="{x+18}" y="{y+20}" class="small">{subtitle}</text>')
-    parts.append(
-        f'<path d="M{x+285} {y+2}L{target[0]-14:.1f} {target[1]:.1f}" '
-        'stroke="var(--line)" stroke-width="1.5"/>'
-    )
+    parts.append(f'<path d="M{x+285} {y+2}L{target[0]-14:.1f} {target[1]:.1f}" stroke="var(--line)" stroke-width="1.5"/>')
 
-
-def edges(parts: list[str], layer: dict, pos: dict[str, tuple[float, float]], *, selected: set[str]) -> None:
+def edges(parts: list[str], layer: dict, pos: dict[str, tuple[float,float]], *, selected: set[str], sector: str) -> None:
+    base="power-edge" if sector=="power" else "transport-edge"
+    service="service-power" if sector=="power" else "service-transport"
     for e in layer["edges"]:
-        a, b = pos[e["source"]], pos[e["target"]]
-        cls = "edge-soft" if e["type"] in {"distribution", "logistics"} else "edge"
+        a,b=pos[e["source"]],pos[e["target"]]
+        cls="edge-soft" if e["type"] in {"distribution","logistics"} else base
         parts.append(f'<path d="M{a[0]:.1f} {a[1]:.1f}L{b[0]:.1f} {b[1]:.1f}" class="{cls}"/>')
         if e["id"] in selected:
-            parts.append(f'<path d="M{a[0]:.1f} {a[1]:.1f}L{b[0]:.1f} {b[1]:.1f}" class="service"/>')
-
+            parts.append(f'<path d="M{a[0]:.1f} {a[1]:.1f}L{b[0]:.1f} {b[1]:.1f}" class="{service}"/>')
 
 def interface_callout(parts: list[str], p: tuple[float, float], t: tuple[float, float]) -> None:
     parts.append(
@@ -231,9 +217,9 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
         '<title id="title">Coupled Power–Transportation multilayer research geometry</title>',
         '<desc id="desc">Static isometric multilayer infrastructure geometry with typed Power and Transportation networks, a shared EV charging interface C1, and a separate pseudo-3D viability panel. Depth encodes layer separation only and is not geographic elevation, GIS height, telemetry, or a calibrated state coordinate.</desc>',
         css,
-        '<rect x="1" y="1" width="1598" height="758" rx="28" fill="var(--bg)" stroke="var(--line)"/>',
+        '<rect x="1" y="1" width="1598" height="758" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
         '<text x="48" y="58" class="title">Coupled Power–Transportation Systems</text>',
-        '<text x="48" y="88" class="subtitle">Isometric multilayer topology · shared physical interface · viability geometry</text>',
+        '<text x="48" y="88" class="subtitle">Publication RGB multilayer topology · shared physical interface · viability geometry</text>',
         '<text x="1550" y="56" text-anchor="end" class="eyebrow">STATIC 3D SCHEMATIC · NOT GIS ELEVATION</text>',
         '<path d="M985 120L985 662" stroke="var(--line)" stroke-width="1.4"/>',
     ]
@@ -253,19 +239,19 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 
     ppos = norm_positions(power, zp)
     tpos = norm_positions(transport, zt)
-    edges(parts, power, ppos, selected={"P01", "P03", "P06", "P08"})
-    edges(parts, transport, tpos, selected={"T01", "T03", "T08", "T11"})
+    edges(parts, power, ppos, selected={"P01","P03","P06","P08"}, sector="power")
+    edges(parts, transport, tpos, selected={"T01","T03","T08","T11"}, sector="transport")
 
     for n in power["nodes"]:
-        node(parts, n, *ppos[n["id"]])
+        node(parts, n, *ppos[n["id"]], sector="power")
     for n in transport["nodes"]:
-        node(parts, n, *tpos[n["id"]])
+        node(parts, n, *tpos[n["id"]], sector="transport")
 
     interface_callout(parts, ppos["C1"], tpos["C1"])
     viability(parts)
 
     parts.extend([
-        '<text x="48" y="708" class="legend">Green solid path = admissible service · Ochre dashed rail = causal interface · Red dashed boundary = criticality · Charcoal = physical topology</text>',
+        '<text x="48" y="708" class="legend">Power = solid carmine · Transportation = solid green · Interface = ochre dashed · Critical boundary = dashed red · Viability = green</text>',
         '<text x="48" y="738" class="legend">Coordinates and depth are explanatory and uncalibrated.</text>',
         '</svg>',
     ])

@@ -86,6 +86,9 @@ def validate_question() -> None:
     require("Power ↔ Transportation interfaces" in text, "research-question figure missing physical interface scope")
     require("Y(t) ∈ 𝒱" in text, "research-question figure missing viability objective")
     require("var(--yellow" in text and "var(--green" in text, "research-question figure missing semantic causal/viability cues")
+    body = text.split("</style>", 1)[-1]
+    for token in ("var(--power)", "var(--transport)", "var(--information)"):
+        require(token in body, f"research-question figure missing RGB sector/dynamics token: {token}")
 
 
 def validate_state() -> None:
@@ -95,6 +98,7 @@ def validate_state() -> None:
         require("CURRENT SCIENTIFIC TRANSITION" in body, f"{name}: active transition missing")
         require("Causal Mechanisms" in body and "Coupled Hybrid Multiscale Dynamics" in body, f"{name}: transition endpoints missing")
         require("MATHEMATICAL STATE" in body, f"{name}: mathematical signature missing")
+        require("var(--power)" in body and "var(--transport)" in body and "var(--information)" in body, f"{name}: RGB sector channels missing")
         require("var(--red)" not in body and "var(--red-soft)" not in body, f"{name}: red must not encode metadata or normal research state")
         require("EVIDENCE OBSERVED" not in body, f"{name}: metadata must not be presented as a critical-status card")
         require(body.count("<rect") <= 4, f"{name}: excessive container/card count reintroduced")
@@ -115,6 +119,8 @@ def validate_projects() -> None:
     require(text.count('class="panel research-card"') == 4, "project system must show exactly four featured research cards")
     require("MOST RECENT PUBLIC CHANGE" in text, "project system must retain public recency metadata")
     require("recency is metadata, not scientific importance or validation" in text, "project recency boundary missing")
+    body = text.split("</style>", 1)[-1]
+    require("var(--violet)" in body and "var(--information)" in body and "var(--transport)" in body and "var(--cyan)" in body, "project index must retain restrained RGB navigation accents")
 
 
 def main() -> int:
