@@ -1,34 +1,62 @@
-# GEOMETRIC-README-V2
+# Scientific profile geometry
 
-This directory is the design-source system for the **existing GitHub README visuals**. It is not a gallery of shapes.
+## SCIENTIFIC-GEOMETRY-V3
+
+The primary README figures are generated from a governed computational geometry pipeline. Scientific coordinates are not hand-positioned in SVG.
+
+```text
+scientific-geometry-v3.toml
+        ↓
+SymPy
+exact symbolic projection / equations
+        ↓
+NumPy + SciPy
+rank · QR · SVD · conditioning · spline geometry
+        ↓
+Shapely
+constraint intersections · feasible region · nearest boundary · area / centroid
+        ↓
+Julia / LinearAlgebra
+independent rank · QR · projection · equal-area verification
+        ↓
+PyVista + Trimesh
+3D multilayer scene / mesh validation where 3D is scientifically relevant
+        ↓
+computed-geometry-v3.json
+        ├── TikZ / Overleaf publication representation
+        └── Python deterministic SVG
+                ↓
+semantic + quantitative-layout + palette + raster gates
+                ↓
+README
+```
 
 ## Tool allocation
 
-| Existing README visual | Primary design authority | Why |
+| Existing README visual | Governing computation | Release representation |
 |---|---|---|
-| Research hero | React + CSS → Python SVG | responsive composition of affine planes, typed topology and viability geometry |
-| Research question | TikZ / Overleaf → Python SVG | exact geometric progression and alignment |
-| Coupled physical system | Julia → Python SVG | coordinate geometry for multilayer affine planes and typed nodes |
-| Graph → dynamics → viability | Julia + TikZ → Python SVG | projection, distance and constraint geometry |
-| Current research state | React + CSS → Python SVG | responsive phase/state composition |
-| Research systems | Go + C# mirrors → Python SVG | lightweight deterministic polygon signatures and engineering portability |
-| Seven-stage architecture | TikZ → Python SVG | exact continuous geometric sequence |
+| Research hero | affine rank/QR + Shapely viability + exact nearest-boundary projection | Python SVG; TikZ counterpart where mathematical construction is publication-relevant |
+| Research question | minimal symbolic logic; geometric spacing checks | TikZ logic + Python SVG |
+| Coupled physical system | R³ affine embedding, orthographic projection, PyVista/Trimesh scene validation | Python SVG |
+| Graph → dynamics → viability | symbolic constraints + Shapely intersection + exact nearest-boundary distance | TikZ + Python SVG |
+| Current research state | SVD projection of explicitly conceptual 4D state vectors | Python SVG |
+| Research systems | equal-area regular polygons + Shapely area/centroid validation | Python SVG |
+| Seven-stage architecture | SciPy continuous cubic spline `γ(t)` through seven anchors | TikZ + Python SVG |
 
-Python is the deterministic GitHub rendering authority because GitHub README must receive self-contained SVG.
+## Non-negotiable invariants
 
-## Rule
+1. **Scientific coordinates come from computation.** Manual coordinates may control framing, typography and panel placement, but not the mathematical state, boundary, projection, affine plane, 3D layer embedding, project area, research-state projection or continuous stage trajectory.
+2. **Computed does not mean empirically validated.** Viability constraints and research-state vectors remain schematic until case-specific evidence supports calibration.
+3. **The gold resilience-margin vector must be mathematically normal to the active critical boundary.**
+4. **Power/Transportation layer separation is a visual coordinate, not geographic elevation.**
+5. **Research-system shapes have equal computed area. Shape/color are navigation only.**
+6. **The seven-stage architecture is a continuous `γ:[0,1]→R²` satisfying `γ(t_i)=S_i`.**
+7. **A release must pass G1–G6:** mathematics, numerical verification, computational geometry, semantics, quantitative visual quality, and deterministic rendering.
 
-A geometric primitive is selected by mathematical role:
+## Rhino / Grasshopper policy
 
-- polygon → typed/discrete structure;
-- affine plane → layer/model subspace;
-- ellipse → bounded/admissible state region;
-- dashed line/hyperplane → critical constraint;
-- orthogonal projection → distance/intervention direction.
+Rhino/Grasshopper remains an optional parametric exploration laboratory for future CAD/surface investigations. It is intentionally **not** a GitHub release dependency because none of the current README figures requires Rhino-specific geometry. If a future figure depends on Rhino/Grasshopper, its numerical parameters must be exported into the governed source contract before the deterministic SVG release step.
 
-No shape is inserted merely because it exists in the primitive library.
+## Evidence boundary
 
-## Release gate
-
-Every public README visual is regenerated from `scripts/render_geometric_readme.py`, validated semantically, and raster-tested at **980 px** and **640 px**. Manual QA additionally checks label placement, geometric role clarity, and small-width readability. The standalone flat-geometry lesson introduced in the earlier iteration is intentionally absent from the public README.
-
+The visual system distinguishes mathematical consistency, numerical verification, computational geometry validity, empirical validation and engineering usefulness. Passing the visual pipeline does not establish physical calibration or empirical validity.
