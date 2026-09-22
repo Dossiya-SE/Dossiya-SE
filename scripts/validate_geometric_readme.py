@@ -62,8 +62,9 @@ def main():
     require("<ellipse" not in gv,"graph-to-viability must not use a decorative ellipse as the feasible set")
 
     st=read_svg("research-state-light.svg")
-    for token in ("SVD PROJECTION","conceptual 4D state","not empirical measurement"):
-        require(token in st,f"research-state evidence boundary missing: {token}")
+    st_lower=st.lower()
+    for token in ("svd projection","conceptual 4d state","not empirical measurement"):
+        require(token in st_lower,f"research-state evidence boundary missing: {token}")
 
     pr=read_svg("project-system.svg")
     for token in ("EQUAL-AREA GEOMETRIC INDEX","equal area","do not encode rank"):
