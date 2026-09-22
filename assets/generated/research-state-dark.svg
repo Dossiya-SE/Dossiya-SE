@@ -1,40 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 348" role="img" aria-labelledby="title desc">
-<title id="title">Governed living research state</title>
-<desc id="desc">Publication-style current research state. Power, Transportation, Information and Organization use separate RGB-derived semantic channels; active transition and mathematical state remain explicitly labeled.</desc>
-<style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" role="img" aria-labelledby="title desc"><title id="title">Current research state as geometric phase diagram</title><desc id="desc">Current research state shown as a geometric phase diagram: a gold hexagonal causal interface transitions into a blue pentagonal coupled-dynamics object, embedded between Power and Transportation sector markers.</desc><style>
 :root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E3B341;--organization-ink:#F0C96B;--organization-soft:#372D14;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#DDBA55;--gold-soft:#352D18}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
-.math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
-.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;fill:var(--muted)}
-.title{font-size:31px;font-weight:800;letter-spacing:-.02em}
-.h{font-size:20px;font-weight:760} .m{font-size:14px;fill:var(--muted)} .s{font-size:11px;fill:var(--muted)}
-.value{font-size:18px;font-weight:720} .math-lg{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:25px}
-.panel{fill:var(--panel);stroke:var(--line);stroke-width:1.1}
-.flow-yellow{fill:none;stroke:var(--yellow);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:9 11;animation:flow 3.2s linear infinite}
-.flow-green{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 12;animation:flow 3.8s linear infinite}
-.flow-blue{fill:none;stroke:var(--information);stroke-width:2.8;stroke-linecap:round;stroke-dasharray:8 10;animation:flow 4.1s linear infinite}
-.pulse-green{animation:pulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.latest{animation:latest 3.4s ease-in-out infinite}
-@keyframes flow{to{stroke-dashoffset:-42}}
-@keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
-@keyframes latest{0%,100%{stroke-opacity:.35}50%{stroke-opacity:1}}
-@media(prefers-reduced-motion:reduce){.flow-yellow,.flow-green,.flow-blue,.pulse-green,.latest{animation:none!important}}
+.math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
+.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
+.h2{font-size:22px;font-weight:780}
+.label{font-size:15px;font-weight:720}
+.small{font-size:13px;fill:var(--muted)}
+.micro{font-size:11px;fill:var(--muted);letter-spacing:.08em}
+.panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
+.plane{fill:var(--ghost);stroke:var(--line);stroke-width:1.3}
+.power{fill:none;stroke:var(--power);stroke-width:3}
+.transport{fill:none;stroke:var(--transport);stroke-width:3}
+.info{fill:none;stroke:var(--information);stroke-width:2;stroke-dasharray:8 7}
+.org{fill:none;stroke:var(--organization);stroke-width:2;stroke-dasharray:2 6}
+.model{fill:none;stroke:var(--violet);stroke-width:2.3}
+.viable{fill:var(--green-soft);stroke:var(--green);stroke-width:2.2}
+.critical{fill:none;stroke:var(--red);stroke-width:3;stroke-dasharray:10 8}
+.control{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:8 6}
+.state{fill:var(--cyan);stroke:var(--panel);stroke-width:2}
+.node{fill:var(--panel);stroke-width:2.4}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-<rect x="1" y="1" width="1398" height="346" rx="18" fill="var(--bg)" stroke="var(--line)"/>
-<text x="48" y="49" class="eyebrow">CURRENT RESEARCH STATE</text>
-<text x="48" y="94" class="title"><tspan fill="var(--power)">Power</tspan><tspan> ↔ </tspan><tspan fill="var(--transport)">Transportation</tspan></text>
-<text x="48" y="124" class="m">Information and Organization enter only when they materially alter sensing, coordination, inference, operation or recovery.</text>
-<line x1="48" y1="154" x2="1352" y2="154" stroke="var(--line)"/>
-<text x="48" y="190" class="eyebrow">CURRENT SCIENTIFIC TRANSITION</text>
-<text x="48" y="230" class="value">Causal Mechanisms</text>
-<path d="M235 223H485" class="flow-yellow"/>
-<text x="515" y="230" class="value" fill="var(--information)">Coupled Hybrid Multiscale Dynamics</text>
-<text x="48" y="265" class="m">physically supported interfaces → coupled state evolution under disturbance and control</text>
-<text x="965" y="190" class="eyebrow">MATHEMATICAL STATE</text>
-<text x="965" y="232" class="math-lg">R_phys → C → (G,I) → F_G → V → ρ_g → u*</text>
-<path d="M965 256H1348" class="flow-green"/>
-<line x1="48" y1="297" x2="1352" y2="297" stroke="var(--line)"/>
-<text x="48" y="325" class="s">06 public systems · 04 featured · state verified 13 Sep 2026 · evidence observed 22 Sep 2026</text>
-<text x="1352" y="325" text-anchor="end" class="s">public activity cannot promote a scientific claim</text>
+<rect x="1" y="1" width="1598" height="418" rx="18" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="56" class="micro">CURRENT SCIENTIFIC TRANSITION</text>
+<polygon points="170.0,148.0 223.7,241.0 116.3,241.0" fill="var(--power-soft)" stroke="var(--power)" stroke-width="3"/>
+<text x="170" y="216" text-anchor="middle" class="label">POWER</text>
+<polygon points="393.8,253.8 306.2,253.8 306.2,166.2 393.8,166.2" fill="var(--transport-soft)" stroke="var(--transport)" stroke-width="3"/>
+<text x="350" y="216" text-anchor="middle" class="label">TRANSPORT</text>
+<path d="M430 210L600 210" class="control"/>
+<polygon points="710.0,128.0 781.0,169.0 781.0,251.0 710.0,292.0 639.0,251.0 639.0,169.0" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>
+<text x="710" y="204" text-anchor="middle" class="label">CAUSAL</text><text x="710" y="226" text-anchor="middle" class="label">MECHANISMS</text>
+<path d="M805 210L965 210" class="control"/>
+<polygon points="1080.0,122.0 1163.7,182.8 1131.7,281.2 1028.3,281.2 996.3,182.8" fill="var(--information-soft)" stroke="var(--information)" stroke-width="3"/>
+<text x="1080" y="198" text-anchor="middle" class="label">COUPLED HYBRID</text><text x="1080" y="220" text-anchor="middle" class="label">MULTISCALE</text><text x="1080" y="242" text-anchor="middle" class="label">DYNAMICS</text>
+<ellipse cx="1395" cy="210" rx="125" ry="72" class="viable"/>
+<text x="1395" y="206" text-anchor="middle" class="label">NEXT</text><text x="1395" y="228" text-anchor="middle" class="small">viability / control</text>
+<text x="48" y="380" class="small">MATHEMATICAL STATE · structure → mechanism → dynamics → admissible-state geometry. Polygon type is navigation, not evidence strength.</text>
 </svg>
