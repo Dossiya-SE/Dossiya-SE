@@ -3,7 +3,7 @@
 using LinearAlgebra
 using TOML
 
-root = normpath(joinpath(@__DIR__, ".."))
+root = normpath(joinpath(@__DIR__, "..", "..", ".."))
 cfg = TOML.parsefile(joinpath(root, "data", "scientific-geometry-v3.toml"))
 mkpath(joinpath(root, "artifacts"))
 
