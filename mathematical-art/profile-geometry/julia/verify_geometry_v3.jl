@@ -28,8 +28,8 @@ rank(T) == 2 || error("transport plane rank != 2")
 
 Qp = Matrix(qr(P).Q)[:,1:2]
 Qt = Matrix(qr(T).Q)[:,1:2]
-orth_p = norm(Qp'Qp - I(2))
-orth_t = norm(Qt'Qt - I(2))
+orth_p = norm(Qp'Qp - Matrix{Float64}(I,2,2))
+orth_t = norm(Qt'Qt - Matrix{Float64}(I,2,2))
 
 sg = cfg["hero"]["state_geometry"]
 q = projection(sg["state"], sg["normal"], sg["b"])
