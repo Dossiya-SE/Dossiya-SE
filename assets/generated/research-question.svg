@@ -24,16 +24,23 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 </style>
 <rect x="1" y="1" width="1598" height="418" rx="18" fill="var(--bg)" stroke="var(--line)"/>
 <text x="48" y="58" class="micro">RESEARCH QUESTION · GEOMETRIC LOGIC</text>
+<text x="175" y="114" text-anchor="middle" class="label">PHYSICAL SYSTEM</text>
 <polygon points="175.0,148.0 237.4,256.0 112.6,256.0" fill="var(--power-soft)" stroke="var(--power)" stroke-width="3"/>
-<text x="175" y="225" text-anchor="middle" class="label">PHYSICAL SYSTEM</text><text x="175" y="338" text-anchor="middle" class="small">Power ↔ Transportation</text>
+<text x="175" y="227" text-anchor="middle" class="math h2">P ↔ T</text>
+<text x="175" y="338" text-anchor="middle" class="small">Power ↔ Transportation</text>
+<text x="515" y="114" text-anchor="middle" class="label">CAUSAL INTERFACE</text>
 <polygon points="515.0,148.0 577.4,184.0 577.4,256.0 515.0,292.0 452.6,256.0 452.6,184.0" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>
-<text x="515" y="225" text-anchor="middle" class="label">CAUSAL INTERFACE</text><text x="515" y="338" text-anchor="middle" class="small">typed coupling C₁</text>
+<text x="515" y="227" text-anchor="middle" class="math h2">C₁</text>
+<text x="515" y="338" text-anchor="middle" class="small">typed coupling</text>
+<text x="860" y="114" text-anchor="middle" class="label">DYNAMICS</text>
 <polygon points="860.0,148.0 928.5,197.8 902.3,278.2 817.7,278.2 791.5,197.8" fill="var(--information-soft)" stroke="var(--information)" stroke-width="3"/>
-<text x="860" y="225" text-anchor="middle" class="label">DYNAMICS</text><text x="860" y="338" text-anchor="middle" class="small">Ẏ = F_G(Y,u,η;θ)</text>
+<text x="860" y="227" text-anchor="middle" class="math h2">F_G</text>
+<text x="860" y="338" text-anchor="middle" class="small">coupled hybrid dynamics</text>
+<text x="1240" y="114" text-anchor="middle" class="label">VIABILITY</text>
 <ellipse cx="1240" cy="220" rx="125" ry="76" class="viable"/>
 <ellipse cx="1240" cy="220" rx="78" ry="42" class="model"/>
 <path d="M1140 285L1355 160" class="critical"/>
-<text x="1240" y="225" text-anchor="middle" class="label">VIABILITY</text>
+<text x="1240" y="227" text-anchor="middle" class="math h2">V</text>
 <text x="1240" y="338" text-anchor="middle" class="small">Y(t) ∈ V · maximize ρ_g</text>
 <path d="M270 220L410 220M400.6 225.7L410 220L400.6 214.3" class="control"/>
 <path d="M610 220L755 220M745.6 225.7L755 220L745.6 214.3" class="control"/>
