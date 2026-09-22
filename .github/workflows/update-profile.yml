@@ -45,6 +45,7 @@ on:
       - "data/interfaces.json"
       - "data/network-dynamics.json"
       - "data/visual-palette.json"
+      - "data/flat-geometry.json"
       - "scripts/fetch_public_state.py"
       - "scripts/render_research_state.py"
       - "scripts/render_network.py"
@@ -57,6 +58,9 @@ on:
       - "scripts/validate_network_3d_runtime.py"
       - "scripts/validate_visual_palette.py"
       - "scripts/validate_profile_layout.py"
+      - "scripts/render_flat_geometry.py"
+      - "scripts/validate_flat_geometry.py"
+      - "mathematical-art/flat-geometry/**"
       - "assets/generated/**"
       - ".github/workflows/update-profile.yml"
 
