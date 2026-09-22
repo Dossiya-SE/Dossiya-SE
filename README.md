@@ -75,7 +75,7 @@ The physical model is a typed multilayer system:
   <img src="./assets/generated/coupled-network-3d-light.svg" width="100%" alt="Static isometric 3D coupled Power and Transportation multilayer network with a shared EV charging interface and separate schematic viability geometry">
 </picture>
 
-The shared object **C₁** is a physical coupling asset, not a decorative cross-layer arrow. Vertical separation in the figure is only a **visual encoding of multilayer structure**. It is **not geographic elevation**, GIS height, measured infrastructure behavior, or live infrastructure telemetry.
+The **same physical object**, written **C_1** in the governed network data and **C₁** in display notation, is a physical coupling asset shared by both layers—not a decorative cross-layer arrow. Vertical separation in the figure is only a **visual encoding of multilayer structure**. It is **not geographic elevation**, GIS height, measured infrastructure behavior, or live infrastructure telemetry.
 
 A governed interdependency can be represented as
 
