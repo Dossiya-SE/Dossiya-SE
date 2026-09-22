@@ -1,8 +1,11 @@
-numpy>=2.0,<3
-scipy>=1.14,<2
-sympy>=1.13,<2
-shapely>=2.0,<3
-pyvista>=0.44,<1
-trimesh>=4.0,<5
-CairoSVG>=2.8,<3
-Pillow>=11,<13
+# SCIENTIFIC-GEOMETRY-V3 release-critical environment
+# Versions pinned from the first full six-gate PASS on GitHub Actions.
+numpy==2.5.3
+scipy==1.18.1
+sympy==1.14.0
+shapely==2.1.2
+pyvista==0.49.0
+vtk==9.7.0
+trimesh==4.12.2
+CairoSVG==2.9.1
+Pillow==12.3.0
