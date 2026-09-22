@@ -106,7 +106,7 @@
     "organization": "amber + ORGANIZATION label + dotted relation when used as an edge",
     "operational": "green + directional dash pattern + explicit viable/service label",
     "critical": "red + dashed critical overlay + explicit boundary/critical label",
-    "causal": "gold/ochre + interface geometry + dashed/double line + explicit mechanism label",
+    "causal": "gold/ochre + interface geometry + dashed/double stroke + explicit mechanism label",
     "node_type": "shape geometry + text label"
   },
   "scientific_boundary": "RGB defines visual appearance and semantic channels; scientific meaning never depends on color alone and color does not strengthen the evidence class of a claim."
