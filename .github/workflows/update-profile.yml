@@ -61,7 +61,7 @@ permissions:
 
 concurrency:
   group: living-research-profile
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build-profile:
