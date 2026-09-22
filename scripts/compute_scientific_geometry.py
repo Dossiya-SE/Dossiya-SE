@@ -18,7 +18,7 @@ import numpy as np
 import sympy as sp
 from scipy.interpolate import CubicSpline
 from scipy.linalg import qr, svd
-from shapely.geometry import Point, Polygon, box
+from shapely.geometry import LineString, Point, Polygon, box
 from shapely.ops import nearest_points
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -142,6 +142,29 @@ def halfplane_polygon(a: float, b: float, c: float, L: float) -> Polygon:
     return Polygon(pts)
 
 
+def line_segment_for_constraint(a: float, b: float, c: float, region: Polygon, L: float = 100.0):
+    n=np.array([a,b],dtype=float)
+    nn=float(n@n)
+    if nn<=0:
+        raise ValueError("line normal must be nonzero")
+    p0=(c/nn)*n
+    t=np.array([-n[1],n[0]],dtype=float)
+    t=t/np.linalg.norm(t)
+    line=LineString([p0-L*t,p0+L*t])
+    inter=region.intersection(line)
+    if inter.is_empty:
+        raise ValueError("constraint line does not intersect region")
+    if inter.geom_type=="LineString":
+        coords=list(inter.coords)
+    else:
+        parts=[g for g in getattr(inter,"geoms",[]) if g.geom_type=="LineString"]
+        if not parts:
+            raise ValueError("constraint intersection has no line segment")
+        seg=max(parts,key=lambda g:g.length)
+        coords=list(seg.coords)
+    return np.asarray([coords[0],coords[-1]],dtype=float)
+
+
 def viability_region(cfg):
     xmin, xmax, ymin, ymax = map(float, cfg["bounds"])
     region = box(xmin, ymin, xmax, ymax)
@@ -168,6 +191,7 @@ def viability_region(cfg):
     av = np.array([active["a"], active["b"]], dtype=float)
     tangent = np.array([-av[1], av[0]], dtype=float)
     displacement = qv - xv
+    active_segment = line_segment_for_constraint(active["a"],active["b"],active["c"],region)
 
     return {
         "state": xv,
@@ -178,6 +202,7 @@ def viability_region(cfg):
         "vertices": np.asarray(region.exterior.coords[:-1], dtype=float),
         "constraints": constraints,
         "active_constraint": active["name"],
+        "active_segment": active_segment,
         "boundary_residual": abs(active["a"]*q.x + active["b"]*q.y - active["c"]),
         "orthogonality_residual": abs(float(displacement @ tangent)),
     }
