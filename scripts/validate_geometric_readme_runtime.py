@@ -17,23 +17,28 @@ FILES=[
 WIDTHS=(980,640)
 
 def require(ok,msg):
-    if not ok: raise ValueError(msg)
+    if not ok:
+        raise ValueError(msg)
 
-def materialize_css_vars(text: str) -> str:
-    m=re.search(r":root\\{([^}]*)\\}",text)
-    require(m is not None,"missing :root CSS variables")
+def materialize_css_vars(text: str, name: str) -> str:
+    m=re.search(r":root\{([^}]*)\}",text)
+    require(m is not None,f"{name}: missing :root CSS variables")
     values={}
     for item in m.group(1).split(";"):
-        if ":" not in item: continue
+        if ":" not in item:
+            continue
         k,v=item.split(":",1)
         k=k.strip()
-        if k.startswith("--"): values[k[2:]]=v.strip()
+        if k.startswith("--"):
+            values[k[2:]]=v.strip()
+
     def repl(match):
         key=match.group(1)
-        require(key in values,f"unresolved CSS variable --{key}")
+        require(key in values,f"{name}: unresolved CSS variable --{key}")
         return values[key]
-    out=re.sub(r"var\\(--([a-z0-9-]+)\\)",repl,text,flags=re.I)
-    require("var(--" not in out,"unresolved CSS variable remains")
+
+    out=re.sub(r"var\(--([a-z0-9-]+)\)",repl,text,flags=re.I)
+    require("var(--" not in out,f"{name}: unresolved CSS variable remains")
     return out
 
 def main():
@@ -58,6 +63,8 @@ def main():
     return 0
 
 if __name__=="__main__":
-    try: raise SystemExit(main())
+    try:
+        raise SystemExit(main())
     except (OSError,ValueError) as e:
-        print(f"GEOMETRIC README RUNTIME VALIDATION: FAIL — {e}",file=sys.stderr); raise SystemExit(1)
+        print(f"GEOMETRIC README RUNTIME VALIDATION: FAIL — {e}",file=sys.stderr)
+        raise SystemExit(1)
