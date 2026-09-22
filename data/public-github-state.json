@@ -4,7 +4,7 @@
   "allowlist_source": "data/projects.json",
   "evidence_state": "OBSERVED_PUBLIC_REPOSITORY_METADATA",
   "status": "live",
-  "generated_at": "2026-09-20T11:19:40+00:00",
+  "generated_at": "2026-09-22T11:34:39+00:00",
   "observation_scope": "Allowlisted public repository metadata, latest default-branch commit, and latest public release when available.",
   "repositories": [
     {
@@ -61,15 +61,15 @@
       "profile_order": 3,
       "url": "https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience",
       "visibility": "public",
-      "language": "Python",
+      "language": "TeX",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-20T10:24:12Z",
-      "pushed_at": "2026-09-20T10:24:09Z",
+      "updated_at": "2026-09-22T05:27:27Z",
+      "pushed_at": "2026-09-22T05:27:23Z",
       "latest_commit": {
-        "sha": "83a1f4dffa8b",
-        "date": "2026-09-20T10:24:08Z",
-        "message": "docs: document /op v2.0 workflow"
+        "sha": "1c39d477b345",
+        "date": "2026-09-22T05:27:23Z",
+        "message": "Add IEE 574 Exam 1 professor-student cheat sheet"
       },
       "latest_release": null
     },
