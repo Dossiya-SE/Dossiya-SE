@@ -174,7 +174,7 @@ The mathematical method is selected **after** the physical variables, mechanisms
 
 ## 06 · Research systems
 
-<img src="./assets/generated/project-system.svg" width="100%" alt="Four featured public research systems rendered as evidence-aware research cards">
+<img src="./assets/generated/project-system.svg" width="100%" alt="Four featured public research systems rendered as a restrained publication-style research index">
 
 <div align="center">
 
@@ -261,16 +261,21 @@ A defensible engineering model should state the system boundary, variables, para
 <details>
 <summary><b>Scientific visual and accessibility standard</b></summary>
 
-The profile uses a neutral scientific canvas with semantic accents:
+The profile uses **sRGB** with a neutral publication canvas and sparse semantic color. Approximate composition is **65% neutral canvas · 20% light geometry · 10% structural semantic color · ≤5% strong emphasis**.
 
 | Encoding | Meaning | Redundant cue |
 |---|---|---|
-| **Charcoal / neutral** | topology, axes, baseline structure | solid geometry / node type |
-| **Green** | viable, sustainable, operational, recovery | directional pattern + label |
-| **Red** | critical constraint, boundary, disturbance | dashed/thicker overlay + label |
-| **Light yellow** | causal interface, highlighted mechanism, intervention | interface geometry + explicit label |
+| **Power — #C8102E** | physical power-system structure | POWER label + solid topology + node geometry |
+| **Transportation — #16823A** | physical transportation structure | TRANSPORTATION label + solid topology + node geometry |
+| **Information — #1D4ED8** | sensing, estimation, communication | INFORMATION label + dashed relation |
+| **Organization — #A66F00** | coordination, procedure, recovery action | ORGANIZATION label + dotted relation |
+| **Viability — green** | admissible / sustainable / recovery state | region geometry + trajectory + label |
+| **Criticality — red** | constraint, violation, critical boundary | dashed/thicker overlay + boundary label |
+| **Causal / control — ochre-gold** | interface, mechanism, intervention | interface geometry + dashed/double line + explicit label |
+| **Mathematical model — violet** | separate mathematical abstraction cue | equation/symbol label + geometric context |
+| **Inference / state information — cyan** | observation or data-mediated state cue | state marker + label |
 
-Color never carries meaning alone. Geometry, line pattern and labels provide redundant encoding.
+RGB defines appearance and navigation—not scientific truth. Color never carries meaning alone; geometry, line pattern, direction and labels remain authoritative.
 
 Some SVG sources retain motion-capable CSS semantics for compatible renderers, but **GitHub should not be treated as guaranteeing SVG animation**. Any motion is explanatory and is **not a measured flow**, not measured infrastructure behavior, and not live infrastructure telemetry.
 
