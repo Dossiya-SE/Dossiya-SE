@@ -116,7 +116,8 @@ def validate_readme() -> None:
     text = README.read_text(encoding="utf-8")
     require("assets/generated/flat-geometry.svg" in text, "README must surface flat geometry figure")
     require("mathematical-art/flat-geometry/overleaf/flat_geometry.tex" in text, "README must link Overleaf/TikZ source")
-    lower = text.lower()\n    require("plane figures" in lower and "affine flats" in lower, "README must preserve plane-figure / affine-flat distinction")
+    lower = text.lower()
+    require("plane figures" in lower and "affine flats" in lower, "README must preserve plane-figure / affine-flat distinction")
     require("not measured infrastructure behavior" in text.lower(), "README must preserve evidence boundary")
 
 
