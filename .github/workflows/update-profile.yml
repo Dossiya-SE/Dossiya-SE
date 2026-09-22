@@ -151,6 +151,28 @@ jobs:
           git diff --check
           echo "Governed scientific state, network semantics, runtime-rendered 3D geometry, palette, container hierarchy and validators completed successfully."
 
+      - name: Commit validated generated visuals to PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          mkdir -p /tmp/profile-generated
+          cp -R assets/generated/. /tmp/profile-generated/
+          git fetch origin "$HEAD_REF"
+          git checkout -B "$HEAD_REF" "origin/$HEAD_REF"
+          rm -rf assets/generated
+          mkdir -p assets/generated
+          cp -R /tmp/profile-generated/. assets/generated/
+          git add assets/generated/
+          if git diff --cached --quiet; then
+            echo "Generated RGB visuals already match the validated render."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(profile): regenerate validated RGB visuals"
+          git push origin "HEAD:$HEAD_REF"
+
       - name: Commit meaningful profile changes only
         if: github.event_name != 'pull_request'
         run: |
