@@ -280,6 +280,19 @@ def compute():
     _, svals, vt = svd(centered, full_matrices=False)
     basis2 = vt[:2].T
     state2 = centered @ basis2
+
+    # SVD vector signs are mathematically arbitrary. Canonicalize orientation so
+    # component 1 increases with the governed stage order, then canonicalize
+    # component 2 by the sign of its largest-magnitude loading.
+    order = np.arange(len(X), dtype=float)
+    if float(np.dot(state2[:, 0] - state2[:, 0].mean(), order - order.mean())) < 0:
+        basis2[:, 0] *= -1.0
+        state2[:, 0] *= -1.0
+    pivot = int(np.argmax(np.abs(basis2[:, 1])))
+    if basis2[pivot, 1] < 0:
+        basis2[:, 1] *= -1.0
+        state2[:, 1] *= -1.0
+
     explained = (svals**2) / np.sum(svals**2)
 
     # Equal-area project signatures, independently checked by Shapely.
