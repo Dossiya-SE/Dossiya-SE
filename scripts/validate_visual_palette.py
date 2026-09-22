@@ -45,7 +45,7 @@ def contrast(a: str, b: str) -> float:
 
 
 def validate_palette(p: dict) -> None:
-    require(p.get("schema_version") == "1.0", "visual palette schema must be 1.0")
+    require(p.get("schema_version") == "2.0", "visual palette schema must be 1.0")
     require(p.get("evidence_state") == "VALIDATED_VISUAL_DESIGN_SPECIFICATION", "invalid visual palette evidence state")
     thresholds = p["minimum_contrast"]
     text_min = float(thresholds["normal_text"])
@@ -55,11 +55,11 @@ def validate_palette(p: dict) -> None:
         c = p[mode]
         bg = c["bg"]
         # These colors are used as normal-size text somewhere in the profile.
-        for role in ("ink", "muted", "green", "red", "yellow"):
+        for role in ("ink", "muted", "green", "red", "yellow", "power", "transport", "information", "organization_ink", "cyan", "violet", "magenta", "gold"):
             ratio = contrast(c[role], bg)
             require(ratio >= text_min, f"{mode} {role} text contrast {ratio:.2f}:1 is below {text_min}:1")
         # Meaningful network geometry must remain visible even when color perception is limited.
-        for role in ("topology", "green", "red", "yellow"):
+        for role in ("topology", "green", "red", "yellow", "power", "transport", "information", "organization", "cyan", "violet", "magenta", "gold"):
             ratio = contrast(c[role], bg)
             require(ratio >= graphic_min, f"{mode} {role} graphic contrast {ratio:.2f}:1 is below {graphic_min}:1")
 
@@ -68,6 +68,10 @@ def validate_palette(p: dict) -> None:
     require("dashed" in redundancy.get("critical", ""), "critical state must have a non-color cue")
     require("stroke" in redundancy.get("causal", "") and "label" in redundancy.get("causal", ""), "causal state must have non-color cues")
     require("shape" in redundancy.get("node_type", ""), "node types must be distinguished by geometry")
+    require("POWER" in redundancy.get("power", ""), "power color must have a textual non-color cue")
+    require("TRANSPORTATION" in redundancy.get("transportation", ""), "transport color must have a textual non-color cue")
+    require("dashed" in redundancy.get("information", ""), "information edges must have a non-color cue")
+    require("dotted" in redundancy.get("organization", ""), "organization edges must have a non-color cue")
 
 
 def expected_vars(values: dict) -> dict[str, str]:
@@ -78,6 +82,14 @@ def expected_vars(values: dict) -> dict[str, str]:
         "red": values["red"], "red-soft": values["red_soft"],
         "yellow": values["yellow"], "yellow-soft": values["yellow_soft"],
         "yellow-ink": values["yellow_ink"], "ghost": values["ghost"],
+        "power": values["power"], "power-soft": values["power_soft"],
+        "transport": values["transport"], "transport-soft": values["transport_soft"],
+        "information": values["information"], "information-soft": values["information_soft"],
+        "organization": values["organization"], "organization-ink": values["organization_ink"], "organization-soft": values["organization_soft"],
+        "cyan": values["cyan"], "cyan-soft": values["cyan_soft"],
+        "violet": values["violet"], "violet-soft": values["violet_soft"],
+        "magenta": values["magenta"], "magenta-soft": values["magenta_soft"],
+        "gold": values["gold"], "gold-soft": values["gold_soft"],
     }
 
 
