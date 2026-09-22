@@ -59,7 +59,7 @@ def main():
     gv=read_svg("graph-to-viability.svg")
     for s in ("GRAPH / MODEL SPACE","STATE / VIABILITY SPACE","affine model plane","ρ_g","∂V"):
         require(s in gv,f"graph-to-viability missing {s}")
-    require("class="critical"" in gv and "class="control"" in gv,"boundary/projection grammar missing")
+    require('class="critical"' in gv and 'class="control"' in gv,"boundary/projection grammar missing")
 
     st=read_svg("research-state-light.svg")
     for s in ("CURRENT SCIENTIFIC TRANSITION","CAUSAL","COUPLED HYBRID","MATHEMATICAL STATE"):
