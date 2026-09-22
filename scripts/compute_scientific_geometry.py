@@ -177,7 +177,7 @@ def viability_region(cfg):
     if region.is_empty or region.geom_type != "Polygon":
         raise ValueError("viability constraints must produce one non-empty polygon")
 
-    state = Point(map(float, cfg["state"]))
+    state = Point(tuple(map(float, cfg["state"])))
     if not region.covers(state):
         raise ValueError("configured viability state must lie inside feasible region")
     q = nearest_points(state, region.boundary)[1]
