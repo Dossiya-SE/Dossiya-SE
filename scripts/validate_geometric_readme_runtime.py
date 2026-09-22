@@ -40,7 +40,7 @@ def main():
     PRE.mkdir(parents=True,exist_ok=True)
     for name in FILES:
         text=(OUT/name).read_text(encoding="utf-8")
-        raster_text=materialize_css_vars(text)
+        raster_text=materialize_css_vars(text,name)
         vb=re.search(r'viewBox="0 0 ([0-9.]+) ([0-9.]+)"',text)
         require(vb is not None,f"{name}: simple viewBox required")
         w0,h0=map(float,vb.groups())
