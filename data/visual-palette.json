@@ -153,9 +153,9 @@
         248
       ],
       "cyan": [
-        8,
-        145,
-        178
+        0,
+        105,
+        135
       ],
       "cyan_soft": [
         230,
@@ -355,7 +355,7 @@
     "control": "#007A88",
     "control_ink": "#005F6A",
     "control_soft": "#E6F6F8",
-    "cyan": "#0891B2",
+    "cyan": "#006987",
     "cyan_soft": "#E6F6F9",
     "violet": "#6D28D9",
     "violet_soft": "#F0EAFE",
