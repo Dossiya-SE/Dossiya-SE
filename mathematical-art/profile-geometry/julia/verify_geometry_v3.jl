@@ -1,6 +1,7 @@
 #!/usr/bin/env julia
 # SCIENTIFIC-GEOMETRY-V3 independent numerical verification.
 using LinearAlgebra
+using Printf
 using TOML
 
 root = normpath(joinpath(@__DIR__, "..", "..", ".."))
@@ -8,6 +9,16 @@ cfg = TOML.parsefile(joinpath(root, "data", "scientific-geometry-v3.toml"))
 mkpath(joinpath(root, "artifacts"))
 
 vec(x) = Float64.(x)
+
+const CANONICAL_SIG_DIGITS = 14
+const CANONICAL_ZERO_TOL = 1e-14
+
+function canonical_float(x)
+    y = Float64(x)
+    isfinite(y) || error("non-finite Julia audit value")
+    abs(y) < CANONICAL_ZERO_TOL && return "0.0"
+    @sprintf("%.14g", y)
+end
 
 function plane_matrix(section)
     hcat(vec(section["basis1"]), vec(section["basis2"]))
@@ -86,16 +97,18 @@ open(report, "w") do io
     println(io, "contract_id = \"SCIENTIFIC-GEOMETRY-V3\"")
     println(io, "power_rank = ", rank(P))
     println(io, "transport_rank = ", rank(T))
-    println(io, "power_q_orthogonality = ", orth_p)
-    println(io, "transport_q_orthogonality = ", orth_t)
+    println(io, "canonical_significant_digits = ", CANONICAL_SIG_DIGITS)
+    println(io, "canonical_zero_tolerance = ", canonical_float(CANONICAL_ZERO_TOL))
+    println(io, "power_q_orthogonality = ", canonical_float(orth_p))
+    println(io, "transport_q_orthogonality = ", canonical_float(orth_t))
     println(io, "active_constraint_index = ", active.index)
     println(io, "active_constraint_name = \"", active.name, "\"")
-    println(io, "projection_x = ", q[1])
-    println(io, "projection_y = ", q[2])
-    println(io, "distance = ", distance)
-    println(io, "boundary_residual = ", boundary_residual)
-    println(io, "orthogonality_residual = ", orth_residual)
-    println(io, "max_project_area_error = ", maximum(abs.(areas .- target_area)))
+    println(io, "projection_x = ", canonical_float(q[1]))
+    println(io, "projection_y = ", canonical_float(q[2]))
+    println(io, "distance = ", canonical_float(distance))
+    println(io, "boundary_residual = ", canonical_float(boundary_residual))
+    println(io, "orthogonality_residual = ", canonical_float(orth_residual))
+    println(io, "max_project_area_error = ", canonical_float(maximum(abs.(areas .- target_area))))
 end
 
 println("JULIA GEOMETRY VERIFICATION: PASS")
