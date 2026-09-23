@@ -82,6 +82,10 @@ The reference repository `ronikbhaskar/math-art` informed the general workflow p
 
 The static SVG remains the primary scientific figure and accessibility fallback.
 
+### Animation release QA
+
+A release is not accepted from metadata alone. Representative frames **0, 15, 30, 45 and 59** are inspected in both light and dark GIFs. The release requires: no canvas clipping, no label collision, preserved Power/Transportation layer distinction, a visible cyan interlayer/control cue, smooth viewpoint progression, and a visually small loop seam. The decoded GIF palette is independently checked against the governed RGB hue exclusion before release.
+
 ## Rhino / Grasshopper policy
 
 Rhino/Grasshopper remains an optional parametric exploration laboratory for future CAD/surface investigations. It is intentionally **not** a GitHub release dependency because none of the current README figures requires Rhino-specific geometry. If a future figure depends on Rhino/Grasshopper, its numerical parameters must be exported into the governed source contract before the deterministic SVG release step.
