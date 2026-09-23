@@ -11,7 +11,7 @@
 .fg-plane { fill: #f0eafe; stroke: #6d28d9; stroke-width: 2; }
 .fg-critical { stroke: #cf222e; stroke-width: 3; stroke-dasharray: 9 7; }
 .fg-state { fill: #16823a; }
-.fg-distance { stroke: #007A88; stroke-width: 3; }
+.fg-distance { stroke: #2D8FD6; stroke-width: 3; }
 @media (prefers-color-scheme: dark) {
   .flat-geometry { background: #0d1117; color: #f0f6fc; }
   .fg-math, .fg-plane { stroke: #a371f7; }
@@ -19,5 +19,5 @@
   .fg-topology { stroke: #c9d1d9; }
   .fg-critical { stroke: #ff7b72; }
   .fg-state { fill: #56d364; }
-  .fg-distance { stroke: #39C5CF; }
+  .fg-distance { stroke: #87CEFA; }
 }
