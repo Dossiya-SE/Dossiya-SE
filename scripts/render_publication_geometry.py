@@ -31,13 +31,13 @@ def main():
 \begin{document}
 \begin{tikzpicture}[>=Latex,line cap=round,line join=round]
 """
-    tex += "% Computed viability set and exact nearest-boundary projection\n"
+    tex += "% Computed viability set and exact Euclidean nearest-boundary projection\n"
     tex += "\\begin{scope}[xshift=0cm,yshift=0cm,scale=1.6]\n"
     tex += "\\filldraw[fill=Green!8,draw=Green,thick] " + fmt_points(v["vertices"]) + " -- cycle;\n"
     s=v["state"]; q=v["boundary_point"]; seg=v["active_segment"]
     tex += f"\\draw[Red,thick,dashed] ({seg[0][0]:.5f},{seg[0][1]:.5f}) -- ({seg[1][0]:.5f},{seg[1][1]:.5f});\n"
     tex += f"\\fill[Info] ({s[0]:.5f},{s[1]:.5f}) circle (1.4pt) node[above right] {{$Y(t)$}};\n"
-    tex += f"\\draw[Gold,thick,->] ({s[0]:.5f},{s[1]:.5f}) -- ({q[0]:.5f},{q[1]:.5f}) node[midway,below] {{$\\rho_g$}};\n"
+    tex += f"\\draw[Gold,thick,->] ({s[0]:.5f},{s[1]:.5f}) -- ({q[0]:.5f},{q[1]:.5f}) node[midway,below] {{$\\rho_2$}};\n"
     tex += "\\end{scope}\n"
 
     tex += "% Continuous seven-stage trajectory gamma(t)\n"
