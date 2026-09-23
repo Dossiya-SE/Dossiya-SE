@@ -26,7 +26,7 @@ def main():
 \definecolor{Power}{HTML}{C8102E}
 \definecolor{Transport}{HTML}{16823A}
 \definecolor{Info}{HTML}{1D4ED8}
-\definecolor{Gold}{HTML}{8B5E00}
+\definecolor{Control}{HTML}{007A88}
 \definecolor{Green}{HTML}{16823A}
 \definecolor{Red}{HTML}{CF222E}
 \definecolor{Violet}{HTML}{6D28D9}
@@ -39,7 +39,7 @@ def main():
     s=v["state"]; q=v["boundary_point"]; seg=v["active_segment"]
     tex += f"\\draw[Red,thick,dashed] ({seg[0][0]:.5f},{seg[0][1]:.5f}) -- ({seg[1][0]:.5f},{seg[1][1]:.5f});\n"
     tex += f"\\fill[Info] ({s[0]:.5f},{s[1]:.5f}) circle (1.4pt) node[above right] {{$Y(t)$}};\n"
-    tex += f"\\draw[Gold,thick,->] ({s[0]:.5f},{s[1]:.5f}) -- ({q[0]:.5f},{q[1]:.5f}) node[midway,below] {{$\\rho_2$}};\n"
+    tex += f"\\draw[Control,thick,->] ({s[0]:.5f},{s[1]:.5f}) -- ({q[0]:.5f},{q[1]:.5f}) node[midway,below] {{$\\rho_2$}};\n"
     tex += "\\end{scope}\n"
 
     tex += "% Continuous seven-stage trajectory gamma(t)\n"
