@@ -4,7 +4,7 @@
   "allowlist_source": "data/projects.json",
   "evidence_state": "OBSERVED_PUBLIC_REPOSITORY_METADATA",
   "status": "live",
-  "generated_at": "2026-09-23T08:08:33+00:00",
+  "generated_at": "2026-09-23T11:32:19+00:00",
   "observation_scope": "Allowlisted public repository metadata, latest default-branch commit, and latest public release when available.",
   "repositories": [
     {
@@ -20,12 +20,12 @@
       "language": "JavaScript",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-23T07:50:42Z",
-      "pushed_at": "2026-09-23T08:06:55Z",
+      "updated_at": "2026-09-23T08:21:18Z",
+      "pushed_at": "2026-09-23T08:21:12Z",
       "latest_commit": {
-        "sha": "be28a05644fd",
-        "date": "2026-09-23T08:08:27Z",
-        "message": "Govern website interactions under Mathematical Art V5 motion semantics (#27)"
+        "sha": "1a5aa006250a",
+        "date": "2026-09-23T08:21:12Z",
+        "message": "Add deterministic Mathematical Art V5 motion suite (#28)"
       },
       "latest_release": null
     },
