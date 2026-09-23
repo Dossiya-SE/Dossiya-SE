@@ -3,7 +3,7 @@
   "evidence_state": "VALIDATED_VISUAL_DESIGN_SPECIFICATION",
   "color_model": "RGB",
   "color_space": "sRGB",
-  "design_principle": "neutral publication canvas with sparse semantic RGB accents; zero gold/yellow/amber/ochre family",
+  "design_principle": "neutral publication canvas with sparse semantic RGB accents; historical gold-role accents are governed by LIGHT-SKY-BLUE-ACCENT-V1; zero gold/yellow/amber/ochre family",
   "forbidden_hue_policy": {
     "description": "No gold, yellow, amber or ochre semantic colors are permitted. Saturated colors in the approximate 35°–75° hue band are prohibited.",
     "forbidden_terms": [
@@ -31,7 +31,7 @@
     "sector_organization": "magenta RGB family; coordination, procedure and organizational action",
     "viable": "green RGB family; sustainable, admissible, operational or recovery state",
     "critical": "red RGB family; constraint, disturbance, critical boundary or propagation",
-    "causal_control": "cyan RGB family; causal interface, mechanism or engineering intervention",
+    "causal_control": "Light Sky Blue accent family; causal interface, mechanism or engineering intervention",
     "mathematical_model": "violet RGB family; mathematical abstraction when a separate model cue is needed",
     "inference_data": "cyan/blue RGB family; observation, inference or data-mediated state information"
   },
@@ -138,19 +138,19 @@
         255
       ],
       "control": [
-        0,
-        122,
-        136
+        45,
+        143,
+        214
       ],
       "control_ink": [
-        0,
-        95,
-        106
+        40,
+        120,
+        205
       ],
       "control_soft": [
-        230,
-        246,
-        248
+        234,
+        247,
+        254
       ],
       "cyan": [
         0,
@@ -285,19 +285,19 @@
         61
       ],
       "control": [
-        57,
-        197,
-        207
+        135,
+        206,
+        250
       ],
       "control_ink": [
-        130,
-        230,
-        236
+        191,
+        232,
+        255
       ],
       "control_soft": [
-        18,
-        50,
-        54
+        20,
+        42,
+        58
       ],
       "cyan": [
         34,
@@ -352,9 +352,9 @@
     "organization": "#C026D3",
     "organization_ink": "#86198F",
     "organization_soft": "#FAE8FF",
-    "control": "#007A88",
-    "control_ink": "#005F6A",
-    "control_soft": "#E6F6F8",
+    "control": "#2D8FD6",
+    "control_ink": "#2878CD",
+    "control_soft": "#EAF7FE",
     "cyan": "#006987",
     "cyan_soft": "#E6F6F9",
     "violet": "#6D28D9",
@@ -383,9 +383,9 @@
     "organization": "#E879F9",
     "organization_ink": "#F5C2FF",
     "organization_soft": "#371B3D",
-    "control": "#39C5CF",
-    "control_ink": "#82E6EC",
-    "control_soft": "#123236",
+    "control": "#87CEFA",
+    "control_ink": "#BFE8FF",
+    "control_soft": "#142A3A",
     "cyan": "#22D3EE",
     "cyan_soft": "#123138",
     "violet": "#A371F7",
@@ -413,8 +413,64 @@
     "organization": "magenta + ORGANIZATION label + dotted relation when used as an edge",
     "operational": "green + directional dash pattern + explicit viable/service label",
     "critical": "red + dashed critical overlay + explicit boundary/critical label",
-    "causal": "cyan + interface geometry + dashed/double stroke + explicit mechanism label",
+    "causal": "Light Sky Blue accent family + interface geometry + dashed/double stroke + explicit mechanism label",
     "node_type": "shape geometry + text label"
   },
-  "scientific_boundary": "RGB defines visual appearance and semantic channels; scientific meaning never depends on color alone and color does not strengthen the evidence class of a claim."
+  "scientific_boundary": "RGB defines visual appearance and semantic channels; scientific meaning never depends on color alone and color does not strengthen the evidence class of a claim.",
+  "accent_contract": {
+    "contract_id": "LIGHT-SKY-BLUE-ACCENT-V1",
+    "color_model": "RGB",
+    "color_space": "sRGB",
+    "primary": {
+      "name": "Light Sky Blue",
+      "rgb": [
+        135,
+        206,
+        250
+      ],
+      "hex": "#87CEFA",
+      "usage": "primary replacement for the historical gold accent role"
+    },
+    "strong": {
+      "name": "Deep Sky Blue",
+      "rgb": [
+        0,
+        191,
+        255
+      ],
+      "hex": "#00BFFF",
+      "usage": "hover, emphasis, bright outline and dark-background highlight"
+    },
+    "on_light_graphic": {
+      "rgb": [
+        45,
+        143,
+        214
+      ],
+      "hex": "#2D8FD6",
+      "usage": "accessible stroke/large-text companion on light backgrounds"
+    },
+    "on_light_text": {
+      "rgb": [
+        40,
+        120,
+        205
+      ],
+      "hex": "#2878CD",
+      "usage": "normal-size text companion on white; selected to meet WCAG AA 4.5:1"
+    },
+    "on_dark_text": {
+      "rgb": [
+        191,
+        232,
+        255
+      ],
+      "hex": "#BFE8FF",
+      "usage": "high-contrast label companion on dark backgrounds"
+    },
+    "soft": "rgba(135,206,250,0.18)",
+    "soft_2": "rgba(135,206,250,0.10)",
+    "glow": "rgba(0,191,255,0.28)",
+    "border": "rgba(135,206,250,0.55)"
+  }
 }
