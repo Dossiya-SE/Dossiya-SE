@@ -22,9 +22,10 @@ def load_json(name):
 
 def vars_for(p):
     keys=("bg","panel","ink","muted","line","topology","green","green_soft","red","red_soft",
-          "yellow","yellow_soft","yellow_ink","ghost","power","power_soft","transport","transport_soft",
+          "ghost","power","power_soft","transport","transport_soft",
           "information","information_soft","organization","organization_ink","organization_soft",
-          "cyan","cyan_soft","violet","violet_soft","magenta","magenta_soft","gold","gold_soft")
+          "control","control_ink","control_soft",
+          "cyan","cyan_soft","violet","violet_soft","magenta","magenta_soft")
     return ";".join(f"--{k.replace('_','-')}:{p[k]}" for k in keys)
 
 def style(palette,mode=None):
@@ -51,7 +52,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .model{{fill:none;stroke:var(--violet);stroke-width:2.4}}
 .viable{{fill:var(--green-soft);stroke:var(--green);stroke-width:2.4}}
 .critical{{fill:none;stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}}
-.control{{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-dasharray:8 6}}
+.control{{fill:none;stroke:var(--control);stroke-width:3.2;stroke-dasharray:8 6}}
 .state{{fill:var(--cyan);stroke:var(--panel);stroke-width:2}}
 .node{{fill:var(--panel);stroke-width:2.4}}
 @media(prefers-reduced-motion:reduce){{*{{animation:none!important;transition:none!important}}}}
@@ -117,9 +118,9 @@ def draw_viability(g,x0,y0,x1,y1):
         f'<path d="M{seg[0][0]:.1f} {seg[0][1]:.1f}L{seg[1][0]:.1f} {seg[1][1]:.1f}" class="critical"/>',
         f'<circle cx="{state[0]:.1f}" cy="{state[1]:.1f}" r="9" class="state"/>',
         arrow(state[0],state[1],q[0],q[1],"control"),
-        f'<circle cx="{q[0]:.1f}" cy="{q[1]:.1f}" r="6" fill="var(--gold)"/>',
+        f'<circle cx="{q[0]:.1f}" cy="{q[1]:.1f}" r="6" fill="var(--control)"/>',
         f'<text x="{state[0]+14:.1f}" y="{state[1]-12:.1f}" class="math label">Y(t)</text>',
-        f'<text x="{(state[0]+q[0])/2+10:.1f}" y="{(state[1]+q[1])/2-8:.1f}" class="math label" fill="var(--gold)">ρ₂</text>',
+        f'<text x="{(state[0]+q[0])/2+10:.1f}" y="{(state[1]+q[1])/2-8:.1f}" class="math label" fill="var(--control)">ρ₂</text>',
         f'<text x="{seg[1][0]-6:.1f}" y="{seg[1][1]-12:.1f}" text-anchor="end" class="math label" fill="var(--red)">∂V</text>',
     ]
     return markup,{"region":bbox(poly),"state":[state[0]-9,state[1]-9,state[0]+9,state[1]+9],"projection":[min(state[0],q[0]),min(state[1],q[1]),max(state[0],q[0]),max(state[1],q[1])]}
@@ -151,7 +152,7 @@ def hero(g,palette,mode):
         p.append(f'<polygon points="{pts(regular_polygon(kinds[::-1][i],x,y,13))}" class="node" stroke="var(--transport)"/>')
     p += [
       f'<path d="M{inter[0][0]:.1f} {inter[0][1]:.1f}L{inter[1][0]:.1f} {inter[1][1]:.1f}" class="control"/>',
-      f'<polygon points="{pts(regular_polygon(6,(inter[0][0]+inter[1][0])/2,(inter[0][1]+inter[1][1])/2,24))}" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>',
+      f'<polygon points="{pts(regular_polygon(6,(inter[0][0]+inter[1][0])/2,(inter[0][1]+inter[1][1])/2,24))}" fill="var(--control-soft)" stroke="var(--control)" stroke-width="3"/>',
       '<text x="96" y="188" class="label" fill="var(--power)">POWER · affine layer P</text>',
       '<text x="96" y="476" class="label" fill="var(--transport)">TRANSPORTATION · affine layer T</text>',
       '<line x1="800" y1="142" x2="800" y2="535" stroke="var(--line)"/>',
@@ -169,7 +170,7 @@ def research_question(g,palette):
     w,h=1600,420
     centers=[(175,220),(515,220),(860,220),(1240,220)]
     specs=[(3,"power","PHYSICAL SYSTEM","P ↔ T","Power ↔ Transportation"),
-           (6,"gold","CAUSAL INTERFACE","C₁","typed coupling"),
+           (6,"control","CAUSAL INTERFACE","C₁","typed coupling"),
            (5,"information","DYNAMICS","F_G","coupled hybrid dynamics")]
     p=[svg_open(w,h,"Research question as minimal geometric logic",
         "Minimal mathematical reasoning diagram from the coupled physical system through a causal interface and coupled dynamics to the viability objective.",palette),
@@ -213,7 +214,7 @@ def coupled(g,palette,mode):
     for i,(x,y) in enumerate(tn): p.append(f'<polygon points="{pts(regular_polygon([4,6,5,3,6][i],x,y,16))}" class="node" stroke="var(--transport)"/>')
     mid=((inter[0][0]+inter[1][0])/2,(inter[0][1]+inter[1][1])/2)
     p += [f'<path d="M{inter[0][0]:.1f} {inter[0][1]:.1f}L{inter[1][0]:.1f} {inter[1][1]:.1f}" class="control"/>',
-          f'<polygon points="{pts(regular_polygon(6,mid[0],mid[1],30))}" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>',
+          f'<polygon points="{pts(regular_polygon(6,mid[0],mid[1],30))}" fill="var(--control-soft)" stroke="var(--control)" stroke-width="3"/>',
           '<text x="86" y="154" class="label" fill="var(--power)">POWER NETWORK · plane P</text>',
           '<text x="86" y="556" class="label" fill="var(--transport)">TRANSPORTATION NETWORK · plane T</text>',
           '<rect x="1030" y="128" width="505" height="490" rx="16" class="panel"/>',
@@ -265,7 +266,7 @@ def research_state(g,palette,mode):
     boxes=[]
     for i,((x,y),label) in enumerate(zip(p2,rs["labels"])):
         r=18 if i not in (rs["current_index"],rs["target_index"]) else 24
-        col="gold" if i==rs["current_index"] else ("information" if i==rs["target_index"] else "violet")
+        col="control" if i==rs["current_index"] else ("information" if i==rs["target_index"] else "violet")
         poly=regular_polygon(5 if i==rs["target_index"] else 6,x,y,r)
         boxes.append(bbox(poly))
         p += [f'<polygon points="{pts(poly)}" fill="var(--{col}-soft)" stroke="var(--{col})" stroke-width="3"/>',
