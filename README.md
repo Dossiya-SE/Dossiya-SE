@@ -285,13 +285,13 @@ The profile uses **sRGB** with a neutral publication canvas, sparse semantic col
 | **Transportation** | `rgb(22, 130, 58)` | physical transportation structure | TRANSPORTATION label + solid topology + node geometry |
 | **Information** | `rgb(29, 78, 216)` | sensing, estimation, communication | INFORMATION label + dashed relation |
 | **Organization** | `rgb(192, 38, 211)` | coordination, procedure, recovery action | ORGANIZATION label + dotted relation |
-| **Causal / control** | `rgb(0, 122, 136)` | interface, mechanism, intervention | interface geometry + dashed/double line + explicit label |
+| **Causal / control** | `rgb(135, 206, 250)` primary · `rgb(45, 143, 214)` light-background stroke | interface, mechanism, intervention | interface geometry + dashed/double line + explicit label |
 | **Viability** | `rgb(22, 130, 58)` | admissible / sustainable / recovery state | region geometry + trajectory + label |
 | **Criticality** | `rgb(207, 34, 46)` | constraint, violation, critical boundary | dashed/thicker overlay + boundary label |
 | **Mathematical model** | `rgb(109, 40, 217)` | separate mathematical abstraction cue | equation/symbol label + geometric context |
 | **Inference / state information** | `rgb(0, 105, 135)` | observation or data-mediated state cue | state marker + label |
 
-The visual system is governed in the **RGB model within sRGB**. Saturated warm hues in the reserved 35°–75° band are excluded from the semantic palette; causal/control uses cyan instead. RGB defines appearance and navigation—not scientific truth. Color never carries meaning alone; geometry, line pattern, direction and labels remain authoritative. The machine-readable authority is [`data/visual-palette.json`](data/visual-palette.json), where every displayed hex value is derived from an explicit RGB triplet.
+The visual system is governed in the **RGB model within sRGB**. Saturated warm hues in the reserved 35°–75° band are excluded from the semantic palette; the historical gold role is replaced by the governed Light Sky Blue accent family: primary `rgb(135, 206, 250)` and strong `rgb(0, 191, 255)`, with contrast-safe companions on light backgrounds. RGB defines appearance and navigation—not scientific truth. Color never carries meaning alone; geometry, line pattern, direction and labels remain authoritative. The machine-readable authority is [`data/visual-palette.json`](data/visual-palette.json), where every displayed hex value is derived from an explicit RGB triplet.
 
 Some SVG sources retain motion-capable CSS semantics for compatible renderers, but **GitHub should not be treated as guaranteeing SVG animation**. The governed GIF uses explicit frames and timing instead. All motion remains explanatory: it is **not a measured flow**, not measured infrastructure behavior, and not live infrastructure telemetry.
 
