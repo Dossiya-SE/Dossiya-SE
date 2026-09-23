@@ -72,6 +72,12 @@ def arrow(x1,y1,x2,y2,klass):
     p2=(x2-s*math.cos(ang+.55),y2-s*math.sin(ang+.55))
     return f'<path d="M{x1:.1f} {y1:.1f}L{x2:.1f} {y2:.1f}M{p1[0]:.1f} {p1[1]:.1f}L{x2:.1f} {y2:.1f}L{p2[0]:.1f} {p2[1]:.1f}" class="{klass}"/>'
 
+_SUBSCRIPT_TRANSLATION=str.maketrans("0123456789-","₀₁₂₃₄₅₆₇₈₉₋")
+
+def subscript_int(value):
+    """Render an integer as deterministic Unicode subscript digits for SVG labels."""
+    return str(int(value)).translate(_SUBSCRIPT_TRANSLATION)
+
 def make_fit(all_points,x0,y0,x1,y1,pad=0.06):
     flat=[p for group in all_points for p in group]
     xs=[float(p[0]) for p in flat]; ys=[float(p[1]) for p in flat]
