@@ -119,7 +119,7 @@ def draw_viability(g,x0,y0,x1,y1):
         arrow(state[0],state[1],q[0],q[1],"control"),
         f'<circle cx="{q[0]:.1f}" cy="{q[1]:.1f}" r="6" fill="var(--gold)"/>',
         f'<text x="{state[0]+14:.1f}" y="{state[1]-12:.1f}" class="math label">Y(t)</text>',
-        f'<text x="{(state[0]+q[0])/2+10:.1f}" y="{(state[1]+q[1])/2-8:.1f}" class="math label" fill="var(--gold)">ρ_g</text>',
+        f'<text x="{(state[0]+q[0])/2+10:.1f}" y="{(state[1]+q[1])/2-8:.1f}" class="math label" fill="var(--gold)">ρ₂</text>',
         f'<text x="{seg[1][0]-6:.1f}" y="{seg[1][1]-12:.1f}" text-anchor="end" class="math label" fill="var(--red)">∂V</text>',
     ]
     return markup,{"region":bbox(poly),"state":[state[0]-9,state[1]-9,state[0]+9,state[1]+9],"projection":[min(state[0],q[0]),min(state[1],q[1]),max(state[0],q[0]),max(state[1],q[1])]}
@@ -133,7 +133,7 @@ def hero(g,palette,mode):
     pn=[tr(p) for p in c["power_nodes_2d"]]; tn=[tr(p) for p in c["transport_nodes_2d"]]
     inter=[tr(p) for p in c["interface_segment_2d"]]
     p=[svg_open(w,h,"Dossiya Dakou — computational geometry research portrait",
-        "Computed affine Power and Transportation layers with a shared interlayer interface and a Shapely-derived viability region. The displayed resilience margin is the exact nearest-boundary normal projection.",palette,mode),
+        "Computed affine Power and Transportation layers with a shared interlayer interface and a Shapely-derived viability region. The displayed resilience margin is the exact Euclidean nearest-boundary normal projection.",palette,mode),
        '<rect x="1" y="1" width="1598" height="618" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
        '<text x="56" y="62" class="title">Dossiya Dakou</text>',
        '<text x="56" y="94" class="small">Physics-grounded mathematical engineering · computed geometry → verified SVG</text>',
@@ -160,7 +160,7 @@ def hero(g,palette,mode):
     vm,vl=draw_viability(g,850,165,1515,505); p.extend(vm)
     p += [
       '<text x="56" y="568" class="small">Affine coordinates are computed from rank-2 plane bases; layer separation is schematic, not geographic elevation.</text>',
-      '<text x="56" y="594" class="small">The green set is a computed constraint intersection; ρ_g is the exact nearest-boundary distance.</text>',
+      '<text x="56" y="594" class="small">The green set is a computed constraint intersection; ρ₂ is the exact Euclidean nearest-boundary distance (g=I).</text>',
       '</svg>'
     ]
     return "\n".join(p),{"viewbox":[0,0,w,h],"major":[bbox(pp),bbox(tp),vl["region"]]}
@@ -186,8 +186,8 @@ def research_question(g,palette):
     p += ['<text x="1240" y="114" text-anchor="middle" class="label">VIABILITY</text>',
           '<ellipse cx="1240" cy="220" rx="125" ry="76" class="viable"/>',
           '<text x="1240" y="227" text-anchor="middle" class="math h2">V</text>',
-          '<text x="1240" y="338" text-anchor="middle" class="small">Y(t) ∈ V · maximize ρ_g</text>']
-    boxes.append([1115,144,1365,296]); labels += [text_box(1240,114,"VIABILITY"),text_box(1240,338,"Y(t) ∈ V · maximize ρ_g",TYPE["small"])]
+          '<text x="1240" y="338" text-anchor="middle" class="small">Y(t) ∈ V · maximize ρ₂</text>']
+    boxes.append([1115,144,1365,296]); labels += [text_box(1240,114,"VIABILITY"),text_box(1240,338,"Y(t) ∈ V · maximize ρ₂",TYPE["small"])]
     for a,b in zip(centers[:-1],centers[1:]):
         p.append(arrow(a[0]+95,a[1],b[0]-105,b[1],"control"))
     p += ['<text x="48" y="390" class="small">Which physically defensible interfaces generate dynamics that can be controlled away from critical boundaries?</text>','</svg>']
@@ -226,7 +226,7 @@ def coupled(g,palette,mode):
 def graph_viability(g,palette):
     w,h=1600,560
     p=[svg_open(w,h,"Graph to dynamics to computed viability",
-        "A typed polygonal graph maps through an affine model plane into a Shapely-computed feasible region. The resilience margin is the exact nearest-boundary distance and normal projection.",palette),
+        "A typed polygonal graph maps through an affine model plane into a Shapely-computed feasible region. The displayed ρ₂ margin is the exact Euclidean nearest-boundary distance and normal projection.",palette),
        '<rect x="1" y="1" width="1598" height="558" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
        '<text x="48" y="56" class="micro">GRAPH → DYNAMICS → COMPUTED VIABILITY</text>',
        '<text x="70" y="100" class="label">GRAPH / MODEL SPACE</text>',
@@ -245,7 +245,7 @@ def graph_viability(g,palette):
     active_label="g"+subscript_int(g["viability"]["active_constraint_index"])+"(Y)=0"
     p += [f'<text x="965" y="468" class="small">V = intersection of {len(g["viability"]["constraints"])} governed constraints</text>',
           f'<text x="965" y="493" class="small">active boundary: {active_label}</text>',
-          '<text x="48" y="535" class="small">The feasible set, nearest boundary point and ρ_g are computed objects; physical calibration and empirical validation remain separate requirements.</text>','</svg>']
+          '<text x="48" y="535" class="small">The feasible set, nearest boundary point and Euclidean ρ₂ are computed objects; a non-Euclidean ρ_g requires a separately justified metric.</text>','</svg>']
     return "\n".join(p),{"viewbox":[0,0,w,h],"major":[[60,125,635,420],[690,165,855,355],vl["region"]]}
 
 def research_state(g,palette,mode):
