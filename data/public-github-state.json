@@ -4,7 +4,7 @@
   "allowlist_source": "data/projects.json",
   "evidence_state": "OBSERVED_PUBLIC_REPOSITORY_METADATA",
   "status": "live",
-  "generated_at": "2026-09-23T05:25:43+00:00",
+  "generated_at": "2026-09-23T05:35:09+00:00",
   "observation_scope": "Allowlisted public repository metadata, latest default-branch commit, and latest public release when available.",
   "repositories": [
     {
@@ -20,12 +20,12 @@
       "language": "CSS",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-23T05:22:57Z",
-      "pushed_at": "2026-09-23T05:25:30Z",
+      "updated_at": "2026-09-23T05:32:44Z",
+      "pushed_at": "2026-09-23T05:32:38Z",
       "latest_commit": {
-        "sha": "af0feb9d75de",
-        "date": "2026-09-23T05:22:52Z",
-        "message": "style: use sky blue for former gold accents"
+        "sha": "510fa410bd98",
+        "date": "2026-09-23T05:32:38Z",
+        "message": "Merge exact Light Sky Blue RGB accent contract"
       },
       "latest_release": null
     },
