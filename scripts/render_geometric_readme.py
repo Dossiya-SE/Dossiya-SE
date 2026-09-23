@@ -325,6 +325,8 @@ def main():
     g=load_json("computed-geometry-v3.json")
     if g.get("contract_id")!="SCIENTIFIC-GEOMETRY-V3":
         raise ValueError("computed geometry v3 missing")
+    if g.get("viability",{}).get("distance_metric")!="euclidean_L2":
+        raise ValueError("V3 SVG renderer requires viability metric euclidean_L2")
     palette=load_json("visual-palette.json")
     OUT.mkdir(parents=True,exist_ok=True); ART.mkdir(parents=True,exist_ok=True)
     rendered={}
