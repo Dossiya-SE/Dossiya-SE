@@ -4,7 +4,7 @@
   "allowlist_source": "data/projects.json",
   "evidence_state": "OBSERVED_PUBLIC_REPOSITORY_METADATA",
   "status": "live",
-  "generated_at": "2026-09-23T04:02:43+00:00",
+  "generated_at": "2026-09-23T04:43:01+00:00",
   "observation_scope": "Allowlisted public repository metadata, latest default-branch commit, and latest public release when available.",
   "repositories": [
     {
@@ -20,12 +20,12 @@
       "language": "CSS",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-23T04:01:24Z",
-      "pushed_at": "2026-09-23T04:01:19Z",
+      "updated_at": "2026-09-23T04:13:50Z",
+      "pushed_at": "2026-09-23T04:13:46Z",
       "latest_commit": {
-        "sha": "d946c59b1672",
-        "date": "2026-09-23T04:01:19Z",
-        "message": "style: eliminate gold and amber visual accents"
+        "sha": "bc09ff872174",
+        "date": "2026-09-23T04:13:45Z",
+        "message": "style: remove residual amber RGB values"
       },
       "latest_release": null
     },
@@ -42,12 +42,12 @@
       "language": "Python",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-09T08:30:49Z",
-      "pushed_at": "2026-09-23T03:34:55Z",
+      "updated_at": "2026-09-23T04:04:29Z",
+      "pushed_at": "2026-09-23T04:04:24Z",
       "latest_commit": {
-        "sha": "ec6b2051d612",
-        "date": "2026-09-09T08:29:46Z",
-        "message": "Add export manifest and archive hashes"
+        "sha": "e686f34a6886",
+        "date": "2026-09-23T04:04:24Z",
+        "message": "style: remove gold and amber visual accents"
       },
       "latest_release": null
     },
@@ -64,12 +64,12 @@
       "language": "TeX",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-22T12:03:43Z",
-      "pushed_at": "2026-09-23T03:35:01Z",
+      "updated_at": "2026-09-23T04:04:34Z",
+      "pushed_at": "2026-09-23T04:04:30Z",
       "latest_commit": {
-        "sha": "cb150d50256b",
-        "date": "2026-09-22T12:03:29Z",
-        "message": "Restore exact PNG figures in final IEE574 theory sheet"
+        "sha": "6b93838a82f6",
+        "date": "2026-09-23T04:04:29Z",
+        "message": "style: remove gold and amber visual accents"
       },
       "latest_release": null
     },
@@ -86,12 +86,12 @@
       "language": "Python",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-08-21T23:11:01Z",
-      "pushed_at": "2026-09-23T03:36:06Z",
+      "updated_at": "2026-09-23T04:13:28Z",
+      "pushed_at": "2026-09-23T04:13:23Z",
       "latest_commit": {
-        "sha": "4f4987aa1cef",
-        "date": "2026-08-21T23:10:16Z",
-        "message": "Adaptive Africa Energy Dignity Systems Visual V4"
+        "sha": "caf6ee89a228",
+        "date": "2026-09-23T04:13:23Z",
+        "message": "style: remove residual amber RGB focus outline"
       },
       "latest_release": null
     },
@@ -108,12 +108,12 @@
       "language": "Python",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-08-21T23:10:33Z",
-      "pushed_at": "2026-09-23T03:30:19Z",
+      "updated_at": "2026-09-23T04:03:17Z",
+      "pushed_at": "2026-09-23T04:03:13Z",
       "latest_commit": {
-        "sha": "cff7874559f8",
-        "date": "2026-08-21T23:10:22Z",
-        "message": "Adaptive EDA Mathematical Map V4"
+        "sha": "aebdd00d3f5a",
+        "date": "2026-09-23T04:03:13Z",
+        "message": "style: remove gold and amber visual accents"
       },
       "latest_release": null
     },
