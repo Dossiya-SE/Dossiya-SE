@@ -128,7 +128,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
     parts = [svg_open(
         1600, 760,
         "Coupled Power–Transportation network geometry",
-        "Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and cyan denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.",
+        "Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and light sky blue denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.",
         css,
     )]
     parts.append('<rect x="1" y="1" width="1598" height="758" rx="30" fill="var(--bg)" stroke="var(--line)"/>')
@@ -247,7 +247,7 @@ def warped_loop(cx: float, cy: float, rx: float, ry: float, phase: float, n: int
 
 def render_viability() -> str:
     css = style(None)
-    parts = [svg_open(1400, 450, "Graph to viability transformation", "Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, cyan is causal/decision. Geometry is explanatory, not fitted data.", css)]
+    parts = [svg_open(1400, 450, "Graph to viability transformation", "Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, light sky blue is causal/decision. Geometry is explanatory, not fitted data.", css)]
     parts.append('<rect x="1" y="1" width="1398" height="448" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     parts.append('<text x="44" y="52" class="k" fill="var(--green)">GRAPH → DYNAMICS → VIABILITY → DECISION</text>')
     labels = [(110,"𝓖","topology"),(300,"𝕀","causal interface"),(490,"F𝓖","coupled dynamics"),(680,"Y(t)","state trajectory")]
