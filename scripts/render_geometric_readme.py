@@ -273,7 +273,7 @@ def research_state(g,palette,mode):
     ev=rs["explained_variance_ratio"]
     p += [f'<text x="48" y="452" class="small">Conceptual normalized state r=(r_s,r_c,r_d,r_v); SVD projection only.</text>',
           f'<text x="48" y="478" class="small">First two components explain {(ev[0]+ev[1])*100:.1f}% of configured conceptual variance; coordinates are not empirical measurements.</text>','</svg>']
-    return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes,"cells":cells,"centers":[[x,210] for x in centers]}
+    return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes}
 
 def projects(g,palette):
     w,h=1600,500
@@ -291,7 +291,7 @@ def projects(g,palette):
               f'<text x="{x}" y="356" text-anchor="middle" class="small">equal area · {item["sides"]}-vertex signature · navigation only</text>']
     p += ['<line x1="48" y1="402" x2="1552" y2="402" stroke="var(--line)"/>',
           '<text x="48" y="435" class="small">All signatures have the same computed area; shape/color do not encode rank, maturity, scientific importance or validation.</text>','</svg>']
-    return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes}
+    return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes,"cells":cells,"centers":[[x,210] for x in centers]}
 
 def pipeline(g,palette):
     w,h=1800,460
