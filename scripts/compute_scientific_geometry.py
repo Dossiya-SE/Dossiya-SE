@@ -217,6 +217,9 @@ def line_segment_for_constraint(a: float, b: float, c: float, region: Polygon, L
 
 
 def viability_region(cfg):
+    metric = str(cfg.get("metric", ""))
+    if metric != "euclidean_L2":
+        raise ValueError("SCIENTIFIC-GEOMETRY-V3 currently supports viability metric euclidean_L2 only")
     xmin, xmax, ymin, ymax = map(float, cfg["bounds"])
     region = box(xmin, ymin, xmax, ymax)
     L = 20.0 * max(xmax - xmin, ymax - ymin)
@@ -249,6 +252,7 @@ def viability_region(cfg):
     active_segment = line_segment_for_constraint(active["a"],active["b"],active["c"],region)
 
     return {
+        "distance_metric": metric,
         "state": xv,
         "boundary_point": qv,
         "rho": float(state.distance(region.boundary)),
