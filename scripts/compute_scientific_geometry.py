@@ -258,11 +258,19 @@ def compute():
         "b2": cfg["hero"]["transport_plane"]["basis2"],
     })
 
+    # Compute the viability object once. The hero and graph→viability figures
+    # consume the same state, active constraint and nearest-boundary projection.
+    viable = viability_region(cfg["viability"])
+    active = viable["constraints"][int(viable["active_constraint_index"]) - 1]
     hero_proj = hyperplane_projection(
-        cfg["hero"]["state_geometry"]["state"],
-        cfg["hero"]["state_geometry"]["normal"],
-        cfg["hero"]["state_geometry"]["b"],
+        viable["state"],
+        [active["a"], active["b"]],
+        active["c"],
     )
+    if np.linalg.norm(hero_proj["projection"] - viable["boundary_point"]) > 1e-10:
+        raise ValueError("hero projection must equal the viability nearest-boundary point")
+    if abs(float(hero_proj["distance"]) - float(viable["rho"])) > 1e-10:
+        raise ValueError("hero distance must equal viability rho")
 
     # Multilayer 3D coordinates: same 2D intrinsic coordinates, separate affine layers.
     p_nodes_3d = np.vstack([plane_point(power, uv) for uv in cfg["coupled"]["power_nodes"]])
@@ -276,8 +284,6 @@ def compute():
     it = int(cfg["coupled"]["interface_transport_node"])
     interface_segment_3d = np.vstack([p_nodes_3d[ip], t_nodes_3d[it]])
     interface_segment_2d = project_3d(interface_segment_3d, R)
-
-    viable = viability_region(cfg["viability"])
 
     # Research-state space: SVD/PCA projection of explicitly conceptual 4D vectors.
     X = np.asarray(cfg["research_state"]["vectors"], dtype=float)
