@@ -8,71 +8,19 @@ on:
     branches: [main]
     paths:
       - "README.md"
-      - "data/framework.json"
-      - "data/projects.json"
-      - "data/research-state.json"
-      - "data/power-network.json"
-      - "data/transport-network.json"
-      - "data/interfaces.json"
-      - "data/network-dynamics.json"
-      - "data/visual-palette.json"
-      - "data/flat-geometry.json"
-      - "data/geometric-readme.json"
-      - "scripts/fetch_public_state.py"
-      - "scripts/render_research_state.py"
-      - "scripts/render_network.py"
-      - "scripts/render_network_3d.py"
-      - "scripts/apply_visual_palette.py"
-      - "scripts/refine_profile_layout.py"
-      - "scripts/validate_profile.py"
-      - "scripts/validate_network.py"
-      - "scripts/validate_network_3d.py"
-      - "scripts/validate_network_3d_runtime.py"
-      - "scripts/validate_visual_palette.py"
-      - "scripts/validate_profile_layout.py"
-      - "scripts/render_flat_geometry.py"
-      - "scripts/validate_flat_geometry.py"
-      - "scripts/validate_flat_geometry_runtime.py"
-      - "mathematical-art/flat-geometry/**"
+      - "requirements-visual.txt"
+      - "data/**"
+      - "scripts/**"
       - "mathematical-art/profile-geometry/**"
-      - "scripts/render_geometric_readme.py"
-      - "scripts/validate_geometric_readme.py"
-      - "scripts/validate_geometric_readme_runtime.py"
+      - "assets/generated/**"
       - ".github/workflows/update-profile.yml"
   pull_request:
     paths:
       - "README.md"
-      - "data/framework.json"
-      - "data/projects.json"
-      - "data/research-state.json"
-      - "data/public-github-state.json"
-      - "data/power-network.json"
-      - "data/transport-network.json"
-      - "data/interfaces.json"
-      - "data/network-dynamics.json"
-      - "data/visual-palette.json"
-      - "data/flat-geometry.json"
-      - "data/geometric-readme.json"
-      - "scripts/fetch_public_state.py"
-      - "scripts/render_research_state.py"
-      - "scripts/render_network.py"
-      - "scripts/render_network_3d.py"
-      - "scripts/apply_visual_palette.py"
-      - "scripts/refine_profile_layout.py"
-      - "scripts/validate_profile.py"
-      - "scripts/validate_network.py"
-      - "scripts/validate_network_3d.py"
-      - "scripts/validate_network_3d_runtime.py"
-      - "scripts/validate_visual_palette.py"
-      - "scripts/validate_profile_layout.py"
-      - "scripts/render_flat_geometry.py"
-      - "scripts/validate_flat_geometry.py"
-      - "scripts/validate_flat_geometry_runtime.py"
-      - "mathematical-art/flat-geometry/**"
+      - "requirements-visual.txt"
+      - "data/**"
+      - "scripts/**"
       - "mathematical-art/profile-geometry/**"
-      - "scripts/render_geometric_readme.py"
-      - "scripts/validate_geometric_readme.py"
-      - "scripts/validate_geometric_readme_runtime.py"
       - "assets/generated/**"
       - ".github/workflows/update-profile.yml"
 
@@ -86,7 +34,12 @@ concurrency:
 jobs:
   build-profile:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMEXPR_NUM_THREADS: "1"
 
     steps:
       - name: Check out repository
@@ -97,10 +50,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: "3.12.14"
 
-      - name: Install visual runtime test dependencies
-        run: python -m pip install --disable-pip-version-check "CairoSVG==2.8.2" "Pillow==11.3.0"
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.11.9"
+
+      - name: Install scientific visual dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-visual.txt
 
       - name: Refresh allowlisted public evidence
         if: github.event_name != 'pull_request'
@@ -114,10 +72,25 @@ jobs:
       - name: Validate governed network source state
         run: python scripts/validate_network.py --input-only
 
-      - name: Render living research-state SVG assets
+      - name: Compute SCIENTIFIC-GEOMETRY-V3
+        run: python scripts/compute_scientific_geometry.py
+
+      - name: Independently verify geometry in Julia
+        run: julia mathematical-art/profile-geometry/julia/verify_geometry_v3.jl
+
+      - name: Validate mathematics numerical conditioning and topology
+        run: python scripts/validate_scientific_geometry.py
+
+      - name: Validate 3D scene with PyVista and Trimesh
+        run: python scripts/validate_computational_3d.py
+
+      - name: Generate TikZ publication geometry
+        run: python scripts/render_publication_geometry.py
+
+      - name: Render legacy research-state SVG assets
         run: python scripts/render_research_state.py
 
-      - name: Render coupled-network and viability SVG assets
+      - name: Render legacy coupled-network and viability SVG assets
         run: python scripts/render_network.py
 
       - name: Apply validated neutral-semantic palette
@@ -126,32 +99,14 @@ jobs:
       - name: Refine scientific container hierarchy
         run: python scripts/refine_profile_layout.py
 
-      - name: Render static isometric 3D hero
+      - name: Render legacy static isometric 3D hero
         run: python scripts/render_network_3d.py
 
-      - name: Upload regenerated profile SVGs
-        if: always() && github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
-        with:
-          name: generated-profile-svg
-          path: assets/generated/*.svg
-          if-no-files-found: error
-          retention-days: 7
-
-      - name: Validate static 3D hero semantics
+      - name: Validate legacy 3D hero semantics
         run: python scripts/validate_network_3d.py
 
-      - name: Runtime-render 3D hero at GitHub widths
+      - name: Runtime-render legacy 3D hero at GitHub widths
         run: python scripts/validate_network_3d_runtime.py
-
-      - name: Upload runtime-render previews
-        if: always() && github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
-        with:
-          name: 3d-runtime-previews
-          path: artifacts/runtime-preview/*.png
-          if-no-files-found: warn
-          retention-days: 7
 
       - name: Validate generated research profile
         run: python scripts/validate_profile.py
@@ -162,64 +117,98 @@ jobs:
       - name: Validate scientific information architecture
         run: python scripts/validate_profile_layout.py
 
-      - name: Validate visual contrast and semantic redundancy
+      - name: Validate governed visual palette
         run: python scripts/validate_visual_palette.py
 
-      - name: Render final geometry-driven README visuals
+      - name: Render final V3 README visuals from computed geometry
         run: python scripts/render_geometric_readme.py
 
-      - name: Validate final geometric README semantics
+      - name: Validate V3 scientific visual semantics
         run: python scripts/validate_geometric_readme.py
+
+      - name: Validate quantitative visual geometry
+        run: python scripts/validate_visual_geometry.py
+
+      - name: Revalidate palette after final V3 render
+        run: python scripts/validate_visual_palette.py
 
       - name: Runtime-render all final README visuals
         run: python scripts/validate_geometric_readme_runtime.py
+
+      - name: Verify byte-identical V3 rebuild determinism
+        if: github.event_name == 'pull_request'
+        run: |
+          git diff --check
+          python scripts/verify_v3_determinism.py
+          echo "G1 mathematics, G2 numerical verification, G3 computational geometry, G4 semantics, G5 visual quality and G6 byte-identical double-build determinism completed."
+
+      - name: Upload V3 geometry audit artifacts
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: scientific-geometry-v3-audit
+          path: |
+            data/computed-geometry-v3.json
+            artifacts/julia-geometry-check.toml
+            artifacts/visual-layout-v3.json
+            artifacts/v3-determinism-manifest.json
+            mathematical-art/profile-geometry/overleaf/profile_geometry_v3.tex
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Upload final geometry runtime previews
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: geometric-readme-runtime-previews
+          name: geometric-readme-v3-runtime-previews
           path: artifacts/geometric-readme-preview/*.png
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 14
 
-      - name: Verify pull-request rendering is deterministic
-        if: github.event_name == 'pull_request'
-        run: |
-          git diff --check
-          echo "Governed scientific state, legacy model validation, final geometric redesign, palette, accessibility and GitHub-width raster checks completed successfully."
-
-      - name: Commit validated generated visuals to PR branch
+      - name: Commit validated generated V3 artifacts to PR branch
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
         env:
           HEAD_REF: ${{ github.head_ref }}
+          TRIGGER_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          mkdir -p /tmp/profile-generated
-          cp -R assets/generated/. /tmp/profile-generated/
+          rm -rf /tmp/profile-v3
+          mkdir -p /tmp/profile-v3/assets /tmp/profile-v3/data /tmp/profile-v3/tikz
+          cp -R assets/generated/. /tmp/profile-v3/assets/
+          cp data/computed-geometry-v3.json /tmp/profile-v3/data/
+          cp mathematical-art/profile-geometry/overleaf/profile_geometry_v3.tex /tmp/profile-v3/tikz/
+
           git fetch origin "$HEAD_REF"
-          git checkout -B "$HEAD_REF" "origin/$HEAD_REF"
+          REMOTE_SHA="$(git rev-parse "origin/$HEAD_REF")"
+          if [ "$REMOTE_SHA" != "$TRIGGER_SHA" ]; then
+            echo "Stale workflow run: trigger $TRIGGER_SHA, current branch $REMOTE_SHA. Generated artifacts will not be committed."
+            exit 0
+          fi
+
+          git checkout -B "$HEAD_REF" "$TRIGGER_SHA"
           rm -rf assets/generated
           mkdir -p assets/generated
-          cp -R /tmp/profile-generated/. assets/generated/
-          git add assets/generated/
+          cp -R /tmp/profile-v3/assets/. assets/generated/
+          cp /tmp/profile-v3/data/computed-geometry-v3.json data/computed-geometry-v3.json
+          cp /tmp/profile-v3/tikz/profile_geometry_v3.tex mathematical-art/profile-geometry/overleaf/profile_geometry_v3.tex
+          git add assets/generated/ data/computed-geometry-v3.json mathematical-art/profile-geometry/overleaf/profile_geometry_v3.tex
           if git diff --cached --quiet; then
-            echo "Generated RGB visuals already match the validated render."
+            echo "Computed geometry, TikZ and final SVGs already match validated sources."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(profile): regenerate validated RGB visuals"
+          git commit -m "chore(profile): regenerate validated scientific geometry v3"
           git push origin "HEAD:$HEAD_REF"
 
-      - name: Commit meaningful profile changes only
+      - name: Commit meaningful generated V3 changes on main
         if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/public-github-state.json assets/generated/
+          git add data/public-github-state.json data/computed-geometry-v3.json assets/generated/ mathematical-art/profile-geometry/overleaf/profile_geometry_v3.tex
           if git diff --cached --quiet; then
-            echo "No meaningful public research-state or generated-visual change detected."
+            echo "No meaningful public state or computed geometry change detected."
             exit 0
           fi
-          git commit -m "chore(profile): refresh verified research network state"
+          git commit -m "chore(profile): refresh verified scientific geometry v3"
           git push

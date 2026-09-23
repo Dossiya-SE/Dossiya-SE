@@ -1,0 +1,61 @@
+schema_version = "3.0"
+contract_id = "SCIENTIFIC-GEOMETRY-V3"
+evidence_state = "MATHEMATICAL_CONSTRUCTION"
+
+[projection]
+yaw_deg = -28.0
+pitch_deg = 32.0
+
+[hero.power_plane]
+origin = [0.0, 0.0, 0.0]
+basis1 = [1.0, 0.12, 0.0]
+basis2 = [0.08, 1.0, 0.0]
+
+[hero.transport_plane]
+origin = [0.0, 0.0, 1.35]
+basis1 = [1.0, 0.12, 0.0]
+basis2 = [0.08, 1.0, 0.0]
+
+[coupled]
+layer_separation = 1.35
+power_nodes = [[-1.40,-0.35],[-0.78,0.35],[-0.10,-0.18],[0.62,0.42],[1.35,-0.05]]
+transport_nodes = [[-1.28,-0.45],[-0.62,0.22],[0.05,-0.32],[0.72,0.30],[1.38,-0.18]]
+power_edges = [[0,1],[1,2],[2,3],[3,4]]
+transport_edges = [[0,1],[1,2],[2,3],[3,4]]
+interface_power_node = 2
+interface_transport_node = 2
+
+[viability]
+metric = "euclidean_L2"
+bounds = [-1.8, 1.8, -1.4, 1.5]
+state = [0.10, 0.12]
+constraints = [
+  ["x_min",  -1.0,  0.0, 1.45],
+  ["x_max",   1.0,  0.0, 1.55],
+  ["y_min",   0.0, -1.0, 1.05],
+  ["y_max",   0.0,  1.0, 1.25],
+  ["upper_r", 1.0,  0.65, 1.62],
+  ["upper_l",-0.45, 1.0, 1.18]
+]
+
+[research_state]
+labels = ["STRUCTURE","MECHANISM","DYNAMICS","CONTROL","VIABILITY"]
+vectors = [
+  [1.00,0.20,0.08,0.02],
+  [1.00,0.82,0.28,0.05],
+  [1.00,1.00,0.82,0.22],
+  [1.00,1.00,1.00,0.62],
+  [1.00,1.00,1.00,1.00]
+]
+current_index = 1
+target_index = 2
+
+[projects]
+target_area = 10000.0
+names = ["Africa Energy Dignity","Mathematics Exploration","Optimization for Sustainability","Mathematical Surface Engineering"]
+sides = [3,6,4,5]
+
+[pipeline]
+labels = ["STRUCTURE","MECHANISM","DYNAMICS","CONTROL","VIABILITY","INTERFACE","TRANSFORM"]
+sides = [3,6,5,4,0,8,10]
+y = [0.02,0.12,-0.03,0.08,-0.04,0.07,0.00]

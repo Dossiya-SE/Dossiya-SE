@@ -1,0 +1,11 @@
+# SCIENTIFIC-GEOMETRY-V3 release-critical environment
+# Versions pinned from the first full six-gate PASS on GitHub Actions.
+numpy==2.5.3
+scipy==1.18.1
+sympy==1.14.0
+shapely==2.1.2
+pyvista==0.49.0
+vtk==9.7.0
+trimesh==4.12.2
+CairoSVG==2.9.1
+Pillow==12.3.0

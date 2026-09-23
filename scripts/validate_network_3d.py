@@ -80,7 +80,7 @@ def validate_readme() -> None:
     text = README.read_text(encoding="utf-8")
     lower = text.lower()
     require("coupled-network-3d-light.svg" in text and "coupled-network-3d-dark.svg" in text, "README must use light/dark 3D hero")
-    require("static isometric 3d" in lower, "README alt text must describe static isometric 3D")
+    require(("static isometric 3d" in lower) or ("computed projection of a verified 3d" in lower), "README alt text must describe the legacy isometric or final computed 3D projection")
     require("visual encoding of multilayer structure" in lower, "README must explain the meaning of depth")
     require("not geographic elevation" in lower, "README must reject geographic interpretation of 3D depth")
     require("github should not be treated as guaranteeing svg animation" in lower, "README must preserve GitHub static-rendering boundary")

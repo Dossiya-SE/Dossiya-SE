@@ -1,15 +1,73 @@
 {
-  "schema_version":"1.0",
-  "contract_id":"GEOMETRIC-README-V2",
-  "principle":"Use plane geometry and affine geometry as structural visual grammar for existing README figures, never as standalone educational content.",
-  "visuals":{
-    "research-hero":{"primary_geometry":["affine planes","typed polygons","ellipse","hyperplane","orthogonal projection"],"authority":["React/CSS composition","Python deterministic SVG"]},
-    "research-question":{"primary_geometry":["triangle","hexagon","pentagon","ellipse"],"authority":["TikZ construction","Python deterministic SVG"]},
-    "coupled-network-3d":{"primary_geometry":["two affine planes","typed polygons","shared hexagonal intersection","ellipse","hyperplane"],"authority":["Julia coordinate model","Python deterministic SVG"]},
-    "graph-to-viability":{"primary_geometry":["polygonal graph complex","affine model plane","ellipse","hyperplane","normal projection"],"authority":["Julia linear algebra","TikZ construction","Python deterministic SVG"]},
-    "research-state":{"primary_geometry":["triangle","quadrilateral","hexagon","pentagon","ellipse"],"authority":["React/CSS responsive composition","Python deterministic SVG"]},
-    "project-system":{"primary_geometry":["triangle","hexagon","quadrilateral","pentagon"],"authority":["Go static geometry mirror","C# engineering mirror","Python deterministic SVG"]},
-    "research-pipeline":{"primary_geometry":["triangle","hexagon","pentagon","quadrilateral","ellipse","octagon","decagon"],"authority":["TikZ sequence design","Python deterministic SVG"]}
+  "schema_version": "3.0",
+  "contract_id": "GEOMETRIC-README-V3",
+  "scientific_geometry_contract": "SCIENTIFIC-GEOMETRY-V3",
+  "principle": "Every scientific coordinate shown in the primary README figures must descend from a governed mathematical or computational geometry source. Manual SVG coordinates are limited to framing and typography.",
+  "visuals": {
+    "research-hero": {
+      "object": "computed affine multilayer system + Euclidean L2 viability geometry",
+      "authority": [
+        "SymPy",
+        "NumPy/SciPy",
+        "Shapely",
+        "Julia verification",
+        "Python deterministic SVG"
+      ]
+    },
+    "research-question": {
+      "object": "minimal logical transformation",
+      "authority": [
+        "symbolic contract",
+        "TikZ publication representation",
+        "Shapely spacing validation",
+        "Python deterministic SVG"
+      ]
+    },
+    "coupled-network-3d": {
+      "object": "R3 multilayer affine embedding + orthographic publication projection",
+      "authority": [
+        "NumPy/SciPy",
+        "Julia",
+        "PyVista",
+        "Trimesh",
+        "Python deterministic SVG"
+      ]
+    },
+    "graph-to-viability": {
+      "object": "constraint intersection + exact Euclidean L2 nearest-boundary distance",
+      "authority": [
+        "SymPy",
+        "NumPy/SciPy",
+        "Shapely",
+        "Julia cross-check",
+        "TikZ publication representation",
+        "Python deterministic SVG"
+      ]
+    },
+    "research-state": {
+      "object": "SVD projection of explicitly conceptual 4D research-state vectors",
+      "authority": [
+        "NumPy/SciPy",
+        "Python deterministic SVG"
+      ]
+    },
+    "project-system": {
+      "object": "equal-area categorical signatures",
+      "authority": [
+        "NumPy formula",
+        "Shapely area/centroid validation",
+        "Python deterministic SVG"
+      ]
+    },
+    "research-pipeline": {
+      "object": "continuous cubic-spline trajectory gamma(t) with seven anchors",
+      "authority": [
+        "SciPy CubicSpline",
+        "TikZ publication representation",
+        "Python deterministic SVG"
+      ]
+    }
   },
-  "scientific_boundary":"Geometry communicates structure, category, state-space relation and constraint direction. Shape/color never increase evidence strength and never imply measured behavior."
+  "scientific_boundary": "Computed geometry does not imply empirical calibration. The current V3 viability margin is the Euclidean special case rho_2 with g=I; a non-Euclidean rho_g requires a separately justified metric. Shape and color never increase evidence strength; conceptual research-state coordinates are not measured data; 3D layer separation is not geographic elevation.",
+  "computed_viability_metric": "euclidean_L2"
 }
