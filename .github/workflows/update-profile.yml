@@ -117,9 +117,6 @@ jobs:
       - name: Validate scientific information architecture
         run: python scripts/validate_profile_layout.py
 
-      - name: Validate governed visual palette
-        run: python scripts/validate_visual_palette.py
-
       - name: Render final V3 README visuals from computed geometry
         run: python scripts/render_geometric_readme.py
 
@@ -135,7 +132,7 @@ jobs:
       - name: Validate quantitative visual geometry
         run: python scripts/validate_visual_geometry.py
 
-      - name: Revalidate palette after final V3 render
+      - name: Validate final governed RGB palette and zero-warm-hue policy
         run: python scripts/validate_visual_palette.py
 
       - name: Runtime-render all final README visuals
