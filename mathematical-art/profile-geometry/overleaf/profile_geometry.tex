@@ -4,15 +4,15 @@
 \definecolor{Power}{HTML}{C8102E}
 \definecolor{Transport}{HTML}{16823A}
 \definecolor{Info}{HTML}{1D4ED8}
-\definecolor{Gold}{HTML}{8B5E00}
+\definecolor{Control}{HTML}{8B5E00}
 \definecolor{Violet}{HTML}{6D28D9}
 \begin{document}
 \begin{tikzpicture}[>=Latex]
   % Existing research-question geometry:
   \node[regular polygon,regular polygon sides=3,draw=Power,minimum size=13mm] (p) at (0,0) {};
-  \node[regular polygon,regular polygon sides=6,draw=Gold,minimum size=15mm] (c) at (3,0) {};
+  \node[regular polygon,regular polygon sides=6,draw=Control,minimum size=15mm] (c) at (3,0) {};
   \node[regular polygon,regular polygon sides=5,draw=Info,minimum size=15mm] (d) at (6,0) {};
-  \draw[->,Gold] (p)--(c); \draw[->,Gold] (c)--(d);
+  \draw[->,Control] (p)--(c); \draw[->,Control] (c)--(d);
   \draw[Violet] (9,0) ellipse (1.3 and .75);
   \draw[Power,dashed] (8,-.8)--(10,.8);
   % This source defines alignment/geometry; Python emits GitHub-safe SVG.
