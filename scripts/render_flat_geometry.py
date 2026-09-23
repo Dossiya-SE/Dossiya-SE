@@ -28,7 +28,7 @@ def vars_for(p: dict) -> str:
         "green","green_soft","red","red_soft","control","control_soft","control_ink","ghost",
         "power","power_soft","transport","transport_soft",
         "information","information_soft","organization","organization_ink","organization_soft",
-        "cyan","cyan_soft","violet","violet_soft","magenta","magenta_soft","control","control_soft"
+        "cyan","cyan_soft","violet","violet_soft","magenta","magenta_soft"
     )
     return ";".join(f"--{k.replace('_','-')}:{p[k]}" for k in keys)
 
@@ -141,7 +141,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 
         '<line x1="1160" y1="524" x2="1525" y2="524" stroke="var(--line)"/>',
         '<text x="1160" y="560" class="math eq">d(x,H) = |aᵀx − b| / ‖a‖₂</text>',
-        '<text x="1160" y="590" class="small">red dashed = boundary · control dashed = orthogonal projection</text>',
+        '<text x="1160" y="590" class="small">red dashed = boundary · cyan dashed = orthogonal projection</text>',
 
         '<line x1="48" y1="648" x2="1552" y2="648" stroke="var(--line)"/>',
         '<text x="48" y="676" class="small">Plane figures and affine flats are distinct objects. The visual bridge is constraint and state-space geometry. Contract: FLAT-GEOMETRY-V1.</text>',
