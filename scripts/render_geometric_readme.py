@@ -15,6 +15,8 @@ DATA=ROOT/"data"
 OUT=ROOT/"assets"/"generated"
 ART=ROOT/"artifacts"
 
+TYPE={"title":38,"h2":26,"label":20,"small":18,"micro":16}
+
 def load_json(name):
     return json.loads((DATA/name).read_text(encoding="utf-8"))
 
@@ -34,11 +36,11 @@ def style(palette,mode=None):
 {media}
 text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}}
 .math{{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}}
-.title{{font-size:34px;font-weight:820;letter-spacing:-.02em}}
-.h2{{font-size:22px;font-weight:780}}
-.label{{font-size:15px;font-weight:720}}
-.small{{font-size:13px;fill:var(--muted)}}
-.micro{{font-size:11px;fill:var(--muted);letter-spacing:.08em}}
+.title{{font-size:{TYPE["title"]}px;font-weight:820;letter-spacing:-.02em}}
+.h2{{font-size:{TYPE["h2"]}px;font-weight:780}}
+.label{{font-size:{TYPE["label"]}px;font-weight:720}}
+.small{{font-size:{TYPE["small"]}px;fill:var(--muted)}}
+.micro{{font-size:{TYPE["micro"]}px;fill:var(--muted);letter-spacing:.08em}}
 .panel{{fill:var(--panel);stroke:var(--line);stroke-width:1.2}}
 .plane{{fill:var(--ghost);stroke:var(--line);stroke-width:1.4}}
 .power{{fill:none;stroke:var(--power);stroke-width:3}}
@@ -95,7 +97,8 @@ def bbox(points):
     xs=[p[0] for p in points]; ys=[p[1] for p in points]
     return [min(xs),min(ys),max(xs),max(ys)]
 
-def text_box(x,y,text,font=15,anchor="middle"):
+def text_box(x,y,text,font=None,anchor="middle"):
+    font=TYPE["label"] if font is None else font
     width=max(8.0,0.58*font*len(text)); height=1.25*font
     if anchor=="middle": x0=x-width/2
     elif anchor=="end": x0=x-width
@@ -155,7 +158,8 @@ def hero(g,palette,mode):
     ]
     vm,vl=draw_viability(g,850,165,1515,505); p.extend(vm)
     p += [
-      '<text x="56" y="582" class="small">Affine coordinates are computed from rank-2 plane bases; layer separation is schematic, not geographic elevation. The green set is a computed constraint intersection; ρ_g is the exact nearest-boundary distance.</text>',
+      '<text x="56" y="568" class="small">Affine coordinates are computed from rank-2 plane bases; layer separation is schematic, not geographic elevation.</text>',
+      '<text x="56" y="594" class="small">The green set is a computed constraint intersection; ρ_g is the exact nearest-boundary distance.</text>',
       '</svg>'
     ]
     return "\n".join(p),{"viewbox":[0,0,w,h],"major":[bbox(pp),bbox(tp),vl["region"]]}
@@ -177,12 +181,12 @@ def research_question(g,palette):
               f'<polygon points="{pts(poly)}" fill="var(--{col}-soft)" stroke="var(--{col})" stroke-width="3"/>',
               f'<text x="{x}" y="{y+7}" text-anchor="middle" class="math h2">{symbol}</text>',
               f'<text x="{x}" y="{y+118}" text-anchor="middle" class="small">{sub}</text>']
-        labels += [text_box(x,y-106,title),text_box(x,y+118,sub,13)]
+        labels += [text_box(x,y-106,title),text_box(x,y+118,sub,TYPE["small"])]
     p += ['<text x="1240" y="114" text-anchor="middle" class="label">VIABILITY</text>',
           '<ellipse cx="1240" cy="220" rx="125" ry="76" class="viable"/>',
           '<text x="1240" y="227" text-anchor="middle" class="math h2">V</text>',
           '<text x="1240" y="338" text-anchor="middle" class="small">Y(t) ∈ V · maximize ρ_g</text>']
-    boxes.append([1115,144,1365,296]); labels += [text_box(1240,114,"VIABILITY"),text_box(1240,338,"Y(t) ∈ V · maximize ρ_g",13)]
+    boxes.append([1115,144,1365,296]); labels += [text_box(1240,114,"VIABILITY"),text_box(1240,338,"Y(t) ∈ V · maximize ρ_g",TYPE["small"])]
     for a,b in zip(centers[:-1],centers[1:]):
         p.append(arrow(a[0]+95,a[1],b[0]-105,b[1],"control"))
     p += ['<text x="48" y="390" class="small">Which physically defensible interfaces generate dynamics that can be controlled away from critical boundaries?</text>','</svg>']
@@ -238,8 +242,9 @@ def graph_viability(g,palette):
           '<text x="955" y="100" class="label">STATE / VIABILITY SPACE</text>']
     vm,vl=draw_viability(g,945,125,1540,440); p.extend(vm)
     active_label="g"+subscript_int(g["viability"]["active_constraint_index"])+"(Y)=0"
-    p += [f'<text x="965" y="475" class="small">V = intersection of {len(g["viability"]["constraints"])} governed constraints · active boundary: {active_label}</text>',
-          '<text x="48" y="520" class="small">The feasible set, nearest boundary point and ρ_g are computed objects. They remain schematic until their physical constraints are calibrated and empirically validated.</text>','</svg>']
+    p += [f'<text x="965" y="468" class="small">V = intersection of {len(g["viability"]["constraints"])} governed constraints</text>',
+          f'<text x="965" y="493" class="small">active boundary: {active_label}</text>',
+          '<text x="48" y="535" class="small">The feasible set, nearest boundary point and ρ_g are computed objects; physical calibration and empirical validation remain separate requirements.</text>','</svg>']
     return "\n".join(p),{"viewbox":[0,0,w,h],"major":[[60,125,635,420],[690,165,855,355],vl["region"]]}
 
 def research_state(g,palette,mode):
@@ -266,8 +271,9 @@ def research_state(g,palette,mode):
               f'<text x="{x:.1f}" y="{y-34:.1f}" text-anchor="middle" class="label">{escape(label)}</text>']
     a=p2[rs["current_index"]]; b=p2[rs["target_index"]]; p.append(arrow(a[0],a[1],b[0],b[1],"control"))
     ev=rs["explained_variance_ratio"]
-    p += [f'<text x="48" y="466" class="small">Conceptual normalized state r=(r_s,r_c,r_d,r_v); SVD projection only. First two components explain {(ev[0]+ev[1])*100:.1f}% of the configured conceptual variance; not empirical measurement.</text>','</svg>']
-    return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes}
+    p += [f'<text x="48" y="452" class="small">Conceptual normalized state r=(r_s,r_c,r_d,r_v); SVD projection only.</text>',
+          f'<text x="48" y="478" class="small">First two components explain {(ev[0]+ev[1])*100:.1f}% of configured conceptual variance; coordinates are not empirical measurements.</text>','</svg>']
+    return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes,"cells":cells,"centers":[[x,210] for x in centers]}
 
 def projects(g,palette):
     w,h=1600,500
@@ -277,6 +283,7 @@ def projects(g,palette):
        '<rect x="1" y="1" width="1598" height="498" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
        '<text x="48" y="58" class="micro">FEATURED RESEARCH SYSTEMS · EQUAL-AREA GEOMETRIC INDEX</text>']
     boxes=[]
+    cells=[[x-150,105,x+150,305] for x in centers]
     for x,item,col in zip(centers,items,cols):
         poly=[(x+vx,210+vy) for vx,vy in item["vertices"]]; boxes.append(bbox(poly))
         p += [f'<polygon points="{pts(poly)}" fill="var(--{col}-soft)" stroke="var(--{col})" stroke-width="3"/>',
@@ -305,7 +312,7 @@ def pipeline(g,palette):
             poly=regular_polygon(int(n),x,y,58); boxes.append(bbox(poly))
             p.append(f'<polygon points="{pts(poly)}" fill="var(--{col}-soft)" stroke="var(--{col})" stroke-width="3"/>')
         p += [f'<text x="{x:.1f}" y="{y+5:.1f}" text-anchor="middle" class="label">{i+1}</text>',
-              f'<text x="{x:.1f}" y="{y+86:.1f}" text-anchor="middle" class="small">{escape(label)}</text>']
+              f'<text x="{x:.1f}" y="{y+86:.1f}" text-anchor="middle" class="label">{escape(label)}</text>']
     a=stage[1]; b=stage[2]; p.append(arrow(a[0]+60,a[1],b[0]-60,b[1],"control"))
     p += ['<text x="48" y="426" class="small">γ:[0,1]→R² is continuous and satisfies γ(t_i)=S_i at all seven stage anchors. Geometry is navigation, not ontology or evidence scale.</text>','</svg>']
     return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes,"curve":bbox(curve)}
@@ -333,7 +340,7 @@ def main():
         svg,layout=fn(*args)
         (OUT/name).write_text(svg+"\n",encoding="utf-8")
         layouts[name]=layout
-    (ART/"visual-layout-v3.json").write_text(json.dumps({"contract_id":"SCIENTIFIC-GEOMETRY-V3","figures":layouts},indent=2)+"\n",encoding="utf-8")
+    (ART/"visual-layout-v3.json").write_text(json.dumps({"contract_id":"SCIENTIFIC-GEOMETRY-V3","typography":TYPE,"figures":layouts},indent=2)+"\n",encoding="utf-8")
     print("Rendered SCIENTIFIC-GEOMETRY-V3 across all primary README visuals.")
 
 if __name__=="__main__":
