@@ -30,11 +30,34 @@ def arr(x):
     return np.asarray(x, dtype=float)
 
 
-def clean(value):
+CANONICAL_SIG_DIGITS = 14
+CANONICAL_ZERO_TOL = 1e-14
+
+def canonicalize(value):
+    """Convert numerical output to a deterministic JSON representation.
+
+    Scientific checks run on full-precision in-memory values. Serialization then
+    removes platform-level BLAS/LAPACK noise below the governed precision so
+    numerically equivalent runs produce byte-identical computed geometry.
+    """
     if isinstance(value, np.ndarray):
-        return value.tolist()
-    if isinstance(value, (np.floating, np.integer)):
-        return value.item()
+        return canonicalize(value.tolist())
+    if isinstance(value, np.integer):
+        return int(value)
+    if isinstance(value, np.floating):
+        value = float(value)
+    if isinstance(value, float):
+        if not math.isfinite(value):
+            raise ValueError("non-finite value cannot enter computed geometry")
+        if abs(value) < CANONICAL_ZERO_TOL:
+            return 0.0
+        return float(f"{value:.{CANONICAL_SIG_DIGITS}g}")
+    if isinstance(value, list):
+        return [canonicalize(v) for v in value]
+    if isinstance(value, tuple):
+        return [canonicalize(v) for v in value]
+    if isinstance(value, dict):
+        return {k: canonicalize(v) for k,v in value.items()}
     return value
 
 
@@ -336,6 +359,10 @@ def compute():
     result = {
         "schema_version": "3.0",
         "contract_id": "SCIENTIFIC-GEOMETRY-V3",
+        "canonical_serialization": {
+            "significant_digits": CANONICAL_SIG_DIGITS,
+            "zero_tolerance": CANONICAL_ZERO_TOL,
+        },
         "source": str(SOURCE.relative_to(ROOT)),
         "projection_matrix": R,
         "hero": {
@@ -398,13 +425,8 @@ def compute():
         },
     }
 
-    def default(o):
-        c = clean(o)
-        if c is not o:
-            return c
-        raise TypeError(type(o).__name__)
-
-    OUT.write_text(json.dumps(result, indent=2, default=default) + "\n", encoding="utf-8")
+    canonical_result = canonicalize(result)
+    OUT.write_text(json.dumps(canonical_result, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {OUT.relative_to(ROOT)}")
     print(f"hero projection residuals: boundary={hero_proj['boundary_residual']:.3e}, orthogonality={hero_proj['orthogonality_residual']:.3e}")
     print(f"viability: vertices={len(viable['vertices'])}, rho={viable['rho']:.6f}, active={viable['active_constraint']}")
