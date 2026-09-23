@@ -1,0 +1,27 @@
+{
+  "protocol": "NUS_T052_IMMUTABLE_EMBEDDED_AUTHORITY_BYTE_PRESERVATION_CANDIDATE_V1",
+  "version": "1.0.0",
+  "status": "CANDIDATE_PENDING_RUNTIME_SUCCESSOR_AND_HISTORICAL_RETEST",
+  "observed_failure": {
+    "paper_id": 18,
+    "runtime": "NUS18_WRITER_DRY_RUN_V1R1",
+    "failure": "EMBEDDED_SCHEMA_SHA_MISMATCH",
+    "expected_schema_sha256": "d033b1be1c61ccb8ac6e5c39b4ffa11c03fd78f8bc7b68770616437d9d61fb30",
+    "observed_embedded_schema_sha256": "2ce300ffb4eb7edd6a384b1514f0774c00767a8ceb1f73c63c30781cc8c96bcc",
+    "root_cause": "Runtime compatibility maintenance rewrote filenames inside the immutable embedded schema authority, changing approved authority bytes."
+  },
+  "candidate_invariant": "Runtime compatibility or maintenance patches MUST operate outside immutable embedded authority literals. Embedded schema and approval declarations must be protected from edits and must be byte-identical before/after maintenance; their frozen SHA-256 values must recompute exactly. Any authority-byte change is a hard failure requiring a new authority version, not a runtime patch.",
+  "general_scope": "All self-contained Zotero Run-JavaScript runtimes that embed frozen schema, approval, contract, or other immutable authority bytes.",
+  "positive_controls": [
+    "Extract embedded authority declaration before patching.",
+    "Verify authority SHA before patching.",
+    "Replace authority declaration with non-colliding placeholder while patching runtime code.",
+    "Restore exact declaration bytes after patching.",
+    "Require declaration-byte identity before/after.",
+    "Recompute exact frozen SHA after patching.",
+    "Require independent writer/auditor authority declarations to be identical."
+  ],
+  "negative_control": "A patch that changes a filename, version string, whitespace, line ending, or any other byte inside an immutable authority literal MUST fail.",
+  "promotion_rule": "Promote only after V1R4 runtime successors PASS and historical calibration retest shows no regression in NUS-172/NUS-48 authority-preservation behavior.",
+  "mutation_authorized": false
+}

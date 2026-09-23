@@ -1,0 +1,29 @@
+{
+  "protocol": "NUS_FROZEN37_ANNOTATION_REGISTRY_V1_PARTS_MANIFEST",
+  "version": "1.0.0",
+  "NUS48": {
+    "state": "CURRENT_FROZEN_NATIVE",
+    "total_records": 33,
+    "parts": [
+      {"part":1,"filename":"NUS48_CURRENT_FROZEN_ANNOTATIONS_V1_PART_01.json","sha256":"135fa44ec2c1c59e7328e8332df68d4c53d7f359bdf44be2bc94a5f5d5fd600f","bytes":5296,"record_start":1,"record_end":7},
+      {"part":2,"filename":"NUS48_CURRENT_FROZEN_ANNOTATIONS_V1_PART_02.json","sha256":"db4581f987527118ec242c4ce6dab8734aa94e1e865da9b6a76dca72a52fb165","bytes":5798,"record_start":8,"record_end":14},
+      {"part":3,"filename":"NUS48_CURRENT_FROZEN_ANNOTATIONS_V1_PART_03.json","sha256":"b94131f9c1b7a9f2600b30c2a8e1d23961b5004179f951fbf08c57ffa732cc66","bytes":4646,"record_start":15,"record_end":21},
+      {"part":4,"filename":"NUS48_CURRENT_FROZEN_ANNOTATIONS_V1_PART_04.json","sha256":"f0308227a9ef7d2502cf0da93a610a251fb816f54b4a43c8020f5641aa29c1c7","bytes":2664,"record_start":22,"record_end":28},
+      {"part":5,"filename":"NUS48_CURRENT_FROZEN_ANNOTATIONS_V1_PART_05.json","sha256":"81ccc707c2dfe88a3900e5594881785425bd4a83c90e5b9e4877cbd06f8c4191","bytes":2212,"record_start":29,"record_end":33}
+    ],
+    "canonical_compact_sha256": "d0f2935ef0afb9d50b03985dbcffd359d3ede387bedac32db7a1c3cae4e0cfad"
+  },
+  "NUS18": {
+    "state": "HUMAN_APPROVED_PREGEOMETRY_PROPOSED_NOT_NATIVE",
+    "total_records": 25,
+    "parts": [
+      {"part":1,"filename":"NUS18_APPROVED_PROPOSED_ANNOTATIONS_V1_PART_01.json","sha256":"d8b8b26046a85fc9edf4943ce7c802c456fb7912e4a5202d2c2c30d91b20b9cd","bytes":4372,"record_start":1,"record_end":5},
+      {"part":2,"filename":"NUS18_APPROVED_PROPOSED_ANNOTATIONS_V1_PART_02.json","sha256":"83c85ae0193f9c4bedbded860da43f702313c0fc433a55746f431fe2b8cc1620","bytes":3778,"record_start":6,"record_end":10},
+      {"part":3,"filename":"NUS18_APPROVED_PROPOSED_ANNOTATIONS_V1_PART_03.json","sha256":"3a9276cc7cb3c7466fde323685a0e3daa77d5fc684bcbbcb7558160cd3247c0a","bytes":3098,"record_start":11,"record_end":15},
+      {"part":4,"filename":"NUS18_APPROVED_PROPOSED_ANNOTATIONS_V1_PART_04.json","sha256":"cbf0eef0bf75426c23a5401d3b627f898860637743953d6710144a48669cabba","bytes":3284,"record_start":16,"record_end":20},
+      {"part":5,"filename":"NUS18_APPROVED_PROPOSED_ANNOTATIONS_V1_PART_05.json","sha256":"3cf231f9e3e0de3fb9b299f9eb59fe2261a91d0badd817f0651f57c8487a27fd","bytes":3400,"record_start":21,"record_end":25}
+    ],
+    "canonical_compact_sha256": "b563296f8c1a76b2ab29510f9a59496dcb5b0ce0ffdd91c84d937529eb956655"
+  },
+  "zotero_mutation_performed": false
+}

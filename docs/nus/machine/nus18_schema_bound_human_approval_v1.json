@@ -1,0 +1,29 @@
+{
+  "protocol": "NUS18_SCHEMA_BOUND_HUMAN_APPROVAL_V1",
+  "version": "1.0.0",
+  "paper_id": 18,
+  "decision": "APPROVE_EXACT_SCHEMA_FOR_DRY_RUNS_ONLY",
+  "approved_at_local": "2026-08-24T12:02:00+08:00",
+  "approved_schema": {
+    "file": "NUS18_FINAL_ZOTERO_TARGET_SCHEMA_V1.json",
+    "sha256": "d033b1be1c61ccb8ac6e5c39b4ffa11c03fd78f8bc7b68770616437d9d61fb30",
+    "schema_id": "NUS18-ZOTERO-TARGET-V1",
+    "annotation_count": 25
+  },
+  "approval_statement_verbatim": "I approve NUS18_FINAL_ZOTERO_TARGET_SCHEMA_V1 with SHA-256 d033b1be1c61ccb8ac6e5c39b4ffa11c03fd78f8bc7b68770616437d9d61fb30 as the exact frozen 25-record NUS-18 target state. I authorize progression to writer dry-run and independent auditor dry-run only. I do not yet authorize Zotero mutation.",
+  "authorized_progression": [
+    "WRITER_DRY_RUN",
+    "INDEPENDENT_AUDITOR_DRY_RUN"
+  ],
+  "not_authorized": [
+    "Zotero annotation creation",
+    "Zotero annotation deletion",
+    "Zotero annotation comment mutation",
+    "Zotero annotation geometry mutation",
+    "Zotero parent/PDF item mutation",
+    "PDF mutation",
+    "writer execution with mutation"
+  ],
+  "schema_reinterpretation_authorized": false,
+  "mutation_authorized": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "NUS_COMMENT_GENERATION_RULE_V2",
+  "status": "SUPERSEDED",
+  "superseded_by": "NUS_COMMENT_GENERATION_RULE_V3",
+  "supersession_reason": "Scientific nature is now exposed visibly only for ENGINEERING_OUTPUT and SUSTAINABLE_OUTCOME; the other seven roles retain concise role-only labels.",
+  "historical_general_pattern": "ROLE here is SCIENTIFIC NATURE : EXACT AUTHOR WORDING",
+  "historical_fallback_pattern": "ROLE: EXACT AUTHOR WORDING",
+  "historical_nature_guard": "Include scientific nature only when directly defensible from focal evidence; otherwise use fallback role-only form.",
+  "exactness": {
+    "text_after_colon": "AUTHOR_VERBATIM",
+    "paraphrase_allowed": false,
+    "grammar_correction_allowed": false,
+    "unit_normalization_allowed": false,
+    "silent_reconciliation_allowed": false
+  },
+  "historical_scope": "Nature was proposed for all nine roles. This scope is no longer authoritative.",
+  "zotero_annotation_tags": [],
+  "mutation_authorized": false
+}

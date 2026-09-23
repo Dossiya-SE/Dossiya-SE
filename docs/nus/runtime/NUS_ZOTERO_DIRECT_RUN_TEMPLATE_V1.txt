@@ -1,0 +1,335 @@
+/*
+Conforms to: NUS_ZOTERO_DIRECT_RUN_JAVASCRIPT_STANDARD_V1
+Template ID: NUS_ZOTERO_DIRECT_RUN_TEMPLATE_V1
+Execution: Tools -> Developer -> Run JavaScript -> Run as async function
+
+RULES:
+- Top-level await allowed.
+- Explicit top-level return required.
+- Outer async IIFE forbidden.
+- Mutation default = false.
+- Fail closed on identity, hash, page-label, geometry, schema, or audit mismatch.
+- Native Reader annotation creation must remain isolated in one adapter.
+- Annotation tags = 0.
+- Exact author wording after the semantic label.
+- Output nature visible only on ENGINEERING_OUTPUT and SUSTAINABLE_OUTCOME.
+*/
+
+const STANDARD_ID = "NUS_ZOTERO_DIRECT_RUN_JAVASCRIPT_STANDARD_V1";
+const TEMPLATE_ID = "NUS_ZOTERO_DIRECT_RUN_TEMPLATE_V1";
+
+// -----------------------------------------------------------------------------
+// USER-CONTROLLED EXECUTION SELECTORS
+// -----------------------------------------------------------------------------
+const MODE = "STATUS";
+const TARGET_PAPER_ID = null;
+
+const MODES = new Set([
+  "STATUS",
+  "DISCOVER",
+  "EXTRACT",
+  "ADJUDICATE_CHECK",
+  "GEOMETRY",
+  "PREFLIGHT",
+  "AUDIT",
+  "WRITE",
+  "FREEZE_CHECK"
+]);
+
+// -----------------------------------------------------------------------------
+// FROZEN NUS ONTOLOGY
+// -----------------------------------------------------------------------------
+const ROLE_COLORS = Object.freeze({
+  PURPOSE: "#6b7280",
+  INTERVENTION: "#2ea8e5",
+  INPUT: "#0072b2",
+  ENGINEERING_METHOD: "#a28ae5",
+  ENGINEERING_OUTPUT: "#5fb236",
+  SUSTAINABILITY_TRANSFORMATION: "#f19837",
+  SUSTAINABILITY_METHOD: "#e56eee",
+  SUSTAINABLE_OUTCOME: "#ff6666",
+  DECISION: "#ffd400"
+});
+
+const ENGINEERING_NATURES = new Set([
+  "mechanical",
+  "fresh-state",
+  "physical",
+  "durability",
+  "transport/permeability",
+  "thermal",
+  "structural/functional",
+  "fracture/damage",
+  "time-dependent",
+  "constructability/production",
+  "energy"
+]);
+
+const SUSTAINABILITY_NATURES = new Set([
+  "environmental",
+  "economic",
+  "social",
+  "integrated"
+]);
+
+const FROZEN37 = Object.freeze([
+  172, 48, 18, 191, 67, 15, 53, 150, 59, 187, 169, 88, 213,
+  127, 132, 204, 114, 152, 124, 120, 52, 50, 66, 123, 210, 156,
+  25, 153, 45, 94, 9, 183, 200, 74, 180, 2, 95
+]);
+
+// Paper-specific data belongs here or in a controlled generated block.
+// Generic behavior must not be duplicated paper-by-paper.
+const PAPERS = Object.freeze({
+  172: {
+    paper_id: 172,
+    state: "CLOSED_GOLD_REFERENCE",
+    annotation_count: 31,
+    mutation_policy: "ZERO_DELTA_ONLY"
+  },
+  48: {
+    paper_id: 48,
+    state: "FROZEN_CURRENT",
+    parent_key: "LYG93FY6",
+    attachment_key: "3UL86A9R",
+    pdf_sha256: "bd27b10cb8110d7a48a0b28923e3e0cc2adc0fb2d7e416fb25714f8483db3609",
+    annotation_count: 33,
+    mutation_policy: "ZERO_DELTA_ONLY"
+  },
+  18: {
+    paper_id: 18,
+    state: "HUMAN_APPROVED_PREGEOMETRY_T051_BLOCK",
+    parent_key: "BZZGBD2I",
+    attachment_key: "Z8UEF2GH",
+    pdf_sha256: "826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839",
+    proposed_count: 25,
+    mutation_policy: "FORBIDDEN"
+  }
+});
+
+// -----------------------------------------------------------------------------
+// GENERIC HELPERS
+// -----------------------------------------------------------------------------
+function fail(ok, code, detail = null) {
+  if (!ok) {
+    throw new Error(
+      "FAIL:" + code + (detail === null ? "" : ":" + JSON.stringify(detail))
+    );
+  }
+}
+
+async function maybeAwait(x) {
+  return await Promise.resolve(x);
+}
+
+async function sha256Bytes(bytes) {
+  const digest = await globalThis.crypto.subtle.digest("SHA-256", bytes);
+  return [...new Uint8Array(digest)]
+    .map(x => x.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function sha256File(path) {
+  return sha256Bytes(await IOUtils.read(path));
+}
+
+async function getLiveAnnotations(attachment) {
+  const annotations = await maybeAwait(attachment.getAnnotations?.() || []);
+  fail(Array.isArray(annotations), "ANNOTATION_COLLECTION_NOT_ARRAY");
+  return annotations.filter(a => a && !a.deleted);
+}
+
+function makeComment(record) {
+  const exact = String(record.exact_author_text || "");
+  switch (record.role) {
+    case "PURPOSE":
+      return `Purpose : ${exact}`;
+    case "INTERVENTION":
+      return `Intervention : ${exact}`;
+    case "INPUT":
+      return `Input : ${exact}`;
+    case "ENGINEERING_METHOD":
+      return `Engineering method : ${exact}`;
+    case "ENGINEERING_OUTPUT":
+      fail(ENGINEERING_NATURES.has(record.output_nature), "ENGINEERING_NATURE_INVALID");
+      return `Engineering output here is ${record.output_nature} : ${exact}`;
+    case "SUSTAINABILITY_TRANSFORMATION":
+      return `Sustainability transformation : ${exact}`;
+    case "SUSTAINABILITY_METHOD":
+      return `Sustainability method : ${exact}`;
+    case "SUSTAINABLE_OUTCOME":
+      fail(SUSTAINABILITY_NATURES.has(record.output_nature), "SUSTAINABILITY_NATURE_INVALID");
+      return `Sustainability output here is ${record.output_nature} : ${exact}`;
+    case "DECISION":
+      return `Decision : ${exact}`;
+    default:
+      fail(false, "UNKNOWN_ROLE", record.role);
+  }
+}
+
+async function resolvePaperIdentity(paper) {
+  fail(paper, "PAPER_CONFIG_MISSING");
+  fail(paper.parent_key && paper.attachment_key, "PAPER_IDENTITY_INCOMPLETE", paper.paper_id);
+
+  const libraryID = Zotero.Libraries.userLibraryID;
+  const parent = await maybeAwait(
+    Zotero.Items.getByLibraryAndKey(libraryID, paper.parent_key)
+  );
+  const attachment = await maybeAwait(
+    Zotero.Items.getByLibraryAndKey(libraryID, paper.attachment_key)
+  );
+
+  fail(parent && attachment, "IDENTITY_NOT_FOUND", paper.paper_id);
+  fail(
+    attachment.parentID === parent.id || attachment.parentItemID === parent.id,
+    "PARENT_ATTACHMENT_MISMATCH",
+    paper.paper_id
+  );
+
+  const pdfPath = await attachment.getFilePathAsync();
+  fail(pdfPath && await IOUtils.exists(pdfPath), "PDF_FILE_MISSING", paper.paper_id);
+
+  const actualSha = await sha256File(pdfPath);
+  fail(actualSha === paper.pdf_sha256, "PDF_SHA256_MISMATCH", {
+    paper_id: paper.paper_id,
+    expected: paper.pdf_sha256,
+    actual: actualSha
+  });
+
+  return { parent, attachment, pdfPath, pdf_sha256: actualSha };
+}
+
+async function getReader(attachment) {
+  let reader = await Zotero.Reader.open(attachment.id);
+  if (!reader) {
+    reader = Zotero.Reader._readers.find(
+      x => x?._item?.id === attachment.id && !x._isTabClosed
+    );
+  }
+  fail(reader, "READER_OPEN_FAILED");
+  await reader._initPromise;
+  fail(reader._internalReader, "INTERNAL_READER_MISSING");
+  await reader._internalReader._primaryView.initializedPromise;
+  return reader;
+}
+
+function assertNativeAnnotationAPI(reader) {
+  const manager = reader?._internalReader?._annotationManager;
+  fail(manager, "NATIVE_ANNOTATION_MANAGER_UNAVAILABLE");
+  fail(typeof manager.addAnnotation === "function", "NATIVE_ADD_ANNOTATION_API_UNAVAILABLE");
+  return manager;
+}
+
+// Keep every Reader-internal annotation creation call in this adapter only.
+async function createNativeAnnotation(reader, record, sortIndex) {
+  const manager = assertNativeAnnotationAPI(reader);
+
+  const raw = {
+    type: record.zotero_annotation_type,
+    color: record.annotation_color,
+    sortIndex,
+    pageLabel: String(record.page_label),
+    position: record.position,
+    comment: record.annotation_comment,
+    tags: []
+  };
+
+  if (record.zotero_annotation_type === "highlight") {
+    raw.text = record.annotation_text;
+  }
+
+  const created = manager.addAnnotation(
+    Components.utils.cloneInto(raw, reader._iframeWindow)
+  );
+
+  fail(created?.id, "NATIVE_CREATE_NO_ID", record.schema_id);
+  return created;
+}
+
+// -----------------------------------------------------------------------------
+// MODE STUBS
+// Replace only through controlled implementation; preserve standard invariants.
+// -----------------------------------------------------------------------------
+async function runStatus() {
+  return {
+    protocol: "NUS_ZOTERO_DIRECT_RUN_TEMPLATE_V1",
+    standard: STANDARD_ID,
+    mode: MODE,
+    status: "PASS_STATUS_TEMPLATE",
+    frozen37_count: FROZEN37.length,
+    target_paper_id: TARGET_PAPER_ID,
+    mutation_performed: false
+  };
+}
+
+async function runDiscover() {
+  fail(TARGET_PAPER_ID !== null, "TARGET_PAPER_ID_REQUIRED");
+  const paper = PAPERS[TARGET_PAPER_ID];
+  fail(paper, "TARGET_PAPER_CONFIG_NOT_EMBEDDED", TARGET_PAPER_ID);
+  const identity = await resolvePaperIdentity(paper);
+  const live = await getLiveAnnotations(identity.attachment);
+  return {
+    protocol: "NUS_ZOTERO_DIRECT_RUN_TEMPLATE_V1",
+    mode: MODE,
+    status: "PASS_DISCOVER_TEMPLATE",
+    paper_id: TARGET_PAPER_ID,
+    pdf_sha256: identity.pdf_sha256,
+    live_annotation_count: live.length,
+    mutation_performed: false
+  };
+}
+
+async function runPreflight() {
+  fail(false, "PREFLIGHT_NOT_IMPLEMENTED_IN_TEMPLATE");
+}
+
+async function runAudit() {
+  fail(false, "AUDIT_NOT_IMPLEMENTED_IN_TEMPLATE");
+}
+
+async function runWrite() {
+  // Mutation is deliberately blocked in the template.
+  fail(false, "WRITE_FORBIDDEN_IN_TEMPLATE_USE_CONTROLLED_PRODUCTION_SUCCESSOR");
+}
+
+async function run() {
+  fail(MODES.has(MODE), "UNKNOWN_MODE", MODE);
+
+  switch (MODE) {
+    case "STATUS":
+      return await runStatus();
+    case "DISCOVER":
+      return await runDiscover();
+    case "PREFLIGHT":
+      return await runPreflight();
+    case "AUDIT":
+      return await runAudit();
+    case "WRITE":
+      return await runWrite();
+    case "EXTRACT":
+    case "ADJUDICATE_CHECK":
+    case "GEOMETRY":
+    case "FREEZE_CHECK":
+      fail(false, "MODE_NOT_IMPLEMENTED_IN_TEMPLATE", MODE);
+    default:
+      fail(false, "UNKNOWN_MODE", MODE);
+  }
+}
+
+let result;
+try {
+  result = await run();
+} catch (e) {
+  result = {
+    protocol: "NUS_ZOTERO_DIRECT_RUN_TEMPLATE_V1",
+    standard: STANDARD_ID,
+    mode: MODE,
+    target_paper_id: TARGET_PAPER_ID,
+    status: "ABSTAIN_OR_FAIL",
+    error: String(e),
+    zotero_mutation_performed: false,
+    pdf_mutation_performed: false
+  };
+}
+
+return JSON.stringify(result, null, 2);
