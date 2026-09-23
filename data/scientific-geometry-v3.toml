@@ -16,11 +16,6 @@ origin = [0.0, 0.0, 1.35]
 basis1 = [1.0, 0.12, 0.0]
 basis2 = [0.08, 1.0, 0.0]
 
-[hero.state_geometry]
-normal = [1.0, -1.6]
-b = 0.30
-state = [-0.55, 0.20]
-
 [coupled]
 layer_separation = 1.35
 power_nodes = [[-1.40,-0.35],[-0.78,0.35],[-0.10,-0.18],[0.62,0.42],[1.35,-0.05]]
