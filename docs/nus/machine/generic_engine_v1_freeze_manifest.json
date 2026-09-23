@@ -1,0 +1,63 @@
+{
+  "schema": "NUS_GENERIC_ENGINE_V1_FREEZE_MANIFEST",
+  "version": "1.0.0",
+  "status": "FROZEN_FOR_GENERALIZATION_TESTING",
+  "as_of": "2026-08-24",
+  "calibration_authorities": ["NUS-172", "NUS-48"],
+  "final_calibration_authority": {
+    "paper": "NUS-48",
+    "state": "FROZEN_OUTPUT_NATURE_V2",
+    "annotation_count": 33,
+    "highlight_count": 20,
+    "region_count": 13,
+    "tag_count": 0,
+    "pdf_sha256": "bd27b10cb8110d7a48a0b28923e3e0cc2adc0fb2d7e416fb25714f8483db3609",
+    "output_nature_schema_v2_sha256": "ec29431fd42469679e6442314bca0b97ad22c77bb2a1c226fd29f0ebdb3688e4",
+    "migration_report_sha256": "c5eb4caa289342d6fe2f9aa8703fe5476507f208584b0dadd69f186d0e1272f0",
+    "post_write_audit_sha256": "bab0e14ee3a49b3b0c878f8f0dc997882119097c25976ba712c5e260610d930c",
+    "freeze_manifest_sha256": "e5a798f1099a76835ba964ecf1376bd69b8d5cd504c7029f08378cfd0ea90009"
+  },
+  "regression_authority": {
+    "file": "NUS_MASTER_FAILURE_REGRESSION_CORPUS_V17.json",
+    "version": "17.0.0",
+    "test_count": 47,
+    "from": "T001",
+    "through": "T047",
+    "sha256": "8595d33856aba1228a4aaeb512505241b3a8c88011a251d92ecbed16183ed77a"
+  },
+  "scientific_contract": {
+    "chain": "Q -> I -> M_E -> P -> F -> M_S -> S -> D",
+    "purpose_outside_chain": true,
+    "adjudication_order": ["WritingMode", "ClaimOwner", "Focality", "CitationScope", "EvidenceEligibility", "Role", "Ontology"],
+    "role_count": 9,
+    "no_preset_n_final": true,
+    "abstain_preferred_to_unsupported_inference": true
+  },
+  "visible_comment_contract": {
+    "engineering_output": "Engineering output here is {engineering nature} : EXACT AUTHOR WORDING",
+    "sustainability_output": "Sustainability output here is {environmental|economic|social|integrated} : EXACT AUTHOR WORDING",
+    "nature_visible_only_for": ["ENGINEERING_OUTPUT", "SUSTAINABLE_OUTCOME"],
+    "other_roles_simple_labels": true,
+    "nature_evidence_grounded": true,
+    "ENV_PLUS_ECO_PLUS_SOC_NOT_EQUAL_INT": true,
+    "tags": []
+  },
+  "writer_contract": {
+    "fail_closed": true,
+    "transactional": true,
+    "rollback_registration_immediate": true,
+    "exact_page_label_persistence": true,
+    "comment_only_migration_control": true,
+    "post_write_independent_audit": true,
+    "required_second_pass_delta": 0,
+    "idempotent_recovery": true
+  },
+  "generalization_program": [
+    {"paper": "NUS-18", "role": "GENERALIZATION_TEST_1"},
+    {"paper": "NUS-191", "role": "GENERALIZATION_TEST_2"},
+    {"paper": "NUS-67", "role": "FINAL_GENERALIZATION_TEST"},
+    {"paper": "NUS-15", "role": "PRODUCTION_START"}
+  ],
+  "engine_change_rule": "Only a demonstrated new general failure class may modify the frozen generic engine; every change requires a general invariant, permanent regression, and historical calibration retest.",
+  "preferred_nus18_result": "PASS_GENERALIZATION_NO_ENGINE_CHANGE"
+}

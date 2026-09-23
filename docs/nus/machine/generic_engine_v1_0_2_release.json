@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN_ENGINE_V1_0_2_T049",
+  "engine_version": "1.0.2",
+  "regression_range": "T001-T049",
+  "regression_corpus_sha256": "415ff08df8b33afa2abac631c16e01453221356ea1b07603a476538a691ea3ee",
+  "static_validation": "20/20 PASS",
+  "freeze_manifest_sha256": "a4ce6742cd7f1c73737f8ee5b7564d4dbdb499bb628111a310df14e2587277b2",
+  "package_sha256": "5f96b510fa286b2008a7e84063fd1c7b1acb5994de1c1ebc8a69c14bddc4e8b1",
+  "T049": {
+    "id": "T049",
+    "invariant": "Never force a legitimate focal engineering output into the nearest existing nature. If no controlled nature fits exactly, fail closed, adjudicate the new nature, version the ontology, and add a permanent regression before schema generation.",
+    "added_engineering_output_nature": "energy",
+    "paper_id_first_observed": 18
+  }
+}

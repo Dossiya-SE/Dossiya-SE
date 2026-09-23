@@ -1,0 +1,59 @@
+{
+  "protocol": "NUS_FROZEN37_HIGH_FIDELITY_INVENTORY_V2_GITHUB_MANIFEST",
+  "version": "1.0.0",
+  "artifact_protocol": "NUS_FROZEN37_HIGH_FIDELITY_INVENTORY_V2",
+  "artifact_version": "2.0.0",
+  "paper_count": 37,
+  "frozen_order": [172,48,18,191,67,15,53,150,59,187,169,88,213,127,132,204,114,152,124,120,52,50,66,123,210,156,25,153,45,94,9,183,200,74,180,2,95],
+  "governing_chain": ["Q","I","M_E","P","F","M_S","S","D"],
+  "purpose_outside_chain": true,
+  "current_engine": {
+    "version": "NUS_EVIDENCE_ENGINE_V1.0.2",
+    "regression_boundary": "T001-T049",
+    "candidate_controls": ["T050","T051"]
+  },
+  "artifact_hashes": {
+    "xlsx": {
+      "filename": "NUS_FROZEN37_HIGH_FIDELITY_INVENTORY_V2.xlsx",
+      "sha256": "55fc37bebb7c370a670bce3ae56b9f3d78d689d8ac67ac93a3fb238105569ad3",
+      "bytes": 214100
+    },
+    "json": {
+      "filename": "NUS_FROZEN37_HIGH_FIDELITY_INVENTORY_V2.json",
+      "sha256": "15320e1b80efb9810fe7da54d94bfeb2124735b5db961da66e85a0954dc37b70",
+      "bytes": 218568
+    },
+    "combined_zip": {
+      "filename": "NUS_FROZEN37_HIGH_FIDELITY_INVENTORY_V2_GITHUB_PACKAGE.zip",
+      "sha256": "39876e0a84feeebb943516150b990b9ace9867c7bf3422b3d759d15197c8c77e",
+      "bytes": 176273
+    }
+  },
+  "authority_boundary": {
+    "NUS-172": "CLOSED_GOLD_REFERENCE",
+    "NUS-48": "FROZEN_CURRENT",
+    "NUS-18": "HUMAN_APPROVED_PREGEOMETRY_T051_BLOCK",
+    "remaining_34": "REEXTRACTION_REQUIRED_ENGINE_V1_0_2"
+  },
+  "critical_rules": [
+    "FOCALITY_BEFORE_ROLE",
+    "INPUT <= USED_IN_FOCAL_METHOD",
+    "P + S != P->S",
+    "P->S <= EXPLICIT_TRANSFORMATION",
+    "ENV+ECO+SOC != INT",
+    "EXTERNAL reject; MIXED split; UNCLEAR ABSTAIN",
+    "Role != Nature != Metric != Result",
+    "Historical/provisional evidence must never silently override current adjudication",
+    "Physical page, page index and authoritative page label are separate fields",
+    "Scientific human approval != final-schema approval",
+    "Raw surface signals != reconciled physical-object count"
+  ],
+  "github_storage_state": {
+    "provenance_record_committed": true,
+    "machine_manifest_committed": true,
+    "binary_xlsx_committed_directly": false,
+    "full_json_committed_directly": false,
+    "reason": "Connected GitHub contents writes are text-oriented; exact binary/data artifacts remain hash-locked and are not silently transformed."
+  },
+  "mutation_authorized": false
+}

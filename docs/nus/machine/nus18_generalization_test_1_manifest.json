@@ -1,0 +1,88 @@
+{
+  "schema": "NUS18_GENERALIZATION_TEST_1_MANIFEST_V2",
+  "version": "2.0.0",
+  "status": "READY_FOR_LIVE_IDENTITY_AND_HASH_PREFLIGHT",
+  "paper": {
+    "paper_id": 18,
+    "canonical_id": "NUS-18",
+    "title": "An integrated energy-emergy approach to building form optimization: Use of EnergyPlus, emergy analysis and Taguchi-regression method",
+    "doi": "10.1016/j.buildenv.2014.10.013",
+    "parent_key": "BZZGBD2I",
+    "attachment_key": "Z8UEF2GH",
+    "attachment_item_id": 3442,
+    "historical_pdf_sha256": "826beba0d3973661137328c8d68ac992a8d03fa91860d69ee8c1c196010c3839",
+    "historical_local_pdf_count": 1,
+    "fresh_live_pdf_sha256": null,
+    "execution_pdf_sha256_lock": null,
+    "identity_provenance": [
+      "Frozen-37 PDF recovery/final verification",
+      "controlled EP-SUS annotation ledger"
+    ]
+  },
+  "source_preflight_rule": "Freshly rehash live attachment Z8UEF2GH. If the hash differs from the historical hash, fail closed and resolve source identity before extraction.",
+  "engine": {
+    "version": "NUS_EVIDENCE_ENGINE_V1",
+    "status": "FROZEN_FOR_GENERALIZATION_TESTING",
+    "regression_from": "T001",
+    "regression_through": "T047",
+    "regression_corpus": "NUS_MASTER_FAILURE_REGRESSION_CORPUS_V17",
+    "regression_corpus_sha256": "8595d33856aba1228a4aaeb512505241b3a8c88011a251d92ecbed16183ed77a"
+  },
+  "test_goal": "Demonstrate scientifically defensible processing without bespoke pipeline redesign.",
+  "preferred_result": "PASS_GENERALIZATION_NO_ENGINE_CHANGE",
+  "allowed_paper_specific_changes": [
+    "paper identity/configuration",
+    "source-derived claim counts",
+    "physical-surface counts",
+    "scientific evidence content",
+    "scientific conclusions",
+    "evidence-derived final annotation count"
+  ],
+  "forbidden_without_new_general_failure": [
+    "nine-role ontology change",
+    "focality-before-role change",
+    "role-color change",
+    "zero-tag rule change",
+    "exact-author-wording change",
+    "output-nature visibility rule change",
+    "mutation authorization weakening",
+    "writer rollback weakening",
+    "independent-audit weakening",
+    "paper-specific expected scientific conclusions in generic code"
+  ],
+  "required_sequence": [
+    "LIVE_PARENT_ATTACHMENT_IDENTITY",
+    "FRESH_PDF_SHA256",
+    "HASH_MATCH_OR_FAIL_CLOSED",
+    "LIVE_ANNOTATION_BASELINE",
+    "READ_ONLY_EXTRACTION",
+    "ATOMIC_CLAIMS",
+    "PHYSICAL_SURFACE_INVENTORY",
+    "MASTER_REGRESSION_T001_T047_AS_APPLICABLE",
+    "INDEPENDENT_CERTIFICATION",
+    "SCIENTIFIC_ADJUDICATION",
+    "HUMAN_REVIEW",
+    "GEOMETRY_SCHEMA_WRITER_AUDITOR_IF_AUTHORIZED"
+  ],
+  "anti_bespoke_questions": [
+    "What exact observed failure occurred?",
+    "Why is it not already covered by T001-T047?",
+    "What paper-independent invariant does it violate?",
+    "What permanent regression reproduces it?",
+    "Does the fix pass historical calibration retests?"
+  ],
+  "metrics": {
+    "manual_execution_steps": null,
+    "manual_adjudication_actions": null,
+    "new_defect_count": null,
+    "new_general_failure_count": null,
+    "new_regression_count": null,
+    "bespoke_code_change_count": null,
+    "engine_files_changed": null,
+    "paper_config_fields_changed": null
+  },
+  "targets": {
+    "bespoke_code_change_count": 0,
+    "engine_files_changed": 0
+  }
+}

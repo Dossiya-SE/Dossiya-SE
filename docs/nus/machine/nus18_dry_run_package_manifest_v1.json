@@ -1,0 +1,32 @@
+{
+  "protocol": "NUS18_DRY_RUN_PACKAGE_MANIFEST_V1",
+  "version": "1.0.0",
+  "paper_id": 18,
+  "schema": {
+    "file": "NUS18_FINAL_ZOTERO_TARGET_SCHEMA_V1.json",
+    "sha256": "d033b1be1c61ccb8ac6e5c39b4ffa11c03fd78f8bc7b68770616437d9d61fb30"
+  },
+  "human_approval": {
+    "file": "NUS18_SCHEMA_BOUND_HUMAN_APPROVAL_V1.json",
+    "sha256": "70bbe412522f3bfa268bca18a0b16e44965f7ea0293423acb923633a03a25172"
+  },
+  "writer_runtime": {
+    "file": "NUS18_WRITER_DRY_RUN_V1.txt",
+    "sha256": "d3caa46eaf7c79c6106ee178bd3d4f1a4f27683f413d06ff5999dce6f5f978d9"
+  },
+  "independent_auditor_runtime": {
+    "file": "NUS18_INDEPENDENT_AUDITOR_DRY_RUN_V1.txt",
+    "sha256": "72fce9a61222b62a82a3b42f5c948432cdff6b87677e5984d436c38ce7cb1fa1"
+  },
+  "static_validation": {
+    "file": "NUS18_DRY_RUN_RUNTIME_STATIC_VALIDATION_V1.json",
+    "sha256": "fee891815c5fb450317f812de76c146e0861de41c03b54953a38ea93a6374534",
+    "status": "PASS"
+  },
+  "authorized_scope": [
+    "WRITER_DRY_RUN",
+    "INDEPENDENT_AUDITOR_DRY_RUN"
+  ],
+  "mutation_authorized": false,
+  "next_gate": "RUN_WRITER_DRY_RUN_THEN_INDEPENDENT_AUDITOR_DRY_RUN"
+}
