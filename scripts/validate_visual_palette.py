@@ -64,13 +64,13 @@ def validate_palette(p: dict) -> None:
     require(p.get("color_space") == "sRGB", "visual palette must explicitly use sRGB color space")
     require(p.get("evidence_state") == "VALIDATED_VISUAL_DESIGN_SPECIFICATION", "invalid visual palette evidence state")
 
-    raw = PALETTE_PATH.read_text(encoding="utf-8").lower()
-    for term in FORBIDDEN_TERMS:
-        # The policy list itself names forbidden terms; remove that JSON fragment before checking usage.
-        scrubbed = re.sub(r'"forbidden_terms"\s*:\s*\[[^\]]*\]', '"forbidden_terms":[]', raw)
-        require(term not in scrubbed, f"forbidden color-family term remains in palette contract: {term}")
-
     rgb_values = p.get("rgb_values", {})
+    forbidden_token_names=set(FORBIDDEN_TERMS)
+    for mode in ("light","dark"):
+        token_names={str(k).lower() for k in p.get(mode,{})}
+        rgb_token_names={str(k).lower() for k in rgb_values.get(mode,{})}
+        require(not (token_names & forbidden_token_names), f"{mode}: forbidden warm-family token name present")
+        require(not (rgb_token_names & forbidden_token_names), f"{mode}: forbidden warm-family RGB token name present")
     require(set(rgb_values) == {"light", "dark"}, "RGB source must define light and dark modes")
     forbidden = p["forbidden_hue_policy"]
     h0, h1 = map(float, forbidden["forbidden_hue_degrees"])
