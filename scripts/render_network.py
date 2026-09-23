@@ -6,7 +6,7 @@ Scientific visual grammar
 charcoal     = neutral physical topology
  green       = viable / sustainable / admissible service flow
  red         = active constraint / disturbance / critical boundary
- light yellow= causal interface / highlighted mechanism / decision path
+ light control= causal interface / highlighted mechanism / decision path
 
 The animation is explanatory model semantics, not live infrastructure telemetry.
 Coordinates are declared visual-layout coordinates, not geographic locations.
@@ -34,8 +34,8 @@ def write(name: str, text: str) -> None:
 
 
 def style(dark: bool | None = None) -> str:
-    light = "--bg:#fffdf6;--panel:#ffffff;--ink:#11161c;--muted:#69736f;--line:#d7d5ca;--green:#157347;--green-soft:#e8f4e7;--red:#c62828;--red-soft:#fdebec;--yellow:#efc84a;--yellow-soft:#fff3bd;--yellow-ink:#6f5610;--ghost:#f0ede5"
-    darkv = "--bg:#0b100d;--panel:#111712;--ink:#f3f6f3;--muted:#a2ada6;--line:#303a33;--green:#56d887;--green-soft:#173924;--red:#ff6b6b;--red-soft:#421f22;--yellow:#f2cc60;--yellow-soft:#423816;--yellow-ink:#ffe69a;--ghost:#18201a"
+    light = "--bg:#fffdf6;--panel:#ffffff;--ink:#11161c;--muted:#69736f;--line:#d7d5ca;--green:#157347;--green-soft:#e8f4e7;--red:#c62828;--red-soft:#fdebec;--control:#efc84a;--control-soft:#fff3bd;--control-ink:#6f5610;--ghost:#f0ede5"
+    darkv = "--bg:#0b100d;--panel:#111712;--ink:#f3f6f3;--muted:#a2ada6;--line:#303a33;--green:#56d887;--green-soft:#173924;--red:#ff6b6b;--red-soft:#421f22;--control:#f2cc60;--control-soft:#423816;--control-ink:#ffe69a;--ghost:#18201a"
     if dark is True:
         root, media = darkv, ""
     elif dark is False:
@@ -53,13 +53,13 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .edge{{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;opacity:.72}}
 .edge-soft{{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;opacity:.38;stroke-dasharray:5 6}}
 .flow{{fill:none;stroke:var(--green);stroke-width:3.4;stroke-linecap:round;stroke-dasharray:10 12;animation:serviceFlow 3.3s linear infinite}}
-.interface-flow{{fill:none;stroke:var(--yellow);stroke-width:4;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}}
+.interface-flow{{fill:none;stroke:var(--control);stroke-width:4;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}}
 .critical-demo{{opacity:0;fill:none;stroke:var(--red);stroke-width:5;stroke-linecap:round;stroke-dasharray:8 8;animation:criticalPhase 20s linear infinite}}
 .propagation-demo{{opacity:0;fill:none;stroke:var(--red);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:7 9;animation:propagationPhase 20s linear infinite}}
-.control-demo{{opacity:0;fill:none;stroke:var(--yellow);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}}
+.control-demo{{opacity:0;fill:none;stroke:var(--control);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}}
 .recovery-demo{{opacity:0;fill:none;stroke:var(--green);stroke-width:5;stroke-linecap:round;stroke-dasharray:10 10;animation:recoveryPhase 20s linear infinite}}
 .critical-node{{opacity:0;fill:var(--red);animation:criticalPhase 20s linear infinite}}
-.control-node{{opacity:0;fill:var(--yellow);animation:controlPhase 20s linear infinite}}
+.control-node{{opacity:0;fill:var(--control);animation:controlPhase 20s linear infinite}}
 @keyframes serviceFlow{{to{{stroke-dashoffset:-44}}}} @keyframes interfaceFlow{{to{{stroke-dashoffset:-40}}}}
 @keyframes criticalPhase{{0%,19%,60%,100%{{opacity:0}}22%,55%{{opacity:1}}}}
 @keyframes propagationPhase{{0%,36%,60%,100%{{opacity:0}}40%,56%{{opacity:1}}}}
@@ -94,7 +94,7 @@ def draw_node(parts: list[str], node: dict, x: float, y: float, *, layer: str) -
     if t in {"generator", "hub", "origin", "destination"}:
         fill, stroke = "var(--green-soft)", "var(--green)"
     if t == "interface":
-        fill, stroke = "var(--yellow-soft)", "var(--yellow-ink)"
+        fill, stroke = "var(--control-soft)", "var(--control-ink)"
     if t == "load":
         fill, stroke = "var(--ghost)", "var(--ink)"
     if t in {"generator", "load", "origin", "destination", "hub"}:
@@ -117,7 +117,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
     parts = [svg_open(
         1600, 760,
         "Coupled Power–Transportation network geometry",
-        "Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and light yellow denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.",
+        "Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and light control denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.",
         css,
     )]
     parts.append('<rect x="1" y="1" width="1598" height="758" rx="30" fill="var(--bg)" stroke="var(--line)"/>')
@@ -166,8 +166,8 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
     cpt, ctt = ppos["C1"], tpos["C1"]
     parts.append(f'<path d="M{cpt[0]:.1f} {cpt[1]+20:.1f}L{ctt[0]:.1f} {ctt[1]-20:.1f}" class="interface-flow"/>')
     mx,my = (cpt[0]+ctt[0])/2,(cpt[1]+ctt[1])/2
-    parts.append(f'<rect x="{mx-72:.1f}" y="{my-25:.1f}" width="144" height="50" rx="12" fill="var(--yellow-soft)" stroke="var(--yellow)"/>')
-    parts.append(f'<text x="{mx:.1f}" y="{my-3:.1f}" text-anchor="middle" class="math" font-size="18" fill="var(--yellow-ink)">𝕀<tspan baseline-shift="sub" font-size="11">PT</tspan></text>')
+    parts.append(f'<rect x="{mx-72:.1f}" y="{my-25:.1f}" width="144" height="50" rx="12" fill="var(--control-soft)" stroke="var(--control)"/>')
+    parts.append(f'<text x="{mx:.1f}" y="{my-3:.1f}" text-anchor="middle" class="math" font-size="18" fill="var(--control-ink)">𝕀<tspan baseline-shift="sub" font-size="11">PT</tspan></text>')
     parts.append(f'<text x="{mx:.1f}" y="{my+16:.1f}" text-anchor="middle" class="s">shared physical asset · C1</text>')
 
     # Dynamic explanatory overlays.
@@ -183,7 +183,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
     # Right formal panel
     rx,ry,rw,rh = 1090,125,458,555
     parts.append(f'<rect x="{rx}" y="{ry}" width="{rw}" height="{rh}" rx="22" fill="var(--panel)" stroke="var(--line)"/>')
-    parts.append(f'<text x="{rx+24}" y="{ry+38}" class="k" fill="var(--yellow-ink)">FORMAL COUPLING OBJECT</text>')
+    parts.append(f'<text x="{rx+24}" y="{ry+38}" class="k" fill="var(--control-ink)">FORMAL COUPLING OBJECT</text>')
     parts.append(f'<text x="{rx+24}" y="{ry+78}" class="math" font-size="23">𝓖=(𝓖<tspan baseline-shift="sub" font-size="13">P</tspan>,𝓖<tspan baseline-shift="sub" font-size="13">T</tspan>,𝕀<tspan baseline-shift="sub" font-size="13">PT</tspan>)</text>')
     parts.append(f'<text x="{rx+24}" y="{ry+116}" class="math" font-size="17">𝕀<tspan baseline-shift="sub" font-size="11">PT</tspan><tspan baseline-shift="super" font-size="11">(1)</tspan>=(E<tspan baseline-shift="sub" font-size="10">i</tspan><tspan baseline-shift="super" font-size="10">P</tspan>, E<tspan baseline-shift="sub" font-size="10">j</tspan><tspan baseline-shift="super" font-size="10">T</tspan>, M<tspan baseline-shift="sub" font-size="10">ij</tspan>, …, ℋ<tspan baseline-shift="sub" font-size="10">t</tspan>)</text>')
     parts.append(f'<text x="{rx+24}" y="{ry+154}" class="math" font-size="19">Ẏ=F<tspan baseline-shift="sub" font-size="11">𝓖</tspan>(Y,u,η;θ)</text>')
@@ -191,7 +191,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
     mechanisms = [
         ("P → T", "electricity supply", "var(--green)"),
         ("T → P", "charging demand", "var(--red)"),
-        ("T → P", "conditional V2G support", "var(--yellow-ink)"),
+        ("T → P", "conditional V2G support", "var(--control-ink)"),
     ]
     yy = ry+218
     for direction, label, color in mechanisms:
@@ -205,7 +205,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
         ("01", "Nominal", "var(--green)"),
         ("02", "Disturbance", "var(--red)"),
         ("03", "Propagation", "var(--red)"),
-        ("04", "Control", "var(--yellow-ink)"),
+        ("04", "Control", "var(--control-ink)"),
         ("05", "Recovery", "var(--green)"),
     ]
     cy = yy+58
@@ -217,7 +217,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
         if idx < len(cycle)-1:
             parts.append(f'<path d="M{xx+20} {cy}H{xx+62}" stroke="var(--line)"/>')
     parts.append(f'<text x="{rx+24}" y="{ry+520}" class="s">Animation = model semantics; timing ≠ measured event duration.</text>')
-    parts.append('<text x="52" y="720" class="s">Green = viable/service flow · Red = active constraint/critical propagation · Light yellow = causal interface/control · Charcoal = topology.</text>')
+    parts.append('<text x="52" y="720" class="s">Green = viable/service flow · Red = active constraint/critical propagation · Light control = causal interface/control · Charcoal = topology.</text>')
     parts.append('<text x="1548" y="720" text-anchor="end" class="s">Coordinates and scenario timing are explanatory, not GIS or telemetry.</text>')
     parts.append('</svg>')
     return "\n".join(parts)
@@ -236,13 +236,13 @@ def warped_loop(cx: float, cy: float, rx: float, ry: float, phase: float, n: int
 
 def render_viability() -> str:
     css = style(None)
-    parts = [svg_open(1400, 450, "Graph to viability transformation", "Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, light yellow is causal/decision. Geometry is explanatory, not fitted data.", css)]
+    parts = [svg_open(1400, 450, "Graph to viability transformation", "Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, light control is causal/decision. Geometry is explanatory, not fitted data.", css)]
     parts.append('<rect x="1" y="1" width="1398" height="448" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     parts.append('<text x="44" y="52" class="k" fill="var(--green)">GRAPH → DYNAMICS → VIABILITY → DECISION</text>')
     labels = [(110,"𝓖","topology"),(300,"𝕀","causal interface"),(490,"F𝓖","coupled dynamics"),(680,"Y(t)","state trajectory")]
     for i,(x,sym,lab) in enumerate(labels):
-        fill = "var(--yellow-soft)" if sym=="𝕀" else "var(--panel)"
-        stroke = "var(--yellow)" if sym=="𝕀" else "var(--line)"
+        fill = "var(--control-soft)" if sym=="𝕀" else "var(--panel)"
+        stroke = "var(--control)" if sym=="𝕀" else "var(--line)"
         parts.append(f'<circle cx="{x}" cy="155" r="42" fill="{fill}" stroke="{stroke}" stroke-width="2"/>')
         parts.append(f'<text x="{x}" y="163" text-anchor="middle" class="math" font-size="26">{sym}</text>')
         parts.append(f'<text x="{x}" y="218" text-anchor="middle" class="s">{lab}</text>')
@@ -265,9 +265,9 @@ def render_viability() -> str:
     star = []
     for k in range(10):
         a=-math.pi/2+k*math.pi/5; r=15 if k%2==0 else 6.5; star.append((sx+r*math.cos(a),sy+r*math.sin(a)))
-    parts.append('<polygon points="'+' '.join(f'{x:.1f},{y:.1f}' for x,y in star)+'" fill="var(--yellow)" stroke="var(--yellow-ink)"/>')
+    parts.append('<polygon points="'+' '.join(f'{x:.1f},{y:.1f}' for x,y in star)+'" fill="var(--control)" stroke="var(--control-ink)"/>')
     parts.append(f'<path d="M{yx+10} {yy+12}Q1070 285 {sx-20} {sy-5}" class="control-demo" style="opacity:1;animation:serviceFlow 4s linear infinite"/>')
-    parts.append(f'<text x="{sx+20}" y="{sy+5}" class="math" font-size="18" fill="var(--yellow-ink)">u*</text>')
+    parts.append(f'<text x="{sx+20}" y="{sy+5}" class="math" font-size="18" fill="var(--control-ink)">u*</text>')
     parts.append(f'<text x="{980}" y="{350}" class="math" font-size="17">Y∈𝒱,  ρ<tspan baseline-shift="sub" font-size="10">g</tspan>=d<tspan baseline-shift="sub" font-size="10">g</tspan>(Y,∂𝒱)</text>')
     parts.append('<text x="44" y="400" class="s">The transformation is conceptual: topology constrains coupled dynamics; viability defines admissible operation; control selects an intervention. No empirical validity is implied by the geometry alone.</text>')
     parts.append('</svg>')
