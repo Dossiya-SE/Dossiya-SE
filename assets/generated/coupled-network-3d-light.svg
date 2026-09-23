@@ -19,7 +19,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .viable{fill:var(--green-soft);stroke:var(--green);stroke-width:2.4}
 .critical{fill:none;stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}
 .control{fill:none;stroke:var(--control);stroke-width:3.2;stroke-dasharray:8 6}
-.state{fill:var(--cyan);stroke:var(--panel);stroke-width:2}
+.state{fill:var(--control);stroke:var(--panel);stroke-width:2}
 .node{fill:var(--panel);stroke-width:2.4}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
