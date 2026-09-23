@@ -65,6 +65,8 @@ def main():
     with JULIA.open("rb") as f:
         j=tomllib.load(f)
     require(j.get("contract_id")=="SCIENTIFIC-GEOMETRY-V3","Julia contract mismatch")
+    require(j.get("distance_metric")=="euclidean_L2",
+            "Python/Julia viability metric disagreement")
     pyq=np.asarray(hp["projection"],dtype=float)
     jq=np.asarray([j["projection_x"],j["projection_y"]],dtype=float)
     require(int(j["active_constraint_index"])==int(v["active_constraint_index"]),
