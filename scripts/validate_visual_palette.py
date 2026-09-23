@@ -33,6 +33,32 @@ def channel(c: float) -> float:
     return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
 
 
+
+
+def hue_degrees(hex_color: str) -> float:
+    r, g, b = rgb(hex_color)
+    mx, mn = max(r, g, b), min(r, g, b)
+    d = mx - mn
+    if d == 0:
+        return 0.0
+    if mx == r:
+        h = ((g - b) / d) % 6
+    elif mx == g:
+        h = (b - r) / d + 2
+    else:
+        h = (r - g) / d + 4
+    return 60.0 * h
+
+
+def is_gold_amber(hex_color: str) -> bool:
+    r, g, b = rgb(hex_color)
+    mx, mn = max(r, g, b), min(r, g, b)
+    l = (mx + mn) / 2
+    d = mx - mn
+    s = 0.0 if d == 0 else d / (2 - mx - mn) if l > 0.5 else d / (mx + mn)
+    h = hue_degrees(hex_color)
+    return 32.0 <= h <= 72.0 and s >= 0.45 and 0.22 <= l <= 0.84
+
 def luminance(hex_color: str) -> float:
     r, g, b = rgb(hex_color)
     return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
@@ -62,6 +88,11 @@ def validate_palette(p: dict) -> None:
         for role in ("topology", "green", "red", "yellow", "power", "transport", "information", "organization", "cyan", "violet", "magenta", "gold"):
             ratio = contrast(c[role], bg)
             require(ratio >= graphic_min, f"{mode} {role} graphic contrast {ratio:.2f}:1 is below {graphic_min}:1")
+
+    for mode in ("light", "dark"):
+        for role, value in p[mode].items():
+            if isinstance(value, str) and value.startswith("#"):
+                require(not is_gold_amber(value), f"{mode} {role} reintroduces prohibited gold/amber hue: {value}")
 
     redundancy = p.get("color_redundancy", {})
     require("directional" in redundancy.get("operational", ""), "operational state must have a non-color cue")
