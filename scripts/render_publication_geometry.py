@@ -15,6 +15,8 @@ def fmt_points(points,scale=1.0,ox=0.0,oy=0.0):
 def main():
     g=json.loads(DATA.read_text(encoding="utf-8"))
     v=g["viability"]
+    if v.get("distance_metric")!="euclidean_L2":
+        raise ValueError("V3 TikZ renderer requires viability metric euclidean_L2")
     gamma=g["pipeline"]["gamma"]
     anchors=g["pipeline"]["anchors"]
     tex=r"""\documentclass[tikz,border=8pt]{standalone}
