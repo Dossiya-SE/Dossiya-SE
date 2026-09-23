@@ -135,6 +135,13 @@ jobs:
       - name: Runtime-render all final README visuals
         run: python scripts/validate_geometric_readme_runtime.py
 
+      - name: Verify byte-identical V3 rebuild determinism
+        if: github.event_name == 'pull_request'
+        run: |
+          git diff --check
+          python scripts/verify_v3_determinism.py
+          echo "G1 mathematics, G2 numerical verification, G3 computational geometry, G4 semantics, G5 visual quality and G6 byte-identical double-build determinism completed."
+
       - name: Upload V3 geometry audit artifacts
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
@@ -144,6 +151,7 @@ jobs:
             data/computed-geometry-v3.json
             artifacts/julia-geometry-check.toml
             artifacts/visual-layout-v3.json
+            artifacts/v3-determinism-manifest.json
             mathematical-art/profile-geometry/overleaf/profile_geometry_v3.tex
           if-no-files-found: error
           retention-days: 14
@@ -156,12 +164,6 @@ jobs:
           path: artifacts/geometric-readme-preview/*.png
           if-no-files-found: error
           retention-days: 14
-
-      - name: Verify pull-request output is deterministic
-        if: github.event_name == 'pull_request'
-        run: |
-          git diff --check
-          echo "G1 mathematics, G2 numerical verification, G3 computational geometry, G4 semantics, G5 visual quality and G6 deterministic rendering completed."
 
       - name: Commit validated generated V3 artifacts to PR branch
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
