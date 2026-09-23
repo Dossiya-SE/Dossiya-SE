@@ -4,7 +4,7 @@
   "allowlist_source": "data/projects.json",
   "evidence_state": "OBSERVED_PUBLIC_REPOSITORY_METADATA",
   "status": "live",
-  "generated_at": "2026-09-23T04:43:01+00:00",
+  "generated_at": "2026-09-23T05:25:43+00:00",
   "observation_scope": "Allowlisted public repository metadata, latest default-branch commit, and latest public release when available.",
   "repositories": [
     {
@@ -20,12 +20,12 @@
       "language": "CSS",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-23T04:13:50Z",
-      "pushed_at": "2026-09-23T04:13:46Z",
+      "updated_at": "2026-09-23T05:22:57Z",
+      "pushed_at": "2026-09-23T05:25:30Z",
       "latest_commit": {
-        "sha": "bc09ff872174",
-        "date": "2026-09-23T04:13:45Z",
-        "message": "style: remove residual amber RGB values"
+        "sha": "af0feb9d75de",
+        "date": "2026-09-23T05:22:52Z",
+        "message": "style: use sky blue for former gold accents"
       },
       "latest_release": null
     },
@@ -42,12 +42,12 @@
       "language": "Python",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-23T04:04:29Z",
-      "pushed_at": "2026-09-23T04:04:24Z",
+      "updated_at": "2026-09-23T05:12:59Z",
+      "pushed_at": "2026-09-23T05:12:54Z",
       "latest_commit": {
-        "sha": "e686f34a6886",
-        "date": "2026-09-23T04:04:24Z",
-        "message": "style: remove gold and amber visual accents"
+        "sha": "84732c70af3d",
+        "date": "2026-09-23T05:12:54Z",
+        "message": "style: use sky blue for former gold accents"
       },
       "latest_release": null
     },
@@ -64,12 +64,12 @@
       "language": "TeX",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-23T04:04:34Z",
-      "pushed_at": "2026-09-23T04:04:30Z",
+      "updated_at": "2026-09-23T05:13:04Z",
+      "pushed_at": "2026-09-23T05:13:00Z",
       "latest_commit": {
-        "sha": "6b93838a82f6",
-        "date": "2026-09-23T04:04:29Z",
-        "message": "style: remove gold and amber visual accents"
+        "sha": "37f6d9f9b306",
+        "date": "2026-09-23T05:13:00Z",
+        "message": "style: use sky blue for former gold accents"
       },
       "latest_release": null
     },
@@ -86,12 +86,12 @@
       "language": "Python",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-23T04:13:28Z",
-      "pushed_at": "2026-09-23T04:13:23Z",
+      "updated_at": "2026-09-23T05:22:16Z",
+      "pushed_at": "2026-09-23T05:22:11Z",
       "latest_commit": {
-        "sha": "caf6ee89a228",
-        "date": "2026-09-23T04:13:23Z",
-        "message": "style: remove residual amber RGB focus outline"
+        "sha": "ed2059adf522",
+        "date": "2026-09-23T05:22:11Z",
+        "message": "style: use sky blue for former gold accents"
       },
       "latest_release": null
     },
@@ -108,12 +108,12 @@
       "language": "Python",
       "default_branch": "main",
       "archived": false,
-      "updated_at": "2026-09-23T04:03:17Z",
-      "pushed_at": "2026-09-23T04:03:13Z",
+      "updated_at": "2026-09-23T05:10:13Z",
+      "pushed_at": "2026-09-23T05:10:09Z",
       "latest_commit": {
-        "sha": "aebdd00d3f5a",
-        "date": "2026-09-23T04:03:13Z",
-        "message": "style: remove gold and amber visual accents"
+        "sha": "621ff2b4758a",
+        "date": "2026-09-23T05:10:08Z",
+        "message": "style: use sky blue for former gold accents"
       },
       "latest_release": null
     },
