@@ -1,0 +1,17 @@
+/* PROFILE-GEOMETRY-V3 */
+.gv-svg{width:100%;background:#fff;color:#1e2933}
+.gv-node{fill:#fff;stroke:currentColor;stroke-width:2}
+.gv-viable{fill:#eaf5ee;stroke:#16823a;stroke-width:2}
+.gv-critical{stroke:#cf222e;stroke-width:3;stroke-dasharray:9 7}
+.gv-state{fill:#6d28d9}
+.gv-projection{stroke:#2878CD;stroke-width:3;stroke-dasharray:7 6}
+.gv-stage{fill:none;stroke:#6d28d9;stroke-width:2}
+@media(prefers-color-scheme:dark){
+  .gv-svg{background:#0d1117;color:#f0f6fc}
+  .gv-node{fill:#161b22}
+  .gv-viable{fill:#172d1d;stroke:#56d364}
+  .gv-critical{stroke:#ff7b72}
+  .gv-state{fill:#a371f7}
+  .gv-projection{stroke:#87CEFA}
+  .gv-stage{stroke:#a371f7}
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "3.0",
+  "contract_id": "PROFILE-GEOMETRY-V3",
+  "evidence_state": "VALIDATED_VISUAL_DESIGN_SPECIFICATION",
+  "principle": "use geometry only when it encodes structure, dimension, boundary, projection, bounded domain, topology, or ordered navigation",
+  "public_assets": {
+    "research-hero": {
+      "geometry": ["affine planes", "ellipse", "hyperplane", "orthogonal distance", "vector field"],
+      "meaning": "physical layers mapped into state-space viability geometry"
+    },
+    "research-question": {
+      "geometry": ["parallel affine strips", "regular hexagon", "quadrilateral state cell", "ellipse"],
+      "meaning": "interface -> dynamics -> viable-state question"
+    },
+    "coupled-network-3d": {
+      "geometry": ["two affine 2-flats", "typed polygon nodes", "shared hexagonal interface", "ellipse", "critical hyperplane"],
+      "meaning": "multilayer topology plus separate viability geometry"
+    },
+    "graph-to-viability": {
+      "geometry": ["graph embedded on affine flat", "map arrow", "ellipse", "hyperplane", "orthogonal projection"],
+      "meaning": "model-space to state-space transformation"
+    },
+    "research-state": {
+      "geometry": ["causal polygon", "dynamics ellipse", "affine transition segment"],
+      "meaning": "current stage-2 to stage-3 research transition"
+    },
+    "project-system": {
+      "geometry": ["bounded convex domains", "ellipse", "quadrilateral", "pentagon", "hexagon"],
+      "meaning": "distinct research systems; shape is navigation only"
+    },
+    "research-pipeline": {
+      "geometry": ["affine progression line", "regular polygons"],
+      "meaning": "seven ordered stages; polygon side count indexes stage only"
+    }
+  },
+  "shape_semantics": {
+    "circle": "source/origin or neutral point when context labels it",
+    "triangle": "endpoint/load or stage marker when context labels it",
+    "quadrilateral": "bounded model/domain or affine plane projection",
+    "diamond": "junction/intersection",
+    "pentagon": "bounded research-domain navigation",
+    "hexagon": "shared interface/hub or bounded research-domain navigation",
+    "ellipse": "continuous state/viability region or bounded research-domain navigation",
+    "hyperplane": "constraint/critical boundary only when explicitly labeled"
+  },
+  "non_inference_rule": "polygon side count, shape area and shape orientation do not encode scientific importance, evidence strength or empirical validity unless an asset explicitly states otherwise",
+  "technology_roles": {
+    "tikz_overleaf": "publication geometry and thesis-ready vector composition",
+    "julia": "numerical affine geometry, regular polygons and orthogonal projections",
+    "python": "authoritative deterministic GitHub SVG renderer and runtime validation",
+    "react_css": "interactive web mirror using SVG and responsive styling",
+    "go": "dependency-light static vector export",
+    "csharp": "engineering/CAD geometry integration and reusable projection primitives"
+  },
+  "scientific_boundary": "All README geometry is explanatory unless backed by case-specific calibration or empirical data; geometry does not strengthen evidence class."
+}
