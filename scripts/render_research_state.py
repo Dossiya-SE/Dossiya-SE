@@ -306,9 +306,9 @@ def render_pipeline(state: dict, framework: dict) -> str:
     xs=[90,285,480,675,870,1065,1260]; y=190
     parts.append(f'<path d="M{xs[0]} {y}H{xs[-1]}" fill="none" stroke="var(--line)" stroke-width="2"/>')
     parts.append(f'<path d="M{xs[1]} {y}H{xs[2]}" fill="none" class="flow-control" stroke-width="4"/>')
-    colors=["var(--power)","var(--organization)","var(--transport)","var(--control)","var(--information)","var(--magenta)","var(--topology)"]
+    colors=["var(--power)","var(--organization)","var(--transport)","var(--cyan)","var(--information)","var(--magenta)","var(--topology)"]
     fills=["var(--power-soft)","var(--organization-soft)","var(--transport-soft)","var(--control-soft)","var(--information-soft)","var(--magenta-soft)","var(--panel)"]
-    text_colors=["var(--power)","var(--organization-ink)","var(--transport)","var(--control)","var(--information)","var(--magenta)","var(--ink)"]
+    text_colors=["var(--power)","var(--organization-ink)","var(--transport)","var(--cyan)","var(--information)","var(--magenta)","var(--ink)"]
     for idx,stage in enumerate(stages):
         sid=int(stage["id"]); x=xs[idx]
         sw=3.2 if sid in active else 1.8
