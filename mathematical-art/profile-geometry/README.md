@@ -52,6 +52,8 @@ README
 5. **Research-system shapes have equal computed area. Shape/color are navigation only.**
 6. **The seven-stage architecture is a continuous `γ:[0,1]→R²` satisfying `γ(t_i)=S_i`.**
 7. **A release must pass G1–G6:** mathematics, numerical verification, computational geometry, semantics, quantitative visual quality, and deterministic rendering.
+8. **Hero and graph→viability share one viability object.** The hero state, active constraint, nearest-boundary point and `ρ_g` are derived from the same governed viability source used by graph→viability and the generated TikZ representation; Python, Shapely and Julia must agree numerically.
+9. **GitHub-width readability is release-critical.** At 640 px, governed typography must remain above minimum effective sizes, project signatures must occupy identical layout cells, and project labels must remain non-overlapping; 980 px and 640 px raster previews are both inspected before release.
 
 ## Rhino / Grasshopper policy
 
