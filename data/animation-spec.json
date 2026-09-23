@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "contract_id": "SCIENTIFIC-ANIMATION-V1",
   "source_geometry_contract": "SCIENTIFIC-GEOMETRY-V3",
   "animation_semantics": "camera_orbit_only",
@@ -54,5 +54,27 @@
       "separation between geometry generation and GIF writing"
     ],
     "non_transfer": "No source code, art identity, palette, equations, or exact animation formulas are copied."
+  },
+  "v5_alignment": {
+    "architecture_id": "MATH-ART-V5",
+    "figure_class": "C_COMPUTED_CAMERA_DERIVATIVE",
+    "evidence_state": "C",
+    "static_authority": {
+      "light": "assets/generated/coupled-network-3d-light.svg",
+      "dark": "assets/generated/coupled-network-3d-dark.svg"
+    }
+  },
+  "motion_variable": {
+    "symbol": "theta",
+    "meaning": "camera/viewpoint orbit parameter",
+    "mathematical_definition": "theta=2*pi*k/N",
+    "physical_time": false,
+    "model_time": false,
+    "ui_time": false
+  },
+  "accessibility": {
+    "static_master_complete": true,
+    "essential_information_only_in_motion": false,
+    "reduced_motion_strategy": "Use the static light/dark SVG authority instead of the GIF."
   }
 }
