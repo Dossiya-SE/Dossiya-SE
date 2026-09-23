@@ -26,7 +26,7 @@ def main():
 \definecolor{Power}{HTML}{C8102E}
 \definecolor{Transport}{HTML}{16823A}
 \definecolor{Info}{HTML}{1D4ED8}
-\definecolor{Control}{HTML}{007A88}
+\definecolor{Control}{HTML}{2D8FD6}
 \definecolor{Green}{HTML}{16823A}
 \definecolor{Red}{HTML}{CF222E}
 \definecolor{Violet}{HTML}{6D28D9}
