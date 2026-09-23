@@ -132,6 +132,9 @@ jobs:
       - name: Validate quantitative visual geometry
         run: python scripts/validate_visual_geometry.py
 
+      - name: Validate account-wide Light Sky Blue accent contract
+        run: python scripts/validate_accent_contract.py
+
       - name: Validate final governed RGB palette and zero-warm-hue policy
         run: python scripts/validate_visual_palette.py
 
