@@ -5,7 +5,7 @@ This post-render step separates neutral layout geometry from semantic accents:
 - topology/structure: neutral charcoal/light-neutral
 - viable/operational: green
 - critical/constraint: red
-- causal/intervention: light-yellow surface with high-contrast ochre/gold structure
+- causal/intervention: cyan surface with high-contrast cyan structure
 
 It also normalizes the primary coupled-network line hierarchy.
 """
