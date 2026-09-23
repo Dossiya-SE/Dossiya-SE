@@ -91,7 +91,7 @@ def validate_readme() -> None:
         require(f"assets/generated/{asset}" in text, f"README does not reference {asset}")
     for forbidden in ("visitor counter", "github streak", "typing animation", "language percentage"):
         require(forbidden not in lower, f"README contains prohibited vanity concept: {forbidden}")
-    for triplet in ("rgb(22, 130, 58)", "rgb(207, 34, 46)", "rgb(0, 122, 136)"):
+    for triplet in ("rgb(22, 130, 58)", "rgb(207, 34, 46)", "rgb(135, 206, 250)"):
         require(triplet in lower, f"README missing governed RGB semantic triplet: {triplet}")
     require("not measured infrastructure behavior" in lower or "not a measured flow" in lower, "README must preserve the motion/measurement boundary")
     require("claim strength" in lower and "evidence strength" in lower, "README must state the claim/evidence invariant")

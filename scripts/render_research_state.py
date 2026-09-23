@@ -9,7 +9,7 @@ Information    -> blue channel
 Organization   -> magenta
 viability      -> green state semantics
 criticality    -> dashed red state semantics
-causal/control -> cyan/control
+causal/control -> Light Sky Blue accent family
 mathematics    -> violet when a distinct model channel is needed
 
 The visual mathematics is explanatory and deterministic. It is not measured
@@ -172,7 +172,7 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts = [svg_open(
         1600, 700,
         "Dossiya Dakou — physics-grounded mathematical engineering",
-        "Publication-style research portrait. Power uses red, Transportation green, Information blue and Organization sky blue. Causal mechanisms use light sky blue, model geometry uses violet, viability uses green, and critical boundaries use dashed red. Color is never the sole encoding.",
+        "Publication-style research portrait. Power uses red, Transportation green, Information blue and Organization magenta. Causal mechanisms use the Light Sky Blue accent family, model geometry uses violet, viability uses green, and critical boundaries use dashed red. Color is never the sole encoding.",
         base_style(dark),
     )]
     parts.append('<rect x="1" y="1" width="1598" height="698" rx="18" fill="var(--bg)" stroke="var(--line)"/>')
@@ -220,7 +220,7 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts.append('<circle cx="58" cy="211" r="15" fill="var(--control-soft)" stroke="var(--control)" stroke-width="2.2" class="pulse-control"/>')
     parts.append('<path d="M93 211H205" class="flow-control" stroke-width="2.8"/>')
     parts.append('<text x="100" y="191" class="s">graph → dynamics</text>')
-    parts.append('<text x="0" y="380" class="s">cyan = interface / intervention; labels + dashed geometry remain authoritative</text>')
+    parts.append('<text x="0" y="380" class="s">Light Sky Blue = interface / intervention; labels + dashed geometry remain authoritative</text>')
     parts.append('</g>')
 
     # Right: model and viability geometry.
@@ -239,7 +239,7 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts.append(f'<path d="{traj}" fill="none" class="flow-green" stroke-width="3.7" stroke-linecap="round"/>')
     state_x=cx+15+22*math.cos(0.28+1.18*2*math.pi)
     state_y=cy+6+.70*22*math.sin(0.28+1.18*2*math.pi)
-    parts.append(f'<circle cx="{state_x:.1f}" cy="{state_y:.1f}" r="9" fill="var(--control)" stroke="var(--panel)" stroke-width="3"/>')
+    parts.append(f'<circle cx="{state_x:.1f}" cy="{state_y:.1f}" r="9" fill="var(--cyan)" stroke="var(--panel)" stroke-width="3"/>')
     bx,by=cx-174,cy-46
     parts.append(f'<path d="M{state_x:.1f} {state_y:.1f}L{bx:.1f} {by:.1f}" stroke="var(--red)" stroke-width="2.1" stroke-dasharray="5 7"/>')
     parts.append(f'<text x="{bx-7:.1f}" y="{by-10:.1f}" class="math-sm" fill="var(--red)">ρ<tspan baseline-shift="sub" font-size="10">g</tspan></text>')
@@ -250,7 +250,7 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts.append(f'<text x="{px+30}" y="{py+222}" class="math-sm" fill="var(--red)">ρ<tspan baseline-shift="sub" font-size="10">g</tspan> = d<tspan baseline-shift="sub" font-size="10">g</tspan>(Y,∂𝒱)</text>')
     parts.append(f'<path d="M{px+30} {py+270}H{px+230}" class="flow-control" stroke-width="2.8"/>')
     parts.append(f'<text x="{px+248}" y="{py+276}" class="math-sm" fill="var(--control)">u*</text>')
-    parts.append(f'<text x="{px+30}" y="{py+350}" class="s">violet = mathematical model · cyan = state/inference · green = viable · dashed red = critical · light sky blue = intervention</text>')
+    parts.append(f'<text x="{px+30}" y="{py+350}" class="s">violet = mathematical model · cyan = state/inference · green = viable · dashed red = critical · Light Sky Blue = intervention</text>')
     parts.append(f'<text x="{px+30}" y="{py+382}" class="s">current research transition · {escape(focus["transition"])}</text>')
     parts.append('<text x="56" y="675" class="s">Mathematical art is explanatory: motion is not a measured flow, level sets are not fitted telemetry, and RGB does not increase evidence strength.</text>')
     parts.append('</svg>')
@@ -261,7 +261,7 @@ def render_state(state: dict, observed: dict, dark: bool) -> str:
     active = [r for r in repos if r.get("status") == "active" and not r.get("archived")]
     featured = [r for r in active if r.get("featured")]
     focus = state["current_focus"]
-    parts = [svg_open(1400, 480, "Governed living research state", "Research-state panel using green for viable/sustainable state, red for boundaries or criticality, and cyan control for causal transitions.", base_style(dark))]
+    parts = [svg_open(1400, 480, "Governed living research state", "Research-state panel using green for viable/sustainable state, red for boundaries or criticality, and the Light Sky Blue accent family for causal transitions.", base_style(dark))]
     parts.append('<rect x="1" y="1" width="1398" height="478" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     label(parts, 48, 35, 230, "CURRENT RESEARCH STATE", "green")
     parts.append('<text x="48" y="108" class="h" fill="var(--green)">Power ↔ Transportation</text>')
@@ -307,7 +307,7 @@ def render_pipeline(state: dict, framework: dict) -> str:
     parts.append(f'<path d="M{xs[0]} {y}H{xs[-1]}" fill="none" stroke="var(--line)" stroke-width="2"/>')
     parts.append(f'<path d="M{xs[1]} {y}H{xs[2]}" fill="none" class="flow-control" stroke-width="4"/>')
     colors=["var(--power)","var(--organization)","var(--transport)","var(--cyan)","var(--information)","var(--magenta)","var(--topology)"]
-    fills=["var(--power-soft)","var(--organization-soft)","var(--transport-soft)","var(--control-soft)","var(--information-soft)","var(--magenta-soft)","var(--panel)"]
+    fills=["var(--power-soft)","var(--organization-soft)","var(--transport-soft)","var(--cyan-soft)","var(--information-soft)","var(--magenta-soft)","var(--panel)"]
     text_colors=["var(--power)","var(--organization-ink)","var(--transport)","var(--cyan)","var(--information)","var(--magenta)","var(--ink)"]
     for idx,stage in enumerate(stages):
         sid=int(stage["id"]); x=xs[idx]
@@ -330,7 +330,7 @@ def render_pipeline(state: dict, framework: dict) -> str:
 def render_projects(observed: dict) -> str:
     repos=sorted(observed["repositories"],key=lambda x:int(x["profile_order"]))
     recent=max(repos,key=lambda x:timestamp((x.get("latest_commit") or {}).get("date") or x.get("pushed_at"))) if repos else None
-    parts=[svg_open(1400,610,"Observed public research systems","Public research systems using green for active featured work, cyan control for the most recent public change, and red only for inactive or critical status.",base_style(None))]
+    parts=[svg_open(1400,610,"Observed public research systems","Public research systems using green for active featured work, the Light Sky Blue accent family for the most recent public change, and red only for inactive or critical status.",base_style(None))]
     parts.append('<rect x="1" y="1" width="1398" height="608" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     label(parts,48,28,310,"SELECTED PUBLIC RESEARCH SYSTEMS","green")
     parts.append(f'<text x="48" y="84" class="s">observed {escape(fmt_date(observed.get("generated_at")))} · explicit public allowlist only</text>')
@@ -354,7 +354,7 @@ def render_projects(observed: dict) -> str:
         commit=repo.get("latest_commit") or {}; latest=fmt_date(commit.get("date") or repo.get("pushed_at")); lang=repo.get("language") or "mixed / unspecified"
         parts.append(f'<text x="{x+20}" y="{y+154}" class="s">{escape(str(lang))} · latest public commit {escape(latest)}</text>')
         parts.append(f'<text x="{x+20}" y="{y+176}" class="s">public · {escape(str(repo.get("status")))}</text>')
-    parts.append('<text x="48" y="582" class="s">Cyan-control pulse = most recent public change. Recency is not scientific importance, quality, or empirical validation.</text>')
+    parts.append('<text x="48" y="582" class="s">Light Sky Blue pulse = most recent public change. Recency is not scientific importance, quality, or empirical validation.</text>')
     parts.append('</svg>')
     return "\n".join(parts)
 

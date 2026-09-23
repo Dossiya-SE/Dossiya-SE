@@ -47,7 +47,7 @@ README
 
 1. **Scientific coordinates come from computation.** Manual coordinates may control framing, typography and panel placement, but not the mathematical state, boundary, projection, affine plane, 3D layer embedding, project area, research-state projection or continuous stage trajectory.
 2. **Computed does not mean empirically validated.** Viability constraints and research-state vectors remain schematic until case-specific evidence supports calibration.
-3. **The computed cyan control/resilience vector is the Euclidean L2 margin `ρ₂`; it must be mathematically normal to the active critical boundary. A general `ρ_g` requires a separately justified metric.**
+3. **The computed Light Sky Blue control/resilience vector is the Euclidean L2 margin `ρ₂`; it must be mathematically normal to the active critical boundary. A general `ρ_g` requires a separately justified metric.**
 4. **Power/Transportation layer separation is a visual coordinate, not geographic elevation.**
 5. **Research-system shapes have equal computed area. Shape/color are navigation only.**
 6. **The seven-stage architecture is a continuous `γ:[0,1]→R²` satisfying `γ(t_i)=S_i`.**
@@ -84,7 +84,7 @@ The static SVG remains the primary scientific figure and accessibility fallback.
 
 ### Animation release QA
 
-A release is not accepted from metadata alone. Representative frames **0, 15, 30, 45 and 59** are inspected in both light and dark GIFs. The release requires: no canvas clipping, no label collision, preserved Power/Transportation layer distinction, a visible cyan interlayer/control cue, smooth viewpoint progression, and a visually small loop seam. The decoded GIF palette is independently checked against the governed RGB hue exclusion before release.
+A release is not accepted from metadata alone. Representative frames **0, 15, 30, 45 and 59** are inspected in both light and dark GIFs. The release requires: no canvas clipping, no label collision, preserved Power/Transportation layer distinction, a visible Light Sky Blue interlayer/control cue, smooth viewpoint progression, and a visually small loop seam. The decoded GIF palette is independently checked against the governed RGB hue exclusion before release.
 
 ## Rhino / Grasshopper policy
 
