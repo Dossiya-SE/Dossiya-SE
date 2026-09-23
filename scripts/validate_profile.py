@@ -91,7 +91,8 @@ def validate_readme() -> None:
         require(f"assets/generated/{asset}" in text, f"README does not reference {asset}")
     for forbidden in ("visitor counter", "github streak", "typing animation", "language percentage"):
         require(forbidden not in lower, f"README contains prohibited vanity concept: {forbidden}")
-    require("green" in lower and "red" in lower and "light yellow" in lower, "README must state the permanent scientific palette")
+    for triplet in ("rgb(22, 130, 58)", "rgb(207, 34, 46)", "rgb(0, 122, 136)"):
+        require(triplet in lower, f"README missing governed RGB semantic triplet: {triplet}")
     require("not measured infrastructure behavior" in lower or "not a measured flow" in lower, "README must preserve the motion/measurement boundary")
     require("claim strength" in lower and "evidence strength" in lower, "README must state the claim/evidence invariant")
 
@@ -112,7 +113,7 @@ def validate_svg(name: str) -> str:
     require("<title" in text and "<desc" in text, f"generated SVG lacks accessibility metadata: {name}")
     require("@keyframes" in text, f"generated SVG lacks self-contained animation: {name}")
     require("prefers-reduced-motion:reduce" in text, f"generated SVG lacks reduced-motion fallback: {name}")
-    require("--green:" in text and "--red:" in text and "--yellow:" in text and "--yellow-soft:" in text, f"generated SVG lacks governed green/red/yellow palette: {name}")
+    require("--green:" in text and "--red:" in text and "--control:" in text and "--control-soft:" in text, f"generated SVG lacks governed green/red/cyan-control palette: {name}")
     return text
 
 
@@ -125,7 +126,7 @@ def validate_generated() -> None:
     require('class="level-set"' in hero, "legacy mathematical portrait must retain deterministic level sets")
     require("critical-boundary" in hero and "flow-red" in hero, "legacy portrait must encode critical boundary in red")
     require("flow-green" in hero, "legacy portrait must encode viable/sustainable state evolution in green")
-    require("flow-yellow" in hero, "legacy portrait must encode causal/decision pathway in light yellow")
+    require("flow-control" in hero, "legacy portrait must encode causal/decision pathway in cyan control")
     require("not a measured flow" in hero.lower(), "legacy portrait must preserve mathematical-art/data boundary")
     hero_body = hero.split("</style>", 1)[-1]
     for token in ("var(--power)", "var(--transport)", "var(--information)", "var(--organization-ink)"):
@@ -135,7 +136,7 @@ def validate_generated() -> None:
     for token in ("var(--power)", "var(--organization)", "var(--transport)", "var(--cyan)", "var(--information)", "var(--magenta)"):
         require(token in pipeline_body, f"RGB pipeline missing stage-navigation token: {token}")
     require("RGB progression is a visual navigation system" in pipeline_body, "pipeline must state RGB is not scientific ontology")
-    require("flow-yellow" in pipeline and "var(--red)" in pipeline and "var(--green)" in pipeline, "pipeline must retain governed state semantics")
+    require("flow-control" in pipeline and "var(--red)" in pipeline and "var(--green)" in pipeline, "pipeline must retain governed RGB state semantics")
     require("MOST RECENT PUBLIC CHANGE" in projects, "project system must identify most recent public change")
 
 

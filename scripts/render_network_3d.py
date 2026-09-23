@@ -26,10 +26,10 @@ def load(name: str) -> dict:
 def vars_for(p: dict) -> str:
     order = [
         "bg", "panel", "ink", "muted", "line", "topology", "green",
-        "green_soft", "red", "red_soft", "yellow", "yellow_soft",
-        "yellow_ink", "ghost", "power", "power_soft", "transport", "transport_soft",
+        "green_soft", "red", "red_soft", "control", "control_soft",
+        "control_ink", "ghost", "power", "power_soft", "transport", "transport_soft",
         "information", "information_soft", "organization", "organization_ink", "organization_soft",
-        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft", "gold", "gold_soft",
+        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft",
     ]
     return ";".join(f"--{k.replace('_', '-')}:{p[k]}" for k in order)
 
@@ -66,7 +66,7 @@ def node(parts: list[str], n: dict, x: float, y: float, *, sector: str) -> None:
     sector_color="var(--power)" if sector=="power" else "var(--transport)"
     fill,stroke="var(--panel)",sector_color
     if t=="interface":
-        fill,stroke="var(--yellow-soft)","var(--yellow)"
+        fill,stroke="var(--control-soft)","var(--control)"
     if t in {"generator","load","origin","destination","hub"}:
         parts.append(f'<ellipse cx="{x:.1f}" cy="{y:.1f}" rx="18" ry="12" fill="{fill}" stroke="{stroke}" stroke-width="2.4"/>')
     elif t in {"substation","intersection"}:
@@ -134,13 +134,13 @@ def interface_callout(parts: list[str], p: tuple[float, float], t: tuple[float, 
     bx, by = 665, 412
     parts.append(
         f'<path d="M{midx+10:.1f} {midy:.1f}L{bx-12} {by+37}" '
-        'stroke="var(--yellow)" stroke-width="1.8" fill="none"/>'
+        'stroke="var(--control)" stroke-width="1.8" fill="none"/>'
     )
     parts.append(f'<rect x="{bx}" y="{by}" width="270" height="86" rx="15" class="interface-box"/>')
-    parts.append(f'<text x="{bx+18}" y="{by+24}" class="eyebrow yellow-text">SHARED PHYSICAL INTERFACE</text>')
+    parts.append(f'<text x="{bx+18}" y="{by+24}" class="eyebrow control-text">SHARED PHYSICAL INTERFACE</text>')
     parts.append(f'<text x="{bx+18}" y="{by+51}" class="callout">C1 · EV charging asset</text>')
     parts.append(
-        f'<text x="{bx+18}" y="{by+74}" class="math-small yellow-text">{sub("I", "PT")} · Power ⇄ Transport</text>'
+        f'<text x="{bx+18}" y="{by+74}" class="math-small control-text">{sub("I", "PT")} · Power ⇄ Transport</text>'
     )
 
 
@@ -174,8 +174,8 @@ def viability(parts: list[str]) -> None:
     parts.append(f'<text x="1310" y="396" class="math red-text">{sub("ρ", "g")}</text>')
 
     parts.append('<path d="M1218 376Q1270 330 1332 344" class="control"/>')
-    parts.append('<polygon points="1332,331 1337,341 1348,342 1339,350 1342,361 1332,355 1322,361 1325,350 1316,342 1327,341" fill="var(--yellow-soft)" stroke="var(--yellow)" stroke-width="2.2"/>')
-    parts.append('<text x="1352" y="350" class="math yellow-text">u*</text>')
+    parts.append('<polygon points="1332,331 1337,341 1348,342 1339,350 1342,361 1332,355 1322,361 1325,350 1316,342 1327,341" fill="var(--control-soft)" stroke="var(--control)" stroke-width="2.2"/>')
+    parts.append('<text x="1352" y="350" class="math control-text">u*</text>')
 
     parts.append(f'<text x="1050" y="566" class="equation">dY/dt = {sub("F", "G")}(Y,u,η;θ)</text>')
     parts.append(f'<text x="1050" y="598" class="equation green-text">Y(t) ∈ {sub("V", "sus")}(t)</text>')
@@ -199,16 +199,16 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .math{{font-size:22px}} .math-small{{font-size:17px}} .equation{{font-size:20px}}
 .label-box{{fill:var(--bg);stroke:var(--line);stroke-width:1.4}}
 .side-panel{{fill:var(--panel);stroke:var(--line);stroke-width:1.5}}
-.interface-box{{fill:var(--yellow-soft);stroke:var(--yellow);stroke-width:1.8}}
+.interface-box{{fill:var(--control-soft);stroke:var(--control);stroke-width:1.8}}
 .edge{{fill:none;stroke:var(--topology);stroke-width:2.2;stroke-linecap:round}}
 .edge-soft{{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:5 6}}
 .service{{fill:none;stroke:var(--green);stroke-width:3.2;stroke-linecap:round}}
-.interface{{fill:none;stroke:var(--yellow);stroke-width:3.8;stroke-dasharray:9 7}}
+.interface{{fill:none;stroke:var(--control);stroke-width:3.8;stroke-dasharray:9 7}}
 .axis{{fill:none;stroke:var(--topology);stroke-width:1.7}}
 .critical{{stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}}
 .margin{{fill:none;stroke:var(--red);stroke-width:2.5;stroke-dasharray:6 6}}
-.control{{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-dasharray:9 7}}
-.green-text{{fill:var(--green)}} .red-text{{fill:var(--red)}} .yellow-text{{fill:var(--yellow-ink)}}
+.control{{fill:none;stroke:var(--control);stroke-width:3.5;stroke-dasharray:9 7}}
+.green-text{{fill:var(--green)}} .red-text{{fill:var(--red)}} .control-text{{fill:var(--control-ink)}}
 .legend{{font-size:15px;fill:var(--muted)}}
 </style>'''
 
@@ -251,7 +251,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
     viability(parts)
 
     parts.extend([
-        '<text x="48" y="708" class="legend">Power = solid carmine · Transportation = solid green · Interface = ochre dashed · Critical boundary = dashed red · Viability = green</text>',
+        '<text x="48" y="708" class="legend">Power = solid carmine · Transportation = solid green · Interface = cyan dashed · Critical boundary = dashed red · Viability = green</text>',
         '<text x="48" y="738" class="legend">Coordinates and depth are explanatory and uncalibrated.</text>',
         '</svg>',
     ])

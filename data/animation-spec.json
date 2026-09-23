@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "SCIENTIFIC-ANIMATION-V1",
+  "source_geometry_contract": "SCIENTIFIC-GEOMETRY-V3",
+  "animation_semantics": "camera_orbit_only",
+  "scientific_boundary": "Camera motion changes viewpoint only. Geometry is fixed across frames; the animation is not physical time, measured flow, simulated dynamics, or live telemetry.",
+  "frame": {
+    "width_px": 640,
+    "height_px": 640,
+    "supersampling": 2,
+    "frame_count": 60,
+    "frame_duration_ms": 100,
+    "effective_fps": 10,
+    "loop": 0
+  },
+  "camera": {
+    "azimuth_deg": "theta(t)=360*t",
+    "elevation_deg": "phi(t)=24+5*sin(2*pi*t)",
+    "t_samples": "k/N for k=0,...,N-1",
+    "periodic_reference": "R(0)=R(1)"
+  },
+  "outputs": {
+    "light": "assets/generated/coupled-network-orbit-light.gif",
+    "dark": "assets/generated/coupled-network-orbit-dark.gif"
+  },
+  "color": {
+    "model": "RGB",
+    "space": "sRGB",
+    "palette_authority": "data/visual-palette.json",
+    "control_role": "cyan",
+    "prohibited_warm_hue_band_deg": [
+      35,
+      75
+    ],
+    "prohibited_minimum_saturation": 0.22
+  },
+  "provenance": {
+    "inspiration_repo": "ronikbhaskar/math-art",
+    "transferred_principles": [
+      "fixed-frame animation loop",
+      "deterministic numerical geometry",
+      "camera rotation as an explicit function of frame index",
+      "separation between geometry generation and GIF writing"
+    ],
+    "non_transfer": "No source code, art identity, palette, equations, or exact animation formulas are copied."
+  }
+}

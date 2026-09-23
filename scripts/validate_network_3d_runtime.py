@@ -164,7 +164,7 @@ def validate_profile_scale(svg_text: str, name: str) -> None:
 def render_and_validate(svg_path: Path, svg_text: str, palette: dict, theme: str) -> None:
     PREVIEW.mkdir(parents=True, exist_ok=True)
     background = rgb(palette[theme]["bg"])
-    semantic = [rgb(palette[theme][key]) for key in ("green", "red", "yellow")]
+    semantic = [rgb(palette[theme][key]) for key in ("green", "red", "control")]
     raster_source = materialize_css_vars(svg_text).encode("utf-8")
 
     for width in TARGET_WIDTHS:
@@ -181,7 +181,7 @@ def render_and_validate(svg_path: Path, svg_text: str, palette: dict, theme: str
             require(non_background_fraction(image, background, right) > .035, f"{svg_path.name}: viability region too sparse/blank at {width}px")
 
             min_pixels = max(12, int(width * height * 0.00004))
-            for target, label in zip(semantic, ("green", "red", "yellow")):
+            for target, label in zip(semantic, ("green", "red", "control")):
                 require(color_pixels(image, target) >= min_pixels, f"{svg_path.name}: {label} semantic accent lost during rasterization at {width}px")
 
 

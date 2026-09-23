@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc"><title id="title">Computed coupled Power–Transportation multilayer geometry</title><desc id="desc">Static projection of a computed 3D two-layer affine system. PyVista and Trimesh validate the 3D scene; the SVG is a deterministic orthographic projection, not GIS elevation.</desc><style>
-:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--yellow:#007A88;--yellow-soft:#E6F6F8;--yellow-ink:#00616C;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#A21CAF;--organization-ink:#86198F;--organization-soft:#F8E8FB;--cyan:#007A88;--cyan-soft:#E6F6F8;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#A21CAF;--magenta-soft:#F8E8FB;--gold:#007A88;--gold-soft:#E6F6F8}
+:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#C026D3;--organization-ink:#86198F;--organization-soft:#FAE8FF;--control:#007A88;--control-ink:#005F6A;--control-soft:#E6F6F8;--cyan:#006987;--cyan-soft:#E6F6F9;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#DB2777;--magenta-soft:#FCE7F3}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
@@ -18,7 +18,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .model{fill:none;stroke:var(--violet);stroke-width:2.4}
 .viable{fill:var(--green-soft);stroke:var(--green);stroke-width:2.4}
 .critical{fill:none;stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}
-.control{fill:none;stroke:var(--cyan);stroke-width:3.2;stroke-dasharray:8 6}
+.control{fill:none;stroke:var(--control);stroke-width:3.2;stroke-dasharray:8 6}
 .state{fill:var(--cyan);stroke:var(--panel);stroke-width:2}
 .node{fill:var(--panel);stroke-width:2.4}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -47,7 +47,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <polygon points="643.0,397.2 656.9,421.2 629.2,421.2" class="node" stroke="var(--transport)"/>
 <polygon points="698.1,480.8 712.0,488.8 712.0,504.8 698.1,512.8 684.3,504.8 684.3,488.8" class="node" stroke="var(--transport)"/>
 <path d="M485.8 317.9L495.8 449.5" class="control"/>
-<polygon points="490.8,353.7 516.8,368.7 516.8,398.7 490.8,413.7 464.8,398.7 464.8,368.7" fill="var(--cyan-soft)" stroke="var(--cyan)" stroke-width="3"/>
+<polygon points="490.8,353.7 516.8,368.7 516.8,398.7 490.8,413.7 464.8,398.7 464.8,368.7" fill="var(--control-soft)" stroke="var(--control)" stroke-width="3"/>
 <text x="86" y="154" class="label" fill="var(--power)">POWER NETWORK · plane P</text>
 <text x="86" y="556" class="label" fill="var(--transport)">TRANSPORTATION NETWORK · plane T</text>
 <rect x="1030" y="128" width="505" height="490" rx="16" class="panel"/>
@@ -56,9 +56,9 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <path d="M1096.5 324.5L1295.6 234.9" class="critical"/>
 <circle cx="1288.7" cy="375.0" r="9" class="state"/>
 <path d="M1288.7 375.0L1237.4 261.1M1246.5 267.3L1237.4 261.1L1236.0 272.0" class="control"/>
-<circle cx="1237.4" cy="261.1" r="6" fill="var(--cyan)"/>
+<circle cx="1237.4" cy="261.1" r="6" fill="var(--control)"/>
 <text x="1302.7" y="363.0" class="math label">Y(t)</text>
-<text x="1273.1" y="310.0" class="math label" fill="var(--cyan)">ρ₂</text>
+<text x="1273.1" y="310.0" class="math label" fill="var(--control)">ρ₂</text>
 <text x="1289.6" y="222.9" text-anchor="end" class="math label" fill="var(--red)">∂V</text>
 <text x="48" y="690" class="small">STATIC 3D SCHEMATIC · NOT GIS ELEVATION. The separation h is a visual layer coordinate; it is not physical height, measured flow, or live telemetry.</text>
 <text x="48" y="718" class="small">The shared interface is the segment between corresponding layer states, validated as non-degenerate in R³.</text>

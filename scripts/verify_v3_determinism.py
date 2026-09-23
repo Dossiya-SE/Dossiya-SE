@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Byte-level determinism verification for SCIENTIFIC-GEOMETRY-V3.
+"""Byte-level determinism verification for SCIENTIFIC-GEOMETRY-V3 + SCIENTIFIC-ANIMATION-V1.
 
 The first build has already passed G1-G6 before this script runs. This gate
 records hashes of all release-critical V3 artifacts, rebuilds them from the
@@ -38,6 +38,10 @@ STATIC_TARGETS = [
     ART / "julia-geometry-check.toml",
     ART / "visual-layout-v3.json",
     ROOT / "mathematical-art" / "profile-geometry" / "overleaf" / "profile_geometry_v3.tex",
+    ART / "animation-metadata.json",
+    ART / "animation-validation.json",
+    OUT / "coupled-network-orbit-light.gif",
+    OUT / "coupled-network-orbit-dark.gif",
     *[OUT / name for name in SVG_FILES],
 ]
 
@@ -46,6 +50,8 @@ REBUILD_COMMANDS = [
     ["julia", "mathematical-art/profile-geometry/julia/verify_geometry_v3.jl"],
     [sys.executable, "scripts/render_publication_geometry.py"],
     [sys.executable, "scripts/render_geometric_readme.py"],
+    [sys.executable, "scripts/render_scientific_animation.py"],
+    [sys.executable, "scripts/validate_scientific_animation.py"],
     [sys.executable, "scripts/validate_geometric_readme_runtime.py"],
 ]
 
@@ -98,7 +104,7 @@ def main() -> int:
     }
 
     report = {
-        "contract_id": "SCIENTIFIC-GEOMETRY-V3",
+        "contract_id": "SCIENTIFIC-GEOMETRY-V3+SCIENTIFIC-ANIMATION-V1",
         "hash_algorithm": "sha256",
         "target_count": len(before),
         "rebuild_count": 2,

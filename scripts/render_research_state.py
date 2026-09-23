@@ -6,10 +6,10 @@ Publication sRGB system
 Power          -> red channel
 Transportation -> green channel
 Information    -> blue channel
-Organization   -> amber
+Organization   -> magenta
 viability      -> green state semantics
 criticality    -> dashed red state semantics
-causal/control -> cyan
+causal/control -> cyan/control
 mathematics    -> violet when a distinct model channel is needed
 
 The visual mathematics is explanatory and deterministic. It is not measured
@@ -120,10 +120,10 @@ def base_style(dark: bool | None = None) -> str:
     palette = load("visual-palette.json")
     keys = [
         "bg","panel","ink","muted","line","topology",
-        "green","green_soft","red","red_soft","yellow","yellow_soft","yellow_ink","ghost",
+        "green","green_soft","red","red_soft","control","control_soft","control_ink","ghost",
         "power","power_soft","transport","transport_soft","information","information_soft",
         "organization","organization_ink","organization_soft","cyan","cyan_soft",
-        "violet","violet_soft","magenta","magenta_soft","gold","gold_soft",
+        "violet","violet_soft","magenta","magenta_soft",
     ]
     def vars_for(values: dict) -> str:
         return ";".join(f"--{k.replace('_','-')}:{values[k]}" for k in keys)
@@ -138,30 +138,30 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .k{{font-size:12px;font-weight:800;letter-spacing:.14em}} .h{{font-size:30px;font-weight:780}} .hero{{font-size:45px;font-weight:820;letter-spacing:-.025em}}
 .v{{font-size:19px;font-weight:720}} .m{{font-size:15px;fill:var(--muted)}} .s{{font-size:12px;fill:var(--muted)}}
 .math{{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:22px}} .math-sm{{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:16px}}
-.label-yellow{{fill:var(--yellow-soft);stroke:var(--yellow)}} .label-green{{fill:var(--green-soft);stroke:var(--green)}} .label-red{{fill:var(--red-soft);stroke:var(--red)}}
-.flow-yellow{{stroke:var(--yellow);stroke-dasharray:10 13;animation:flowYellow 3.1s linear infinite}}
+.label-control{{fill:var(--control-soft);stroke:var(--control)}} .label-green{{fill:var(--green-soft);stroke:var(--green)}} .label-red{{fill:var(--red-soft);stroke:var(--red)}}
+.flow-control{{stroke:var(--control);stroke-dasharray:10 13;animation:flowControl 3.1s linear infinite}}
 .flow-green{{stroke:var(--green);stroke-dasharray:9 13;animation:flowGreen 3.8s linear infinite}}
 .flow-red{{stroke:var(--red);stroke-dasharray:7 11;animation:flowRed 3.3s linear infinite}}
 .flow-power{{stroke:var(--power);stroke-dasharray:11 9;animation:flowPower 3.6s linear infinite}}
 .flow-transport{{stroke:var(--transport);stroke-dasharray:10 10;animation:flowTransport 3.9s linear infinite}}
 .flow-blue{{stroke:var(--information);stroke-dasharray:8 11;animation:flowBlue 4.1s linear infinite}}
-.pulse-yellow{{animation:pulseYellow 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}}
+.pulse-control{{animation:pulseControl 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}}
 .pulse-green{{animation:pulseGreen 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}}
 .pulse-red{{animation:pulseRed 2.7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}}
 .latest{{animation:latestPulse 3.4s ease-in-out infinite}}
 .level-set{{fill:none;stroke:var(--green)}} .critical-boundary{{fill:none;stroke:var(--red)}}
-@keyframes flowYellow{{to{{stroke-dashoffset:-46}}}} @keyframes flowGreen{{to{{stroke-dashoffset:-44}}}} @keyframes flowRed{{to{{stroke-dashoffset:-38}}}}
+@keyframes flowControl{{to{{stroke-dashoffset:-46}}}} @keyframes flowGreen{{to{{stroke-dashoffset:-44}}}} @keyframes flowRed{{to{{stroke-dashoffset:-38}}}}
 @keyframes flowPower{{to{{stroke-dashoffset:-40}}}} @keyframes flowTransport{{to{{stroke-dashoffset:-40}}}} @keyframes flowBlue{{to{{stroke-dashoffset:-40}}}}
-@keyframes pulseYellow{{0%,100%{{opacity:.58;transform:scale(.97)}}50%{{opacity:1;transform:scale(1.04)}}}}
+@keyframes pulseControl{{0%,100%{{opacity:.58;transform:scale(.97)}}50%{{opacity:1;transform:scale(1.04)}}}}
 @keyframes pulseGreen{{0%,100%{{opacity:.62;transform:scale(.98)}}50%{{opacity:1;transform:scale(1.035)}}}}
 @keyframes pulseRed{{0%,100%{{opacity:.55;transform:scale(.97)}}50%{{opacity:1;transform:scale(1.04)}}}}
 @keyframes latestPulse{{0%,100%{{stroke-opacity:.40}}50%{{stroke-opacity:1}}}}
-@media(prefers-reduced-motion:reduce){{.flow-yellow,.flow-green,.flow-red,.flow-power,.flow-transport,.flow-blue,.pulse-yellow,.pulse-green,.pulse-red,.latest{{animation:none!important}}}}
+@media(prefers-reduced-motion:reduce){{.flow-control,.flow-green,.flow-red,.flow-power,.flow-transport,.flow-blue,.pulse-control,.pulse-green,.pulse-red,.latest{{animation:none!important}}}}
 </style>'''
 
-def label(parts: list[str], x: float, y: float, w: float, text: str, kind: str = "yellow") -> None:
+def label(parts: list[str], x: float, y: float, w: float, text: str, kind: str = "control") -> None:
     cls = f"label-{kind}"
-    color = {"yellow":"var(--yellow-ink)","green":"var(--green)","red":"var(--red)"}[kind]
+    color = {"control":"var(--control-ink)","green":"var(--green)","red":"var(--red)"}[kind]
     parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="31" rx="9" class="{cls}" stroke-width="1"/>')
     parts.append(f'<text x="{x+14}" y="{y+21}" class="k" fill="{color}">{escape(text)}</text>')
 
@@ -212,15 +212,15 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
 
     # Center: causal interface.
     parts.append('<g transform="translate(475 200)">')
-    parts.append('<text x="0" y="0" class="k" fill="var(--yellow-ink)">CAUSAL INTERFACE</text>')
-    parts.append('<text x="0" y="48" class="math" fill="var(--yellow-ink)">𝕀<tspan baseline-shift="sub" font-size="13">PT</tspan></text>')
+    parts.append('<text x="0" y="0" class="k" fill="var(--control-ink)">CAUSAL INTERFACE</text>')
+    parts.append('<text x="0" y="48" class="math" fill="var(--control-ink)">𝕀<tspan baseline-shift="sub" font-size="13">PT</tspan></text>')
     parts.append('<text x="58" y="46" class="s">mechanism · magnitude · sign · delay</text>')
-    parts.append('<path d="M58 86V337" fill="none" class="flow-yellow" stroke-width="3.6"/>')
-    parts.append('<path d="M38 108L58 86L78 108M38 315L58 337L78 315" fill="none" stroke="var(--yellow)" stroke-width="2.3"/>')
-    parts.append('<circle cx="58" cy="211" r="15" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="2.2" class="pulse-yellow"/>')
-    parts.append('<path d="M93 211H205" class="flow-yellow" stroke-width="2.8"/>')
+    parts.append('<path d="M58 86V337" fill="none" class="flow-control" stroke-width="3.6"/>')
+    parts.append('<path d="M38 108L58 86L78 108M38 315L58 337L78 315" fill="none" stroke="var(--control)" stroke-width="2.3"/>')
+    parts.append('<circle cx="58" cy="211" r="15" fill="var(--control-soft)" stroke="var(--control)" stroke-width="2.2" class="pulse-control"/>')
+    parts.append('<path d="M93 211H205" class="flow-control" stroke-width="2.8"/>')
     parts.append('<text x="100" y="191" class="s">graph → dynamics</text>')
-    parts.append('<text x="0" y="380" class="s">ochre = interface / intervention; labels + dashed geometry remain authoritative</text>')
+    parts.append('<text x="0" y="380" class="s">cyan = interface / intervention; labels + dashed geometry remain authoritative</text>')
     parts.append('</g>')
 
     # Right: model and viability geometry.
@@ -248,8 +248,8 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts.append(f'<text x="{px+30}" y="{py+142}" class="math-sm" fill="var(--information)">Ẏ = F<tspan baseline-shift="sub" font-size="10">𝒢</tspan>(Y,u,η;θ)</text>')
     parts.append(f'<text x="{px+30}" y="{py+182}" class="math-sm" fill="var(--green)">Y ∈ 𝒱<tspan baseline-shift="sub" font-size="10">sus</tspan></text>')
     parts.append(f'<text x="{px+30}" y="{py+222}" class="math-sm" fill="var(--red)">ρ<tspan baseline-shift="sub" font-size="10">g</tspan> = d<tspan baseline-shift="sub" font-size="10">g</tspan>(Y,∂𝒱)</text>')
-    parts.append(f'<path d="M{px+30} {py+270}H{px+230}" class="flow-yellow" stroke-width="2.8"/>')
-    parts.append(f'<text x="{px+248}" y="{py+276}" class="math-sm" fill="var(--gold)">u*</text>')
+    parts.append(f'<path d="M{px+30} {py+270}H{px+230}" class="flow-control" stroke-width="2.8"/>')
+    parts.append(f'<text x="{px+248}" y="{py+276}" class="math-sm" fill="var(--control)">u*</text>')
     parts.append(f'<text x="{px+30}" y="{py+350}" class="s">violet = mathematical model · cyan = state/inference · green = viable · dashed red = critical · cyan = intervention</text>')
     parts.append(f'<text x="{px+30}" y="{py+382}" class="s">current research transition · {escape(focus["transition"])}</text>')
     parts.append('<text x="56" y="675" class="s">Mathematical art is explanatory: motion is not a measured flow, level sets are not fitted telemetry, and RGB does not increase evidence strength.</text>')
@@ -261,15 +261,15 @@ def render_state(state: dict, observed: dict, dark: bool) -> str:
     active = [r for r in repos if r.get("status") == "active" and not r.get("archived")]
     featured = [r for r in active if r.get("featured")]
     focus = state["current_focus"]
-    parts = [svg_open(1400, 480, "Governed living research state", "Research-state panel using green for viable/sustainable state, red for boundaries or criticality, and cyan for causal transitions.", base_style(dark))]
+    parts = [svg_open(1400, 480, "Governed living research state", "Research-state panel using green for viable/sustainable state, red for boundaries or criticality, and cyan control for causal transitions.", base_style(dark))]
     parts.append('<rect x="1" y="1" width="1398" height="478" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     label(parts, 48, 35, 230, "CURRENT RESEARCH STATE", "green")
     parts.append('<text x="48" y="108" class="h" fill="var(--green)">Power ↔ Transportation</text>')
     parts.append('<text x="48" y="137" class="m">Information + Organization as supporting non-physical layers</text>')
     parts.append('<line x1="48" y1="165" x2="1352" y2="165" stroke="var(--line)"/>')
-    label(parts, 48, 190, 255, "ACTIVE FORMAL TRANSITION", "yellow")
-    parts.append(f'<text x="48" y="260" class="v" fill="var(--yellow-ink)">{escape(focus["transition"])}</text>')
-    parts.append('<path d="M48 286H555" class="flow-yellow" stroke-width="3"/>')
+    label(parts, 48, 190, 255, "ACTIVE FORMAL TRANSITION", "control")
+    parts.append(f'<text x="48" y="260" class="v" fill="var(--control-ink)">{escape(focus["transition"])}</text>')
+    parts.append('<path d="M48 286H555" class="flow-control" stroke-width="3"/>')
     parts.append(f'<text x="48" y="320" class="m">{escape(focus["label"])}</text>')
     label(parts, 720, 190, 230, "MATHEMATICAL SIGNATURE", "green")
     parts.append('<text x="720" y="260" class="math" fill="var(--green)">R_phys → C → (G, I_ij) → F_G → V → ρ_g → u*</text>')
@@ -277,12 +277,12 @@ def render_state(state: dict, observed: dict, dark: bool) -> str:
     parts.append('<text x="720" y="320" class="s">public activity cannot promote a scientific claim</text>')
     cards = [
         (48,355,250,"PUBLIC SYSTEMS",f"{len(active):02d}","allowlisted","green"),
-        (330,355,250,"FEATURED",f"{len(featured):02d}","research-facing","yellow"),
+        (330,355,250,"FEATURED",f"{len(featured):02d}","research-facing","control"),
         (612,355,350,"STATE VERIFIED",fmt_date(state.get("last_verified")),"declared configuration","green"),
         (1002,355,350,"EVIDENCE OBSERVED",fmt_date(observed.get("generated_at")),"public metadata","red"),
     ]
     for x,y,w,t,v,sub,kind in cards:
-        cls=f"label-{kind}"; color={"green":"var(--green)","red":"var(--red)","yellow":"var(--yellow-ink)"}[kind]
+        cls=f"label-{kind}"; color={"green":"var(--green)","red":"var(--red)","control":"var(--control-ink)"}[kind]
         parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="86" rx="16" class="{cls}" stroke-width="1"/>')
         parts.append(f'<text x="{x+18}" y="{y+28}" class="k" fill="{color}">{escape(t)}</text>')
         parts.append(f'<text x="{x+18}" y="{y+60}" class="v" fill="{color}">{escape(v)}</text>')
@@ -297,7 +297,7 @@ def render_pipeline(state: dict, framework: dict) -> str:
     parts=[svg_open(
         1400,400,
         "Seven-stage research architecture",
-        "Seven-stage RGB-derived research progression. Stage colors progress red, amber, green, cyan, blue, magenta and neutral white; active causal-to-dynamics transition remains explicitly marked.",
+        "Seven-stage RGB-derived research progression. Stage colors progress red, magenta, green, cyan, blue, magenta and neutral white; active causal-to-dynamics transition remains explicitly marked.",
         base_style(None),
     )]
     parts.append('<rect x="1" y="1" width="1398" height="398" rx="18" fill="var(--bg)" stroke="var(--line)"/>')
@@ -305,7 +305,7 @@ def render_pipeline(state: dict, framework: dict) -> str:
     parts.append('<text x="48" y="82" class="s">RGB progression is a visual navigation system, not a scientific ontology or evidence scale.</text>')
     xs=[90,285,480,675,870,1065,1260]; y=190
     parts.append(f'<path d="M{xs[0]} {y}H{xs[-1]}" fill="none" stroke="var(--line)" stroke-width="2"/>')
-    parts.append(f'<path d="M{xs[1]} {y}H{xs[2]}" fill="none" class="flow-yellow" stroke-width="4"/>')
+    parts.append(f'<path d="M{xs[1]} {y}H{xs[2]}" fill="none" class="flow-control" stroke-width="4"/>')
     colors=["var(--power)","var(--organization)","var(--transport)","var(--cyan)","var(--information)","var(--magenta)","var(--topology)"]
     fills=["var(--power-soft)","var(--organization-soft)","var(--transport-soft)","var(--cyan-soft)","var(--information-soft)","var(--magenta-soft)","var(--panel)"]
     text_colors=["var(--power)","var(--organization-ink)","var(--transport)","var(--cyan)","var(--information)","var(--magenta)","var(--ink)"]
@@ -322,7 +322,7 @@ def render_pipeline(state: dict, framework: dict) -> str:
             parts.append(f'<text x="{x}" y="{y+79}" text-anchor="middle" class="s">{escape(line2)}</text>')
         parts.append(f'<text x="{x}" y="{y-48}" text-anchor="middle" class="math-sm" fill="{text_colors[idx]}">{escape(str(stage["symbol"]))}</text>')
     parts.append('<line x1="48" y1="326" x2="1352" y2="326" stroke="var(--line)"/>')
-    parts.append('<text x="48" y="359" class="k" fill="var(--yellow-ink)">CURRENT TRANSITION</text>')
+    parts.append('<text x="48" y="359" class="k" fill="var(--control-ink)">CURRENT TRANSITION</text>')
     parts.append(f'<text x="255" y="360" class="v">{escape(state["current_focus"]["transition"])}</text>')
     parts.append('</svg>')
     return "\n".join(parts)
@@ -330,7 +330,7 @@ def render_pipeline(state: dict, framework: dict) -> str:
 def render_projects(observed: dict) -> str:
     repos=sorted(observed["repositories"],key=lambda x:int(x["profile_order"]))
     recent=max(repos,key=lambda x:timestamp((x.get("latest_commit") or {}).get("date") or x.get("pushed_at"))) if repos else None
-    parts=[svg_open(1400,610,"Observed public research systems","Public research systems using green for active featured work, cyan for the most recent public change, and red only for inactive or critical status.",base_style(None))]
+    parts=[svg_open(1400,610,"Observed public research systems","Public research systems using green for active featured work, cyan control for the most recent public change, and red only for inactive or critical status.",base_style(None))]
     parts.append('<rect x="1" y="1" width="1398" height="608" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     label(parts,48,28,310,"SELECTED PUBLIC RESEARCH SYSTEMS","green")
     parts.append(f'<text x="48" y="84" class="s">observed {escape(fmt_date(observed.get("generated_at")))} · explicit public allowlist only</text>')
@@ -339,11 +339,11 @@ def render_projects(observed: dict) -> str:
         is_recent=recent is not None and repo.get("repository")==recent.get("repository")
         is_featured=bool(repo.get("featured")); active=str(repo.get("status"))=="active"
         if not active: kind,color="red","var(--red)"
-        elif is_recent: kind,color="yellow","var(--yellow)"
+        elif is_recent: kind,color="control","var(--control)"
         elif is_featured: kind,color="green","var(--green)"
         else: kind,color="green","var(--line)"
         cls="latest" if is_recent else ""
-        fill={"red":"var(--red-soft)","yellow":"var(--yellow-soft)","green":"var(--panel)"}[kind]
+        fill={"red":"var(--red-soft)","control":"var(--control-soft)","green":"var(--panel)"}[kind]
         parts.append(f'<rect x="{x}" y="{y}" width="408" height="190" rx="18" fill="{fill}" stroke="{color}" stroke-width="{3 if is_recent else (2 if is_featured else 1)}" class="{cls}"/>')
         tag="MOST RECENT PUBLIC CHANGE" if is_recent else ("FEATURED" if is_featured else "SUPPORTING")
         parts.append(f'<text x="{x+20}" y="{y+30}" class="k" fill="{color}">0{int(repo["profile_order"])} · {tag}</text>')
@@ -354,7 +354,7 @@ def render_projects(observed: dict) -> str:
         commit=repo.get("latest_commit") or {}; latest=fmt_date(commit.get("date") or repo.get("pushed_at")); lang=repo.get("language") or "mixed / unspecified"
         parts.append(f'<text x="{x+20}" y="{y+154}" class="s">{escape(str(lang))} · latest public commit {escape(latest)}</text>')
         parts.append(f'<text x="{x+20}" y="{y+176}" class="s">public · {escape(str(repo.get("status")))}</text>')
-    parts.append('<text x="48" y="582" class="s">Cyan pulse = most recent public change. Recency is not scientific importance, quality, or empirical validation.</text>')
+    parts.append('<text x="48" y="582" class="s">Cyan-control pulse = most recent public change. Recency is not scientific importance, quality, or empirical validation.</text>')
     parts.append('</svg>')
     return "\n".join(parts)
 

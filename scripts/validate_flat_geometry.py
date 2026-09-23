@@ -109,7 +109,7 @@ def validate_svg() -> None:
     require("var(--violet)" in text, "mathematical-abstraction cue missing")
     require("var(--red)" in text and "stroke-dasharray" in text, "critical hyperplane must be dashed red")
     require("var(--green-soft)" in text, "admissible side cue missing")
-    require("var(--gold)" in text, "projection cue missing")
+    require("var(--control)" in text, "projection cue missing")
 
 
 def validate_readme() -> None:

@@ -19,10 +19,10 @@ OUT = ROOT / "assets" / "generated"
 
 TOKENS = [
     "bg","panel","ink","muted","line","topology",
-    "green","green_soft","red","red_soft","yellow","yellow_soft","yellow_ink","ghost",
+    "green","green_soft","red","red_soft","control","control_soft","control_ink","ghost",
     "power","power_soft","transport","transport_soft","information","information_soft",
     "organization","organization_ink","organization_soft","cyan","cyan_soft",
-    "violet","violet_soft","magenta","magenta_soft","gold","gold_soft",
+    "violet","violet_soft","magenta","magenta_soft",
 ]
 
 def load(name: str) -> dict:
@@ -66,7 +66,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .h{{font-size:20px;font-weight:760}} .m{{font-size:14px;fill:var(--muted)}} .s{{font-size:11px;fill:var(--muted)}}
 .value{{font-size:18px;font-weight:720}} .math-lg{{font-family:Georgia,"STIX Two Text","Times New Roman",serif;font-size:25px}}
 .panel{{fill:var(--panel);stroke:var(--line);stroke-width:1.1}}
-.flow-yellow{{fill:none;stroke:var(--yellow);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:9 11;animation:flow 3.2s linear infinite}}
+.flow-control{{fill:none;stroke:var(--control);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:9 11;animation:flow 3.2s linear infinite}}
 .flow-green{{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 12;animation:flow 3.8s linear infinite}}
 .flow-blue{{fill:none;stroke:var(--information);stroke-width:2.8;stroke-linecap:round;stroke-dasharray:8 10;animation:flow 4.1s linear infinite}}
 .pulse-green{{animation:pulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}}
@@ -74,7 +74,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 @keyframes flow{{to{{stroke-dashoffset:-42}}}}
 @keyframes pulse{{0%,100%{{opacity:.65}}50%{{opacity:1}}}}
 @keyframes latest{{0%,100%{{stroke-opacity:.35}}50%{{stroke-opacity:1}}}}
-@media(prefers-reduced-motion:reduce){{.flow-yellow,.flow-green,.flow-blue,.pulse-green,.latest{{animation:none!important}}}}
+@media(prefers-reduced-motion:reduce){{.flow-control,.flow-green,.flow-blue,.pulse-green,.latest{{animation:none!important}}}}
 </style>"""
 
 def svg_open(width: int, height: int, title: str, desc: str, css: str) -> str:
@@ -85,7 +85,7 @@ def svg_open(width: int, height: int, title: str, desc: str, css: str) -> str:
 
 def render_question(palette: dict) -> str:
     p=[svg_open(1400,315,"Current research question",
-        "Publication-style research question. Power is red, Transportation green, the causal interface ochre, coupled dynamics blue, and viability green. Labels and geometry duplicate all color meaning.",
+        "Publication-style research question. Power is red, Transportation green, the causal interface cyan, coupled dynamics blue, and viability green. Labels and geometry duplicate all color meaning.",
         style(palette))]
     p += [
       '<rect x="1" y="1" width="1398" height="313" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
@@ -96,7 +96,7 @@ def render_question(palette: dict) -> str:
       '<text x="126" y="143" class="h">↔</text>',
       '<text x="160" y="143" class="h" fill="var(--transport)">TRANSPORTATION</text>',
       '<text x="48" y="169" class="m">Power ↔ Transportation interfaces</text>',
-      '<path d="M365 139H510" class="flow-yellow"/><text x="382" y="126" class="s">typed causal mechanism</text>',
+      '<path d="M365 139H510" class="flow-control"/><text x="382" y="126" class="s">typed causal mechanism</text>',
       '<text x="545" y="143" class="h" fill="var(--information)">COUPLED DYNAMICS</text>',
       '<text x="545" y="169" class="m">disturbance · delay · feedback · control</text>',
       '<path d="M785 139H955" class="flow-blue"/>',
@@ -125,7 +125,7 @@ def render_state(state: dict, observed: dict, palette: dict, mode: str) -> str:
       '<line x1="48" y1="154" x2="1352" y2="154" stroke="var(--line)"/>',
       '<text x="48" y="190" class="eyebrow">CURRENT SCIENTIFIC TRANSITION</text>',
       '<text x="48" y="230" class="value">Causal Mechanisms</text>',
-      '<path d="M235 223H485" class="flow-yellow"/>',
+      '<path d="M235 223H485" class="flow-control"/>',
       '<text x="515" y="230" class="value" fill="var(--information)">Coupled Hybrid Multiscale Dynamics</text>',
       '<text x="48" y="265" class="m">physically supported interfaces → coupled state evolution under disturbance and control</text>',
       '<text x="965" y="190" class="eyebrow">MATHEMATICAL STATE</text>',
@@ -140,7 +140,7 @@ def render_state(state: dict, observed: dict, palette: dict, mode: str) -> str:
 
 def render_viability(palette: dict) -> str:
     p=[svg_open(1400,500,"Graph to viability transformation",
-      "Graph/model space is separated from state/viability space. Causal interface is ochre, dynamics blue, viability green, critical boundary red and intervention gold; all meanings also use labels and line styles.",
+      "Graph/model space is separated from state/viability space. Causal interface is cyan, dynamics blue, viability green, critical boundary red and intervention cyan; all meanings also use labels and line styles.",
       style(palette))]
     p += [
       '<rect x="1" y="1" width="1398" height="498" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
@@ -149,8 +149,8 @@ def render_viability(palette: dict) -> str:
       '<text x="48" y="124" class="eyebrow">GRAPH / MODEL SPACE</text>',
       '<text x="80" y="190" text-anchor="middle" class="math-lg">𝓖</text><text x="80" y="220" text-anchor="middle" class="s">topology</text>',
       '<path d="M122 184H225" stroke="var(--line)" stroke-width="2"/>',
-      '<text x="275" y="190" text-anchor="middle" class="math-lg" fill="var(--yellow-ink)">𝕀</text><text x="275" y="220" text-anchor="middle" class="s">causal interface</text>',
-      '<path d="M325 184H420" class="flow-yellow"/>',
+      '<text x="275" y="190" text-anchor="middle" class="math-lg" fill="var(--control-ink)">𝕀</text><text x="275" y="220" text-anchor="middle" class="s">causal interface</text>',
+      '<path d="M325 184H420" class="flow-control"/>',
       '<text x="475" y="190" text-anchor="middle" class="math-lg" fill="var(--information)">F𝓖</text><text x="475" y="220" text-anchor="middle" class="s">coupled dynamics</text>',
       '<path d="M525 184H620" class="flow-blue"/>',
       '<text x="675" y="190" text-anchor="middle" class="math-lg" fill="var(--cyan)">Y(t)</text><text x="675" y="220" text-anchor="middle" class="s">state trajectory</text>',
@@ -163,7 +163,7 @@ def render_viability(palette: dict) -> str:
       '<text x="1188" y="205" class="math" font-size="18" fill="var(--red)">∂𝒱</text><text x="1128" y="338" class="math" font-size="21" fill="var(--green)">𝒱ₛᵤₛ</text>',
       '<circle cx="1048" cy="292" r="9" fill="var(--cyan)" stroke="var(--panel)" stroke-width="3"/><text x="1064" y="297" class="math" font-size="17">Y(t)</text>',
       '<path d="M1058 286L1212 225" stroke="var(--red)" stroke-width="2.4" stroke-dasharray="6 6"/><text x="1128" y="246" class="math" font-size="17" fill="var(--red)">ρ_g</text>',
-      '<path d="M1058 301Q1105 337 1174 329" class="flow-yellow"/><text x="1198" y="339" class="math" font-size="18" fill="var(--gold)">u*</text>',
+      '<path d="M1058 301Q1105 337 1174 329" class="flow-control"/><text x="1198" y="339" class="math" font-size="18" fill="var(--control)">u*</text>',
       '<line x1="48" y1="276" x2="746" y2="276" stroke="var(--line)"/>',
       '<text x="48" y="318" class="math" font-size="18" fill="var(--information)">Ẏ = F_𝒢(Y,u,η;θ)</text>',
       '<text x="48" y="356" class="math" font-size="18" fill="var(--green)">Y(t) ∈ 𝒱ₛᵤₛ(t)</text>',
@@ -198,7 +198,7 @@ def render_projects(observed: dict, palette: dict) -> str:
         p.append(f'<text x="{x+24}" y="{y+52}" class="s">{escape(str(lang))} · latest public commit {escape(latest)}</text>')
     recent_name=str((recent or {}).get("short_name") or (recent or {}).get("repository") or "not observed")
     p += ['<line x1="48" y1="447" x2="1352" y2="447" stroke="var(--line)"/>',
-          '<text x="48" y="478" class="eyebrow" fill="var(--yellow-ink)">MOST RECENT PUBLIC CHANGE</text>',
+          '<text x="48" y="478" class="eyebrow" fill="var(--control-ink)">MOST RECENT PUBLIC CHANGE</text>',
           f'<text x="285" y="478" class="s">{escape(recent_name)} · recency is metadata, not scientific importance or validation; row accent is navigation, not evidence status.</text>',
           '</svg>']
     return "\n".join(p)

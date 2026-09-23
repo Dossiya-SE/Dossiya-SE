@@ -5,7 +5,7 @@ This post-render step separates neutral layout geometry from semantic accents:
 - topology/structure: neutral charcoal/light-neutral
 - viable/operational: green
 - critical/constraint: red
-- causal/intervention: cyan surface with high-contrast cyan structure
+- causal/intervention: cyan RGB surface with high-contrast control structure
 
 It also normalizes the primary coupled-network line hierarchy.
 """
@@ -29,10 +29,10 @@ def css_vars(values: dict) -> str:
     order = [
         "bg", "panel", "ink", "muted", "line", "topology",
         "green", "green_soft", "red", "red_soft",
-        "yellow", "yellow_soft", "yellow_ink", "ghost",
+        "control", "control_soft", "control_ink", "ghost",
         "power", "power_soft", "transport", "transport_soft",
         "information", "information_soft", "organization", "organization_ink", "organization_soft",
-        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft", "gold", "gold_soft",
+        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft",
     ]
     return ";".join(f"--{key.replace('_','-')}:{values[key]}" for key in order)
 
@@ -59,14 +59,14 @@ def refine_coupled_network(text: str) -> str:
             ".edge-soft{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-linecap:round;opacity:1;stroke-dasharray:5 6}",
         ".flow{fill:none;stroke:var(--green);stroke-width:3.4;stroke-linecap:round;stroke-dasharray:10 12;animation:serviceFlow 3.3s linear infinite}":
             ".flow{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 12;animation:serviceFlow 3.3s linear infinite}",
-        ".interface-flow{fill:none;stroke:var(--yellow);stroke-width:4;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}":
-            ".interface-flow{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}",
+        ".interface-flow{fill:none;stroke:var(--control);stroke-width:4;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}":
+            ".interface-flow{fill:none;stroke:var(--control);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}",
         ".critical-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:5;stroke-linecap:round;stroke-dasharray:8 8;animation:criticalPhase 20s linear infinite}":
             ".critical-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;stroke-dasharray:8 8;animation:criticalPhase 20s linear infinite}",
         ".propagation-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:7 9;animation:propagationPhase 20s linear infinite}":
             ".propagation-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;stroke-dasharray:7 9;animation:propagationPhase 20s linear infinite}",
-        ".control-demo{opacity:0;fill:none;stroke:var(--yellow);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}":
-            ".control-demo{opacity:0;fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}",
+        ".control-demo{opacity:0;fill:none;stroke:var(--control);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}":
+            ".control-demo{opacity:0;fill:none;stroke:var(--control);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}",
         ".recovery-demo{opacity:0;fill:none;stroke:var(--green);stroke-width:5;stroke-linecap:round;stroke-dasharray:10 10;animation:recoveryPhase 20s linear infinite}":
             ".recovery-demo{opacity:0;fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 10;animation:recoveryPhase 20s linear infinite}",
         'fill="var(--panel)" stroke="var(--green)" stroke-width="1.8"':

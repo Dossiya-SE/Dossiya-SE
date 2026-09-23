@@ -2,7 +2,7 @@
 <title id="title">Coupled Power–Transportation network geometry</title>
 <desc id="desc">Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and cyan denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.</desc>
 <style>
-:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--yellow:#007A88;--yellow-soft:#E6F6F8;--yellow-ink:#00616C;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#A21CAF;--organization-ink:#86198F;--organization-soft:#F8E8FB;--cyan:#007A88;--cyan-soft:#E6F6F8;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#A21CAF;--magenta-soft:#F8E8FB;--gold:#007A88;--gold-soft:#E6F6F8}
+:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--control:#007A88;--control-soft:#E6F6F8;--control-ink:#005F6A;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#C026D3;--organization-ink:#86198F;--organization-soft:#FAE8FF;--cyan:#006987;--cyan-soft:#E6F6F9;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#DB2777;--magenta-soft:#FCE7F3}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:Georgia,"STIX Two Text","Times New Roman",serif}
@@ -12,13 +12,13 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .edge{fill:none;stroke:var(--topology);stroke-width:2.2;stroke-linecap:round;opacity:1}
 .edge-soft{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-linecap:round;opacity:1;stroke-dasharray:5 6}
 .flow{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 12;animation:serviceFlow 3.3s linear infinite}
-.interface-flow{fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}
+.interface-flow{fill:none;stroke:var(--control);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 11;animation:interfaceFlow 2.8s linear infinite}
 .critical-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;stroke-dasharray:8 8;animation:criticalPhase 20s linear infinite}
 .propagation-demo{opacity:0;fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;stroke-dasharray:7 9;animation:propagationPhase 20s linear infinite}
-.control-demo{opacity:0;fill:none;stroke:var(--yellow);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}
+.control-demo{opacity:0;fill:none;stroke:var(--control);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:9 9;animation:controlPhase 20s linear infinite}
 .recovery-demo{opacity:0;fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 10;animation:recoveryPhase 20s linear infinite}
 .critical-node{opacity:0;fill:var(--red);animation:criticalPhase 20s linear infinite}
-.control-node{opacity:0;fill:var(--yellow);animation:controlPhase 20s linear infinite}
+.control-node{opacity:0;fill:var(--control);animation:controlPhase 20s linear infinite}
 @keyframes serviceFlow{to{stroke-dashoffset:-44}} @keyframes interfaceFlow{to{stroke-dashoffset:-40}}
 @keyframes criticalPhase{0%,19%,60%,100%{opacity:0}22%,55%{opacity:1}}
 @keyframes propagationPhase{0%,36%,60%,100%{opacity:0}40%,56%{opacity:1}}
@@ -76,7 +76,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <rect x="389.0" y="301.8767123287671" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
 <text x="402.0" y="318.8767123287671" text-anchor="middle" class="node-label">S2</text>
 <text x="402.0" y="347.8767123287671" text-anchor="middle" class="s">substation</text>
-<polygon points="716.3,251.5 734.3,269.5 716.3,287.5 698.3,269.5" fill="var(--yellow-soft)" stroke="var(--yellow-ink)" stroke-width="2.5"/>
+<polygon points="716.3,251.5 734.3,269.5 716.3,287.5 698.3,269.5" fill="var(--control-soft)" stroke="var(--control-ink)" stroke-width="2.5"/>
 <text x="716.2857142857143" y="273.5" text-anchor="middle" class="node-label">C1</text>
 <text x="716.2857142857143" y="302.5" text-anchor="middle" class="s">interface</text>
 <circle cx="1002.0" cy="207.0" r="15" fill="var(--ghost)" stroke="var(--ink)" stroke-width="2.4"/>
@@ -94,7 +94,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <rect x="265.47058823529414" y="624.0" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
 <text x="278.47058823529414" y="641.0" text-anchor="middle" class="node-label">I3</text>
 <text x="278.47058823529414" y="671.0" text-anchor="middle" class="s">intersection</text>
-<polygon points="490.2,494.0 508.2,512.0 490.2,530.0 472.2,512.0" fill="var(--yellow-soft)" stroke="var(--yellow-ink)" stroke-width="2.5"/>
+<polygon points="490.2,494.0 508.2,512.0 490.2,530.0 472.2,512.0" fill="var(--control-soft)" stroke="var(--control-ink)" stroke-width="2.5"/>
 <text x="490.2352941176471" y="516.0" text-anchor="middle" class="node-label">C1</text>
 <text x="490.2352941176471" y="546.0" text-anchor="middle" class="s">interface</text>
 <rect x="606.6470588235294" y="524.78125" width="26" height="26" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4"/>
@@ -113,8 +113,8 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="1002.0" y="641.0" text-anchor="middle" class="node-label">D1</text>
 <text x="1002.0" y="671.0" text-anchor="middle" class="s">destination</text>
 <path d="M716.3 289.5L490.2 492.0" class="interface-flow"/>
-<rect x="531.3" y="365.8" width="144" height="50" rx="12" fill="var(--yellow-soft)" stroke="var(--yellow)"/>
-<text x="603.3" y="387.8" text-anchor="middle" class="math" font-size="18" fill="var(--yellow-ink)">𝕀<tspan baseline-shift="sub" font-size="11">PT</tspan></text>
+<rect x="531.3" y="365.8" width="144" height="50" rx="12" fill="var(--control-soft)" stroke="var(--control)"/>
+<text x="603.3" y="387.8" text-anchor="middle" class="math" font-size="18" fill="var(--control-ink)">𝕀<tspan baseline-shift="sub" font-size="11">PT</tspan></text>
 <text x="603.3" y="406.8" text-anchor="middle" class="s">shared physical asset · C1</text>
 <path d="M402.0 220.7L716.3 269.5" class="critical-demo"/>
 <circle cx="716.2857142857143" cy="269.5" r="24" class="critical-node" opacity="0"/>
@@ -123,7 +123,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <circle cx="813.8" cy="572.9" r="23" class="control-node" opacity="0"/>
 <path d="M813.8 572.9L1002.0 637.0" class="recovery-demo"/>
 <rect x="1090" y="125" width="458" height="555" rx="22" fill="var(--panel)" stroke="var(--line)"/>
-<text x="1114" y="163" class="k" fill="var(--yellow-ink)">FORMAL COUPLING OBJECT</text>
+<text x="1114" y="163" class="k" fill="var(--control-ink)">FORMAL COUPLING OBJECT</text>
 <text x="1114" y="203" class="math" font-size="23">𝓖=(𝓖<tspan baseline-shift="sub" font-size="13">P</tspan>,𝓖<tspan baseline-shift="sub" font-size="13">T</tspan>,𝕀<tspan baseline-shift="sub" font-size="13">PT</tspan>)</text>
 <text x="1114" y="241" class="math" font-size="17">𝕀<tspan baseline-shift="sub" font-size="11">PT</tspan><tspan baseline-shift="super" font-size="11">(1)</tspan>=(E<tspan baseline-shift="sub" font-size="10">i</tspan><tspan baseline-shift="super" font-size="10">P</tspan>, E<tspan baseline-shift="sub" font-size="10">j</tspan><tspan baseline-shift="super" font-size="10">T</tspan>, M<tspan baseline-shift="sub" font-size="10">ij</tspan>, …, ℋ<tspan baseline-shift="sub" font-size="10">t</tspan>)</text>
 <text x="1114" y="279" class="math" font-size="19">Ẏ=F<tspan baseline-shift="sub" font-size="11">𝓖</tspan>(Y,u,η;θ)</text>
@@ -135,7 +135,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="1150" y="390" text-anchor="middle" class="k" fill="var(--red)">T → P</text>
 <text x="1202" y="390" class="m">charging demand</text>
 <rect x="1114" y="421" width="72" height="28" rx="8" fill="var(--ghost)" stroke="var(--line)"/>
-<text x="1150" y="440" text-anchor="middle" class="k" fill="var(--yellow-ink)">T → P</text>
+<text x="1150" y="440" text-anchor="middle" class="k" fill="var(--control-ink)">T → P</text>
 <text x="1202" y="440" class="m">conditional V2G support</text>
 <path d="M1114 479H1524" stroke="var(--line)"/>
 <text x="1114" y="517" class="k" fill="var(--green)">EXPLANATORY DYNAMIC CYCLE</text>
@@ -151,8 +151,8 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="1282" y="555" text-anchor="middle" class="k" fill="var(--red)">03</text>
 <text x="1282" y="588" text-anchor="middle" class="s">Propagation</text>
 <path d="M1302 551H1344" stroke="var(--line)"/>
-<circle cx="1364" cy="551" r="17" fill="var(--panel)" stroke="var(--yellow-ink)" stroke-width="2"/>
-<text x="1364" y="555" text-anchor="middle" class="k" fill="var(--yellow-ink)">04</text>
+<circle cx="1364" cy="551" r="17" fill="var(--panel)" stroke="var(--control-ink)" stroke-width="2"/>
+<text x="1364" y="555" text-anchor="middle" class="k" fill="var(--control-ink)">04</text>
 <text x="1364" y="588" text-anchor="middle" class="s">Control</text>
 <path d="M1384 551H1426" stroke="var(--line)"/>
 <circle cx="1446" cy="551" r="17" fill="var(--panel)" stroke="var(--green)" stroke-width="2"/>

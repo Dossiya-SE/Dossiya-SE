@@ -70,7 +70,7 @@ def validate_svg(name: str) -> None:
     require(".equation{font-size:20px" in text, f"{name}: equations below governed source size")
 
     require("stroke-dasharray" in text, f"{name}: non-color semantic redundancy missing")
-    require("var(--yellow)" in text and "var(--green)" in text and "var(--red)" in text, f"{name}: state semantic palette missing")
+    require("var(--control)" in text and "var(--green)" in text and "var(--red)" in text, f"{name}: state semantic palette missing")
     require("var(--power)" in text and "var(--transport)" in text, f"{name}: sector RGB channels missing")
     require("power-edge" in text and "transport-edge" in text and "service-power" in text and "service-transport" in text, f"{name}: sector line grammar missing")
     require("Depth encodes layer separation only" in text, f"{name}: depth interpretation missing from accessible description")

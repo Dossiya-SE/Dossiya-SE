@@ -120,7 +120,7 @@ def validate_generated() -> None:
         require("shared physical asset · C1" in text, f"{name}: shared interface annotation missing")
         require("interface-flow" in text and "critical-demo" in text and "control-demo" in text and "recovery-demo" in text, f"{name}: semantic motion classes missing")
         require("not measured infrastructure telemetry" in text.lower(), f"{name}: animation/data boundary missing")
-        require("--green:" in text and "--red:" in text and "--yellow:" in text, f"{name}: permanent semantic palette missing")
+        require("--green:" in text and "--red:" in text and "--control:" in text, f"{name}: permanent semantic palette missing")
     require("∂𝒱" in transform and "ρ" in transform and "Y(t)" in transform and "u*" in transform, "graph-to-viability figure missing core mathematical objects")
     require("No empirical validity is implied" in transform, "graph-to-viability evidence boundary missing")
 
