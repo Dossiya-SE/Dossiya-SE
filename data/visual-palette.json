@@ -3,7 +3,7 @@
   "evidence_state": "VALIDATED_VISUAL_DESIGN_SPECIFICATION",
   "color_model": "RGB",
   "color_space": "sRGB",
-  "design_principle": "neutral publication canvas with sparse semantic RGB accents; zero gold/yellow/amber/ochre family",
+  "design_principle": "neutral publication canvas with sparse semantic RGB accents; former gold/amber visual roles use the sky-blue family",
   "forbidden_hue_policy": {
     "description": "No gold, yellow, amber or ochre semantic colors are permitted. Saturated colors in the approximate 35°–75° hue band are prohibited.",
     "forbidden_terms": [
@@ -28,10 +28,10 @@
     "sector_power": "red RGB family; physical power-system structure",
     "sector_transportation": "green RGB family; physical transportation structure",
     "sector_information": "blue RGB family; sensing, estimation and communication",
-    "sector_organization": "magenta RGB family; coordination, procedure and organizational action",
+    "sector_organization": "sky-blue RGB family; coordination, procedure and organizational action",
     "viable": "green RGB family; sustainable, admissible, operational or recovery state",
     "critical": "red RGB family; constraint, disturbance, critical boundary or propagation",
-    "causal_control": "cyan RGB family; causal interface, mechanism or engineering intervention",
+    "causal_control": "light sky-blue RGB family; causal interface, mechanism or engineering intervention",
     "mathematical_model": "violet RGB family; mathematical abstraction when a separate model cue is needed",
     "inference_data": "cyan/blue RGB family; observation, inference or data-mediated state information"
   },
@@ -123,34 +123,34 @@
         253
       ],
       "organization": [
-        192,
-        38,
-        211
+        3,
+        105,
+        161
       ],
       "organization_ink": [
-        134,
-        25,
-        143
+        7,
+        89,
+        133
       ],
       "organization_soft": [
-        250,
-        232,
-        255
+        224,
+        242,
+        254
       ],
       "control": [
-        0,
-        122,
-        136
+        2,
+        132,
+        199
       ],
       "control_ink": [
-        0,
-        95,
-        106
+        3,
+        105,
+        161
       ],
       "control_soft": [
-        230,
-        246,
-        248
+        224,
+        242,
+        254
       ],
       "cyan": [
         0,
@@ -270,34 +270,34 @@
         61
       ],
       "organization": [
-        232,
-        121,
-        249
+        56,
+        189,
+        248
       ],
       "organization_ink": [
-        245,
-        194,
-        255
+        186,
+        230,
+        253
       ],
       "organization_soft": [
-        55,
-        27,
-        61
+        12,
+        74,
+        110
       ],
       "control": [
-        57,
-        197,
-        207
+        125,
+        211,
+        252
       ],
       "control_ink": [
-        130,
+        186,
         230,
-        236
+        253
       ],
       "control_soft": [
-        18,
-        50,
-        54
+        12,
+        74,
+        110
       ],
       "cyan": [
         34,
@@ -349,12 +349,12 @@
     "transport_soft": "#EAF5EE",
     "information": "#1D4ED8",
     "information_soft": "#E8EEFD",
-    "organization": "#C026D3",
-    "organization_ink": "#86198F",
-    "organization_soft": "#FAE8FF",
-    "control": "#007A88",
-    "control_ink": "#005F6A",
-    "control_soft": "#E6F6F8",
+    "organization": "#0369A1",
+    "organization_ink": "#075985",
+    "organization_soft": "#E0F2FE",
+    "control": "#0284C7",
+    "control_ink": "#0369A1",
+    "control_soft": "#E0F2FE",
     "cyan": "#006987",
     "cyan_soft": "#E6F6F9",
     "violet": "#6D28D9",
@@ -380,12 +380,12 @@
     "transport_soft": "#172D1D",
     "information": "#58A6FF",
     "information_soft": "#14253D",
-    "organization": "#E879F9",
-    "organization_ink": "#F5C2FF",
-    "organization_soft": "#371B3D",
-    "control": "#39C5CF",
-    "control_ink": "#82E6EC",
-    "control_soft": "#123236",
+    "organization": "#38BDF8",
+    "organization_ink": "#BAE6FD",
+    "organization_soft": "#0C4A6E",
+    "control": "#7DD3FC",
+    "control_ink": "#BAE6FD",
+    "control_soft": "#0C4A6E",
     "cyan": "#22D3EE",
     "cyan_soft": "#123138",
     "violet": "#A371F7",
@@ -410,10 +410,10 @@
     "power": "red + POWER label + physical solid-line topology + node geometry",
     "transportation": "green + TRANSPORTATION label + physical solid-line topology + node geometry",
     "information": "blue + INFORMATION label + dashed relation when used as an edge",
-    "organization": "magenta + ORGANIZATION label + dotted relation when used as an edge",
+    "organization": "sky blue + ORGANIZATION label + dotted relation when used as an edge",
     "operational": "green + directional dash pattern + explicit viable/service label",
     "critical": "red + dashed critical overlay + explicit boundary/critical label",
-    "causal": "cyan + interface geometry + dashed/double stroke + explicit mechanism label",
+    "causal": "light sky blue + interface geometry + dashed/double stroke + explicit mechanism label",
     "node_type": "shape geometry + text label"
   },
   "scientific_boundary": "RGB defines visual appearance and semantic channels; scientific meaning never depends on color alone and color does not strengthen the evidence class of a claim."
