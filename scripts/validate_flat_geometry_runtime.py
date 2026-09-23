@@ -66,7 +66,7 @@ def validate_mode(svg_text: str, palette: dict, mode: str) -> None:
         "violet": rgb(p["violet"]),
         "red": rgb(p["red"]),
         "green": rgb(p["green"]),
-        "gold": rgb(p["gold"]),
+        "control": rgb(p["control"]),
     }
     PREVIEW.mkdir(parents=True, exist_ok=True)
 
