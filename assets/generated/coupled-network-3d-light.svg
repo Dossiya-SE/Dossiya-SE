@@ -58,7 +58,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <path d="M1288.7 375.0L1237.4 261.1M1246.5 267.3L1237.4 261.1L1236.0 272.0" class="control"/>
 <circle cx="1237.4" cy="261.1" r="6" fill="var(--gold)"/>
 <text x="1302.7" y="363.0" class="math label">Y(t)</text>
-<text x="1273.1" y="310.0" class="math label" fill="var(--gold)">ρ_g</text>
+<text x="1273.1" y="310.0" class="math label" fill="var(--gold)">ρ₂</text>
 <text x="1289.6" y="222.9" text-anchor="end" class="math label" fill="var(--red)">∂V</text>
 <text x="48" y="690" class="small">STATIC 3D SCHEMATIC · NOT GIS ELEVATION. The separation h is a visual layer coordinate; it is not physical height, measured flow, or live telemetry.</text>
 <text x="48" y="718" class="small">The shared interface is the segment between corresponding layer states, validated as non-degenerate in R³.</text>

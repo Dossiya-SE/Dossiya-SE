@@ -40,7 +40,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="1240" y="114" text-anchor="middle" class="label">VIABILITY</text>
 <ellipse cx="1240" cy="220" rx="125" ry="76" class="viable"/>
 <text x="1240" y="227" text-anchor="middle" class="math h2">V</text>
-<text x="1240" y="338" text-anchor="middle" class="small">Y(t) ∈ V · maximize ρ_g</text>
+<text x="1240" y="338" text-anchor="middle" class="small">Y(t) ∈ V · maximize ρ₂</text>
 <path d="M270.0 220.0L410.0 220.0M400.6 225.7L410.0 220.0L400.6 214.3" class="control"/>
 <path d="M610.0 220.0L755.0 220.0M745.6 225.7L755.0 220.0L745.6 214.3" class="control"/>
 <path d="M955.0 220.0L1135.0 220.0M1125.6 225.7L1135.0 220.0L1125.6 214.3" class="control"/>

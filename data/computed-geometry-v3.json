@@ -397,6 +397,7 @@
     "layer_separation": 1.35
   },
   "viability": {
+    "distance_metric": "euclidean_L2",
     "state": [
       0.1,
       0.12
@@ -576,7 +577,7 @@
     "singular_values": [
       1.2814722284397,
       0.48527661004848,
-      0.20845992295345,
+      0.20845992295344,
       0.0
     ],
     "explained_variance_ratio": [

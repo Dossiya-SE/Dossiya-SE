@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc"><title id="title">Dossiya Dakou — computational geometry research portrait</title><desc id="desc">Computed affine Power and Transportation layers with a shared interlayer interface and a Shapely-derived viability region. The displayed resilience margin is the exact nearest-boundary normal projection.</desc><style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc"><title id="title">Dossiya Dakou — computational geometry research portrait</title><desc id="desc">Computed affine Power and Transportation layers with a shared interlayer interface and a Shapely-derived viability region. The displayed resilience margin is the exact Euclidean nearest-boundary normal projection.</desc><style>
 :root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E3B341;--organization-ink:#F0C96B;--organization-soft:#372D14;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#DDBA55;--gold-soft:#352D18}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
@@ -60,8 +60,8 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <path d="M1188.4 332.6L1139.5 224.0M1148.6 230.2L1139.5 224.0L1138.1 234.9" class="control"/>
 <circle cx="1139.5" cy="224.0" r="6" fill="var(--gold)"/>
 <text x="1202.4" y="320.6" class="math label">Y(t)</text>
-<text x="1174.0" y="270.3" class="math label" fill="var(--gold)">ρ_g</text>
+<text x="1174.0" y="270.3" class="math label" fill="var(--gold)">ρ₂</text>
 <text x="1189.0" y="187.0" text-anchor="end" class="math label" fill="var(--red)">∂V</text>
 <text x="56" y="568" class="small">Affine coordinates are computed from rank-2 plane bases; layer separation is schematic, not geographic elevation.</text>
-<text x="56" y="594" class="small">The green set is a computed constraint intersection; ρ_g is the exact nearest-boundary distance.</text>
+<text x="56" y="594" class="small">The green set is a computed constraint intersection; ρ₂ is the exact Euclidean nearest-boundary distance (g=I).</text>
 </svg>
