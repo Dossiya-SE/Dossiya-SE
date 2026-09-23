@@ -289,7 +289,7 @@ The profile uses **sRGB** with a neutral publication canvas, sparse semantic col
 | **Viability** | `rgb(22, 130, 58)` | admissible / sustainable / recovery state | region geometry + trajectory + label |
 | **Criticality** | `rgb(207, 34, 46)` | constraint, violation, critical boundary | dashed/thicker overlay + boundary label |
 | **Mathematical model** | `rgb(109, 40, 217)` | separate mathematical abstraction cue | equation/symbol label + geometric context |
-| **Inference / state information** | `rgb(8, 145, 178)` | observation or data-mediated state cue | state marker + label |
+| **Inference / state information** | `rgb(0, 105, 135)` | observation or data-mediated state cue | state marker + label |
 
 The visual system is governed in the **RGB model within sRGB**. Saturated warm hues in the reserved 35°–75° band are excluded from the semantic palette; causal/control uses cyan instead. RGB defines appearance and navigation—not scientific truth. Color never carries meaning alone; geometry, line pattern, direction and labels remain authoritative. The machine-readable authority is [`data/visual-palette.json`](data/visual-palette.json), where every displayed hex value is derived from an explicit RGB triplet.
 
