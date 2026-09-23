@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc"><title id="title">Current research state as SVD-projected conceptual state space</title><desc id="desc">Five explicitly conceptual four-dimensional research-state vectors projected by SVD into two dimensions. The highlighted transition is mechanism to dynamics; coordinates are not empirical measurements.</desc><style>
-:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E3B341;--organization-ink:#F0C96B;--organization-soft:#372D14;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#DDBA55;--gold-soft:#352D18}
+:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E879F9;--organization-ink:#F5C2FF;--organization-soft:#371B3D;--control:#39C5CF;--control-ink:#82E6EC;--control-soft:#123236;--cyan:#22D3EE;--cyan-soft:#123138;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#F472B6;--magenta-soft:#3C1B31}
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
@@ -18,7 +18,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .model{fill:none;stroke:var(--violet);stroke-width:2.4}
 .viable{fill:var(--green-soft);stroke:var(--green);stroke-width:2.4}
 .critical{fill:none;stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}
-.control{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-dasharray:8 6}
+.control{fill:none;stroke:var(--control);stroke-width:3.2;stroke-dasharray:8 6}
 .state{fill:var(--cyan);stroke:var(--panel);stroke-width:2}
 .node{fill:var(--panel);stroke-width:2.4}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -35,7 +35,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <path d="M1015.2 252.7L1100.0 151.2" class="model"/>
 <polygon points="515.0,134.4 530.6,143.4 530.6,161.4 515.0,170.4 499.4,161.4 499.4,143.4" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
 <text x="515.0" y="118.4" text-anchor="middle" class="label">STRUCTURE</text>
-<polygon points="679.3,291.7 700.1,303.7 700.1,327.7 679.3,339.7 658.5,327.7 658.5,303.7" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>
+<polygon points="679.3,291.7 700.1,303.7 700.1,327.7 679.3,339.7 658.5,327.7 658.5,303.7" fill="var(--control-soft)" stroke="var(--control)" stroke-width="3"/>
 <text x="679.3" y="281.7" text-anchor="middle" class="label">MECHANISM</text>
 <polygon points="881.6,324.8 904.4,341.4 895.7,368.2 867.5,368.2 858.8,341.4" fill="var(--information-soft)" stroke="var(--information)" stroke-width="3"/>
 <text x="881.6" y="314.8" text-anchor="middle" class="label">DYNAMICS</text>
