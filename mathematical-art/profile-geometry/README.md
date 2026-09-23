@@ -53,7 +53,7 @@ README
 6. **The seven-stage architecture is a continuous `γ:[0,1]→R²` satisfying `γ(t_i)=S_i`.**
 7. **A release must pass G1–G6:** mathematics, numerical verification, computational geometry, semantics, quantitative visual quality, and deterministic rendering.
 8. **Hero and graph→viability share one viability object.** The hero state, active constraint, nearest-boundary point and Euclidean `ρ₂` are derived from the same governed viability source used by graph→viability and the generated TikZ representation; Python, Shapely and Julia must agree numerically.
-9. **GitHub-width readability is release-critical.** At 640 px, governed typography must remain above minimum effective sizes, project signatures must occupy identical layout cells, and project labels must remain non-overlapping; 980 px and 640 px raster previews are both inspected before release.
+9. **GitHub-width readability is release-critical.** At 640 px, governed typography must remain above minimum effective sizes, project signatures must occupy identical layout cells, and project labels must remain non-overlapping; 980 px and 640 px raster previews are both inspected before release; adaptive single-file SVGs are additionally rasterized with their explicit dark-mode CSS variables.
 10. **Computed numerical artifacts are canonically serialized.** Full-precision values are used for G1–G3 checks, then emitted at the governed 14-significant-digit representation with values below (10^{-14}) canonicalized to zero. CI also runs BLAS/LAPACK single-threaded. Numerically equivalent runs must therefore produce byte-identical computed JSON, TikZ and SVG artifacts.
 
 ## Rhino / Grasshopper policy
