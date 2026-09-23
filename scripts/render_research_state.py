@@ -123,7 +123,7 @@ def base_style(dark: bool | None = None) -> str:
         "green","green_soft","red","red_soft","control","control_soft","control_ink","ghost",
         "power","power_soft","transport","transport_soft","information","information_soft",
         "organization","organization_ink","organization_soft","cyan","cyan_soft",
-        "violet","violet_soft","magenta","magenta_soft","control","control_soft",
+        "violet","violet_soft","magenta","magenta_soft",
     ]
     def vars_for(values: dict) -> str:
         return ";".join(f"--{k.replace('_','-')}:{values[k]}" for k in keys)
