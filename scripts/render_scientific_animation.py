@@ -99,6 +99,11 @@ def fixed_palette(palette: dict, mode: str) -> Image.Image:
         t=tuple(max(0,min(255,int(round(v)))) for v in c)
         if t not in seen:
             seen.add(t); colors.append(t)
+    accent_contract=palette.get("accent_contract",{})
+    for key in ("primary","strong","on_light_graphic","on_light_text","on_dark_text"):
+        spec=accent_contract.get(key,{})
+        if "rgb" in spec:
+            add(spec["rgb"])
     for triplet in source.values():
         add(triplet)
     for key in keys:
@@ -166,6 +171,7 @@ def render_frame(g: dict, palette: dict, spec: dict, mode: str, k: int) -> Image
     transport_soft=rgb(palette,mode,"transport_soft")
     control=rgb(palette,mode,"control")
     control_soft=rgb(palette,mode,"control_soft")
+    accent_primary=tuple(int(v) for v in palette["accent_contract"]["primary"]["rgb"])
 
     image=Image.new("RGB",(W*ss,H*ss),bg)
     draw=ImageDraw.Draw(image)
@@ -204,11 +210,14 @@ def render_frame(g: dict, palette: dict, spec: dict, mode: str, k: int) -> Image
             draw.line(poly+[poly[0]],fill=color,width=3*ss,joint="curve")
 
     a,b=map(tuple,projected["interface"])
-    dashed_line(draw,a,b,fill=control,width=4*ss,dash=9*ss,gap=7*ss)
+    # Contrast-safe underlay + exact Light Sky Blue overlay.
+    dashed_line(draw,a,b,fill=control,width=6*ss,dash=9*ss,gap=7*ss)
+    dashed_line(draw,a,b,fill=accent_primary,width=3*ss,dash=9*ss,gap=7*ss)
     mx,my=(a[0]+b[0])/2,(a[1]+b[1])/2
     h=regular_polygon(mx,my,17*ss,6)
     draw.polygon(h,fill=control_soft)
-    draw.line(h+[h[0]],fill=control,width=3*ss,joint="curve")
+    draw.line(h+[h[0]],fill=control,width=5*ss,joint="curve")
+    draw.line(h+[h[0]],fill=accent_primary,width=2*ss,joint="curve")
 
     # Neutral reference ring: camera/viewpoint cue only, not physical geometry.
     r=0.39*min(W,H)*ss
@@ -227,7 +236,7 @@ def render_frame(g: dict, palette: dict, spec: dict, mode: str, k: int) -> Image
     draw.text((22,H-42),"CAMERA MOTION ONLY · NOT PHYSICAL TIME",fill=muted,font=font2)
 
     y=74
-    legend=(("POWER",power),("TRANSPORT",transport),("INTERFACE / CONTROL",control))
+    legend=(("POWER",power),("TRANSPORT",transport),("INTERFACE / CONTROL",accent_primary))
     for label,color in legend:
         draw.line((24,y+6,54,y+6),fill=color,width=4)
         draw.text((64,y),label,fill=ink,font=font2)
