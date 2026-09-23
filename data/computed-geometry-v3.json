@@ -469,6 +469,7 @@
       }
     ],
     "active_constraint": "upper_l",
+    "active_constraint_index": 6,
     "active_segment": [
       [
         -1.45,

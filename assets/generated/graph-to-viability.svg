@@ -46,6 +46,6 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="1262.0" y="268.3" class="math label">Y(t)</text>
 <text x="1235.3" y="222.0" class="math label" fill="var(--gold)">ρ_g</text>
 <text x="1248.1" y="144.5" text-anchor="end" class="math label" fill="var(--red)">∂V</text>
-<text x="965" y="475" class="small">V = intersection of 6 governed constraints · active boundary: upper_l</text>
+<text x="965" y="475" class="small">V = intersection of 6 governed constraints · active boundary: g₆(Y)=0</text>
 <text x="48" y="520" class="small">The feasible set, nearest boundary point and ρ_g are computed objects. They remain schematic until their physical constraints are calibrated and empirically validated.</text>
 </svg>
