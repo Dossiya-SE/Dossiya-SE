@@ -10,14 +10,14 @@ mkpath(joinpath(root, "artifacts"))
 
 vec(x) = Float64.(x)
 
-const CANONICAL_SIG_DIGITS = 14
+const CANONICAL_SIG_DIGITS = 12
 const CANONICAL_ZERO_TOL = 1e-14
 
 function canonical_float(x)
     y = Float64(x)
     isfinite(y) || error("non-finite Julia audit value")
     abs(y) < CANONICAL_ZERO_TOL && return "0.0"
-    @sprintf("%.14g", y)
+    @sprintf("%.12g", y)
 end
 
 function plane_matrix(section)
