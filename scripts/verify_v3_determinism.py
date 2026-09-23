@@ -65,7 +65,7 @@ def sha256(path: Path) -> str:
 
 def targets() -> list[Path]:
     previews = sorted(PREVIEW.glob("*.png"))
-    require(len(previews) == 20, f"expected 20 runtime previews, found {len(previews)}")
+    require(len(previews) == 28, f"expected 28 runtime previews, found {len(previews)}")
     all_targets = STATIC_TARGETS + previews
     missing = [str(p.relative_to(ROOT)) for p in all_targets if not p.exists()]
     require(not missing, "missing determinism targets: " + ", ".join(missing))
