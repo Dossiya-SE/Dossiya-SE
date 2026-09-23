@@ -8,6 +8,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .label{font-size:20px;font-weight:720}
 .small{font-size:18px;fill:var(--muted)}
 .micro{font-size:16px;fill:var(--muted);letter-spacing:.08em}
+.project-name{font-size:18px;font-weight:720}
 .panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
 .plane{fill:var(--ghost);stroke:var(--line);stroke-width:1.4}
 .power{fill:none;stroke:var(--power);stroke-width:3}
@@ -25,17 +26,17 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <rect x="1" y="1" width="1598" height="498" rx="18" fill="var(--bg)" stroke="var(--line)"/>
 <text x="48" y="58" class="micro">FEATURED RESEARCH SYSTEMS · EQUAL-AREA GEOMETRIC INDEX</text>
 <polygon points="220.0,122.3 296.0,253.9 144.0,253.9" fill="var(--power-soft)" stroke="var(--power)" stroke-width="3"/>
-<text x="220" y="330" text-anchor="middle" class="label">Africa Energy Dignity</text>
-<text x="220" y="356" text-anchor="middle" class="small">equal area · 3-vertex signature · navigation only</text>
+<text x="220" y="322" text-anchor="middle" class="project-name">Africa Energy Dignity</text>
+<text x="220" y="354" text-anchor="middle" class="small">3-vertex signature</text>
 <polygon points="600.0,148.0 653.7,179.0 653.7,241.0 600.0,272.0 546.3,241.0 546.3,179.0" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
-<text x="600" y="330" text-anchor="middle" class="label">Mathematics Exploration</text>
-<text x="600" y="356" text-anchor="middle" class="small">equal area · 6-vertex signature · navigation only</text>
+<text x="600" y="322" text-anchor="middle" class="project-name">Mathematics Exploration</text>
+<text x="600" y="354" text-anchor="middle" class="small">6-vertex signature</text>
 <polygon points="980.0,139.3 1050.7,210.0 980.0,280.7 909.3,210.0" fill="var(--transport-soft)" stroke="var(--transport)" stroke-width="3"/>
-<text x="980" y="330" text-anchor="middle" class="label">Optimization for Sustainability</text>
-<text x="980" y="356" text-anchor="middle" class="small">equal area · 4-vertex signature · navigation only</text>
+<text x="980" y="322" text-anchor="middle" class="project-name">Optimization for Sustainability</text>
+<text x="980" y="354" text-anchor="middle" class="small">4-vertex signature</text>
 <polygon points="1360.0,145.1 1421.7,190.0 1398.1,262.5 1321.9,262.5 1298.3,190.0" fill="var(--cyan-soft)" stroke="var(--cyan)" stroke-width="3"/>
-<text x="1360" y="330" text-anchor="middle" class="label">Mathematical Surface Engineering</text>
-<text x="1360" y="356" text-anchor="middle" class="small">equal area · 5-vertex signature · navigation only</text>
+<text x="1360" y="322" text-anchor="middle" class="project-name">Mathematical Surface Engineering</text>
+<text x="1360" y="354" text-anchor="middle" class="small">5-vertex signature</text>
 <line x1="48" y1="402" x2="1552" y2="402" stroke="var(--line)"/>
 <text x="48" y="435" class="small">All signatures have the same computed area; shape/color do not encode rank, maturity, scientific importance or validation.</text>
 </svg>
