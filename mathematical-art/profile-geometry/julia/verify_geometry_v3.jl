@@ -67,6 +67,8 @@ orth_p = norm(Qp'Qp - Matrix{Float64}(I,2,2))
 orth_t = norm(Qt'Qt - Matrix{Float64}(I,2,2))
 
 vcfg = cfg["viability"]
+distance_metric = String(vcfg["metric"])
+distance_metric == "euclidean_L2" || error("Julia verifier supports viability metric euclidean_L2 only")
 x = vec(vcfg["state"])
 candidates = feasible_projection_candidates(vcfg)
 active = candidates[argmin(getfield.(candidates,:distance))]
@@ -99,6 +101,7 @@ open(report, "w") do io
     println(io, "transport_rank = ", rank(T))
     println(io, "canonical_significant_digits = ", CANONICAL_SIG_DIGITS)
     println(io, "canonical_zero_tolerance = ", canonical_float(CANONICAL_ZERO_TOL))
+    println(io, "distance_metric = \"", distance_metric, "\"")
     println(io, "power_q_orthogonality = ", canonical_float(orth_p))
     println(io, "transport_q_orthogonality = ", canonical_float(orth_t))
     println(io, "active_constraint_index = ", active.index)
