@@ -139,6 +139,14 @@ and, when a physically defensible metric exists,
 \rho_g(Y)=d_g\!\left(Y,\partial\mathcal V\right).
 ~~~
 
+The current V3 computational geometry uses only the Euclidean special case \(g=I\). Therefore the rendered margin is
+
+~~~math
+\rho_2(Y)=\min_{z\in\partial\mathcal V}\lVert Y-z\rVert_2.
+~~~
+
+A non-Euclidean \(\rho_g\) requires a separately justified and validated metric; it is not implied by the current Shapely computation.
+
 A coherent trajectory, metric or viable region is a mathematical object. It becomes an engineering claim only through explicit physical interpretation, verification, calibration and validation.
 
 ---
