@@ -29,7 +29,7 @@ def vars_for(p: dict) -> str:
         "green_soft", "red", "red_soft", "control", "control_soft",
         "control_ink", "ghost", "power", "power_soft", "transport", "transport_soft",
         "information", "information_soft", "organization", "organization_ink", "organization_soft",
-        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft", "control", "control_soft",
+        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft",
     ]
     return ";".join(f"--{k.replace('_', '-')}:{p[k]}" for k in order)
 
