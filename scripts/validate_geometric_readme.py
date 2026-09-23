@@ -30,8 +30,11 @@ def read_svg(name):
     require(r.attrib.get("viewBox"),f"{name}: viewBox missing")
     require("<title" in t and "<desc" in t,f"{name}: accessibility metadata missing")
     require("<script" not in t.lower(),f"{name}: scripts prohibited")
+    lower=t.lower()
+    for forbidden in ("gold","yellow","amber","ochre"):
+        require(forbidden not in lower,f"{name}: forbidden color-family term present: {forbidden}")
     require("prefers-reduced-motion:reduce" in t,f"{name}: reduced-motion fallback missing")
-    for token in ("--power:","--transport:","--information:","--organization:","--violet:","--green:","--red:","--gold:"):
+    for token in ("--power:","--transport:","--information:","--organization:","--control:","--violet:","--green:","--red:"):
         require(token in t,f"{name}: governed palette token missing {token}")
     return t
 
