@@ -283,7 +283,7 @@ def projects(g,palette):
        '<rect x="1" y="1" width="1598" height="498" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
        '<text x="48" y="58" class="micro">FEATURED RESEARCH SYSTEMS · EQUAL-AREA GEOMETRIC INDEX</text>']
     boxes=[]
-    cells=[[x-150,105,x+150,305] for x in centers]
+    cells=[[x-150,110,x+150,310] for x in centers]
     for x,item,col in zip(centers,items,cols):
         poly=[(x+vx,210+vy) for vx,vy in item["vertices"]]; boxes.append(bbox(poly))
         p += [f'<polygon points="{pts(poly)}" fill="var(--{col}-soft)" stroke="var(--{col})" stroke-width="3"/>',
