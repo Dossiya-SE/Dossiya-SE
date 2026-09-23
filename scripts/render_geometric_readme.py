@@ -51,7 +51,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .model{{fill:none;stroke:var(--violet);stroke-width:2.4}}
 .viable{{fill:var(--green-soft);stroke:var(--green);stroke-width:2.4}}
 .critical{{fill:none;stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}}
-.control{{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-dasharray:8 6}}
+.control{{fill:none;stroke:var(--cyan);stroke-width:3.2;stroke-dasharray:8 6}}
 .state{{fill:var(--cyan);stroke:var(--panel);stroke-width:2}}
 .node{{fill:var(--panel);stroke-width:2.4}}
 @media(prefers-reduced-motion:reduce){{*{{animation:none!important;transition:none!important}}}}
@@ -117,9 +117,9 @@ def draw_viability(g,x0,y0,x1,y1):
         f'<path d="M{seg[0][0]:.1f} {seg[0][1]:.1f}L{seg[1][0]:.1f} {seg[1][1]:.1f}" class="critical"/>',
         f'<circle cx="{state[0]:.1f}" cy="{state[1]:.1f}" r="9" class="state"/>',
         arrow(state[0],state[1],q[0],q[1],"control"),
-        f'<circle cx="{q[0]:.1f}" cy="{q[1]:.1f}" r="6" fill="var(--gold)"/>',
+        f'<circle cx="{q[0]:.1f}" cy="{q[1]:.1f}" r="6" fill="var(--cyan)"/>',
         f'<text x="{state[0]+14:.1f}" y="{state[1]-12:.1f}" class="math label">Y(t)</text>',
-        f'<text x="{(state[0]+q[0])/2+10:.1f}" y="{(state[1]+q[1])/2-8:.1f}" class="math label" fill="var(--gold)">ρ₂</text>',
+        f'<text x="{(state[0]+q[0])/2+10:.1f}" y="{(state[1]+q[1])/2-8:.1f}" class="math label" fill="var(--cyan)">ρ₂</text>',
         f'<text x="{seg[1][0]-6:.1f}" y="{seg[1][1]-12:.1f}" text-anchor="end" class="math label" fill="var(--red)">∂V</text>',
     ]
     return markup,{"region":bbox(poly),"state":[state[0]-9,state[1]-9,state[0]+9,state[1]+9],"projection":[min(state[0],q[0]),min(state[1],q[1]),max(state[0],q[0]),max(state[1],q[1])]}
@@ -151,7 +151,7 @@ def hero(g,palette,mode):
         p.append(f'<polygon points="{pts(regular_polygon(kinds[::-1][i],x,y,13))}" class="node" stroke="var(--transport)"/>')
     p += [
       f'<path d="M{inter[0][0]:.1f} {inter[0][1]:.1f}L{inter[1][0]:.1f} {inter[1][1]:.1f}" class="control"/>',
-      f'<polygon points="{pts(regular_polygon(6,(inter[0][0]+inter[1][0])/2,(inter[0][1]+inter[1][1])/2,24))}" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>',
+      f'<polygon points="{pts(regular_polygon(6,(inter[0][0]+inter[1][0])/2,(inter[0][1]+inter[1][1])/2,24))}" fill="var(--cyan-soft)" stroke="var(--cyan)" stroke-width="3"/>',
       '<text x="96" y="188" class="label" fill="var(--power)">POWER · affine layer P</text>',
       '<text x="96" y="476" class="label" fill="var(--transport)">TRANSPORTATION · affine layer T</text>',
       '<line x1="800" y1="142" x2="800" y2="535" stroke="var(--line)"/>',
@@ -213,7 +213,7 @@ def coupled(g,palette,mode):
     for i,(x,y) in enumerate(tn): p.append(f'<polygon points="{pts(regular_polygon([4,6,5,3,6][i],x,y,16))}" class="node" stroke="var(--transport)"/>')
     mid=((inter[0][0]+inter[1][0])/2,(inter[0][1]+inter[1][1])/2)
     p += [f'<path d="M{inter[0][0]:.1f} {inter[0][1]:.1f}L{inter[1][0]:.1f} {inter[1][1]:.1f}" class="control"/>',
-          f'<polygon points="{pts(regular_polygon(6,mid[0],mid[1],30))}" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="3"/>',
+          f'<polygon points="{pts(regular_polygon(6,mid[0],mid[1],30))}" fill="var(--cyan-soft)" stroke="var(--cyan)" stroke-width="3"/>',
           '<text x="86" y="154" class="label" fill="var(--power)">POWER NETWORK · plane P</text>',
           '<text x="86" y="556" class="label" fill="var(--transport)">TRANSPORTATION NETWORK · plane T</text>',
           '<rect x="1030" y="128" width="505" height="490" rx="16" class="panel"/>',
