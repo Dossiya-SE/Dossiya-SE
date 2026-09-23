@@ -15,7 +15,7 @@ DATA=ROOT/"data"
 OUT=ROOT/"assets"/"generated"
 ART=ROOT/"artifacts"
 
-TYPE={"title":38,"h2":26,"label":20,"small":18,"micro":16}
+TYPE={"title":38,"h2":26,"label":20,"small":18,"micro":16,"project_name":18}
 
 def load_json(name):
     return json.loads((DATA/name).read_text(encoding="utf-8"))
@@ -41,6 +41,7 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 .label{{font-size:{TYPE["label"]}px;font-weight:720}}
 .small{{font-size:{TYPE["small"]}px;fill:var(--muted)}}
 .micro{{font-size:{TYPE["micro"]}px;fill:var(--muted);letter-spacing:.08em}}
+.project-name{{font-size:{TYPE["project_name"]}px;font-weight:720}}
 .panel{{fill:var(--panel);stroke:var(--line);stroke-width:1.2}}
 .plane{{fill:var(--ghost);stroke:var(--line);stroke-width:1.4}}
 .power{{fill:none;stroke:var(--power);stroke-width:3}}
@@ -283,15 +284,18 @@ def projects(g,palette):
        '<rect x="1" y="1" width="1598" height="498" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
        '<text x="48" y="58" class="micro">FEATURED RESEARCH SYSTEMS · EQUAL-AREA GEOMETRIC INDEX</text>']
     boxes=[]
+    label_boxes=[]
     cells=[[x-150,110,x+150,310] for x in centers]
     for x,item,col in zip(centers,items,cols):
         poly=[(x+vx,210+vy) for vx,vy in item["vertices"]]; boxes.append(bbox(poly))
         p += [f'<polygon points="{pts(poly)}" fill="var(--{col}-soft)" stroke="var(--{col})" stroke-width="3"/>',
-              f'<text x="{x}" y="330" text-anchor="middle" class="label">{escape(item["name"])}</text>',
-              f'<text x="{x}" y="356" text-anchor="middle" class="small">equal area · {item["sides"]}-vertex signature · navigation only</text>']
+              f'<text x="{x}" y="322" text-anchor="middle" class="project-name">{escape(item["name"])}</text>',
+              f'<text x="{x}" y="354" text-anchor="middle" class="small">{item["sides"]}-vertex signature</text>']
+        label_boxes += [text_box(x,322,item["name"],TYPE["project_name"]),
+                        text_box(x,354,f'{item["sides"]}-vertex signature',TYPE["small"])]
     p += ['<line x1="48" y1="402" x2="1552" y2="402" stroke="var(--line)"/>',
           '<text x="48" y="435" class="small">All signatures have the same computed area; shape/color do not encode rank, maturity, scientific importance or validation.</text>','</svg>']
-    return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes,"cells":cells,"centers":[[x,210] for x in centers]}
+    return "\n".join(p),{"viewbox":[0,0,w,h],"major":boxes,"cells":cells,"centers":[[x,210] for x in centers],"labels":label_boxes}
 
 def pipeline(g,palette):
     w,h=1800,460
