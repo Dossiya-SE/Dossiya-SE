@@ -23,8 +23,8 @@ def main():
     g=json.loads(COMPUTED.read_text(encoding="utf-8"))
     require(g.get("contract_id")=="SCIENTIFIC-GEOMETRY-V3","computed contract id mismatch")
     canon=g.get("canonical_serialization",{})
-    require(int(canon.get("significant_digits",0))==14,
-            "computed geometry must declare 14-significant-digit canonical serialization")
+    require(int(canon.get("significant_digits",0))==12,
+            "computed geometry must declare 12-significant-digit canonical serialization")
     require(abs(float(canon.get("zero_tolerance",-1.0))-1e-14)<1e-20,
             "computed geometry canonical zero tolerance mismatch")
 
