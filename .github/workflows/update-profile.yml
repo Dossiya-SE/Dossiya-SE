@@ -123,8 +123,14 @@ jobs:
       - name: Render final V3 README visuals from computed geometry
         run: python scripts/render_geometric_readme.py
 
+      - name: Render governed RGB scientific GIF animation
+        run: python scripts/render_scientific_animation.py
+
       - name: Validate V3 scientific visual semantics
         run: python scripts/validate_geometric_readme.py
+
+      - name: Validate governed scientific GIF animation
+        run: python scripts/validate_scientific_animation.py
 
       - name: Validate quantitative visual geometry
         run: python scripts/validate_visual_geometry.py
@@ -140,7 +146,7 @@ jobs:
         run: |
           git diff --check
           python scripts/verify_v3_determinism.py
-          echo "G1 mathematics, G2 numerical verification, G3 computational geometry, G4 semantics, G5 visual quality and G6 byte-identical double-build determinism completed."
+          echo "G1 mathematics, G2 numerical verification, G3 computational geometry, G4 semantics, G5 visual quality and G6 byte-identical SVG/GIF double-build determinism completed."
 
       - name: Upload V3 geometry audit artifacts
         if: always() && github.event_name == 'pull_request'
@@ -162,6 +168,20 @@ jobs:
         with:
           name: geometric-readme-v3-runtime-previews
           path: artifacts/geometric-readme-preview/*.png
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload scientific animation audit
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: scientific-animation-v1-audit
+          path: |
+            data/animation-spec.json
+            artifacts/animation-metadata.json
+            artifacts/animation-validation.json
+            assets/generated/coupled-network-orbit-light.gif
+            assets/generated/coupled-network-orbit-dark.gif
           if-no-files-found: error
           retention-days: 14
 
