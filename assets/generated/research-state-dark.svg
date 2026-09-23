@@ -3,11 +3,11 @@
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
-.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
-.h2{font-size:22px;font-weight:780}
-.label{font-size:15px;font-weight:720}
-.small{font-size:13px;fill:var(--muted)}
-.micro{font-size:11px;fill:var(--muted);letter-spacing:.08em}
+.title{font-size:38px;font-weight:820;letter-spacing:-.02em}
+.h2{font-size:26px;font-weight:780}
+.label{font-size:20px;font-weight:720}
+.small{font-size:18px;fill:var(--muted)}
+.micro{font-size:16px;fill:var(--muted);letter-spacing:.08em}
 .panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
 .plane{fill:var(--ghost);stroke:var(--line);stroke-width:1.4}
 .power{fill:none;stroke:var(--power);stroke-width:3}
@@ -43,5 +43,6 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <polygon points="1100.0,133.2 1115.6,142.2 1115.6,160.2 1100.0,169.2 1084.4,160.2 1084.4,142.2" fill="var(--violet-soft)" stroke="var(--violet)" stroke-width="3"/>
 <text x="1100.0" y="117.2" text-anchor="middle" class="label">VIABILITY</text>
 <path d="M679.3 315.7L881.6 348.8M871.4 353.0L881.6 348.8L873.3 341.6" class="control"/>
-<text x="48" y="466" class="small">Conceptual normalized state r=(r_s,r_c,r_d,r_v); SVD projection only. First two components explain 97.7% of the configured conceptual variance; not empirical measurement.</text>
+<text x="48" y="452" class="small">Conceptual normalized state r=(r_s,r_c,r_d,r_v); SVD projection only.</text>
+<text x="48" y="478" class="small">First two components explain 97.7% of configured conceptual variance; coordinates are not empirical measurements.</text>
 </svg>

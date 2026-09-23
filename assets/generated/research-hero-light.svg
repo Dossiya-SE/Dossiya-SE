@@ -3,11 +3,11 @@
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
-.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
-.h2{font-size:22px;font-weight:780}
-.label{font-size:15px;font-weight:720}
-.small{font-size:13px;fill:var(--muted)}
-.micro{font-size:11px;fill:var(--muted);letter-spacing:.08em}
+.title{font-size:38px;font-weight:820;letter-spacing:-.02em}
+.h2{font-size:26px;font-weight:780}
+.label{font-size:20px;font-weight:720}
+.small{font-size:18px;fill:var(--muted)}
+.micro{font-size:16px;fill:var(--muted);letter-spacing:.08em}
 .panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
 .plane{fill:var(--ghost);stroke:var(--line);stroke-width:1.4}
 .power{fill:none;stroke:var(--power);stroke-width:3}
@@ -61,5 +61,6 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="1202.4" y="320.6" class="math label">Y(t)</text>
 <text x="1174.0" y="270.3" class="math label" fill="var(--gold)">ρ_g</text>
 <text x="1189.0" y="187.0" text-anchor="end" class="math label" fill="var(--red)">∂V</text>
-<text x="56" y="582" class="small">Affine coordinates are computed from rank-2 plane bases; layer separation is schematic, not geographic elevation. The green set is a computed constraint intersection; ρ_g is the exact nearest-boundary distance.</text>
+<text x="56" y="568" class="small">Affine coordinates are computed from rank-2 plane bases; layer separation is schematic, not geographic elevation.</text>
+<text x="56" y="594" class="small">The green set is a computed constraint intersection; ρ_g is the exact nearest-boundary distance.</text>
 </svg>

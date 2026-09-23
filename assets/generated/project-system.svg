@@ -3,11 +3,11 @@
 @media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E3B341;--organization-ink:#F0C96B;--organization-soft:#372D14;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#DDBA55;--gold-soft:#352D18}}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
-.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
-.h2{font-size:22px;font-weight:780}
-.label{font-size:15px;font-weight:720}
-.small{font-size:13px;fill:var(--muted)}
-.micro{font-size:11px;fill:var(--muted);letter-spacing:.08em}
+.title{font-size:38px;font-weight:820;letter-spacing:-.02em}
+.h2{font-size:26px;font-weight:780}
+.label{font-size:20px;font-weight:720}
+.small{font-size:18px;fill:var(--muted)}
+.micro{font-size:16px;fill:var(--muted);letter-spacing:.08em}
 .panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
 .plane{fill:var(--ghost);stroke:var(--line);stroke-width:1.4}
 .power{fill:none;stroke:var(--power);stroke-width:3}

@@ -3,11 +3,11 @@
 
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
-.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
-.h2{font-size:22px;font-weight:780}
-.label{font-size:15px;font-weight:720}
-.small{font-size:13px;fill:var(--muted)}
-.micro{font-size:11px;fill:var(--muted);letter-spacing:.08em}
+.title{font-size:38px;font-weight:820;letter-spacing:-.02em}
+.h2{font-size:26px;font-weight:780}
+.label{font-size:20px;font-weight:720}
+.small{font-size:18px;fill:var(--muted)}
+.micro{font-size:16px;fill:var(--muted);letter-spacing:.08em}
 .panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
 .plane{fill:var(--ghost);stroke:var(--line);stroke-width:1.4}
 .power{fill:none;stroke:var(--power);stroke-width:3}

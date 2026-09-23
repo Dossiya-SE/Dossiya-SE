@@ -3,11 +3,11 @@
 @media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E3B341;--organization-ink:#F0C96B;--organization-soft:#372D14;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#DDBA55;--gold-soft:#352D18}}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
-.title{font-size:34px;font-weight:820;letter-spacing:-.02em}
-.h2{font-size:22px;font-weight:780}
-.label{font-size:15px;font-weight:720}
-.small{font-size:13px;fill:var(--muted)}
-.micro{font-size:11px;fill:var(--muted);letter-spacing:.08em}
+.title{font-size:38px;font-weight:820;letter-spacing:-.02em}
+.h2{font-size:26px;font-weight:780}
+.label{font-size:20px;font-weight:720}
+.small{font-size:18px;fill:var(--muted)}
+.micro{font-size:16px;fill:var(--muted);letter-spacing:.08em}
 .panel{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
 .plane{fill:var(--ghost);stroke:var(--line);stroke-width:1.4}
 .power{fill:none;stroke:var(--power);stroke-width:3}
@@ -46,6 +46,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <text x="1262.0" y="268.3" class="math label">Y(t)</text>
 <text x="1235.3" y="222.0" class="math label" fill="var(--gold)">ρ_g</text>
 <text x="1248.1" y="144.5" text-anchor="end" class="math label" fill="var(--red)">∂V</text>
-<text x="965" y="475" class="small">V = intersection of 6 governed constraints · active boundary: g₆(Y)=0</text>
-<text x="48" y="520" class="small">The feasible set, nearest boundary point and ρ_g are computed objects. They remain schematic until their physical constraints are calibrated and empirically validated.</text>
+<text x="965" y="468" class="small">V = intersection of 6 governed constraints</text>
+<text x="965" y="493" class="small">active boundary: g₆(Y)=0</text>
+<text x="48" y="535" class="small">The feasible set, nearest boundary point and ρ_g are computed objects; physical calibration and empirical validation remain separate requirements.</text>
 </svg>
