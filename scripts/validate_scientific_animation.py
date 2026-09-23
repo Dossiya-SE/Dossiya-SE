@@ -81,6 +81,8 @@ def validate_gif(path: Path, spec: dict, mode: str) -> dict:
                 max_step=max(max_step,image_difference(frames[i-1],frame))
 
         require(max_unique<=256,f"{mode}: GIF frame exceeds 256 colors")
+        required_primary=tuple(int(v) for v in forbidden["required_primary_rgb"])
+        require(required_primary in used_colors,f"{mode}: exact Light Sky Blue primary RGB{required_primary} missing from decoded GIF")
         for color in used_colors:
             hue,sat=hue_sat(color)
             if sat>=min_sat:
@@ -114,6 +116,10 @@ def main() -> int:
     require(spec.get("contract_id")=="SCIENTIFIC-ANIMATION-V1","animation contract id mismatch")
     require(spec.get("animation_semantics")=="camera_orbit_only","animation must be viewpoint-only")
     require(palette.get("color_model")=="RGB" and palette.get("color_space")=="sRGB","animation palette must be RGB/sRGB")
+    accent=palette.get("accent_contract",{})
+    require(accent.get("contract_id")=="LIGHT-SKY-BLUE-ACCENT-V1","Light Sky Blue accent contract missing")
+    require(accent.get("primary",{}).get("rgb")==[135,206,250],"Light Sky Blue primary RGB mismatch")
+    require(accent.get("strong",{}).get("rgb")==[0,191,255],"Deep Sky Blue strong RGB mismatch")
     require(meta.get("contract_id")==spec["contract_id"],"animation metadata contract mismatch")
     require(float(meta.get("periodic_rotation_residual",1.0))<1e-12,"camera orbit is not mathematically periodic")
 
@@ -140,7 +146,7 @@ def main() -> int:
         "scientific_boundary":spec["scientific_boundary"],
     }
     (ART/"animation-validation.json").write_text(json.dumps(report,indent=2,sort_keys=True)+"\n",encoding="utf-8")
-    print("SCIENTIFIC ANIMATION VALIDATION: PASS — timing, motion, RGB palette, loop continuity and provenance are valid.")
+    print("SCIENTIFIC ANIMATION VALIDATION: PASS — timing, motion, RGB palette, exact Light Sky Blue accent, loop continuity and provenance are valid.")
     return 0
 
 
