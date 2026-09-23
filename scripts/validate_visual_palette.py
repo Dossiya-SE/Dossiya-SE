@@ -64,6 +64,19 @@ def validate_palette(p: dict) -> None:
     require(p.get("color_space") == "sRGB", "visual palette must explicitly use sRGB color space")
     require(p.get("evidence_state") == "VALIDATED_VISUAL_DESIGN_SPECIFICATION", "invalid visual palette evidence state")
 
+    accent = p.get("accent_contract", {})
+    require(accent.get("contract_id") == "LIGHT-SKY-BLUE-ACCENT-V1", "Light Sky Blue accent contract missing")
+    require(accent.get("primary", {}).get("rgb") == [135, 206, 250] and accent.get("primary", {}).get("hex") == "#87CEFA",
+            "primary accent must be Light Sky Blue RGB(135,206,250) / #87CEFA")
+    require(accent.get("strong", {}).get("rgb") == [0, 191, 255] and accent.get("strong", {}).get("hex") == "#00BFFF",
+            "strong accent must be Deep Sky Blue RGB(0,191,255) / #00BFFF")
+    require(accent.get("on_light_graphic", {}).get("rgb") == [45, 143, 214],
+            "light-background graphic companion must be RGB(45,143,214)")
+    require(accent.get("on_light_text", {}).get("rgb") == [40, 120, 205],
+            "light-background normal-text companion must be RGB(40,120,205)")
+    require(accent.get("on_dark_text", {}).get("rgb") == [191, 232, 255],
+            "dark-background label companion must be RGB(191,232,255)")
+
     rgb_values = p.get("rgb_values", {})
     forbidden_token_names=set(FORBIDDEN_TERMS)
     for mode in ("light","dark"):
@@ -85,6 +98,11 @@ def validate_palette(p: dict) -> None:
             hue, sat = hue_saturation(triplet)
             if sat >= min_sat:
                 require(not (h0 <= hue <= h1), f"{mode} {token}: prohibited warm hue {hue:.1f}°")
+
+    require(p["light"]["control"] == "#2D8FD6" and p["light"]["control_ink"] == "#2878CD",
+            "light control aliases must use contrast-safe sky-blue companions")
+    require(p["dark"]["control"] == "#87CEFA" and p["dark"]["control_ink"] == "#BFE8FF",
+            "dark control aliases must use Light Sky Blue and its high-contrast label companion")
 
     thresholds = p["minimum_contrast"]
     text_min = float(thresholds["normal_text"])
@@ -165,7 +183,7 @@ def main() -> int:
     p = load()
     validate_palette(p)
     validate_svg_palette(p)
-    print("VISUAL RGB VALIDATION: PASS — RGB triplets, sRGB conversion, contrast, zero-gold hue policy and SVG tokens are consistent.")
+    print("VISUAL RGB VALIDATION: PASS — RGB triplets, Light Sky Blue accent contract, contrast, zero-gold hue policy and SVG tokens are consistent.")
     return 0
 
 
