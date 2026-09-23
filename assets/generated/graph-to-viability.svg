@@ -18,7 +18,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .model{fill:none;stroke:var(--violet);stroke-width:2.4}
 .viable{fill:var(--green-soft);stroke:var(--green);stroke-width:2.4}
 .critical{fill:none;stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}
-.control{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-dasharray:8 6}
+.control{fill:none;stroke:var(--cyan);stroke-width:3.2;stroke-dasharray:8 6}
 .state{fill:var(--cyan);stroke:var(--panel);stroke-width:2}
 .node{fill:var(--panel);stroke-width:2.4}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -43,9 +43,9 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <path d="M1078.2 235.7L1254.1 156.5" class="critical"/>
 <circle cx="1248.0" cy="280.3" r="9" class="state"/>
 <path d="M1248.0 280.3L1202.7 179.6M1211.8 185.8L1202.7 179.6L1201.3 190.5" class="control"/>
-<circle cx="1202.7" cy="179.6" r="6" fill="var(--gold)"/>
+<circle cx="1202.7" cy="179.6" r="6" fill="var(--cyan)"/>
 <text x="1262.0" y="268.3" class="math label">Y(t)</text>
-<text x="1235.3" y="222.0" class="math label" fill="var(--gold)">ρ₂</text>
+<text x="1235.3" y="222.0" class="math label" fill="var(--cyan)">ρ₂</text>
 <text x="1248.1" y="144.5" text-anchor="end" class="math label" fill="var(--red)">∂V</text>
 <text x="965" y="468" class="small">V = intersection of 6 governed constraints</text>
 <text x="965" y="493" class="small">active boundary: g₆(Y)=0</text>
