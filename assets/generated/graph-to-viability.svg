@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc"><title id="title">Graph to dynamics to computed viability</title><desc id="desc">A typed polygonal graph maps through an affine model plane into a Shapely-computed feasible region. The displayed ρ₂ margin is the exact Euclidean nearest-boundary distance and normal projection.</desc><style>
-:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--yellow:#9A6700;--yellow-soft:#FFF4CC;--yellow-ink:#6B4B00;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#A66F00;--organization-ink:#7A5200;--organization-soft:#FBF0DA;--cyan:#007A88;--cyan-soft:#E6F6F8;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#A21CAF;--magenta-soft:#F8E8FB;--gold:#8B5E00;--gold-soft:#F6EEDC}
-@media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#DDBA55;--yellow-soft:#3A3218;--yellow-ink:#F2CC60;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#E3B341;--organization-ink:#F0C96B;--organization-soft:#372D14;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#DDBA55;--gold-soft:#352D18}}
+:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#1E2933;--muted:#59636E;--line:#E0E5EA;--topology:#2B333D;--green:#16823A;--green-soft:#EAF5EE;--red:#CF222E;--red-soft:#FDEBEC;--yellow:#007A88;--yellow-soft:#E6F6F8;--yellow-ink:#00616C;--ghost:#F7F9FA;--power:#C8102E;--power-soft:#FBEAEC;--transport:#16823A;--transport-soft:#EAF5EE;--information:#1D4ED8;--information-soft:#E8EEFD;--organization:#A21CAF;--organization-ink:#86198F;--organization-soft:#F8E8FB;--cyan:#007A88;--cyan-soft:#E6F6F8;--violet:#6D28D9;--violet-soft:#F0EAFE;--magenta:#A21CAF;--magenta-soft:#F8E8FB;--gold:#007A88;--gold-soft:#E6F6F8}
+@media(prefers-color-scheme:dark){:root{--bg:#0D1117;--panel:#161B22;--ink:#F0F6FC;--muted:#9DA7B3;--line:#30363D;--topology:#C9D1D9;--green:#56D364;--green-soft:#172D1D;--red:#FF7B72;--red-soft:#3D1A1D;--yellow:#39C5CF;--yellow-soft:#123236;--yellow-ink:#7DE8EE;--ghost:#21262D;--power:#FF7B82;--power-soft:#3D1C22;--transport:#56D364;--transport-soft:#172D1D;--information:#58A6FF;--information-soft:#14253D;--organization:#DB61A2;--organization-ink:#F0A7CE;--organization-soft:#3C1B31;--cyan:#39C5CF;--cyan-soft:#123236;--violet:#A371F7;--violet-soft:#271B3D;--magenta:#DB61A2;--magenta-soft:#3C1B31;--gold:#39C5CF;--gold-soft:#123236}}
 text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink)}
 .math{font-family:"DejaVu Serif","Liberation Serif",Georgia,serif}
 .title{font-size:38px;font-weight:820;letter-spacing:-.02em}
@@ -18,7 +18,7 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 .model{fill:none;stroke:var(--violet);stroke-width:2.4}
 .viable{fill:var(--green-soft);stroke:var(--green);stroke-width:2.4}
 .critical{fill:none;stroke:var(--red);stroke-width:3.2;stroke-dasharray:10 8}
-.control{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-dasharray:8 6}
+.control{fill:none;stroke:var(--cyan);stroke-width:3.2;stroke-dasharray:8 6}
 .state{fill:var(--cyan);stroke:var(--panel);stroke-width:2}
 .node{fill:var(--panel);stroke-width:2.4}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -43,9 +43,9 @@ text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fi
 <path d="M1078.2 235.7L1254.1 156.5" class="critical"/>
 <circle cx="1248.0" cy="280.3" r="9" class="state"/>
 <path d="M1248.0 280.3L1202.7 179.6M1211.8 185.8L1202.7 179.6L1201.3 190.5" class="control"/>
-<circle cx="1202.7" cy="179.6" r="6" fill="var(--gold)"/>
+<circle cx="1202.7" cy="179.6" r="6" fill="var(--cyan)"/>
 <text x="1262.0" y="268.3" class="math label">Y(t)</text>
-<text x="1235.3" y="222.0" class="math label" fill="var(--gold)">ρ₂</text>
+<text x="1235.3" y="222.0" class="math label" fill="var(--cyan)">ρ₂</text>
 <text x="1248.1" y="144.5" text-anchor="end" class="math label" fill="var(--red)">∂V</text>
 <text x="965" y="468" class="small">V = intersection of 6 governed constraints</text>
 <text x="965" y="493" class="small">active boundary: g₆(Y)=0</text>
