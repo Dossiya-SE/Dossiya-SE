@@ -1,8 +1,23 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "3.0",
   "evidence_state": "VALIDATED_VISUAL_DESIGN_SPECIFICATION",
+  "color_model": "RGB",
   "color_space": "sRGB",
-  "design_principle": "neutral publication canvas with sparse semantic RGB accents",
+  "design_principle": "neutral publication canvas with sparse semantic RGB accents; zero gold/yellow/amber/ochre family",
+  "forbidden_hue_policy": {
+    "description": "No gold, yellow, amber or ochre semantic colors are permitted. Saturated colors in the approximate 35°–75° hue band are prohibited.",
+    "forbidden_terms": [
+      "gold",
+      "yellow",
+      "amber",
+      "ochre"
+    ],
+    "forbidden_hue_degrees": [
+      35,
+      75
+    ],
+    "minimum_saturation": 0.22
+  },
   "composition_ratio": {
     "neutral_canvas": "approximately 65%",
     "light_geometry": "approximately 20%",
@@ -10,15 +25,311 @@
     "strong_emphasis": "no more than approximately 5%"
   },
   "semantic_roles": {
-    "sector_power": "red RGB channel; physical power-system structure",
-    "sector_transportation": "green RGB channel; physical transportation structure",
-    "sector_information": "blue RGB channel; sensing, estimation and communication",
-    "sector_organization": "amber; coordination, procedure and organizational action",
-    "viable": "green; sustainable, admissible, operational or recovery state",
-    "critical": "red; constraint, disturbance, critical boundary or propagation",
-    "causal_control": "ochre/gold; causal interface, mechanism or engineering intervention",
-    "mathematical_model": "violet; mathematical abstraction when a separate model cue is needed",
-    "inference_data": "cyan; observation, inference or data-mediated state information"
+    "sector_power": "red RGB family; physical power-system structure",
+    "sector_transportation": "green RGB family; physical transportation structure",
+    "sector_information": "blue RGB family; sensing, estimation and communication",
+    "sector_organization": "magenta RGB family; coordination, procedure and organizational action",
+    "viable": "green RGB family; sustainable, admissible, operational or recovery state",
+    "critical": "red RGB family; constraint, disturbance, critical boundary or propagation",
+    "causal_control": "cyan RGB family; causal interface, mechanism or engineering intervention",
+    "mathematical_model": "violet RGB family; mathematical abstraction when a separate model cue is needed",
+    "inference_data": "cyan/blue RGB family; observation, inference or data-mediated state information"
+  },
+  "rgb_values": {
+    "light": {
+      "bg": [
+        255,
+        255,
+        255
+      ],
+      "panel": [
+        255,
+        255,
+        255
+      ],
+      "ink": [
+        30,
+        41,
+        51
+      ],
+      "muted": [
+        89,
+        99,
+        110
+      ],
+      "line": [
+        224,
+        229,
+        234
+      ],
+      "topology": [
+        43,
+        51,
+        61
+      ],
+      "green": [
+        22,
+        130,
+        58
+      ],
+      "green_soft": [
+        234,
+        245,
+        238
+      ],
+      "red": [
+        207,
+        34,
+        46
+      ],
+      "red_soft": [
+        253,
+        235,
+        236
+      ],
+      "ghost": [
+        247,
+        249,
+        250
+      ],
+      "power": [
+        200,
+        16,
+        46
+      ],
+      "power_soft": [
+        251,
+        234,
+        236
+      ],
+      "transport": [
+        22,
+        130,
+        58
+      ],
+      "transport_soft": [
+        234,
+        245,
+        238
+      ],
+      "information": [
+        29,
+        78,
+        216
+      ],
+      "information_soft": [
+        232,
+        238,
+        253
+      ],
+      "organization": [
+        192,
+        38,
+        211
+      ],
+      "organization_ink": [
+        134,
+        25,
+        143
+      ],
+      "organization_soft": [
+        250,
+        232,
+        255
+      ],
+      "control": [
+        0,
+        122,
+        136
+      ],
+      "control_ink": [
+        0,
+        95,
+        106
+      ],
+      "control_soft": [
+        230,
+        246,
+        248
+      ],
+      "cyan": [
+        8,
+        145,
+        178
+      ],
+      "cyan_soft": [
+        230,
+        246,
+        249
+      ],
+      "violet": [
+        109,
+        40,
+        217
+      ],
+      "violet_soft": [
+        240,
+        234,
+        254
+      ],
+      "magenta": [
+        219,
+        39,
+        119
+      ],
+      "magenta_soft": [
+        252,
+        231,
+        243
+      ]
+    },
+    "dark": {
+      "bg": [
+        13,
+        17,
+        23
+      ],
+      "panel": [
+        22,
+        27,
+        34
+      ],
+      "ink": [
+        240,
+        246,
+        252
+      ],
+      "muted": [
+        157,
+        167,
+        179
+      ],
+      "line": [
+        48,
+        54,
+        61
+      ],
+      "topology": [
+        201,
+        209,
+        217
+      ],
+      "green": [
+        86,
+        211,
+        100
+      ],
+      "green_soft": [
+        23,
+        45,
+        29
+      ],
+      "red": [
+        255,
+        123,
+        114
+      ],
+      "red_soft": [
+        61,
+        26,
+        29
+      ],
+      "ghost": [
+        33,
+        38,
+        45
+      ],
+      "power": [
+        255,
+        123,
+        130
+      ],
+      "power_soft": [
+        61,
+        28,
+        34
+      ],
+      "transport": [
+        86,
+        211,
+        100
+      ],
+      "transport_soft": [
+        23,
+        45,
+        29
+      ],
+      "information": [
+        88,
+        166,
+        255
+      ],
+      "information_soft": [
+        20,
+        37,
+        61
+      ],
+      "organization": [
+        232,
+        121,
+        249
+      ],
+      "organization_ink": [
+        245,
+        194,
+        255
+      ],
+      "organization_soft": [
+        55,
+        27,
+        61
+      ],
+      "control": [
+        57,
+        197,
+        207
+      ],
+      "control_ink": [
+        130,
+        230,
+        236
+      ],
+      "control_soft": [
+        18,
+        50,
+        54
+      ],
+      "cyan": [
+        34,
+        211,
+        238
+      ],
+      "cyan_soft": [
+        18,
+        49,
+        56
+      ],
+      "violet": [
+        163,
+        113,
+        247
+      ],
+      "violet_soft": [
+        39,
+        27,
+        61
+      ],
+      "magenta": [
+        244,
+        114,
+        182
+      ],
+      "magenta_soft": [
+        60,
+        27,
+        49
+      ]
+    }
   },
   "light": {
     "bg": "#FFFFFF",
@@ -31,9 +342,6 @@
     "green_soft": "#EAF5EE",
     "red": "#CF222E",
     "red_soft": "#FDEBEC",
-    "yellow": "#9A6700",
-    "yellow_soft": "#FFF4CC",
-    "yellow_ink": "#6B4B00",
     "ghost": "#F7F9FA",
     "power": "#C8102E",
     "power_soft": "#FBEAEC",
@@ -41,17 +349,18 @@
     "transport_soft": "#EAF5EE",
     "information": "#1D4ED8",
     "information_soft": "#E8EEFD",
-    "organization": "#A66F00",
-    "organization_ink": "#7A5200",
-    "organization_soft": "#FBF0DA",
-    "cyan": "#007A88",
-    "cyan_soft": "#E6F6F8",
+    "organization": "#C026D3",
+    "organization_ink": "#86198F",
+    "organization_soft": "#FAE8FF",
+    "control": "#007A88",
+    "control_ink": "#005F6A",
+    "control_soft": "#E6F6F8",
+    "cyan": "#0891B2",
+    "cyan_soft": "#E6F6F9",
     "violet": "#6D28D9",
     "violet_soft": "#F0EAFE",
-    "magenta": "#A21CAF",
-    "magenta_soft": "#F8E8FB",
-    "gold": "#8B5E00",
-    "gold_soft": "#F6EEDC"
+    "magenta": "#DB2777",
+    "magenta_soft": "#FCE7F3"
   },
   "dark": {
     "bg": "#0D1117",
@@ -64,9 +373,6 @@
     "green_soft": "#172D1D",
     "red": "#FF7B72",
     "red_soft": "#3D1A1D",
-    "yellow": "#DDBA55",
-    "yellow_soft": "#3A3218",
-    "yellow_ink": "#F2CC60",
     "ghost": "#21262D",
     "power": "#FF7B82",
     "power_soft": "#3D1C22",
@@ -74,39 +380,40 @@
     "transport_soft": "#172D1D",
     "information": "#58A6FF",
     "information_soft": "#14253D",
-    "organization": "#E3B341",
-    "organization_ink": "#F0C96B",
-    "organization_soft": "#372D14",
-    "cyan": "#39C5CF",
-    "cyan_soft": "#123236",
+    "organization": "#E879F9",
+    "organization_ink": "#F5C2FF",
+    "organization_soft": "#371B3D",
+    "control": "#39C5CF",
+    "control_ink": "#82E6EC",
+    "control_soft": "#123236",
+    "cyan": "#22D3EE",
+    "cyan_soft": "#123138",
     "violet": "#A371F7",
     "violet_soft": "#271B3D",
-    "magenta": "#DB61A2",
-    "magenta_soft": "#3C1B31",
-    "gold": "#DDBA55",
-    "gold_soft": "#352D18"
+    "magenta": "#F472B6",
+    "magenta_soft": "#3C1B31"
   },
   "minimum_contrast": {
     "normal_text": 4.5,
-    "large_text": 3.0,
-    "meaningful_graphics": 3.0
+    "large_text": 3,
+    "meaningful_graphics": 3
   },
   "line_hierarchy_px": {
-    "reference": 1.0,
+    "reference": 1,
     "secondary_physical": 1.5,
     "major_physical": 2.2,
-    "service_flow": 3.0,
+    "service_flow": 3,
     "causal_interface": 3.5,
-    "critical_overlay": 4.0
+    "critical_overlay": 4
   },
   "color_redundancy": {
     "power": "red + POWER label + physical solid-line topology + node geometry",
     "transportation": "green + TRANSPORTATION label + physical solid-line topology + node geometry",
     "information": "blue + INFORMATION label + dashed relation when used as an edge",
-    "organization": "amber + ORGANIZATION label + dotted relation when used as an edge",
+    "organization": "magenta + ORGANIZATION label + dotted relation when used as an edge",
     "operational": "green + directional dash pattern + explicit viable/service label",
     "critical": "red + dashed critical overlay + explicit boundary/critical label",
-    "causal": "gold/ochre + interface geometry + dashed/double stroke + explicit mechanism label",
+    "causal": "cyan + interface geometry + dashed/double stroke + explicit mechanism label",
     "node_type": "shape geometry + text label"
   },
   "scientific_boundary": "RGB defines visual appearance and semantic channels; scientific meaning never depends on color alone and color does not strengthen the evidence class of a claim."
