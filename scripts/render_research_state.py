@@ -172,7 +172,7 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts = [svg_open(
         1600, 700,
         "Dossiya Dakou — physics-grounded mathematical engineering",
-        "Publication-style research portrait. Power uses red, Transportation green, Information blue and Organization magenta. Causal mechanisms use cyan, model geometry uses violet, viability uses green, and critical boundaries use dashed red. Color is never the sole encoding.",
+        "Publication-style research portrait. Power uses red, Transportation green, Information blue and Organization sky blue. Causal mechanisms use light sky blue, model geometry uses violet, viability uses green, and critical boundaries use dashed red. Color is never the sole encoding.",
         base_style(dark),
     )]
     parts.append('<rect x="1" y="1" width="1598" height="698" rx="18" fill="var(--bg)" stroke="var(--line)"/>')
@@ -239,7 +239,7 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts.append(f'<path d="{traj}" fill="none" class="flow-green" stroke-width="3.7" stroke-linecap="round"/>')
     state_x=cx+15+22*math.cos(0.28+1.18*2*math.pi)
     state_y=cy+6+.70*22*math.sin(0.28+1.18*2*math.pi)
-    parts.append(f'<circle cx="{state_x:.1f}" cy="{state_y:.1f}" r="9" fill="var(--cyan)" stroke="var(--panel)" stroke-width="3"/>')
+    parts.append(f'<circle cx="{state_x:.1f}" cy="{state_y:.1f}" r="9" fill="var(--control)" stroke="var(--panel)" stroke-width="3"/>')
     bx,by=cx-174,cy-46
     parts.append(f'<path d="M{state_x:.1f} {state_y:.1f}L{bx:.1f} {by:.1f}" stroke="var(--red)" stroke-width="2.1" stroke-dasharray="5 7"/>')
     parts.append(f'<text x="{bx-7:.1f}" y="{by-10:.1f}" class="math-sm" fill="var(--red)">ρ<tspan baseline-shift="sub" font-size="10">g</tspan></text>')
@@ -250,7 +250,7 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts.append(f'<text x="{px+30}" y="{py+222}" class="math-sm" fill="var(--red)">ρ<tspan baseline-shift="sub" font-size="10">g</tspan> = d<tspan baseline-shift="sub" font-size="10">g</tspan>(Y,∂𝒱)</text>')
     parts.append(f'<path d="M{px+30} {py+270}H{px+230}" class="flow-control" stroke-width="2.8"/>')
     parts.append(f'<text x="{px+248}" y="{py+276}" class="math-sm" fill="var(--control)">u*</text>')
-    parts.append(f'<text x="{px+30}" y="{py+350}" class="s">violet = mathematical model · cyan = state/inference · green = viable · dashed red = critical · cyan = intervention</text>')
+    parts.append(f'<text x="{px+30}" y="{py+350}" class="s">violet = mathematical model · cyan = state/inference · green = viable · dashed red = critical · light sky blue = intervention</text>')
     parts.append(f'<text x="{px+30}" y="{py+382}" class="s">current research transition · {escape(focus["transition"])}</text>')
     parts.append('<text x="56" y="675" class="s">Mathematical art is explanatory: motion is not a measured flow, level sets are not fitted telemetry, and RGB does not increase evidence strength.</text>')
     parts.append('</svg>')
@@ -306,9 +306,9 @@ def render_pipeline(state: dict, framework: dict) -> str:
     xs=[90,285,480,675,870,1065,1260]; y=190
     parts.append(f'<path d="M{xs[0]} {y}H{xs[-1]}" fill="none" stroke="var(--line)" stroke-width="2"/>')
     parts.append(f'<path d="M{xs[1]} {y}H{xs[2]}" fill="none" class="flow-control" stroke-width="4"/>')
-    colors=["var(--power)","var(--organization)","var(--transport)","var(--cyan)","var(--information)","var(--magenta)","var(--topology)"]
-    fills=["var(--power-soft)","var(--organization-soft)","var(--transport-soft)","var(--cyan-soft)","var(--information-soft)","var(--magenta-soft)","var(--panel)"]
-    text_colors=["var(--power)","var(--organization-ink)","var(--transport)","var(--cyan)","var(--information)","var(--magenta)","var(--ink)"]
+    colors=["var(--power)","var(--organization)","var(--transport)","var(--control)","var(--information)","var(--magenta)","var(--topology)"]
+    fills=["var(--power-soft)","var(--organization-soft)","var(--transport-soft)","var(--control-soft)","var(--information-soft)","var(--magenta-soft)","var(--panel)"]
+    text_colors=["var(--power)","var(--organization-ink)","var(--transport)","var(--control)","var(--information)","var(--magenta)","var(--ink)"]
     for idx,stage in enumerate(stages):
         sid=int(stage["id"]); x=xs[idx]
         sw=3.2 if sid in active else 1.8
