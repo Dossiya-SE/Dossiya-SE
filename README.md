@@ -75,6 +75,14 @@ The physical model is a typed multilayer system:
   <img src="./assets/generated/coupled-network-3d-light.svg" width="100%" alt="Computed projection of a verified 3D coupled Power and Transportation affine multilayer system with a shared interface and computed viability geometry">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/coupled-network-orbit-dark.gif">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/generated/coupled-network-orbit-light.gif">
+  <img src="./assets/generated/coupled-network-orbit-light.gif" width="100%" alt="Animated RGB camera orbit around the fixed computed 3D Power and Transportation affine multilayer geometry">
+</picture>
+
+<sub>**Animated view:** deterministic RGB camera orbit only. The geometry is fixed across all frames; motion is **not physical time**, not simulated service flow, not measured infrastructure behavior, and not live telemetry. The static SVG above remains the primary scientific figure.</sub>
+
 The **same physical object**, written **C_1** in the governed network data and **C₁** in display notation, is a physical coupling asset shared by both layers—not a decorative cross-layer arrow. Vertical separation in the figure is only a **visual encoding of multilayer structure**. It is **not geographic elevation**, GIS height, measured infrastructure behavior, or live infrastructure telemetry.
 
 A governed interdependency can be represented as
@@ -271,21 +279,21 @@ A defensible engineering model should state the system boundary, variables, para
 
 The profile uses **sRGB** with a neutral publication canvas, sparse semantic color, and a governed computational geometry pipeline. Scientific coordinates for affine layers, viability boundaries, nearest-boundary projections, state-space projections and continuous research trajectories are generated from the mathematical source contract and numerically verified before deterministic SVG rendering. Approximate composition is **65% neutral canvas · 20% light geometry · 10% structural semantic color · ≤5% strong emphasis**.
 
-| Encoding | Meaning | Redundant cue |
-|---|---|---|
-| **Power — #C8102E** | physical power-system structure | POWER label + solid topology + node geometry |
-| **Transportation — #16823A** | physical transportation structure | TRANSPORTATION label + solid topology + node geometry |
-| **Information — #1D4ED8** | sensing, estimation, communication | INFORMATION label + dashed relation |
-| **Organization — #A66F00** | coordination, procedure, recovery action | ORGANIZATION label + dotted relation |
-| **Viability — green** | admissible / sustainable / recovery state | region geometry + trajectory + label |
-| **Criticality — red** | constraint, violation, critical boundary | dashed/thicker overlay + boundary label |
-| **Causal / control — ochre-gold** | interface, mechanism, intervention | interface geometry + dashed/double line + explicit label |
-| **Mathematical model — violet** | separate mathematical abstraction cue | equation/symbol label + geometric context |
-| **Inference / state information — cyan** | observation or data-mediated state cue | state marker + label |
+| Encoding | Governed RGB | Meaning | Redundant cue |
+|---|---:|---|---|
+| **Power** | `rgb(200, 16, 46)` | physical power-system structure | POWER label + solid topology + node geometry |
+| **Transportation** | `rgb(22, 130, 58)` | physical transportation structure | TRANSPORTATION label + solid topology + node geometry |
+| **Information** | `rgb(29, 78, 216)` | sensing, estimation, communication | INFORMATION label + dashed relation |
+| **Organization** | `rgb(192, 38, 211)` | coordination, procedure, recovery action | ORGANIZATION label + dotted relation |
+| **Causal / control** | `rgb(0, 122, 136)` | interface, mechanism, intervention | interface geometry + dashed/double line + explicit label |
+| **Viability** | `rgb(22, 130, 58)` | admissible / sustainable / recovery state | region geometry + trajectory + label |
+| **Criticality** | `rgb(207, 34, 46)` | constraint, violation, critical boundary | dashed/thicker overlay + boundary label |
+| **Mathematical model** | `rgb(109, 40, 217)` | separate mathematical abstraction cue | equation/symbol label + geometric context |
+| **Inference / state information** | `rgb(8, 145, 178)` | observation or data-mediated state cue | state marker + label |
 
-RGB defines appearance and navigation—not scientific truth. Color never carries meaning alone; geometry, line pattern, direction and labels remain authoritative. The permanent state-semantic subset remains **green** for viable/recovery state, **red** for criticality/boundaries, and **light yellow / ochre** for causal or intervention emphasis. The machine-readable authority for these values is [`data/visual-palette.json`](data/visual-palette.json).
+The visual system is governed in the **RGB model within sRGB**. Saturated warm hues in the reserved 35°–75° band are excluded from the semantic palette; causal/control uses cyan instead. RGB defines appearance and navigation—not scientific truth. Color never carries meaning alone; geometry, line pattern, direction and labels remain authoritative. The machine-readable authority is [`data/visual-palette.json`](data/visual-palette.json), where every displayed hex value is derived from an explicit RGB triplet.
 
-Some SVG sources retain motion-capable CSS semantics for compatible renderers, but **GitHub should not be treated as guaranteeing SVG animation**. Any motion is explanatory and is **not a measured flow**, not measured infrastructure behavior, and not live infrastructure telemetry.
+Some SVG sources retain motion-capable CSS semantics for compatible renderers, but **GitHub should not be treated as guaranteeing SVG animation**. The governed GIF uses explicit frames and timing instead. All motion remains explanatory: it is **not a measured flow**, not measured infrastructure behavior, and not live infrastructure telemetry.
 
 </details>
 
