@@ -39,6 +39,8 @@ def main():
     c=json.loads(CONTRACT.read_text(encoding="utf-8"))
     require(c.get("contract_id")=="GEOMETRIC-README-V3","visual contract id mismatch")
     require(c.get("scientific_geometry_contract")=="SCIENTIFIC-GEOMETRY-V3","scientific geometry contract link missing")
+    require(c.get("computed_viability_metric")=="euclidean_L2",
+            "visual contract must declare computed viability metric euclidean_L2")
 
     readme=README.read_text(encoding="utf-8").lower()
     require("flat-geometry.svg" not in readme,"standalone flat-geometry lesson must not reappear")
