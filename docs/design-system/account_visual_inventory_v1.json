@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "generated_date": "2026-09-23",
+  "contract_id": "DOSS-GITHUB-DESIGN-V1",
+  "repositories": [
+    {
+      "repo": "Dossiya-SE/Dossiya-SE",
+      "role": "FLAGSHIP_PUBLIC",
+      "priority": "P0",
+      "animation": "existing-camera-orbit-plus-v5"
+    },
+    {
+      "repo": "Dossiya-SE/dossiya-se.github.io",
+      "role": "FLAGSHIP_PUBLIC_RESEARCH_LAB",
+      "priority": "P0",
+      "animation": "web-reduced-motion-plus-computed-figures"
+    },
+    {
+      "repo": "Dossiya-SE/Dossiya-SE-Dossiya-SE",
+      "role": "RESEARCH_ECOSYSTEM",
+      "priority": "P1",
+      "animation": "module-flow-reveal"
+    },
+    {
+      "repo": "Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab",
+      "role": "RESEARCH_LAB",
+      "priority": "P1",
+      "animation": "causal-pipeline-reveal"
+    }
+  ]
+}
