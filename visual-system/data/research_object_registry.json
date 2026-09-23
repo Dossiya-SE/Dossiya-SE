@@ -1,0 +1,32 @@
+{
+  "schema": "FGMVS_RESEARCH_OBJECT_REGISTRY_V1",
+  "version": "1.0",
+  "status": "FROZEN_B01",
+  "objects": [
+    {"object_id":"research.problem.system","type":"research_stage","evidence_state":"M","provenance_class":"USER_SPECIFIED","role":"real_problem_and_system_boundary"},
+    {"object_id":"research.evidence.field","type":"scalar_field","evidence_state":"M","provenance_class":"DERIVED","equation_ids":["EvidenceField"],"role":"defined_evidence_strength_representation"},
+    {"object_id":"research.gaps.vector","type":"vector","evidence_state":"M","provenance_class":"DERIVED","equation_ids":["GapVector"],"role":"multidimensional_gap_architecture"},
+    {"object_id":"research.question.target","type":"estimand_or_question","evidence_state":"H","provenance_class":"USER_SPECIFIED","role":"testable_research_question"},
+    {"object_id":"research.model.state_space","type":"admissible_set","evidence_state":"M","provenance_class":"ASSUMED","equation_ids":["AdmissibleSet"],"role":"model_state_or_constraint_space"},
+    {"object_id":"research.model.dynamics","type":"dynamical_system","evidence_state":"M","provenance_class":"ASSUMED","equation_ids":["StateDynamics"],"role":"generic_state_dynamics"},
+    {"object_id":"research.observation.map","type":"observation_model","evidence_state":"M","provenance_class":"ASSUMED","equation_ids":["ObservationMap"],"role":"state_to_observation_mapping"},
+    {"object_id":"research.verification.residual","type":"verification_metric","evidence_state":"V","provenance_class":"COMPUTED","equation_ids":["VerificationResidual"],"role":"numerical_or_analytic_verification"},
+    {"object_id":"research.calibration.objective","type":"optimization_problem","evidence_state":"M","provenance_class":"CALIBRATED","equation_ids":["CalibrationObjective"],"role":"parameter_estimation"},
+    {"object_id":"research.validation.comparison","type":"model_observation_comparison","evidence_state":"V","provenance_class":"COMPUTED","equation_ids":["ValidationDistance"],"role":"model_adequacy_assessment"},
+    {"object_id":"research.sensitivity.local","type":"sensitivity","evidence_state":"C","provenance_class":"COMPUTED","equation_ids":["LocalSensitivity"],"role":"parameter_influence"},
+    {"object_id":"research.uncertainty.tube","type":"uncertainty_region","evidence_state":"C","provenance_class":"COMPUTED","equation_ids":["UncertaintyTube"],"role":"uncertainty_geometry"},
+    {"object_id":"research.conclusion.admissible_region","type":"claim_set","evidence_state":"M","provenance_class":"DERIVED","equation_ids":["AdmissibleConclusion","ClaimBound"],"role":"bounded_scientific_conclusion"},
+    {"object_id":"math.diffgeom.surface","type":"surface","evidence_state":"S","provenance_class":"PUBLISHED","equation_ids":["SurfaceMap"],"role":"parameterized_surface"},
+    {"object_id":"math.diffgeom.metric","type":"metric_tensor","evidence_state":"S","provenance_class":"PUBLISHED","equation_ids":["MetricTensor"],"role":"first_fundamental_form"},
+    {"object_id":"math.diffgeom.normal","type":"vector_field","evidence_state":"S","provenance_class":"DERIVED","equation_ids":["UnitNormal"],"role":"unit_normal"},
+    {"object_id":"math.diffgeom.gaussian_curvature","type":"scalar_field","evidence_state":"S","provenance_class":"DERIVED","equation_ids":["GaussianCurvature"],"role":"gaussian_curvature"},
+    {"object_id":"math.diffgeom.mean_curvature","type":"scalar_field","evidence_state":"S","provenance_class":"DERIVED","equation_ids":["MeanCurvature"],"role":"mean_curvature"},
+    {"object_id":"math.network.laplacian","type":"operator","evidence_state":"S","provenance_class":"PUBLISHED","equation_ids":["GraphLaplacian"],"role":"graph_structure_operator"}
+  ],
+  "constraints": {
+    "unique_object_ids": true,
+    "evidence_state_required_for_scientific_objects": true,
+    "provenance_class_required": true,
+    "unresolved_equation_ids_forbidden": true
+  }
+}

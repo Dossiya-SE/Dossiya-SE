@@ -1,0 +1,31 @@
+{
+  "schema": "FGMVS_TOOL_ROLE_REGISTRY_V1",
+  "version": "1.0",
+  "status": "FROZEN_B01",
+  "rule": "tool presence describes implementation role only; it is not proficiency evidence",
+  "roles": {
+    "symbolic_mathematics": ["SymPy", "Mathematica", "SageMath"],
+    "numerical_mathematics": ["NumPy", "SciPy", "Julia", "MATLAB"],
+    "optimization": ["SciPy/HiGHS", "JuMP", "CVXPY"],
+    "geometry_manifolds": ["Geomstats", "PyVista", "VTK", "Manifolds.jl"],
+    "scientific_plotting": ["Matplotlib", "Makie", "PyVista"],
+    "network_analysis": ["NetworkX"],
+    "animation": ["Manim"],
+    "high_performance": ["JAX", "Taichi", "C++", "Rust", "CUDA"],
+    "cinematic_rendering": ["Blender", "Geometry Nodes"],
+    "interactive_web": ["Three.js", "WebGL", "WebGPU", "D3"],
+    "publication_vector": ["LaTeX", "TikZ", "Asymptote", "SVG"],
+    "reproducible_publishing": ["Quarto", "GitHub"],
+    "formal_software_verification": ["Lean/mathlib", "Coq", "GitHub Actions"]
+  },
+  "pipeline": [
+    "mathematical_object",
+    "symbolic_or_numerical_representation",
+    "implementation",
+    "verification",
+    "renderer_neutral_exchange",
+    "scientific_rendering",
+    "publication"
+  ],
+  "forbidden_inference": "software breadth != expertise"
+}

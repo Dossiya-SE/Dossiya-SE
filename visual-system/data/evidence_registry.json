@@ -1,0 +1,37 @@
+{
+  "schema": "FGMVS_EVIDENCE_REGISTRY_V1",
+  "version": "1.0",
+  "status": "FROZEN_B01",
+  "evidence_states": {
+    "S": "source-grounded",
+    "D": "derived",
+    "M": "model",
+    "C": "computed",
+    "V": "verified",
+    "E": "empirical",
+    "H": "hypothesis",
+    "T": "target"
+  },
+  "provenance_classes": [
+    "USER_SPECIFIED",
+    "OBSERVED",
+    "PUBLISHED",
+    "COMPUTED",
+    "CALIBRATED",
+    "DERIVED",
+    "ASSUMED",
+    "SYNTHETIC",
+    "ILLUSTRATIVE",
+    "TO_BE_VALIDATED"
+  ],
+  "invariants": [
+    "evidence_state and provenance_class are orthogonal",
+    "COMPUTED provenance does not imply empirical evidence",
+    "VERIFIED does not imply VALIDATED",
+    "CALIBRATED does not imply VALIDATED",
+    "SYNTHETIC does not imply OBSERVED",
+    "ILLUSTRATIVE objects may not carry quantitative claim strength"
+  ],
+  "promotion_rule": "no field may be promoted without a declared evidence event and provenance update",
+  "claim_bound": "L(C) <= min_{k in R(C)} L_k"
+}

@@ -1,0 +1,290 @@
+schema: FGMVS_VISUAL_SYSTEM_FREEZE_V1
+version: "1.0"
+status: FROZEN_ARCHITECTURE
+account: Dossiya-SE
+profile_repository: Dossiya-SE/Dossiya-SE
+base_commit: de277a9cef5955aab95e9b3f970e61ef04c3a605
+render_state: ARCHITECTURE_ONLY
+
+principles:
+  non_compensatory_claim_rule: "L(C) <= min_{k in R(C)} L_k"
+  simulation_is_not_observation: true
+  verification_is_not_validation: true
+  calibration_is_not_validation: true
+  visual_similarity_is_not_scientific_equivalence: true
+  no_formula_without_role: true
+  no_geometry_without_semantics: true
+  no_color_without_declared_meaning: true
+  no_unmeasured_100_percent_fidelity_claim: true
+
+status_models:
+  evidence_state:
+    - S
+    - D
+    - M
+    - C
+    - V
+    - E
+    - H
+    - T
+  provenance_class:
+    - USER_SPECIFIED
+    - OBSERVED
+    - PUBLISHED
+    - COMPUTED
+    - CALIBRATED
+    - DERIVED
+    - ASSUMED
+    - SYNTHETIC
+    - ILLUSTRATIVE
+    - TO_BE_VALIDATED
+  rule: "evidence_state and provenance_class are orthogonal and must never be silently collapsed"
+
+visual_grammar:
+  node: research_object_or_typed_entity
+  arrow: dependency_transformation_or_justified_coupling
+  curve: trajectory_evolution_recovery_control_or_optimization_path
+  surface: defined_model_or_admissible_state_space
+  boundary: constraint_viability_validity_or_domain_boundary
+  vector: direction_gradient_control_flux_sensitivity_or_influence
+  vector_length: quantified_sensitivity_or_influence_only
+  tube_width: quantified_uncertainty_only
+  density: defined_evidence_strength_only
+  curvature: mathematically_defined_curvature_only
+  convergence: verification
+  optimization_path: calibration_or_optimization
+  model_observation_pair: validation
+  closed_region: admissible_viable_or_bounded_conclusion
+  faded_region: unsupported_invalid_infeasible_or_outside_applicability
+
+semantic_palette:
+  source_math:
+    light: "#4338CA"
+    dark: "#A5B4FC"
+    secondary_cue: square_or_indigo_rule
+  observed_evidence:
+    light: "#0369A1"
+    dark: "#38BDF8"
+    secondary_cue: solid_marker
+  state_dynamics:
+    light: "#1D4ED8"
+    dark: "#60A5FA"
+    secondary_cue: solid_trajectory
+  interface_coupling:
+    light: "#7E22CE"
+    dark: "#C084FC"
+    secondary_cue: linked_nodes
+  hazard_violation:
+    light: "#B91C1C"
+    dark: "#FB7185"
+    secondary_cue: dashed_boundary
+  uncertainty_inference:
+    light: "#B45309"
+    dark: "#FBBF24"
+    secondary_cue: band_or_dotted_contour
+  viability_admissibility:
+    light: "#047857"
+    dark: "#34D399"
+    secondary_cue: closed_set
+  recovery_control:
+    light: "#0F766E"
+    dark: "#5EEAD4"
+    secondary_cue: directed_path
+  optimization_decision:
+    light: "#A16207"
+    dark: "#FACC15"
+    secondary_cue: frontier_or_decision_marker
+  computed_simulation:
+    light: "#475569"
+    dark: "#CBD5E1"
+    secondary_cue: numeric_or_code_label
+  hypothesis_transfer:
+    light: "#BE185D"
+    dark: "#F472B6"
+    secondary_cue: dashed_magenta
+
+canonical_surface:
+  format: adaptive_svg
+  requirements:
+    - viewBox
+    - title
+    - desc
+    - responsive_geometry
+    - system_safe_fonts
+    - light_dark_tokens
+    - no_external_scripts
+    - no_foreignObject_dependency
+    - no_clipped_labels
+  test_widths_px:
+    - 1440
+    - 768
+    - 390
+
+font_policy:
+  text: "Inter, Segoe UI, Arial, sans-serif"
+  math: "STIX Two Math, Cambria Math, Georgia, serif"
+  font_files_must_not_be_distributed: true
+
+primary_visuals:
+  - id: FGMVS-00
+    family: master_profile_header
+    current_asset: assets/math-art/profile-header-v5.svg
+    disposition: REBUILD
+    target_version: v7
+    promotion_target: P2_P3_PRIMITIVES_CONCEPTUAL_COMPOSITION
+    dependencies: [FGMVS-02, FGMVS-03, FGMVS-04, FGMVS-06, FGMVS-08, FGMVS-09, FGMVS-01]
+  - id: FGMVS-01
+    family: professional_research_state_trajectory
+    current_asset: profile-improvement/assets/engineering-to-mathematics-resilience-trajectory-v5.svg
+    disposition: REBUILD
+    target_version: v7
+    promotion_target: P1_P2_DESCRIPTIVE
+    dependencies: [B01]
+  - id: FGMVS-02
+    family: mathematics_universe_dependency_graph
+    current_asset: assets/math-art/profile-mathematics-universe-v5.svg
+    disposition: REBUILD
+    target_version: v7
+    promotion_target: P2_DECLARED_MAPPING
+    dependencies: [B01]
+  - id: FGMVS-03
+    family: differential_geometry_foundations
+    current_asset: assets/math-art/differential-geometry-foundations-v5.svg
+    disposition: REBUILD_FROM_VERIFIED_GEOMETRY
+    target_version: v7
+    promotion_target: P3_REQUIRED
+    dependencies: [B01, geometry_engine]
+  - id: FGMVS-04
+    family: scientific_research_operating_system
+    current_asset: assets/math-art/research-operating-system-v5.svg
+    disposition: REBUILD_SIGNATURE_VISUAL
+    target_version: v7
+    promotion_target: P2_P3_STRUCTURAL
+    dependencies: [B01, scientific_research_architecture]
+  - id: FGMVS-05
+    family: evidence_maturity_scientific_rigor
+    current_asset: assets/math-art/evidence-maturity-map-v5.svg
+    disposition: REBUILD_DATA_LAYER
+    target_version: v7
+    promotion_target: P2_P3_DATA_CONSISTENT
+    dependencies: [B01, account_registry]
+  - id: FGMVS-06
+    family: computational_mathematics_stack
+    current_asset: assets/math-art/computational-stack-v5.svg
+    disposition: REBUILD_AS_ROLE_GRAPH
+    target_version: v7
+    promotion_target: P2_MAPPING
+    dependencies: [B01, tool_role_registry]
+  - id: FGMVS-07
+    family: formula_evidence_claim_lattice
+    current_asset: assets/math-art/formula-evidence-lattice-v5.svg
+    disposition: IMPROVE_ONTOLOGY_RECONCILIATION
+    target_version: v7
+    promotion_target: P2_P3_SEMANTIC
+    dependencies: [B01, equation_registry, evidence_registry]
+  - id: FGMVS-08
+    family: coupled_infrastructure_resilience_system
+    current_asset: null
+    disposition: BUILD_NEW
+    target_version: v1
+    promotion_target: P1_P2_UNTIL_VALIDATED
+    dependencies: [B01, public_model_architecture]
+  - id: FGMVS-09
+    family: repository_navigation_knowledge_graph
+    current_asset: null
+    disposition: BUILD_NEW
+    target_version: v1
+    promotion_target: P2_SOURCE_GROUNDED_MAPPING
+    dependencies: [B01, account_registry]
+
+specialist_visuals:
+  - id: FGMVS-S01
+    family: optimization_uncertainty_bounded_decision
+    current_asset: assets/math-art/optimization-decision-system-v6.svg
+    disposition: KEEP_TARGETED_HARMONIZATION
+    target_version: v6_harmonized
+
+build_sequence:
+  - B00_GLOBAL_CONTRACTS
+  - B01_REGISTRIES_AND_TOKENS
+  - FGMVS-02
+  - FGMVS-03
+  - FGMVS-04
+  - FGMVS-07
+  - FGMVS-05
+  - FGMVS-06
+  - FGMVS-08
+  - FGMVS-09
+  - FGMVS-01
+  - FGMVS-00
+  - FGMVS-S01
+  - README_INTEGRATION
+  - SOURCE_ONLY_REPRODUCTION
+  - FINAL_PROFILE_RELEASE_CANDIDATE
+
+required_figure_artifacts:
+  - visual_EDITABLE.svg
+  - visual_EDITABLE.pptx
+  - visual.png
+  - visual.pdf
+  - render_request.yaml
+  - equations.tex
+  - research_data.json
+  - manifest.json
+  - qa_report.json
+  - SOURCE_BUNDLE.zip
+
+reference_migration_artifacts:
+  - reference_layout.json
+  - change_log.json
+  - reference_overlay.png
+  - visual_diff.png
+  - fidelity_report.json
+
+qa_gates:
+  scientific:
+    required: true
+    fail_closed: true
+  mathematical:
+    required: true
+    fail_closed: true
+  visual_semantic:
+    required: true
+    fail_closed: true
+  github_compatibility:
+    required: true
+    fail_closed: true
+  editability:
+    required: true
+    fail_closed: true
+  provenance:
+    required: true
+    fail_closed: true
+  reproduction:
+    required: true
+    fail_closed: true
+
+readme_target_hierarchy:
+  - master_header
+  - concise_identity_and_evidence_invariant
+  - research_programmes
+  - professional_research_state_trajectory
+  - mathematics_universe
+  - scientific_research_operating_system
+  - differential_geometry_and_mathematical_art
+  - computational_stack
+  - evidence_and_formula_claim_lattice
+  - repository_navigation
+  - selected_repository_table
+  - education_and_profile_governance
+
+archive_policy:
+  preserve_history: true
+  active_directory_has_one_canonical_master_per_family: true
+  superseded_path_pattern: "assets/math-art/archive/<family>/"
+  delete_old_visuals: false
+
+release:
+  architecture_gate: FROZEN_ARCHITECTURE_V1_PASS
+  next_gate: B00_GLOBAL_CONTRACTS_AND_REGISTRIES
+  merge_automatically: false
