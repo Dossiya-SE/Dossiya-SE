@@ -85,7 +85,7 @@ def validate_question() -> None:
     require("RESEARCH QUESTION" in text, "research-question figure missing title")
     require("Power ↔ Transportation interfaces" in text, "research-question figure missing physical interface scope")
     require("Y(t) ∈ 𝒱" in text, "research-question figure missing viability objective")
-    require("var(--yellow" in text and "var(--green" in text, "research-question figure missing semantic causal/viability cues")
+    require("var(--control" in text and "var(--green" in text, "research-question figure missing RGB causal/viability cues")
     body = text.split("</style>", 1)[-1]
     for token in ("var(--power)", "var(--transport)", "var(--information)"):
         require(token in body, f"research-question figure missing RGB sector/dynamics token: {token}")
@@ -109,7 +109,7 @@ def validate_viability() -> None:
     require("GRAPH / MODEL SPACE" in text, "graph-to-viability must identify graph/model space")
     require("STATE / VIABILITY SPACE" in text, "graph-to-viability must identify state/viability space")
     require("∂𝒱" in text and "ρ_g" in text and "u*" in text, "graph-to-viability core objects missing")
-    require("var(--red)" in text and "var(--green)" in text and "var(--yellow)" in text, "graph-to-viability semantic colors missing")
+    require("var(--red)" in text and "var(--green)" in text and "var(--control)" in text, "graph-to-viability RGB semantic colors missing")
     require("No empirical validity is implied" in text, "graph-to-viability evidence boundary missing")
 
 
