@@ -30,7 +30,7 @@ def arr(x):
     return np.asarray(x, dtype=float)
 
 
-CANONICAL_SIG_DIGITS = 14
+CANONICAL_SIG_DIGITS = 12
 CANONICAL_ZERO_TOL = 1e-14
 
 def canonicalize(value):
@@ -315,7 +315,7 @@ def compute():
     # Research-state space: SVD/PCA projection of explicitly conceptual 4D vectors.
     X = np.asarray(cfg["research_state"]["vectors"], dtype=float)
     centered = X - X.mean(axis=0)
-    _, svals, vt = svd(centered, full_matrices=False)
+    _, svals, vt = svd(centered, full_matrices=False, lapack_driver="gesvd")
     basis2 = vt[:2].T
     state2 = centered @ basis2
 
