@@ -44,9 +44,9 @@ def main():
     require("flat-geometry.svg" not in readme,"standalone flat-geometry lesson must not reappear")
 
     hero=read_svg("research-hero-light.svg")
-    for token in ("COMPUTED AFFINE MULTILAYER SYSTEM","COMPUTED VIABILITY GEOMETRY","exact nearest-boundary distance","not geographic elevation"):
+    for token in ("COMPUTED AFFINE MULTILAYER SYSTEM","COMPUTED VIABILITY GEOMETRY","exact Euclidean nearest-boundary distance","not geographic elevation"):
         require(token in hero,f"hero semantic boundary missing: {token}")
-    require("<polygon" in hero and "ρ_g" in hero and "∂V" in hero,"hero computed geometry incomplete")
+    require("<polygon" in hero and "ρ₂" in hero and "∂V" in hero and "g=I" in hero,"hero computed Euclidean geometry incomplete")
 
     q=read_svg("research-question.svg")
     for token in ("PHYSICAL SYSTEM","CAUSAL INTERFACE","DYNAMICS","VIABILITY","P ↔ T","C₁","F_G"):
@@ -57,7 +57,7 @@ def main():
         require(token in net,f"coupled system semantic missing: {token}")
 
     gv=read_svg("graph-to-viability.svg")
-    for token in ("COMPUTED VIABILITY","ρ_g","∂V","active boundary:","computed objects"):
+    for token in ("COMPUTED VIABILITY","ρ₂","∂V","active boundary:","computed objects","non-Euclidean ρ_g"):
         require(token in gv,f"graph-to-viability semantic missing: {token}")
     require("<ellipse" not in gv,"graph-to-viability must not use a decorative ellipse as the feasible set")
 
