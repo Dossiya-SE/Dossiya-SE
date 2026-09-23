@@ -47,6 +47,7 @@ def main():
         require(float(typography["label"])*scale>=7.0,f"{name}: essential label typography too small at 640px")
         require(float(typography["small"])*scale>=6.0,f"{name}: secondary typography too small at 640px")
         require(float(typography["micro"])*scale>=5.5,f"{name}: micro typography too small at 640px")
+        require(float(typography["project_name"])*scale>=6.4,f"{name}: project-name typography too small at 640px")
 
     thresholds={
       "research-question.svg":70.0,
@@ -80,6 +81,12 @@ def main():
     footprints=[max(*rect_size(r)) for r in shapes]
     require(max(footprints)/min(footprints)<=1.30,
             "project-system.svg: equal-area signatures exceed optical-footprint ratio 1.30")
+    project_labels=proj.get("labels",[])
+    require(len(project_labels)==8,"project-system.svg: expected name + signature label for each project")
+    require(all(inside_viewbox(r,proj["viewbox"],8) for r in project_labels),
+            "project-system.svg: project label escapes viewBox")
+    require(min_distance(project_labels)>=3.0,
+            "project-system.svg: project labels overlap or are too tightly packed")
 
     for name in ("research-hero-light.svg","research-hero-dark.svg",
                  "coupled-network-3d-light.svg","coupled-network-3d-dark.svg",
