@@ -6,7 +6,7 @@ Scientific visual grammar
 charcoal     = neutral physical topology
  green       = viable / sustainable / admissible service flow
  red         = active constraint / disturbance / critical boundary
- light control= causal interface / highlighted mechanism / decision path
+ cyan= causal interface / highlighted mechanism / decision path
 
 The animation is explanatory model semantics, not live infrastructure telemetry.
 Coordinates are declared visual-layout coordinates, not geographic locations.
@@ -34,8 +34,20 @@ def write(name: str, text: str) -> None:
 
 
 def style(dark: bool | None = None) -> str:
-    light = "--bg:#fffdf6;--panel:#ffffff;--ink:#11161c;--muted:#69736f;--line:#d7d5ca;--green:#157347;--green-soft:#e8f4e7;--red:#c62828;--red-soft:#fdebec;--control:#efc84a;--control-soft:#fff3bd;--control-ink:#6f5610;--ghost:#f0ede5"
-    darkv = "--bg:#0b100d;--panel:#111712;--ink:#f3f6f3;--muted:#a2ada6;--line:#303a33;--green:#56d887;--green-soft:#173924;--red:#ff6b6b;--red-soft:#421f22;--control:#f2cc60;--control-soft:#423816;--control-ink:#ffe69a;--ghost:#18201a"
+    palette = load("visual-palette.json")
+    order = [
+        "bg","panel","ink","muted","line","topology",
+        "green","green_soft","red","red_soft","ghost",
+        "power","power_soft","transport","transport_soft",
+        "information","information_soft",
+        "organization","organization_ink","organization_soft",
+        "control","control_ink","control_soft",
+        "cyan","cyan_soft","violet","violet_soft","magenta","magenta_soft",
+    ]
+    def css(values: dict) -> str:
+        return ";".join(f"--{k.replace('_','-')}:{values[k]}" for k in order)
+
+    light, darkv = css(palette["light"]), css(palette["dark"])
     if dark is True:
         root, media = darkv, ""
     elif dark is False:
@@ -67,7 +79,6 @@ text{{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;f
 @keyframes recoveryPhase{{0%,76%,100%{{opacity:0}}81%,96%{{opacity:1}}}}
 @media(prefers-reduced-motion:reduce){{.flow,.interface-flow,.critical-demo,.propagation-demo,.control-demo,.recovery-demo,.critical-node,.control-node{{animation:none!important}}.critical-demo,.propagation-demo,.control-demo,.recovery-demo,.critical-node,.control-node{{opacity:0!important}}}}
 </style>'''
-
 
 def svg_open(width: int, height: int, title: str, desc: str, css: str) -> str:
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
@@ -117,7 +128,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
     parts = [svg_open(
         1600, 760,
         "Coupled Power–Transportation network geometry",
-        "Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and light control denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.",
+        "Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and cyan denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.",
         css,
     )]
     parts.append('<rect x="1" y="1" width="1598" height="758" rx="30" fill="var(--bg)" stroke="var(--line)"/>')
@@ -217,7 +228,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
         if idx < len(cycle)-1:
             parts.append(f'<path d="M{xx+20} {cy}H{xx+62}" stroke="var(--line)"/>')
     parts.append(f'<text x="{rx+24}" y="{ry+520}" class="s">Animation = model semantics; timing ≠ measured event duration.</text>')
-    parts.append('<text x="52" y="720" class="s">Green = viable/service flow · Red = active constraint/critical propagation · Light control = causal interface/control · Charcoal = topology.</text>')
+    parts.append('<text x="52" y="720" class="s">Green = viable/service flow · Red = active constraint/critical propagation · Cyan = causal interface/control · Charcoal = topology.</text>')
     parts.append('<text x="1548" y="720" text-anchor="end" class="s">Coordinates and scenario timing are explanatory, not GIS or telemetry.</text>')
     parts.append('</svg>')
     return "\n".join(parts)
@@ -236,7 +247,7 @@ def warped_loop(cx: float, cy: float, rx: float, ry: float, phase: float, n: int
 
 def render_viability() -> str:
     css = style(None)
-    parts = [svg_open(1400, 450, "Graph to viability transformation", "Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, light control is causal/decision. Geometry is explanatory, not fitted data.", css)]
+    parts = [svg_open(1400, 450, "Graph to viability transformation", "Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, cyan is causal/decision. Geometry is explanatory, not fitted data.", css)]
     parts.append('<rect x="1" y="1" width="1398" height="448" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     parts.append('<text x="44" y="52" class="k" fill="var(--green)">GRAPH → DYNAMICS → VIABILITY → DECISION</text>')
     labels = [(110,"𝓖","topology"),(300,"𝕀","causal interface"),(490,"F𝓖","coupled dynamics"),(680,"Y(t)","state trajectory")]
