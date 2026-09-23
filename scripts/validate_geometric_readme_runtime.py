@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Raster-test GEOMETRIC-README-V2 final SVGs at GitHub widths."""
+"""G6 raster-test SCIENTIFIC-GEOMETRY-V3 final SVGs at GitHub widths."""
 from __future__ import annotations
 import re,sys
 from pathlib import Path
@@ -59,12 +59,12 @@ def main():
                 extrema=rgb.getextrema()
                 spread=sum(hi-lo for lo,hi in extrema)
                 require(spread>45,f"{name}: raster appears visually empty/flat at {width}")
-    print("GEOMETRIC README RUNTIME VALIDATION: PASS — all final visuals rasterize at 980 px and 640 px.")
+    print("SCIENTIFIC GEOMETRY V3 RUNTIME: PASS — all final visuals rasterize at 980 px and 640 px.")
     return 0
 
 if __name__=="__main__":
     try:
         raise SystemExit(main())
     except (OSError,ValueError) as e:
-        print(f"GEOMETRIC README RUNTIME VALIDATION: FAIL — {e}",file=sys.stderr)
+        print(f"SCIENTIFIC GEOMETRY V3 RUNTIME: FAIL — {e}",file=sys.stderr)
         raise SystemExit(1)
