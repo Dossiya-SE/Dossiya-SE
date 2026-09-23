@@ -250,7 +250,7 @@ def render_hero(state: dict, observed: dict, dark: bool) -> str:
     parts.append(f'<text x="{px+30}" y="{py+222}" class="math-sm" fill="var(--red)">ρ<tspan baseline-shift="sub" font-size="10">g</tspan> = d<tspan baseline-shift="sub" font-size="10">g</tspan>(Y,∂𝒱)</text>')
     parts.append(f'<path d="M{px+30} {py+270}H{px+230}" class="flow-control" stroke-width="2.8"/>')
     parts.append(f'<text x="{px+248}" y="{py+276}" class="math-sm" fill="var(--control)">u*</text>')
-    parts.append(f'<text x="{px+30}" y="{py+350}" class="s">violet = mathematical model · cyan = state/inference · green = viable · dashed red = critical · control = intervention</text>')
+    parts.append(f'<text x="{px+30}" y="{py+350}" class="s">violet = mathematical model · cyan = state/inference · green = viable · dashed red = critical · cyan = intervention</text>')
     parts.append(f'<text x="{px+30}" y="{py+382}" class="s">current research transition · {escape(focus["transition"])}</text>')
     parts.append('<text x="56" y="675" class="s">Mathematical art is explanatory: motion is not a measured flow, level sets are not fitted telemetry, and RGB does not increase evidence strength.</text>')
     parts.append('</svg>')
@@ -261,7 +261,7 @@ def render_state(state: dict, observed: dict, dark: bool) -> str:
     active = [r for r in repos if r.get("status") == "active" and not r.get("archived")]
     featured = [r for r in active if r.get("featured")]
     focus = state["current_focus"]
-    parts = [svg_open(1400, 480, "Governed living research state", "Research-state panel using green for viable/sustainable state, red for boundaries or criticality, and light control for causal transitions.", base_style(dark))]
+    parts = [svg_open(1400, 480, "Governed living research state", "Research-state panel using green for viable/sustainable state, red for boundaries or criticality, and cyan control for causal transitions.", base_style(dark))]
     parts.append('<rect x="1" y="1" width="1398" height="478" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     label(parts, 48, 35, 230, "CURRENT RESEARCH STATE", "green")
     parts.append('<text x="48" y="108" class="h" fill="var(--green)">Power ↔ Transportation</text>')
@@ -330,7 +330,7 @@ def render_pipeline(state: dict, framework: dict) -> str:
 def render_projects(observed: dict) -> str:
     repos=sorted(observed["repositories"],key=lambda x:int(x["profile_order"]))
     recent=max(repos,key=lambda x:timestamp((x.get("latest_commit") or {}).get("date") or x.get("pushed_at"))) if repos else None
-    parts=[svg_open(1400,610,"Observed public research systems","Public research systems using green for active featured work, light control for the most recent public change, and red only for inactive or critical status.",base_style(None))]
+    parts=[svg_open(1400,610,"Observed public research systems","Public research systems using green for active featured work, cyan control for the most recent public change, and red only for inactive or critical status.",base_style(None))]
     parts.append('<rect x="1" y="1" width="1398" height="608" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     label(parts,48,28,310,"SELECTED PUBLIC RESEARCH SYSTEMS","green")
     parts.append(f'<text x="48" y="84" class="s">observed {escape(fmt_date(observed.get("generated_at")))} · explicit public allowlist only</text>')
@@ -354,7 +354,7 @@ def render_projects(observed: dict) -> str:
         commit=repo.get("latest_commit") or {}; latest=fmt_date(commit.get("date") or repo.get("pushed_at")); lang=repo.get("language") or "mixed / unspecified"
         parts.append(f'<text x="{x+20}" y="{y+154}" class="s">{escape(str(lang))} · latest public commit {escape(latest)}</text>')
         parts.append(f'<text x="{x+20}" y="{y+176}" class="s">public · {escape(str(repo.get("status")))}</text>')
-    parts.append('<text x="48" y="582" class="s">Light-control pulse = most recent public change. Recency is not scientific importance, quality, or empirical validation.</text>')
+    parts.append('<text x="48" y="582" class="s">Cyan-control pulse = most recent public change. Recency is not scientific importance, quality, or empirical validation.</text>')
     parts.append('</svg>')
     return "\n".join(parts)
 
