@@ -43,6 +43,8 @@ def main():
     require(float(hp["orthogonality_residual"])<1e-10,"hero projection is not orthogonal")
 
     v=g["viability"]
+    require(v.get("distance_metric")=="euclidean_L2",
+            "V3 viability margin must explicitly declare the Euclidean L2 metric")
     require(float(v["boundary_residual"])<1e-8,"viability nearest point not on active boundary")
     require(float(v["orthogonality_residual"])<1e-8,"rho direction not normal to active boundary")
     require(1 <= int(v["active_constraint_index"]) <= len(v["constraints"]),"active constraint index out of range")
@@ -90,7 +92,8 @@ def main():
     require(poly.is_valid and poly.area>0,"viability polygon invalid")
     require(poly.covers(state),"state must lie in viability region")
     require(poly.boundary.distance(q)<1e-8,"rho endpoint must lie on viability boundary")
-    require(abs(state.distance(poly.boundary)-float(v["rho"]))<1e-8,"rho does not equal nearest-boundary distance")
+    require(abs(state.distance(poly.boundary)-float(v["rho"]))<1e-8,
+            "rho_2 does not equal Euclidean nearest-boundary distance")
 
     target=float(g["projects"]["target_area"])
     for item in g["projects"]["items"]:
