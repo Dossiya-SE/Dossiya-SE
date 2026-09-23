@@ -27,12 +27,23 @@
     "model": "RGB",
     "space": "sRGB",
     "palette_authority": "data/visual-palette.json",
-    "control_role": "cyan",
+    "control_role": "light_sky_blue_accent_family",
     "prohibited_warm_hue_band_deg": [
       35,
       75
     ],
-    "prohibited_minimum_saturation": 0.22
+    "prohibited_minimum_saturation": 0.22,
+    "required_primary_rgb": [
+      135,
+      206,
+      250
+    ],
+    "required_strong_rgb": [
+      0,
+      191,
+      255
+    ],
+    "accessibility_alias": "light uses RGB(45,143,214) underlay; dark uses RGB(135,206,250); labels use contrast-safe companions"
   },
   "provenance": {
     "inspiration_repo": "ronikbhaskar/math-art",
