@@ -22,7 +22,7 @@ TOKENS = [
     "green","green_soft","red","red_soft","control","control_soft","control_ink","ghost",
     "power","power_soft","transport","transport_soft","information","information_soft",
     "organization","organization_ink","organization_soft","cyan","cyan_soft",
-    "violet","violet_soft","magenta","magenta_soft","control","control_soft",
+    "violet","violet_soft","magenta","magenta_soft",
 ]
 
 def load(name: str) -> dict:
@@ -140,7 +140,7 @@ def render_state(state: dict, observed: dict, palette: dict, mode: str) -> str:
 
 def render_viability(palette: dict) -> str:
     p=[svg_open(1400,500,"Graph to viability transformation",
-      "Graph/model space is separated from state/viability space. Causal interface is cyan, dynamics blue, viability green, critical boundary red and intervention control; all meanings also use labels and line styles.",
+      "Graph/model space is separated from state/viability space. Causal interface is cyan, dynamics blue, viability green, critical boundary red and intervention cyan; all meanings also use labels and line styles.",
       style(palette))]
     p += [
       '<rect x="1" y="1" width="1398" height="498" rx="18" fill="var(--bg)" stroke="var(--line)"/>',
