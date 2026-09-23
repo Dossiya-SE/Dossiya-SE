@@ -93,7 +93,7 @@ The figure inherits the governed sRGB profile palette.
 - violet: mathematical abstraction;
 - green: admissible/viable side;
 - dashed red: critical hyperplane/boundary;
-- ochre-gold: geometric projection/intervention cue.
+- Light Sky Blue accent family: geometric projection/intervention cue; RGB(135,206,250) primary with contrast-safe light-background stroke RGB(45,143,214).
 
 Color is redundant with labels, line pattern, shape and direction.
 
