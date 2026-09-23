@@ -6,7 +6,7 @@ Scientific visual grammar
 charcoal     = neutral physical topology
  green       = viable / sustainable / admissible service flow
  red         = active constraint / disturbance / critical boundary
- light yellow= causal interface / highlighted mechanism / decision path
+ cyan = causal interface / highlighted mechanism / decision path
 
 The animation is explanatory model semantics, not live infrastructure telemetry.
 Coordinates are declared visual-layout coordinates, not geographic locations.
@@ -34,8 +34,8 @@ def write(name: str, text: str) -> None:
 
 
 def style(dark: bool | None = None) -> str:
-    light = "--bg:#fffdf6;--panel:#ffffff;--ink:#11161c;--muted:#69736f;--line:#d7d5ca;--green:#157347;--green-soft:#e8f4e7;--red:#c62828;--red-soft:#fdebec;--yellow:#efc84a;--yellow-soft:#fff3bd;--yellow-ink:#6f5610;--ghost:#f0ede5"
-    darkv = "--bg:#0b100d;--panel:#111712;--ink:#f3f6f3;--muted:#a2ada6;--line:#303a33;--green:#56d887;--green-soft:#173924;--red:#ff6b6b;--red-soft:#421f22;--yellow:#f2cc60;--yellow-soft:#423816;--yellow-ink:#ffe69a;--ghost:#18201a"
+    light = "--bg:#fffdf6;--panel:#ffffff;--ink:#11161c;--muted:#69736f;--line:#d7d5ca;--green:#157347;--green-soft:#e8f4e7;--red:#c62828;--red-soft:#fdebec;--yellow:#007a88;--yellow-soft:#e6f6f8;--yellow-ink:#00616c;--ghost:#f0ede5"
+    darkv = "--bg:#0b100d;--panel:#111712;--ink:#f3f6f3;--muted:#a2ada6;--line:#303a33;--green:#56d887;--green-soft:#173924;--red:#ff6b6b;--red-soft:#421f22;--yellow:#39c5cf;--yellow-soft:#123236;--yellow-ink:#7de8ee;--ghost:#18201a"
     if dark is True:
         root, media = darkv, ""
     elif dark is False:
@@ -117,7 +117,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
     parts = [svg_open(
         1600, 760,
         "Coupled Power–Transportation network geometry",
-        "Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and light yellow denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.",
+        "Data-driven multilayer network figure. Power and transportation remain separate typed layers; shared charging interface C1 carries bidirectional causal mechanisms. Green motion denotes admissible service flow, red transient overlays illustrate a declared disturbance/propagation scenario, and cyan denotes the causal interface and control path. Animation is explanatory, not measured infrastructure telemetry.",
         css,
     )]
     parts.append('<rect x="1" y="1" width="1598" height="758" rx="30" fill="var(--bg)" stroke="var(--line)"/>')
@@ -217,7 +217,7 @@ def render_network(power: dict, transport: dict, interfaces: dict, dynamics: dic
         if idx < len(cycle)-1:
             parts.append(f'<path d="M{xx+20} {cy}H{xx+62}" stroke="var(--line)"/>')
     parts.append(f'<text x="{rx+24}" y="{ry+520}" class="s">Animation = model semantics; timing ≠ measured event duration.</text>')
-    parts.append('<text x="52" y="720" class="s">Green = viable/service flow · Red = active constraint/critical propagation · Light yellow = causal interface/control · Charcoal = topology.</text>')
+    parts.append('<text x="52" y="720" class="s">Green = viable/service flow · Red = active constraint/critical propagation · Cyan = causal interface/control · Charcoal = topology.</text>')
     parts.append('<text x="1548" y="720" text-anchor="end" class="s">Coordinates and scenario timing are explanatory, not GIS or telemetry.</text>')
     parts.append('</svg>')
     return "\n".join(parts)
@@ -236,7 +236,7 @@ def warped_loop(cx: float, cy: float, rx: float, ry: float, phase: float, n: int
 
 def render_viability() -> str:
     css = style(None)
-    parts = [svg_open(1400, 450, "Graph to viability transformation", "Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, light yellow is causal/decision. Geometry is explanatory, not fitted data.", css)]
+    parts = [svg_open(1400, 450, "Graph to viability transformation", "Mathematical transformation from multilayer topology and interface object to coupled dynamics, viability geometry, resilience margin and engineering decision. Green is viable, red is critical boundary, cyan is causal/decision. Geometry is explanatory, not fitted data.", css)]
     parts.append('<rect x="1" y="1" width="1398" height="448" rx="28" fill="var(--bg)" stroke="var(--line)"/>')
     parts.append('<text x="44" y="52" class="k" fill="var(--green)">GRAPH → DYNAMICS → VIABILITY → DECISION</text>')
     labels = [(110,"𝓖","topology"),(300,"𝕀","causal interface"),(490,"F𝓖","coupled dynamics"),(680,"Y(t)","state trajectory")]
