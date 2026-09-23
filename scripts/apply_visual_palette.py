@@ -5,7 +5,7 @@ This post-render step separates neutral layout geometry from semantic accents:
 - topology/structure: neutral charcoal/light-neutral
 - viable/operational: green
 - critical/constraint: red
-- causal/intervention: light-control surface with high-contrast cyan/control structure
+- causal/intervention: cyan RGB surface with high-contrast control structure
 
 It also normalizes the primary coupled-network line hierarchy.
 """
@@ -32,7 +32,7 @@ def css_vars(values: dict) -> str:
         "control", "control_soft", "control_ink", "ghost",
         "power", "power_soft", "transport", "transport_soft",
         "information", "information_soft", "organization", "organization_ink", "organization_soft",
-        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft", "control", "control_soft",
+        "cyan", "cyan_soft", "violet", "violet_soft", "magenta", "magenta_soft",
     ]
     return ";".join(f"--{key.replace('_','-')}:{values[key]}" for key in order)
 
