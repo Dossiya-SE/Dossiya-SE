@@ -41,6 +41,18 @@ def main():
     require(float(v["boundary_residual"])<1e-8,"viability nearest point not on active boundary")
     require(float(v["orthogonality_residual"])<1e-8,"rho direction not normal to active boundary")
     require(1 <= int(v["active_constraint_index"]) <= len(v["constraints"]),"active constraint index out of range")
+    active=v["constraints"][int(v["active_constraint_index"])-1]
+    require(active["name"]==v["active_constraint"],"active constraint name/index mismatch")
+    require(np.linalg.norm(np.asarray(hp["state"],dtype=float)-np.asarray(v["state"],dtype=float))<1e-12,
+            "hero and viability must use the same state")
+    require(np.linalg.norm(np.asarray(hp["projection"],dtype=float)-np.asarray(v["boundary_point"],dtype=float))<1e-10,
+            "hero projection must equal viability nearest-boundary point")
+    require(abs(float(hp["distance"])-float(v["rho"]))<1e-10,
+            "hero distance must equal viability rho")
+    require(np.linalg.norm(np.asarray(hp["normal"],dtype=float)-np.asarray([active["a"],active["b"]],dtype=float))<1e-12,
+            "hero boundary normal must equal active viability constraint normal")
+    require(abs(float(hp["b"])-float(active["c"]))<1e-12,
+            "hero boundary constant must equal active viability constraint constant")
 
     # G2 — numerical correctness and independent Julia cross-check.
     with JULIA.open("rb") as f:
@@ -48,6 +60,10 @@ def main():
     require(j.get("contract_id")=="SCIENTIFIC-GEOMETRY-V3","Julia contract mismatch")
     pyq=np.asarray(hp["projection"],dtype=float)
     jq=np.asarray([j["projection_x"],j["projection_y"]],dtype=float)
+    require(int(j["active_constraint_index"])==int(v["active_constraint_index"]),
+            "Python/Julia active constraint index disagreement")
+    require(str(j["active_constraint_name"])==str(v["active_constraint"]),
+            "Python/Julia active constraint name disagreement")
     require(np.linalg.norm(pyq-jq)<1e-10,"Python/Julia hero projection disagreement")
     require(abs(float(hp["distance"])-float(j["distance"]))<1e-10,"Python/Julia distance disagreement")
     require(float(j["max_project_area_error"])<1e-8,"Julia equal-area verification failed")
