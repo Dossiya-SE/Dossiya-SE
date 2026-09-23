@@ -212,10 +212,14 @@ def viability_region(cfg):
     qv = np.array([q.x, q.y], dtype=float)
     xv = np.array([state.x, state.y], dtype=float)
 
+    names=[g["name"] for g in constraints]
+    if len(names) != len(set(names)):
+        raise ValueError("viability constraint names must be unique")
     active = min(
         constraints,
         key=lambda g: abs(g["a"]*q.x + g["b"]*q.y - g["c"]),
     )
+    active_index = next(i for i,g in enumerate(constraints,1) if g["name"] == active["name"])
     av = np.array([active["a"], active["b"]], dtype=float)
     tangent = np.array([-av[1], av[0]], dtype=float)
     displacement = qv - xv
@@ -230,6 +234,7 @@ def viability_region(cfg):
         "vertices": np.asarray(region.exterior.coords[:-1], dtype=float),
         "constraints": constraints,
         "active_constraint": active["name"],
+        "active_constraint_index": active_index,
         "active_segment": active_segment,
         "boundary_residual": abs(active["a"]*q.x + active["b"]*q.y - active["c"]),
         "orthogonality_residual": abs(float(displacement @ tangent)),
