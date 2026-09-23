@@ -5,10 +5,10 @@
 .transport-geometry{fill:none;stroke:#16823a;stroke-width:3}
 .viability{fill:#eaf5ee;stroke:#16823a;stroke-width:2.2}
 .critical-hyperplane{stroke:#cf222e;stroke-width:3;stroke-dasharray:10 8}
-.projection{stroke:#8b5e00;stroke-width:3;stroke-dasharray:8 6}
+.projection{stroke:#007A88;stroke-width:3;stroke-dasharray:8 6}
 @media(prefers-color-scheme:dark){
  .geometry-frame{background:#0d1117;color:#f0f6fc}
  .affine-plane{fill:#21262d;stroke:#30363d}
  .power-geometry{stroke:#ff7b82}.transport-geometry{stroke:#56d364}
- .viability{fill:#172d1d;stroke:#56d364}.critical-hyperplane{stroke:#ff7b72}.projection{stroke:#ddba55}
+ .viability{fill:#172d1d;stroke:#56d364}.critical-hyperplane{stroke:#ff7b72}.projection{stroke:#39C5CF}
 }
