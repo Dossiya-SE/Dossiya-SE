@@ -67,8 +67,13 @@ def main():
         require(token in st_lower,f"research-state evidence boundary missing: {token}")
 
     pr=read_svg("project-system.svg")
-    for token in ("EQUAL-AREA GEOMETRIC INDEX","equal area","do not encode rank"):
-        require(token in pr,f"project-system normalization boundary missing: {token}")
+    pr_semantic=pr.lower().replace("–","-").replace("—","-")
+    require("equal-area geometric index" in pr_semantic,
+            "project-system normalization title must state equal-area geometry")
+    require(("same computed area" in pr_semantic) or ("equal computed area" in pr_semantic),
+            "project-system must explicitly state equal computed area")
+    require("do not encode rank" in pr_semantic,
+            "project-system must state that geometry does not encode rank")
 
     pipe=read_svg("research-pipeline.svg")
     for token in ("CONTINUOUS γ(t)","γ:[0,1]→R²","γ(t_i)=S_i"):
