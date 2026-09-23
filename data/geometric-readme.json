@@ -68,5 +68,6 @@
       ]
     }
   },
-  "scientific_boundary": "Computed geometry does not imply empirical calibration. The current V3 viability margin is the Euclidean special case rho_2 with g=I; a non-Euclidean rho_g requires a separately justified metric. Shape and color never increase evidence strength; conceptual research-state coordinates are not measured data; 3D layer separation is not geographic elevation."
+  "scientific_boundary": "Computed geometry does not imply empirical calibration. The current V3 viability margin is the Euclidean special case rho_2 with g=I; a non-Euclidean rho_g requires a separately justified metric. Shape and color never increase evidence strength; conceptual research-state coordinates are not measured data; 3D layer separation is not geographic elevation.",
+  "computed_viability_metric": "euclidean_L2"
 }
