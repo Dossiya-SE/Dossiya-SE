@@ -10,7 +10,7 @@
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b949e"/>
     </marker>
   </defs>
-  <rect width="1440" height="520" rx="28" fill="#0d1117"/>
+  <rect width="1440" height="520" rx="28" fill="#000000"/>
   <g opacity="0.34" stroke="#30363d" stroke-width="1">
     <path d="M70 86H1370M70 170H1370M70 254H1370M70 338H1370M70 422H1370"/>
     <path d="M120 50V470M360 50V470M600 50V470M840 50V470M1080 50V470M1320 50V470"/>
@@ -29,7 +29,7 @@
   </g>
   <g transform="translate(720 65)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif">
     <text x="0" y="18" fill="#8b949e" font-size="14" font-weight="700" letter-spacing="1.8">PHYSICAL REALITY</text>
-    <g transform="translate(0 42)" stroke="#f0f6fc" stroke-width="2.2" fill="#0d1117">
+    <g transform="translate(0 42)" stroke="#f0f6fc" stroke-width="2.2" fill="#000000">
       <circle cx="34" cy="34" r="9"/><circle cx="110" cy="20" r="9"/><circle cx="158" cy="70" r="9"/>
       <path d="M43 31L101 23M116 27L152 63M42 40L151 66"/>
       <path d="M215 76H365" stroke="#8b949e" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
