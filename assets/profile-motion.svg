@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Dossiya Dakou research illustration</title>
+  <desc id="desc">A lightweight animated illustration of interconnected infrastructure, mathematics, and sustainability themes. Motion is decorative and does not represent simulation data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" x2="1">
+      <stop offset="0" stop-color="#87CEFA"/>
+      <stop offset="0.5" stop-color="#00BFFF"/>
+      <stop offset="1" stop-color="#87CEFA"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="260" rx="24" fill="url(#bg)"/>
+  <g opacity="0.15" stroke="#87CEFA" stroke-width="1">
+    <path d="M60 60H1140M60 130H1140M60 200H1140"/>
+    <path d="M180 30V230M420 30V230M660 30V230M900 30V230"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path id="p1" d="M120 165 C280 70, 440 70, 600 130 S920 190,1080 95" stroke="#334155" stroke-width="3"/>
+    <path id="p2" d="M120 95 C300 190, 430 185, 600 130 S900 50,1080 165" stroke="#334155" stroke-width="3"/>
+    <path d="M120 165 C280 70, 440 70, 600 130 S920 190,1080 95" stroke="url(#flow)" stroke-width="4" stroke-dasharray="16 22">
+      <animate attributeName="stroke-dashoffset" from="0" to="-76" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M120 95 C300 190, 430 185, 600 130 S900 50,1080 165" stroke="#87CEFA" stroke-width="2.5" stroke-dasharray="8 18" opacity="0.75">
+      <animate attributeName="stroke-dashoffset" from="0" to="52" dur="5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="120" cy="165" r="8" fill="#87CEFA"/>
+    <circle cx="120" cy="95" r="8" fill="#87CEFA"/>
+    <circle cx="600" cy="130" r="11" fill="#00BFFF">
+      <animate attributeName="r" values="9;13;9" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1080" cy="95" r="8" fill="#87CEFA"/>
+    <circle cx="1080" cy="165" r="8" fill="#87CEFA"/>
+  </g>
+
+  <g fill="#E5E7EB" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="600" y="54" text-anchor="middle" font-size="20" font-weight="600" letter-spacing="2">MATHEMATICS · ENGINEERING · SUSTAINABILITY</text>
+    <text x="120" y="220" text-anchor="middle" font-size="13" fill="#94A3B8">SYSTEMS</text>
+    <text x="600" y="220" text-anchor="middle" font-size="13" fill="#94A3B8">INTERFACES</text>
+    <text x="1080" y="220" text-anchor="middle" font-size="13" fill="#94A3B8">RESILIENCE</text>
+  </g>
+
+  <circle r="5" fill="#E0F2FE">
+    <animateMotion dur="5s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#p1"/>
+    </animateMotion>
+  </circle>
+  <circle r="4" fill="#BAE6FD">
+    <animateMotion dur="6.5s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#p2"/>
+    </animateMotion>
+  </circle>
+</svg>
