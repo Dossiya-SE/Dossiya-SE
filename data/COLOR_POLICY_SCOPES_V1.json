@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "DOSS-COLOR-SCOPES-20261009",
+  "governed_by": "docs/design-system/DESIGN_GOVERNANCE_V1.md",
+  "base_palette": "data/visual-palette.json",
+  "general_no_gold_hue_family": true,
+  "as_of": "2026-10-09",
+  "rule": "Scientific authored panels white; structural-semantic colored strokes, labels and patterns retained. Historical originals and real photographs are not recolored. Scope exceptions cannot become a global accent.",
+  "exception_requires": [
+    "exact_hex",
+    "named_role",
+    "scope",
+    "authority",
+    "noncolor_encoding",
+    "essential_contrast_gate"
+  ],
+  "repositories": [
+    {
+      "repo": "Dossiya-SE/chatbot",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/Kudo-IA",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/testasu",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/Data-Science-an-Machine-Learning",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/Python-for-rapid-engineering-solution",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/dossiyadakou-mac-project",
+      "profile": "ACCOUNT_RGB_WITH_IMMUTABLE_ARCHIVES",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED",
+      "immutable_archive": true
+    },
+    {
+      "repo": "Dossiya-SE/Dossiya-SE",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/Dossiya-SE-Dossiya-SE",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/dossiya-se.github.io",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/africa-energy-dignity",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/infrastructure-interface-resilience-review",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab",
+      "profile": "FINANCE_SCIENTIFIC_CATEGORIES",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED",
+      "exception": {
+        "color": "#F58E0B",
+        "role": "approved SVM categorical identity with label/marker; never essential standalone foreground",
+        "source": "standards/FINANCE_RESEARCH_COLOR_ONTOLOGY_V2.json"
+      }
+    },
+    {
+      "repo": "Dossiya-SE/MSE-thesis",
+      "profile": "DECK3_ASU_13",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED",
+      "exception": {
+        "color": "#FFC627",
+        "role": "small nonessential ASU identity only",
+        "source": ".github/skills/deck3/references/DECK3_SRGB_PALETTE.json"
+      }
+    },
+    {
+      "repo": "Dossiya-SE/responsible-gold-access-network-rgan",
+      "profile": "ACCOUNT_RGB_WITH_IMMUTABLE_ARCHIVES",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED",
+      "immutable_archive": true
+    },
+    {
+      "repo": "Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    },
+    {
+      "repo": "Dossiya-SE/Math-Surface-Engineer-Demo",
+      "profile": "ACCOUNT_RGB_WITH_DOCUMENT_SCOPE",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED",
+      "no_required_figure_theme": true
+    },
+    {
+      "repo": "Dossiya-SE/Agentic-AI-for-Zotero",
+      "profile": "ACCOUNT_RGB_WITH_DOCUMENT_SCOPE",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED",
+      "no_required_figure_theme": true
+    },
+    {
+      "repo": "Dossiya-SE/Optimization-for-sustainability-and-resilience",
+      "profile": "ACCOUNT_RGB",
+      "scientific_canvas": "#FFFFFF",
+      "scientific_panel": "#FFFFFF",
+      "unreviewed_visuals": "NOT_CERTIFIED"
+    }
+  ]
+}
