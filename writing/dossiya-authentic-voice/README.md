@@ -45,4 +45,4 @@ For local coding/agent workflows: reference `SKILL.md` in the agent's task or ma
 - For graduate admissions, prioritize verified academic work; public posts primarily help recover authentic voice and contextual motivations.
 
 ## What is not archived here
-The public post bodies are saved; most comment threads, third-party comments, images, share analytics, links to images, and any prior posts *not supplied in this current conversation* are out of scope. Four notable author replies were included in the corresponding post files when directly relevant to voice. The archive can be extended as additional originals are supplied.
+The public post bodies are saved; most comment threads, third-party comments, images, share analytics, links to images, and any prior posts *not supplied in this current conversation* are out of scope. Three notable author replies were included in the corresponding post files when directly relevant to voice. The archive can be extended as additional originals are supplied.
