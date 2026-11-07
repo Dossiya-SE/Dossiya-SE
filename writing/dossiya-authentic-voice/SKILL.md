@@ -72,6 +72,201 @@ Do not force every step into every paragraph. Use this as a reasoning check, not
 - Avoid a résumé chronology. Choose 2–3 revealing episodes and connect experience to meaning.
 - The voice must sound like the applicant, not promotional copy. Keep paragraphs concise and non-repetitive.
 
+## Stanford CME-MS: Evidence-Constrained SOP Optimization
+
+**Scope and precedence.** Apply this Stanford-only method when planning, drafting, reviewing, or revising Dossiya's Stanford CME-MS Statement of Purpose (SOP). It extends the existing authentic-voice and evidence instructions without replacing them. **Factual accuracy, research integrity, and the applicant's own voice always override an editorial score.** Read the actual application prompt for the relevant intake before editing.
+
+### 1. Objective function: editorial heuristic, not admissions scoring
+
+For a candidate statement S, seek a strong evidence-supported version:
+
+\`\`\`text
+S* = argmax J(S)
+J(S) = 0.24 E(S) + 0.20 M(S) + 0.18 Q(S)
+     + 0.14 F(S) + 0.12 D(S) + 0.07 V(S) + 0.05 C(S)
+\`\`\`
+
+Normalize each dimension to [0, 1]:
+- **E (24%):** research evidence and Dossiya's own contribution.
+- **M (20%):** demonstrated mathematical readiness, not mere course listings.
+- **Q (18%):** precise, coherent scientific and mathematical questions.
+- **F (14%):** verified Stanford-specific program and research fit.
+- **D (12%):** clear need for mathematical study beyond ASU/WQU graduate work.
+- **V (7%):** authentic direct first-person voice and reasoning.
+- **C (5%):** organization, clarity, brevity, and non-repetition.
+
+**These are independent editorial weights, not Stanford's rubric, and cannot estimate admission probability.** Apply the hard constraints first.
+
+### 2. Hard constraints, with precedence over J(S)
+
+- **C1:** SOP word count <=1,000 (or stricter actual prompt); target ~950–980 when possible. Report a verified count.
+- **C2:** No unsupported factual claims or undocumented generalizations.
+- **C3:** No invented numerical results, experimental findings, papers, publications, outcomes, or quantitative impacts.
+- **C4:** No false attribution of team or supervisor results to Dossiya.
+- **C5:** No unverified Stanford course access, faculty match, research placement, funding, admission or degree-policy statements.
+- **C6:** No contradictions with official educational documents, syllabi or primary research records.
+- **C7:** Keep **completed**, **ongoing**, and **proposed** research distinct. Do not describe a proposed model as validated.
+- **C8:** Remove repetition, generic prestige language, and empty claims of passion.
+- **C9:** Preserve the user's exact intended meaning, personal chronology, and straightforward wording.
+- **C10:** Avoid em dashes, invented motivations, exaggerated accomplishments, artificial dramatic turning points and borrowed applicant phrasing.
+- **C11:** Do not represent numerical convergence as physical validation, assumptions as established facts, or a literature corpus as experimental data.
+- **C12:** Never sacrifice accuracy or authentic voice to increase the editorial score.
+
+If a constraint fails, flag and correct it **before** optimizing style.
+
+### 3. Evidence ledger
+
+For every substantive claim, establish:
+
+\`\`\`text
+Claim = {statement, source, personal_contribution,
+         evidence_status, research_status, relevance}
+evidence_status = VERIFIED | SELF_REPORTED | PROPOSED | UNKNOWN
+research_status = COMPLETED | ONGOING | PROPOSED | NOT_ESTABLISHED
+\`\`\`
+
+- **VERIFIED:** a transcript, official record, syllabus, research artifact, original assignment, dataset or other reliable source supports the claim **within its actual scope**.
+- **SELF_REPORTED:** supported by Dossiya's personal account or public writing, not independently audited.
+- **PROPOSED:** future study, mathematical question, research activity, graduation, or career intention.
+- **UNKNOWN:** missing, ambiguous, inconsistent or unverified; omit, qualify or seek records.
+- Record individual action versus team contribution. Distinguish what was screened, read, extracted, measured, published, and implemented.
+- A course title on a transcript does **not** prove mastery of every syllabus topic. An in-progress assessment does not establish a final grade.
+- Preserve differing dates/degree terminology across official records until reconciled; do not silently harmonize.
+
+### 4. Scientific reasoning algorithm for each research experience
+
+Extract **P-A-H-E-L-N**:
+1. **P**: precise scientific problem.
+2. **A**: Dossiya's personal task, choice, and action.
+3. **H**: method, hypothesis, modeling assumption, or evidence standard.
+4. **E**: actual evidence, output or supported result.
+5. **L**: limitation, uncertainty, or unresolved problem.
+6. **N**: the mathematical training needed for the next stage.
+
+Use the logic **P -> A -> H -> E -> L -> N** without forcing all six into every paragraph. A research paragraph fails if it cannot distinguish personal contribution from literature context or if it does not explain what remains unknown. Prefer one rigorous example to a list of unrelated accomplishments.
+
+### 5. Central mathematical research direction
+
+Primary focus: **mathematical and numerical study of coupled power–electrified-transport systems under extreme environmental conditions.**
+
+Candidate quantities include transformer thermal states, time-varying charging load, ambient temperature, operational limits, unknown parameters, and charging-service consequences. A **proposed abstract formulation**, not an established result, is:
+
+\`\`\`text
+dx/dt = f(x, u, T_a; theta)
+\`\`\`
+
+Questions to justify with science and evidence:
+- Which physical states are required, and how are the interfaces coupled?
+- What assumptions, boundary conditions, constraints and parameters are defensible?
+- What parameters are observable or identifiable?
+- When are solutions or operating regimes stable?
+- How sensitive are predictions to uncertainty and parameter choice?
+- How do numerical approximation, time-stepping and convergence affect results?
+- What synchronized measurements would validate the physical model?
+
+**Methodological distinctions:** ODE vs PDE models; physical mechanisms vs correlation; mathematical stability vs physical validation; numerical convergence vs predictive accuracy; future hypotheses vs completed proofs. Do not impose a PDE model on a lumped transformer problem unless spatial physics warrants it. Do not add inverse problems, physics-informed ML, optimization, or SDEs merely because they appear in planned courses. In the SOP, favor accessible scientific description over automatic equation insertion.
+
+### 6. Evidence-based mathematical preparation
+
+Map each example: **prior class/project -> method used -> actual task -> capability shown -> mathematical limitation**.
+
+Priority examples, subject to official verification:
+- **ASU EEE 591:** Python/SciPy solution of an ODE, reformulation of a second-order equation as a first-order system, and comparison against an analytical result.
+- **ASU IEE 574:** deterministic optimization, LP, duality, sensitivity and algorithmic thinking. Label final grade/course completion accurately; the 2026 term was in progress in prior records.
+- **WQU MScFE 622:** stochastic modeling and mathematical uncertainty; distinguish course exposure from independent original research.
+- **NUS Project A:** power–transportation interdependencies, narrower physical interfaces and mechanisms, assumptions and evidence requirements.
+- **NUS Project B:** sustainability-assessment methods: **282 screened publications, 12 examined in depth during placement**, later **37-paper working research corpus**. These are different levels of review, not a validated infrastructure model or published paper.
+- **ASU thesis:** developing study of transformer thermal dynamics supplying EV chargers under extreme heat. Do not claim an implemented, calibrated or field-validated coupled model without documented proof.
+- **UAC official degree:** bachelor's degree, major **Physics**, specialization **Renewable Energies and Energy Systems**; technical electrotechnics diplomas are separate qualifications.
+
+The NUS infrastructure investigation and the sustainability-literature review must not be merged into one project. Never inflate personal outputs, research status, or model findings.
+
+### 7. Why a second master's degree?
+
+Require a substantive differentiation:
+- **ASU MSE in Sustainable Engineering:** physical engineering systems, sustainability and applied decision-making.
+- **WQU Financial Engineering:** quantitative computation, stochastic modeling and statistical/financial methods.
+- **Stanford General CME:** proof-oriented mathematics, mathematical analysis, scientific computing, differential equations and the theory and reliability of numerical algorithms.
+
+Explain which research limitations demand this additional concentration. Do **not** claim that ASU or WQU taught no mathematics. A later mathematics/applied mathematics PhD is a future goal, not a guaranteed consequence of a Stanford terminal master's degree.
+
+### 8. Stanford-specific fit and validated planning preference
+
+Use **research need -> mathematical capability -> official Stanford opportunity -> potential scientific application**. Confirm up-to-date eligibility and catalog details.
+
+Dossiya's **preferred 2027–28 45-unit plan**, validated by the applicant but **not approved by Stanford**:
+- **Foundations, 12 units:** CME 303, CME 306, MATH 236, CME 302.
+- **Programming, 6 units:** CME 310, CME 213.
+- **Breadth, 15 units:** STATS 310A, ENGR 209A, ME 408, and planned CME 291 research (6 units).
+- **Specialized electives, 9 units:** MATH 205A, MATH 205B, EE 363.
+- **Seminars, 3 units:** CME 500 (1 unit), plus 2 approved seminar units.
+
+Course availability, prerequisites, graduate enrollment permission, research sponsorship and adviser approval remain open. **Do not reproduce this 45-unit list in the SOP.** Select two or three courses that answer specific needs: CME 302 (conditioning and numerical stability), CME 303 (PDE theory if justified), CME 306 (numerical approximation and reliability), MATH 205A/B (proof-based analysis), and/or proposed CME 291 (supervised research only with faculty sponsor).
+
+Never imply a named lab has accepted Dossiya, that admission grants access to a restricted course, or that a research distinction is guaranteed.
+
+### 9. Narrative architecture and planning allocation
+
+Organize by scientific meaning while preserving chronology:
+
+**Research question -> existing mathematical preparation -> verified scientific action -> unresolved limitation -> specific Stanford training -> longer-term contribution.**
+
+Provisional 980-word plan (not an institutional formula):
+- Scientific identity and problem: **100 words**
+- Educational background: **110 words**
+- Undergraduate engineering project: **110 words**
+- NUS research and individual contributions: **200 words**
+- ASU/WQU and developing thesis: **180 words**
+- Why Stanford CME and second-MS rationale: **190 words**
+- Community contribution and PhD direction: **90 words**
+
+Prioritize NUS research evidence and mathematical work over a long list of awards, broad electrification statistics, Stanford prestige, or material better addressed in the separate Enriching the Learning Community statement.
+
+### 10. Revision loop and stop rule
+
+1. Read this SKILL, README, 1–3 relevant original posts, the actual Stanford prompt, the draft, and supporting academic/research records.
+2. Parse claims; build a ledger with evidence source, ownership and research status.
+3. Locate contradictions, unsupported assertions, research-method gaps and hidden causal leaps.
+4. Rank paragraphs by research relevance and personal contribution.
+5. Strengthen mathematical readiness through one or two documented technical tasks.
+6. Explain a focused unresolved research question, making assumptions and uncertainties explicit.
+7. State the additional need beyond ASU/WQU and connect it to two or three verified Stanford opportunities.
+8. Restore authentic first-person reasoning, concise language and natural transitions.
+9. Verify Stanford catalog facts and application limits again.
+10. Check exact word count, all hard constraints and editorial dimensions.
+11. Revise if evidence or clarity meaningfully improves; otherwise stop.
+
+Never inflate an editorial score by sacrificing specificity, voice or factual truth.
+
+### 11. Required output contracts
+
+- **REVIEW:** verified word count; independent score /100; criterion-level subscores; five most important weaknesses; exact passages for revision; evidence-supported replacements; unsupported/unverified claims; submission-readiness verdict.
+- **REVISE:** full revised SOP <=1,000 words; exact word count; concise explanation of meaningful changes; remaining evidence limitations; statement that original meaning and first-person voice were preserved.
+- **PLAN:** research argument outline; source-to-claim mapping; word allocation; Stanford fit map; missing evidence checklist.
+
+All scores are editorial assessments, **not official Stanford scores or admission probabilities**.
+
+### 12. Authoritative source hierarchy and live URLs
+
+Use sources in this priority order:
+1. Actual Stanford application portal prompt and word limits for the intake year.
+2. Official Stanford ICME admissions guidance.
+3. Stanford University Bulletin program rules and course descriptions.
+4. Actual transcripts, course syllabi, assignments and primary research records.
+5. Stanford statement-writing guidance.
+6. MIT Communication Lab on scientific evidence and fit.
+7. Dossiya's original archived writings as **voice evidence only**, not external validation.
+
+Official reference URLs, to recheck for current dates:
+- Stanford CME-MS Bulletin: https://bulletin.stanford.edu/programs/CME-MS
+- Stanford ICME MS: https://icme.stanford.edu/academics-admission/icme-master-science
+- CME 291 Master's Research: https://bulletin.stanford.edu/courses/2042921
+- Stanford writing guidance: https://humsci.stanford.edu/prospective-students/guide-getting-grad-school/writing-your-personal-statements
+- MIT Communication Lab: https://mitcommlab.mit.edu/cheme/commkit/graduate-school-personal-statement/
+
+**Final principle:** maximize demonstrated scientific preparation and fit subject to absolute factual accuracy, accurate research-status reporting, and the applicant's distinctive voice. The purpose is to communicate real evidence, not manufacture achievements.
+
+
 ## Retrieval procedure
 1. Open this `SKILL.md`.
 2. Open `README.md` and choose 1–3 relevant original posts. Retrieve each from `publications/NN-slug.md`.
