@@ -181,6 +181,12 @@ Priority examples, subject to official verification:
 
 The NUS infrastructure investigation and the sustainability-literature review must not be merged into one project. Never inflate personal outputs, research status, or model findings.
 
+**Evidence checks for the current SOP and future revisions:**
+- **UAC course terminology:** Do not translate `Analyse fonctionnelle` into a claim of advanced functional analysis unless the transcript and syllabus actually support that scope. If the documented content is functions of one or several variables, describe that content rather than imply Banach/Hilbert space training.
+- **Mathematical task ownership:** Verify the EEE 591 ODE-to-first-order-system assignment and any claims of numerical-versus-analytical comparison against actual work. Verify any IEE 574 duality, sensitivity or optimality-condition example before using it as proof of deeper mathematical reasoning.
+- **NUS research specificity:** Where primary notes support it, describe one investigated power–transport physical pathway and the variables/observations that would be needed to assess it. Distinguish a documented investigative decision from a discovered or field-validated result.
+- **Evidence-first revision:** Prefer a specific individual action and supported observation to repeated statements about limitations. State the thesis model's unvalidated status clearly once in context; do not scatter the same disclaimer across the entire SOP.
+
 ### 7. Why a second master's degree?
 
 Require a substantive differentiation:
@@ -259,6 +265,7 @@ Use sources in this priority order:
 
 Official reference URLs, to recheck for current dates:
 - Stanford CME-MS Bulletin: https://bulletin.stanford.edu/programs/CME-MS
+- Stanford ICME Admissions & Application FAQ (including guidance on applicants pursuing another MS): https://icme.stanford.edu/academics-admission/admissions-application-faq
 - Stanford ICME MS: https://icme.stanford.edu/academics-admission/icme-master-science
 - CME 291 Master's Research: https://bulletin.stanford.edu/courses/2042921
 - Stanford writing guidance: https://humsci.stanford.edu/prospective-students/guide-getting-grad-school/writing-your-personal-statements
