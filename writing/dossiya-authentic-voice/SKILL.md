@@ -80,11 +80,11 @@ Do not force every step into every paragraph. Use this as a reasoning check, not
 
 For a candidate statement S, seek a strong evidence-supported version:
 
-\`\`\`text
+```text
 S* = argmax J(S)
 J(S) = 0.24 E(S) + 0.20 M(S) + 0.18 Q(S)
      + 0.14 F(S) + 0.12 D(S) + 0.07 V(S) + 0.05 C(S)
-\`\`\`
+```
 
 Normalize each dimension to [0, 1]:
 - **E (24%):** research evidence and Dossiya's own contribution.
@@ -118,12 +118,12 @@ If a constraint fails, flag and correct it **before** optimizing style.
 
 For every substantive claim, establish:
 
-\`\`\`text
+```text
 Claim = {statement, source, personal_contribution,
          evidence_status, research_status, relevance}
 evidence_status = VERIFIED | SELF_REPORTED | PROPOSED | UNKNOWN
 research_status = COMPLETED | ONGOING | PROPOSED | NOT_ESTABLISHED
-\`\`\`
+```
 
 - **VERIFIED:** a transcript, official record, syllabus, research artifact, original assignment, dataset or other reliable source supports the claim **within its actual scope**.
 - **SELF_REPORTED:** supported by Dossiya's personal account or public writing, not independently audited.
@@ -151,9 +151,9 @@ Primary focus: **mathematical and numerical study of coupled power–electrified
 
 Candidate quantities include transformer thermal states, time-varying charging load, ambient temperature, operational limits, unknown parameters, and charging-service consequences. A **proposed abstract formulation**, not an established result, is:
 
-\`\`\`text
+```text
 dx/dt = f(x, u, T_a; theta)
-\`\`\`
+```
 
 Questions to justify with science and evidence:
 - Which physical states are required, and how are the interfaces coupled?
