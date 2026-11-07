@@ -66,6 +66,67 @@ Do not force every step into every paragraph. Use this as a reasoning check, not
   - For NUS research, keep power–transport heat interdependency investigation distinct from sustainability-review screening (not documented in this social-post corpus; consult research records).
   - Some statements are translated or bilingual; use correct English equivalents without changing meaning.
 
+## Natural writing, human authorship and anti-robotic revision
+
+**Purpose.** Improve readability while protecting the writer's own ideas and distinctive sentence habits. This is **not** an AI-detector-evasion procedure. Never claim a passage is human-written because it scores well on a detector or uses certain surface features. Apply the receiving institution's current AI-use and authorship policy before offering drafting or rewriting assistance.
+
+### 1. Diagnose before editing
+
+Check a draft against Dossiya's original materials, not against generic "human writing" recipes. Look for these *possible* symptoms, not an automatic word blacklist:
+- **Abstract praise instead of evidence:** "transformative journey," "unwavering passion," "prestigious institution," "uniquely positioned" where a precise action or observation should appear.
+- **Generic reflection after every event:** a repeated formula of challenge -> breakthrough -> passion -> impact, regardless of what really happened.
+- **Invisible actor:** "valuable insights were gained," "research was conducted," where the applicant's own role is established and matters. Passive constructions remain appropriate when the agent is unknown or unimportant.
+- **Artificial fluency:** long strings of polished abstractions that are less clear than Dossiya's direct question, action and interpretation.
+- **Manufactured rhythm:** identical sentence openings, lengths or transitions; or arbitrary sentence variation introduced only to sound less like AI.
+- **Excessive caution or self-promotion:** repeatedly stating a model is unvalidated or repeatedly announcing commitment instead of presenting new evidence.
+- **Thesaurus substitutions and decorative technical jargon:** words with little explanatory work, especially where they alter scientific meaning.
+
+A sentence is not weak merely because it is fluent, formal, short, complex, or widely used. Judge its purpose, accuracy and fit with the writer's original reasoning.
+
+### 2. Preserve the writer's thought before fixing the language
+
+1. **Identify the source thought.** Compare to Dossiya's actual first-person writing, research records, or user-supplied draft. Do not manufacture interpretations.
+2. **Name the real event or task.** Keep documented details, personal choices, and uncertainty. Avoid rewriting a whole paragraph when one vague sentence can be deleted.
+3. **Explain only what the record warrants.** Differentiate observation from interpretation, course exposure from independent work, and unresolved questions from findings.
+4. **Make minimal, visible edits.** Repair grammar, sentence connection and redundant words without replacing his vocabulary, meaning or chronology. For important changes show original wording and a proposed *light* edit, or mark what the author needs to rewrite.
+5. **Use natural rhythm for meaning.** Mix shorter conclusions with longer technical reasoning when useful. Do not impose sentence-length quotas or make every paragraph end with an inspirational lesson.
+6. **Read aloud and review with the author.** Ask: "Would I actually say this?", "Is this my conclusion?", "What evidence supports it?", "Could this sentence describe any applicant?" If yes to the last question, look for concrete original material instead.
+7. **Stop when the writing is clear and truthful.** Never intentionally insert grammatical errors, colloquialisms, random synonyms or invented personal anecdotes to make it seem less machine-produced.
+
+**Original-voice anchors:** Dossiya's archived questions on energy and digital work (post 04), his explicit self-assessment and remaining learning needs (posts 02/04), the actual 2019 bus journey to apply for a scholarship (post 09), and his stepwise approach (post 17). His original posts are evidence of his expressions, **not** independent verification of events. Keep correct English; do not imitate mistakes in earlier French or English writing.
+
+### 3. Specialized review procedure
+
+For each paragraph, evaluate separately:
+- **Ownership:** Is the action, decision or reflection genuinely Dossiya's?
+- **Specificity:** What actual problem, method, observation or choice distinguishes it?
+- **Scientific precision:** Are states, limitations, quantities and results represented correctly?
+- **Voice fidelity:** Did an editor make him sound unlike his actual words?
+- **Necessity:** Does the paragraph advance the argument, or simply restate motivation?
+- **Rhythm and clarity:** Is there needless repetition, jargon or a sequence of identical sentence structures?
+
+Provide concise annotations **[KEEP]**, **[CLARIFY]**, **[VERIFY]**, **[CUT]** or **[LIGHT EDIT]**. Recommend the *smallest authorized revision* first. Do not use a numeric "AI-likeness" score, automated style metric, or detector to prove authorship.
+
+### 4. Authorship-policy precedence, including Knight-Hennessy
+
+**Highest priority:** Check the actual destination's current official AI-use rules. A writing instruction in this skill does not authorize assistance an institution forbids.
+
+**Knight-Hennessy Scholars (KHS) applications:** Official policy allows limited support, including broad brainstorming, grouping ideas the applicant has already developed, identifying unclear/repetitive passages, and minor spelling/grammar edits that preserve original voice. **Do not generate KHS application drafts, sample answers, substantive content, response outlines/frameworks, or rewritten/refined narratives. Do not invent reflections or draw personal conclusions for the applicant.** Offer diagnostic feedback and narrowly scoped grammar corrections to the applicant's own text instead. This KHS-specific restriction overrides the general "draft/revise" triggers and output contracts elsewhere in this file.
+
+**Stanford CME graduate statements:** Follow the actual CME/Graduate Admissions prompt and any applicable AI rules rather than automatically importing the separate KHS policy. Stanford's School of Humanities and Sciences cautions that AI may make a statement inauthentic; favor original authorship and substantive applicant review.
+
+**All settings:** Never hide AI use when disclosure is required. Do not suggest tricks to evade plagiarism, authorship checks or AI detectors. Emphasize truthful ownership over surface-level "humanization."
+
+### 5. University guidance consulted (recheck live policies)
+
+- Stanford School of Humanities and Sciences, Writing Your Personal Statements: https://humsci.stanford.edu/prospective-students/guide-getting-grad-school/writing-your-personal-statements
+- MIT EECS Communication Lab, Graduate School Statement of Purpose: https://mitcommlab.mit.edu/eecs/commkit/graduate-school-statement-of-purpose/
+- Purdue OWL, Concision: https://owl.purdue.edu/owl/general_writing/academic_writing/conciseness/index.html
+- Purdue OWL, Sentence Variety: https://owl.purdue.edu/owl/general_writing/academic_writing/sentence_variety/
+- Purdue OWL, Writing in Plain Style: https://owl.purdue.edu/owl/general_writing/writing_style/plain_style%20.html
+- Purdue OWL, Steps for Revising: https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html
+- Knight-Hennessy Scholars, Policy on AI Use (policy for KHS, not automatically all Stanford programs): https://knight-hennessy.stanford.edu/admission/preparing-your-applications/policy-ai-use
+
 ## Stanford CME specific instructions
 - SOP (approximately 900–1,000 words): put research identity, mathematical preparation, personal scientific contributions, limits of current methods, precise Stanford fit, and mathematics PhD direction first. Use posts only when they explain the genesis of an academic interest or authentic motivation. The NUS/ASU/WQU technical record should be sourced from course and research evidence, not inferred from these posts.
 - Enriching the Learning Community (up to 500 words): use lived background, mentor reciprocity, Benin career orientation, Blueinit, youth leadership and contributions to peers. Distinguish being selected from what was actually done.
