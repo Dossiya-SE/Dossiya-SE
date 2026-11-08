@@ -470,6 +470,64 @@ The NUS infrastructure investigation and the sustainability-literature review mu
 - **NUS research specificity:** Where primary notes support it, describe one investigated power–transport physical pathway and the variables/observations that would be needed to assess it. Distinguish a documented investigative decision from a discovered or field-validated result.
 - **Evidence-first revision:** Prefer a specific individual action and supported observation to repeated statements about limitations. State the thesis model's unvalidated status clearly once in context; do not scatter the same disclaimer across the entire SOP.
 
+### 6A. Mathematics-to-computation narrative: choosing Stanford SOP evidence
+
+**Purpose (November 8, 2026 update):** Integrate the two user-provided assessments titled *Your Strongest Mathematical and Computational Story for Stanford CME* and *Your Strongest Mathematics and Computation Story for Stanford CME*, together with the newer task-level ASU/WQU audit. The two earlier rankings answer **different** questions: a high-dimensional classifier was presented as a strong *standalone computational example*, whereas IEE 574 and EEE 591 ODE work are the strongest *individually assessed and directly relevant mathematical examples*. Do not silently collapse the rankings or elevate an incompletely recovered project over stronger graded evidence.
+
+**Governing narrative:** Dossiya progressed from calculating engineering results to **reasoning about feasibility and optimality**, **implementing and checking numerical solutions**, and **evaluating stochastic uncertainty**. His NUS research now raises a problem that connects these skills: how to formulate and evaluate mathematically reliable models of time-dependent electrical and thermal interactions across power and electrified transportation systems.
+
+#### A. Select achievements by what they prove, not by the largest number
+
+| Example | Documented task/result | Best claim | Attribution/evidence boundary |
+| --- | --- | --- | --- |
+| **ASU IEE 574, deterministic optimization** | Individual submitted work uses basis matrices, basic feasible solutions, reduced costs, feasible directions, an algebraic infeasibility argument, and Phase I simplex. **591/600 = 98.5%** over six graded assessments through Nov 6, 2026; HW3 **97/100**, HW4 **100/100**. | **Best individually assessed mathematical reasoning:** explain *why* a solution is feasible, not optimal, infeasible or otherwise mathematically justified. | 98.5% was **graded-to-date, not a final course grade**. Do not assume a proof of all theorem-level results, and check the precise homework before quoting it. |
+| **ASU EEE 591, differential equations** | Individual source file `hw6(1).py` reformulates a second-order ODE into a first-order state system, integrates it with `scipy.integrate.odeint`, and checks a simpler numerical ODE solution against its analytical form. Course grade **A+**. | **Best independently implemented scientific-numerical example:** translating equations into code and checking a solution. | Do not claim the coupled thesis model is solved, a new numerical algorithm is invented, or numerical convergence theorems are proved. |
+| **ASU EEE 591, 10,000-feature classification benchmark** | Earlier audit reports 100 classes, substantial missingness, a 25%-active-feature constraint, chunked Python/Dask Gaussian classification, and recorded **1.000000 benchmark accuracy** versus about **0.9114** after mean imputation. | **Optional high-dimensional computing case:** turning a resource-constrained probabilistic problem into a workable algorithm, comparing approaches. | This is a **reported assignment benchmark** from an earlier audit; check original complete notebook, executed results, task ownership and rubric before presenting numerical performance as individual verified accomplishment. Public EEE 591 EDA repository is **not** the full classifier source. No perfect out-of-sample accuracy or HPC mastery inferred. |
+| **Older ASU thesis public-network numerical benchmarks** | September 12, 2026 research repository reports power-network residual around `3.08e-14` and BFW traffic equilibrium relative gap `9.34e-7` in **645 iterations**, meeting the preset `1e-6` criterion. | **Optional bridge to actual infrastructure modeling:** numerical benchmark execution and explicit convergence checks. | Historical earlier work, separate from the **current** thermal state-time thesis; benchmarks verify numerical criteria only, **not** empirically validated power/EV thermal coupling. Identify Dossiya's own implementation role before claiming solo authorship. |
+| **WQU MScFE 622 stochastic modeling** | Named group project compared Fourier and Monte Carlo option values **8.785277 vs 8.792762** with Monte Carlo standard error **0.016908**, and another group report examined a three-state HMM and transaction-cost sensitivity. | **Advanced computational breadth:** stochastic simulation, numerical cross-comparison, sensitivity and model risk. | **Group** outputs; specify Dossiya's individual contribution if known. Close Fourier/Monte Carlo results support numerical consistency, not empirical physical validation; HMM portfolio was cost sensitive. Transcript MScFE 622 **87%** (Nov 3, 2026). |
+| **ASU SURI empirical research** | Approximately **460 complete survey responses**, reliability analysis, Spearman correlations, ANOVA and regression in a presented study. | **Research judgment:** choose analytical methods and distinguish association from causal inference. | Research/presentation work, not a causal effect of AI use. |
+| **NUS interdependency research and current ASU thesis** | Investigated extreme-heat pathways, separated common hazard exposure from directional power/transport effects, narrowed physical interfaces and identified the states and evidence needed for a thermal dynamical model. | **Central scientific question and next step**, showing why advanced mathematical training matters. | Research **developing**: do not state the current coupled thermal equations are fully parameterized, implemented, or field validated. Transformer/EV interface is a candidate example, not necessarily final fixed thesis scope. |
+
+**Selection rule:** In a 1,000-word Stanford SOP, favor **IEE 574 + EEE 591 ODEs** as the mathematical preparation pair. Add **one** computation example (either the high-dimensional classification result *if traceable*, or the historical power/transport numerical benchmark if individual contribution is clear). Mention WQU group work and SURI briefly only when they establish a **new, necessary** competency. Preserve NUS/current thesis as the research motivation, not an established output. Do not use every example.
+
+#### B. Make the mathematics do explanatory work
+
+A persuasive mathematical story asks a sequence of increasingly demanding questions:
+
+1. **Optimization and linear algebra:** *When does a solution satisfy the constraints, when can it be improved, and what establishes an optimum or infeasibility?* Show feasible bases, reduced costs, proofs/certificates or exact assessed problem.
+2. **Numerical differential equations:** *How can governing equations be represented computationally, and how can computed answers be checked?* Show state conversion, numerical integration and analytical comparison.
+3. **Stochastic modeling and model risk:** *How much do uncertain inputs, estimators, model assumptions or numerical methods affect an apparent result?* Use a specific WQU team experiment or SURI interpretation, not a list of model names.
+4. **Coupled physical research:** *What equations, assumptions, parameters, timescales, operating limits and observations are needed for reliable thermal interdependency predictions?* Distinguish a mechanism-based research question from a validated model.
+5. **Stanford CME:** *What deeper mathematical knowledge is required next?* Choose targeted numerical analysis, dynamical systems, inverse problems, uncertainty quantification or rigorous mathematical foundations. A second master's degree must have a concrete intellectual purpose beyond ASU and WQU.
+
+**Central transition:** `applied optimization + numerical computation + statistical/stochastic evaluation -> mathematical reliability of coupled physical models`. It is a **reasoning connection**, not a factual claim that every course directly caused the next.
+
+#### C. How to write it in Dossiya's own voice
+
+- Prefer statements such as `I used matrix algebra and reduced costs to determine whether a feasible solution could be improved.` over `I developed expertise in advanced optimization.`
+- Prefer `I reformulated a second-order equation as a first-order system and compared a numerical result with an analytical solution.` over `I mastered scientific computing.`
+- Prefer `Our group compared numerical valuation methods and examined the uncertainty in their agreement.` over `I validated a stochastic model.`
+- Prefer `At NUS, I narrowed the investigation to physical mechanisms and the evidence required to model them.` over `I developed a validated predictive framework.`
+- A precise personal question is welcome: `I could identify the physical interaction, but what equations and observations would make its predicted evolution defensible?` Use only if it matches Dossiya's genuine reasoning, not as a made-up quotation.
+
+**Paragraph construction, not mandatory wording:**
+
+`[Specific mathematical task and result] -> [second, distinct numerical/computational skill] -> [what those experiences taught about judging solutions] -> [physical research question that remains] -> [specific CME training required]`.
+
+Keep the first person, direct language, meaningful mathematical nouns and a human rhythm. Do not stack `I learned` after every assignment. Avoid generic praise, exaggerated readiness, course catalogs, or a research-gap confession without prior achievements. A strong paragraph should communicate *what was done*, *why it is mathematically meaningful*, and *why the next problem requires more*.
+
+#### D. Verification and emphasis protocol
+
+1. **Rank by evidence and purpose:** completed individually graded work > demonstrated executed individual code > attributable research output > named group result > repository-reported benchmark > conceptual research aim. These are **writing-priority heuristics**, not an absolute ranking of scientific worth.
+2. **Check quantities and dates:** IEE 574 591/600 (98.5%) was dated Nov 6, **not final**; EEE 591 A+ is final; WQU transcript grades differ by course (MScFE 600 94%, MScFE 622 87%, MScFE 632 88%).
+3. **Check the classifier carefully:** the reported perfect benchmark result is not sufficient evidence of generalized accuracy. The current publicly indexed EEE 591 EDA repo contains figures but not the source used to generate those figures; do not treat it as the classifier source.
+4. **Separate the two thesis phases:** a past public power/transport benchmark is not proof of a completed current electrothermal model.
+5. **Preserve actual ownership:** an ASU assessed individual assignment supports a different claim from a WQU group report.
+6. **Use mathematical terms exactly:** feasibility, optimality, mathematical proof, numerical convergence, physical validation, estimation, and uncertainty are not interchangeable.
+7. **Edit for impact:** include at most 2 to 3 detailed technical examples within a 1,000-word SOP, and remove an example if it does not strengthen preparation, research purpose or Stanford fit.
+
+**Evidence notes:** updated user-provided *Stanford CME: Comprehensive Academic and Research Skills Audit* (Nov 8, 2026), the earlier audit of high-dimensional EEE 591 computation, original ASU/WQU research repositories, and September 2026 thesis benchmark documentation. Each artifact supports claims only within its described scope. MIT Communication Lab guidance: https://mitcommlab.mit.edu/cheme/commkit/graduate-school-personal-statement/ . Stanford CME program: https://icme.stanford.edu/academics-admission/icme-master-science .
+
 ### 7. Why a second master's degree?
 
 Require a substantive differentiation:
