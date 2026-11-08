@@ -39,6 +39,124 @@ For a personal or scholarship story:
 
 Do not force every step into every paragraph. Use this as a reasoning check, not formulaic writing.
 
+## Personal voice lexicon: decisions, questions, learning and contribution
+
+**Source basis (8 November 2026):** two user-supplied guides titled *Words and Expressions That Reflect Your Authentic Voice* and *Your Authentic Writing Voice: Words That Make Your Statement Personal and Distinctive*, compared with the seventeen original LinkedIn posts indexed in this repository. This section complements the scientific-action-verb rules below; it does **not** replace the original posts, turn suggested English sentences into verbatim quotations, or create new biographical facts.
+
+**Central principle:** Dossiya's distinctiveness comes primarily from **his choices, questions, personal responsibilities and progressive reasoning**, not unusual adjectives or forced vocabulary. The strongest expression of his voice follows the facts and connects one intellectual step to the next.
+
+### 1. Personal voice markers, with primary-source anchors
+
+| Recurring pattern | Primary archive | Academic writing signal |
+| --- | --- | --- |
+| **Question before conclusion** | Post 04 asks `Énergies+ Numérique= ???`; post 13 questions food security and education. | `I asked`, `I wanted to understand`, `I examined`, `I questioned`, only for real questions. |
+| **Decision under constraints** | Post 09 describes the scholarship pathway and the first bus journey from Natitingou to Cotonou to apply. | `I decided`, `I applied`, `I chose`, `I pursued`, followed by the actual decision. |
+| **Recognizing a learning need** | Post 04 identifies weaknesses in English and energy-related digital skills; post 02 mentions needing to improve public speaking; post 14 discusses missing information and mentors. | `I recognized`, `I needed to learn`, `I had not yet understood`, `I sought`. |
+| **Connecting disciplines for a practical reason** | Posts 02/04 discuss renewable energy plus cloud/digital technology; post 17 links quantitative finance and decision-making. | `I connected`, `I applied`, `I examined the relationship`, `I sought to understand`. |
+| **Progress, one step at a time** | Post 09 describes continued educational progression; the author's post-17 reply says `Step by step.` | `I began with`, `I continued`, `I moved toward`, `I built on`, without imposing a progress slogan. |
+| **Learning and contribution together** | Post 12 discusses 10000 CODEURS guidance in Bonou; post 07 describes a team distributing 30 solar lamps; posts 11/14 discuss community and mentorship. | `I collaborated`, `I supported`, `I shared`, `I mentored`, `I contributed`, with correct actor and scope. |
+| **Acknowledging others without hiding personal action** | Posts 02, 03, 08, 09, 14 recognize mentors and institutions. | Distinguish a mentor's support, a team's outcome and Dossiya's actual contribution. |
+
+These are **patterns observed in public writing**, not a claim that Dossiya must always sound reflective, modest or emotionally restrained. Preserve enthusiasm where it genuinely fits the audience; use the more deliberate scientific register in research statements.
+
+### 2. Vocabulary groups to choose from, never a checklist
+
+- **Question and reflection:** asked, questioned, noticed, recognized, examined, wondered, reconsidered, learned, understood.
+- **Choice and initiative:** chose, decided, applied, sought, pursued, traveled, continued, narrowed.
+- **Scientific reasoning:** investigated, identified, distinguished, formulated, compared, interpreted, evaluated, verified.
+- **Building and technical effort:** designed, developed, implemented, tested, analyzed, modeled, optimized.
+- **Working with others:** collaborated, supported, organized, mentored, shared, contributed.
+- **Future research:** I want to understand; I aim to investigate; I seek to characterize; I intend to develop; I hope to contribute.
+
+**Twelve distinctive candidates for the Stanford CME SOP:** questioned, decided, narrowed, examined, distinguished, formulated, compared, verified, recognized, continued, contributed, investigate. These are *options*, not required keywords or a distribution target.
+
+### 3. Natural first-person phrases, with honest provenance
+
+**Suggested English formulations inferred from voice patterns, NOT direct LinkedIn quotations:**
+
+- **Motivation:** `I wanted to understand why...`; `I became interested in why...`; `What I could not explain was...`
+- **Personal choice:** `I decided to...`; `I chose to examine...`
+- **Problem-solving:** `I initially approached the problem by...`; `I narrowed the question to...`; `I learned to distinguish...`
+- **Progress of evidence:** `I examined... and found that...`; `I could identify..., but could not yet establish...`
+- **Research direction:** `This raised another question...`; `I still need to understand...`; `I now want to investigate...`
+
+Use **only the wording that captures a genuine thought and completed or planned action**. Avoid repeating `I...` at the beginning of every sentence and avoid manufacturing a limitation after every success. If his original wording expresses the idea more naturally, retain it.
+
+**Short original-language voice anchors (actual archive excerpts):**
+- `Énergies+ Numérique= ???` (post 04): question-led interest in combining disciplines.
+- `j'ai identifié mes faiblesses` (post 04): honest self-assessment and a learning plan.
+- `Step by step.` (post 17 author's reply): incremental progress.
+
+Do not import social-media exclamations, capitalization, hashtags or rhetorical provocations into the SOP as a stylistic gimmick.
+
+### 4. Write achievements with ownership, not with unnecessary doubt
+
+The SOP should confidently describe **what Dossiya did, how he did it, and what it achieved or changed in his understanding**. No separate certificate or verification sentence is needed after every credible claim. Internally ensure the claim is accurate.
+
+- An educational constraint is meaningful because of the **specific decision** that followed, not because of a broad statement about resilience.
+- A technical project is meaningful because of the **problem, particular contribution, method and outcome**, not because it was called innovative.
+- A research result is meaningful because it demonstrates **analysis or judgment**: what was measured, distinguished, formulated, checked or learned.
+- A future objective is meaningful because it **follows from earlier work**, not because it is announced as a lifelong passion.
+- Distinguish **individual vs team**, **completed vs planned**, and **research finding vs inference**. Do not undermine achievements by repeatedly restating that they are unverified or incomplete.
+
+### 5. Avoid generic praise as a substitute for personal evidence
+
+| Abstract or promotional default | Prefer a real action, question or specific noun |
+| --- | --- |
+| `my transformative journey`, `unique journey` | The actual education decision, research problem or experience. |
+| `unwavering passion`, `deepened my passion` | `I became interested when...`; `This raised a question...` |
+| `resilient`, `hardworking` without a concrete event | `I applied`, `I continued`, `I pursued`, and the real circumstances. |
+| `innovative`, `cutting-edge`, `impactful` | What was designed, implemented, measured, compared or contributed. |
+| `prestigious`, `world-class`, `exceptional opportunity` | The specific method, course, faculty research direction or program opportunity. |
+| `empowered`, `transformed lives` | A documented mentoring activity or measurable contribution. |
+| `I gained invaluable experience` | A concrete task and the mathematical or scientific insight it produced. |
+| `uniquely positioned` | The preparation that directly qualifies the applicant for the proposed study. |
+
+Do **not** treat these words as forbidden in all contexts. Flag them only when they obscure a more precise or more authentic statement.
+
+### 6. Academic purpose is different from community contribution
+
+- **Stanford CME SOP:** emphasize mathematical ability, specific research experiences and contributions, intellectual questions, preparation, why this program rather than an existing graduate degree, and future research.
+- **Enriching the Learning Community:** emphasize lived perspective, collaboration, mentorship, shared learning, responsible leadership and community contributions.
+- **LinkedIn and community updates:** may retain more enthusiasm, gratitude, direct audience questions and exclamatory energy, without manufacturing outcomes.
+- **Knight-Hennessy:** comply with the existing separate strict authorship-policy section below; these voice notes do not authorize generating KHS application drafts or substantive content.
+
+Use personal background only when it explains a consequential academic decision or a relevant contribution. Do not turn the SOP into a hardship catalogue or turn the community statement into a second research CV.
+
+### 7. The Dossiya narrative signature and the editing test
+
+**Personal experience:** `What I encountered → The choice I made → What I did → What I learned → What I did next`.
+
+**Scientific experience:** `The question → My research responsibility → The method → The result/interpretation → The remaining problem → The next intellectual step`.
+
+**Integrated SOP reasoning:** `Real experience → Personal decision → Specific scientific work → Demonstrated preparation → Why a further mathematical question matters → Stanford fit and career direction`.
+
+These are *reasoning checks*, not paragraph templates. Not every experience needs all elements, and some paragraphs should simply report a significant achievement.
+
+**Before finalizing each paragraph, ask:**
+1. Could this sentence describe almost any applicant? If so, what detail from the author's actual experience belongs here?
+2. Does it show what **I** decided, contributed, understood or questioned, rather than only describing an organization?
+3. Does the selected verb match the real scientific or personal action?
+4. Did we preserve a real accomplishment confidently, rather than bury it under apologies or documentation notes?
+5. Is this thought from the user's own writing or research, or is it a newly invented emotional lesson?
+6. Does this paragraph earn its place under Stanford's five SOP questions?
+
+**Editorial annotation:** mark `[KEEP]`, `[CLARIFY]`, `[VERIFY]`, `[CUT]` or `[LIGHT EDIT]`. Favor the smallest necessary edit. Do not reproduce the user's grammatical errors in polished English, invent first-person thoughts, or use tricks intended to evade AI detection.
+
+### 8. Source register and institutional guidance (context, not mandatory vocabulary)
+
+**Direct voice primary sources:** original archived posts [02](publications/02-auf-green-innovation.md), [04](publications/04-student-energy-leader-forum.md), [07](publications/07-blueinit-ganvie-solar-lamps.md), [09](publications/09-scholarships-and-personal-journey.md), [11](publications/11-youth-council-women-entrepreneurship.md), [12](publications/12-bonou-digital-career-guidance.md), [14](publications/14-mentorship-professional-growth.md), [17](publications/17-wqu-applied-data-science-financial-markets.md); consult other original posts when relevant.
+
+**User-supplied syntheses:** *Words and Expressions That Reflect Your Authentic Voice* and *Your Authentic Writing Voice: Words That Make Your Statement Personal and Distinctive* (8 Nov 2026). Their proposed English phrases are editorial suggestions, not primary evidence of the author's exact words.
+
+**General writing resources named in these guides:**
+- Yale Office of Career Strategy, https://ocs.yale.edu/resources/stemconnect-technical-resume-sample/ (technical accomplishment descriptions).
+- Yale Office of Career Strategy, https://ocs.yale.edu/channels/professional-conduct-etiquette/ (professional communication context).
+- MIT Chemical Engineering Communication Lab, https://mitcommlab.mit.edu/cheme/commkit/graduate-school-personal-statement/ (research story and intellectual development).
+- Stanford Graduate Admissions, https://gradadmissions.stanford.edu/apply/statements (SOP requirements).
+
+**Do not imply Stanford endorses or mandates any of these words, sentence starters or templates.** Official institution-specific requirements and authorship rules always take precedence.
+
 ## Stylistic guardrails
 1. Preserve simple and concrete first-person English. Correct grammar; do not replace thought with artificial eloquence.
 2. Preserve Dossiya's actual chronology. In 2016 he pursued a government scholarship because the available general-secondary path was unaffordable; his interest in engineering developed through technical study, not from an invented childhood scientific obsession.
