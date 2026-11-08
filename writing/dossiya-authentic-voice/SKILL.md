@@ -66,6 +66,110 @@ Do not force every step into every paragraph. Use this as a reasoning check, not
   - For NUS research, keep power–transport heat interdependency investigation distinct from sustainability-review screening (not documented in this social-post corpus; consult research records).
   - Some statements are translated or bilingual; use correct English equivalents without changing meaning.
 
+## Scientific action verbs: mathematical precision in Dossiya's voice
+
+**Scope.** Use this reference when editing Dossiya's mathematics, physics, engineering, research, and graduate-application writing. It is synthesized from the two user-supplied November 2026 scientific-verb guides. **Neither Stanford nor any other university requires a fixed list of verbs.** Select language by the documented action, scientific meaning, applicant ownership, and the original writer's voice. Never substitute a stronger verb simply to sound more academic.
+
+### A. Voice first, verbs second
+
+- Retain Dossiya's direct, first-person reasoning: the problem he encountered; his specific decision or task; the method; the finding; what remains to investigate; and the next academic objective when relevant.
+- Treat the pattern **I + precise scientific verb + specific mathematical/physical object + method or result + significance** as a clarity check, **not** a formula that every sentence must follow. Preserve natural sentence rhythm.
+- Where personal work is known, write **I investigated / I implemented / I compared**. For joint work, clearly identify **we / our team** and then the author's actual contribution. Passive voice is legitimate when the actor is irrelevant or unknown.
+- State real achievements directly and confidently. An SOP is an admissions argument, not an appendix of certificates: do **not** repeat "unverified" or "documentation needed" after ordinary credible achievement claims. Internally check consequential facts and keep results defensible, without inventing them or inflating team ownership.
+- Do not transform Dossiya's authentic reflective words ("I learned," "I questioned," "I needed to understand") into embellished achievements. Reflection is useful when it connects a concrete episode to a real learning need.
+- No automatic jargon insertion, technical-verb quota, adjective blacklist, forced active voice, or misleading "humanization."
+
+### B. Mathematics: choose the operation actually performed
+
+| Verb | Accurate meaning / use |
+| --- | --- |
+| **Formulate / define / specify** | Express the mathematical problem, variables, assumptions, objectives, constraints or governing relations. |
+| **Derive / deduce** | Obtain a relation or conclusion by explicit mathematical reasoning. |
+| **Prove** | Supply a rigorous mathematical argument establishing a proposition; not a synonym for numerical agreement. |
+| **Establish** | Demonstrate a result under stated conditions, with proof or appropriate evidence. |
+| **Analyze / examine** | Study properties, assumptions, stability, sensitivity, or relationships. |
+| **Characterize** | Identify defining conditions, behavior or a mathematical class. |
+| **Construct** | Build a mathematical object, model, example or counterexample. |
+| **Solve** | Obtain a solution to a posed mathematical problem; specifying a model alone is not solving it. |
+| **Optimize** | Find or investigate an objective under explicit constraints. |
+| **Approximate / estimate** | Compute or infer an inexact result using a defined procedure. |
+| **Bound** | Establish upper/lower limits or error estimates. |
+| **Generalize** | Extend a demonstrated result to a broader setting with justification. |
+| **Verify / compare** | Check a mathematical or numerical claim against explicit conditions, exact solutions or benchmarks. |
+
+### C. Physics: name the mechanism, observation and model status
+
+| Verb | Accurate meaning / use |
+| --- | --- |
+| **Investigate / examine** | Systematically study a physical question or mechanism. |
+| **Identify / distinguish** | Recognize physical variables and separate different causal pathways or phenomena. |
+| **Represent / model** | Encode physical behavior using stated equations, mechanisms and assumptions. |
+| **Measure / observe** | Obtain or record empirical observations, not merely compute synthetic values. |
+| **Estimate / quantify / determine** | Calculate or infer magnitudes, uncertainty, limits, timing or relationships. |
+| **Simulate / predict** | Compute behavior under an adopted model; simulated trajectories do not automatically establish real-world predictive accuracy. |
+| **Characterize** | Describe the properties, limits or time evolution of a physical phenomenon. |
+| **Test / calibrate / validate** | Respectively evaluate against a criterion, infer parameters from reference data, or assess whether the model adequately represents its intended physical system. |
+| **Interpret / assess** | Explain what observations or model results imply and what they cannot establish. |
+
+### D. Engineering: foreground the artifact and the accomplishment
+
+| Verb | Accurate meaning / use |
+| --- | --- |
+| **Design / develop / build** | Specify or create a system, algorithm, prototype or method; distinguish the design from a finished implementation. |
+| **Implement / integrate / automate** | Translate a method into executable or operational form; combine components; or replace defined manual operations. |
+| **Evaluate / assess / compare** | Judge alternatives, feasibility, performance, costs, risk or suitability against criteria. |
+| **Test / benchmark / verify** | Run specified tests, compare to reference performance or check requirements/implementation correctness. |
+| **Calibrate / parameterize** | Adjust model parameters from data, or define their mathematical/physical role. |
+| **Diagnose / refine / optimize** | Identify error, revise a design or improve a stated objective under constraints. |
+| **Reduce / increase / improve / demonstrate** | Report a genuine measured or calculated change; supply the quantity or comparison when relevant. |
+
+### E. Research judgment and progression
+
+- **Question formation:** identified, questioned, defined, narrowed, formulated, specified.
+- **Reading and synthesis:** searched, screened, extracted, compared, classified, reviewed, synthesized. Screened records are not automatically deeply analyzed records.
+- **Method work:** constructed, derived, implemented, tested, evaluated, simulated, calculated, estimated.
+- **Interpretation:** distinguished, interpreted, explained, justified, reassessed, identified limitations.
+- **Forward-looking work:** aim to investigate, seek to characterize, plan to develop, want to understand, intend to analyze. **Do not write planned work in the completed past tense.**
+
+### F. Scientific claim-strength distinctions: never blur these
+
+1. **Investigated ≠ established:** examining a mechanism does not demonstrate a confirmed law or result.
+2. **Formulated ≠ solved:** writing equations/assumptions is not obtaining the model solution.
+3. **Analyzed ≠ proved:** exploration, data analysis or numerical agreement does not establish a theorem.
+4. **Implemented ≠ invented:** coding a published algorithm is an implementation, not invention of the method.
+5. **Verified ≠ validated:** software or numerical checks do not establish real-world model accuracy.
+6. **Estimated ≠ measured:** computed or inferred values are not direct observations.
+7. **Simulated ≠ predicted accurately:** a computed trajectory alone does not validate future forecasting.
+8. **Screened ≠ analyzed in depth:** retain separate counts and explicit inclusion stages for research literature.
+9. **Group work ≠ individual accomplishment:** describe the common outcome and personal responsibility separately.
+10. **Proposed ≠ completed:** future objectives, pilot plans, or model frameworks are not demonstrated research outputs.
+
+These are **accuracy rules for choosing verbs**, not instructions to make an SOP apologetic. State supported achievements with active verbs and place uncertainty where it changes the scientific interpretation.
+
+### G. Source-grounded example bank, to use only when a matching record exists
+
+| Context | Appropriate description | Avoid conflating with |
+| --- | --- | --- |
+| NUS infrastructure investigation | **Investigated** heat-related power/transport mechanisms; **narrowed** the physical interface; **distinguished** common exposure from directional interaction. | Fully calibrated or validated coupled thermal model. |
+| NUS sustainability review | **Screened** 282 studies; **compared** methods across a separate detailed subset; **synthesized** eligible evidence as work advanced. | Treating all screened papers as fully analyzed or merging the two NUS projects. |
+| ASU SURI | **Applied** reliability analysis, ANOVA, correlation and regression; **interpreted** observed associations. | Claiming associations prove causation. |
+| ASU EEE 591 | **Reformulated** an ODE, **implemented** numerical methods, **compared** analytical and numerical solutions where supported by the actual assignments. | Proving general numerical stability or creating a new solver. |
+| ASU IEE 574 | **Formulated** LPs, **analyzed** feasible bases, reduced costs, duality, and **certified** optima or unboundedness where individual completed work shows this. | Claiming novel optimization research from coursework. |
+| WQU stochastic project | In a group project, **evaluated** a three-state HMM and **assessed** strategy sensitivity to transaction costs. | A proven profitable deployable trading strategy or individual authorship of all code. |
+| ASU thermal thesis (developing) | **Defined / narrowed** a physics-based research scope and **investigate / aim to model** thermal state-time interdependencies. | Claiming a finished empirically validated transformer–EV charging model. |
+| Undergraduate cold storage | **Helped design and test** a solar-refrigeration prototype; **evaluated** engineering options with computational tools. | Taking credit for the team's entire development or undocumented impacts. |
+
+### H. Quick editing method
+
+1. **Extract:** Find each substantive research/achievement sentence and its implied actor, action, object, method, result, and status.
+2. **Match:** Choose the narrowest accurate scientific verb from B–E; never change the underlying claim to accommodate an impressive word.
+3. **Strengthen:** Replace vague claims such as "I gained valuable experience" with an actual action and object **when the source material supplies both**.
+4. **Humanize through ownership:** Preserve natural questions, decisions, setbacks and conclusions from Dossiya's own words. Keep precise formal English; do not mimic grammatical errors.
+5. **Audit:** Check pairs in F, numerical values, tense, individual-versus-team attribution and whether the result advances the Stanford prompt.
+6. **Stop:** Prefer the smallest edit that improves clarity and scientific precision. Do not rewrite a paragraph solely to distribute more strong verbs.
+
+**Source notes supplied by the author (8 November 2026):** two scientific-verb guides citing Stanford School of Humanities and Sciences (https://humsci.stanford.edu/prospective-students/guide-getting-grad-school/writing-your-personal-statements), MIT EECS Communication Lab (https://mitcommlab.mit.edu/eecs/commkit/graduate-school-statement-of-purpose/), Oxford MPLS scientific writing (https://www.mpls.ox.ac.uk/training/resources-for-researcher-and-career-development/communication-skills/scientific-writing/the-passive-and-active-voices-and-when-to-to-use-them), Penn State Style for Students (https://courses.ems.psu.edu/styleforstudents/node/1808) and Open University OpenLearn (https://www.open.edu/openlearn/education-development/revision-and-examinations/content-section-3.8). These references are context for general scientific writing, not a Stanford-approved mandatory verb list. Recheck live pages when representing institutional requirements.
+
 ## Natural writing, human authorship and anti-robotic revision
 
 **Purpose.** Improve readability while protecting the writer's own ideas and distinctive sentence habits. This is **not** an AI-detector-evasion procedure. Never claim a passage is human-written because it scores well on a detector or uses certain surface features. Apply the receiving institution's current AI-use and authorship policy before offering drafting or rewriting assistance.
