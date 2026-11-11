@@ -1,0 +1,19 @@
+name: Cross-repository color scope policy
+on:
+  pull_request:
+    paths:
+      - 'data/COLOR_POLICY_SCOPES_V1.json'
+      - 'scripts/validate_color_policy_scopes.py'
+      - '.github/workflows/color-scope-policy.yml'
+  push:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/validate_color_policy_scopes.py
+      - run: python scripts/validate_visual_palette.py
