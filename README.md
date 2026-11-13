@@ -8,6 +8,14 @@
 
 </div>
 
+<div align="center">
+
+<img src="./assets/profile-motion.svg" width="100%" alt="Static conceptual diagram of the research sequence from physical reality through causal mechanisms and mathematical structure to engineering decisions; not measured dynamics.">
+
+**Research:** Differential Geometry · Dynamical Systems · Graph-Based Modeling · Viability Theory · Power–Transportation Systems
+
+</div>
+
 ## About Me
 
 My academic journey began in **Electrical Engineering**, where I learned to connect mathematical principles with physical systems. I continued into **Physics**, specializing in Renewable Energy and Energy Systems, where I developed my interests in mathematical modeling and scientific computation.
@@ -23,12 +31,6 @@ My work connects **physics, applied mathematics, and computational methods** to 
 **Evidence of application.** In ongoing thesis work, I evaluated a first-order thermal model using **8,592 observations** (top-oil RMSE **0.2517°C → 0.2165°C**; MAE did not improve). I analyzed **460 survey responses** using statistical methods in ASU SURI research, formulated a **700 MW** generator-selection optimization exercise, and contributed to a **three-state hidden Markov model** study of **5,469 VIX changes**.
 
 **Explore the work:** [Infrastructure interface research](https://github.com/Dossiya-SE/infrastructure-interface-resilience-review) · [Quantitative finance lab](https://github.com/Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab) · [Mathematical research platform](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience)
-
-<div align="center">
-
-<img src="./assets/profile-motion.svg" width="100%" alt="Static conceptual diagram of the research sequence from physical reality through causal mechanisms and mathematical structure to engineering decisions; not measured dynamics.">
-
-**Research:** Differential Geometry · Dynamical Systems · Graph-Based Modeling · Viability Theory · Power–Transportation Systems
 
 **Current:** MSE Sustainable Engineering, Arizona State University · **Completed research placement:** National University of Singapore (2026)
 
