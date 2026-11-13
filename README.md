@@ -2,15 +2,29 @@
 
 # Dossiya Dakou
 
-**Sustainable Engineering · Applied Mathematics · Complex Infrastructure Systems**
+**Physics-Based Mathematical Engineering · Scientific Computing · Sustainable Infrastructure**
 
-Graduate researcher studying how mathematical and computational methods can improve the **sustainability, resilience, and recovery of interconnected infrastructure systems**.
+*From physical mechanisms to mathematical models, computational evidence, and engineering decisions.*
 
-<img src="./assets/profile-motion.svg" width="100%" alt="Animated illustration connecting systems, interfaces and resilience. Decorative motion only; not simulation data.">
+</div>
+
+**Scientific problem.** I study how **electrified-transportation demand, transformer thermal inertia, and uncertain operating limits** affect the operation and resilience of interconnected power–transportation infrastructure. This is the focus of my ongoing ASU MSE thesis.
+
+**Mathematical and computational methods.** I work with **dynamical systems, differential equations, numerical methods, parameter estimation, uncertainty quantification, stochastic models, and constrained optimization**, using **Python, Julia/JuMP/HiGHS, and MATLAB**.
+
+**Evidence of application.** In ongoing thesis work, I evaluated a first-order thermal model using **8,592 observations** (top-oil RMSE **0.2517°C → 0.2165°C**; MAE did not improve). I analyzed **460 survey responses** using statistical methods in ASU SURI research, formulated a **700 MW** generator-selection optimization exercise, and contributed to a **three-state hidden Markov model** study of **5,469 VIX changes**.
+
+<sub>Evidence boundary: The thermal results are preliminary research findings, not field validation. Coursework examples and collaborative projects are identified as such.</sub>
+
+**Explore the work:** [Infrastructure interface research](https://github.com/Dossiya-SE/infrastructure-interface-resilience-review) · [Quantitative finance lab](https://github.com/Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab) · [Mathematical research platform](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience)
+
+<div align="center">
+
+<img src="./assets/profile-motion.svg" width="100%" alt="Static conceptual diagram of the research sequence from physical reality through causal mechanisms and mathematical structure to engineering decisions; not measured dynamics.">
 
 **Research:** Differential Geometry · Dynamical Systems · Graph-Based Modeling · Viability Theory · Power–Transportation Systems
 
-**Current:** MSE Sustainable Engineering, Arizona State University · Visiting Graduate Researcher, National University of Singapore
+**Current:** MSE Sustainable Engineering, Arizona State University · **Completed research placement:** National University of Singapore (2026)
 
 [Research Portfolio](https://dossiya-se.github.io/) · [Research Laboratory](https://dossiya-se.github.io/lab.html) · [Repositories](https://github.com/Dossiya-SE?tab=repositories) · [ORCID](https://orcid.org/0009-0004-1071-9948) · [LinkedIn](https://www.linkedin.com/in/dossiya-dakou-/)
 
