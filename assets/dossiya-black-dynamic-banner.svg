@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" width="1200" height="390" role="img" aria-labelledby="bannerTitle bannerDescription">
+  <title id="bannerTitle">Dossiya Dakou | Scientific Engineer</title>
+  <desc id="bannerDescription">Animated portfolio banner on a black background. Dossiya Dakou, Physics-Based Mathematical Engineering. Slogans: I am the scientific engineer you need. I am the engineer of tomorrow. I am your problem solver sustainable engineer. An angular sky-blue frame and subtle mathematical motifs animate. Motion is decorative, not physical-model data.</desc>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .name { fill:#fff; font-size:44px; font-weight:700; font-style:italic; }
+    .identity { fill:#87CEFA; font-size:16px; font-style:italic; font-weight:600; letter-spacing:.5px; }
+    .slogan { fill:#F7FBFF; font-size:36px; font-weight:700; letter-spacing:-.4px; }
+    .green { fill:#20D98B; }
+    .red { fill:#FF5C67; }
+    .micro { fill:#8EC9F3; font-size:11px; letter-spacing:1.5px; }
+    .frame { fill: none; stroke: #55AFFF; stroke-width:6; stroke-linejoin:round; }
+    .tracer { fill:none; stroke:#B0E6FF; stroke-width:6; stroke-linecap:round; stroke-dasharray:80 1700; animation: trace 9s linear infinite; }
+    .wave { fill:none; stroke:#00BFFF; stroke-width:2.2; stroke-linecap:round; }
+    .pulse { fill:#87CEFA; animation:pulse 3.6s ease-in-out infinite; }
+    .p2 { animation-delay:1.2s; }
+    .p3 { animation-delay:2.4s; }
+    .reveal { animation: reveal 1.6s ease-out both; }
+    @keyframes trace { from {stroke-dashoffset:0;} to {stroke-dashoffset:-1780;} }
+    @keyframes pulse { 0%,100% {opacity:.42;} 50% {opacity:1;} }
+    @keyframes reveal { from {opacity:.2;} to {opacity:1;} }
+    @media(prefers-reduced-motion:reduce){.tracer,.pulse,.reveal{animation:none;}}
+  </style>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#0B273C" stroke-width=".8"/>
+    </pattern>
+    <clipPath id="bannerClip"><rect width="1200" height="390"/></clipPath>
+  </defs>
+  <g clip-path="url(#bannerClip)">
+    <rect width="1200" height="390" fill="#02060A"/>
+    <rect width="1200" height="390" fill="url(#grid)" opacity=".6"/>
+    <path d="M30 20H47L26 63H9Z M53 20H70L49 63H32Z" fill="#55AFFF"/>
+    <text x="85" y="55" class="name">Dossiya Dakou</text>
+    <text x="88" y="80" class="identity">Physics-Based Mathematical Engineering</text>
+    <path d="M88 91H290" stroke="#55AFFF" stroke-width="3"/>
+    <text x="955" y="42" class="micro">DYNAMICAL SYSTEMS</text>
+    <text x="946" y="64" fill="#A6DFFF" font-size="18" font-family="Georgia,serif" font-style="italic">dx/dt = f(x,u,t)</text>
+    <path d="M1067 75 L1087 57 L1107 80 L1127 50 L1147 70 L1167 40" class="wave"/>
+    <path d="M158 124 L410 113 L560 104 L690 122 L1009 110 L992 151 L1150 177 L1018 225 L1027 291 L806 297 L638 328 L488 317 L313 331 L299 304 L82 281 L225 244 L114 214 L223 191 L211 150 Z" class="frame"/>
+    <path d="M158 124 L410 113 L560 104 L690 122 L1009 110 L992 151 L1150 177 L1018 225 L1027 291 L806 297 L638 328 L488 317 L313 331 L299 304 L82 281 L225 244 L114 214 L223 191 L211 150 Z" class="tracer"/>
+    <g class="reveal" text-anchor="middle">
+      <text x="612" y="172" class="slogan"><tspan class="green">I am the</tspan><tspan> scientific engineer </tspan><tspan class="green">you need.</tspan></text>
+      <text x="612" y="223" class="slogan"><tspan class="green">I am the engineer</tspan><tspan> of tomorrow.</tspan></text>
+      <text x="612" y="270" class="slogan"><tspan class="green">I am your </tspan><tspan class="red">problem</tspan><tspan> solver sustainable</tspan></text>
+      <text x="612" y="309" class="slogan">engineer.</text>
+    </g>
+    <g fill="none" stroke="#2878CD" stroke-width="1.2" opacity=".65">
+      <path d="M0 315 C36 305 69 333 105 324 S173 298 201 325 S265 360 299 345"/>
+      <path d="M0 326 C36 316 69 344 105 335 S173 309 201 336 S265 371 299 356"/>
+      <path d="M0 337 C36 327 69 355 105 346 S173 320 201 347 S265 382 299 367"/>
+    </g>
+    <g stroke="#2878CD" stroke-width="1.3">
+      <path d="M1037 306L1075 339L1117 317L1161 348L1184 303 M1075 339L1161 348 M1117 317L1184 303" fill="none"/>
+      <circle class="pulse" cx="1037" cy="306" r="4.2"/>
+      <circle class="pulse p2" cx="1075" cy="339" r="4.2"/>
+      <circle class="pulse p3" cx="1117" cy="317" r="4.2"/>
+      <circle class="pulse p2" cx="1161" cy="348" r="4.2"/>
+      <circle class="pulse" cx="1184" cy="303" r="4.2"/>
+    </g>
+    <text x="600" y="370" class="micro" text-anchor="middle">PHYSICS  /  MATHEMATICS  /  COMPUTATION  /  SUSTAINABLE ENGINEERING</text>
+  </g>
+</svg>
