@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/dossiya-black-dynamic-banner.svg" width="100%" alt="Dossiya Dakou on a black animated banner: I am the scientific engineer you need. I am the engineer of tomorrow. I am your problem solver sustainable engineer." />
+  <img src="./assets/dossiya-neon-banner.gif" width="100%" alt="Dossiya Dakou animated scientific engineering banner, showing the approved slogans, mathematical motifs, and research operating sequence." />
 </p>
 
 <div align="center">
