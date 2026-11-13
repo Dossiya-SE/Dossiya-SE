@@ -8,6 +8,14 @@
 
 </div>
 
+## About Me
+
+My academic journey began in **Electrical Engineering**, where I learned to connect mathematical principles with physical systems. I continued into **Physics**, specializing in Renewable Energy and Energy Systems, where I developed my interests in mathematical modeling and scientific computation.
+
+Today, I pursue an **MSE in Sustainable Engineering at Arizona State University** and, in parallel, an **MSc in Financial Engineering at WorldQuant University**.
+
+My work connects **physics, applied mathematics, and computational methods** to investigate complex engineering problems. I am particularly interested in understanding not only what models predict, but also the mathematical principles, physical assumptions, and evidence that justify their predictions.
+
 **Scientific problem.** I study how **electrified-transportation demand, transformer thermal inertia, and uncertain operating limits** affect the operation and resilience of interconnected power–transportation infrastructure. This is the focus of my ongoing ASU MSE thesis.
 
 **Mathematical and computational methods.** I work with **dynamical systems, differential equations, numerical methods, parameter estimation, uncertainty quantification, stochastic models, and constrained optimization**, using **Python, Julia/JuMP/HiGHS, and MATLAB**.
