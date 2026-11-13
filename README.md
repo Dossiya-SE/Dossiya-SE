@@ -4,8 +4,6 @@
 
 <div align="center">
 
-<img src="./assets/profile-motion.svg" width="100%" alt="Static conceptual diagram of the research sequence from physical reality through causal mechanisms and mathematical structure to engineering decisions; not measured dynamics.">
-
 **Research:** Differential Geometry · Dynamical Systems · Graph-Based Modeling · Viability Theory · Power–Transportation Systems
 
 </div>
