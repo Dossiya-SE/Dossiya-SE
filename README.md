@@ -1,12 +1,6 @@
-<div align="center">
-
-# Dossiya Dakou
-
-**Physics-Based Mathematical Engineering · Scientific Computing · Sustainable Infrastructure**
-
-*From physical mechanisms to mathematical models, computational evidence, and engineering decisions.*
-
-</div>
+<p align="center">
+  <img src="./assets/dossiya-research-banner.svg" width="100%" alt="Dossiya Dakou, physics-based mathematical engineering. An animated, mathematically defined first-order response appears beside the name." />
+</p>
 
 <div align="center">
 
