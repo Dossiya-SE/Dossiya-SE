@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="bannerTitle bannerDesc">
+  <title id="bannerTitle">Dossiya Dakou | Physics-based mathematical engineering</title>
+  <desc id="bannerDesc">A white and sky-blue scientific portfolio banner with the name Dossiya Dakou, research areas and an exact illustrative normalized first-order unit-step response x(s) = 1 - exp(-s). Animated points trace the response as a visual example, not measured research data.</desc>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .navy { fill: #142638; }
+    .muted { fill: #526679; }
+    .tick { font-size: 10px; fill: #536B7F; }
+    .point { fill: #00BFFF; stroke: #FFFFFF; stroke-width: 1.8; opacity: .65; transform-box: fill-box; transform-origin: center; animation: heartbeat 3.6s ease-in-out infinite; }
+    .p0 { animation-delay: 0s; }
+    .p1 { animation-delay: 1.2s; }
+    .p2 { animation-delay: 2.4s; }
+    .signal { fill: #0072BC; stroke: #FFFFFF; stroke-width: 1.8; }
+    .hairline { fill: none; stroke: #D5E9F5; stroke-width: 1; }
+    @keyframes heartbeat { 0%,22%,100% { opacity: .35; transform: scale(1); } 10% { opacity: 1; transform: scale(1.65); } }
+    @media (prefers-reduced-motion: reduce) { .point { animation: none; opacity: .85; } }
+  </style>
+  <rect width="1200" height="260" fill="#FFFFFF"/>
+  <path d="M42 38V161" stroke="#87CEFA" stroke-width="7" stroke-linecap="round"/>
+  <text x="65" y="48" class="muted" font-size="14" letter-spacing="2.1">RESEARCH PORTFOLIO</text>
+  <text x="65" y="120" class="navy" font-size="67" font-weight="700" letter-spacing="-2.5">Dossiya Dakou</text>
+  <text x="67" y="153" class="navy" font-size="18" font-weight="600">Physics-Based Mathematical Engineering</text>
+  <text x="67" y="185" class="muted" font-size="13" letter-spacing=".6">PHYSICAL SYSTEMS   /   MATHEMATICAL MODELS   /   COMPUTATIONAL EVIDENCE</text>
+  <path d="M67 204H610" stroke="#BFDDED" stroke-width="1"/>
+  <g font-size="12.5" font-weight="600" fill="#2878CD">
+    <text x="67" y="229">Numerical Methods</text>
+    <text x="234" y="229">Optimization</text>
+    <text x="365" y="229">Uncertainty</text>
+    <text x="500" y="229">Validation</text>
+  </g>
+  <rect x="661" y="25" width="497" height="210" rx="12" fill="#F6FBFF" stroke="#D4EAF7" stroke-width="1.5"/>
+  <path d="M679 25h112" stroke="#87CEFA" stroke-width="5" stroke-linecap="round"/>
+  <text x="685" y="51" class="muted" font-size="12" font-weight="700" letter-spacing="1">ILLUSTRATIVE DYNAMICAL SYSTEM</text>
+  <text x="685" y="81" class="navy" font-size="19" font-weight="500">dx/ds = 1 - x</text>
+  <text x="899" y="81" class="navy" font-size="17">x(s) = 1 - e</text>
+  <text x="1008" y="72" class="navy" font-size="10">-s</text>
+  <text x="684" y="105" class="muted" font-size="11">Unit-step response with x(0) = 0; s is normalized time</text>
+  <path d="M752 125 V201 H1118" stroke="#7D99AE" stroke-width="1.5" fill="none"/>
+  <path d="M752 163H1118" class="hairline"/>
+  <path d="M752 125H1118" class="hairline" stroke-dasharray="2 4"/>
+  <path d="M752 201 v5" stroke="#90A9BB" stroke-width="1"/><text x="752" y="221" text-anchor="middle" class="tick">0</text><path d="M843.5 201 v5" stroke="#90A9BB" stroke-width="1"/><text x="843.5" y="221" text-anchor="middle" class="tick">1</text><path d="M935 201 v5" stroke="#90A9BB" stroke-width="1"/><text x="935" y="221" text-anchor="middle" class="tick">2</text><path d="M1026.5 201 v5" stroke="#90A9BB" stroke-width="1"/><text x="1026.5" y="221" text-anchor="middle" class="tick">3</text><path d="M1118 201 v5" stroke="#90A9BB" stroke-width="1"/><text x="1118" y="221" text-anchor="middle" class="tick">4</text>
+  <path d="M747 201 h5" stroke="#90A9BB" stroke-width="1"/><text x="741" y="205" text-anchor="end" class="tick">0</text><path d="M747 163 h5" stroke="#90A9BB" stroke-width="1"/><text x="741" y="167" text-anchor="end" class="tick">0.5</text><path d="M747 125 h5" stroke="#90A9BB" stroke-width="1"/><text x="741" y="129" text-anchor="end" class="tick">1</text>
+  <text x="728" y="115" class="muted" font-size="11">x(s)</text>
+  <text x="1118" y="233" text-anchor="end" class="muted" font-size="11">s = t/τ</text>
+  <path d="M752 201 L756.58 197.29 L761.15 193.77 L765.73 190.41 L770.3 187.22 L774.88 184.19 L779.45 181.3 L784.02 178.56 L788.6 175.94 L793.17 173.46 L797.75 171.1 L802.33 168.85 L806.9 166.71 L811.48 164.68 L816.05 162.74 L820.63 160.9 L825.2 159.15 L829.77 157.48 L834.35 155.9 L838.92 154.39 L843.5 152.96 L848.08 151.6 L852.65 150.3 L857.23 149.06 L861.8 147.89 L866.38 146.77 L870.95 145.71 L875.52 144.7 L880.1 143.74 L884.67 142.83 L889.25 141.96 L893.83 141.13 L898.4 140.34 L902.98 139.6 L907.55 138.88 L912.13 138.21 L916.7 137.56 L921.27 136.95 L925.85 136.37 L930.42 135.81 L935 135.29 L939.58 134.78 L944.15 134.31 L948.73 133.85 L953.3 133.42 L957.88 133.01 L962.45 132.62 L967.02 132.25 L971.6 131.89 L976.17 131.56 L980.75 131.24 L985.33 130.93 L989.9 130.64 L994.48 130.37 L999.05 130.11 L1003.63 129.86 L1008.2 129.62 L1012.78 129.4 L1017.35 129.18 L1021.92 128.98 L1026.5 128.78 L1031.08 128.6 L1035.65 128.42 L1040.22 128.26 L1044.8 128.1 L1049.38 127.95 L1053.95 127.8 L1058.53 127.67 L1063.1 127.54 L1067.67 127.41 L1072.25 127.3 L1076.83 127.18 L1081.4 127.08 L1085.97 126.98 L1090.55 126.88 L1095.13 126.79 L1099.7 126.7 L1104.28 126.62 L1108.85 126.54 L1113.42 126.46 L1118 126.39" fill="none" stroke="#2878CD" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="point p0" cx="820.63" cy="160.90" r="4.5" />
+  <circle class="point p1" cx="912.13" cy="138.21" r="4.5" />
+  <circle class="point p2" cx="1017.35" cy="129.18" r="4.5" />
+  <circle class="signal" cx="752" cy="201" r="4">
+    <animateMotion dur="7s" repeatCount="indefinite" path="M752 201 L756.58 197.29 L761.15 193.77 L765.73 190.41 L770.3 187.22 L774.88 184.19 L779.45 181.3 L784.02 178.56 L788.6 175.94 L793.17 173.46 L797.75 171.1 L802.33 168.85 L806.9 166.71 L811.48 164.68 L816.05 162.74 L820.63 160.9 L825.2 159.15 L829.77 157.48 L834.35 155.9 L838.92 154.39 L843.5 152.96 L848.08 151.6 L852.65 150.3 L857.23 149.06 L861.8 147.89 L866.38 146.77 L870.95 145.71 L875.52 144.7 L880.1 143.74 L884.67 142.83 L889.25 141.96 L893.83 141.13 L898.4 140.34 L902.98 139.6 L907.55 138.88 L912.13 138.21 L916.7 137.56 L921.27 136.95 L925.85 136.37 L930.42 135.81 L935 135.29 L939.58 134.78 L944.15 134.31 L948.73 133.85 L953.3 133.42 L957.88 133.01 L962.45 132.62 L967.02 132.25 L971.6 131.89 L976.17 131.56 L980.75 131.24 L985.33 130.93 L989.9 130.64 L994.48 130.37 L999.05 130.11 L1003.63 129.86 L1008.2 129.62 L1012.78 129.4 L1017.35 129.18 L1021.92 128.98 L1026.5 128.78 L1031.08 128.6 L1035.65 128.42 L1040.22 128.26 L1044.8 128.1 L1049.38 127.95 L1053.95 127.8 L1058.53 127.67 L1063.1 127.54 L1067.67 127.41 L1072.25 127.3 L1076.83 127.18 L1081.4 127.08 L1085.97 126.98 L1090.55 126.88 L1095.13 126.79 L1099.7 126.7 L1104.28 126.62 L1108.85 126.54 L1113.42 126.46 L1118 126.39"/>
+  </circle>
+  <text x="1150" y="251" text-anchor="end" class="muted" font-size="10">MODEL ILLUSTRATION · NOT OBSERVATIONAL DATA</text>
+</svg>
