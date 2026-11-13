@@ -16,3 +16,7 @@ These instructions are **conditional on a request for Dossiya-authored writing**
 For any requested thesis chapter, scientific report, CV, SOP, scholarship text, presentation narrative, GitHub README, project description or professional communication, **also read** [Evidence-Led Action-Verb Writing](../writing/evidence-led-action-verb-writing/SKILL.md) and its [Portable Instructions](../writing/evidence-led-action-verb-writing/PROJECT_INSTRUCTIONS.md).
 
 The level of verb must match actual work and evidence. Preserve results, limitations and personal ownership; distinguish proposed, developed, numerically verified, physically validated and deployed. Do not edit any protected text or anything outside the authorized scope. This instruction is for **writing tasks**, not unrelated programming, mathematics or automated changes.
+
+## Contribution-aware research reasoning (conditional instruction)
+
+For research planning, claim interpretation, scientific accountability and contribution attribution, read [Contribution-Aware Scientific Reasoning](../research/contribution-aware-scientific-reasoning/SKILL.md). Apply the seven-question protocol and the independent scientific claim and contributor ledgers. Do not equate CRediT attribution with authorship or model validation; do not invent people, evidence, approval or research conclusions. This instruction does not amend frozen thesis authorities and does not alter unrelated coding work.

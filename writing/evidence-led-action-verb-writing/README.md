@@ -15,6 +15,10 @@ The seven user-authorized rules are retained in the [full skill](SKILL.md), with
 - [TEMPLATES_AND_EXAMPLES.md](references/TEMPLATES_AND_EXAMPLES.md): Copy-ready patterns and qualified examples for thesis, CV, SOP, engineering, leadership and README content.
 - [PROJECT_INSTRUCTIONS.md](PROJECT_INSTRUCTIONS.md): Compact project instructions for other workspaces.
 
+## Scientific contribution and research reasoning
+
+For contribution roles, research decisions and the separation of scientific evidence from human credit, consult [Contribution-Aware Scientific Reasoning](../../research/contribution-aware-scientific-reasoning/SKILL.md). CRediT does not decide authorship, and contribution descriptions do not constitute physical validation.
+
 ## Use with established writing skills
 
 - [Dossiya Authentic Voice](../dossiya-authentic-voice/SKILL.md): Personal voice, original publications, attribution and narrative.

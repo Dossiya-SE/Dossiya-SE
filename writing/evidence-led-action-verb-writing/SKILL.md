@@ -141,3 +141,7 @@ Related references:
 - [Action Verb Bank](references/ACTION_VERB_BANK.md)
 - [Genre Templates and Examples](references/TEMPLATES_AND_EXAMPLES.md)
 - [Portable Project Instructions](PROJECT_INSTRUCTIONS.md)
+
+## Related research reasoning protocol
+
+When identifying who formulated, funded, investigated, modeled, analyzed, validated, supervised or wrote the research, use the [Contribution-Aware Scientific Reasoning Protocol](../../research/contribution-aware-scientific-reasoning/SKILL.md). Keep CRediT contributor roles distinct from scientific evidence status and formal authorship decisions. Do not assign real individual roles without review and documented evidence.

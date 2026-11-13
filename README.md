@@ -17,3 +17,5 @@ Graduate researcher studying how mathematical and computational methods can impr
 </div>
 
 **Evidence-led writing:** [Action-Verb Writing Skill](writing/evidence-led-action-verb-writing/README.md) · [Authentic Voice](writing/dossiya-authentic-voice/SKILL.md) · [Graduate SOP](writing/graduate-sop/SKILL.md)
+
+**Scientific reasoning and contributor attribution:** [Contribution-Aware Scientific Reasoning](research/contribution-aware-scientific-reasoning/README.md) (CRediT-informed, separate scientific evidence gate; not an authorship decision)
