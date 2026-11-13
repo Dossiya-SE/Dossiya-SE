@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/dossiya-research-banner.svg" width="100%" alt="Dossiya Dakou, physics-based mathematical engineering. An animated, mathematically defined first-order response appears beside the name." />
+  <img src="./assets/dossiya-black-dynamic-banner.svg" width="100%" alt="Dossiya Dakou on a black animated banner: I am the scientific engineer you need. I am the engineer of tomorrow. I am your problem solver sustainable engineer." />
 </p>
 
 <div align="center">
