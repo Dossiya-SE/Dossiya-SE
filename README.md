@@ -15,3 +15,5 @@ Graduate researcher studying how mathematical and computational methods can impr
 [Research Portfolio](https://dossiya-se.github.io/) · [Research Laboratory](https://dossiya-se.github.io/lab.html) · [Repositories](https://github.com/Dossiya-SE?tab=repositories) · [ORCID](https://orcid.org/0009-0004-1071-9948) · [LinkedIn](https://www.linkedin.com/in/dossiya-dakou-/)
 
 </div>
+
+**Evidence-led writing:** [Action-Verb Writing Skill](writing/evidence-led-action-verb-writing/README.md) · [Authentic Voice](writing/dossiya-authentic-voice/SKILL.md) · [Graduate SOP](writing/graduate-sop/SKILL.md)

@@ -9,3 +9,10 @@ When asked to draft, revise, evaluate or fact-check writing that will be present
 5. Never claim that an announced selection proves completed service, or that a team output is an individual measured impact.
 
 These instructions are **conditional on a request for Dossiya-authored writing**. They should not change unrelated code, mathematical solutions or technical documentation.
+
+
+## Evidence-led wording for written artifacts
+
+For any requested thesis chapter, scientific report, CV, SOP, scholarship text, presentation narrative, GitHub README, project description or professional communication, **also read** [Evidence-Led Action-Verb Writing](../writing/evidence-led-action-verb-writing/SKILL.md) and its [Portable Instructions](../writing/evidence-led-action-verb-writing/PROJECT_INSTRUCTIONS.md).
+
+The level of verb must match actual work and evidence. Preserve results, limitations and personal ownership; distinguish proposed, developed, numerically verified, physically validated and deployed. Do not edit any protected text or anything outside the authorized scope. This instruction is for **writing tasks**, not unrelated programming, mathematics or automated changes.
