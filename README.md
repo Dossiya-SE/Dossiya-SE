@@ -22,8 +22,6 @@ My work connects **physics, applied mathematics, and computational methods** to 
 
 **Evidence of application.** In ongoing thesis work, I evaluated a first-order thermal model using **8,592 observations** (top-oil RMSE **0.2517°C → 0.2165°C**; MAE did not improve). I analyzed **460 survey responses** using statistical methods in ASU SURI research, formulated a **700 MW** generator-selection optimization exercise, and contributed to a **three-state hidden Markov model** study of **5,469 VIX changes**.
 
-<sub>Evidence boundary: The thermal results are preliminary research findings, not field validation. Coursework examples and collaborative projects are identified as such.</sub>
-
 **Explore the work:** [Infrastructure interface research](https://github.com/Dossiya-SE/infrastructure-interface-resilience-review) · [Quantitative finance lab](https://github.com/Dossiya-SE/Dossiya-SE-mscfe-quantitative-finance-lab) · [Mathematical research platform](https://github.com/Dossiya-SE/Differential-geometry-and-Mathematics-arts-for-sustainability-and-resilience)
 
 <div align="center">
